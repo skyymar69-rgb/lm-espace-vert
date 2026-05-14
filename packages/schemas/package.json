@@ -1,0 +1,16 @@
+{
+  "name": "@lm/schemas",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./contact": "./src/contact.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@lm/config-typescript": "workspace:*",
+    "typescript": "^5.8.3"
+  }
+}

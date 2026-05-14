@@ -1,0 +1,15 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "cd ../.. && pnpm build --filter @lm/web",
+  "outputDirectory": ".next",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "rewrites": [],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-DNS-Prefetch-Control", "value": "on" }
+      ]
+    }
+  ]
+}

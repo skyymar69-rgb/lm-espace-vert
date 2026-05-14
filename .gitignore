@@ -1,0 +1,42 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+.next
+dist
+.turbo
+out
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode
+.idea
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Type checking
+*.tsbuildinfo
+
+# Test coverage
+coverage
+
+# Strapi
+apps/cms/.tmp
+apps/cms/build
+apps/cms/exports

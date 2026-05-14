@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm --filter @lm/web build)",
+      "Bash(node --input-type=module --experimental-strip-types -)",
+      "Bash(node -e ' *)",
+      "Bash(pnpm add *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
