@@ -8,8 +8,6 @@ import { CookieBanner } from '@/components/layout/cookie-banner'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { BackToTop } from '@/components/ui/back-to-top'
-import { AnnouncementBanner } from '@/components/layout/announcement-banner'
-import { StickyContactBar } from '@/components/layout/sticky-contact-bar'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'),
@@ -103,14 +101,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* #5 Scroll progress bar */}
         <ScrollProgress />
 
-        {/* #6 Announcement banner */}
-        <AnnouncementBanner
-          message="🌿 Printemps 2026 — Devis gratuit offert pour toute création de jardin"
-          href="/devis"
-          cta="En profiter"
-          dismissKey="announce-spring-2026"
-        />
-
         <Header />
 
         <main id="contenu-principal" className="flex-1" tabIndex={-1}>
@@ -125,8 +115,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* #7 Back to top */}
         <BackToTop />
 
-        {/* #8 Sticky contact bar (mobile only) */}
-        <StickyContactBar />
       </body>
     </html>
   )

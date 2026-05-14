@@ -58,7 +58,7 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
           />
 
           {/* Drawer */}
-          <div className="absolute right-0 top-0 h-full w-80 bg-[--color-bg-elevated] shadow-2xl flex flex-col animate-slide-down">
+          <div className="absolute right-0 top-0 h-full w-80 bg-white dark:bg-[#0D0D0D] shadow-2xl flex flex-col animate-slide-down">
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-[--color-border]">
               <span className="font-display font-bold text-[--color-fg]">Menu</span>
@@ -104,14 +104,15 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
               <Link
                 href="/devis"
                 onClick={() => setOpen(false)}
-                className="btn-primary w-full justify-center"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
+                style={{ backgroundColor: '#275524', color: '#fff' }}
               >
                 <FileText size={16} aria-hidden="true" />
                 Devis gratuit
               </Link>
               <a
                 href="tel:+33674734698"
-                className="btn-secondary w-full justify-center"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-2.5 text-sm font-semibold border border-[--color-border] text-[--color-fg] hover:text-[#275524] hover:border-[#275524] transition-colors"
                 onClick={() => setOpen(false)}
               >
                 <Phone size={16} aria-hidden="true" />

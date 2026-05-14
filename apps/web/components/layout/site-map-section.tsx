@@ -1,135 +1,56 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 
-const sections = [
-  {
-    href: '/services',
-    label: 'Nos Services',
-    desc: 'Création, entretien, élagage, maçonnerie paysagère et arrosage automatique.',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=380&fit=crop&q=80',
-    badge: '6 prestations',
-    span: 'lg:col-span-2',
-  },
-  {
-    href: '/realisations',
-    label: 'Réalisations',
-    desc: 'Galerie de nos projets paysagers réalisés dans le nord-ouest lyonnais.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=380&fit=crop&q=80',
-    badge: '20+ projets',
-    span: 'lg:col-span-1',
-  },
-  {
-    href: '/blog',
-    label: 'Blog & Conseils',
-    desc: 'Conseils jardinage, guides saisonniers et tendances paysagères.',
-    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=380&fit=crop&q=80',
-    badge: '30 articles',
-    span: 'lg:col-span-1',
-  },
-  {
-    href: '/a-propos',
-    label: 'Notre Histoire',
-    desc: 'Léo Maurice, paysagiste passionné depuis 2019 à Saint-Didier-au-Mont-d\'Or.',
-    image: 'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?w=600&h=380&fit=crop&q=80',
-    badge: 'Depuis 2019',
-    span: 'lg:col-span-1',
-  },
-  {
-    href: '/devis',
-    label: 'Devis Gratuit',
-    desc: 'Demandez votre devis personnalisé. Réponse sous 24h, sans engagement.',
-    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=380&fit=crop&q=80',
-    badge: 'Sans engagement',
-    span: 'lg:col-span-2',
-  },
+const navLinks = [
+  { href: '/services',    label: 'Nos Services' },
+  { href: '/realisations', label: 'Réalisations' },
+  { href: '/blog',        label: 'Blog & Conseils' },
+  { href: '/a-propos',    label: 'Notre Histoire' },
+  { href: '/devis',       label: 'Devis Gratuit' },
 ]
 
 export function SiteMapSection() {
   return (
-    <section aria-labelledby="sitemap-heading" className="bg-[--color-bg-subtle] border-t border-[--color-border] py-16">
+    <section className="bg-[--color-bg-subtle] border-t border-[--color-border] py-12">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mb-10 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-[--color-primary] mb-2">Explorer le site</p>
-          <h2 id="sitemap-heading" className="font-display text-2xl font-bold text-[--color-fg] sm:text-3xl">
-            Tout ce que nous proposons
-          </h2>
-          <p className="mt-2 text-[--color-fg-muted] max-w-xl mx-auto text-sm">
-            Paysagiste complet pour tous vos projets extérieurs dans un rayon de 20 km autour de Lyon.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {sections.map((section) => (
+        {/* Nav links grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+          {navLinks.map((link) => (
             <Link
-              key={section.href}
-              href={section.href}
-              className={`group relative overflow-hidden rounded-2xl bg-[--color-bg-elevated] border border-[--color-border] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${section.span}`}
+              key={link.href}
+              href={link.href}
+              className="group flex items-center gap-2 text-sm font-medium text-[--color-fg-muted] hover:text-[#275524] transition-colors"
             >
-              {/* Photo */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={section.image}
-                  alt={section.label}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                {/* gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                {/* badge */}
-                <span
-                  className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold shadow"
-                  style={{ backgroundColor: '#275524', color: '#ffffff' }}
-                >
-                  {section.badge}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="p-5 flex items-start justify-between gap-3">
-                <div>
-                  <h3 className="font-display font-bold text-[--color-fg] text-base group-hover:text-[--color-primary] transition-colors">
-                    {section.label}
-                  </h3>
-                  <p className="mt-1 text-sm text-[--color-fg-muted] leading-relaxed line-clamp-2">
-                    {section.desc}
-                  </p>
-                </div>
-                <span className="shrink-0 mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-[--color-green-light] text-[--color-primary] group-hover:bg-[--color-primary] group-hover:text-white transition-all">
-                  <ArrowRight size={14} aria-hidden="true" />
-                </span>
-              </div>
+              {link.label}
+              <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#275524' }} />
             </Link>
           ))}
         </div>
 
-        {/* Bottom contact strip — vert foncé FIXE hardcodé */}
-        <div
-          className="mt-8 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4"
-          style={{ backgroundColor: '#275524' }}
-        >
+        {/* CTA strip */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-8 pt-8 border-t border-[--color-border] gap-4">
           <div>
-            <p className="font-display font-bold text-lg" style={{ color: '#ffffff' }}>Vous avez un projet ?</p>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>Devis gratuit · Réponse en 24h · Zone 20 km</p>
+            <p className="text-sm text-[--color-fg-muted]">Vous avez un projet ?</p>
+            <p className="font-semibold text-[--color-fg]">Devis gratuit · Réponse en 24h · Zone 20 km</p>
           </div>
           <div className="flex gap-3 flex-wrap">
             <Link
               href="/contact"
-              className="rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white/10"
-              style={{ borderColor: 'rgba(255,255,255,0.35)', color: '#ffffff' }}
+              className="rounded-full border border-[--color-border] px-4 py-2 text-sm text-[--color-fg] hover:border-[#275524] hover:text-[#275524] transition-colors"
             >
               Nous contacter
             </Link>
             <Link
               href="/devis"
-              className="rounded-full px-5 py-2.5 text-sm font-bold transition-colors hover:opacity-90"
-              style={{ backgroundColor: '#ffffff', color: '#275524' }}
+              className="rounded-full px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#275524', color: '#fff' }}
             >
               Devis gratuit
             </Link>
           </div>
         </div>
+
       </div>
     </section>
   )

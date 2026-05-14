@@ -1,19 +1,26 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle2, Clock, Euro, Phone } from 'lucide-react'
+import {
+  Scissors,
+  TreePine,
+  Sprout,
+  Layers,
+  Droplets,
+  Flower2,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+} from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
-import { FAQSection } from '@/components/ui/faq-section'
-import { TrustBadges } from '@/components/ui/trust-badges'
 
 export const metadata: Metadata = {
-  title: "Services paysagistes à Lyon — Création, Entretien, Élagage | LM Espace Vert",
-  description:
-    "LM Espace Vert propose création de jardins, entretien régulier, élagage, maçonnerie paysagère et arrosage automatique à Saint-Didier-au-Mont-d'Or et rayon 20 km.",
+  title: "Nos Prestations Paysagères | LM Espace Vert",
+  description: "Entretien, élagage, création de jardins, maçonnerie paysagère, arrosage automatique et engazonnement. Paysagiste à Saint-Didier-au-Mont-d'Or, rayon 20 km.",
   alternates: { canonical: 'https://www.lmespacevert.fr/services' },
   openGraph: {
-    title: "Services paysagistes Lyon — LM Espace Vert",
-    description: "Tous vos besoins paysagers : création, entretien, élagage, maçonnerie. Devis gratuit.",
+    title: "Nos Prestations Paysagères | LM Espace Vert",
+    description: "Entretien, élagage, création de jardins, maçonnerie paysagère, arrosage automatique et engazonnement. Paysagiste à Saint-Didier-au-Mont-d'Or, rayon 20 km.",
     url: 'https://www.lmespacevert.fr/services',
   },
 }
@@ -23,131 +30,88 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
+    { '@type': 'ListItem', position: 2, name: 'Nos Services', item: 'https://www.lmespacevert.fr/services' },
   ],
 }
 
 const services = [
   {
-    id: 'entretien',
-    emoji: '✂️',
+    icon: Scissors,
     title: "Entretien d'espaces verts",
-    subtitle: 'Votre jardin toujours impeccable',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-    description: "Confiez l'entretien régulier de votre jardin à nos équipes. Tonte soignée, taille de haies, désherbage, fertilisation saisonnière et traitement préventif — nous prenons en charge tout le cycle de vie de vos espaces verts.",
-    benefits: [
-      "Contrats mensuels ou saisonniers sur-mesure",
-      "Équipes fixes et identifiées à chaque passage",
-      "Rapport d'intervention avec photos",
-      "Intervention le samedi sur demande",
-      "Éco-pâturage disponible pour grandes surfaces",
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    desc: "Un jardin entretenu régulièrement est un jardin en bonne santé. Nous proposons des contrats d'entretien sur mesure : tonte, taille de haies, désherbage, fertilisation et soins saisonniers.",
+    features: [
+      'Tonte hebdomadaire ou bimensuelle',
+      'Taille de haies et arbustes',
+      'Désherbage manuel et traitement',
+      'Ramassage des feuilles',
+      'Fertilisation et soins',
     ],
-    price: 'À partir de 80 €/h',
-    duration: '1h à 1 journée',
   },
   {
-    id: 'creation',
-    emoji: '🌿',
-    title: 'Création de jardins',
-    subtitle: 'De la conception à la réalisation',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
-    description: "Confiez-nous la création de votre jardin de A à Z. Étude du terrain, plan de masse, sélection végétale adaptée au sol lyonnais, terrassement, plantations et aménagements décoratifs. Du jardinet de ville au parc de demeure.",
-    benefits: [
-      'Étude personnalisée et plan détaillé',
-      'Végétaux garantis 1 an après plantation',
-      'Accompagnement et conseils post-création',
-      'Coordination des corps de métier',
-      'Suivi photographique du chantier',
-    ],
-    price: 'Sur devis',
-    duration: '2 jours à plusieurs semaines',
-  },
-  {
-    id: 'elagage',
-    emoji: '🌳',
+    icon: TreePine,
     title: 'Élagage & Abattage',
-    subtitle: 'Interventions sécurisées en hauteur',
-    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&q=80',
-    description: "Nos arboristes certifiés interviennent pour l'élagage de formation, la taille de réduction, l'élagage sanitaire et l'abattage dirigé. Travaux sécurisés, même en zones difficiles d'accès.",
-    benefits: [
-      'Professionnels certifiés et équipés',
-      'Assurance RC professionnelle',
-      'Broyage et évacuation des rémanents',
-      "Conseil sanitaire et conseil d'abattage",
-      'Intervention sécurisée à grande hauteur',
+    image: 'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?w=600&q=80',
+    desc: "L'élagage est une intervention délicate qui demande expertise et équipement. Nos professionnels interviennent pour la taille douce, l'élagage raisonné et l'abattage en toute sécurité.",
+    features: [
+      'Élagage de formation et sécurité',
+      'Abattage dirigé',
+      'Broyage et évacuation des déchets',
+      'Taille des arbres fruitiers',
+      'Soins aux arbres remarquables',
     ],
-    price: 'À partir de 200 €',
-    duration: '1 à 2 jours selon arbre',
   },
   {
-    id: 'maconnerie',
-    emoji: '🧱',
+    icon: Sprout,
+    title: 'Création de jardins',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+    desc: "Votre jardin est une extension de votre maison. Nous concevons des espaces verts sur-mesure, de la petite terrasse au grand parc, en respectant vos goûts et les contraintes du terrain.",
+    features: [
+      'Étude et conception paysagère',
+      'Choix des végétaux adaptés',
+      'Création de massifs floraux',
+      'Plantation arbres et arbustes',
+      'Aménagement extérieur complet',
+    ],
+  },
+  {
+    icon: Layers,
     title: 'Maçonnerie paysagère',
-    subtitle: 'Structurez et sublimez vos extérieurs',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
-    description: "Terrasses en bois composite ou pierre naturelle, allées, escaliers, murets de soutènement, clôtures et portails. Nous créons des structures durables qui valorisent votre patrimoine.",
-    benefits: [
-      'Matériaux durables et écologiques',
-      "Pose soignée à joints fins ou larges",
-      "Garantie 2 ans main d'œuvre",
-      'Dalles pierre, bois, béton désactivé',
-      'Éclairage paysager intégré possible',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    desc: "Les éléments minéraux structurent et valorisent votre jardin. Terrasses, allées, murets et escaliers réalisés avec des matériaux naturels de qualité pour un rendu esthétique et durable.",
+    features: [
+      'Terrasses en pierres naturelles',
+      'Allées et chemins',
+      'Murets et clôtures',
+      'Escaliers extérieurs',
+      'Dallage et pavage',
     ],
-    price: 'À partir de 120 €/m²',
-    duration: '3 jours à 3 semaines',
   },
   {
-    id: 'arrosage',
-    emoji: '💧',
+    icon: Droplets,
     title: 'Arrosage automatique',
-    subtitle: "Économisez l'eau et votre temps",
-    image: 'https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?w=800&q=80',
-    description: "Installation et maintenance de systèmes d'arrosage intelligents : programmateurs WiFi, arroseurs pop-up, goutte-à-goutte enterré, capteurs de pluie et d'humidité. Pilotez votre jardin depuis votre smartphone.",
-    benefits: [
-      "Jusqu'à 50% d'économie d'eau",
-      'Programmation saisonnière automatique',
-      'Pilotage à distance via smartphone',
-      'SAV et maintenance sous 48h',
-      'Compatible jardin connecté',
+    image: 'https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?w=600&q=80',
+    desc: "Économisez l'eau et du temps avec un système d'arrosage automatique sur mesure. Installation, programmation et maintenance de systèmes d'arrosage intelligents adaptés à votre jardin.",
+    features: [
+      'Installation complète',
+      'Programmation et réglage',
+      'Système goutte-à-goutte',
+      'Capteurs de pluie',
+      'Maintenance annuelle',
     ],
-    price: 'À partir de 800 €',
-    duration: '1 à 3 jours',
   },
   {
-    id: 'engazonnement',
-    emoji: '🌱',
-    title: 'Engazonnement & Pelouses',
-    subtitle: 'Un gazon dense et durable',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
-    description: "Création de pelouses par semis ou gazon en rouleaux, préparation du sol, scarification, sursemage et régénération de gazon abîmé. Nous choisissons les mélanges adaptés au climat lyonnais.",
-    benefits: [
-      'Préparation du sol incluse',
-      'Choix du mélange adapté (ombre, soleil, sport)',
-      'Gazon en rouleaux ou semis',
-      'Levée garantie ou reprise',
-      "Programme d'entretien en option",
+    icon: Flower2,
+    title: 'Engazonnement',
+    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=600&q=80',
+    desc: "Une belle pelouse est la base d'un jardin réussi. Nous créons votre gazon par semis ou en rouleaux selon vos besoins, et vous proposons des prairies fleuries pour plus de biodiversité.",
+    features: [
+      'Semis de pelouse',
+      'Gazon en rouleaux',
+      'Préparation du sol',
+      'Prairie fleurie',
+      'Regarnissage et rénovation',
     ],
-    price: 'À partir de 15 €/m²',
-    duration: '1 à 5 jours',
-  },
-] as const
-
-const faqServices = [
-  {
-    question: "Proposez-vous des contrats d'entretien annuels ?",
-    answer: "Oui, nous proposons des forfaits d'entretien mensuels, trimestriels ou annuels adaptés à votre jardin. Ces contrats incluent généralement la tonte, la taille de haies, le désherbage et la fertilisation saisonnière.",
-  },
-  {
-    question: "Quelle différence entre élagage et abattage ?",
-    answer: "L'élagage consiste à tailler sélectivement les branches d'un arbre pour améliorer sa forme, sa santé ou sa sécurité. L'abattage est la coupe complète d'un arbre lorsqu'il est dangereux, mort ou gênant. Nos professionnels réalisent les deux.",
-  },
-  {
-    question: "Intervenez-vous pour les copropriétés ?",
-    answer: "Oui, nous travaillons avec des copropriétés, des entreprises, des hôtels et des collectivités pour l'entretien de leurs espaces verts. Des devis sur-mesure sont établis selon la superficie et la fréquence souhaitée.",
-  },
-  {
-    question: "Quelle est la durée d'intervention pour une création de jardin ?",
-    answer: "Cela dépend de la superficie et de la complexité du projet. Un petit jardin de 100 m² peut être réalisé en 2-3 jours. Un jardin complet avec terrasse, massifs et gazon peut prendre 2 à 4 semaines.",
   },
 ]
 
@@ -156,120 +120,131 @@ export default function ServicesPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Breadcrumb */}
-      <nav aria-label="Fil d'Ariane" className="border-b border-[--color-border] bg-[--color-bg-subtle]">
-        <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
-            <li><Link href="/" className="hover:text-[--color-fg]">Accueil</Link></li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[--color-fg]">Services</span></li>
-          </ol>
-        </div>
-      </nav>
-
       {/* Hero */}
-      <section className="py-16 text-center bg-[--color-bg-subtle]">
-        <div className="container mx-auto max-w-3xl px-4 sm:px-6">
-          <p className="badge badge-light mb-4">Notre expertise</p>
-          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-[--color-fg]">
-            Services paysagers à Lyon
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-[--color-fg-muted]">
-            De la création à l&apos;entretien, LM Espace Vert maîtrise toutes les facettes
-            de l&apos;aménagement extérieur dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or.
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Link href="/devis" className="btn-primary">Devis gratuit <ArrowRight size={15} aria-hidden="true" /></Link>
-            <a href="tel:+33674734698" className="btn-secondary"><Phone size={15} aria-hidden="true" /> 06 74 73 46 98</a>
+      <section className="bg-[--color-bg-subtle] py-16">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          {/* Breadcrumb */}
+          <nav aria-label="Fil d'Ariane" className="mb-6">
+            <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
+              <li>
+                <Link href="/" className="hover:text-[--color-fg] transition-colors">
+                  Accueil
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-[--color-fg-subtle]">/</li>
+              <li>
+                <span aria-current="page" className="text-[--color-fg]">
+                  Nos Services
+                </span>
+              </li>
+            </ol>
+          </nav>
+
+          <div className="max-w-3xl">
+            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-[--color-fg] leading-tight">
+              Nos Prestations Paysagères
+            </h1>
+            <p className="mt-4 text-lg text-[--color-fg-muted] leading-relaxed">
+              De l&apos;entretien hebdomadaire à la création complète, LM Espace Vert prend en
+              charge l&apos;ensemble de vos projets extérieurs.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <span className="inline-flex items-center rounded-full border border-[--color-border] bg-white px-4 py-1.5 text-sm font-medium text-[--color-fg-muted]">
+                Devis gratuit · 24h
+              </span>
+              <span className="inline-flex items-center rounded-full border border-[--color-border] bg-white px-4 py-1.5 text-sm font-medium text-[--color-fg-muted]">
+                Rayon 20 km
+              </span>
+              <span className="inline-flex items-center rounded-full border border-[--color-border] bg-white px-4 py-1.5 text-sm font-medium text-[--color-fg-muted]">
+                RC Pro
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Trust bar */}
-      <div className="border-y border-[--color-border] py-8">
+      {/* Services grid */}
+      <section aria-label="Liste des services" className="bg-white py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <TrustBadges columns={6} />
-        </div>
-      </div>
-
-      {/* Services */}
-      <section aria-label="Liste des services" className="py-16">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <ul role="list" className="space-y-12">
-            {services.map((service, i) => (
-              <li
-                key={service.id}
-                id={service.id}
-                className={`grid gap-10 rounded-2xl border border-[--color-border] bg-[--color-bg-elevated] overflow-hidden shadow-sm lg:grid-cols-2 ${i % 2 === 1 ? 'lg:[direction:rtl]' : ''}`}
-              >
-                <div className="relative aspect-[4/3] lg:aspect-auto overflow-hidden bg-[--color-bg-subtle]" style={i % 2 === 1 ? { direction: 'ltr' } : {}}>
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className={`flex flex-col justify-center p-8 lg:p-10 ${i % 2 === 1 ? '[direction:ltr]' : ''}`}>
-                  <div className="text-4xl mb-4" aria-hidden="true">{service.emoji}</div>
-                  <p className="text-sm font-semibold text-[--color-accent] uppercase tracking-wider mb-1">{service.subtitle}</p>
-                  <h2 className="font-display text-2xl font-bold text-[--color-fg] mb-4">{service.title}</h2>
-                  <p className="text-[--color-fg-muted] leading-relaxed mb-6">{service.description}</p>
-
-                  <ul className="space-y-2 mb-6">
-                    {service.benefits.map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-sm text-[--color-fg-muted]">
-                        <CheckCircle2 size={15} className="text-[--color-primary] flex-shrink-0 mt-0.5" aria-hidden="true" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex flex-wrap gap-3 text-sm mb-8">
-                    <div className="flex items-center gap-1.5 bg-[--color-green-light] text-[--color-primary] rounded-full px-3 py-1.5 font-semibold">
-                      <Euro size={13} aria-hidden="true" /> {service.price}
-                    </div>
-                    <div className="flex items-center gap-1.5 bg-[--color-bg-subtle] text-[--color-fg-muted] rounded-full px-3 py-1.5">
-                      <Clock size={13} aria-hidden="true" /> {service.duration}
-                    </div>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {services.map((service) => {
+              const Icon = service.icon
+              return (
+                <article
+                  key={service.title}
+                  className="overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-elevated] shadow-sm"
+                >
+                  <div className="relative h-52 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                      loading="lazy"
+                    />
                   </div>
-
-                  <div className="flex flex-wrap gap-3">
-                    <Link href="/devis" className="btn-primary btn-sm">
-                      Devis gratuit
+                  <div className="p-7">
+                    <div className="mb-3 flex items-center gap-3">
+                      <div
+                        className="flex h-10 w-10 items-center justify-center rounded-xl bg-[--color-green-light]"
+                      >
+                        <Icon size={18} style={{ color: '#275524' }} aria-hidden="true" />
+                      </div>
+                      <h2 className="font-display text-xl font-bold text-[--color-fg]">
+                        {service.title}
+                      </h2>
+                    </div>
+                    <p className="mb-5 leading-relaxed text-[--color-fg-muted]">{service.desc}</p>
+                    <ul className="mb-6 space-y-1.5">
+                      {service.features.map((f) => (
+                        <li
+                          key={f}
+                          className="flex items-center gap-2 text-sm text-[--color-fg-muted]"
+                        >
+                          <CheckCircle
+                            size={14}
+                            style={{ color: '#275524' }}
+                            aria-hidden="true"
+                          />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href="/devis"
+                      className="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3"
+                      style={{ color: '#275524' }}
+                    >
+                      Devis pour ce service <ArrowRight size={14} aria-hidden="true" />
                     </Link>
-                    <a href="tel:+33674734698" className="btn-secondary btn-sm">
-                      <Phone size={14} aria-hidden="true" /> Appeler
-                    </a>
                   </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* FAQ services */}
-      <section className="section-pale py-16">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <FAQSection items={faqServices} title="Questions sur nos services" subtitle="FAQ" />
+                </article>
+              )
+            })}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-green py-16 text-center">
+      <section className="py-16 text-center" style={{ backgroundColor: '#275524' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-white mb-3">
-            Prêt à démarrer votre projet ?
+            Votre projet, notre expertise
           </h2>
-          <p className="text-green-100 mb-6">Devis gratuit, réponse sous 24h.</p>
+          <p className="mb-6 text-green-100">Devis gratuit, réponse sous 24h.</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/devis" className="inline-flex items-center gap-2 rounded-full bg-white text-[--color-primary] font-bold px-6 py-3 hover:bg-white/90 transition-colors">
+            <Link
+              href="/devis"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold transition-colors hover:bg-white/90"
+              style={{ color: '#275524' }}
+            >
               Demander un devis
             </Link>
-            <a href="tel:+33674734698" className="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/30 text-white font-bold px-6 py-3 hover:bg-white/25 transition-colors">
+            <a
+              href="tel:+33674734698"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 font-bold text-white transition-colors hover:bg-white/25"
+            >
               <Phone size={16} aria-hidden="true" /> 06 74 73 46 98
             </a>
           </div>

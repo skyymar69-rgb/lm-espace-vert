@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle2, Award, Leaf, Heart } from 'lucide-react'
+import { ArrowRight, Leaf, Award, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: "À propos de LM Espace Vert — Léo Maurice, paysagiste à Lyon",
@@ -12,123 +12,117 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: <Award size={22} aria-hidden="true" />,
-    title: 'Expertise du geste',
-    desc: 'Chaque taille, chaque plantation est pensée pour la santé et la beauté durable de vos végétaux. Formation professionnelle et passion du métier.',
+    icon: <Leaf size={24} aria-hidden="true" />,
+    title: 'Éco-responsabilité',
+    desc: 'Nous privilégions des produits respectueux de l\'environnement, des végétaux adaptés au climat local et une politique zéro pesticide pour des jardins sains et durables.',
   },
   {
-    icon: <Leaf size={22} aria-hidden="true" />,
-    title: 'Amour du vivant',
-    desc: 'Nous travaillons avec la nature, pas contre elle. Nos pratiques respectent la biodiversité : produits raisonnés, compostage, haies mellifères.',
+    icon: <Award size={24} aria-hidden="true" />,
+    title: 'Passion & Expertise',
+    desc: 'Avec 5 ans d\'expérience et une formation continue, Léo apporte un savoir-faire reconnu à chaque chantier. La passion du métier se ressent dans chaque détail.',
   },
   {
-    icon: <CheckCircle2 size={22} aria-hidden="true" />,
-    title: 'Rigueur & ponctualité',
-    desc: 'Délais tenus, chantiers propres, communication transparente. Votre confiance est notre priorité absolue.',
-  },
-  {
-    icon: <Heart size={22} aria-hidden="true" />,
-    title: 'Partenariat durable',
-    desc: "Nous accompagnons nos clients dans la durée, bien au-delà de la livraison du chantier. Une relation de confiance qui dure.",
+    icon: <Users size={24} aria-hidden="true" />,
+    title: 'Service personnalisé',
+    desc: 'Chaque jardin est unique, chaque client l\'est aussi. Nous prenons le temps d\'écouter vos envies pour vous proposer un projet sur mesure, avec devis gratuit.',
   },
 ]
 
 const timeline = [
-  { year: '2019', title: 'Création de LM Espace Vert', desc: "Léo Maurice crée LM Espace Vert à Saint-Didier-au-Mont-d'Or avec une première équipe de 2 personnes." },
-  { year: '2020', title: 'Premier contrat d\'entretien annuel', desc: "Signature du premier grand contrat d'entretien avec une propriété privée à Caluire. Développement des compétences élagage." },
-  { year: '2021', title: 'Extension maçonnerie paysagère', desc: "Intégration des prestations terrasse et maçonnerie paysagère. Acquisition de matériel spécialisé pour les grandes interventions." },
-  { year: '2022', title: 'Plus de 100 clients', desc: "Franchissement du cap des 100 clients actifs. Lancement des contrats d'entretien premium avec rapport mensuel." },
-  { year: '2023', title: 'Certification élagage', desc: "Léo obtient sa certification European Tree Worker. Intervention sur arbres remarquables et espaces sensibles." },
-  { year: '2024', title: 'Arrosage automatique', desc: "Développement de la division arrosage automatique. Partenariat avec les meilleurs fournisseurs de systèmes connectés." },
-  { year: '2026', title: 'Aujourd\'hui — 200+ clients', desc: "Plus de 200 clients font confiance à LM Espace Vert dans un rayon de 20 km. Note parfaite de 5/5 sur Google." },
-]
-
-const certifications = [
-  { icon: '🏆', label: 'Artisan qualifié', sub: 'RGE Éco-Jardin' },
-  { icon: '🌳', label: 'Certifié élagage', sub: 'European Tree Worker' },
-  { icon: '💼', label: 'RC Professionnelle', sub: 'Couverture totale' },
-  { icon: '🌿', label: 'Éco-responsable', sub: 'Zéro phyto' },
+  { year: '2019', label: 'Création de LM Espace Vert' },
+  { year: '2021', label: 'Développement, 100+ clients' },
+  { year: '2023', label: 'Spécialisation en création paysagère' },
+  { year: '2025', label: '200+ projets réalisés' },
 ]
 
 export default function AProposPage() {
   return (
     <>
-      {/* Breadcrumb */}
-      <nav aria-label="Fil d'Ariane" className="border-b border-[--color-border] bg-[--color-bg-subtle]">
-        <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
-            <li><Link href="/" className="hover:text-[--color-fg]">Accueil</Link></li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[--color-fg]">À propos</span></li>
-          </ol>
-        </div>
-      </nav>
-
       {/* Hero */}
-      <section className="section-green-gradient py-20 text-center">
-        <div className="container mx-auto max-w-3xl px-4 sm:px-6">
-          <p className="text-sm font-semibold uppercase tracking-widest text-green-300 mb-3">Notre histoire</p>
-          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-white">
-            Passion de la nature,<br />expertise du paysage
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-green-100 text-lg">
-            Depuis 2019, LM Espace Vert transforme les extérieurs du nord-ouest lyonnais
-            avec passion, expertise et respect du vivant.
-          </p>
+      <section className="bg-[--color-bg-subtle] py-16">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <nav aria-label="Fil d'Ariane" className="mb-6">
+            <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
+              <li><Link href="/" className="hover:text-[--color-fg]">Accueil</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><span aria-current="page" className="text-[--color-fg]">À propos</span></li>
+            </ol>
+          </nav>
+          <div className="max-w-2xl">
+            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight text-[--color-fg]">
+              Notre Histoire
+            </h1>
+            <p className="mt-4 text-lg text-[--color-fg-muted]">
+              L&apos;histoire d&apos;un paysagiste passionné au service de vos jardins
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Story */}
-      <section aria-labelledby="story-heading" className="py-20">
+      {/* Histoire */}
+      <section aria-labelledby="histoire-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            {/* Image */}
             <div>
-              <p className="badge badge-light mb-4">Notre fondateur</p>
-              <h2 id="story-heading" className="font-display text-3xl font-bold text-[--color-fg] sm:text-4xl mb-6">
-                Léo Maurice, paysagiste passionné
+              <Image
+                src="/images/presentation.webp"
+                alt="Léo Maurice, fondateur de LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
+                width={600}
+                height={384}
+                className="rounded-2xl object-cover w-full h-96"
+                priority
+              />
+            </div>
+            {/* Texte */}
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-[--color-primary] mb-3">
+                NOTRE HISTOIRE
+              </p>
+              <h2 id="histoire-heading" className="font-display text-3xl font-bold text-[--color-fg] sm:text-4xl mb-6">
+                Léo Maurice, paysagiste depuis 2019
               </h2>
               <div className="space-y-4 text-[--color-fg-muted] leading-relaxed">
                 <p>
-                  Natif du Rhône, Léo Maurice grandit entouré de jardins et développe très tôt
-                  une passion pour le monde végétal. Après une formation en horticulture et paysagisme,
-                  il crée <strong className="text-[--color-fg]">LM Espace Vert</strong> en 2019 à
-                  Saint-Didier-au-Mont-d&apos;Or.
+                  Natif du Rhône et amoureux de la nature depuis toujours, Léo Maurice a fondé
+                  <strong className="text-[--color-fg]"> LM Espace Vert</strong> en 2019 à
+                  Saint-Didier-au-Mont-d&apos;Or avec une conviction forte : chaque extérieur mérite
+                  d&apos;être beau, vivant et refléter la personnalité de ceux qui l&apos;habitent.
                 </p>
                 <p>
-                  Son approche : écouter attentivement les envies de ses clients, conseiller avec
-                  honnêteté et réaliser chaque chantier avec la même rigueur, qu&apos;il s&apos;agisse
-                  d&apos;un petit jardin de 50 m² ou d&apos;un parc de demeure.
+                  Formé en horticulture et paysagisme, Léo allie savoir-faire technique et sensibilité
+                  artistique. Il intervient aussi bien sur l&apos;entretien régulier de jardins que sur
+                  des créations complètes, en apportant toujours la même attention aux détails et le
+                  même respect du végétal. Son approche est simple : écouter, conseiller honnêtement,
+                  et réaliser.
                 </p>
                 <p>
-                  Certifié <em>European Tree Worker</em>, Léo est aujourd&apos;hui reconnu comme
-                  l&apos;un des paysagistes de référence du nord-ouest lyonnais avec plus de
-                  200 clients satisfaits et une note parfaite de 5/5 sur Google.
+                  En 5 ans, LM Espace Vert est devenu un acteur reconnu du paysagisme dans le
+                  nord-ouest lyonnais. Avec plus de 200 projets réalisés et une note parfaite de 5/5
+                  sur Google, la confiance de ses clients est la meilleure des récompenses.
                 </p>
               </div>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link href="/contact" className="btn-primary">Contacter Léo <ArrowRight size={15} aria-hidden="true" /></Link>
-                <Link href="/realisations" className="btn-secondary">Voir nos réalisations</Link>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/images/presentation.webp"
-                alt="Léo Maurice, fondateur de LM Espace Vert"
-                width={600}
-                height={500}
-                className="rounded-2xl object-cover w-full shadow-lg"
-                style={{ aspectRatio: '6/5' }}
-              />
-              <div className="absolute -bottom-4 -right-4 hidden lg:block bg-[--color-bg-elevated] border border-[--color-border] rounded-xl p-4 shadow-md">
-                <div className="flex gap-3">
-                  {[
-                    { num: '200+', label: 'Clients' },
-                    { num: '5★', label: 'Google' },
-                    { num: '20 km', label: 'Zone' },
-                  ].map((s) => (
-                    <div key={s.label} className="text-center">
-                      <p className="font-display font-extrabold text-lg text-[--color-primary] leading-none">{s.num}</p>
-                      <p className="text-xs text-[--color-fg-subtle]">{s.label}</p>
+
+              {/* Timeline */}
+              <div className="mt-8">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-0">
+                  {timeline.map((item, i) => (
+                    <div key={item.year} className="flex sm:flex-1 items-start sm:flex-col gap-3 sm:gap-1 sm:items-center sm:text-center">
+                      <div className="flex sm:flex-col items-center sm:items-center gap-2 sm:gap-1 flex-1">
+                        <div
+                          className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold"
+                          style={{ backgroundColor: '#275524' }}
+                        >
+                          {item.year.slice(2)}
+                        </div>
+                        <div className="sm:mt-2">
+                          <p className="text-xs font-bold text-[--color-primary]">{item.year}</p>
+                          <p className="text-xs text-[--color-fg-muted] leading-snug max-w-[120px]">{item.label}</p>
+                        </div>
+                      </div>
+                      {i < timeline.length - 1 && (
+                        <div className="hidden sm:block flex-1 h-px bg-[--color-border] mt-5" />
+                      )}
                     </div>
                   ))}
                 </div>
@@ -138,50 +132,30 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="section-pale py-16" aria-labelledby="timeline-heading">
-        <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <p className="badge badge-light mb-3">Notre parcours</p>
-            <h2 id="timeline-heading" className="font-display text-2xl font-bold text-[--color-fg] sm:text-3xl">
-              5 ans de croissance et d&apos;excellence
-            </h2>
-          </div>
-          <ol className="relative border-l-2 border-[--color-primary] pl-8 space-y-8">
-            {timeline.map((item, i) => (
-              <li key={item.year} className="relative">
-                <div className="absolute -left-[2.7rem] w-9 h-9 rounded-full bg-[--color-primary] border-4 border-[--color-bg-subtle] flex items-center justify-center">
-                  <span className="text-[--color-primary-fg] text-xs font-bold" aria-hidden="true">
-                    {i + 1}
-                  </span>
-                </div>
-                <div className={`rounded-xl border border-[--color-border] bg-[--color-bg-elevated] p-5 shadow-sm ${i === timeline.length - 1 ? 'border-[--color-primary] bg-[--color-green-pale]' : ''}`}>
-                  <time dateTime={item.year} className="text-xs font-bold text-[--color-primary] uppercase tracking-wider">{item.year}</time>
-                  <h3 className="font-bold text-[--color-fg] mt-1">{item.title}</h3>
-                  <p className="text-sm text-[--color-fg-muted] mt-1 leading-relaxed">{item.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="section-white py-16" aria-labelledby="values-heading">
+      {/* Valeurs */}
+      <section aria-labelledby="valeurs-heading" className="bg-[--color-bg-subtle] py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="text-center mb-10">
-            <p className="badge badge-light mb-3">Ce qui nous guide</p>
-            <h2 id="values-heading" className="font-display text-2xl font-bold text-[--color-fg] sm:text-3xl">
-              Nos valeurs
+          <div className="text-center mb-12">
+            <p className="text-xs font-bold uppercase tracking-widest text-[--color-primary] mb-3">
+              NOS VALEURS
+            </p>
+            <h2 id="valeurs-heading" className="font-display text-3xl font-bold text-[--color-fg] sm:text-4xl">
+              Ce qui nous guide
             </h2>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-3">
             {values.map((v) => (
-              <div key={v.title} className="p-6 rounded-2xl border border-[--color-border] bg-[--color-bg-elevated] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-[--color-green-light] flex items-center justify-center text-[--color-primary] mb-4">
+              <div
+                key={v.title}
+                className="rounded-2xl border border-[--color-border] bg-white shadow-sm p-8 hover:shadow-md hover:-translate-y-1 transition-all"
+              >
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
+                  style={{ backgroundColor: '#275524' }}
+                >
                   {v.icon}
                 </div>
-                <h3 className="font-bold text-[--color-fg] mb-2">{v.title}</h3>
+                <h3 className="font-bold text-lg text-[--color-fg] mb-3">{v.title}</h3>
                 <p className="text-sm text-[--color-fg-muted] leading-relaxed">{v.desc}</p>
               </div>
             ))}
@@ -189,37 +163,23 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="section-pale py-12 border-y border-[--color-border]">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-[--color-fg-subtle] mb-8">
-            Certifications & Garanties
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {certifications.map((c) => (
-              <div key={c.label} className="trust-badge">
-                <div className="trust-badge-icon"><span aria-hidden="true">{c.icon}</span></div>
-                <p className="font-bold text-sm text-[--color-fg]">{c.label}</p>
-                <p className="text-xs text-[--color-fg-subtle]">{c.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-16 text-center">
+      <section className="py-16 text-center" style={{ backgroundColor: '#275524' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold text-[--color-fg] mb-3">
-            Envie de travailler avec Léo ?
+          <h2 className="font-display text-2xl font-bold text-white mb-3">
+            Travaillons ensemble
           </h2>
-          <p className="text-[--color-fg-muted] mb-6">
-            Contactez-nous pour discuter de votre projet. Devis gratuit et sans engagement.
+          <p className="text-green-200 mb-8">
+            Confiez votre jardin à un paysagiste passionné. Devis gratuit, sans engagement.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/devis" className="btn-primary">Devis gratuit <ArrowRight size={15} aria-hidden="true" /></Link>
-            <Link href="/contact" className="btn-secondary">Nous contacter</Link>
-          </div>
+          <Link
+            href="/devis"
+            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
+            style={{ backgroundColor: '#fff', color: '#275524' }}
+          >
+            Demander un devis gratuit
+            <ArrowRight size={15} aria-hidden="true" />
+          </Link>
         </div>
       </section>
     </>
