@@ -76,19 +76,19 @@ const services = [
     href: '/services',
   },
   {
-    imgFallback: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=600&q=80',
+    imgFallback: 'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?w=600&q=80',
     icon: '🌳', title: 'Élagage & Abattage',
     description: "Taille douce, élagage raisonné et abattage par des professionnels équipés.",
     href: '/services',
   },
   {
-    imgFallback: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=600&q=80',
+    imgFallback: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
     icon: '🌿', title: 'Création de jardins',
     description: "De la terrasse au parc de demeure, nous concevons des jardins sur mesure.",
     href: '/services',
   },
   {
-    imgFallback: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+    imgFallback: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
     icon: '🧱', title: 'Maçonnerie paysagère',
     description: "Terrasses, allées, murets et escaliers en pierres naturelles.",
     href: '/services',
