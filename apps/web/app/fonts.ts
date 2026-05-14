@@ -1,11 +1,10 @@
-import { Newsreader, Inter } from 'next/font/google'
+import { Montserrat, Inter } from 'next/font/google'
 
-export const newsreader = Newsreader({
+export const montserrat = Montserrat({
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-newsreader',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
 })
 
 export const inter = Inter({

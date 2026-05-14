@@ -27,7 +27,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '*.neon.tech',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'local-fr-public.s3.eu-west-3.amazonaws.com',
       },
     ],
   },

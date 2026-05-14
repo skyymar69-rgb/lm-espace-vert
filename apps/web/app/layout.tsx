@@ -1,19 +1,31 @@
 import type { Metadata, Viewport } from 'next'
-import { newsreader, inter } from './fonts'
+import { montserrat, inter } from './fonts'
 import './globals.css'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { CookieBanner } from '@/components/layout/cookie-banner'
+import { WhatsAppButton } from '@/components/whatsapp-button'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'),
   title: {
-    default: 'LM Espace Vert — Paysagiste créateur à Lyon',
+    default: 'LM Espace Vert — Paysagiste Saint-Didier-au-Mont-d\'Or & Lyon',
     template: '%s | LM Espace Vert',
   },
   description:
-    "LM Espace Vert, paysagiste créateur à Lyon. Création, entretien et aménagement de jardins haut de gamme. Demandez votre devis gratuit.",
-  keywords: ['paysagiste Lyon', 'création jardin', 'entretien espaces verts', 'aménagement paysager'],
+    "LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or. Création de jardins, entretien, élagage et aménagement paysager dans un rayon de 20 km. Devis gratuit.",
+  keywords: [
+    'paysagiste Saint-Didier-au-Mont-d\'Or',
+    'paysagiste Lyon nord',
+    'paysagiste Caluire',
+    'paysagiste Écully',
+    'paysagiste Tassin',
+    'création jardin Lyon',
+    'entretien espaces verts Rhône',
+    'aménagement paysager',
+    'LM Espace Vert',
+    'Léo Maurice paysagiste',
+  ],
   authors: [{ name: 'LM Espace Vert', url: 'https://www.lmespacevert.fr' }],
   creator: 'Kayzen Web',
   openGraph: {
@@ -45,8 +57,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fefbf6' },
-    { media: '(prefers-color-scheme: dark)', color: '#04181a' },
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#1a2e1a' },
   ],
 }
 
@@ -55,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${newsreader.variable} ${inter.variable}`}
+      className={`${montserrat.variable} ${inter.variable}`}
     >
       <head>
         {/* No-flash theme script — must run before any render */}
@@ -82,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Footer />
         <CookieBanner />
+        <WhatsAppButton />
       </body>
     </html>
   )

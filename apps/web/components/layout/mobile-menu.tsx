@@ -35,7 +35,7 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
   }, [open])
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         ref={triggerRef}
         onClick={() => setOpen(true)}
@@ -96,7 +96,7 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
               <Link
                 href="/devis"
                 onClick={() => setOpen(false)}
-                className="block w-full rounded-md bg-[--color-accent] px-4 py-3 text-center font-semibold text-[--color-accent-fg] transition-colors hover:bg-[--color-gold-500] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus]"
+                className="block w-full rounded-md bg-[--color-primary] px-4 py-3 text-center font-semibold text-[--color-primary-fg] transition-colors hover:bg-[--color-green-hover] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus]"
               >
                 Devis gratuit
               </Link>
