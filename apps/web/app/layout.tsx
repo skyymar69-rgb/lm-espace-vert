@@ -3,6 +3,7 @@ import { montserrat, inter } from './fonts'
 import './globals.css'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
+import { SiteMapSection } from '@/components/layout/site-map-section'
 import { CookieBanner } from '@/components/layout/cookie-banner'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
@@ -116,6 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
 
+        <SiteMapSection />
         <Footer />
         <CookieBanner />
         <WhatsAppButton />
