@@ -189,7 +189,7 @@ export default function ServicesPage() {
                       <div
                         className="flex h-10 w-10 items-center justify-center rounded-xl bg-[--color-green-light]"
                       >
-                        <Icon size={18} style={{ color: '#275524' }} aria-hidden="true" />
+                        <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
                       </div>
                       <h2 className="font-display text-xl font-bold text-[--color-fg]">
                         {service.title}
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                         >
                           <CheckCircle
                             size={14}
-                            style={{ color: '#275524' }}
+                            style={{ color: '#425D07' }}
                             aria-hidden="true"
                           />
                           {f}
@@ -214,7 +214,7 @@ export default function ServicesPage() {
                     <Link
                       href="/devis"
                       className="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3"
-                      style={{ color: '#275524' }}
+                      style={{ color: '#425D07' }}
                     >
                       Devis pour ce service <ArrowRight size={14} aria-hidden="true" />
                     </Link>
@@ -227,7 +227,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 text-center" style={{ backgroundColor: '#275524' }}>
+      <section className="py-16 text-center" style={{ backgroundColor: '#0B3D2C' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-white mb-3">
             Votre projet, notre expertise
@@ -237,7 +237,7 @@ export default function ServicesPage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold transition-colors hover:bg-white/90"
-              style={{ color: '#275524' }}
+              style={{ color: '#0B3D2C' }}
             >
               Demander un devis
             </Link>

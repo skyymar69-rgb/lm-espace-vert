@@ -98,7 +98,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="max-w-4xl">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-1 text-sm text-[--color-fg-muted] hover:text-[#275524] mb-8 transition-colors"
+                className="inline-flex items-center gap-1 text-sm text-[--color-fg-muted] hover:text-[#425D07] mb-8 transition-colors"
               >
                 <ChevronLeft size={16} aria-hidden="true" />
                 Retour au blog
@@ -121,7 +121,7 @@ export default async function ArticlePage({ params }: Props) {
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span
                     className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                    style={{ backgroundColor: '#EEF4EE', color: '#275524' }}
+                    style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}
                   >
                     {article.category}
                   </span>
@@ -196,13 +196,13 @@ export default async function ArticlePage({ params }: Props) {
               <div className="mt-10 rounded-2xl border border-[--color-border] bg-[--color-bg-subtle] p-6 flex gap-5 items-start">
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center text-white font-display font-bold text-xl flex-shrink-0"
-                  style={{ backgroundColor: '#275524' }}
+                  style={{ backgroundColor: '#425D07' }}
                 >
                   LM
                 </div>
                 <div>
                   <p className="font-bold text-[--color-fg]">{article.author}</p>
-                  <p className="text-sm font-medium" style={{ color: '#275524' }}>Paysagiste — LM Espace Vert</p>
+                  <p className="text-sm font-medium" style={{ color: '#425D07' }}>Paysagiste — LM Espace Vert</p>
                   <p className="mt-2 text-sm text-[--color-fg-muted] leading-relaxed">
                     Artisan paysagiste passionné basé à Saint-Didier-au-Mont-d&apos;Or. Spécialisé en création,
                     entretien et aménagement paysager dans le nord-ouest lyonnais depuis plus de 5 ans.
@@ -211,7 +211,7 @@ export default async function ArticlePage({ params }: Props) {
                     <Link
                       href="/a-propos"
                       className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold border transition-colors"
-                      style={{ borderColor: '#275524', color: '#275524' }}
+                      style={{ borderColor: '#425D07', color: '#425D07' }}
                     >
                       Profil complet
                     </Link>
@@ -229,7 +229,7 @@ export default async function ArticlePage({ params }: Props) {
               {/* CTA box */}
               <div
                 className="mt-12 rounded-2xl p-8 text-white text-center"
-                style={{ backgroundColor: '#275524' }}
+                style={{ backgroundColor: '#0B3D2C' }}
               >
                 <h2 className="font-display text-xl font-bold">Besoin d&apos;un paysagiste près de chez vous ?</h2>
                 <p className="mt-2 text-white/80 text-sm">
@@ -239,7 +239,7 @@ export default async function ArticlePage({ params }: Props) {
                   <a
                     href="tel:+33674734698"
                     className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-bold text-sm hover:bg-white/90 transition-colors"
-                    style={{ color: '#275524' }}
+                    style={{ color: '#0B3D2C' }}
                   >
                     <Phone size={14} aria-hidden="true" />
                     06 74 73 46 98
@@ -279,7 +279,7 @@ export default async function ArticlePage({ params }: Props) {
                             <div className="p-4">
                               <span
                                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-2"
-                                style={{ backgroundColor: '#EEF4EE', color: '#275524' }}
+                                style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}
                               >
                                 {rel.category}
                               </span>
@@ -290,7 +290,7 @@ export default async function ArticlePage({ params }: Props) {
                                 <span className="text-xs text-[--color-fg-subtle]">{rel.readingTime}</span>
                                 <span
                                   className="text-xs font-semibold flex items-center gap-1"
-                                  style={{ color: '#275524' }}
+                                  style={{ color: '#425D07' }}
                                 >
                                   Lire <ArrowRight size={11} aria-hidden="true" />
                                 </span>
@@ -310,7 +310,7 @@ export default async function ArticlePage({ params }: Props) {
               <TableOfContents contentId="article-content" />
 
               {/* CTA encart */}
-              <div className="rounded-2xl p-6" style={{ backgroundColor: '#EEF4EE' }}>
+              <div className="rounded-2xl p-6" style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)' }}>
                 <h3 className="font-display font-bold text-base text-[--color-fg] mb-2">Besoin d&apos;un paysagiste ?</h3>
                 <p className="text-sm text-[--color-fg-muted] mb-4 leading-relaxed">
                   Devis gratuit sous 48h. Intervention dans le nord-ouest lyonnais.
@@ -319,15 +319,15 @@ export default async function ArticlePage({ params }: Props) {
                   <a
                     href="tel:+33674734698"
                     className="flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5 font-bold text-sm text-white transition-colors hover:opacity-90"
-                    style={{ backgroundColor: '#275524' }}
+                    style={{ backgroundColor: '#80BC00', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
                   >
                     <Phone size={14} aria-hidden="true" />
                     Appeler Léo
                   </a>
                   <Link
                     href="/devis"
-                    className="flex w-full items-center justify-center rounded-full border-2 px-4 py-2.5 font-bold text-sm transition-colors hover:bg-[#275524] hover:text-white"
-                    style={{ borderColor: '#275524', color: '#275524' }}
+                    className="flex w-full items-center justify-center rounded-full border-2 px-4 py-2.5 font-bold text-sm transition-colors hover:bg-[#425D07] hover:text-white"
+                    style={{ borderColor: '#425D07', color: '#425D07' }}
                   >
                     Devis gratuit
                   </Link>
@@ -346,7 +346,7 @@ export default async function ArticlePage({ params }: Props) {
                     <Link
                       key={cat}
                       href={`/blog?categorie=${encodeURIComponent(cat)}`}
-                      className="flex items-center justify-between text-sm text-[--color-fg-muted] hover:text-[#275524] py-1 transition-colors"
+                      className="flex items-center justify-between text-sm text-[--color-fg-muted] hover:text-[#80BC00] py-1 transition-colors"
                     >
                       <span>{cat}</span>
                       <span className="text-xs bg-[--color-bg-subtle] px-2 py-0.5 rounded-full">

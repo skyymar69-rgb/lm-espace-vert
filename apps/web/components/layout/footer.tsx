@@ -27,7 +27,7 @@ export function Footer() {
     <footer>
 
       {/* ZONE A — Bandeau pré-footer vert */}
-      <div style={{ backgroundColor: '#275524', color: '#ffffff' }}>
+      <div style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}>
         <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
@@ -42,7 +42,7 @@ export function Footer() {
               <Link
                 href="/devis"
                 className="rounded-full px-6 py-2.5 text-sm font-semibold bg-white hover:opacity-90 transition-opacity"
-                style={{ color: '#275524' }}
+                style={{ color: '#0B3D2C' }}
               >
                 Demander un devis
               </Link>
@@ -190,7 +190,7 @@ export function Footer() {
               <Link
                 href="/devis"
                 className="mt-4 block w-full text-center rounded-full py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: '#275524', color: '#fff' }}
+                style={{ backgroundColor: '#80BC00', color: '#fff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
               >
                 Devis gratuit
               </Link>

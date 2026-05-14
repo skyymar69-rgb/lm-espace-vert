@@ -37,7 +37,7 @@ const communes = [
 ]
 
 const inputClass =
-  'w-full border border-[--color-border] rounded-xl px-4 py-3 text-sm text-[--color-fg] bg-[--color-bg-elevated] placeholder-[--color-fg-subtle] focus:outline-none focus:border-[#275524] transition-colors'
+  'w-full border border-[--color-border] rounded-xl px-4 py-3 text-sm text-[--color-fg] bg-[--color-bg-elevated] placeholder-[--color-fg-subtle] focus:outline-none focus:border-[#80BC00] transition-colors'
 const labelClass = 'block text-sm font-medium text-[--color-fg] mb-1.5'
 
 export default function ContactPage() {
@@ -85,12 +85,12 @@ export default function ContactPage() {
                 >
                   <div
                     className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center text-white"
-                    style={{ backgroundColor: '#275524' }}
+                    style={{ backgroundColor: '#0B3D2C' }}
                   >
                     <Phone size={24} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold text-lg text-[--color-fg] group-hover:text-[#275524] transition-colors">
+                    <p className="font-bold text-lg text-[--color-fg] group-hover:text-[#425D07] transition-colors">
                       06 74 73 46 98
                     </p>
                     <p className="text-sm text-[--color-fg-muted]">
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 >
                   <div
                     className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-white"
-                    style={{ backgroundColor: '#275524' }}
+                    style={{ backgroundColor: '#0B3D2C' }}
                   >
                     <Mail size={22} aria-hidden="true" />
                   </div>
@@ -137,7 +137,7 @@ export default function ContactPage() {
 
                 {/* Adresse */}
                 <div className="flex items-center gap-4 px-5 py-3 text-[--color-fg-muted]">
-                  <MapPin size={20} className="flex-shrink-0 text-[#275524]" aria-hidden="true" />
+                  <MapPin size={20} className="flex-shrink-0 text-[#425D07]" aria-hidden="true" />
                   <span className="text-sm">
                     Saint-Didier-au-Mont-d&apos;Or,{' '}
                     <strong className="text-[--color-fg]">69370 Rhône</strong>
@@ -148,7 +148,7 @@ export default function ContactPage() {
               {/* Horaires */}
               <div className="mt-8 rounded-2xl border border-[--color-border] shadow-sm overflow-hidden">
                 <div className="flex items-center gap-3 px-5 py-4 border-b border-[--color-border] bg-[--color-bg-subtle]">
-                  <Clock size={18} className="text-[#275524]" aria-hidden="true" />
+                  <Clock size={18} className="text-[#425D07]" aria-hidden="true" />
                   <span className="font-semibold text-sm text-[--color-fg]">Horaires d&apos;ouverture</span>
                 </div>
                 <table className="w-full text-sm">
@@ -262,7 +262,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   className="w-full rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: '#275524', color: '#fff' }}
+                  style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
                 >
                   Envoyer le message →
                 </button>
@@ -299,7 +299,7 @@ export default function ContactPage() {
           </ul>
           <p className="text-center text-sm text-[--color-fg-muted] mt-6">
             Votre commune n&apos;est pas dans la liste ?{' '}
-            <a href="tel:+33674734698" className="font-medium hover:underline" style={{ color: '#275524' }}>
+            <a href="tel:+33674734698" className="font-medium hover:underline" style={{ color: '#425D07' }}>
               Appelez-nous
             </a>{' '}
             pour vérifier.

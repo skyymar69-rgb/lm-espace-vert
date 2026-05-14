@@ -20,10 +20,10 @@ export function SiteMapSection() {
             <Link
               key={link.href}
               href={link.href}
-              className="group flex items-center gap-2 text-sm font-medium text-[--color-fg-muted] hover:text-[#275524] transition-colors"
+              className="group flex items-center gap-2 text-sm font-medium text-[--color-fg-muted] hover:text-[#80BC00] transition-colors"
             >
               {link.label}
-              <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#275524' }} />
+              <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#425D07' }} />
             </Link>
           ))}
         </div>
@@ -37,14 +37,14 @@ export function SiteMapSection() {
           <div className="flex gap-3 flex-wrap">
             <Link
               href="/contact"
-              className="rounded-full border border-[--color-border] px-4 py-2 text-sm text-[--color-fg] hover:border-[#275524] hover:text-[#275524] transition-colors"
+              className="rounded-full border border-[--color-border] px-4 py-2 text-sm text-[--color-fg] hover:border-[#80BC00] hover:text-[#80BC00] transition-colors"
             >
               Nous contacter
             </Link>
             <Link
               href="/devis"
               className="rounded-full px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#275524', color: '#fff' }}
+              style={{ backgroundColor: '#80BC00', color: '#fff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Devis gratuit
             </Link>

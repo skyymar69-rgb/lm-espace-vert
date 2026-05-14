@@ -111,7 +111,7 @@ export default function AProposPage() {
                       <div className="flex sm:flex-col items-center sm:items-center gap-2 sm:gap-1 flex-1">
                         <div
                           className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold"
-                          style={{ backgroundColor: '#275524' }}
+                          style={{ backgroundColor: '#80BC00' }}
                         >
                           {item.year.slice(2)}
                         </div>
@@ -151,7 +151,7 @@ export default function AProposPage() {
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
-                  style={{ backgroundColor: '#275524' }}
+                  style={{ backgroundColor: '#80BC00' }}
                 >
                   {v.icon}
                 </div>
@@ -164,7 +164,7 @@ export default function AProposPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 text-center" style={{ backgroundColor: '#275524' }}>
+      <section className="py-16 text-center" style={{ backgroundColor: '#0B3D2C' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-white mb-3">
             Travaillons ensemble
@@ -175,7 +175,7 @@ export default function AProposPage() {
           <Link
             href="/devis"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#fff', color: '#275524' }}
+            style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
           >
             Demander un devis gratuit
             <ArrowRight size={15} aria-hidden="true" />

@@ -49,7 +49,7 @@ export default function RealisationsPage() {
       {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="rounded-2xl p-10 text-center text-white" style={{ backgroundColor: '#275524' }}>
+          <div className="rounded-2xl p-10 text-center text-white" style={{ backgroundColor: '#0B3D2C' }}>
             <h2 className="font-display text-2xl font-bold mb-2">
               Votre projet sera notre prochaine réalisation
             </h2>
@@ -59,7 +59,7 @@ export default function RealisationsPage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 rounded-full bg-white font-bold px-6 py-3 hover:bg-white/90 transition-colors"
-              style={{ color: '#275524' }}
+              style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
             >
               Demander mon devis <ArrowRight size={15} aria-hidden="true" />
             </Link>

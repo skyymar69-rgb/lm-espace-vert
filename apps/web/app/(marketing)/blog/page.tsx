@@ -51,7 +51,7 @@ export default async function BlogPage({
       <section className="bg-[--color-bg-subtle] py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-4" style={{ backgroundColor: '#EEF4EE', color: '#275524' }}>
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-4" style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}>
               <BookOpen size={14} aria-hidden="true" />
               Conseils & Actualités
             </div>
@@ -70,9 +70,9 @@ export default async function BlogPage({
               className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                 !activeCategory
                   ? ''
-                  : 'border border-[--color-border] text-[--color-fg-muted] hover:border-[#275524] hover:text-[#275524]'
+                  : 'border border-[--color-border] text-[--color-fg-muted] hover:border-[#80BC00] hover:text-[#80BC00]'
               }`}
-              style={!activeCategory ? { backgroundColor: '#275524', color: '#fff' } : undefined}
+              style={!activeCategory ? { backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' } : undefined}
             >
               Tout ({articles.length})
             </Link>
@@ -83,9 +83,9 @@ export default async function BlogPage({
                 className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                   activeCategory === cat
                     ? ''
-                    : 'border border-[--color-border] text-[--color-fg-muted] hover:border-[#275524] hover:text-[#275524]'
+                    : 'border border-[--color-border] text-[--color-fg-muted] hover:border-[#80BC00] hover:text-[#80BC00]'
                 }`}
-                style={activeCategory === cat ? { backgroundColor: '#275524', color: '#fff' } : undefined}
+                style={activeCategory === cat ? { backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' } : undefined}
               >
                 {cat} ({articles.filter((a) => a.category === cat).length})
               </Link>
@@ -115,11 +115,11 @@ export default async function BlogPage({
               <div className="flex flex-col justify-center p-8 lg:p-10">
                 <span
                   className="inline-flex items-center self-start rounded-full px-3 py-1 text-xs font-semibold mb-4"
-                  style={{ backgroundColor: '#EEF4EE', color: '#275524' }}
+                  style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}
                 >
                   {featuredArticle.category}
                 </span>
-                <h2 className="font-display text-2xl font-bold leading-tight text-[--color-fg] lg:text-3xl group-hover:text-[#275524] transition-colors">
+                <h2 className="font-display text-2xl font-bold leading-tight text-[--color-fg] lg:text-3xl group-hover:text-[#425D07] transition-colors">
                   {featuredArticle.title}
                 </h2>
                 <p className="mt-3 text-[--color-fg-muted] leading-relaxed line-clamp-3">
@@ -144,7 +144,7 @@ export default async function BlogPage({
                 <div className="mt-5">
                   <span
                     className="inline-flex items-center gap-1.5 text-sm font-semibold"
-                    style={{ color: '#275524' }}
+                    style={{ color: '#425D07' }}
                   >
                     Lire l&apos;article <ArrowRight size={14} aria-hidden="true" />
                   </span>
@@ -176,7 +176,7 @@ export default async function BlogPage({
                       <div className="p-5">
                         <span
                           className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-3"
-                          style={{ backgroundColor: '#EEF4EE', color: '#275524' }}
+                          style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}
                         >
                           {article.category}
                         </span>
@@ -198,7 +198,7 @@ export default async function BlogPage({
                           </span>
                           <span
                             className="text-xs font-semibold flex items-center gap-1"
-                            style={{ color: '#275524' }}
+                            style={{ color: '#425D07' }}
                           >
                             Lire <ArrowRight size={11} aria-hidden="true" />
                           </span>
@@ -222,7 +222,7 @@ export default async function BlogPage({
       {/* Newsletter CTA */}
       <section className="py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="rounded-2xl px-8 py-12 text-center text-white" style={{ backgroundColor: '#275524' }}>
+          <div className="rounded-2xl px-8 py-12 text-center text-white" style={{ backgroundColor: '#0B3D2C' }}>
             <h2 className="font-display text-2xl font-bold sm:text-3xl">
               Restez informé des conseils jardinage
             </h2>
@@ -233,7 +233,7 @@ export default async function BlogPage({
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-sm hover:bg-white/90 transition-colors"
-                style={{ color: '#275524' }}
+                style={{ color: '#0B3D2C' }}
               >
                 Nous contacter
               </Link>

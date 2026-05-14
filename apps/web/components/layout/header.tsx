@@ -148,8 +148,8 @@ export function Header() {
                     <button
                       className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus] ${
                         active || megaOpen
-                          ? 'text-[#275524] font-semibold dark:text-green-400'
-                          : 'text-[--color-fg-muted] hover:text-[#275524] dark:hover:text-green-400'
+                          ? 'text-[#425D07] font-semibold dark:text-[#80BC00]'
+                          : 'text-[--color-fg-muted] hover:text-[#80BC00] dark:hover:text-[#80BC00]'
                       }`}
                       aria-expanded={megaOpen}
                       aria-haspopup="true"
@@ -172,8 +172,8 @@ export function Header() {
                   href={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus] ${
                     active
-                      ? 'text-[#275524] font-semibold dark:text-green-400'
-                      : 'text-[--color-fg-muted] hover:text-[#275524] dark:hover:text-green-400'
+                      ? 'text-[#425D07] font-semibold dark:text-[#80BC00]'
+                      : 'text-[--color-fg-muted] hover:text-[#80BC00] dark:hover:text-[#80BC00]'
                   }`}
                   aria-current={active ? 'page' : undefined}
                 >
@@ -200,7 +200,7 @@ export function Header() {
             {/* Téléphone (md+) */}
             <a
               href="tel:+33674734698"
-              className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[--color-fg] hover:text-[#275524] transition-colors"
+              className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[--color-fg] hover:text-[#80BC00] transition-colors"
               aria-label="Appeler LM Espace Vert au 06 74 73 46 98"
             >
               <Phone size={14} aria-hidden="true" />
@@ -210,8 +210,8 @@ export function Header() {
             {/* Devis gratuit */}
             <Link
               href="/devis"
-              className="hidden sm:inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#275524]"
-              style={{ backgroundColor: '#275524', color: '#fff' }}
+              className="hidden sm:inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Devis gratuit
             </Link>
@@ -243,7 +243,7 @@ export function Header() {
                       onClick={() => setMegaOpen(false)}
                       className="flex flex-col gap-1 rounded-xl p-3 hover:bg-[--color-green-light] transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus]"
                     >
-                      <Icon size={18} style={{ color: '#275524' }} aria-hidden="true" />
+                      <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
                       <span className="text-sm font-semibold text-[--color-fg] leading-snug">{label}</span>
                       <span className="text-xs text-[--color-fg-muted]">{desc}</span>
                     </Link>
@@ -256,7 +256,7 @@ export function Header() {
                     href="/services"
                     onClick={() => setMegaOpen(false)}
                     className="text-sm font-semibold hover:underline"
-                    style={{ color: '#275524' }}
+                    style={{ color: '#425D07' }}
                   >
                     Voir toutes nos prestations →
                   </Link>

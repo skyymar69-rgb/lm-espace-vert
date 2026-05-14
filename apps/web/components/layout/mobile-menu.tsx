@@ -105,14 +105,14 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
                 href="/devis"
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
-                style={{ backgroundColor: '#275524', color: '#fff' }}
+                style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
               >
                 <FileText size={16} aria-hidden="true" />
                 Devis gratuit
               </Link>
               <a
                 href="tel:+33674734698"
-                className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-2.5 text-sm font-semibold border border-[--color-border] text-[--color-fg] hover:text-[#275524] hover:border-[#275524] transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-2.5 text-sm font-semibold border border-[--color-border] text-[--color-fg] hover:text-[#80BC00] hover:border-[#80BC00] transition-colors"
                 onClick={() => setOpen(false)}
               >
                 <Phone size={16} aria-hidden="true" />

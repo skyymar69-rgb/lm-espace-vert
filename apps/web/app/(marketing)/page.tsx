@@ -125,7 +125,7 @@ export default function HomePage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#275524', color: '#fff' }}
+              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Devis gratuit <ArrowRight size={14} />
             </Link>
@@ -161,7 +161,7 @@ export default function HomePage() {
               { value: '5★', label: 'Note Google' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#275524' }}>{stat.value}</dt>
+                <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>{stat.value}</dt>
                 <dd className="text-sm text-[--color-fg-muted] mt-1">{stat.label}</dd>
               </div>
             ))}
@@ -183,7 +183,7 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#275524' }}>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>
                 Qui sommes-nous ?
               </p>
               <h2 id="about-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg] mb-5">
@@ -205,7 +205,7 @@ export default function HomePage() {
               <Link
                 href="/a-propos"
                 className="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all"
-                style={{ color: '#275524' }}
+                style={{ color: '#425D07' }}
               >
                 Découvrir notre histoire <ArrowRight size={14} />
               </Link>
@@ -218,7 +218,7 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-labelledby="services-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#275524' }}>Nos Prestations</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Prestations</p>
             <h2 id="services-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
               Tous vos projets extérieurs
             </h2>
@@ -244,7 +244,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
-                    <svc.icon size={15} style={{ color: '#275524' }} aria-hidden="true" />
+                    <svc.icon size={15} style={{ color: '#425D07' }} aria-hidden="true" />
                     <h3 className="font-display font-semibold text-[--color-fg] text-sm">{svc.title}</h3>
                   </div>
                   <p className="text-xs text-[--color-fg-muted] leading-relaxed">{svc.desc}</p>
@@ -255,7 +255,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-[--color-border] px-6 py-3 text-sm font-semibold text-[--color-fg] hover:border-[#275524] hover:text-[#275524] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[--color-border] px-6 py-3 text-sm font-semibold text-[--color-fg] hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
             >
               Voir toutes nos prestations <ArrowRight size={14} />
             </Link>
@@ -267,7 +267,7 @@ export default function HomePage() {
       <section className="bg-[--color-bg-subtle] py-20 lg:py-24" aria-labelledby="why-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#275524' }}>Nos Engagements</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Engagements</p>
             <h2 id="why-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
               Pourquoi choisir LM Espace Vert ?
             </h2>
@@ -281,7 +281,7 @@ export default function HomePage() {
             ].map(({ Icon, title, desc }) => (
               <div key={title} className="bg-[--color-bg-elevated] rounded-2xl p-6 border border-[--color-border] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
                 <div className="w-10 h-10 rounded-full bg-[--color-green-light] flex items-center justify-center mb-4">
-                  <Icon size={18} style={{ color: '#275524' }} aria-hidden="true" />
+                  <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
                 </div>
                 <h3 className="font-display font-bold text-[--color-fg] mb-2 text-sm">{title}</h3>
                 <p className="text-xs text-[--color-fg-muted] leading-relaxed">{desc}</p>
@@ -295,7 +295,7 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-labelledby="process-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#275524' }}>Comment ça marche ?</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Comment ça marche ?</p>
             <h2 id="process-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
               Un accompagnement simple de A à Z
             </h2>
@@ -305,12 +305,12 @@ export default function HomePage() {
               <li key={num} className="flex flex-col items-start gap-3">
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                  style={{ backgroundColor: '#275524' }}
+                  style={{ backgroundColor: '#80BC00' }}
                   aria-hidden="true"
                 >
                   {num}
                 </div>
-                <Icon size={20} style={{ color: '#275524' }} aria-hidden="true" />
+                <Icon size={20} style={{ color: '#425D07' }} aria-hidden="true" />
                 <div>
                   <h3 className="font-display font-bold text-[--color-fg] text-sm mb-1">{title}</h3>
                   <p className="text-xs text-[--color-fg-muted] leading-relaxed">{desc}</p>
@@ -322,7 +322,7 @@ export default function HomePage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#275524', color: '#fff' }}
+              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Démarrer mon projet <ArrowRight size={14} />
             </Link>
@@ -334,7 +334,7 @@ export default function HomePage() {
       <section className="bg-[--color-bg-subtle] py-20 lg:py-24" aria-label="Avis clients">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#275524' }}>Avis Clients</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Avis Clients</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">Ce que disent nos clients</h2>
             <div className="flex items-center justify-center gap-1 mt-3">
               {[...Array(5)].map((_, i) => (
@@ -371,7 +371,7 @@ export default function HomePage() {
               href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-[--color-border] px-6 py-3 text-sm font-semibold text-[--color-fg] hover:border-[#275524] hover:text-[#275524] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[--color-border] px-6 py-3 text-sm font-semibold text-[--color-fg] hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
             >
               Voir tous les avis sur Google <ArrowRight size={14} />
             </a>
@@ -384,7 +384,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#275524' }}>Blog</p>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Blog</p>
               <h2 id="blog-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
                 Conseils de votre paysagiste
               </h2>
@@ -392,7 +392,7 @@ export default function HomePage() {
             <Link
               href="/blog"
               className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all"
-              style={{ color: '#275524' }}
+              style={{ color: '#425D07' }}
             >
               Voir tous les articles <ArrowRight size={14} />
             </Link>
@@ -417,14 +417,14 @@ export default function HomePage() {
                 <div className="p-5">
                   <span
                     className="inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold mb-2"
-                    style={{ backgroundColor: 'rgba(39,85,36,0.08)', color: '#275524' }}
+                    style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}
                   >
                     {article.category}
                   </span>
-                  <h3 className="font-semibold text-sm text-[--color-fg] group-hover:text-[#275524] transition-colors line-clamp-2 leading-snug mb-2">
+                  <h3 className="font-semibold text-sm text-[--color-fg] group-hover:text-[#80BC00] transition-colors line-clamp-2 leading-snug mb-2">
                     {article.title}
                   </h3>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold" style={{ color: '#275524' }}>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold" style={{ color: '#425D07' }}>
                     Lire <ArrowRight size={11} />
                   </span>
                 </div>
@@ -443,7 +443,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 9 : CTA FINALE ── */}
-      <section style={{ backgroundColor: '#275524' }} className="py-20" aria-label="Appel à l'action">
+      <section style={{ backgroundColor: '#0B3D2C' }} className="py-20" aria-label="Appel à l'action">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">
             Votre jardin mérite le meilleur soin
@@ -455,7 +455,7 @@ export default function HomePage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold bg-white hover:opacity-90 transition-opacity"
-              style={{ color: '#275524' }}
+              style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
             >
               Demander un devis <ArrowRight size={14} />
             </Link>

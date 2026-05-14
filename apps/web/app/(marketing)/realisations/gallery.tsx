@@ -88,10 +88,10 @@ export function RealisationsGallery() {
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActiveCategory(cat)}
-                  className="flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#275524]"
+                  className="flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
                   style={
                     isActive
-                      ? { backgroundColor: '#275524', color: '#fff' }
+                      ? { backgroundColor: '#80BC00', color: '#ffffff' }
                       : {
                           borderWidth: 1,
                           borderStyle: 'solid',
@@ -133,7 +133,7 @@ export function RealisationsGallery() {
                     <div className="absolute top-3 left-3">
                       <span
                         className="text-xs font-semibold bg-white/90 px-2.5 py-1 rounded-full"
-                        style={{ color: '#275524' }}
+                        style={{ color: '#425D07' }}
                       >
                         {r.category}
                       </span>
@@ -145,7 +145,7 @@ export function RealisationsGallery() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h2 className="font-semibold text-[--color-fg] text-sm leading-snug group-hover:text-[#275524] transition-colors">
+                    <h2 className="font-semibold text-[--color-fg] text-sm leading-snug group-hover:text-[#80BC00] transition-colors">
                       {r.title}
                     </h2>
                     <div className="mt-1.5 flex items-center justify-between text-xs text-[--color-fg-subtle]">
