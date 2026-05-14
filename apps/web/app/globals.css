@@ -134,6 +134,9 @@
   --color-green-light:     #1a2e1a;
   --color-green-pale:      #152015;
 }
+/* Brand fixe — ne change jamais — texte blanc toujours lisible */
+:root { --color-brand: #275524; --color-brand-deep: #1b3d19; }
+
 :root[data-theme="light"] {
   --color-bg:              #FFFFFF;
   --color-bg-subtle:       #F1F5F9;

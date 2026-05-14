@@ -333,7 +333,7 @@ export default function HomePage() {
                 style={{ aspectRatio: '6/5' }}
               />
               {/* Google review badge */}
-              <div className="absolute -bottom-4 -left-4 hidden lg:block bg-[--color-primary] text-[--color-primary-fg] rounded-xl p-5 shadow-lg max-w-52">
+              <div className="absolute -bottom-4 -left-4 hidden lg:block rounded-xl p-5 shadow-lg max-w-52" style={{ backgroundColor: '#275524', color: '#ffffff' }}>
                 <div className="flex items-center gap-0.5 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={13} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />

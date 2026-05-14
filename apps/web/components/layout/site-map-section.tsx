@@ -78,7 +78,10 @@ export function SiteMapSection() {
                 {/* gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 {/* badge */}
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-[--color-primary] px-3 py-1 text-xs font-semibold text-[--color-primary-fg] shadow">
+                <span
+                  className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold shadow"
+                  style={{ backgroundColor: '#275524', color: '#ffffff' }}
+                >
                   {section.badge}
                 </span>
               </div>
@@ -101,17 +104,28 @@ export function SiteMapSection() {
           ))}
         </div>
 
-        {/* Bottom contact strip */}
-        <div className="mt-8 rounded-2xl bg-[--color-green-primary] p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Bottom contact strip — vert foncé FIXE hardcodé */}
+        <div
+          className="mt-8 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4"
+          style={{ backgroundColor: '#275524' }}
+        >
           <div>
-            <p className="font-display font-bold text-white text-lg">Vous avez un projet ?</p>
-            <p className="text-white/80 text-sm">Devis gratuit · Réponse en 24h · Zone 20 km</p>
+            <p className="font-display font-bold text-lg" style={{ color: '#ffffff' }}>Vous avez un projet ?</p>
+            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>Devis gratuit · Réponse en 24h · Zone 20 km</p>
           </div>
           <div className="flex gap-3 flex-wrap">
-            <Link href="/contact" className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+            <Link
+              href="/contact"
+              className="rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white/10"
+              style={{ borderColor: 'rgba(255,255,255,0.35)', color: '#ffffff' }}
+            >
               Nous contacter
             </Link>
-            <Link href="/devis" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[--color-green-primary] hover:bg-white/90 transition-colors">
+            <Link
+              href="/devis"
+              className="rounded-full px-5 py-2.5 text-sm font-bold transition-colors hover:opacity-90"
+              style={{ backgroundColor: '#ffffff', color: '#275524' }}
+            >
               Devis gratuit
             </Link>
           </div>
