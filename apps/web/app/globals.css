@@ -152,6 +152,20 @@
   --color-focus:           #007AFF;
 }
 
+/* Badge-light dark mode — prevents near-invisible text on same-hue dark background */
+:root[data-theme="dark"] .badge-light {
+  background-color: rgba(93, 187, 97, 0.12);
+  color: var(--color-primary);
+  border: 1px solid rgba(93, 187, 97, 0.25);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .badge-light {
+    background-color: rgba(93, 187, 97, 0.12);
+    color: var(--color-primary);
+    border: 1px solid rgba(93, 187, 97, 0.25);
+  }
+}
+
 /* ============================================================
    #1 — CUSTOM SCROLLBAR
    ============================================================ */

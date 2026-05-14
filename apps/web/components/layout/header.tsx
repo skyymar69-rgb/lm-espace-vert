@@ -120,21 +120,21 @@ export function Header() {
         className={`sticky top-0 z-40 bg-[--color-bg] border-b border-[--color-border] header-shrink${scrolled ? ' scrolled' : ''}`}
       >
         {/* Top bar */}
-        <div className="bg-[--color-primary] text-white text-sm py-1.5">
+        <div className="bg-[--color-primary] text-[--color-primary-fg] text-sm py-1.5">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between gap-2">
-            <p className="hidden sm:block text-xs font-medium tracking-wide text-white/90">
+            <p className="hidden sm:block text-xs font-medium tracking-wide opacity-90">
               🌿 Paysagiste — Saint-Didier-au-Mont-d&apos;Or &amp; rayon 20 km
             </p>
             <div className="flex items-center gap-4 ml-auto">
               <a
                 href="mailto:contact@lmespacevert.fr"
-                className="hidden md:block text-xs text-white/80 hover:text-white transition-colors"
+                className="hidden md:block text-xs opacity-80 hover:opacity-100 transition-opacity"
               >
                 contact@lmespacevert.fr
               </a>
               <a
                 href="tel:+33674734698"
-                className="flex items-center gap-1.5 text-white font-semibold hover:text-green-200 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                className="flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-primary-fg]"
                 aria-label="Appeler LM Espace Vert au 06 74 73 46 98"
               >
                 <Phone size={13} aria-hidden="true" />

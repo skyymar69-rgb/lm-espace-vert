@@ -55,9 +55,9 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
   return (
     <div className="rounded-2xl border border-[--color-border] bg-[--color-bg-elevated] overflow-hidden">
       {/* Header */}
-      <div className="bg-[--color-primary] px-6 py-4 text-white">
+      <div className="bg-[--color-primary] px-6 py-4 text-[--color-primary-fg]">
         <h3 className="font-display font-bold text-lg">Calendrier d'entretien</h3>
-        <p className="text-sm text-white/80">Que faire dans votre jardin, mois par mois</p>
+        <p className="text-sm opacity-80">Que faire dans votre jardin, mois par mois</p>
       </div>
 
       {/* Month grid */}

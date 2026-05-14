@@ -78,7 +78,7 @@ export function SiteMapSection() {
                 {/* gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 {/* badge */}
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-[--color-primary] px-3 py-1 text-xs font-semibold text-white shadow">
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-[--color-primary] px-3 py-1 text-xs font-semibold text-[--color-primary-fg] shadow">
                   {section.badge}
                 </span>
               </div>
@@ -102,16 +102,16 @@ export function SiteMapSection() {
         </div>
 
         {/* Bottom contact strip */}
-        <div className="mt-8 rounded-2xl bg-[--color-primary] p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 rounded-2xl bg-[--color-green-primary] p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <p className="font-display font-bold text-white text-lg">Vous avez un projet ?</p>
-            <p className="text-green-100 text-sm">Devis gratuit · Réponse en 24h · Zone 20 km</p>
+            <p className="text-white/80 text-sm">Devis gratuit · Réponse en 24h · Zone 20 km</p>
           </div>
           <div className="flex gap-3 flex-wrap">
             <Link href="/contact" className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
               Nous contacter
             </Link>
-            <Link href="/devis" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[--color-primary] hover:bg-white/90 transition-colors">
+            <Link href="/devis" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[--color-green-primary] hover:bg-white/90 transition-colors">
               Devis gratuit
             </Link>
           </div>

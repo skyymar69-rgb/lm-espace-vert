@@ -151,7 +151,7 @@ export default function AProposPage() {
             {timeline.map((item, i) => (
               <li key={item.year} className="relative">
                 <div className="absolute -left-[2.7rem] w-9 h-9 rounded-full bg-[--color-primary] border-4 border-[--color-bg-subtle] flex items-center justify-center">
-                  <span className="text-white text-xs font-bold" aria-hidden="true">
+                  <span className="text-[--color-primary-fg] text-xs font-bold" aria-hidden="true">
                     {i + 1}
                   </span>
                 </div>
