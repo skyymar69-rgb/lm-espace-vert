@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, MessageCircle } from 'lucide-react'
+import { Mail, MapPin, Clock, Facebook, Instagram, MessageCircle } from 'lucide-react'
 
 const serviceLinks = [
   { href: '/services', label: 'Création de jardins' },
@@ -54,12 +54,14 @@ export function Footer() {
                 Demander un devis
               </Link>
               <a
-                href="tel:+33672587353"
-                className="rounded-full px-5 py-2.5 text-sm font-semibold flex items-center gap-2 transition-colors"
+                href="https://wa.me/33672587353"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full px-5 py-2.5 text-sm font-semibold flex items-center gap-2 transition-colors hover:opacity-90"
                 style={{ border: '1px solid rgba(255,255,255,0.35)', color: '#ffffff' }}
               >
-                <Phone size={14} aria-hidden="true" />
-                06 72 58 73 53
+                <MessageCircle size={14} aria-hidden="true" />
+                WhatsApp
               </a>
             </div>
           </div>
@@ -205,14 +207,16 @@ export function Footer() {
               <ul className="space-y-0.5">
                 <li>
                   <a
-                    href="tel:+33672587353"
+                    href="https://wa.me/33672587353"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-start gap-2 py-1 text-sm transition-colors"
                     style={{ color: 'rgba(255,255,255,0.7)' }}
                     onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
                     onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)' }}
                   >
-                    <Phone size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
-                    06 72 58 73 53
+                    <MessageCircle size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
+                    WhatsApp — 06 72 58 73 53
                   </a>
                 </li>
                 <li>

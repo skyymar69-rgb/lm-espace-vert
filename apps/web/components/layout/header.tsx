@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
-  Phone,
   ChevronDown,
 } from 'lucide-react'
 import { MobileMenu } from './mobile-menu'
@@ -182,16 +181,6 @@ export function Header() {
 
             {/* Carte de contact numérique */}
             <DigitalContactCard />
-
-            {/* Téléphone (md+) */}
-            <a
-              href="tel:+33672587353"
-              className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[#2F2F2F] hover:text-[#80BC00] transition-colors"
-              aria-label="Appeler LM Espace Vert au 06 72 58 73 53"
-            >
-              <Phone size={14} aria-hidden="true" />
-              06 72 58 73 53
-            </a>
 
             {/* Devis gratuit */}
             <Link

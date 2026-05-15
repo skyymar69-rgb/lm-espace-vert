@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, FileText, Facebook, Instagram, MapPin, ChevronRight } from 'lucide-react'
+import { Menu, X, FileText, Facebook, Instagram, MapPin, ChevronRight } from 'lucide-react'
 
 type NavItem = { href: string; label: string }
 
@@ -80,17 +80,6 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
             className="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl flex flex-col"
             style={{ animation: 'slideInRight 0.3s cubic-bezier(0.25, 1, 0.5, 1) both' }}
           >
-            {/* Bandeau téléphone */}
-            <a
-              href="tel:+33672587353"
-              onClick={() => setOpen(false)}
-              className="flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#0B3D2C' }}
-            >
-              <Phone size={14} aria-hidden="true" />
-              06 72 58 73 53 — Appelez Léo
-            </a>
-
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-[#EDEDED]">
               <span className="font-display font-bold" style={{ color: '#2F2F2F' }}>Menu</span>
@@ -125,12 +114,12 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
                         <span>
                           <span className="block text-sm font-semibold">{item.label}</span>
                           {desc && (
-                            <span className="block text-xs mt-0.5" style={{ color: '#8C8F94' }}>{desc}</span>
+                            <span className="block text-xs mt-0.5" style={{ color: '#5C606B' }}>{desc}</span>
                           )}
                         </span>
                         {active
                           ? <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#80BC00' }} aria-hidden="true" />
-                          : <ChevronRight size={14} className="flex-shrink-0" style={{ color: '#8C8F94' }} aria-hidden="true" />
+                          : <ChevronRight size={14} className="flex-shrink-0" style={{ color: '#5C606B' }} aria-hidden="true" />
                         }
                       </Link>
                     </li>
@@ -140,7 +129,7 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
 
               {/* Section zones */}
               <div className="mt-6 pt-5 border-t" style={{ borderColor: '#EDEDED' }}>
-                <p className="px-4 text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#8C8F94' }}>
+                <p className="px-4 text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#5C606B' }}>
                   Nos zones d&apos;intervention
                 </p>
                 <ul className="flex flex-wrap gap-2 px-4">

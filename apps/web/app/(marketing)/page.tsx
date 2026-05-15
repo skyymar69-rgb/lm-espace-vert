@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {
-  ArrowRight, Star, Clock, MapPin, Award, Shield, Leaf, Phone,
+  ArrowRight, Star, Clock, MapPin, Award, Shield, Leaf, Phone, MessageCircle,
   Scissors, TreePine, Sprout, Layers, Droplets, Flower2,
   CheckCircle, Search, ClipboardList, Calendar, Users,
 } from 'lucide-react'
@@ -290,28 +290,28 @@ export default function HomePage() {
                 <StatCounter value={5} suffix="+" />
               </dt>
               <Calendar size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#8C8F94]">Années d&apos;expérience</dd>
+              <dd className="text-sm text-[#5C606B]">Années d&apos;expérience</dd>
             </div>
             <div className="text-center">
               <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={200} suffix="+" />
               </dt>
               <Users size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#8C8F94]">Clients satisfaits</dd>
+              <dd className="text-sm text-[#5C606B]">Clients satisfaits</dd>
             </div>
             <div className="text-center">
               <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={20} suffix=" km" />
               </dt>
               <MapPin size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#8C8F94]">Rayon d&apos;intervention</dd>
+              <dd className="text-sm text-[#5C606B]">Rayon d&apos;intervention</dd>
             </div>
             <div className="text-center">
               <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={28} suffix=" avis" />
               </dt>
               <Star size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#8C8F94]">Note 5★ Google</dd>
+              <dd className="text-sm text-[#5C606B]">Note 5★ Google</dd>
             </div>
           </dl>
         </div>
@@ -348,21 +348,21 @@ export default function HomePage() {
               <p className="text-[#2F2F2F] leading-relaxed mb-4 font-medium">
                 Depuis 2019, nous avons transformé plus de 200 jardins dans le nord-ouest lyonnais.
               </p>
-              <p className="text-[#8C8F94] leading-relaxed mb-6">
+              <p className="text-[#5C606B] leading-relaxed mb-6">
                 De la conception à l&apos;entretien régulier, nous intervenons chez les particuliers et les professionnels dans tout le nord-ouest lyonnais.
               </p>
               {/* #16 — badges avec icônes authority */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#8C8F94' }}>
+                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#5C606B' }}>
                   <Shield size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Certifié RC Pro
                 </span>
-                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#8C8F94' }}>
+                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#5C606B' }}>
                   <Award size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Agréé SAP
                 </span>
-                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#8C8F94' }}>
+                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#5C606B' }}>
                   <Leaf size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Label Qualipaysage
                 </span>
-                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#8C8F94' }}>
+                <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#5C606B' }}>
                   ♻ Éco-responsable
                 </span>
               </div>
@@ -386,7 +386,7 @@ export default function HomePage() {
             <h2 id="before-after-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Avant &amp; Après — le résultat parle
             </h2>
-            <p className="text-[#8C8F94] mt-3">
+            <p className="text-[#5C606B] mt-3">
               Chaque jardin que nous transformons est une nouvelle histoire. Voici quelques exemples concrets de nos interventions.
             </p>
           </div>
@@ -414,7 +414,7 @@ export default function HomePage() {
                 <div className="p-4 bg-white">
                   <p className="text-sm font-semibold" style={{ color: '#425D07' }}>{item.title}</p>
                   {/* #21 — label type de prestation + durée */}
-                  <p className="text-xs mt-1" style={{ color: '#8C8F94' }}>{item.label}</p>
+                  <p className="text-xs mt-1" style={{ color: '#5C606B' }}>{item.label}</p>
                 </div>
               </div>
             ))}
@@ -435,7 +435,7 @@ export default function HomePage() {
             <h2 id="services-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Tous vos projets extérieurs
             </h2>
-            <p className="text-[#8C8F94] mt-3">
+            <p className="text-[#5C606B] mt-3">
               De la taille de haies à la création complète, nous sublimions votre espace vert.
             </p>
           </div>
@@ -464,7 +464,7 @@ export default function HomePage() {
                     <svc.icon size={15} style={{ color: '#425D07' }} aria-hidden="true" />
                     <h3 className="font-display font-semibold text-sm" style={{ color: '#425D07' }}>{svc.title}</h3>
                   </div>
-                  <p className="text-xs text-[#8C8F94] leading-relaxed flex-1">{svc.desc}</p>
+                  <p className="text-xs text-[#5C606B] leading-relaxed flex-1">{svc.desc}</p>
                   {/* #7 — "En savoir plus" en bas de chaque card */}
                   <p className="text-xs font-semibold mt-3" style={{ color: '#425D07' }}>→ En savoir plus</p>
                 </div>
@@ -531,7 +531,7 @@ export default function HomePage() {
                   <Icon size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
                 </div>
                 <h3 className="font-display font-bold mb-2 text-sm" style={{ color: '#425D07' }}>{title}</h3>
-                <p className="text-xs text-[#8C8F94] leading-relaxed">{desc}</p>
+                <p className="text-xs text-[#5C606B] leading-relaxed">{desc}</p>
                 {/* #14 — anchoring : 200+ clients depuis 2019 */}
                 {extra && (
                   <p className="text-xs font-semibold mt-2" style={{ color: '#425D07' }}>{extra}</p>
@@ -564,7 +564,7 @@ export default function HomePage() {
                 <Icon size={20} style={{ color: '#425D07' }} aria-hidden="true" />
                 <div>
                   <h3 className="font-display font-bold text-sm mb-1" style={{ color: '#425D07' }}>{title}</h3>
-                  <p className="text-xs text-[#8C8F94] leading-relaxed">{desc}</p>
+                  <p className="text-xs text-[#5C606B] leading-relaxed">{desc}</p>
                   {/* #17 — durée estimée */}
                   <p className="text-xs font-semibold mt-1.5" style={{ color: '#80BC00' }}>{duration}</p>
                 </div>
@@ -594,7 +594,7 @@ export default function HomePage() {
                 <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />
               ))}
               <span className="ml-2 text-sm font-bold" style={{ color: '#2F2F2F' }}>5.0</span>
-              <span className="text-[#8C8F94] text-sm ml-1">— 28 avis Google</span>
+              <span className="text-[#5C606B] text-sm ml-1">— 28 avis Google</span>
             </div>
           </div>
           <ul role="list" className="grid sm:grid-cols-3 gap-6">
@@ -607,12 +607,12 @@ export default function HomePage() {
                       <span key={i} className="text-yellow-400 text-base" aria-hidden="true">★</span>
                     ))}
                   </div>
-                  <blockquote className="flex-1 text-sm text-[#8C8F94] leading-relaxed italic mb-4">
+                  <blockquote className="flex-1 text-sm text-[#5C606B] leading-relaxed italic mb-4">
                     &ldquo;{t.text}&rdquo;
                   </blockquote>
                   <footer className="pt-4 border-t border-[#EDEDED]">
                     <p className="font-semibold text-sm" style={{ color: '#425D07' }}>{t.name}</p>
-                    <p className="text-xs text-[#8C8F94] flex items-center gap-1 mt-0.5">
+                    <p className="text-xs text-[#5C606B] flex items-center gap-1 mt-0.5">
                       <MapPin size={10} aria-hidden="true" /> {t.city}
                     </p>
                     {/* #9 — badge Vérifié Google */}
@@ -640,7 +640,7 @@ export default function HomePage() {
       {/* Juste après la section "Pourquoi nous choisir" — badges texte partenaires */}
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-12 border-t border-[#EDEDED]" aria-label="Nos partenaires et certifications">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#8C8F94' }}>Ils nous font confiance</p>
+          <p className="text-center text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#5C606B' }}>Ils nous font confiance</p>
           <div className="flex flex-wrap justify-center gap-6 items-center">
             {['RC Pro', 'CERTIPHYTO', 'Husqvarna', 'SAP'].map((partner) => (
               <span
@@ -663,7 +663,7 @@ export default function HomePage() {
             <h2 id="zone-heading" className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
               Paysagiste dans un rayon de 20 km
             </h2>
-            <p className="text-[#8C8F94] mt-3 max-w-xl mx-auto">
+            <p className="text-[#5C606B] mt-3 max-w-xl mx-auto">
               Basé à Saint-Didier-au-Mont-d&apos;Or, nous intervenons dans tout le nord-ouest lyonnais.
             </p>
           </div>
@@ -690,12 +690,12 @@ export default function HomePage() {
                 <Link
                   key={ville}
                   href={`/secteur/${slug}`}
-                  className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#8C8F94] hover:border-[#80BC00] hover:text-[#425D07] transition-colors flex items-center gap-1.5"
+                  className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#5C606B] hover:border-[#80BC00] hover:text-[#425D07] transition-colors flex items-center gap-1.5"
                 >
                   <MapPin size={11} aria-hidden="true" /> {ville}
                 </Link>
               ) : (
-                <span key={ville} className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#8C8F94] flex items-center gap-1.5">
+                <span key={ville} className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#5C606B] flex items-center gap-1.5">
                   <MapPin size={11} aria-hidden="true" /> {ville}
                 </span>
               )
@@ -731,7 +731,7 @@ export default function HomePage() {
             <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3" style={{ color: '#425D07' }}>
               50 conseils pour un jardin impeccable toute l&apos;année
             </h2>
-            <p className="text-[#8C8F94] mb-6 text-sm leading-relaxed">
+            <p className="text-[#5C606B] mb-6 text-sm leading-relaxed">
               Conseils professionnels de paysagiste — entretien, taille, arrosage, engazonnement, 4 saisons + checklist. Rédigé par Léo Maurice, fondateur de LM Espace Vert. Gratuit, sans inscription.
             </p>
             <a
@@ -875,7 +875,7 @@ export default function HomePage() {
             ].map(({ q, a }) => (
               <div key={q} className="rounded-2xl border border-[#EDEDED] p-5" style={{ backgroundColor: '#F7F5F0' }}>
                 <p className="font-bold text-sm mb-2" style={{ color: '#425D07' }}>{q}</p>
-                <p className="text-xs text-[#8C8F94] leading-relaxed">{a}</p>
+                <p className="text-xs text-[#5C606B] leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
@@ -904,21 +904,15 @@ export default function HomePage() {
             >
               Demander un devis <ArrowRight size={14} />
             </Link>
-            <Link
-              href="tel:+33672587353"
+            <a
+              href="https://wa.me/33672587353"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              <Phone size={14} /> 06 72 58 73 53
-            </Link>
+              <MessageCircle size={14} aria-hidden="true" /> WhatsApp
+            </a>
           </div>
-          {/* #24 — numéro en grand */}
-          <a
-            href="tel:+33672587353"
-            className="block text-2xl sm:text-3xl font-bold text-white hover:opacity-80 transition-opacity mb-4"
-            aria-label="Appeler le 06 72 58 73 53"
-          >
-            📞 06 72 58 73 53
-          </a>
           {/* #25 — lien WhatsApp */}
           <a
             href="https://wa.me/33672587353"
