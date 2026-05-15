@@ -56,7 +56,13 @@
       "PowerShell(cd \"D:\\\\16042026\\\\1x\\\\LM Espace vert\\\\apps\\\\web\"; Start-Job -ScriptBlock { cd \"D:\\\\16042026\\\\1x\\\\LM Espace vert\\\\apps\\\\web\"; npx next dev --port 3000 } | Out-Null; Start-Sleep -Seconds 15; Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 8 | Select-Object -ExpandProperty StatusCode)",
       "mcp__Claude_in_Chrome__browser_batch",
       "mcp__4ce49431-28e2-43ec-9333-64a59dbd14a4__get_access_to_vercel_url",
-      "Bash(npx turbo *)"
+      "Bash(npx turbo *)",
+      "mcp__Claude_in_Chrome__computer",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "Bash(curl -L \"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&q=85&fm=webp\" -o hero.webp --max-time 30)",
+      "WebFetch(domain:www.senariz.fr)",
+      "WebFetch(domain:www.alpaje.com)",
+      "WebFetch(domain:www.scenes-exterieures.com)"
     ]
   }
 }

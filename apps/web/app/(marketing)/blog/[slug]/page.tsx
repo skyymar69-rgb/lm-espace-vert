@@ -78,14 +78,14 @@ export default async function ArticlePage({ params }: Props) {
       <ReadingProgress targetId="article-content" />
 
       {/* Breadcrumb */}
-      <nav aria-label="Fil d'Ariane" className="border-b border-[--color-border] bg-[--color-bg-subtle]">
+      <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-[#F7F5F0]">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
-            <li><Link href="/" className="hover:text-[--color-fg]">Accueil</Link></li>
-            <li aria-hidden="true">/</li>
-            <li><Link href="/blog" className="hover:text-[--color-fg]">Blog</Link></li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="line-clamp-1 text-[--color-fg]">{article.title}</span></li>
+          <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
+            <li><Link href="/" className="hover:text-[#2F2F2F]">Accueil</Link></li>
+            <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
+            <li><Link href="/blog" className="hover:text-[#2F2F2F]">Blog</Link></li>
+            <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
+            <li><span aria-current="page" className="line-clamp-1 text-[#425D07]">{article.title}</span></li>
           </ol>
         </div>
       </nav>
@@ -98,14 +98,14 @@ export default async function ArticlePage({ params }: Props) {
             <div className="max-w-4xl">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-1 text-sm text-[--color-fg-muted] hover:text-[#425D07] mb-8 transition-colors"
+                className="inline-flex items-center gap-1 text-sm text-[#8C8F94] hover:text-[#425D07] mb-8 transition-colors"
               >
                 <ChevronLeft size={16} aria-hidden="true" />
                 Retour au blog
               </Link>
 
               {/* Hero image */}
-              <div className="relative mb-8 h-80 sm:h-96 overflow-hidden rounded-2xl bg-[--color-bg-subtle]">
+              <div className="relative mb-8 h-80 sm:h-96 overflow-hidden rounded-2xl bg-[#F7F5F0]">
                 <Image
                   src={article.image}
                   alt={article.title}
@@ -121,26 +121,26 @@ export default async function ArticlePage({ params }: Props) {
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span
                     className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                    style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}
+                    style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
                   >
                     {article.category}
                   </span>
                   {article.keywords.slice(0, 2).map((kw) => (
-                    <span key={kw} className="inline-flex items-center gap-1 rounded-full border border-[--color-border] px-3 py-1 text-xs text-[--color-fg-muted]">
+                    <span key={kw} className="inline-flex items-center gap-1 rounded-full border border-[#EDEDED] px-3 py-1 text-xs text-[#8C8F94]">
                       <Tag size={9} aria-hidden="true" /> {kw}
                     </span>
                   ))}
                 </div>
 
-                <h1 className="font-display text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight text-[--color-fg]">
+                <h1 className="font-display text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight" style={{ color: '#2F2F2F' }}>
                   {article.title}
                 </h1>
-                <p className="mt-4 text-lg text-[--color-fg-muted] leading-relaxed">{article.excerpt}</p>
+                <p className="mt-4 text-lg text-[#8C8F94] leading-relaxed">{article.excerpt}</p>
 
-                <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[--color-fg-subtle] border-b border-[--color-border] pb-6">
+                <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#8C8F94] border-b border-[#EDEDED] pb-6">
                   <span className="flex items-center gap-1.5">
                     <User size={14} aria-hidden="true" />
-                    <span className="font-medium text-[--color-fg]">{article.author}</span>
+                    <span className="font-medium text-[#2F2F2F]">{article.author}</span>
                     <span>· Paysagiste LM Espace Vert</span>
                   </span>
                   <span className="flex items-center gap-1.5">
@@ -167,15 +167,15 @@ export default async function ArticlePage({ params }: Props) {
               </article>
 
               {/* Tags */}
-              <div className="mt-10 pt-6 border-t border-[--color-border]">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[--color-fg-subtle] mb-3 flex items-center gap-1.5">
+              <div className="mt-10 pt-6 border-t border-[#EDEDED]">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#8C8F94] mb-3 flex items-center gap-1.5">
                   <Tag size={12} aria-hidden="true" /> Mots-clés
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {article.keywords.map((kw) => (
                     <span
                       key={kw}
-                      className="rounded-full border border-[--color-border] px-3 py-1 text-xs text-[--color-fg-muted]"
+                      className="rounded-full border border-[#EDEDED] px-3 py-1 text-xs text-[#8C8F94]"
                     >
                       {kw}
                     </span>
@@ -184,7 +184,7 @@ export default async function ArticlePage({ params }: Props) {
               </div>
 
               {/* Share */}
-              <div className="mt-8 pt-6 border-t border-[--color-border]">
+              <div className="mt-8 pt-6 border-t border-[#EDEDED]">
                 <ShareButtons
                   title={article.title}
                   url={`https://www.lmespacevert.fr/blog/${article.slug}`}
@@ -193,7 +193,7 @@ export default async function ArticlePage({ params }: Props) {
               </div>
 
               {/* Author bio */}
-              <div className="mt-10 rounded-2xl border border-[--color-border] bg-[--color-bg-subtle] p-6 flex gap-5 items-start">
+              <div className="mt-10 rounded-2xl border border-[#EDEDED] bg-[#F7F5F0] p-6 flex gap-5 items-start">
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center text-white font-display font-bold text-xl flex-shrink-0"
                   style={{ backgroundColor: '#425D07' }}
@@ -201,9 +201,9 @@ export default async function ArticlePage({ params }: Props) {
                   LM
                 </div>
                 <div>
-                  <p className="font-bold text-[--color-fg]">{article.author}</p>
+                  <p className="font-bold text-[#2F2F2F]">{article.author}</p>
                   <p className="text-sm font-medium" style={{ color: '#425D07' }}>Paysagiste — LM Espace Vert</p>
-                  <p className="mt-2 text-sm text-[--color-fg-muted] leading-relaxed">
+                  <p className="mt-2 text-sm text-[#8C8F94] leading-relaxed">
                     Artisan paysagiste passionné basé à Saint-Didier-au-Mont-d&apos;Or. Spécialisé en création,
                     entretien et aménagement paysager dans le nord-ouest lyonnais depuis plus de 5 ans.
                   </p>
@@ -217,7 +217,7 @@ export default async function ArticlePage({ params }: Props) {
                     </Link>
                     <a
                       href="tel:+33674734698"
-                      className="inline-flex items-center gap-1 rounded-full border border-[--color-border] px-3 py-1 text-xs text-[--color-fg-muted] hover:border-[--color-fg] transition-colors"
+                      className="inline-flex items-center gap-1 rounded-full border border-[#EDEDED] px-3 py-1 text-xs text-[#8C8F94] hover:border-[#2F2F2F] transition-colors"
                     >
                       <Phone size={11} aria-hidden="true" />
                       Contacter Léo
@@ -256,18 +256,18 @@ export default async function ArticlePage({ params }: Props) {
               {/* Related articles */}
               {others.length > 0 && (
                 <section className="mt-14" aria-labelledby="related-heading">
-                  <h2 id="related-heading" className="font-display text-xl font-bold text-[--color-fg] mb-6">
+                  <h2 id="related-heading" className="font-display text-xl font-bold text-[#2F2F2F] mb-6">
                     Articles qui pourraient vous intéresser
                   </h2>
                   <ul role="list" className="grid gap-5 sm:grid-cols-3">
                     {others.map((rel) => (
                       <li key={rel.slug}>
-                        <article className="rounded-2xl overflow-hidden bg-[--color-bg-elevated] border border-[--color-border] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                        <article className="rounded-xl overflow-hidden bg-white border border-[#EDEDED] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                           <Link
                             href={`/blog/${rel.slug}`}
-                            className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[--color-focus]"
+                            className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
                           >
-                            <div className="relative h-40 overflow-hidden bg-[--color-bg-subtle]">
+                            <div className="relative h-40 overflow-hidden bg-[#F7F5F0]">
                               <Image
                                 src={rel.image}
                                 alt={rel.title}
@@ -279,17 +279,17 @@ export default async function ArticlePage({ params }: Props) {
                             <div className="p-4">
                               <span
                                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-2"
-                                style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)', color: '#425D07' }}
+                                style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
                               >
                                 {rel.category}
                               </span>
-                              <h3 className="font-display font-semibold text-[--color-fg] text-sm leading-snug mb-3 line-clamp-2">
+                              <h3 className="font-display font-semibold text-[#2F2F2F] text-sm leading-snug mb-3 line-clamp-2">
                                 {rel.title}
                               </h3>
                               <div className="flex items-center justify-between">
-                                <span className="text-xs text-[--color-fg-subtle]">{rel.readingTime}</span>
+                                <span className="text-xs text-[#8C8F94]">{rel.readingTime}</span>
                                 <span
-                                  className="text-xs font-semibold flex items-center gap-1"
+                                  className="text-xs font-semibold flex items-center gap-1 hover:text-[#80BC00]"
                                   style={{ color: '#425D07' }}
                                 >
                                   Lire <ArrowRight size={11} aria-hidden="true" />
@@ -310,16 +310,19 @@ export default async function ArticlePage({ params }: Props) {
               <TableOfContents contentId="article-content" />
 
               {/* CTA encart */}
-              <div className="rounded-2xl p-6" style={{ backgroundColor: 'rgba(128, 188, 0, 0.1)' }}>
-                <h3 className="font-display font-bold text-base text-[--color-fg] mb-2">Besoin d&apos;un paysagiste ?</h3>
-                <p className="text-sm text-[--color-fg-muted] mb-4 leading-relaxed">
+              <div
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: 'rgba(128,188,0,0.08)', border: '1px solid rgba(128,188,0,0.2)' }}
+              >
+                <h3 className="font-display font-bold text-base text-[#2F2F2F] mb-2">Besoin d&apos;un paysagiste ?</h3>
+                <p className="text-sm text-[#8C8F94] mb-4 leading-relaxed">
                   Devis gratuit sous 48h. Intervention dans le nord-ouest lyonnais.
                 </p>
                 <div className="space-y-2.5">
                   <a
                     href="tel:+33674734698"
                     className="flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5 font-bold text-sm text-white transition-colors hover:opacity-90"
-                    style={{ backgroundColor: '#80BC00', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+                    style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
                   >
                     <Phone size={14} aria-hidden="true" />
                     Appeler Léo
@@ -334,22 +337,22 @@ export default async function ArticlePage({ params }: Props) {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-[--color-border] bg-[--color-bg-elevated] p-5">
-                <h3 className="font-bold text-sm text-[--color-fg] mb-4">Conseil du mois</h3>
+              <div className="rounded-xl border border-[#EDEDED] bg-white p-5">
+                <h3 className="font-bold text-sm text-[#2F2F2F] mb-4">Conseil du mois</h3>
                 <SeasonalTip />
               </div>
 
-              <div className="rounded-xl border border-[--color-border] bg-[--color-bg-elevated] p-5">
-                <h3 className="font-bold text-sm text-[--color-fg] mb-3">Catégories</h3>
+              <div className="rounded-xl border border-[#EDEDED] bg-white p-5">
+                <h3 className="font-bold text-sm text-[#2F2F2F] mb-3">Catégories</h3>
                 <div className="space-y-1.5">
                   {[...new Set(articles.map((a) => a.category))].slice(0, 6).map((cat) => (
                     <Link
                       key={cat}
                       href={`/blog?categorie=${encodeURIComponent(cat)}`}
-                      className="flex items-center justify-between text-sm text-[--color-fg-muted] hover:text-[#80BC00] py-1 transition-colors"
+                      className="flex items-center justify-between text-sm text-[#8C8F94] hover:text-[#80BC00] py-1 transition-colors"
                     >
                       <span>{cat}</span>
-                      <span className="text-xs bg-[--color-bg-subtle] px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[#F7F5F0] px-2 py-0.5 rounded-full">
                         {articles.filter((a) => a.category === cat).length}
                       </span>
                     </Link>

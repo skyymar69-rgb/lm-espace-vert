@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 2 : STATS ── */}
-      <section className="bg-white border-y border-[--color-border]" aria-label="Chiffres clés">
+      <section className="bg-white border-y border-[#EDEDED]" aria-label="Chiffres clés">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-10">
           <dl className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {[
@@ -162,7 +162,7 @@ export default function HomePage() {
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>{stat.value}</dt>
-                <dd className="text-sm text-[--color-fg-muted] mt-1">{stat.label}</dd>
+                <dd className="text-sm text-[#8C8F94] mt-1">{stat.label}</dd>
               </div>
             ))}
           </dl>
@@ -170,7 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 3 : PRÉSENTATION ── */}
-      <section className="bg-[--color-bg-subtle] py-20 lg:py-24" aria-labelledby="about-heading">
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-20 lg:py-24" aria-labelledby="about-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="rounded-2xl overflow-hidden shadow-md">
@@ -183,21 +183,21 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>
                 Qui sommes-nous ?
               </p>
-              <h2 id="about-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg] mb-5">
+              <h2 id="about-heading" className="font-display text-3xl sm:text-4xl font-bold mb-5" style={{ color: '#425D07' }}>
                 Un artisan passionné<br />à votre service
               </h2>
-              <p className="text-[--color-fg-muted] leading-relaxed mb-4">
-                <strong className="text-[--color-fg]">LM Espace Vert</strong>, c&apos;est l&apos;histoire de Léo Maurice, paysagiste créateur basé à Saint-Didier-au-Mont-d&apos;Or depuis 2019. Chaque jardin que nous créons est unique, pensé pour vous et conçu pour durer.
+              <p className="text-[#2F2F2F] leading-relaxed mb-4">
+                <strong className="text-[#2F2F2F]">LM Espace Vert</strong>, c&apos;est l&apos;histoire de Léo Maurice, paysagiste créateur basé à Saint-Didier-au-Mont-d&apos;Or depuis 2019. Chaque jardin que nous créons est unique, pensé pour vous et conçu pour durer.
               </p>
-              <p className="text-[--color-fg-muted] leading-relaxed mb-6">
+              <p className="text-[#8C8F94] leading-relaxed mb-6">
                 De la conception à l&apos;entretien régulier, nous intervenons chez les particuliers et les professionnels dans tout le nord-ouest lyonnais.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {['Certifié RC Pro', 'Depuis 2019', 'Éco-responsable'].map((badge) => (
-                  <span key={badge} className="rounded-full border border-[--color-border] px-4 py-1.5 text-sm text-[--color-fg-muted]">
+                  <span key={badge} className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#8C8F94]">
                     {badge}
                   </span>
                 ))}
@@ -218,11 +218,11 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-labelledby="services-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Prestations</p>
-            <h2 id="services-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos Prestations</p>
+            <h2 id="services-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Tous vos projets extérieurs
             </h2>
-            <p className="text-[--color-fg-muted] mt-3">
+            <p className="text-[#8C8F94] mt-3">
               De la taille de haies à la création complète, nous sublimions votre espace vert.
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function HomePage() {
               <Link
                 key={svc.title}
                 href="/services"
-                className="group rounded-2xl overflow-hidden bg-[--color-bg-elevated] border border-[--color-border] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                className="group rounded-2xl overflow-hidden bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-[rgba(0,0,0,0.12)_0px_8px_40px_0px] transition-shadow"
               >
                 <div className="relative h-44 overflow-hidden">
                   <Image
@@ -245,9 +245,9 @@ export default function HomePage() {
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <svc.icon size={15} style={{ color: '#425D07' }} aria-hidden="true" />
-                    <h3 className="font-display font-semibold text-[--color-fg] text-sm">{svc.title}</h3>
+                    <h3 className="font-display font-semibold text-sm" style={{ color: '#425D07' }}>{svc.title}</h3>
                   </div>
-                  <p className="text-xs text-[--color-fg-muted] leading-relaxed">{svc.desc}</p>
+                  <p className="text-xs text-[#8C8F94] leading-relaxed">{svc.desc}</p>
                 </div>
               </Link>
             ))}
@@ -255,7 +255,8 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-[--color-border] px-6 py-3 text-sm font-semibold text-[--color-fg] hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              style={{ color: '#2F2F2F' }}
             >
               Voir toutes nos prestations <ArrowRight size={14} />
             </Link>
@@ -264,11 +265,11 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 5 : POURQUOI NOUS ── */}
-      <section className="bg-[--color-bg-subtle] py-20 lg:py-24" aria-labelledby="why-heading">
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-20 lg:py-24" aria-labelledby="why-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Engagements</p>
-            <h2 id="why-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos Engagements</p>
+            <h2 id="why-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Pourquoi choisir LM Espace Vert ?
             </h2>
           </div>
@@ -279,12 +280,12 @@ export default function HomePage() {
               { Icon: Leaf, title: 'Éco-responsable', desc: "Produits phyto raisonnés, compostage, préservation de la biodiversité. La nature, on y tient." },
               { Icon: Shield, title: 'Assuré RC Pro', desc: "Responsabilité civile professionnelle à jour. Vous êtes protégés en toutes circonstances." },
             ].map(({ Icon, title, desc }) => (
-              <div key={title} className="bg-[--color-bg-elevated] rounded-2xl p-6 border border-[--color-border] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="w-10 h-10 rounded-full bg-[--color-green-light] flex items-center justify-center mb-4">
-                  <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
+              <div key={title} className="bg-white rounded-2xl p-6 border border-[#EDEDED] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}>
+                  <Icon size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
                 </div>
-                <h3 className="font-display font-bold text-[--color-fg] mb-2 text-sm">{title}</h3>
-                <p className="text-xs text-[--color-fg-muted] leading-relaxed">{desc}</p>
+                <h3 className="font-display font-bold mb-2 text-sm" style={{ color: '#425D07' }}>{title}</h3>
+                <p className="text-xs text-[#8C8F94] leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -295,8 +296,8 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-labelledby="process-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Comment ça marche ?</p>
-            <h2 id="process-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Comment ça marche ?</p>
+            <h2 id="process-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Un accompagnement simple de A à Z
             </h2>
           </div>
@@ -304,16 +305,16 @@ export default function HomePage() {
             {processSteps.map(({ num, Icon, title, desc }) => (
               <li key={num} className="flex flex-col items-start gap-3">
                 <div
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                  style={{ backgroundColor: '#80BC00' }}
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
+                  style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
                   aria-hidden="true"
                 >
                   {num}
                 </div>
                 <Icon size={20} style={{ color: '#425D07' }} aria-hidden="true" />
                 <div>
-                  <h3 className="font-display font-bold text-[--color-fg] text-sm mb-1">{title}</h3>
-                  <p className="text-xs text-[--color-fg-muted] leading-relaxed">{desc}</p>
+                  <h3 className="font-display font-bold text-sm mb-1" style={{ color: '#425D07' }}>{title}</h3>
+                  <p className="text-xs text-[#8C8F94] leading-relaxed">{desc}</p>
                 </div>
               </li>
             ))}
@@ -331,34 +332,34 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 7 : TÉMOIGNAGES ── */}
-      <section className="bg-[--color-bg-subtle] py-20 lg:py-24" aria-label="Avis clients">
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-20 lg:py-24" aria-label="Avis clients">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Avis Clients</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">Ce que disent nos clients</h2>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Avis Clients</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>Ce que disent nos clients</h2>
             <div className="flex items-center justify-center gap-1 mt-3">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />
               ))}
-              <span className="ml-2 text-sm font-bold text-[--color-fg]">5.0</span>
-              <span className="text-[--color-fg-muted] text-sm ml-1">— 28 avis Google</span>
+              <span className="ml-2 text-sm font-bold" style={{ color: '#2F2F2F' }}>5.0</span>
+              <span className="text-[#8C8F94] text-sm ml-1">— 28 avis Google</span>
             </div>
           </div>
           <ul role="list" className="grid sm:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <li key={t.name}>
-                <article className="bg-white rounded-2xl border border-[--color-border] p-6 shadow-sm h-full flex flex-col">
+                <article className="bg-white rounded-2xl border border-[#EDEDED] p-6 shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] h-full flex flex-col">
                   <div className="flex items-center gap-0.5 mb-4">
                     {[...Array(t.rating)].map((_, i) => (
                       <Star key={i} size={13} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />
                     ))}
                   </div>
-                  <blockquote className="flex-1 text-sm text-[--color-fg-muted] leading-relaxed italic mb-4">
+                  <blockquote className="flex-1 text-sm text-[#8C8F94] leading-relaxed italic mb-4">
                     &ldquo;{t.text}&rdquo;
                   </blockquote>
-                  <footer className="pt-4 border-t border-[--color-border]">
-                    <p className="font-semibold text-[--color-fg] text-sm">{t.name}</p>
-                    <p className="text-xs text-[--color-fg-muted] flex items-center gap-1 mt-0.5">
+                  <footer className="pt-4 border-t border-[#EDEDED]">
+                    <p className="font-semibold text-sm" style={{ color: '#425D07' }}>{t.name}</p>
+                    <p className="text-xs text-[#8C8F94] flex items-center gap-1 mt-0.5">
                       <MapPin size={10} aria-hidden="true" /> {t.city}
                     </p>
                   </footer>
@@ -371,7 +372,8 @@ export default function HomePage() {
               href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-[--color-border] px-6 py-3 text-sm font-semibold text-[--color-fg] hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              style={{ color: '#2F2F2F' }}
             >
               Voir tous les avis sur Google <ArrowRight size={14} />
             </a>
@@ -384,8 +386,8 @@ export default function HomePage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Blog</p>
-              <h2 id="blog-heading" className="font-display text-3xl sm:text-4xl font-bold text-[--color-fg]">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Blog</p>
+              <h2 id="blog-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
                 Conseils de votre paysagiste
               </h2>
             </div>
@@ -402,9 +404,9 @@ export default function HomePage() {
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="group block overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-elevated] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                className="group block overflow-hidden rounded-2xl border border-[#EDEDED] bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
               >
-                <div className="relative aspect-[16/9] overflow-hidden bg-[--color-bg-subtle]">
+                <div className="relative aspect-[16/9] overflow-hidden" style={{ backgroundColor: '#F7F5F0' }}>
                   <Image
                     src={article.image}
                     alt={article.title}
@@ -421,7 +423,7 @@ export default function HomePage() {
                   >
                     {article.category}
                   </span>
-                  <h3 className="font-semibold text-sm text-[--color-fg] group-hover:text-[#80BC00] transition-colors line-clamp-2 leading-snug mb-2">
+                  <h3 className="font-semibold text-sm group-hover:text-[#80BC00] transition-colors line-clamp-2 leading-snug mb-2" style={{ color: '#425D07' }}>
                     {article.title}
                   </h3>
                   <span className="inline-flex items-center gap-1 text-xs font-semibold" style={{ color: '#425D07' }}>
@@ -434,7 +436,8 @@ export default function HomePage() {
           <div className="text-center mt-8 sm:hidden">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-[--color-border] px-6 py-3 text-sm font-semibold text-[--color-fg]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] px-6 py-3 text-sm font-semibold"
+              style={{ color: '#2F2F2F' }}
             >
               Voir tous nos articles <ArrowRight size={14} />
             </Link>
@@ -454,14 +457,14 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold bg-white hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
+              className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Demander un devis <ArrowRight size={14} />
             </Link>
             <Link
               href="tel:+33674734698"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold border border-white/35 text-white hover:bg-white/10 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
               <Phone size={14} /> 06 74 73 46 98
             </Link>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { montserrat, inter } from './fonts'
+import { raleway, montserrat, inter } from './fonts'
 import './globals.css'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
@@ -68,16 +68,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="fr"
-      suppressHydrationWarning
-      className={`${montserrat.variable} ${inter.variable}`}
+      className={`${raleway.variable} ${montserrat.variable} ${inter.variable}`}
     >
       <head>
-        {/* #1 No-flash theme script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=t||(m?'dark':'light');}catch(_){}})();`,
-          }}
-        />
         {/* #2 Preconnect hints for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

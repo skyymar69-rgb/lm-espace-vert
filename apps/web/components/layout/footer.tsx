@@ -85,7 +85,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-white hover:border-gray-400 transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
                 >
                   <Facebook size={16} aria-hidden="true" />
                 </a>
@@ -94,7 +94,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-white hover:border-gray-400 transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
                 >
                   <Instagram size={16} aria-hidden="true" />
                 </a>
@@ -103,7 +103,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Google Maps"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-white hover:border-gray-400 transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
                 >
                   <MapPin size={16} aria-hidden="true" />
                 </a>
@@ -112,7 +112,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-white hover:border-gray-400 transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
                 >
                   <MessageCircle size={16} aria-hidden="true" />
                 </a>
@@ -130,7 +130,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors block py-0.5"
+                      className="text-sm text-gray-400 hover:text-[#80BC00] transition-colors block py-0.5"
                     >
                       {link.label}
                     </Link>
@@ -162,7 +162,7 @@ export function Footer() {
                 <li>
                   <a
                     href="tel:+33674734698"
-                    className="flex items-start gap-2 py-1 text-sm text-gray-400 hover:text-white transition-colors"
+                    className="flex items-start gap-2 py-1 text-sm text-gray-400 hover:text-[#80BC00] transition-colors"
                   >
                     <Phone size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
                     06 74 73 46 98
@@ -171,7 +171,7 @@ export function Footer() {
                 <li>
                   <a
                     href="mailto:contact@lmespacevert.fr"
-                    className="flex items-start gap-2 py-1 text-sm text-gray-400 hover:text-white transition-colors"
+                    className="flex items-start gap-2 py-1 text-sm text-gray-400 hover:text-[#80BC00] transition-colors"
                   >
                     <Mail size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
                     contact@lmespacevert.fr
@@ -213,14 +213,14 @@ export function Footer() {
                 href="https://kayzen-lyon.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-[#80BC00] transition-colors"
               >
                 Site créé par Kayzen
               </a>
-              <Link href="/mentions-legales" className="hover:text-white transition-colors">
+              <Link href="/mentions-legales" className="hover:text-[#80BC00] transition-colors">
                 Mentions légales
               </Link>
-              <Link href="/confidentialite" className="hover:text-white transition-colors">
+              <Link href="/confidentialite" className="hover:text-[#80BC00] transition-colors">
                 Politique de confidentialité
               </Link>
             </div>

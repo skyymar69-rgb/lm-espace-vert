@@ -1,13 +1,11 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
   Phone,
-  Sun,
-  Moon,
   ChevronDown,
   Scissors,
   TreePine,
@@ -66,17 +64,10 @@ const megaServices = [
 ]
 
 export function Header() {
-  const [scrolled, setScrolled]     = useState(false)
-  const [theme, setTheme]           = useState<'light' | 'dark'>('light')
-  const [megaOpen, setMegaOpen]     = useState(false)
-  const pathname                     = usePathname()
-  const megaTimerRef                 = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  // Initialise theme from data-theme attribute set by the no-flash script
-  useEffect(() => {
-    const stored = document.documentElement.dataset.theme as 'light' | 'dark' | undefined
-    setTheme(stored === 'dark' ? 'dark' : 'light')
-  }, [])
+  const [scrolled, setScrolled] = useState(false)
+  const [megaOpen, setMegaOpen] = useState(false)
+  const pathname                 = usePathname()
+  const megaTimerRef             = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   // Scroll shadow
   useEffect(() => {
@@ -97,13 +88,6 @@ export function Header() {
   // Close mega-menu on route change
   useEffect(() => { setMegaOpen(false) }, [pathname])
 
-  const toggleTheme = useCallback(() => {
-    const next = theme === 'light' ? 'dark' : 'light'
-    document.documentElement.dataset.theme = next
-    localStorage.setItem('theme', next)
-    setTheme(next)
-  }, [theme])
-
   const openMega = () => {
     if (megaTimerRef.current) clearTimeout(megaTimerRef.current)
     setMegaOpen(true)
@@ -118,14 +102,14 @@ export function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 bg-white dark:bg-[#0D0D0D] border-b border-[--color-border] transition-shadow ${scrolled ? 'shadow-md' : ''}`}
+        className={`sticky top-0 z-40 bg-white border-b border-[#EDEDED] transition-shadow ${scrolled ? 'shadow-[rgba(0,0,0,0.06)_0px_4px_20px_0px]' : ''}`}
       >
         <div className="container mx-auto max-w-7xl flex items-center justify-between h-[72px] px-4 sm:px-6">
 
           {/* ── Logo ── */}
           <Link
             href="/"
-            className="flex-shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[--color-focus]"
+            className="flex-shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#80BC00]"
             aria-label="LM Espace Vert — retour à l'accueil"
           >
             <Image
@@ -146,10 +130,10 @@ export function Header() {
                 return (
                   <div key={item.href} onMouseEnter={openMega} onMouseLeave={closeMega}>
                     <button
-                      className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus] ${
+                      className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] ${
                         active || megaOpen
-                          ? 'text-[#425D07] font-semibold dark:text-[#80BC00]'
-                          : 'text-[--color-fg-muted] hover:text-[#80BC00] dark:hover:text-[#80BC00]'
+                          ? 'text-[#425D07] font-semibold'
+                          : 'text-[#2F2F2F] hover:text-[#80BC00]'
                       }`}
                       aria-expanded={megaOpen}
                       aria-haspopup="true"
@@ -170,10 +154,10 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus] ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] ${
                     active
-                      ? 'text-[#425D07] font-semibold dark:text-[#80BC00]'
-                      : 'text-[--color-fg-muted] hover:text-[#80BC00] dark:hover:text-[#80BC00]'
+                      ? 'text-[#425D07] font-semibold'
+                      : 'text-[#2F2F2F] hover:text-[#80BC00]'
                   }`}
                   aria-current={active ? 'page' : undefined}
                 >
@@ -185,22 +169,10 @@ export function Header() {
 
           {/* ── Droite ── */}
           <div className="flex items-center gap-2">
-            {/* Theme toggle */}
-            <button
-              onClick={toggleTheme}
-              className="h-9 w-9 flex items-center justify-center rounded-full hover:bg-[--color-bg-subtle] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus] text-[--color-fg-muted]"
-              aria-label={theme === 'light' ? 'Passer en mode sombre' : 'Passer en mode clair'}
-            >
-              {theme === 'light'
-                ? <Moon size={16} aria-hidden="true" />
-                : <Sun size={16} aria-hidden="true" />
-              }
-            </button>
-
             {/* Téléphone (md+) */}
             <a
               href="tel:+33674734698"
-              className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[--color-fg] hover:text-[#80BC00] transition-colors"
+              className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[#2F2F2F] hover:text-[#80BC00] transition-colors"
               aria-label="Appeler LM Espace Vert au 06 74 73 46 98"
             >
               <Phone size={14} aria-hidden="true" />
@@ -233,7 +205,7 @@ export function Header() {
           >
             {/* Centred panel */}
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 pb-6">
-              <div className="max-w-2xl mx-auto bg-white dark:bg-[#1A1A1A] shadow-xl rounded-2xl border border-[--color-border] p-6 mt-1">
+              <div className="max-w-2xl mx-auto bg-white shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] rounded-2xl border border-[#EDEDED] p-6 mt-1">
                 {/* 3×2 grid */}
                 <div className="grid grid-cols-3 gap-3">
                   {megaServices.map(({ href, label, desc, Icon }) => (
@@ -241,17 +213,17 @@ export function Header() {
                       key={label}
                       href={href}
                       onClick={() => setMegaOpen(false)}
-                      className="flex flex-col gap-1 rounded-xl p-3 hover:bg-[--color-green-light] transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus]"
+                      className="flex flex-col gap-1 rounded-xl p-3 hover:bg-[#F4F9E8] transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
                     >
                       <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
-                      <span className="text-sm font-semibold text-[--color-fg] leading-snug">{label}</span>
-                      <span className="text-xs text-[--color-fg-muted]">{desc}</span>
+                      <span className="text-sm font-semibold text-[#2F2F2F] leading-snug">{label}</span>
+                      <span className="text-xs text-[#6B6B6B]">{desc}</span>
                     </Link>
                   ))}
                 </div>
 
                 {/* Footer link */}
-                <div className="mt-4 pt-4 border-t border-[--color-border]">
+                <div className="mt-4 pt-4 border-t border-[#EDEDED]">
                   <Link
                     href="/services"
                     onClick={() => setMegaOpen(false)}

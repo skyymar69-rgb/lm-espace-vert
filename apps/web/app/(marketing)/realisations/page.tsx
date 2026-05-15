@@ -19,25 +19,25 @@ export default function RealisationsPage() {
   return (
     <>
       {/* Breadcrumb */}
-      <nav aria-label="Fil d'Ariane" className="border-b border-[--color-border] bg-[--color-bg-subtle]">
+      <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
+          <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
             <li>
-              <Link href="/" className="hover:text-[--color-fg]">Accueil</Link>
+              <Link href="/" className="hover:text-[#2F2F2F]">Accueil</Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[--color-fg]">Réalisations</span></li>
+            <li><span aria-current="page" className="text-[#2F2F2F]">Réalisations</span></li>
           </ol>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="bg-[--color-bg-subtle] py-16">
+      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-[--color-fg]">
+          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold" style={{ color: '#425D07' }}>
             Nos Réalisations
           </h1>
-          <p className="mt-4 max-w-xl mx-auto text-lg text-[--color-fg-muted]">
+          <p className="mt-4 max-w-xl mx-auto text-lg text-[#8C8F94]">
             Découvrez quelques-uns de nos projets paysagers réalisés dans le nord-ouest lyonnais.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function RealisationsPage() {
       <RealisationsGallery />
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="rounded-2xl p-10 text-center text-white" style={{ backgroundColor: '#0B3D2C' }}>
             <h2 className="font-display text-2xl font-bold mb-2">
@@ -58,7 +58,7 @@ export default function RealisationsPage() {
             </p>
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full bg-white font-bold px-6 py-3 hover:bg-white/90 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full font-bold px-6 py-3 hover:bg-white/90 transition-colors"
               style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
             >
               Demander mon devis <ArrowRight size={15} aria-hidden="true" />

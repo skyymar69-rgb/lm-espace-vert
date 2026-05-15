@@ -73,7 +73,7 @@ export function RealisationsGallery() {
   return (
     <>
       {/* Filters */}
-      <div className="border-b border-[--color-border] bg-white sticky top-[73px] z-10">
+      <div className="border-b border-[#EDEDED] bg-white sticky top-[73px] z-10">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div
             className="flex gap-2 overflow-x-auto py-4 scrollbar-none"
@@ -88,16 +88,15 @@ export function RealisationsGallery() {
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActiveCategory(cat)}
-                  className="flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                  className={
+                    isActive
+                      ? 'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]'
+                      : 'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium border border-[#D8D8D8] text-[#8C8F94] hover:border-[#80BC00] hover:text-[#80BC00] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]'
+                  }
                   style={
                     isActive
                       ? { backgroundColor: '#80BC00', color: '#ffffff' }
-                      : {
-                          borderWidth: 1,
-                          borderStyle: 'solid',
-                          borderColor: 'var(--color-border)',
-                          color: 'var(--color-fg-muted)',
-                        }
+                      : undefined
                   }
                 >
                   {cat}
@@ -117,8 +116,8 @@ export function RealisationsGallery() {
           >
             {filtered.map((r) => (
               <li key={r.title}>
-                <article className="group rounded-2xl overflow-hidden border border-[--color-border] bg-[--color-bg-elevated] shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                  <div className="relative h-60 overflow-hidden bg-[--color-bg-subtle]">
+                <article className="group bg-white rounded-2xl overflow-hidden shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-[rgba(0,0,0,0.12)_0px_8px_40px_0px] transition-shadow">
+                  <div className="relative h-60 overflow-hidden">
                     <Image
                       src={r.image}
                       alt={r.title}
@@ -128,12 +127,12 @@ export function RealisationsGallery() {
                       loading="lazy"
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: 'rgba(11,61,44,0.88)' }} />
                     {/* Category badge */}
                     <div className="absolute top-3 left-3">
                       <span
-                        className="text-xs font-semibold bg-white/90 px-2.5 py-1 rounded-full"
-                        style={{ color: '#425D07' }}
+                        className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                        style={{ backgroundColor: 'rgba(128,188,0,0.15)', color: '#425D07' }}
                       >
                         {r.category}
                       </span>
@@ -145,10 +144,10 @@ export function RealisationsGallery() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h2 className="font-semibold text-[--color-fg] text-sm leading-snug group-hover:text-[#80BC00] transition-colors">
+                    <h2 className="font-semibold text-[#2F2F2F] text-sm leading-snug group-hover:text-[#80BC00] transition-colors">
                       {r.title}
                     </h2>
-                    <div className="mt-1.5 flex items-center justify-between text-xs text-[--color-fg-subtle]">
+                    <div className="mt-1.5 flex items-center justify-between text-xs text-[#8C8F94]">
                       <span>{r.category}</span>
                       <span>{r.year}</span>
                     </div>
@@ -159,7 +158,7 @@ export function RealisationsGallery() {
           </ul>
 
           {filtered.length === 0 && (
-            <p className="text-center text-[--color-fg-muted] py-16">
+            <p className="text-center text-[#8C8F94] py-16">
               Aucune réalisation dans cette catégorie pour le moment.
             </p>
           )}

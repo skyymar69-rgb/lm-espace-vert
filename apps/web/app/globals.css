@@ -5,40 +5,40 @@
    ============================================================ */
 @theme {
   /* --- Fonts --- */
-  --font-display: var(--font-montserrat);
-  --font-sans:    var(--font-inter);
+  --font-display: var(--font-raleway);
+  --font-sans:    var(--font-montserrat);
 
   /* --- Brand (fixed, never changes) --- */
-  --color-green-primary:   #275524;
-  --color-green-deep:      #1B3D19;
-  --color-green-vibrant:   #3D7A3A;
-  --color-green-hover:     #1E4019;
-  --color-green-active:    #1A360F;
+  --color-green-primary:   #425D07;
+  --color-green-deep:      #334506;
+  --color-green-vibrant:   #80BC00;
+  --color-green-hover:     #334506;
+  --color-green-active:    #2A3A05;
 
-  /* --- Semantic palette (light defaults — overridden by [data-theme]) --- */
+  /* --- Semantic palette (defaults — overridden by :root) --- */
   --color-bg:              #FFFFFF;
   --color-bg-subtle:       #F7F5F0;
   --color-bg-elevated:     #FFFFFF;
-  --color-fg:              #1A1A1A;
-  --color-fg-muted:        #64748B;
-  --color-fg-subtle:       #94A3B8;
-  --color-primary:         #275524;
-  --color-primary-hover:   #1E4019;
+  --color-fg:              #2F2F2F;
+  --color-fg-muted:        #8C8F94;
+  --color-fg-subtle:       #AAAAAA;
+  --color-primary:         #425D07;
+  --color-primary-hover:   #334506;
   --color-primary-fg:      #FFFFFF;
-  --color-green-light:     #EEF4EE;
+  --color-green-light:     rgba(128, 188, 0, 0.1);
   --color-green-medium:    #D4E8D0;
-  --color-border:          #E2E8E0;
-  --color-border-strong:   #CBD5C8;
-  --color-focus:           #275524;
+  --color-border:          #EDEDED;
+  --color-border-strong:   #D8D8D8;
+  --color-focus:           #80BC00;
   --color-shadow:          rgba(0,0,0,0.06);
 
   /* --- Utility colors --- */
   --color-amber:           #F59E0B;
   --color-amber-light:     #FEF3C7;
-  --color-danger:          #DC2626;
+  --color-danger:          #E40420;
   --color-danger-light:    #FEE2E2;
   --color-white:           #FFFFFF;
-  --color-charcoal:        #1A1A1A;
+  --color-charcoal:        #2F2F2F;
 
   /* --- Radius --- */
   --radius-xs:   4px;
@@ -55,7 +55,7 @@
   --shadow-md:    rgba(0,0,0,0.08) 0px 4px 12px 0px;
   --shadow-lg:    rgba(0,0,0,0.12) 0px 8px 24px 0px;
   --shadow-xl:    rgba(0,0,0,0.16) 0px 16px 40px 0px;
-  --shadow-green: rgba(39,85,36,0.20) 0px 8px 24px 0px;
+  --shadow-green: rgba(66,93,7,0.20) 0px 8px 24px 0px;
 
   /* --- Easing --- */
   --ease-out-quart:    cubic-bezier(0.25, 1, 0.5, 1);
@@ -86,80 +86,36 @@
 }
 
 /* ============================================================
-   BRAND TOKENS (immutable — same in every theme)
+   BRAND TOKENS & THEME VARIABLES
    ============================================================ */
 :root {
-  --brand:      #275524;
-  --brand-deep: #1B3D19;
-}
+  --brand:              #425D07;
+  --brand-deep:         #334506;
 
-/* ============================================================
-   LIGHT THEME
-   ============================================================ */
-:root[data-theme="light"] {
-  --color-bg:            #FFFFFF;
-  --color-bg-subtle:     #F7F5F0;
-  --color-bg-elevated:   #FFFFFF;
-  --color-fg:            #2F2F2F;
-  --color-fg-muted:      #8C8F94;
-  --color-fg-subtle:     #AAAAAA;
-  --color-primary:       #425D07;
-  --color-primary-hover: #334506;
-  --color-primary-fg:    #FFFFFF;
-  --color-cta:           #80BC00;
-  --color-cta-hover:     #90D010;
-  --color-green-light:   rgba(128, 188, 0, 0.1);
-  --color-green-medium:  #D4E8D0;
-  --color-border:        #D8D8D8;
-  --color-border-strong: #BBBBBB;
-  --color-focus:         #80BC00;
-  --color-shadow:        rgba(0,0,0,0.06);
-}
+  --color-bg:           #FFFFFF;
+  --color-bg-subtle:    #F7F5F0;
+  --color-bg-elevated:  #FFFFFF;
+  --color-fg:           #2F2F2F;
+  --color-fg-muted:     #8C8F94;
+  --color-fg-subtle:    #AAAAAA;
+  --color-primary:      #425D07;
+  --color-primary-hover:#334506;
+  --color-primary-fg:   #FFFFFF;
+  --color-cta:          #80BC00;
+  --color-cta-hover:    #90D010;
+  --color-green-light:  rgba(128, 188, 0, 0.1);
+  --color-green-medium: #D4E8D0;
+  --color-border:       #EDEDED;
+  --color-border-strong:#D8D8D8;
+  --color-focus:        #80BC00;
+  --color-shadow:       rgba(0,0,0,0.06);
 
-/* ============================================================
-   DARK THEME
-   ============================================================ */
-:root[data-theme="dark"] {
-  --color-bg:            #0D0D0D;
-  --color-bg-subtle:     #141414;
-  --color-bg-elevated:   #1A1A1A;
-  --color-fg:            #F0F0EE;
-  --color-fg-muted:      #9CA3AF;
-  --color-fg-subtle:     #6B7280;
-  --color-primary:       #80BC00;
-  --color-primary-hover: #90D010;
-  --color-primary-fg:    #0D0D0D;
-  --color-cta:           #80BC00;
-  --color-cta-hover:     #90D010;
-  --color-green-light:   rgba(128, 188, 0, 0.12);
-  --color-green-medium:  #1F3021;
-  --color-border:        #2A2A2A;
-  --color-border-strong: #3A3A3A;
-  --color-focus:         #80BC00;
-  --color-shadow:        rgba(0,0,0,0.3);
-}
-
-/* System-level dark mode fallback (no explicit data-theme attribute) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --color-bg:            #0D0D0D;
-    --color-bg-subtle:     #141414;
-    --color-bg-elevated:   #1A1A1A;
-    --color-fg:            #F0F0EE;
-    --color-fg-muted:      #9CA3AF;
-    --color-fg-subtle:     #6B7280;
-    --color-primary:       #80BC00;
-    --color-primary-hover: #90D010;
-    --color-primary-fg:    #0D0D0D;
-    --color-cta:           #80BC00;
-    --color-cta-hover:     #90D010;
-    --color-green-light:   rgba(128, 188, 0, 0.12);
-    --color-green-medium:  #1F3021;
-    --color-border:        #2A2A2A;
-    --color-border-strong: #3A3A3A;
-    --color-focus:         #80BC00;
-    --color-shadow:        rgba(0,0,0,0.3);
-  }
+  --color-amber:        #F59E0B;
+  --color-amber-light:  #FEF3C7;
+  --color-danger:       #E40420;
+  --color-danger-light: #FEE2E2;
+  --color-white:        #FFFFFF;
+  --color-charcoal:     #2F2F2F;
 }
 
 /* ============================================================
@@ -191,11 +147,11 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display), Montserrat, sans-serif;
+    font-family: var(--font-display), Raleway, sans-serif;
     font-weight: 700;
     text-wrap: balance;
     line-height: 1.2;
-    color: var(--color-fg);
+    color: #425D07;
     letter-spacing: -0.01em;
   }
 
@@ -336,7 +292,7 @@
 
 /* Display font shorthand */
 .font-display {
-  font-family: var(--font-display), Montserrat, sans-serif;
+  font-family: var(--font-display), Raleway, sans-serif;
 }
 
 /* Visually hidden but accessible */
@@ -358,7 +314,7 @@
 
 /* Gradient text — brand green */
 .text-gradient {
-  background: linear-gradient(135deg, #275524 0%, #3D7A3A 100%);
+  background: linear-gradient(135deg, #425D07 0%, #80BC00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -438,7 +394,7 @@ code:not([class*="language-"]) {
 
 /* Brand CTA section — the ONLY place brand green appears as bg */
 .section-brand {
-  background: linear-gradient(135deg, #1F4419 0%, #275524 50%, #2F6722 100%);
+  background: linear-gradient(135deg, #0B3D2C 0%, #425D07 100%);
   color: #FFFFFF;
 }
 
@@ -480,7 +436,7 @@ code:not([class*="language-"]) {
 }
 .btn-primary:hover { background-color: var(--color-primary-hover); box-shadow: var(--shadow-green); transform: translateY(-1px); }
 .btn-primary:hover::after { opacity: 1; }
-.btn-primary:active { background-color: #1A360F; transform: translateY(0); box-shadow: var(--shadow-sm); }
+.btn-primary:active { background-color: #2A3A05; transform: translateY(0); box-shadow: var(--shadow-sm); }
 
 .btn-secondary {
   display: inline-flex;
@@ -553,7 +509,7 @@ code:not([class*="language-"]) {
 .service-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
-  border-color: rgba(39,85,36,0.25);
+  border-color: rgba(66,93,7,0.25);
 }
 
 /* ============================================================
@@ -601,7 +557,7 @@ code:not([class*="language-"]) {
 }
 .chip-green {
   background: var(--color-green-light);
-  border-color: rgba(39,85,36,0.2);
+  border-color: rgba(66,93,7,0.2);
   color: var(--color-primary);
 }
 .chip-amber {
@@ -617,9 +573,9 @@ input, textarea, select {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 input:focus-visible, textarea:focus-visible, select:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid #80BC00;
   outline-offset: 1px;
-  border-color: var(--color-primary);
+  border-color: #80BC00;
 }
 input:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
@@ -639,7 +595,7 @@ textarea:invalid:not(:placeholder-shown) {
 .search-input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(39,85,36,0.10);
+  box-shadow: 0 0 0 3px rgba(66,93,7,0.10);
 }
 
 /* ============================================================
@@ -651,10 +607,6 @@ textarea:invalid:not(:placeholder-shown) {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: var(--radius-lg);
-}
-[data-theme="dark"] .glass-card {
-  background: rgba(0,0,0,0.25);
-  border-color: rgba(255,255,255,0.08);
 }
 
 /* ============================================================
@@ -736,7 +688,7 @@ textarea:invalid:not(:placeholder-shown) {
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(135deg, #275524, #3D7A3A);
+  background: linear-gradient(135deg, #425D07, #80BC00);
   z-index: -1;
 }
 
@@ -781,7 +733,7 @@ textarea:invalid:not(:placeholder-shown) {
    STAT COUNTER
    ============================================================ */
 .stat-number {
-  font-family: var(--font-display), Montserrat, sans-serif;
+  font-family: var(--font-display), Raleway, sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--color-primary);
@@ -844,7 +796,7 @@ textarea:invalid:not(:placeholder-shown) {
   gap: 6px;
   padding: 6px 14px;
   background: var(--color-green-light);
-  border: 1px solid rgba(39,85,36,0.22);
+  border: 1px solid rgba(66,93,7,0.22);
   border-radius: var(--radius-pill);
   font-size: 12px;
   font-weight: 600;
@@ -859,7 +811,7 @@ textarea:invalid:not(:placeholder-shown) {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #275524, #3D7A3A);
+  background: linear-gradient(90deg, #425D07, #80BC00);
   transform-origin: left;
   z-index: 9999;
   transition: transform 0.05s linear;
@@ -893,7 +845,7 @@ textarea:invalid:not(:placeholder-shown) {
    ANNOUNCEMENT BANNER
    ============================================================ */
 .announcement-banner {
-  background: linear-gradient(90deg, #275524, #1B3D19);
+  background: linear-gradient(90deg, #425D07, #334506);
   color: white;
   font-size: 13px;
   font-weight: 500;
@@ -931,7 +883,7 @@ textarea:invalid:not(:placeholder-shown) {
 }
 .reading-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #275524, #3D7A3A);
+  background: linear-gradient(90deg, #425D07, #80BC00);
   transform-origin: left;
   transition: transform 0.05s linear;
 }
@@ -945,7 +897,7 @@ details.faq-item {
   overflow: hidden;
   transition: border-color 0.2s;
 }
-details.faq-item[open] { border-color: rgba(39,85,36,0.35); }
+details.faq-item[open] { border-color: rgba(66,93,7,0.35); }
 details.faq-item summary {
   cursor: pointer;
   list-style: none;

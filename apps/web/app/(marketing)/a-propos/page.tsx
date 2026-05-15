@@ -39,20 +39,20 @@ export default function AProposPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[--color-bg-subtle] py-16">
+      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
-            <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
-              <li><Link href="/" className="hover:text-[--color-fg]">Accueil</Link></li>
+            <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
+              <li><Link href="/" className="hover:text-[#2F2F2F] transition-colors">Accueil</Link></li>
               <li aria-hidden="true">/</li>
-              <li><span aria-current="page" className="text-[--color-fg]">À propos</span></li>
+              <li><span aria-current="page" className="text-[#2F2F2F]">À propos</span></li>
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight text-[--color-fg]">
+            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight" style={{ color: '#425D07' }}>
               Notre Histoire
             </h1>
-            <p className="mt-4 text-lg text-[--color-fg-muted]">
+            <p className="mt-4 text-lg text-[#8C8F94]">
               L&apos;histoire d&apos;un paysagiste passionné au service de vos jardins
             </p>
           </div>
@@ -76,16 +76,16 @@ export default function AProposPage() {
             </div>
             {/* Texte */}
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-[--color-primary] mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
                 NOTRE HISTOIRE
               </p>
-              <h2 id="histoire-heading" className="font-display text-3xl font-bold text-[--color-fg] sm:text-4xl mb-6">
+              <h2 id="histoire-heading" className="font-display text-3xl font-bold sm:text-4xl mb-6" style={{ color: '#425D07' }}>
                 Léo Maurice, paysagiste depuis 2019
               </h2>
-              <div className="space-y-4 text-[--color-fg-muted] leading-relaxed">
+              <div className="space-y-4 text-[#8C8F94] leading-relaxed">
                 <p>
                   Natif du Rhône et amoureux de la nature depuis toujours, Léo Maurice a fondé
-                  <strong className="text-[--color-fg]"> LM Espace Vert</strong> en 2019 à
+                  <strong className="text-[#2F2F2F]"> LM Espace Vert</strong> en 2019 à
                   Saint-Didier-au-Mont-d&apos;Or avec une conviction forte : chaque extérieur mérite
                   d&apos;être beau, vivant et refléter la personnalité de ceux qui l&apos;habitent.
                 </p>
@@ -116,12 +116,12 @@ export default function AProposPage() {
                           {item.year.slice(2)}
                         </div>
                         <div className="sm:mt-2">
-                          <p className="text-xs font-bold text-[--color-primary]">{item.year}</p>
-                          <p className="text-xs text-[--color-fg-muted] leading-snug max-w-[120px]">{item.label}</p>
+                          <p className="text-xs font-bold" style={{ color: '#80BC00' }}>{item.year}</p>
+                          <p className="text-xs text-[#8C8F94] leading-snug max-w-[120px]">{item.label}</p>
                         </div>
                       </div>
                       {i < timeline.length - 1 && (
-                        <div className="hidden sm:block flex-1 h-px bg-[--color-border] mt-5" />
+                        <div className="hidden sm:block flex-1 h-px mt-5" style={{ backgroundColor: '#EDEDED' }} />
                       )}
                     </div>
                   ))}
@@ -133,13 +133,13 @@ export default function AProposPage() {
       </section>
 
       {/* Valeurs */}
-      <section aria-labelledby="valeurs-heading" className="bg-[--color-bg-subtle] py-20 lg:py-24">
+      <section aria-labelledby="valeurs-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold uppercase tracking-widest text-[--color-primary] mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
               NOS VALEURS
             </p>
-            <h2 id="valeurs-heading" className="font-display text-3xl font-bold text-[--color-fg] sm:text-4xl">
+            <h2 id="valeurs-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
               Ce qui nous guide
             </h2>
           </div>
@@ -147,7 +147,7 @@ export default function AProposPage() {
             {values.map((v) => (
               <div
                 key={v.title}
-                className="rounded-2xl border border-[--color-border] bg-white shadow-sm p-8 hover:shadow-md hover:-translate-y-1 transition-all"
+                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-8 hover:shadow-md hover:-translate-y-1 transition-all"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
@@ -155,8 +155,8 @@ export default function AProposPage() {
                 >
                   {v.icon}
                 </div>
-                <h3 className="font-bold text-lg text-[--color-fg] mb-3">{v.title}</h3>
-                <p className="text-sm text-[--color-fg-muted] leading-relaxed">{v.desc}</p>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#425D07' }}>{v.title}</h3>
+                <p className="text-sm text-[#8C8F94] leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -175,7 +175,7 @@ export default function AProposPage() {
           <Link
             href="/devis"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
+            style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
           >
             Demander un devis gratuit
             <ArrowRight size={15} aria-hidden="true" />

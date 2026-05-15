@@ -121,19 +121,19 @@ export default function ServicesPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="bg-[--color-bg-subtle] py-16">
+      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           {/* Breadcrumb */}
           <nav aria-label="Fil d'Ariane" className="mb-6">
-            <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
+            <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
               <li>
-                <Link href="/" className="hover:text-[--color-fg] transition-colors">
+                <Link href="/" className="hover:text-[#2F2F2F] transition-colors">
                   Accueil
                 </Link>
               </li>
-              <li aria-hidden="true" className="text-[--color-fg-subtle]">/</li>
+              <li aria-hidden="true" className="text-[#8C8F94]">/</li>
               <li>
-                <span aria-current="page" className="text-[--color-fg]">
+                <span aria-current="page" className="text-[#2F2F2F]">
                   Nos Services
                 </span>
               </li>
@@ -141,21 +141,21 @@ export default function ServicesPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-[--color-fg] leading-tight">
+            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight" style={{ color: '#425D07' }}>
               Nos Prestations Paysagères
             </h1>
-            <p className="mt-4 text-lg text-[--color-fg-muted] leading-relaxed">
+            <p className="mt-4 text-lg leading-relaxed text-[#8C8F94]">
               De l&apos;entretien hebdomadaire à la création complète, LM Espace Vert prend en
               charge l&apos;ensemble de vos projets extérieurs.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <span className="inline-flex items-center rounded-full border border-[--color-border] bg-white px-4 py-1.5 text-sm font-medium text-[--color-fg-muted]">
+              <span className="inline-flex items-center rounded-full border border-[#EDEDED] bg-white px-4 py-1.5 text-sm font-medium text-[#8C8F94]">
                 Devis gratuit · 24h
               </span>
-              <span className="inline-flex items-center rounded-full border border-[--color-border] bg-white px-4 py-1.5 text-sm font-medium text-[--color-fg-muted]">
+              <span className="inline-flex items-center rounded-full border border-[#EDEDED] bg-white px-4 py-1.5 text-sm font-medium text-[#8C8F94]">
                 Rayon 20 km
               </span>
-              <span className="inline-flex items-center rounded-full border border-[--color-border] bg-white px-4 py-1.5 text-sm font-medium text-[--color-fg-muted]">
+              <span className="inline-flex items-center rounded-full border border-[#EDEDED] bg-white px-4 py-1.5 text-sm font-medium text-[#8C8F94]">
                 RC Pro
               </span>
             </div>
@@ -172,7 +172,7 @@ export default function ServicesPage() {
               return (
                 <article
                   key={service.title}
-                  className="overflow-hidden rounded-2xl border border-[--color-border] bg-[--color-bg-elevated] shadow-sm"
+                  className="bg-white border border-[#EDEDED] rounded-2xl shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] overflow-hidden"
                 >
                   <div className="relative h-52 overflow-hidden">
                     <Image
@@ -187,24 +187,25 @@ export default function ServicesPage() {
                   <div className="p-7">
                     <div className="mb-3 flex items-center gap-3">
                       <div
-                        className="flex h-10 w-10 items-center justify-center rounded-xl bg-[--color-green-light]"
+                        className="flex h-10 w-10 items-center justify-center rounded-xl"
+                        style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}
                       >
-                        <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
+                        <Icon size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
                       </div>
-                      <h2 className="font-display text-xl font-bold text-[--color-fg]">
+                      <h2 className="font-display text-xl font-bold" style={{ color: '#425D07' }}>
                         {service.title}
                       </h2>
                     </div>
-                    <p className="mb-5 leading-relaxed text-[--color-fg-muted]">{service.desc}</p>
+                    <p className="mb-5 leading-relaxed text-[#8C8F94]">{service.desc}</p>
                     <ul className="mb-6 space-y-1.5">
                       {service.features.map((f) => (
                         <li
                           key={f}
-                          className="flex items-center gap-2 text-sm text-[--color-fg-muted]"
+                          className="flex items-center gap-2 text-sm text-[#8C8F94]"
                         >
                           <CheckCircle
                             size={14}
-                            style={{ color: '#425D07' }}
+                            style={{ color: '#80BC00' }}
                             aria-hidden="true"
                           />
                           {f}
@@ -236,8 +237,8 @@ export default function ServicesPage() {
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold transition-colors hover:bg-white/90"
-              style={{ color: '#0B3D2C' }}
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold transition-colors hover:opacity-90"
+              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Demander un devis
             </Link>

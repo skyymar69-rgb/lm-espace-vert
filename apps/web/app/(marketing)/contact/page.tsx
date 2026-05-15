@@ -37,8 +37,8 @@ const communes = [
 ]
 
 const inputClass =
-  'w-full border border-[--color-border] rounded-xl px-4 py-3 text-sm text-[--color-fg] bg-[--color-bg-elevated] placeholder-[--color-fg-subtle] focus:outline-none focus:border-[#80BC00] transition-colors'
-const labelClass = 'block text-sm font-medium text-[--color-fg] mb-1.5'
+  'w-full px-5 py-3.5 rounded-full border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#80BC00] focus:ring-2 focus:ring-[rgba(128,188,0,0.15)] transition-all'
+const labelClass = 'block text-xs font-semibold uppercase tracking-wider mb-2 text-[#2F2F2F]'
 
 export default function ContactPage() {
   return (
@@ -46,20 +46,20 @@ export default function ContactPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="bg-[--color-bg-subtle] py-16">
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
-            <ol role="list" className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
-              <li><Link href="/" className="hover:text-[--color-fg]">Accueil</Link></li>
+            <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
+              <li><Link href="/" className="hover:text-[#2F2F2F]">Accueil</Link></li>
               <li aria-hidden="true">/</li>
-              <li><span aria-current="page" className="text-[--color-fg]">Contact</span></li>
+              <li><span aria-current="page" style={{ color: '#2F2F2F' }}>Contact</span></li>
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight text-[--color-fg]">
+            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight" style={{ color: '#2F2F2F' }}>
               Nous contacter
             </h1>
-            <p className="mt-4 text-lg text-[--color-fg-muted]">
+            <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
               Réponse garantie sous 24h · Devis gratuit
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
             {/* Colonne gauche — infos contact */}
             <div>
-              <h2 className="font-display text-2xl font-bold text-[--color-fg] mb-8">
+              <h2 className="font-display text-2xl font-bold mb-8" style={{ color: '#425D07' }}>
                 Comment nous joindre&nbsp;?
               </h2>
 
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 {/* Téléphone — grande carte */}
                 <a
                   href="tel:+33674734698"
-                  className="flex items-center gap-5 rounded-2xl border border-[--color-border] bg-[--color-bg-subtle] p-5 hover:shadow-md transition-shadow group"
+                  className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
                 >
                   <div
                     className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center text-white"
@@ -90,10 +90,10 @@ export default function ContactPage() {
                     <Phone size={24} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold text-lg text-[--color-fg] group-hover:text-[#425D07] transition-colors">
+                    <p className="font-bold text-lg group-hover:text-[#425D07] transition-colors" style={{ color: '#2F2F2F' }}>
                       06 74 73 46 98
                     </p>
-                    <p className="text-sm text-[--color-fg-muted]">
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>
                       Disponible Lun-Ven 8h-18h, Sam 8h-12h
                     </p>
                   </div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                   href="https://wa.me/33674734698"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-5 rounded-2xl border border-[--color-border] bg-[--color-bg-subtle] p-5 hover:shadow-md transition-shadow group"
+                  className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
                 >
                   <div
                     className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-white"
@@ -113,15 +113,15 @@ export default function ContactPage() {
                     <MessageCircle size={22} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold text-[--color-fg]">WhatsApp direct</p>
-                    <p className="text-sm text-[--color-fg-muted]">Réponse rapide</p>
+                    <p className="font-bold" style={{ color: '#2F2F2F' }}>WhatsApp direct</p>
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse rapide</p>
                   </div>
                 </a>
 
                 {/* Email */}
                 <a
                   href="mailto:contact@lmespacevert.fr"
-                  className="flex items-center gap-5 rounded-2xl border border-[--color-border] bg-[--color-bg-subtle] p-5 hover:shadow-md transition-shadow group"
+                  className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
                 >
                   <div
                     className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-white"
@@ -130,40 +130,40 @@ export default function ContactPage() {
                     <Mail size={22} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold text-[--color-fg]">contact@lmespacevert.fr</p>
-                    <p className="text-sm text-[--color-fg-muted]">Réponse sous 24h</p>
+                    <p className="font-bold" style={{ color: '#2F2F2F' }}>contact@lmespacevert.fr</p>
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous 24h</p>
                   </div>
                 </a>
 
                 {/* Adresse */}
-                <div className="flex items-center gap-4 px-5 py-3 text-[--color-fg-muted]">
-                  <MapPin size={20} className="flex-shrink-0 text-[#425D07]" aria-hidden="true" />
+                <div className="flex items-center gap-4 px-5 py-3" style={{ color: '#8C8F94' }}>
+                  <MapPin size={20} className="flex-shrink-0" style={{ color: '#425D07' }} aria-hidden="true" />
                   <span className="text-sm">
                     Saint-Didier-au-Mont-d&apos;Or,{' '}
-                    <strong className="text-[--color-fg]">69370 Rhône</strong>
+                    <strong style={{ color: '#2F2F2F' }}>69370 Rhône</strong>
                   </span>
                 </div>
               </div>
 
               {/* Horaires */}
-              <div className="mt-8 rounded-2xl border border-[--color-border] shadow-sm overflow-hidden">
-                <div className="flex items-center gap-3 px-5 py-4 border-b border-[--color-border] bg-[--color-bg-subtle]">
-                  <Clock size={18} className="text-[#425D07]" aria-hidden="true" />
-                  <span className="font-semibold text-sm text-[--color-fg]">Horaires d&apos;ouverture</span>
+              <div className="mt-8 rounded-2xl border border-[#EDEDED] shadow-sm overflow-hidden">
+                <div className="flex items-center gap-3 px-5 py-4 border-b border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
+                  <Clock size={18} style={{ color: '#425D07' }} aria-hidden="true" />
+                  <span className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>Horaires d&apos;ouverture</span>
                 </div>
                 <table className="w-full text-sm">
                   <tbody>
-                    <tr className="border-b border-[--color-border]">
-                      <td className="px-5 py-3 text-[--color-fg-muted]">Lundi – Vendredi</td>
-                      <td className="px-5 py-3 font-medium text-[--color-fg] text-right">8h00 – 18h00</td>
+                    <tr className="border-b border-[#EDEDED]">
+                      <td className="px-5 py-3" style={{ color: '#8C8F94' }}>Lundi – Vendredi</td>
+                      <td className="px-5 py-3 font-medium text-right" style={{ color: '#2F2F2F' }}>8h00 – 18h00</td>
                     </tr>
-                    <tr className="border-b border-[--color-border]">
-                      <td className="px-5 py-3 text-[--color-fg-muted]">Samedi</td>
-                      <td className="px-5 py-3 font-medium text-[--color-fg] text-right">8h00 – 12h00</td>
+                    <tr className="border-b border-[#EDEDED]">
+                      <td className="px-5 py-3" style={{ color: '#8C8F94' }}>Samedi</td>
+                      <td className="px-5 py-3 font-medium text-right" style={{ color: '#2F2F2F' }}>8h00 – 12h00</td>
                     </tr>
                     <tr>
-                      <td className="px-5 py-3 text-[--color-fg-muted]">Dimanche</td>
-                      <td className="px-5 py-3 text-[--color-fg-subtle] text-right">Fermé</td>
+                      <td className="px-5 py-3" style={{ color: '#8C8F94' }}>Dimanche</td>
+                      <td className="px-5 py-3 text-right" style={{ color: '#8C8F94' }}>Fermé</td>
                     </tr>
                   </tbody>
                 </table>
@@ -171,8 +171,8 @@ export default function ContactPage() {
             </div>
 
             {/* Colonne droite — formulaire */}
-            <div className="rounded-2xl border border-[--color-border] shadow-sm p-8">
-              <h3 className="font-display text-xl font-bold text-[--color-fg] mb-6">
+            <div className="rounded-2xl border border-[#EDEDED] shadow-sm p-8">
+              <h3 className="font-display text-xl font-bold mb-6" style={{ color: '#2F2F2F' }}>
                 Envoyez-nous un message
               </h3>
 
@@ -255,19 +255,19 @@ export default function ContactPage() {
                     required
                     rows={4}
                     placeholder="Décrivez votre projet ou votre question..."
-                    className={inputClass + ' resize-y'}
+                    className="w-full px-5 py-3.5 rounded-2xl border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#80BC00] focus:ring-2 focus:ring-[rgba(128,188,0,0.15)] transition-all resize-y min-h-[120px]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
                   style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
                 >
                   Envoyer le message →
                 </button>
 
-                <p className="text-xs text-[--color-fg-subtle] text-center">
+                <p className="text-xs text-center" style={{ color: '#8C8F94' }}>
                   🔒 Vos données sont protégées et ne seront jamais partagées.
                 </p>
               </form>
@@ -277,13 +277,13 @@ export default function ContactPage() {
       </section>
 
       {/* Zone d'intervention */}
-      <section className="bg-[--color-bg-subtle] py-12">
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-12">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-8">
-            <h2 className="font-display text-2xl font-bold text-[--color-fg]">
+            <h2 className="font-display text-2xl font-bold" style={{ color: '#2F2F2F' }}>
               Zone d&apos;intervention
             </h2>
-            <p className="mt-2 text-[--color-fg-muted]">
+            <p className="mt-2" style={{ color: '#8C8F94' }}>
               Nous intervenons dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or
             </p>
           </div>
@@ -291,13 +291,14 @@ export default function ContactPage() {
             {communes.map((commune) => (
               <li
                 key={commune}
-                className="rounded-xl border border-[--color-border] bg-white px-4 py-3 text-sm text-center font-medium text-[--color-fg] shadow-sm"
+                className="rounded-xl border border-[#EDEDED] bg-white px-4 py-3 text-sm text-center font-medium shadow-sm"
+                style={{ color: '#2F2F2F' }}
               >
                 {commune}
               </li>
             ))}
           </ul>
-          <p className="text-center text-sm text-[--color-fg-muted] mt-6">
+          <p className="text-center text-sm mt-6" style={{ color: '#8C8F94' }}>
             Votre commune n&apos;est pas dans la liste ?{' '}
             <a href="tel:+33674734698" className="font-medium hover:underline" style={{ color: '#425D07' }}>
               Appelez-nous
