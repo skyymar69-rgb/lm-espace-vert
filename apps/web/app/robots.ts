@@ -1,17 +1,11 @@
 import type { MetadataRoute } from 'next'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'
-
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/admin/'],
-      },
+      { userAgent: '*', allow: '/', disallow: ['/api/', '/devis/confirmation'] },
     ],
-    sitemap: `${BASE_URL}/sitemap.xml`,
-    host: BASE_URL,
+    sitemap: 'https://www.lmespacevert.fr/sitemap.xml',
+    host: 'https://www.lmespacevert.fr',
   }
 }

@@ -8,6 +8,8 @@ import {
 } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
+import { StatCounter } from '@/components/ui/stat-counter'
+import { FAQSection } from '@/components/ui/faq-section'
 
 export const metadata: Metadata = {
   title: "Paysagiste Saint-Didier-au-Mont-d'Or & Lyon — LM Espace Vert",
@@ -67,12 +69,12 @@ const localBusinessJsonLd = {
 }
 
 const services = [
-  { icon: Scissors, title: "Entretien d'espaces verts", desc: 'Tonte, taille de haies, désherbage. Votre jardin toujours impeccable.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80' },
-  { icon: TreePine, title: 'Élagage & Abattage', desc: 'Élagage raisonné et abattage sécurisé par des professionnels équipés.', image: 'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?w=480&q=80' },
-  { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=480&q=80' },
-  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=480&q=80' },
-  { icon: Droplets, title: 'Arrosage automatique', desc: "Systèmes d'arrosage intelligents pour économiser l'eau.", image: 'https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?w=480&q=80' },
-  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=480&q=80' },
+  { icon: Scissors, title: "Entretien d'espaces verts", desc: 'Tonte, taille de haies, désherbage. Votre jardin toujours impeccable.', image: '/images/entretien-espaces-verts.webp' },
+  { icon: TreePine, title: 'Élagage & Abattage', desc: 'Élagage raisonné et abattage sécurisé par des professionnels équipés.', image: '/images/elagage-abattage.webp' },
+  { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: '/images/realisation-1.jpg' },
+  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/realisation-10.jpg' },
+  { icon: Droplets, title: 'Arrosage automatique', desc: "Systèmes d'arrosage intelligents pour économiser l'eau.", image: '/images/arrosage-automatique.webp' },
+  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/realisation-6.jpg' },
 ] as const
 
 const processSteps = [
@@ -98,8 +100,8 @@ export default function HomePage() {
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end">
         <Image
-          src="/images/hero.webp"
-          alt="Jardin LM Espace Vert, paysagiste Lyon nord"
+          src="https://local-fr-public.s3.eu-west-3.amazonaws.com/prod/webtool/userfiles/150252/Travaux%20paysagers%20%C3%A0%20Saint-Didier-au-Mont-d%27Or.webp"
+          alt="LM Espace Vert — Travaux paysagers à Saint-Didier-au-Mont-d'Or"
           fill
           className="object-cover object-center"
           priority
@@ -118,8 +120,7 @@ export default function HomePage() {
             <span style={{ color: '#7DC67F' }}>notre passion.</span>
           </h1>
           <p className="text-white/75 text-lg max-w-xl mb-8 leading-relaxed">
-            LM Espace Vert crée, entretient et sublime vos espaces extérieurs.<br />
-            Paysagiste professionnel basé à Saint-Didier-au-Mont-d&apos;Or, rayon 20 km.
+            LM Espace Vert crée, entretient et sublime vos espaces extérieurs dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Écully, Limonest, Tassin, Dardilly et tout le nord-ouest lyonnais.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
             <Link
@@ -154,17 +155,30 @@ export default function HomePage() {
       <section className="bg-white border-y border-[#EDEDED]" aria-label="Chiffres clés">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-10">
           <dl className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-            {[
-              { value: '5+', label: "Années d'expérience" },
-              { value: '200+', label: 'Clients satisfaits' },
-              { value: '20 km', label: "Rayon d'intervention" },
-              { value: '5★', label: 'Note Google' },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>{stat.value}</dt>
-                <dd className="text-sm text-[#8C8F94] mt-1">{stat.label}</dd>
-              </div>
-            ))}
+            <div className="text-center">
+              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+                <StatCounter value={5} suffix="+" />
+              </dt>
+              <dd className="text-sm text-[#8C8F94] mt-1">Années d&apos;expérience</dd>
+            </div>
+            <div className="text-center">
+              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+                <StatCounter value={200} suffix="+" />
+              </dt>
+              <dd className="text-sm text-[#8C8F94] mt-1">Clients satisfaits</dd>
+            </div>
+            <div className="text-center">
+              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+                <StatCounter value={20} suffix=" km" />
+              </dt>
+              <dd className="text-sm text-[#8C8F94] mt-1">Rayon d&apos;intervention</dd>
+            </div>
+            <div className="text-center">
+              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+                <StatCounter value={28} suffix=" avis" />
+              </dt>
+              <dd className="text-sm text-[#8C8F94] mt-1">Note 5★ Google</dd>
+            </div>
           </dl>
         </div>
       </section>
@@ -175,8 +189,8 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="rounded-2xl overflow-hidden shadow-md">
               <Image
-                src="/images/presentation.webp"
-                alt="Léo Maurice, paysagiste LM Espace Vert"
+                src="/images/photo-equipe.webp"
+                alt="Léo Maurice et l'équipe LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
                 width={640}
                 height={480}
                 className="object-cover w-full h-[420px] lg:h-[480px]"
@@ -196,7 +210,7 @@ export default function HomePage() {
                 De la conception à l&apos;entretien régulier, nous intervenons chez les particuliers et les professionnels dans tout le nord-ouest lyonnais.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
-                {['Certifié RC Pro', 'Depuis 2019', 'Éco-responsable'].map((badge) => (
+                {['Certifié RC Pro', 'Agréé SAP', 'Label Qualipaysage', 'Éco-responsable'].map((badge) => (
                   <span key={badge} className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#8C8F94]">
                     {badge}
                   </span>
@@ -210,6 +224,52 @@ export default function HomePage() {
                 Découvrir notre histoire <ArrowRight size={14} />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION : AVANT / APRÈS ── */}
+      <section className="bg-white py-20 lg:py-24" aria-labelledby="before-after-heading">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos Transformations</p>
+            <h2 id="before-after-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+              Avant &amp; Après — le résultat parle
+            </h2>
+            <p className="text-[#8C8F94] mt-3">
+              Chaque jardin que nous transformons est une nouvelle histoire. Voici quelques exemples concrets de nos interventions.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-8">
+            {[
+              { before: '/images/avant1.webp', after: '/images/apres1.webp', title: "Création jardin — Saint-Didier-au-Mont-d'Or" },
+              { before: '/images/avant2.webp', after: '/images/apres2.webp', title: 'Aménagement extérieur — Limonest' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl overflow-hidden border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]">
+                <div className="grid grid-cols-2 gap-0.5 bg-[#EDEDED]">
+                  <div className="relative">
+                    <div className="relative h-52 overflow-hidden">
+                      <Image src={item.before} alt={`Avant — ${item.title}`} fill className="object-cover" sizes="(max-width:640px)50vw,25vw" />
+                    </div>
+                    <span className="absolute top-2 left-2 text-xs font-bold px-2 py-0.5 rounded" style={{ backgroundColor: '#2F2F2F', color: '#ffffff' }}>AVANT</span>
+                  </div>
+                  <div className="relative">
+                    <div className="relative h-52 overflow-hidden">
+                      <Image src={item.after} alt={`Après — ${item.title}`} fill className="object-cover" sizes="(max-width:640px)50vw,25vw" />
+                    </div>
+                    <span className="absolute top-2 left-2 text-xs font-bold px-2 py-0.5 rounded" style={{ backgroundColor: '#80BC00', color: '#ffffff' }}>APRÈS</span>
+                  </div>
+                </div>
+                <div className="p-4 bg-white">
+                  <p className="text-sm font-semibold" style={{ color: '#425D07' }}>{item.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/realisations" className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors" style={{ color: '#2F2F2F' }}>
+              Voir toutes nos réalisations <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
@@ -442,6 +502,43 @@ export default function HomePage() {
               Voir tous nos articles <ArrowRight size={14} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── SECTION FAQ ── */}
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-20 lg:py-24" aria-labelledby="faq-heading">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <FAQSection
+            title="Questions fréquentes"
+            subtitle="FAQ"
+            withJsonLd
+            items={[
+              {
+                question: "Dans quelle zone géographique intervenez-vous ?",
+                answer: "LM Espace Vert intervient dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or : Caluire-et-Cuire, Écully, Tassin-la-Demi-Lune, Charbonnières-les-Bains, Limonest, Dardilly, Craponne, Francheville, Collonges-au-Mont-d'Or, Neuville-sur-Saône et bien d'autres communes du nord-ouest lyonnais.",
+              },
+              {
+                question: "Comment obtenir un devis gratuit ?",
+                answer: "Contactez-nous par téléphone au 06 74 73 46 98, via le formulaire de contact ou directement via WhatsApp. Nous nous déplaçons gratuitement pour évaluer votre projet et vous remettons un devis détaillé sous 48h.",
+              },
+              {
+                question: "Proposez-vous des contrats d'entretien annuels ?",
+                answer: "Oui, nous proposons des contrats d'entretien sur mesure adaptés à vos besoins et à la superficie de votre jardin. Ces contrats incluent les tontes régulières, la taille de haies, le désherbage et les soins saisonniers.",
+              },
+              {
+                question: "Êtes-vous assuré en responsabilité civile professionnelle ?",
+                answer: "Absolument. LM Espace Vert dispose d'une assurance RC Pro à jour couvrant l'ensemble de nos interventions. Vous êtes pleinement protégés en cas d'incident lors de nos travaux.",
+              },
+              {
+                question: "Quelle est votre politique environnementale ?",
+                answer: "Nous privilégions les produits phytosanitaires raisonnés ou biologiques, le compostage des déchets verts et la préservation de la biodiversité. Nous sommes certifiés CERTIPHYTO pour une utilisation responsable des produits phyto.",
+              },
+              {
+                question: "Intervenez-vous chez les professionnels et copropriétés ?",
+                answer: "Oui, nous travaillons aussi bien pour les particuliers que pour les professionnels, les syndics de copropriété, les entreprises et les collectivités du nord-ouest lyonnais.",
+              },
+            ]}
+          />
         </div>
       </section>
 

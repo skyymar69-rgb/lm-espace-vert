@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, MessageCircle } from 'lucide-react'
@@ -31,7 +33,7 @@ export function Footer() {
         <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <h2 className="font-display text-2xl font-bold text-white">
+              <h2 className="font-display text-2xl font-bold" style={{ color: '#ffffff' }}>
                 Votre jardin mérite le meilleur soin
               </h2>
               <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -41,15 +43,15 @@ export function Footer() {
             <div className="flex gap-3 flex-wrap">
               <Link
                 href="/devis"
-                className="rounded-full px-6 py-2.5 text-sm font-semibold bg-white hover:opacity-90 transition-opacity"
-                style={{ color: '#0B3D2C' }}
+                className="rounded-full px-6 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
+                style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
               >
                 Demander un devis
               </Link>
               <a
                 href="tel:+33674734698"
-                className="rounded-full px-5 py-2.5 text-sm font-semibold border flex items-center gap-2 hover:bg-white/10 transition-colors text-white"
-                style={{ borderColor: 'rgba(255,255,255,0.35)' }}
+                className="rounded-full px-5 py-2.5 text-sm font-semibold flex items-center gap-2 transition-colors"
+                style={{ border: '1px solid rgba(255,255,255,0.35)', color: '#ffffff' }}
               >
                 <Phone size={14} aria-hidden="true" />
                 06 74 73 46 98
@@ -60,7 +62,7 @@ export function Footer() {
       </div>
 
       {/* ZONE B — Corps du footer */}
-      <div style={{ backgroundColor: '#111827', color: '#F0F0EE' }}>
+      <div style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}>
         <div className="container mx-auto max-w-7xl px-4 py-14 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -74,27 +76,33 @@ export function Footer() {
                 className="h-10 w-auto mb-4"
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
+              <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Paysagiste créateur basé à Saint-Didier-au-Mont-d&apos;Or. Nous transformons vos espaces extérieurs depuis 2019.
               </p>
 
               {/* Réseaux sociaux */}
               <div className="flex gap-2">
                 <a
-                  href="https://www.facebook.com/lmespacevert"
+                  href="https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
+                  onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
+                  onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
                 >
                   <Facebook size={16} aria-hidden="true" />
                 </a>
                 <a
-                  href="https://www.instagram.com/lmespacevert"
+                  href="https://www.instagram.com/lm_espacevert"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
+                  onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
+                  onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
                 >
                   <Instagram size={16} aria-hidden="true" />
                 </a>
@@ -103,7 +111,10 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Google Maps"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
+                  onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
+                  onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
                 >
                   <MapPin size={16} aria-hidden="true" />
                 </a>
@@ -112,7 +123,10 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
-                  className="rounded-full w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-400 hover:text-[#80BC00] hover:border-[#80BC00] transition-all"
+                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
+                  onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
+                  onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
                 >
                   <MessageCircle size={16} aria-hidden="true" />
                 </a>
@@ -124,13 +138,16 @@ export function Footer() {
 
             {/* Colonne 2 — Nos Services */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Nos Services</p>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#ffffff' }}>Nos Services</p>
               <ul className="space-y-0.5">
                 {serviceLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-[#80BC00] transition-colors block py-0.5"
+                      className="text-sm block py-0.5 transition-colors"
+                      style={{ color: 'rgba(255,255,255,0.7)' }}
+                      onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                      onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)' }}
                     >
                       {link.label}
                     </Link>
@@ -141,28 +158,31 @@ export function Footer() {
 
             {/* Colonne 3 — Zone d'intervention */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Zone d&apos;intervention</p>
-              <p className="text-sm text-gray-400 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#ffffff' }}>Zone d&apos;intervention</p>
+              <p className="text-sm mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Rayon 20 km autour de Saint-Didier-au-Mont-d&apos;Or
               </p>
               <ul className="space-y-0.5">
                 {zones.map((zone) => (
-                  <li key={zone} className="text-sm text-gray-400 py-0.5">
+                  <li key={zone} className="text-sm py-0.5" style={{ color: 'rgba(255,255,255,0.7)' }}>
                     {zone}
                   </li>
                 ))}
-                <li className="text-sm text-gray-500 py-0.5">+ autres communes</li>
+                <li className="text-sm py-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>+ autres communes</li>
               </ul>
             </div>
 
             {/* Colonne 4 — Contact */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Contact</p>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#ffffff' }}>Contact</p>
               <ul className="space-y-0.5">
                 <li>
                   <a
                     href="tel:+33674734698"
-                    className="flex items-start gap-2 py-1 text-sm text-gray-400 hover:text-[#80BC00] transition-colors"
+                    className="flex items-start gap-2 py-1 text-sm transition-colors"
+                    style={{ color: 'rgba(255,255,255,0.7)' }}
+                    onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                    onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)' }}
                   >
                     <Phone size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
                     06 74 73 46 98
@@ -171,17 +191,20 @@ export function Footer() {
                 <li>
                   <a
                     href="mailto:contact@lmespacevert.fr"
-                    className="flex items-start gap-2 py-1 text-sm text-gray-400 hover:text-[#80BC00] transition-colors"
+                    className="flex items-start gap-2 py-1 text-sm transition-colors"
+                    style={{ color: 'rgba(255,255,255,0.7)' }}
+                    onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                    onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)' }}
                   >
                     <Mail size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
                     contact@lmespacevert.fr
                   </a>
                 </li>
-                <li className="flex items-start gap-2 py-1 text-sm text-gray-400">
+                <li className="flex items-start gap-2 py-1 text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                   <MapPin size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
                   Saint-Didier-au-Mont-d&apos;Or, 69370 Rhône
                 </li>
-                <li className="flex items-start gap-2 py-1 text-sm text-gray-400">
+                <li className="flex items-start gap-2 py-1 text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                   <Clock size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
                   Lun–Ven : 8h–18h / Sam : 8h–12h
                 </li>
@@ -189,8 +212,8 @@ export function Footer() {
 
               <Link
                 href="/devis"
-                className="mt-4 block w-full text-center rounded-full py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: '#80BC00', color: '#fff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+                className="mt-4 block w-full text-center rounded-full py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
+                style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
               >
                 Devis gratuit
               </Link>
@@ -202,26 +225,35 @@ export function Footer() {
 
       {/* ZONE C — Barre du bas */}
       <div
-        className="border-t border-gray-800 py-5"
-        style={{ backgroundColor: '#0D0D0D', color: '#6B7280' }}
+        className="py-5"
+        style={{ backgroundColor: '#071f16', borderTop: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)' }}
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
-            <p>© 2025 LM Espace Vert — Paysagiste à Saint-Didier-au-Mont-d&apos;Or</p>
+            <p>© 2025 LM Espace Vert · Création Kayzen Web</p>
             <div className="flex gap-4">
               <a
                 href="https://kayzen-lyon.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#80BC00] transition-colors"
+                className="transition-colors"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
               >
-                Site créé par Kayzen
+                Kayzen Web
               </a>
-              <Link href="/mentions-legales" className="hover:text-[#80BC00] transition-colors">
+              <Link href="/mentions-legales" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+              >
                 Mentions légales
               </Link>
-              <Link href="/confidentialite" className="hover:text-[#80BC00] transition-colors">
-                Politique de confidentialité
+              <Link href="/politique-confidentialite" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+              >
+                Confidentialité
               </Link>
             </div>
           </div>

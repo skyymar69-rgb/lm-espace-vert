@@ -35,12 +35,12 @@ export function FAQSection({ items, title, subtitle, withJsonLd = true }: Props)
       {(title || subtitle) && (
         <div className="text-center mb-10">
           {subtitle && (
-            <p className="text-sm font-semibold uppercase tracking-widest text-[--color-accent] mb-2">
+            <p className="text-sm font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>
               {subtitle}
             </p>
           )}
           {title && (
-            <h2 id="faq-heading" className="font-display text-[clamp(1.75rem,4vw,2.5rem)] font-bold text-[--color-fg]">
+            <h2 id="faq-heading" className="font-display text-[clamp(1.75rem,4vw,2.5rem)] font-bold" style={{ color: '#425D07' }}>
               {title}
             </h2>
           )}

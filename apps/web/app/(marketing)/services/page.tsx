@@ -38,7 +38,7 @@ const services = [
   {
     icon: Scissors,
     title: "Entretien d'espaces verts",
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: '/images/entretien-espaces-verts.webp',
     desc: "Un jardin entretenu régulièrement est un jardin en bonne santé. Nous proposons des contrats d'entretien sur mesure : tonte, taille de haies, désherbage, fertilisation et soins saisonniers.",
     features: [
       'Tonte hebdomadaire ou bimensuelle',
@@ -51,7 +51,7 @@ const services = [
   {
     icon: TreePine,
     title: 'Élagage & Abattage',
-    image: 'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?w=600&q=80',
+    image: '/images/elagage-abattage.webp',
     desc: "L'élagage est une intervention délicate qui demande expertise et équipement. Nos professionnels interviennent pour la taille douce, l'élagage raisonné et l'abattage en toute sécurité.",
     features: [
       'Élagage de formation et sécurité',
@@ -64,7 +64,7 @@ const services = [
   {
     icon: Sprout,
     title: 'Création de jardins',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+    image: '/images/realisation-1.jpg',
     desc: "Votre jardin est une extension de votre maison. Nous concevons des espaces verts sur-mesure, de la petite terrasse au grand parc, en respectant vos goûts et les contraintes du terrain.",
     features: [
       'Étude et conception paysagère',
@@ -77,7 +77,7 @@ const services = [
   {
     icon: Layers,
     title: 'Maçonnerie paysagère',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    image: '/images/realisation-10.jpg',
     desc: "Les éléments minéraux structurent et valorisent votre jardin. Terrasses, allées, murets et escaliers réalisés avec des matériaux naturels de qualité pour un rendu esthétique et durable.",
     features: [
       'Terrasses en pierres naturelles',
@@ -90,7 +90,7 @@ const services = [
   {
     icon: Droplets,
     title: 'Arrosage automatique',
-    image: 'https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?w=600&q=80',
+    image: '/images/arrosage-automatique.webp',
     desc: "Économisez l'eau et du temps avec un système d'arrosage automatique sur mesure. Installation, programmation et maintenance de systèmes d'arrosage intelligents adaptés à votre jardin.",
     features: [
       'Installation complète',
@@ -103,7 +103,7 @@ const services = [
   {
     icon: Flower2,
     title: 'Engazonnement',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=600&q=80',
+    image: '/images/realisation-6.jpg',
     desc: "Une belle pelouse est la base d'un jardin réussi. Nous créons votre gazon par semis ou en rouleaux selon vos besoins, et vous proposons des prairies fleuries pour plus de biodiversité.",
     features: [
       'Semis de pelouse',

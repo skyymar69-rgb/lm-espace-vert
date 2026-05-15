@@ -3,64 +3,110 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const realisations = [
+type Realisation = {
+  title: string
+  category: string
+  image: string
+  year: string
+  beforeAfter?: { before: string; after: string }
+}
+
+const realisations: Realisation[] = [
   {
-    title: 'Jardin de demeure - Saint-Didier',
+    title: 'Création jardin contemporain — Limonest',
     category: 'Création',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
-    year: '2024',
+    image: '/images/realisation-1.jpg',
+    year: '2025',
   },
   {
-    title: 'Terrasse en pierre - Caluire',
-    category: 'Maçonnerie',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
-    year: '2024',
+    title: 'Aménagement extérieur sur mesure — Limonest',
+    category: 'Création',
+    image: '/images/realisation-3.jpg',
+    year: '2025',
   },
   {
-    title: 'Élagage parc résidentiel - Écully',
+    title: 'Taille de haies copropriété — Limonest',
+    category: 'Entretien',
+    image: '/images/taille-haies-1.jpg',
+    year: '2025',
+  },
+  {
+    title: 'Entretien espaces verts — Saint-Didier',
+    category: 'Entretien',
+    image: '/images/entretien-espaces-verts.webp',
+    year: '2025',
+  },
+  {
+    title: 'Élagage raisonné — Saint-Didier',
     category: 'Élagage',
-    image: 'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?w=600&q=80',
+    image: '/images/elagage-abattage.webp',
+    year: '2025',
+  },
+  {
+    title: 'Jardin paysager résidentiel — Limonest',
+    category: 'Création',
+    image: '/images/realisation-4.jpg',
     year: '2024',
   },
   {
-    title: 'Entretien villa - Tassin',
-    category: 'Entretien',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-    year: '2023',
-  },
-  {
-    title: 'Création massifs - Charbonnières',
-    category: 'Création',
-    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&q=80',
-    year: '2023',
-  },
-  {
-    title: 'Allée et parking - Dardilly',
+    title: 'Terrasse et espace de vie — Limonest',
     category: 'Maçonnerie',
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80',
-    year: '2023',
+    image: '/images/realisation-5.jpg',
+    year: '2024',
   },
   {
-    title: 'Jardin contemporain - Limonest',
+    title: 'Création espaces extérieurs — Limonest',
     category: 'Création',
-    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80',
+    image: '/images/realisation-6.jpg',
+    year: '2024',
+  },
+  {
+    title: 'Aménagement paysager — Saint-Didier',
+    category: 'Création',
+    image: '/images/travaux-paysagers.webp',
+    year: '2024',
+  },
+  {
+    title: 'Pose arrosage automatique — Saint-Didier',
+    category: 'Arrosage',
+    image: '/images/arrosage-automatique.webp',
+    year: '2024',
+  },
+  {
+    title: 'Conception jardin sur mesure — Limonest',
+    category: 'Création',
+    image: '/images/realisation-7.jpg',
+    year: '2024',
+  },
+  {
+    title: 'Aménagement cour et jardin — Limonest',
+    category: 'Création',
+    image: '/images/realisation-9.jpg',
     year: '2023',
   },
   {
-    title: 'Engazonnement villa - Saint-Didier',
-    category: 'Engazonnement',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=600&q=80',
-    year: '2022',
+    title: 'Terrasse moderne et jardin — Limonest',
+    category: 'Maçonnerie',
+    image: '/images/realisation-10.jpg',
+    year: '2023',
   },
   {
-    title: 'Taille haies copropriété - Caluire',
-    category: 'Entretien',
-    image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80',
-    year: '2022',
+    title: 'Transformation jardin — Limonest',
+    category: 'Avant/Après',
+    image: '/images/apres1.webp',
+    year: '2025',
+    beforeAfter: { before: '/images/avant1.webp', after: '/images/apres1.webp' },
+  },
+  {
+    title: 'Rénovation aménagement extérieur — Limonest',
+    category: 'Avant/Après',
+    image: '/images/apres2.webp',
+    year: '2024',
+    beforeAfter: { before: '/images/avant2.webp', after: '/images/apres2.webp' },
   },
 ]
 
-const categories = ['Tout', 'Création', 'Entretien', 'Élagage', 'Maçonnerie', 'Engazonnement']
+const categories = ['Tout', 'Création', 'Entretien', 'Élagage', 'Maçonnerie', 'Arrosage', 'Avant/Après']
 
 export function RealisationsGallery() {
   const [activeCategory, setActiveCategory] = useState('Tout')
@@ -117,32 +163,92 @@ export function RealisationsGallery() {
             {filtered.map((r) => (
               <li key={r.title}>
                 <article className="group bg-white rounded-2xl overflow-hidden shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-[rgba(0,0,0,0.12)_0px_8px_40px_0px] transition-shadow">
-                  <div className="relative h-60 overflow-hidden">
-                    <Image
-                      src={r.image}
-                      alt={r.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    {/* Overlay */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: 'rgba(11,61,44,0.88)' }} />
-                    {/* Category badge */}
-                    <div className="absolute top-3 left-3">
-                      <span
-                        className="text-xs font-semibold px-2.5 py-1 rounded-full"
-                        style={{ backgroundColor: 'rgba(128,188,0,0.15)', color: '#425D07' }}
-                      >
-                        {r.category}
-                      </span>
+                  {r.beforeAfter ? (
+                    /* Before / After layout */
+                    <div className="relative h-60 overflow-hidden flex">
+                      <div className="relative flex-1 overflow-hidden">
+                        <Image
+                          src={r.beforeAfter.before}
+                          alt={`Avant — ${r.title}`}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 17vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute bottom-2 left-2">
+                          <span
+                            className="text-xs font-bold px-2 py-0.5 rounded-full"
+                            style={{ backgroundColor: 'rgba(0,0,0,0.55)', color: '#ffffff' }}
+                          >
+                            Avant
+                          </span>
+                        </div>
+                      </div>
+                      <div className="w-px bg-white/60 z-10 self-stretch" />
+                      <div className="relative flex-1 overflow-hidden">
+                        <Image
+                          src={r.beforeAfter.after}
+                          alt={`Après — ${r.title}`}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 17vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute bottom-2 right-2">
+                          <span
+                            className="text-xs font-bold px-2 py-0.5 rounded-full"
+                            style={{ backgroundColor: 'rgba(128,188,0,0.85)', color: '#ffffff' }}
+                          >
+                            Après
+                          </span>
+                        </div>
+                      </div>
+                      {/* Overlay */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: 'rgba(11,61,44,0.72)' }} />
+                      {/* Category badge */}
+                      <div className="absolute top-3 left-3">
+                        <span
+                          className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                          style={{ backgroundColor: 'rgba(128,188,0,0.15)', color: '#425D07' }}
+                        >
+                          {r.category}
+                        </span>
+                      </div>
+                      {/* Title / year on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <p className="text-white font-semibold text-sm leading-snug">{r.title}</p>
+                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.70)' }}>{r.year}</p>
+                      </div>
                     </div>
-                    {/* Title / year on hover */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                      <p className="text-white font-semibold text-sm leading-snug">{r.title}</p>
-                      <p className="text-white/70 text-xs mt-0.5">{r.year}</p>
+                  ) : (
+                    /* Standard single-image layout */
+                    <div className="relative h-60 overflow-hidden">
+                      <Image
+                        src={r.image}
+                        alt={r.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: 'rgba(11,61,44,0.88)' }} />
+                      {/* Category badge */}
+                      <div className="absolute top-3 left-3">
+                        <span
+                          className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                          style={{ backgroundColor: 'rgba(128,188,0,0.15)', color: '#425D07' }}
+                        >
+                          {r.category}
+                        </span>
+                      </div>
+                      {/* Title / year on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <p className="text-white font-semibold text-sm leading-snug">{r.title}</p>
+                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.70)' }}>{r.year}</p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div className="p-4">
                     <h2 className="font-semibold text-[#2F2F2F] text-sm leading-snug group-hover:text-[#80BC00] transition-colors">
                       {r.title}

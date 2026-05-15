@@ -25,7 +25,7 @@ export function BeforeAfterSlider({ before, after, label, height = 400 }: Props)
 
   return (
     <div>
-      {label && <p className="text-sm font-semibold text-[--color-fg-subtle] mb-3 text-center">{label}</p>}
+      {label && <p className="text-sm font-semibold text-[#8C8F94] mb-3 text-center">{label}</p>}
       <div
         ref={containerRef}
         className="before-after-container select-none"
@@ -55,7 +55,7 @@ export function BeforeAfterSlider({ before, after, label, height = 400 }: Props)
         <span className="absolute top-3 left-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded-md pointer-events-none">
           AVANT
         </span>
-        <span className="absolute top-3 right-3 bg-[--color-green-primary] text-white text-xs font-bold px-2 py-1 rounded-md pointer-events-none">
+        <span className="absolute top-3 right-3 text-white text-xs font-bold px-2 py-1 rounded-md pointer-events-none" style={{ backgroundColor: '#80BC00' }}>
           APRÈS
         </span>
 

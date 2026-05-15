@@ -34,8 +34,8 @@ export function TrustBadges({ badges = DEFAULT_BADGES, columns = 3 }: Props) {
             <span aria-hidden="true">{badge.icon}</span>
           </div>
           <div>
-            <p className="font-bold text-sm text-[--color-fg] leading-tight">{badge.title}</p>
-            <p className="text-xs text-[--color-fg-subtle] mt-0.5">{badge.subtitle}</p>
+            <p className="font-bold text-sm leading-tight" style={{ color: '#2F2F2F' }}>{badge.title}</p>
+            <p className="text-xs mt-0.5 text-[#8C8F94]">{badge.subtitle}</p>
           </div>
         </div>
       ))}

@@ -19,6 +19,39 @@ const breadcrumbSchema = {
   ],
 }
 
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contactez LM Espace Vert',
+  url: 'https://www.lmespacevert.fr/contact',
+  description: 'Contactez LM Espace Vert pour un devis gratuit ou toute question. Paysagiste à Lyon, disponible du lundi au vendredi.',
+  mainEntity: {
+    '@type': 'LocalBusiness',
+    '@id': 'https://www.lmespacevert.fr/#business',
+    name: 'LM Espace Vert',
+    telephone: '+33674734698',
+    email: 'contact@lmespacevert.fr',
+    url: 'https://www.lmespacevert.fr',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: "Saint-Didier-au-Mont-d'Or",
+      postalCode: '69370',
+      addressCountry: 'FR',
+    },
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '12:00' },
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+33674734698',
+      contactType: 'customer service',
+      contactOption: 'TollFree',
+      availableLanguage: 'French',
+    },
+  },
+}
+
 const communes = [
   "Saint-Didier-au-Mont-d'Or",
   'Limonest',
@@ -44,6 +77,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={contactPageSchema} />
 
       {/* Hero */}
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">

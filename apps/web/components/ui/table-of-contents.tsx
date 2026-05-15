@@ -47,7 +47,7 @@ export function TableOfContents({ contentId }: Props) {
 
   return (
     <nav className="toc" aria-label="Sommaire de l'article">
-      <p className="flex items-center gap-2 font-bold text-sm text-[--color-fg] mb-3">
+      <p className="flex items-center gap-2 font-bold text-sm mb-3" style={{ color: '#2F2F2F' }}>
         <List size={15} aria-hidden="true" />
         Sommaire
       </p>
@@ -56,7 +56,8 @@ export function TableOfContents({ contentId }: Props) {
           <li key={h.id}>
             <a
               href={`#${h.id}`}
-              className={`toc${h.level === 3 ? ' toc-h3' : ''} ${active === h.id ? 'text-[--color-primary] font-semibold' : ''}`}
+              className={`toc${h.level === 3 ? ' toc-h3' : ''}${active === h.id ? ' font-semibold' : ''}`}
+              style={active === h.id ? { color: '#425D07' } : undefined}
             >
               {h.text}
             </a>

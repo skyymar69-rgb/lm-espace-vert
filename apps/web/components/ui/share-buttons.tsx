@@ -31,7 +31,7 @@ export function ShareButtons({ title, url, text }: Props) {
 
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-sm font-semibold text-[--color-fg-subtle] mr-1">Partager :</span>
+      <span className="text-sm font-semibold text-[#8C8F94] mr-1">Partager :</span>
 
       {typeof navigator !== 'undefined' && 'share' in navigator && (
         <button onClick={nativeShare} className="share-btn" aria-label="Partager">
