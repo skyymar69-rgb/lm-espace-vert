@@ -25,16 +25,16 @@ export function StatCounter({ value, suffix = '', prefix = '', duration = 1800 }
           const start = Date.now()
           const tick = () => {
             const elapsed = Date.now() - start
-            const progress = Math.min(elapsed / duration, 1)
-            // Ease-out
-            const eased = 1 - Math.pow(1 - progress, 3)
+            const rawProgress = Math.min(elapsed / duration, 1)
+            // Ease-out quart — smooth deceleration
+            const eased = 1 - Math.pow(1 - rawProgress, 4)
             setCount(Math.round(eased * value))
-            if (progress < 1) requestAnimationFrame(tick)
+            if (rawProgress < 1) requestAnimationFrame(tick)
           }
           requestAnimationFrame(tick)
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     )
     observer.observe(el)
     return () => observer.disconnect()

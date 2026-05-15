@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Politique de cookies',
@@ -8,6 +9,20 @@ export const metadata: Metadata = {
 
 export default function PolitiqueCookiesPage() {
   return (
+    <>
+      {/* Breadcrumb */}
+      <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
+        <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
+          <ol role="list" className="flex items-center gap-1.5 text-sm" style={{ color: '#8C8F94' }}>
+            <li>
+              <Link href="/" className="transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]" style={{ color: '#8C8F94' }}>Accueil</Link>
+            </li>
+            <li aria-hidden="true" className="select-none">›</li>
+            <li><span aria-current="page" className="font-medium" style={{ color: '#2F2F2F' }}>Politique de cookies</span></li>
+          </ol>
+        </div>
+      </nav>
+
     <div className="container mx-auto max-w-3xl px-4 py-16 sm:px-6">
       <h1 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] text-[--color-fg]">
         Politique de cookies
@@ -66,5 +81,6 @@ export default function PolitiqueCookiesPage() {
         <p><em>Dernière mise à jour : mai 2026</em></p>
       </div>
     </div>
+    </>
   )
 }

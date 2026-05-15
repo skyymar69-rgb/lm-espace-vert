@@ -89,12 +89,12 @@ export default function AccessibilitePage() {
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
+          <ol role="list" className="flex items-center gap-1.5 text-sm" style={{ color: '#8C8F94' }}>
             <li>
-              <Link href="/" className="hover:text-[#2F2F2F]">Accueil</Link>
+              <Link href="/" className="transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]" style={{ color: '#8C8F94' }}>Accueil</Link>
             </li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[#2F2F2F]">Accessibilité</span></li>
+            <li aria-hidden="true" className="select-none">›</li>
+            <li><span aria-current="page" className="font-medium" style={{ color: '#2F2F2F' }}>Accessibilité</span></li>
           </ol>
         </div>
       </nav>

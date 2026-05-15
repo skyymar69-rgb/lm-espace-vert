@@ -89,7 +89,7 @@ export default function ContactPage() {
       <JsonLd data={contactPageSchema} />
 
       {/* Hero */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
+      <section className="py-16 section-gradient-top">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
@@ -99,13 +99,13 @@ export default function ContactPage() {
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight" style={{ color: '#2F2F2F' }}>
+            <span className="badge-new mb-4 inline-block">Devis gratuit</span>
+            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight mt-3" style={{ color: '#2F2F2F' }}>
               Nous contacter
             </h1>
             <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
-              Réponse garantie sous 24h · Devis gratuit
+              Réponse garantie sous 24h · Sans engagement
             </p>
-            {/* Response promise */}
             <p className="mt-2 text-sm font-medium" style={{ color: '#425D07' }}>
               Réponse sous 2h en semaine, 24h le week-end
             </p>
@@ -258,22 +258,24 @@ export default function ContactPage() {
               {/* Horaires de disponibilité */}
               <div className="mt-8 rounded-2xl border border-[#EDEDED] shadow-sm overflow-hidden">
                 <div className="flex items-center gap-3 px-5 py-4 border-b border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
-                  <Clock size={18} style={{ color: '#425D07' }} aria-hidden="true" />
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(66,93,7,0.1)' }}>
+                    <Clock size={15} style={{ color: '#425D07' }} aria-hidden="true" />
+                  </div>
                   <span className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>Horaires de disponibilité</span>
                 </div>
                 <table className="w-full text-sm">
                   <tbody>
-                    <tr className="border-b border-[#EDEDED]">
-                      <td className="px-5 py-3" style={{ color: '#8C8F94' }}>Lundi – Vendredi</td>
-                      <td className="px-5 py-3 font-medium text-right" style={{ color: '#2F2F2F' }}>8h00 – 18h00</td>
+                    <tr className="border-b border-[#EDEDED] hover:bg-[#F7F5F0] transition-colors">
+                      <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Lundi – Vendredi</td>
+                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 – 18h00</td>
                     </tr>
-                    <tr className="border-b border-[#EDEDED]">
-                      <td className="px-5 py-3" style={{ color: '#8C8F94' }}>Samedi</td>
-                      <td className="px-5 py-3 font-medium text-right" style={{ color: '#2F2F2F' }}>8h00 – 12h00</td>
+                    <tr className="border-b border-[#EDEDED] hover:bg-[#F7F5F0] transition-colors">
+                      <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Samedi</td>
+                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 – 12h00</td>
                     </tr>
-                    <tr>
-                      <td className="px-5 py-3" style={{ color: '#8C8F94' }}>Dimanche</td>
-                      <td className="px-5 py-3 text-right" style={{ color: '#8C8F94' }}>Fermé</td>
+                    <tr className="hover:bg-[#F7F5F0] transition-colors">
+                      <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Dimanche</td>
+                      <td className="px-5 py-3.5 font-medium text-right" style={{ color: '#8C8F94' }}>Fermé</td>
                     </tr>
                   </tbody>
                 </table>
@@ -281,10 +283,15 @@ export default function ContactPage() {
             </div>
 
             {/* Colonne droite — formulaire */}
-            <div className="rounded-2xl border border-[#EDEDED] shadow-sm p-8">
-              <h3 className="font-display text-xl font-bold mb-2" style={{ color: '#2F2F2F' }}>
-                Envoyez-nous un message
-              </h3>
+            <div className="rounded-2xl border border-[#EDEDED] shadow-[0_8px_40px_rgba(0,0,0,0.07)] p-8">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
+                  <Mail size={15} style={{ color: '#80BC00' }} aria-hidden="true" />
+                </div>
+                <h3 className="font-display text-xl font-bold" style={{ color: '#2F2F2F' }}>
+                  Envoyez-nous un message
+                </h3>
+              </div>
               <p className="text-sm mb-6" style={{ color: '#8C8F94' }}>
                 Réponse sous 2h en semaine, 24h le week-end
               </p>
@@ -295,14 +302,14 @@ export default function ContactPage() {
               {/* WhatsApp fallback */}
               <div className="mt-6 pt-6 border-t border-[#EDEDED] text-center">
                 <p className="text-sm mb-3" style={{ color: '#8C8F94' }}>
-                  Ou passez-nous un message WhatsApp maintenant
+                  Préférez un contact immédiat ?
                 </p>
                 <a
                   href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: '#25D366' }}
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: '#25D366', boxShadow: '0 4px 16px rgba(37,211,102,0.3)' }}
                 >
                   <MessageCircle size={16} aria-hidden="true" />
                   Écrire sur WhatsApp

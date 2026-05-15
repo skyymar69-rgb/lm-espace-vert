@@ -215,7 +215,7 @@ export default function ServicesPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-16 section-gradient-top">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           {/* Breadcrumb */}
           <nav aria-label="Fil d'Ariane" className="mb-6">
@@ -269,7 +269,7 @@ export default function ServicesPage() {
               return (
                 <article
                   key={service.title}
-                  className="bg-white border border-[#EDEDED] rounded-2xl shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] overflow-hidden"
+                  className="service-card bg-white border border-[#EDEDED] rounded-2xl shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] overflow-hidden animate-fade-in-up"
                 >
                   <div className="relative h-52 overflow-hidden">
                     <Image
@@ -491,23 +491,24 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 text-center" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="py-20 text-center" style={{ backgroundColor: '#0B3D2C' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold text-white mb-3">
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>PRÊT À DÉMARRER ?</p>
+          <h2 className="font-display text-3xl font-bold text-white mb-4">
             Votre projet, notre expertise
           </h2>
-          <p className="mb-6 text-green-100">Devis gratuit, réponse sous 24h.</p>
+          <p className="mb-8 text-green-100 text-base">Devis gratuit, réponse sous 24h. Aucun engagement.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold transition-colors hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-bold transition-colors hover:opacity-90 cta-glow"
               style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
-              Demander un devis
+              Demander un devis gratuit
             </Link>
             <a
               href="tel:+33672587353"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 font-bold text-white transition-colors hover:bg-white/25"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3.5 font-bold text-white transition-colors hover:bg-white/25"
             >
               <Phone size={16} aria-hidden="true" /> 06 72 58 73 53
             </a>

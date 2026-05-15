@@ -121,16 +121,18 @@ export default function NotFound() {
           </Link>
         </div>
 
-        {/* Téléphone */}
+        {/* WhatsApp */}
         <div className="mt-10 pt-6 border-t border-[#EDEDED]">
-          <p className="text-xs text-[#8C8F94] mb-2">Besoin d&apos;aide immédiate&nbsp;? Appelez-nous :</p>
+          <p className="text-xs mb-2" style={{ color: '#5C606B' }}>Besoin d&apos;aide immédiate&nbsp;?</p>
           <a
-            href="tel:+33672587353"
-            className="text-xl font-bold hover:opacity-80 transition-opacity"
-            style={{ color: '#425D07' }}
-            aria-label="Appeler LM Espace Vert au 06 72 58 73 53"
+            href="https://wa.me/33672587353"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-lg font-bold hover:opacity-80 transition-opacity"
+            style={{ color: '#25D366' }}
+            aria-label="Contacter LM Espace Vert sur WhatsApp"
           >
-            📞 06 72 58 73 53
+            💬 WhatsApp — Réponse rapide
           </a>
         </div>
       </div>

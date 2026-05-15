@@ -78,15 +78,15 @@ const subLinkColumns = [
 
 export function SiteMapSection() {
   return (
-    <section style={{ backgroundColor: '#ffffff' }} className="py-16 border-t" aria-label="Plan du site">
+    <section style={{ backgroundColor: '#F7F5F0' }} className="py-16 border-t border-[#EDEDED]" aria-label="Plan du site">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Titre */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold font-display" style={{ color: '#1a1a1a' }}>
+          <h2 className="text-2xl font-bold font-display tracking-tight" style={{ color: '#0B3D2C' }}>
             Plan du site
           </h2>
-          <p className="text-sm mt-1" style={{ color: '#555B68' }}>
+          <p className="text-sm mt-1" style={{ color: '#5C606B' }}>
             Explorez toutes les pages de LM Espace Vert
           </p>
         </div>
@@ -97,27 +97,33 @@ export function SiteMapSection() {
             <Link
               key={page.href}
               href={page.href}
-              className="group relative overflow-hidden rounded-2xl block"
+              className="group relative overflow-hidden rounded-2xl block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
               style={{ height: '160px' }}
             >
               <Image
                 src={page.photo}
-                alt={page.label}
+                alt=""
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              {/* Overlay dégradé du bas */}
+              {/* Overlay gradient — renforcé au hover */}
               <div
-                className="absolute inset-0"
+                className="absolute inset-0 transition-opacity duration-300"
                 style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%)',
+                  background: 'linear-gradient(to top, rgba(11,61,44,0.75) 0%, rgba(11,61,44,0.15) 60%, transparent 100%)',
                 }}
+              />
+              {/* Hover overlay */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}
+                aria-hidden="true"
               />
               {/* Titre de la page */}
               <span
-                className="absolute bottom-3 left-3 text-sm font-semibold text-white"
-                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+                className="absolute bottom-3 left-3 text-sm font-semibold text-white transition-transform duration-300 group-hover:-translate-y-0.5"
+                style={{ textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}
               >
                 {page.label}
               </span>
@@ -130,17 +136,17 @@ export function SiteMapSection() {
           {subLinkColumns.map((col) => (
             <div key={col.title}>
               <p
-                className="text-xs font-semibold uppercase tracking-widest mb-3"
-                style={{ color: '#1a1a1a' }}
+                className="text-[11px] font-bold uppercase tracking-[0.12em] mb-4 pb-2 border-b"
+                style={{ color: '#425D07', borderColor: 'rgba(128,188,0,0.3)' }}
               >
                 {col.title}
               </p>
-              <ul>
+              <ul className="space-y-0.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="sitemap-link text-sm py-0.5 block"
+                      className="sitemap-link text-sm py-1 block"
                     >
                       {link.label}
                     </Link>

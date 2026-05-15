@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { ArrowRight, Clock, User, Tag } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
+import { ReadingProgress } from '@/components/ui/reading-progress'
 import { articles } from '@/lib/articles'
 
 interface PageProps {
@@ -109,21 +110,36 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={blogPostingSchema} />
 
+      {/* Progress bar de lecture */}
+      <ReadingProgress targetId="article-body" />
+
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
-            <li><Link href="/" className="hover:text-[#2F2F2F] transition-colors">Accueil</Link></li>
-            <li aria-hidden="true">/</li>
-            <li><Link href="/blog" className="hover:text-[#2F2F2F] transition-colors">Blog</Link></li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[#2F2F2F] line-clamp-1">{article.title}</span></li>
+          <ol role="list" className="flex items-center gap-1.5 text-sm" style={{ color: '#8C8F94' }}>
+            <li>
+              <Link href="/" className="transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]" style={{ color: '#8C8F94' }}>
+                Accueil
+              </Link>
+            </li>
+            <li aria-hidden="true" className="select-none">›</li>
+            <li>
+              <Link href="/blog" className="transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]" style={{ color: '#8C8F94' }}>
+                Blog
+              </Link>
+            </li>
+            <li aria-hidden="true" className="select-none">›</li>
+            <li className="min-w-0 flex-1">
+              <span aria-current="page" className="line-clamp-1 font-medium" style={{ color: '#2F2F2F' }}>
+                {article.title}
+              </span>
+            </li>
           </ol>
         </div>
       </nav>
 
       {/* Hero image */}
-      <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
+      <div className="relative h-72 sm:h-96 md:h-[28rem] w-full overflow-hidden">
         <Image
           src={article.image}
           alt={article.title}
@@ -132,17 +148,29 @@ export default async function BlogArticlePage({ params }: PageProps) {
           priority
           sizes="100vw"
         />
+        {/* Multi-stop gradient overlay pour meilleure lisibilité */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to top, rgba(11,61,44,0.80) 0%, rgba(11,61,44,0.20) 60%, transparent 100%)' }}
+          style={{ background: 'linear-gradient(to top, rgba(11,61,44,0.92) 0%, rgba(11,61,44,0.55) 40%, rgba(11,61,44,0.15) 70%, transparent 100%)' }}
         />
-        <div className="absolute bottom-0 left-0 right-0 container mx-auto max-w-4xl px-4 sm:px-6 pb-8">
-          <span
-            className="inline-block rounded-full px-3 py-1 text-xs font-semibold text-white mb-3"
-            style={{ backgroundColor: '#80BC00' }}
-          >
-            {article.category}
-          </span>
+        <div className="absolute bottom-0 left-0 right-0 container mx-auto max-w-4xl px-4 sm:px-6 pb-10">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
+            <span
+              className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold text-white"
+              style={{ backgroundColor: '#80BC00' }}
+            >
+              {article.category}
+            </span>
+            {article.readingTime && (
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
+                style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: '#ffffff', backdropFilter: 'blur(4px)' }}
+              >
+                <Clock size={11} aria-hidden="true" />
+                {article.readingTime}
+              </span>
+            )}
+          </div>
           <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
             {article.title}
           </h1>
@@ -152,27 +180,30 @@ export default async function BlogArticlePage({ params }: PageProps) {
       {/* Meta bar */}
       <div className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 py-4">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-[#8C8F94]">
+          <div className="flex flex-wrap items-center gap-4 text-sm" style={{ color: '#8C8F94' }}>
             <span className="flex items-center gap-1.5">
               <User size={14} aria-hidden="true" />
-              <span>{article.author}</span>
+              <span className="font-medium" style={{ color: '#2F2F2F' }}>{article.author}</span>
             </span>
             <span className="flex items-center gap-1.5">
-              <Clock size={14} aria-hidden="true" />
+              📅&nbsp;
               <time dateTime={article.date}>
                 {new Date(article.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
               </time>
             </span>
-            <span className="flex items-center gap-1.5">
-              <Clock size={14} aria-hidden="true" />
-              <span>{article.readingTime} de lecture</span>
+            <span
+              className="inline-flex items-center gap-1.5 rounded-full px-3 py-0.5 text-xs font-semibold"
+              style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+            >
+              <Clock size={12} aria-hidden="true" />
+              {article.readingTime} de lecture
             </span>
           </div>
         </div>
       </div>
 
       {/* Article content */}
-      <article className="bg-white py-12">
+      <article id="article-body" className="bg-white py-12">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6">
           {/* Lead */}
           <p className="text-lg leading-relaxed mb-8 font-medium" style={{ color: '#425D07' }}>
@@ -216,24 +247,35 @@ export default async function BlogArticlePage({ params }: PageProps) {
       {/* Author card */}
       <section className="bg-white pb-12">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-          <div className="rounded-2xl border border-[#EDEDED] p-6 flex items-start gap-5" style={{ backgroundColor: '#F7F5F0' }}>
+          <div
+            className="rounded-2xl border p-6 flex items-start gap-5"
+            style={{ backgroundColor: '#F7F5F0', borderColor: 'rgba(128,188,0,0.25)' }}
+          >
             <div
-              className="flex-shrink-0 w-14 h-14 rounded-full border-2 overflow-hidden"
+              className="flex-shrink-0 w-16 h-16 rounded-full border-2 overflow-hidden shadow-md"
               style={{ borderColor: '#80BC00' }}
             >
               <Image
                 src="/images/leo-portrait.webp"
                 alt="Léo Maurice, fondateur de LM Espace Vert"
-                width={56}
-                height={56}
+                width={64}
+                height={64}
                 className="w-full h-full object-cover"
               />
             </div>
-            <div>
-              <p className="font-bold text-sm" style={{ color: '#2F2F2F' }}>{article.author}</p>
-              <p className="text-xs mb-2" style={{ color: '#8C8F94' }}>Fondateur &amp; paysagiste — LM Espace Vert</p>
-              <p className="text-sm" style={{ color: '#8C8F94' }}>
-                Paysagiste professionnel à Saint-Didier-au-Mont-d&apos;Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. Spécialiste des jardins dans le nord-ouest lyonnais.
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2 mb-0.5">
+                <p className="font-bold text-sm" style={{ color: '#2F2F2F' }}>{article.author}</p>
+                <span
+                  className="rounded-full px-2 py-0.5 text-[10px] font-semibold"
+                  style={{ backgroundColor: 'rgba(128,188,0,0.15)', color: '#425D07' }}
+                >
+                  Auteur
+                </span>
+              </div>
+              <p className="text-xs mb-2 font-medium" style={{ color: '#425D07' }}>Fondateur &amp; paysagiste — LM Espace Vert</p>
+              <p className="text-sm leading-relaxed" style={{ color: '#8C8F94' }}>
+                Paysagiste professionnel à Saint-Didier-au-Mont-d&apos;Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. Spécialiste des jardins dans le nord-ouest lyonnais, il partage ici son expertise au fil des saisons.
               </p>
             </div>
           </div>
@@ -241,14 +283,38 @@ export default async function BlogArticlePage({ params }: PageProps) {
       </section>
 
       {/* CTA */}
-      <section style={{ backgroundColor: '#0B3D2C' }} className="py-12 text-center">
-        <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-xl font-bold text-white mb-2">Un projet de jardin à Lyon nord ?</h2>
-          <p className="text-white/70 mb-5 text-sm">Devis gratuit · Réponse sous 24h · Rayon 20 km</p>
+      <section
+        className="py-14 text-center relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #0B3D2C 0%, #1a5c3a 50%, #425D07 100%)' }}
+      >
+        {/* Decorative circles */}
+        <div
+          className="absolute -top-16 -right-16 w-64 h-64 rounded-full opacity-10 pointer-events-none"
+          style={{ background: 'radial-gradient(circle, #80BC00, transparent)' }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full opacity-10 pointer-events-none"
+          style={{ background: 'radial-gradient(circle, #80BC00, transparent)' }}
+          aria-hidden="true"
+        />
+        <div className="container relative mx-auto max-w-xl px-4 sm:px-6">
+          <div
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-4"
+            style={{ backgroundColor: 'rgba(128,188,0,0.2)', color: '#80BC00' }}
+          >
+            ✅ Gratuit &amp; sans engagement
+          </div>
+          <h2 className="font-display text-2xl font-bold text-white mb-2">
+            Un projet de jardin à Lyon nord ?
+          </h2>
+          <p className="mb-6 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            Devis gratuit · Visite sur place offerte · Réponse sous 24h · Rayon 20 km
+          </p>
           <Link
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+            className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold transition-all duration-200 hover:scale-105 hover:shadow-lg"
+            style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: '0 4px 20px rgba(128,188,0,0.4)' }}
           >
             Demander un devis gratuit <ArrowRight size={14} aria-hidden="true" />
           </Link>
@@ -257,40 +323,55 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
       {/* Related articles */}
       {relatedArticles.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-            <h2 className="font-display text-2xl font-bold mb-8" style={{ color: '#425D07' }}>
-              Articles similaires
-            </h2>
+            <div className="flex items-center gap-3 mb-8">
+              <div
+                className="w-1 h-8 rounded-full"
+                style={{ backgroundColor: '#80BC00' }}
+                aria-hidden="true"
+              />
+              <h2 className="font-display text-2xl font-bold" style={{ color: '#425D07' }}>
+                À lire aussi
+              </h2>
+            </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedArticles.map((a) => (
                 <Link
                   key={a.slug}
                   href={`/blog/${a.slug}`}
-                  className="group rounded-2xl border border-[#EDEDED] overflow-hidden hover:shadow-md transition-shadow bg-white"
+                  className="group rounded-2xl border border-[#EDEDED] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white"
                 >
-                  <div className="relative h-44 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
                     <Image
                       src={a.image}
                       alt={a.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ background: 'linear-gradient(to top, rgba(11,61,44,0.25) 0%, transparent 60%)' }}
+                      aria-hidden="true"
                     />
                   </div>
                   <div className="p-5">
                     <span
-                      className="text-xs font-semibold uppercase tracking-widest"
-                      style={{ color: '#80BC00' }}
+                      className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider mb-2"
+                      style={{ backgroundColor: 'rgba(128,188,0,0.10)', color: '#425D07' }}
                     >
                       {a.category}
                     </span>
-                    <h3 className="font-bold text-base mt-1 mb-2 group-hover:underline" style={{ color: '#2F2F2F' }}>
+                    <h3
+                      className="font-bold text-base mt-1 mb-2 line-clamp-2 group-hover:text-[#80BC00] transition-colors"
+                      style={{ color: '#2F2F2F' }}
+                    >
                       {a.title}
                     </h3>
-                    <p className="text-sm line-clamp-2" style={{ color: '#8C8F94' }}>{a.excerpt}</p>
+                    <p className="text-sm line-clamp-2 mb-3" style={{ color: '#8C8F94' }}>{a.excerpt}</p>
                     <span
-                      className="inline-flex items-center gap-1 text-xs font-semibold mt-3"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold transition-all duration-200 group-hover:gap-2.5"
                       style={{ color: '#425D07' }}
                     >
                       Lire l&apos;article <ArrowRight size={12} aria-hidden="true" />

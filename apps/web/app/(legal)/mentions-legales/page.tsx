@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ArrowUp } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Mentions légales | LM Espace Vert',
@@ -14,23 +15,29 @@ export default function MentionsLegalesPage() {
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
+          <ol role="list" className="flex items-center gap-1.5 text-sm" style={{ color: '#8C8F94' }}>
             <li>
-              <Link href="/" className="hover:underline" style={{ color: '#8C8F94' }}>Accueil</Link>
+              <Link
+                href="/"
+                className="transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                style={{ color: '#8C8F94' }}
+              >
+                Accueil
+              </Link>
             </li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" style={{ color: '#2F2F2F' }}>Mentions légales</span></li>
+            <li aria-hidden="true" className="select-none">›</li>
+            <li><span aria-current="page" className="font-medium" style={{ color: '#2F2F2F' }}>Mentions légales</span></li>
           </ol>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-12" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-          <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold" style={{ color: '#425D07' }}>
+          <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold leading-tight" style={{ color: '#425D07' }}>
             Mentions légales
           </h1>
-          <p className="mt-3 text-base leading-relaxed" style={{ color: '#8C8F94' }}>
+          <p className="mt-3 text-base leading-[1.8]" style={{ color: '#8C8F94' }}>
             Conformément aux articles 6-III et 19 de la loi n° 2004-575 du 21 juin 2004
             pour la confiance dans l&apos;économie numérique (LCEN).
           </p>
@@ -39,7 +46,7 @@ export default function MentionsLegalesPage() {
 
       {/* Contenu */}
       <section className="bg-white py-12">
-        <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6" style={{ lineHeight: '1.8' }}>
 
           {/* Section 1 */}
           <div className="mb-10">
@@ -70,7 +77,7 @@ export default function MentionsLegalesPage() {
                 <div
                   key={label}
                   className="flex flex-col sm:flex-row gap-1 sm:gap-4 px-5 py-3 border-b border-[#EDEDED] last:border-0"
-                  style={{ backgroundColor: idx % 2 === 0 ? '#ffffff' : '#FAFAF8' }}
+                  style={{ backgroundColor: idx % 2 === 0 ? '#ffffff' : '#F7F5F0' }}
                 >
                   <dt className="text-xs font-semibold uppercase tracking-wide flex-shrink-0 sm:w-64" style={{ color: '#8C8F94' }}>{label}</dt>
                   <dd className="text-sm" style={{ color: '#2F2F2F' }}>
@@ -144,7 +151,7 @@ export default function MentionsLegalesPage() {
                 <div
                   key={label}
                   className="flex flex-col sm:flex-row gap-1 sm:gap-4 px-5 py-3 border-b border-[#EDEDED] last:border-0"
-                  style={{ backgroundColor: idx % 2 === 0 ? '#ffffff' : '#FAFAF8' }}
+                  style={{ backgroundColor: idx % 2 === 0 ? '#ffffff' : '#F7F5F0' }}
                 >
                   <dt className="text-xs font-semibold uppercase tracking-wide flex-shrink-0 sm:w-64" style={{ color: '#8C8F94' }}>{label}</dt>
                   <dd className="text-sm" style={{ color: '#2F2F2F' }}>
@@ -249,9 +256,20 @@ export default function MentionsLegalesPage() {
             </p>
           </div>
 
-          <p className="text-xs mt-8 pt-6 border-t border-[#EDEDED]" style={{ color: '#8C8F94' }}>
-            Dernière mise à jour : mai 2026
-          </p>
+          <div className="mt-8 pt-6 border-t border-[#EDEDED] flex items-center justify-between flex-wrap gap-4">
+            <p className="text-xs" style={{ color: '#8C8F94' }}>
+              Dernière mise à jour : mai 2026
+            </p>
+            <Link
+              href="#"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-4 py-2 transition-all duration-200 hover:scale-[1.03] hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+              style={{ backgroundColor: 'rgba(128,188,0,0.10)', color: '#425D07' }}
+              aria-label="Retour en haut de page"
+            >
+              <ArrowUp size={12} aria-hidden="true" />
+              Haut de page
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -27,7 +27,7 @@ export function TestimonialsSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#425D07' }}>
             AVIS CLIENTS
           </p>
           <h2 id="testimonials-heading" className="font-display text-3xl font-bold sm:text-4xl mb-4" style={{ color: '#425D07' }}>
@@ -47,7 +47,7 @@ export function TestimonialsSection() {
               style={{ borderColor: '#EDEDED' }}
             >
               {/* Étoiles */}
-              <div className="mb-4 flex items-center gap-0.5" aria-label={`${t.stars} étoiles sur 5`}>
+              <div className="mb-4 flex items-center gap-0.5" role="img" aria-label={`${t.stars} étoiles sur 5`}>
                 {Array.from({ length: t.stars }).map((_, i) => (
                   <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" aria-hidden="true">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -56,7 +56,7 @@ export function TestimonialsSection() {
               </div>
 
               {/* Texte */}
-              <blockquote className="mb-5 text-sm leading-relaxed" style={{ color: '#8C8F94' }}>
+              <blockquote className="mb-5 text-sm leading-relaxed" style={{ color: '#5C606B' }}>
                 &ldquo;{t.text}&rdquo;
               </blockquote>
 
@@ -64,7 +64,7 @@ export function TestimonialsSection() {
               <footer className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-bold" style={{ color: '#2F2F2F' }}>{t.name}</p>
-                  <p className="text-xs" style={{ color: '#8C8F94' }}>{t.city}</p>
+                  <p className="text-xs" style={{ color: '#5C606B' }}>{t.city}</p>
                 </div>
                 <span
                   className="flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold"

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {
-  ArrowRight, Star, Clock, MapPin, Award, Shield, Leaf, Phone, MessageCircle,
+  ArrowRight, Star, Clock, MapPin, Award, Shield, Leaf, Phone,
   Scissors, TreePine, Sprout, Layers, Droplets, Flower2,
   CheckCircle, Search, ClipboardList, Calendar, Users,
 } from 'lucide-react'
@@ -205,31 +205,31 @@ export default function HomePage() {
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(105deg, rgba(10,20,10,0.82) 0%, rgba(10,20,10,0.5) 45%, rgba(10,20,10,0.15) 100%)' }}
+          style={{ background: 'linear-gradient(135deg, rgba(11,61,44,0.90) 0%, rgba(11,61,44,0.60) 50%, transparent 100%)' }}
         />
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 pb-20 lg:pb-28">
-          <p className="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4 flex items-center gap-2">
+          <p className="text-xs font-semibold uppercase tracking-widest text-green-400 mb-6 flex items-center gap-2">
             <span className="inline-block w-4 h-px bg-green-400" />
             Paysagiste · Saint-Didier-au-Mont-d&apos;Or &amp; Lyon Nord
           </p>
           {/* #1 — titre outcome-focused */}
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] max-w-2xl mb-3">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] max-w-2xl mb-3" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.25))' }}>
             Votre jardin transformé,<br />
             <span style={{ color: '#80BC00' }}>résultat garanti.</span>
           </h1>
           {/* #1 — sous-titre enrichi */}
-          <p className="text-white/60 text-sm font-medium mb-5 tracking-wide">
+          <p className="text-white/60 text-sm font-medium mb-5 tracking-wide" style={{ animationDelay: '100ms' }} data-animate="fade-in-up">
             5 ans d&apos;expérience · 200+ jardins réalisés · Devis gratuit sous 24h
           </p>
           <p className="text-white/75 text-lg max-w-xl mb-8 leading-relaxed">
             LM Espace Vert crée, entretient et sublime vos espaces extérieurs dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Écully, Limonest, Tassin, Dardilly et tout le nord-ouest lyonnais.
           </p>
           {/* #3 & #4 — CTA textes mis à jour */}
-          <div className="flex flex-wrap gap-3 mb-5">
+          <div className="flex flex-wrap gap-3 mb-5" style={{ animationDelay: '200ms' }} data-animate="fade-in-up">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Obtenir mon devis gratuit <ArrowRight size={14} />
             </Link>
@@ -250,7 +250,7 @@ export default function HomePage() {
           <div className="mb-6">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold border transition-opacity hover:opacity-80"
+              className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold border transition-opacity hover:opacity-80 backdrop-blur-sm"
               style={{ borderColor: 'rgba(128,188,0,0.6)', color: '#80BC00', backgroundColor: 'rgba(128,188,0,0.08)' }}
             >
               🌱 Printemps 2026 : -10% sur la création de jardin
@@ -262,7 +262,7 @@ export default function HomePage() {
               href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white/65 text-sm hover:text-white/90 transition-colors"
+              className="flex items-center gap-1.5 text-white/65 text-sm hover:text-white/90 transition-colors bg-white/10 backdrop-blur-sm rounded-full px-3 py-1"
               aria-label="Voir nos avis Google 5 étoiles"
             >
               {[...Array(5)].map((_, i) => (
@@ -282,36 +282,36 @@ export default function HomePage() {
 
       {/* ── SECTION 2 : STATS ── */}
       {/* #22 — icônes Lucide sous chaque chiffre */}
-      <section className="bg-white border-y border-[#EDEDED]" aria-label="Chiffres clés">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-10">
-          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+      <section className="bg-white border-y border-[#EDEDED]" aria-label="Chiffres clés" style={{ backgroundImage: "radial-gradient(circle, rgba(128,188,0,0.06) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-16">
+          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-8 divide-x divide-[#EDEDED]">
             <div className="text-center">
-              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+              <dt className="font-display text-4xl sm:text-5xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={5} suffix="+" />
               </dt>
               <Calendar size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#5C606B]">Années d&apos;expérience</dd>
+              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>Années d&apos;expérience</dd>
             </div>
             <div className="text-center">
-              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+              <dt className="font-display text-4xl sm:text-5xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={200} suffix="+" />
               </dt>
               <Users size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#5C606B]">Clients satisfaits</dd>
+              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>Clients satisfaits</dd>
             </div>
             <div className="text-center">
-              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+              <dt className="font-display text-4xl sm:text-5xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={20} suffix=" km" />
               </dt>
               <MapPin size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#5C606B]">Rayon d&apos;intervention</dd>
+              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>Rayon d&apos;intervention</dd>
             </div>
             <div className="text-center">
-              <dt className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+              <dt className="font-display text-4xl sm:text-5xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={28} suffix=" avis" />
               </dt>
               <Star size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm text-[#5C606B]">Note 5★ Google</dd>
+              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>Note 5★ Google</dd>
             </div>
           </dl>
         </div>
@@ -335,7 +335,7 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>
                 Qui sommes-nous ?
               </p>
               <h2 id="about-heading" className="font-display text-3xl sm:text-4xl font-bold mb-5" style={{ color: '#425D07' }}>
@@ -382,7 +382,7 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-labelledby="before-after-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos Transformations</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Transformations</p>
             <h2 id="before-after-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Avant &amp; Après — le résultat parle
             </h2>
@@ -408,7 +408,7 @@ export default function HomePage() {
                     <div className="relative h-52 overflow-hidden">
                       <Image src={item.after} alt={`Après — ${item.title}`} fill className="object-cover" sizes="(max-width:640px)50vw,25vw" loading="lazy" />
                     </div>
-                    <span className="absolute top-2 left-2 text-xs font-bold px-2 py-0.5 rounded" style={{ backgroundColor: '#80BC00', color: '#ffffff' }}>APRÈS</span>
+                    <span className="absolute top-2 left-2 text-xs font-bold px-2 py-0.5 rounded" style={{ backgroundColor: '#80BC00', color: '#0B3D2C' }}>APRÈS</span>
                   </div>
                 </div>
                 <div className="p-4 bg-white">
@@ -431,7 +431,7 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-labelledby="services-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos Prestations</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Prestations</p>
             <h2 id="services-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Tous vos projets extérieurs
             </h2>
@@ -445,7 +445,7 @@ export default function HomePage() {
               <Link
                 key={svc.title}
                 href={svc.href}
-                className="group rounded-2xl overflow-hidden bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-[rgba(0,0,0,0.12)_0px_8px_40px_0px] transition-shadow flex flex-col"
+                className="group rounded-2xl overflow-hidden bg-white border border-[#EDEDED] shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[rgba(0,0,0,0.12)_0px_8px_40px_0px] transition-shadow flex flex-col"
               >
                 <div className="relative h-44 overflow-hidden">
                   {/* #28 — loading lazy sous la fold */}
@@ -462,11 +462,14 @@ export default function HomePage() {
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <svc.icon size={15} style={{ color: '#425D07' }} aria-hidden="true" />
-                    <h3 className="font-display font-semibold text-sm" style={{ color: '#425D07' }}>{svc.title}</h3>
+                    <h3 className="font-display font-semibold text-sm transition-colors group-hover:text-[#80BC00]" style={{ color: '#425D07' }}>{svc.title}</h3>
                   </div>
                   <p className="text-xs text-[#5C606B] leading-relaxed flex-1">{svc.desc}</p>
                   {/* #7 — "En savoir plus" en bas de chaque card */}
-                  <p className="text-xs font-semibold mt-3" style={{ color: '#425D07' }}>→ En savoir plus</p>
+                  <p className="text-xs font-semibold mt-3 flex items-center gap-1" style={{ color: '#425D07' }}>
+                    En savoir plus
+                    <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  </p>
                 </div>
               </Link>
             ))}
@@ -487,7 +490,7 @@ export default function HomePage() {
       {/* Entre Services et Pourquoi nous choisir */}
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-12" aria-label="Certifications et garanties">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#80BC00' }}>Certifications &amp; Garanties</p>
+          <p className="text-center text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#425D07' }}>Certifications &amp; Garanties</p>
           <div className="flex flex-wrap justify-center gap-3">
             {[
               { label: 'RC Professionnelle', icon: <Shield size={13} aria-hidden="true" /> },
@@ -499,7 +502,7 @@ export default function HomePage() {
             ].map(({ label, icon }) => (
               <span
                 key={label}
-                className="flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium"
+                className="flex items-center gap-3 rounded-full border px-4 py-2 text-sm font-medium"
                 style={{ borderColor: '#80BC00', color: '#425D07', backgroundColor: 'rgba(128,188,0,0.06)' }}
               >
                 <span style={{ color: '#80BC00' }}>{icon}</span>
@@ -514,7 +517,7 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-labelledby="why-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos Engagements</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Engagements</p>
             <h2 id="why-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Pourquoi choisir LM Espace Vert ?
             </h2>
@@ -526,12 +529,12 @@ export default function HomePage() {
               { Icon: Leaf, title: 'Éco-responsable', desc: "Produits phyto raisonnés, compostage, préservation de la biodiversité. La nature, on y tient." },
               { Icon: Shield, title: 'Assuré RC Pro', desc: "Responsabilité civile professionnelle à jour. Vous êtes protégés en toutes circonstances." },
             ].map(({ Icon, title, desc, extra }) => (
-              <div key={title} className="bg-white rounded-2xl p-6 border border-[#EDEDED] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}>
-                  <Icon size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
+              <div key={title} className="rounded-2xl p-6 border border-[#EDEDED] shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-l-[3px] hover:border-l-[#80BC00] transition-all" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #FAFDF5 100%)' }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}>
+                  <Icon size={20} style={{ color: '#80BC00' }} aria-hidden="true" />
                 </div>
-                <h3 className="font-display font-bold mb-2 text-sm" style={{ color: '#425D07' }}>{title}</h3>
-                <p className="text-xs text-[#5C606B] leading-relaxed">{desc}</p>
+                <h3 className="font-display font-bold mb-2 text-base" style={{ color: '#425D07' }}>{title}</h3>
+                <p className="text-sm text-[#5C606B] leading-relaxed">{desc}</p>
                 {/* #14 — anchoring : 200+ clients depuis 2019 */}
                 {extra && (
                   <p className="text-xs font-semibold mt-2" style={{ color: '#425D07' }}>{extra}</p>
@@ -546,7 +549,7 @@ export default function HomePage() {
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-20 lg:py-24" aria-labelledby="process-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Comment ça marche ?</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Comment ça marche ?</p>
             <h2 id="process-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Un accompagnement simple de A à Z
             </h2>
@@ -556,7 +559,7 @@ export default function HomePage() {
               <li key={num} className="flex flex-col items-start gap-3">
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
-                  style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                  style={{ background: 'linear-gradient(135deg, #80BC00 0%, #5A8A00 100%)', color: '#ffffff' }}
                   aria-hidden="true"
                 >
                   {num}
@@ -566,7 +569,7 @@ export default function HomePage() {
                   <h3 className="font-display font-bold text-sm mb-1" style={{ color: '#425D07' }}>{title}</h3>
                   <p className="text-xs text-[#5C606B] leading-relaxed">{desc}</p>
                   {/* #17 — durée estimée */}
-                  <p className="text-xs font-semibold mt-1.5" style={{ color: '#80BC00' }}>{duration}</p>
+                  <p className="text-xs font-semibold mt-1.5" style={{ color: '#425D07' }}>{duration}</p>
                 </div>
               </li>
             ))}
@@ -575,7 +578,7 @@ export default function HomePage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Démarrer mon projet <ArrowRight size={14} />
             </Link>
@@ -587,9 +590,9 @@ export default function HomePage() {
       <section className="bg-white py-20 lg:py-24" aria-label="Avis clients">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Avis Clients</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Avis Clients</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>Ce que disent nos clients</h2>
-            <div className="flex items-center justify-center gap-1 mt-3">
+            <div className="flex items-center justify-center gap-0.5 mt-3">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />
               ))}
@@ -602,21 +605,23 @@ export default function HomePage() {
               <li key={t.name}>
                 <article className="bg-white rounded-2xl border border-[#EDEDED] p-6 shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] h-full flex flex-col" style={{ backgroundColor: '#F7F5F0' }}>
                   {/* #8 — étoiles ★★★★★ visuelles au-dessus de chaque témoignage */}
-                  <div className="flex items-center gap-0.5 mb-3" aria-label="Note 5 sur 5">
+                  <div className="flex items-center gap-0.5 mb-3" role="img" aria-label="Note 5 sur 5">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-base" aria-hidden="true">★</span>
+                      <span key={i} className="text-yellow-400 text-6xl leading-none opacity-20" aria-hidden="true" style={{ fontSize: '1.5rem' }}>★</span>
                     ))}
                   </div>
-                  <blockquote className="flex-1 text-sm text-[#5C606B] leading-relaxed italic mb-4">
+                  <blockquote className="flex-1 text-sm text-[#5C606B] leading-relaxed italic mb-4 border-l-4 pl-3" style={{ borderColor: '#80BC00' }}>
                     &ldquo;{t.text}&rdquo;
                   </blockquote>
                   <footer className="pt-4 border-t border-[#EDEDED]">
-                    <p className="font-semibold text-sm" style={{ color: '#425D07' }}>{t.name}</p>
+                    <p className="font-semibold text-sm flex items-center gap-2" style={{ color: '#425D07' }}>
+                      <span style={{ color: '#425D07' }}>●</span>{t.name}
+                    </p>
                     <p className="text-xs text-[#5C606B] flex items-center gap-1 mt-0.5">
                       <MapPin size={10} aria-hidden="true" /> {t.city}
                     </p>
                     {/* #9 — badge Vérifié Google */}
-                    <p className="text-xs font-semibold mt-1" style={{ color: '#80BC00' }}>✓ Vérifié Google</p>
+                    <p className="text-xs font-semibold mt-1" style={{ color: '#425D07' }}>✓ Vérifié Google</p>
                   </footer>
                 </article>
               </li>
@@ -656,12 +661,12 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION : ZONE D'INTERVENTION ── */}
-      <section className="bg-white py-16" aria-labelledby="zone-heading">
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16" aria-labelledby="zone-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Zone Couverte</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Zone Couverte</p>
             <h2 id="zone-heading" className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
-              Paysagiste dans un rayon de 20 km
+              📍 Zone d&apos;intervention — rayon de 20 km
             </h2>
             <p className="text-[#5C606B] mt-3 max-w-xl mx-auto">
               Basé à Saint-Didier-au-Mont-d&apos;Or, nous intervenons dans tout le nord-ouest lyonnais.
@@ -692,18 +697,27 @@ export default function HomePage() {
                   href={`/secteur/${slug}`}
                   className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#5C606B] hover:border-[#80BC00] hover:text-[#425D07] transition-colors flex items-center gap-1.5"
                 >
-                  <MapPin size={11} aria-hidden="true" /> {ville}
+                  🌿 {ville}
                 </Link>
               ) : (
                 <span key={ville} className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#5C606B] flex items-center gap-1.5">
-                  <MapPin size={11} aria-hidden="true" /> {ville}
+                  🌿 {ville}
                 </span>
               )
             ))}
           </div>
+          <div className="text-center mb-8">
+            <Link
+              href="/secteur"
+              className="inline-flex items-center gap-2 rounded-full border px-6 py-2.5 text-sm font-semibold transition-colors hover:opacity-90"
+              style={{ borderColor: '#80BC00', color: '#425D07', backgroundColor: 'rgba(128,188,0,0.08)' }}
+            >
+              Voir toutes les communes <ArrowRight size={14} />
+            </Link>
+          </div>
           <div className="text-center">
             <div
-              className="relative rounded-2xl overflow-hidden border border-[#EDEDED] shadow-sm"
+              className="relative rounded-2xl overflow-hidden border border-[#EDEDED] shadow-lg"
               style={{ maxWidth: '700px', margin: '0 auto', height: '350px' }}
             >
               <iframe
@@ -738,7 +752,7 @@ export default function HomePage() {
               href="/50-conseils-jardin-lm-espace-vert.pdf"
               download
               className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+              style={{ backgroundColor: '#80BC00', color: '#0B3D2C' }}
             >
               📥 Télécharger le guide <ArrowRight size={14} />
             </a>
@@ -751,7 +765,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Blog</p>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Blog</p>
               <h2 id="blog-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
                 Conseils de votre paysagiste
               </h2>
@@ -776,7 +790,7 @@ export default function HomePage() {
                 {index === 0 && (
                   <span
                     className="absolute top-2 right-2 z-10 rounded-full px-2.5 py-0.5 text-xs font-bold"
-                    style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                    style={{ backgroundColor: '#80BC00', color: '#0B3D2C' }}
                   >
                     Nouveau
                   </span>
@@ -802,6 +816,14 @@ export default function HomePage() {
                   <h3 className="font-semibold text-sm group-hover:text-[#80BC00] transition-colors line-clamp-2 leading-snug mb-2" style={{ color: '#425D07' }}>
                     {article.title}
                   </h3>
+                  <div className="flex items-center gap-2 mb-2 flex-wrap">
+                    <span className="text-xs text-[#5C606B]">📅 {article.date}</span>
+                    {article.readingTime && (
+                      <span className="inline-block rounded-full px-2 py-0.5 text-xs font-medium" style={{ backgroundColor: 'rgba(128,188,0,0.08)', color: '#425D07' }}>
+                        {article.readingTime}
+                      </span>
+                    )}
+                  </div>
                   <span className="inline-flex items-center gap-1 text-xs font-semibold" style={{ color: '#425D07' }}>
                     Lire <ArrowRight size={11} />
                   </span>
@@ -822,7 +844,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION FAQ ── */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-20 lg:py-24" aria-labelledby="faq-heading">
+      <section id="faq" style={{ backgroundColor: '#F7F5F0', scrollMarginTop: '5rem' }} className="py-20 lg:py-24" aria-labelledby="faq-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <FAQSection
             title="Questions fréquentes"
@@ -862,7 +884,7 @@ export default function HomePage() {
       <section className="bg-white py-16" aria-label="Réponses aux objections courantes">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>On répond à vos questions</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>On répond à vos questions</p>
             <h2 className="font-display text-2xl sm:text-3xl font-bold" style={{ color: '#425D07' }}>
               Ce que nos clients disent souvent
             </h2>
@@ -884,7 +906,7 @@ export default function HomePage() {
 
       {/* ── SECTION 9 : CTA FINALE ── */}
       {/* #13 — titre loss aversion */}
-      <section style={{ backgroundColor: '#0B3D2C' }} className="py-20" aria-label="Appel à l'action — demande de devis">
+      <section style={{ background: 'linear-gradient(135deg, #0B3D2C 0%, #1A5C3A 100%)', borderTop: '4px solid #80BC00' }} className="py-24" aria-label="Appel à l'action — demande de devis">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">
             Ne laissez pas votre jardin se dégrader cet été
@@ -900,7 +922,7 @@ export default function HomePage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: '0 0 30px rgba(128,188,0,0.4)' }}
             >
               Demander un devis <ArrowRight size={14} />
             </Link>
@@ -910,9 +932,12 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              <MessageCircle size={14} aria-hidden="true" /> WhatsApp
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
             </a>
           </div>
+          <p className="text-white/70 text-xs mb-4">⚡ Réponse garantie sous 2h en semaine</p>
+          <p className="text-white/60 text-xs mb-6">★★★★★ · 28 avis Google</p>
           {/* #25 — lien WhatsApp */}
           <a
             href="https://wa.me/33672587353"
@@ -933,3 +958,5 @@ export default function HomePage() {
     </>
   )
 }
+
+

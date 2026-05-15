@@ -11,6 +11,7 @@ import { MobileMenu } from './mobile-menu'
 import { ThemeToggle } from './theme-toggle'
 import { AccessibilityMenu } from './accessibility-menu'
 import { DigitalContactCard } from '@/components/ui/digital-contact-card'
+import { WeatherWidget } from '@/components/ui/weather-widget'
 
 const navItems = [
   { href: '/services',     label: 'Services',     hasMega: true },
@@ -106,14 +107,14 @@ export function Header() {
       </a>
 
       <header
-        className={`sticky top-0 z-40 bg-white border-b border-[#EDEDED] transition-shadow ${scrolled ? 'shadow-[rgba(0,0,0,0.06)_0px_4px_20px_0px]' : ''}`}
+        className={`sticky top-0 z-40 border-b border-[#EDEDED] transition-all ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-[rgba(0,0,0,0.06)_0px_4px_20px_0px]' : 'bg-white'}`}
       >
         <div className="container mx-auto max-w-7xl flex items-center justify-between h-[72px] px-4 sm:px-6">
 
           {/* ── Logo ── */}
           <Link
             href="/"
-            className="flex-shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#80BC00]"
+            className="flex-shrink-0 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#80BC00]"
             aria-label="LM Espace Vert — Retour à l'accueil"
           >
             <Image
@@ -136,7 +137,7 @@ export function Header() {
                     <button
                       className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] ${
                         active || megaOpen
-                          ? 'text-[#425D07] font-semibold'
+                          ? 'text-[#425D07] font-semibold border-b-2 border-[#80BC00]'
                           : 'text-[#2F2F2F] hover:text-[#80BC00]'
                       }`}
                       aria-expanded={megaOpen}
@@ -160,7 +161,7 @@ export function Header() {
                   href={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] ${
                     active
-                      ? 'text-[#425D07] font-semibold'
+                      ? 'text-[#425D07] font-semibold border-b-2 border-[#80BC00]'
                       : 'text-[#2F2F2F] hover:text-[#80BC00]'
                   }`}
                   aria-current={active ? 'page' : undefined}
@@ -173,6 +174,9 @@ export function Header() {
 
           {/* ── Droite ── */}
           <div className="flex items-center gap-1">
+            {/* Météo Lyon */}
+            <WeatherWidget />
+
             {/* Accessibilité */}
             <AccessibilityMenu />
 
@@ -185,7 +189,7 @@ export function Header() {
             {/* Devis gratuit */}
             <Link
               href="/devis"
-              className="hidden sm:inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+              className="hidden sm:inline-flex items-center rounded-full px-5 py-2 text-sm font-bold transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
               style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Devis gratuit
@@ -210,7 +214,7 @@ export function Header() {
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 pb-6">
               <div className="max-w-2xl mx-auto bg-white shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] rounded-2xl border border-[#EDEDED] p-6 mt-1">
                 {/* 3×2 grid */}
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-3 gap-4">
                   {megaServices.map(({ href, label, desc, photo }) => (
                     <Link
                       key={label}

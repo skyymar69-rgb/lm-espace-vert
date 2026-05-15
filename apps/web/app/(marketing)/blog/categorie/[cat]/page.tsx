@@ -292,7 +292,7 @@ export default function AProposPage() {
           </div>
           {/* Étoiles Google */}
           <div className="mt-10 flex flex-col items-center gap-2">
-            <div className="flex items-center gap-1" aria-label="Note 4,9 sur 5 étoiles">
+            <div className="flex items-center gap-1" role="img" aria-label="Note 4,9 sur 5 étoiles">
               {[1, 2, 3, 4, 5].map((s) => (
                 <Star key={s} size={22} fill="#80BC00" stroke="none" aria-hidden="true" />
               ))}

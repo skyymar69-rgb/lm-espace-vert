@@ -102,7 +102,28 @@
       "Bash(curl -s http://localhost:3000/_next/static/development/_buildManifest.js)",
       "Bash(curl -sv http://localhost:3000/)",
       "Bash(curl -s \"http://localhost:3000/__nextjs_original-stack-frame\")",
-      "Bash(curl -s \"http://localhost:3000/_next/static/development/_buildManifest.js\")"
+      "Bash(curl -s \"http://localhost:3000/_next/static/development/_buildManifest.js\")",
+      "Bash(curl -L -o \"hero.webp\" \"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&q=85\" -s -w \"hero.webp: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"entretien-espaces-verts.webp\" \"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=85\" -s -w \"entretien-espaces-verts.webp: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"travaux-paysagers.webp\" \"https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&q=85\" -s -w \"travaux-paysagers.webp: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"presentation.webp\" \"https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=1200&q=85\" -s -w \"presentation.webp: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"photo-equipe.webp\" \"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=85\" -s -w \"photo-equipe.webp: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"travaux-paysagers.webp\" \"https://images.unsplash.com/photo-1582407947304-fd86f28f4a84?w=1200&q=85\" -s -w \"travaux-paysagers: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"illusra1.webp\" \"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=85\" -s -w \"illusra1: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"zone-intervention.webp\" \"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85\" -s -w \"zone-intervention: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"vente-vegetaux.webp\" \"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=85\" -s -w \"vente-vegetaux: %{size_download} bytes\\\\n\")",
+      "Bash(curl -L -o \"travaux-paysagers.webp\" \"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=85&fit=crop&crop=center\" -s -w \"%{size_download} bytes, http=%{http_code}\\\\n\")",
+      "Bash(curl -L -o \"realisation-1.webp\" \"https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=800&q=85\" -s -w \"realisation-1: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"realisation-3.webp\" \"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=85\" -s -w \"realisation-3: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"realisation-4.webp\" \"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=85\" -s -w \"realisation-4: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"realisation-5.webp\" \"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85\" -s -w \"realisation-5: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"realisation-6.webp\" \"https://images.unsplash.com/photo-1582407947304-fd86f28f4a84?w=800&q=85\" -s -w \"realisation-6: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"realisation-6.webp\" \"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85\" -s -w \"realisation-6: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"avant1.webp\" \"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=85&fit=crop&crop=left\" -s -w \"avant1: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"avant2.webp\" \"https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=800&q=85&fit=crop&crop=left\" -s -w \"avant2: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"apres1.webp\" \"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=85&fit=crop&crop=right\" -s -w \"apres1: %{size_download}b\\\\n\")",
+      "Bash(curl -L -o \"apres2.webp\" \"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&fit=crop&crop=right\" -s -w \"apres2: %{size_download}b\\\\n\")",
+      "Bash(powershell -Command \"\\(Get-Content page.tsx\\) -replace '#8C8F94', '#5C606B' | Set-Content page.tsx -Encoding utf8\")"
     ]
   }
 }

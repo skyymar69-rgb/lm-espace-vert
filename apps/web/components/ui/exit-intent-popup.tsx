@@ -77,93 +77,116 @@ export function ExitIntentPopup() {
       aria-labelledby="exit-popup-title"
     >
       <div
-        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8"
+        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
         style={{
-          animation: 'exitPopupIn 0.3s ease-out forwards',
+          animation: 'exitPopupIn 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards',
         }}
       >
         <style>{`
           @keyframes exitPopupIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to   { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(-24px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
           }
         `}</style>
 
-        {/* Bouton fermeture */}
-        <button
-          onClick={close}
-          className="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-100 transition-colors"
-          aria-label="Fermer"
+        {/* Gradient header */}
+        <div
+          className="relative px-8 pt-8 pb-6"
+          style={{ background: 'linear-gradient(135deg, #0B3D2C 0%, #1a5c3a 60%, #425D07 100%)' }}
         >
-          <X size={18} style={{ color: '#8C8F94' }} />
-        </button>
-
-        {/* Badge */}
-        <span
-          className="inline-block rounded-full px-3 py-1 text-xs font-semibold mb-4"
-          style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
-        >
-          Offre exclusive
-        </span>
-
-        {/* Titre */}
-        <h2 id="exit-popup-title" className="font-display text-2xl font-bold mb-2" style={{ color: '#0B3D2C' }}>
-          Avant de partir...
-        </h2>
-        <p className="text-sm mb-6 leading-relaxed" style={{ color: '#8C8F94' }}>
-          Obtenez votre <strong style={{ color: '#2F2F2F' }}>estimation gratuite en 30 secondes</strong>. Entrez votre email et nous vous envoyons une fourchette de prix personnalisée.
-        </p>
-
-        {status === 'success' ? (
+          {/* Decorative circle */}
           <div
-            className="rounded-xl p-4 text-center"
-            style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
-          >
-            <p className="font-semibold text-sm">Parfait ! Vérifiez votre boîte mail.</p>
-            <p className="text-xs mt-1" style={{ color: '#8C8F94' }}>Vous recevrez votre estimation sous peu.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="votre@email.fr"
-              required
-              className="w-full rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2"
-              style={{
-                borderColor: '#EDEDED',
-                color: '#2F2F2F',
-                // @ts-expect-error CSS custom property
-                '--tw-ring-color': '#80BC00',
-              }}
-            />
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-opacity hover:opacity-90 disabled:opacity-70"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
-            >
-              {status === 'loading' ? (
-                <Loader2 size={16} className="animate-spin" />
-              ) : (
-                <>Recevoir mon estimation <ArrowRight size={14} /></>
-              )}
-            </button>
-            {status === 'error' && (
-              <p className="text-xs text-red-500 text-center">Une erreur est survenue. Réessayez.</p>
-            )}
-          </form>
-        )}
+            className="absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-20 pointer-events-none"
+            style={{ background: 'radial-gradient(circle, #80BC00, transparent)' }}
+            aria-hidden="true"
+          />
 
-        {/* Lien Non merci */}
-        <button
-          onClick={close}
-          className="block w-full text-center text-xs mt-4 hover:underline"
-          style={{ color: '#8C8F94' }}
-        >
-          Non merci, je quitte sans mon estimation
-        </button>
+          {/* Bouton fermeture */}
+          <button
+            onClick={close}
+            className="absolute top-4 right-4 p-1.5 rounded-full transition-colors"
+            style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: '#ffffff' }}
+            aria-label="Fermer"
+          >
+            <X size={16} />
+          </button>
+
+          {/* Badge */}
+          <span
+            className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-3"
+            style={{ backgroundColor: 'rgba(128,188,0,0.25)', color: '#80BC00' }}
+          >
+            🌿 Offre exclusive
+          </span>
+
+          {/* Titre */}
+          <h2 id="exit-popup-title" className="font-display text-2xl font-bold text-white mb-1">
+            Avant de partir...
+          </h2>
+          <p className="text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            Estimation gratuite en 30 secondes
+          </p>
+        </div>
+
+        {/* Body */}
+        <div className="px-8 py-6">
+          <p className="text-sm mb-5 leading-relaxed" style={{ color: '#8C8F94' }}>
+            Entrez votre email et nous vous envoyons une <strong style={{ color: '#2F2F2F' }}>fourchette de prix personnalisée</strong> pour votre projet.
+          </p>
+
+          <div aria-live="polite" aria-atomic="true">
+            {status === 'success' ? (
+              <div
+                className="rounded-xl p-4 text-center"
+                style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
+              >
+                <p className="font-semibold text-sm">✅ Parfait ! Vérifiez votre boîte mail.</p>
+                <p className="text-xs mt-1" style={{ color: '#8C8F94' }}>Vous recevrez votre estimation sous peu.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="votre@email.fr"
+                  required
+                  className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition-all"
+                  style={{
+                    borderColor: '#EDEDED',
+                    color: '#2F2F2F',
+                  }}
+                  onFocus={(e) => { e.currentTarget.style.borderColor = '#80BC00'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(128,188,0,0.15)' }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = '#EDEDED'; e.currentTarget.style.boxShadow = 'none' }}
+                />
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-all duration-200 hover:scale-[1.02] hover:shadow-md disabled:opacity-70"
+                  style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: '0 4px 14px rgba(128,188,0,0.35)' }}
+                >
+                  {status === 'loading' ? (
+                    <Loader2 size={16} className="animate-spin" />
+                  ) : (
+                    <>Recevoir mon estimation <ArrowRight size={14} /></>
+                  )}
+                </button>
+                {status === 'error' && (
+                  <p className="text-xs text-red-500 text-center" role="alert">Une erreur est survenue. Réessayez.</p>
+                )}
+              </form>
+            )}
+          </div>
+
+          {/* Lien Non merci */}
+          <button
+            onClick={close}
+            className="block w-full text-center text-xs mt-4 hover:underline transition-colors"
+            style={{ color: '#8C8F94' }}
+          >
+            Non merci, je quitte sans mon estimation
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -78,35 +78,61 @@ export default function DevisPage() {
       </nav>
 
       {/* Hero */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-14">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16 relative overflow-hidden">
+        {/* Decorative background */}
+        <div
+          className="absolute top-0 right-0 w-96 h-96 -translate-y-1/2 translate-x-1/3 rounded-full opacity-[0.07] pointer-events-none"
+          style={{ background: 'radial-gradient(circle, #80BC00, transparent)' }}
+          aria-hidden="true"
+        />
+        <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-4 border" style={{ backgroundColor: 'rgba(128,188,0,0.10)', borderColor: 'rgba(128,188,0,0.3)', color: '#425D07' }}>
+            <CheckCircle size={13} aria-hidden="true" />
             Devis 100% gratuit &amp; sans engagement
-          </p>
+          </div>
           <h1 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold" style={{ color: '#425D07' }}>
             Votre devis gratuit en 3 étapes
           </h1>
-          <p className="mt-4 text-lg max-w-xl mx-auto" style={{ color: '#8C8F94' }}>
+          <p className="mt-4 text-lg max-w-xl mx-auto leading-relaxed" style={{ color: '#8C8F94' }}>
             Remplissez le formulaire · Visite gratuite sous 48h · Devis détaillé sans surprise
           </p>
 
+          {/* Trust badges row */}
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
+              style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+            >
+              <CheckCircle size={15} aria-hidden="true" />
+              Réponse sous 24h
+            </div>
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
+              style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+            >
+              <Shield size={15} aria-hidden="true" />
+              RC Pro certifié
+            </div>
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
+              style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+            >
+              <Star size={15} fill="#425D07" aria-hidden="true" />
+              5.0 · 28 avis Google
+            </div>
+          </div>
+
           {/* Social proof */}
-          <p className="mt-3 text-sm font-medium" style={{ color: '#425D07' }}>
+          <p className="mt-4 text-sm font-medium" style={{ color: '#8C8F94' }}>
             Plus de 200 devis envoyés cette année
           </p>
-
-          {/* Trust badge */}
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold border" style={{ backgroundColor: 'rgba(128,188,0,0.08)', borderColor: 'rgba(128,188,0,0.3)', color: '#425D07' }}>
-            <CheckCircle size={15} aria-hidden="true" />
-            Réponse garantie sous 24h
-          </div>
 
           {/* Phone */}
           <div className="mt-6">
             <a
               href="tel:+33672587353"
-              className="inline-flex items-center gap-3 rounded-2xl px-6 py-4 text-white font-bold text-lg shadow-md hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#425D07' }}
+              className="inline-flex items-center gap-3 rounded-2xl px-6 py-4 text-white font-bold text-lg shadow-md hover:scale-[1.02] hover:shadow-lg transition-all duration-200"
+              style={{ backgroundColor: '#425D07', boxShadow: '0 6px 20px rgba(66,93,7,0.3)' }}
             >
               <Phone size={22} aria-hidden="true" />
               06 72 58 73 53
@@ -154,9 +180,22 @@ export default function DevisPage() {
               </div>
 
               {/* Social proof below form */}
-              <p className="text-xs text-center mt-4" style={{ color: '#8C8F94' }}>
-                Réponse garantie en moins de 24h les jours ouvrés
-              </p>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs" style={{ color: '#8C8F94' }}>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  Réponse garantie sous 24h
+                </span>
+                <span aria-hidden="true">·</span>
+                <span className="flex items-center gap-1.5">
+                  <Shield size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  Données sécurisées
+                </span>
+                <span aria-hidden="true">·</span>
+                <span className="flex items-center gap-1.5">
+                  <Gift size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  Sans engagement
+                </span>
+              </div>
             </div>
 
             {/* Right — Sidebar */}
@@ -267,3 +306,4 @@ export default function DevisPage() {
     </>
   )
 }
+

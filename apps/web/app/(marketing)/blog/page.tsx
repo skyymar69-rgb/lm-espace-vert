@@ -1,14 +1,14 @@
 ﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, BookOpen, Leaf } from 'lucide-react'
 import { articles, categories } from '@/lib/articles'
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
   title: 'Blog jardinage & paysagisme — Conseils de votre paysagiste Lyon nord',
   description:
-    'Conseils de taille, entretien, création de jardin et aménagement paysager par LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d\'Or. 30+ articles pratiques.',
+    'Découvrez nos conseils d\'expert en jardinage et paysagisme : taille, entretien saisonnier, création de jardin et aménagements paysagers. Paysagiste LM Espace Vert à Saint-Didier-au-Mont-d\'Or — 30+ articles pratiques, guides et inspirations.',
   alternates: { canonical: 'https://www.lmespacevert.fr/blog' },
   openGraph: {
     title: 'Blog — Conseils jardinage par LM Espace Vert',
@@ -51,14 +51,22 @@ export default async function BlogPage({
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
+          <ol role="list" className="flex items-center gap-1.5 text-sm" style={{ color: '#8C8F94' }}>
             <li>
-              <Link href="/" className="hover:text-[#2F2F2F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]">
+              <Link
+                href="/"
+                className="transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                style={{ color: '#8C8F94' }}
+              >
                 Accueil
               </Link>
             </li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[#2F2F2F]">Blog</span></li>
+            <li aria-hidden="true" className="select-none">›</li>
+            <li>
+              <span aria-current="page" className="font-medium" style={{ color: '#2F2F2F' }}>
+                Blog &amp; Conseils
+              </span>
+            </li>
           </ol>
         </div>
       </nav>
@@ -68,27 +76,41 @@ export default async function BlogPage({
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-4" style={{ backgroundColor: 'rgba(128, 188, 0, 0.12)', color: '#425D07' }}>
-              <BookOpen size={14} aria-hidden="true" />
-              Conseils & Actualités
+              <Leaf size={14} aria-hidden="true" />
+              Conseils &amp; Actualités Jardinage
             </div>
             <h1 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-bold" style={{ color: '#425D07' }}>
-              Blog &amp; Conseils Jardinage
+              📝 Blog &amp; Conseils Jardinage
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-[#8C8F94]">
-              Conseils de paysagiste, guides saisonniers et tendances pour votre jardin.
+            <p className="mx-auto mt-4 max-w-2xl leading-relaxed" style={{ color: '#8C8F94' }}>
+              Conseils de paysagiste, guides saisonniers et inspirations pour sublimer votre jardin — par l&apos;équipe LM Espace Vert.
             </p>
+            <div className="mt-5 flex flex-wrap justify-center gap-4 text-sm" style={{ color: '#8C8F94' }}>
+              <span className="flex items-center gap-1.5">
+                <BookOpen size={14} aria-hidden="true" />
+                {articles.length} articles
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Calendar size={14} aria-hidden="true" />
+                Mis à jour régulièrement
+              </span>
+            </div>
           </div>
 
           {/* Category filters — filtre rapide par query param */}
           <div className="mt-10 flex flex-wrap justify-center gap-2" role="navigation" aria-label="Filtrer par catégorie">
             <Link
               href="/blog"
-              className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
                 !activeCategory
                   ? ''
-                  : 'border border-[#D8D8D8] text-[#8C8F94] hover:border-[#80BC00] hover:text-[#80BC00]'
+                  : 'border border-[#D8D8D8] hover:border-[#80BC00] hover:scale-[1.03]'
               }`}
-              style={!activeCategory ? { backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' } : undefined}
+              style={
+                !activeCategory
+                  ? { backgroundColor: '#80BC00', color: '#ffffff', boxShadow: '0 4px 14px rgba(128,188,0,0.35)' }
+                  : { color: '#8C8F94' }
+              }
             >
               Tout ({articles.length})
             </Link>
@@ -96,12 +118,16 @@ export default async function BlogPage({
               <Link
                 key={cat}
                 href={`/blog?categorie=${encodeURIComponent(cat)}`}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+                className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
                   activeCategory === cat
                     ? ''
-                    : 'border border-[#D8D8D8] text-[#8C8F94] hover:border-[#80BC00] hover:text-[#80BC00]'
+                    : 'border border-[#D8D8D8] hover:border-[#80BC00] hover:scale-[1.03]'
                 }`}
-                style={activeCategory === cat ? { backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' } : undefined}
+                style={
+                  activeCategory === cat
+                    ? { backgroundColor: '#80BC00', color: '#ffffff', boxShadow: '0 4px 14px rgba(128,188,0,0.35)' }
+                    : { color: '#8C8F94' }
+                }
               >
                 {cat} ({articles.filter((a) => a.category === cat).length})
               </Link>
@@ -162,9 +188,9 @@ export default async function BlogPage({
                 <p className="mt-3 text-[#8C8F94] leading-relaxed line-clamp-3">
                   {featuredArticle.excerpt}
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-[#8C8F94]">
-                  <span className="flex items-center gap-1">
-                    <Calendar size={12} aria-hidden="true" />
+                <div className="mt-6 flex flex-wrap items-center gap-4 text-xs" style={{ color: '#8C8F94' }}>
+                  <span className="flex items-center gap-1.5">
+                    📅&nbsp;
                     <time dateTime={featuredArticle.date}>
                       {new Date(featuredArticle.date).toLocaleDateString('fr-FR', {
                         day: 'numeric',
@@ -173,14 +199,14 @@ export default async function BlogPage({
                       })}
                     </time>
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1.5">
                     <Clock size={12} aria-hidden="true" />
                     {featuredArticle.readingTime}
                   </span>
                 </div>
                 <div className="mt-5">
                   <span
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold hover:text-[#80BC00] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 group-hover:gap-3"
                     style={{ color: '#425D07' }}
                   >
                     Lire l&apos;article <ArrowRight size={14} aria-hidden="true" />
@@ -199,7 +225,7 @@ export default async function BlogPage({
             <ul role="list" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {restArticles.map((article) => (
                 <li key={article.slug}>
-                  <article className="bg-white border border-[#EDEDED] rounded-2xl overflow-hidden shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 h-full">
+                  <article className="group bg-white border border-[#EDEDED] rounded-2xl overflow-hidden shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
                     <Link href={`/blog/${article.slug}`} className="block h-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]">
                       <div className="relative h-48 overflow-hidden">
                         <Image
@@ -207,24 +233,31 @@ export default async function BlogPage({
                           alt={article.title}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="object-cover hover:scale-105 transition-transform duration-500"
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        {/* Overlay léger au hover */}
+                        <div
+                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          style={{ background: 'linear-gradient(to top, rgba(11,61,44,0.3) 0%, transparent 60%)' }}
+                          aria-hidden="true"
                         />
                       </div>
                       <div className="p-5">
                         <span
-                          className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-3"
-                          style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+                          className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-3 border"
+                          style={{ backgroundColor: 'rgba(128,188,0,0.10)', color: '#425D07', borderColor: 'rgba(128,188,0,0.25)' }}
                         >
                           {article.category}
                         </span>
-                        <h3 className="font-display font-semibold text-base leading-snug mb-2 line-clamp-2" style={{ color: '#425D07' }}>
+                        <h3 className="font-display font-semibold text-base leading-snug mb-2 line-clamp-2 group-hover:text-[#80BC00] transition-colors" style={{ color: '#425D07' }}>
                           {article.title}
                         </h3>
-                        <p className="text-xs text-[#8C8F94] leading-relaxed line-clamp-2 mb-4">
+                        <p className="text-xs leading-relaxed line-clamp-2 mb-4" style={{ color: '#8C8F94' }}>
                           {article.excerpt}
                         </p>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs text-[#8C8F94]">
+                          <span className="flex items-center gap-1 text-xs" style={{ color: '#8C8F94' }}>
+                            📅&nbsp;
                             <time dateTime={article.date}>
                               {new Date(article.date).toLocaleDateString('fr-FR', {
                                 day: 'numeric',
@@ -234,10 +267,10 @@ export default async function BlogPage({
                             </time>
                           </span>
                           <span
-                            className="text-xs font-semibold flex items-center gap-1 hover:text-[#80BC00] transition-colors"
+                            className="text-xs font-semibold flex items-center gap-1 transition-all duration-200 group-hover:gap-2"
                             style={{ color: '#425D07' }}
                           >
-                            Lire <ArrowRight size={11} aria-hidden="true" />
+                            Lire l&apos;article <ArrowRight size={11} aria-hidden="true" />
                           </span>
                         </div>
                       </div>

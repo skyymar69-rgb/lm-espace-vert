@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ArrowUp } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Conditions générales de vente (CGV) | LM Espace Vert',
@@ -15,12 +16,12 @@ export default function CgvPage() {
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
+          <ol role="list" className="flex items-center gap-1.5 text-sm" style={{ color: '#8C8F94' }}>
             <li>
-              <Link href="/" className="hover:underline" style={{ color: '#8C8F94' }}>Accueil</Link>
+              <Link href="/" className="transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]" style={{ color: '#8C8F94' }}>Accueil</Link>
             </li>
-            <li aria-hidden="true">/</li>
-            <li><span aria-current="page" style={{ color: '#2F2F2F' }}>CGV</span></li>
+            <li aria-hidden="true" className="select-none">›</li>
+            <li><span aria-current="page" className="font-medium" style={{ color: '#2F2F2F' }}>CGV</span></li>
           </ol>
         </div>
       </nav>
@@ -436,9 +437,20 @@ export default function CgvPage() {
             </p>
           </div>
 
-          <p className="text-xs mt-8 pt-6 border-t border-[#EDEDED]" style={{ color: '#8C8F94' }}>
-            Dernière mise à jour : 15 mai 2026
-          </p>
+          <div className="mt-8 pt-6 border-t border-[#EDEDED] flex items-center justify-between flex-wrap gap-4">
+            <p className="text-xs" style={{ color: '#8C8F94' }}>
+              Dernière mise à jour : 15 mai 2026
+            </p>
+            <Link
+              href="#"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-4 py-2 transition-all duration-200 hover:scale-[1.03] hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+              style={{ backgroundColor: 'rgba(128,188,0,0.10)', color: '#425D07' }}
+              aria-label="Retour en haut de page"
+            >
+              <ArrowUp size={12} aria-hidden="true" />
+              Haut de page
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -277,7 +277,7 @@ export default function EngagementsPage() {
               Ce que disent nos clients
             </h2>
             <div className="mt-4 flex items-center justify-center gap-2">
-              <div className="flex" aria-label="Note 4.9 sur 5">
+              <div className="flex" aria-label="Note 4.9 sur 5" role="img">
                 {[1, 2, 3, 4, 5].map((s) => (
                   <Star key={s} size={20} fill="#80BC00" stroke="none" aria-hidden="true" />
                 ))}
@@ -292,7 +292,7 @@ export default function EngagementsPage() {
                 key={t.name}
                 className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-6 flex flex-col"
               >
-                <div className="flex mb-3" aria-label="5 étoiles">
+                <div className="flex mb-3" aria-label="5 étoiles" role="img">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <Star key={s} size={14} fill="#80BC00" stroke="none" aria-hidden="true" />
                   ))}
@@ -371,3 +371,4 @@ export default function EngagementsPage() {
     </>
   )
 }
+

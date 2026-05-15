@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Leaf, Award, Users, ShieldCheck, MapPin, Phone, Recycle, FlaskConical, Tractor, Star, Sprout } from 'lucide-react'
+import { ArrowRight, Leaf, Award, Users, ShieldCheck, MapPin, Recycle, FlaskConical, Tractor, Star, Sprout } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
@@ -151,17 +151,17 @@ export default function AProposPage() {
             <div className="flex flex-col gap-4">
               <div className="relative flex gap-4">
                 {/* Portrait de Léo */}
-                <div className="relative flex-shrink-0 w-32 h-40 sm:w-40 sm:h-52">
+                <div className="relative flex-shrink-0 w-32 h-40 sm:w-40 sm:h-52 overflow-hidden shadow-lg" style={{ borderRadius: '20px' }}>
                   <Image
                     src="/images/leo-portrait.webp"
                     alt="Léo Maurice, fondateur de LM Espace Vert"
                     fill
-                    className="rounded-2xl object-cover"
+                    className="object-cover"
                     priority
                   />
                 </div>
                 {/* Photo principale */}
-                <div className="relative flex-1 overflow-hidden rounded-2xl">
+                <div className="relative flex-1 overflow-hidden shadow-lg" style={{ borderRadius: '24px' }}>
                   <Image
                     src="/images/presentation.webp"
                     alt="Léo Maurice, fondateur de LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
@@ -242,7 +242,7 @@ export default function AProposPage() {
             {values.map((v) => (
               <div
                 key={v.title}
-                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-8 hover:shadow-md hover:-translate-y-1 transition-all"
+                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-8 card-premium hover:border-[#80BC00]/30 transition-all"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
@@ -315,7 +315,7 @@ export default function AProposPage() {
           </div>
           {/* Étoiles Google */}
           <div className="mt-10 flex flex-col items-center gap-2">
-            <div className="flex items-center gap-1" aria-label="Note 4,9 sur 5 étoiles">
+            <div className="flex items-center gap-1" aria-label="Note 4,9 sur 5 étoiles" role="img">
               {[1, 2, 3, 4, 5].map((s) => (
                 <Star key={s} size={22} fill="#80BC00" stroke="none" aria-hidden="true" />
               ))}
@@ -366,7 +366,7 @@ export default function AProposPage() {
             ].map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-7 hover:shadow-md hover:-translate-y-1 transition-all"
+                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-7 card-premium hover:border-[#80BC00]/40 transition-all"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
@@ -483,29 +483,31 @@ export default function AProposPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 text-center" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="py-20 text-center" style={{ backgroundColor: '#0B3D2C', background: 'linear-gradient(135deg, #0B3D2C 0%, #425D07 100%)' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#ffffff' }}>
-            Rencontrez Léo
+          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#80BC00' }}>RENCONTREZ L&apos;ÉQUIPE</p>
+          <h2 className="font-display text-3xl font-bold mb-4" style={{ color: '#ffffff' }}>
+            Confiez votre jardin à Léo
           </h2>
-          <p className="mb-8" style={{ color: '#bbf7d0' }}>
-            Confiez votre jardin à un paysagiste passionné. Devis gratuit, sans engagement. Léo répond personnellement à chaque demande.
+          <p className="mb-8 text-base" style={{ color: '#bbf7d0' }}>
+            Devis gratuit, sans engagement. Léo répond personnellement à chaque demande sous 24h.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-opacity hover:opacity-90 cta-glow"
               style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Demander un devis gratuit
               <ArrowRight size={15} aria-hidden="true" />
             </Link>
             <a
-              href="tel:+33672587353"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/25"
+              href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services..."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/25"
             >
-              <Phone size={15} aria-hidden="true" />
-              06 72 58 73 53
+              Via WhatsApp
             </a>
           </div>
         </div>
@@ -513,3 +515,4 @@ export default function AProposPage() {
     </>
   )
 }
+

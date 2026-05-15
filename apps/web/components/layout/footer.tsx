@@ -83,7 +83,7 @@ export function Footer() {
                 className="h-10 w-auto mb-4"
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
-              <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <p className="text-sm leading-relaxed mb-4 max-w-[240px]" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Paysagiste créateur basé à Saint-Didier-au-Mont-d&apos;Or. Nous transformons vos espaces extérieurs depuis 2019.
               </p>
 
@@ -94,7 +94,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  className="rounded-full w-10 h-10 flex items-center justify-center transition-all"
                   style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
                   onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
                   onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
@@ -106,7 +106,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  className="rounded-full w-10 h-10 flex items-center justify-center transition-all"
                   style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
                   onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
                   onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
@@ -118,7 +118,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Google Maps"
-                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  className="rounded-full w-10 h-10 flex items-center justify-center transition-all"
                   style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
                   onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
                   onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
@@ -130,7 +130,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
-                  className="rounded-full w-9 h-9 flex items-center justify-center transition-all"
+                  className="rounded-full w-10 h-10 flex items-center justify-center transition-all"
                   style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.7)' }}
                   onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#80BC00' }}
                   onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
@@ -144,7 +144,7 @@ export function Footer() {
             </div>
 
             {/* Colonne 2 — Nos Services */}
-            <div>
+            <div aria-label="Footer navigation — Services">
               <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#ffffff' }}>Nos Services</p>
               <ul className="space-y-0.5">
                 {serviceLinks.map((link) => (
@@ -164,7 +164,7 @@ export function Footer() {
             </div>
 
             {/* Colonne 3 — Zone d'intervention */}
-            <div>
+            <div aria-label="Footer navigation — Zone d'intervention">
               <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#ffffff' }}>Zone d&apos;intervention</p>
               <p className="text-sm mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Rayon 20 km autour de Saint-Didier-au-Mont-d&apos;Or
@@ -202,7 +202,7 @@ export function Footer() {
             </div>
 
             {/* Colonne 4 — Contact */}
-            <div>
+            <div aria-label="Footer navigation — Contact">
               <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#ffffff' }}>Contact</p>
               <ul className="space-y-0.5">
                 <li>
@@ -262,7 +262,7 @@ export function Footer() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
             {/* Copyright */}
-            <p style={{ color: 'rgba(255,255,255,0.8)' }}>© 2026 LM Espace Vert</p>
+            <p style={{ color: 'rgba(255,255,255,0.8)' }}>© 2026 LM Espace Vert <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span> Paysagiste Lyon nord</p>
 
             {/* Liens légaux — flex-wrap pour mobile */}
             <div className="flex flex-wrap justify-center sm:justify-end gap-x-4 gap-y-2">

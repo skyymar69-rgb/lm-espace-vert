@@ -52,9 +52,10 @@ export default function RealisationsPage() {
       </nav>
 
       {/* Hero */}
-      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-20 section-gradient-top">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold" style={{ color: '#425D07' }}>
+          <span className="badge-new mb-4 inline-block">Portfolio</span>
+          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold mt-3" style={{ color: '#425D07' }}>
             Nos Réalisations
           </h1>
           <p className="mt-4 max-w-xl mx-auto text-lg text-[#8C8F94]">
@@ -96,20 +97,31 @@ export default function RealisationsPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="rounded-2xl p-10 text-center text-white" style={{ backgroundColor: '#0B3D2C' }}>
-            <h2 className="font-display text-2xl font-bold mb-2">
+          <div className="rounded-2xl p-12 text-center text-white" style={{ backgroundColor: '#0B3D2C', background: 'linear-gradient(135deg, #0B3D2C 0%, #425D07 100%)' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>PASSEZ À L&apos;ACTION</p>
+            <h2 className="font-display text-3xl font-bold mb-3">
               Votre projet sera notre prochaine réalisation
             </h2>
-            <p className="text-green-100 text-sm mb-6">
+            <p className="text-green-100 text-base mb-8 max-w-md mx-auto">
               Devis gratuit et sans engagement — réponse sous 24h.
             </p>
-            <Link
-              href="/devis"
-              className="inline-flex items-center gap-2 rounded-full font-bold px-6 py-3 hover:bg-white/90 transition-colors"
-              style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
-            >
-              Demander mon devis <ArrowRight size={15} aria-hidden="true" />
-            </Link>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link
+                href="/devis"
+                className="inline-flex items-center gap-2 rounded-full font-bold px-7 py-3.5 hover:bg-white/90 transition-colors"
+                style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
+              >
+                Demander mon devis <ArrowRight size={15} aria-hidden="true" />
+              </Link>
+              <a
+                href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20j%27ai%20vu%20vos%20réalisations%20et%20je%20souhaite%20un%20devis..."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full font-semibold px-6 py-3.5 text-white border border-white/30 hover:bg-white/10 transition-colors"
+              >
+                Via WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>

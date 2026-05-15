@@ -127,16 +127,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(_){}})();`,
           }}
         />
-        {/* #2 Preconnect hints for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <link rel="preconnect" href="https://api.open-meteo.com" />
-        {/* #11 — DNS prefetch supplémentaires */}
-        <link rel="preconnect" href="https://maps.app.goo.gl" />
-        <link rel="dns-prefetch" href="https://local-fr-public.s3.eu-west-3.amazonaws.com" />
-        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        {/* Preconnect: 3 origins max (next/font auto-handles Google Fonts) */}
+        <link rel="preconnect" href="https://api.open-meteo.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://vitals.vercel-insights.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://va.vercel-scripts.com" crossOrigin="anonymous" />
+        {/* DNS prefetch for secondary origins */}
+        <link rel="dns-prefetch" href="https://maps.app.goo.gl" />
         <link rel="dns-prefetch" href="https://www.smappen.fr" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* #3 Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
