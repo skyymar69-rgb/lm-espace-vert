@@ -253,61 +253,88 @@ export function Footer() {
       {/* ZONE C — Barre du bas */}
       <div
         className="py-5"
-        style={{ backgroundColor: '#071f16', borderTop: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)' }}
+        style={{ backgroundColor: '#071f16', borderTop: '1px solid rgba(255,255,255,0.15)' }}
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
-            <p>© 2025 LM Espace Vert · Création Kayzen Web</p>
-            <div className="flex gap-4">
-              <a
-                href="https://kayzen-lyon.fr"
-                target="_blank"
-                rel="noopener noreferrer"
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            {/* Copyright */}
+            <p style={{ color: 'rgba(255,255,255,0.8)' }}>© 2026 LM Espace Vert</p>
+
+            {/* Liens légaux — flex-wrap pour mobile */}
+            <div className="flex flex-wrap justify-center sm:justify-end gap-x-4 gap-y-2">
+              <Link
+                href="/mentions-legales"
                 className="transition-colors"
-                style={{ color: 'rgba(255,255,255,0.5)' }}
+                style={{ color: 'rgba(255,255,255,0.8)' }}
                 onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
-                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
-              >
-                Kayzen Web
-              </a>
-              {/* #29 — Lien Plan du site */}
-              <Link href="/plan-du-site" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
-                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
-                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
-              >
-                Plan du site
-              </Link>
-              <Link href="/mentions-legales" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
-                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
-                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.8)' }}
               >
                 Mentions légales
               </Link>
-              <Link href="/politique-confidentialite" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
+              <Link
+                href="/politique-confidentialite"
+                className="transition-colors"
+                style={{ color: 'rgba(255,255,255,0.8)' }}
                 onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
-                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.8)' }}
               >
                 Confidentialité
               </Link>
-              <Link href="/accessibilite" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
+              <Link
+                href="/cgu"
+                className="transition-colors"
+                style={{ color: 'rgba(255,255,255,0.8)' }}
                 onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
-                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.8)' }}
+              >
+                CGU
+              </Link>
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
+              <Link
+                href="/cgv"
+                className="transition-colors"
+                style={{ color: 'rgba(255,255,255,0.8)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.8)' }}
+              >
+                CGV
+              </Link>
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
+              <Link
+                href="/accessibilite"
+                className="transition-colors"
+                style={{ color: 'rgba(255,255,255,0.8)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.8)' }}
               >
                 Accessibilité
               </Link>
-              <span className="mx-1" style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
-              <a
-                href="https://internet.kayzen-lyon.fr"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
+              <Link
+                href="/plan-du-site"
                 className="transition-colors"
-                style={{ color: 'rgba(255,255,255,0.5)' }}
+                style={{ color: 'rgba(255,255,255,0.8)' }}
                 onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
-                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.8)' }}
               >
-                Fièrement réalisé par <span style={{ color: '#80BC00' }}>Kayzen Web</span>
-              </a>
+                Plan du site
+              </Link>
             </div>
+
+            {/* Crédit agence */}
+            <a
+              href="https://internet.kayzen-lyon.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors text-xs whitespace-nowrap"
+              style={{ color: 'rgba(255,255,255,0.8)' }}
+              onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+              onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.8)' }}
+            >
+              Fièrement réalisé par <span style={{ color: '#80BC00' }}>Kayzen Web</span>
+            </a>
           </div>
         </div>
       </div>

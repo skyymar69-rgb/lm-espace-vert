@@ -7,12 +7,6 @@ import Image from 'next/image'
 import {
   Phone,
   ChevronDown,
-  Scissors,
-  TreePine,
-  Sprout,
-  Layers,
-  Droplets,
-  Flower2,
 } from 'lucide-react'
 import { MobileMenu } from './mobile-menu'
 import { ThemeToggle } from './theme-toggle'
@@ -32,37 +26,37 @@ const megaServices = [
     href: '/services/creation-jardins',
     label: 'Création de jardins',
     desc: 'Conception paysagère sur-mesure',
-    Icon: Sprout,
+    photo: '/images/blog-creation-jardin.webp',
   },
   {
     href: '/services/entretien-espaces-verts',
     label: 'Entretien régulier',
     desc: 'Tonte, taille et désherbage',
-    Icon: Scissors,
+    photo: '/images/entretien-espaces-verts.webp',
   },
   {
     href: '/services/elagage-abattage',
     label: 'Élagage & Abattage',
     desc: 'Arbres remarquables & sécurité',
-    Icon: TreePine,
+    photo: '/images/elagage-abattage.webp',
   },
   {
     href: '/services/maconnerie-paysagere',
     label: 'Maçonnerie paysagère',
     desc: 'Terrasses, allées et murets',
-    Icon: Layers,
+    photo: '/images/travaux-paysagers.webp',
   },
   {
     href: '/services/arrosage-automatique',
     label: 'Arrosage automatique',
     desc: 'Installation & programmation',
-    Icon: Droplets,
+    photo: '/images/arrosage-automatique.webp',
   },
   {
     href: '/services/engazonnement',
     label: 'Engazonnement',
     desc: 'Semis, rouleaux, prairie fleurie',
-    Icon: Flower2,
+    photo: '/images/blog-gazon-rouleau.webp',
   },
 ]
 
@@ -228,14 +222,22 @@ export function Header() {
               <div className="max-w-2xl mx-auto bg-white shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] rounded-2xl border border-[#EDEDED] p-6 mt-1">
                 {/* 3×2 grid */}
                 <div className="grid grid-cols-3 gap-3">
-                  {megaServices.map(({ href, label, desc, Icon }) => (
+                  {megaServices.map(({ href, label, desc, photo }) => (
                     <Link
                       key={label}
                       href={href}
                       onClick={() => setMegaOpen(false)}
-                      className="flex flex-col gap-1 rounded-xl p-3 hover:bg-[#F4F9E8] transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                      className="flex flex-col gap-1.5 rounded-xl p-3 hover:bg-[#F4F9E8] transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
                     >
-                      <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
+                      <div className="relative w-full h-10 rounded-lg overflow-hidden">
+                        <Image
+                          src={photo}
+                          alt=""
+                          fill
+                          sizes="160px"
+                          className="object-cover"
+                        />
+                      </div>
                       <span className="text-sm font-semibold text-[#2F2F2F] leading-snug">{label}</span>
                       <span className="text-xs text-[#6B6B6B]">{desc}</span>
                     </Link>
@@ -256,7 +258,7 @@ export function Header() {
                     href="/processus"
                     onClick={() => setMegaOpen(false)}
                     className="text-xs font-medium hover:underline"
-                    style={{ color: '#8C8F94' }}
+                    style={{ color: '#5C606B' }}
                   >
                     Notre processus
                   </Link>

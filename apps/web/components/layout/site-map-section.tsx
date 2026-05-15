@@ -1,54 +1,154 @@
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
-const navLinks = [
-  { href: '/services',    label: 'Nos Services' },
-  { href: '/realisations', label: 'Réalisations' },
-  { href: '/blog',        label: 'Blog & Conseils' },
-  { href: '/a-propos',    label: 'Notre Histoire' },
-  { href: '/devis',       label: 'Devis Gratuit' },
+const mainPages = [
+  {
+    label: 'Accueil',
+    href: '/',
+    photo: '/images/hero.webp',
+  },
+  {
+    label: 'Nos Services',
+    href: '/services',
+    photo: '/images/travaux-paysagers.webp',
+  },
+  {
+    label: 'Réalisations',
+    href: '/realisations',
+    photo: '/images/realisation-1.webp',
+  },
+  {
+    label: 'Blog & Conseils',
+    href: '/blog',
+    photo: '/images/blog-jardin-printemps.webp',
+  },
+  {
+    label: 'À propos',
+    href: '/a-propos',
+    photo: '/images/photo-equipe.webp',
+  },
+]
+
+const subLinkColumns = [
+  {
+    title: 'Prestations',
+    links: [
+      { label: 'Création de jardins',    href: '/services' },
+      { label: 'Entretien régulier',     href: '/services' },
+      { label: 'Élagage & Abattage',     href: '/services' },
+      { label: 'Maçonnerie paysagère',   href: '/services' },
+      { label: 'Arrosage automatique',   href: '/services' },
+      { label: 'Engazonnement',          href: '/services' },
+    ],
+  },
+  {
+    title: 'Secteurs',
+    links: [
+      { label: 'Caluire',                        href: '/secteur/caluire' },
+      { label: 'Limonest',                       href: '/secteur/limonest' },
+      { label: 'Écully',                         href: '/secteur/ecuelly' },
+      { label: 'Dardilly',                       href: '/secteur/dardilly' },
+      { label: "Champagne-au-Mont-d'Or",         href: '/secteur/champagne' },
+      { label: '→ Voir toutes les zones',        href: '/secteurs' },
+    ],
+  },
+  {
+    title: 'Informations',
+    links: [
+      { label: 'Blog',             href: '/blog' },
+      { label: 'À propos',         href: '/a-propos' },
+      { label: 'Tarifs',           href: '/tarifs' },
+      { label: 'Réalisations',     href: '/realisations' },
+      { label: 'Avant/Après',      href: '/realisations' },
+      { label: 'Notre processus',  href: '/a-propos' },
+    ],
+  },
+  {
+    title: 'Légal',
+    links: [
+      { label: 'Mentions légales',   href: '/mentions-legales' },
+      { label: 'Confidentialité',    href: '/politique-confidentialite' },
+      { label: 'CGU',                href: '/cgu' },
+      { label: 'CGV',                href: '/cgv' },
+      { label: 'Accessibilité',      href: '/accessibilite' },
+      { label: 'Contact',            href: '/contact' },
+    ],
+  },
 ]
 
 export function SiteMapSection() {
   return (
-    <section className="border-t border-[#EDEDED] py-12" style={{ backgroundColor: '#F7F5F0' }}>
+    <section style={{ backgroundColor: '#ffffff' }} className="py-16 border-t" aria-label="Plan du site">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
 
-        {/* Nav links grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
-          {navLinks.map((link) => (
+        {/* Titre */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold font-display" style={{ color: '#1a1a1a' }}>
+            Plan du site
+          </h2>
+          <p className="text-sm mt-1" style={{ color: '#555B68' }}>
+            Explorez toutes les pages de LM Espace Vert
+          </p>
+        </div>
+
+        {/* Grille de cartes photo */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+          {mainPages.map((page) => (
             <Link
-              key={link.href}
-              href={link.href}
-              className="group flex items-center gap-2 text-sm font-medium text-[#8C8F94] hover:text-[#80BC00] transition-colors"
+              key={page.href}
+              href={page.href}
+              className="group relative overflow-hidden rounded-2xl block"
+              style={{ height: '160px' }}
             >
-              {link.label}
-              <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#425D07' }} />
+              <Image
+                src={page.photo}
+                alt={page.label}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay dégradé du bas */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%)',
+                }}
+              />
+              {/* Titre de la page */}
+              <span
+                className="absolute bottom-3 left-3 text-sm font-semibold text-white"
+                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+              >
+                {page.label}
+              </span>
             </Link>
           ))}
         </div>
 
-        {/* CTA strip */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-8 pt-8 border-t border-[#EDEDED] gap-4">
-          <div>
-            <p className="text-sm text-[#8C8F94]">Vous avez un projet ?</p>
-            <p className="font-semibold text-[#2F2F2F]">Devis gratuit · Réponse en 24h · Zone 20 km</p>
-          </div>
-          <div className="flex gap-3 flex-wrap">
-            <Link
-              href="/contact"
-              className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm text-[#2F2F2F] hover:border-[#80BC00] hover:text-[#80BC00] transition-colors"
-            >
-              Nous contacter
-            </Link>
-            <Link
-              href="/devis"
-              className="rounded-full px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#80BC00', color: '#fff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
-            >
-              Devis gratuit
-            </Link>
-          </div>
+        {/* Sous-liens rapides — 4 colonnes */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t" style={{ borderColor: '#EDEDED' }}>
+          {subLinkColumns.map((col) => (
+            <div key={col.title}>
+              <p
+                className="text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: '#1a1a1a' }}
+              >
+                {col.title}
+              </p>
+              <ul>
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="sitemap-link text-sm py-0.5 block"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
       </div>

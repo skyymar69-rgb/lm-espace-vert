@@ -20,7 +20,7 @@
   --color-bg-subtle:       #F7F5F0;
   --color-bg-elevated:     #FFFFFF;
   --color-fg:              #2F2F2F;
-  --color-fg-muted:        #8C8F94;
+  --color-fg-muted:        #5C606B;
   --color-fg-subtle:       #AAAAAA;
   --color-primary:         #425D07;
   --color-primary-hover:   #334506;
@@ -96,7 +96,7 @@
   --color-bg-subtle:    #F7F5F0;
   --color-bg-elevated:  #FFFFFF;
   --color-fg:           #2F2F2F;
-  --color-fg-muted:     #8C8F94;
+  --color-fg-muted:     #5C606B;
   --color-fg-subtle:    #AAAAAA;
   --color-primary:      #425D07;
   --color-primary-hover:#334506;
@@ -302,6 +302,19 @@
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
+}
+
+/* ============================================================
+   SITEMAP SECTION UTILITIES
+   ============================================================ */
+
+/* Sub-links in sitemap section — pure CSS hover, no JS handlers needed */
+.sitemap-link {
+  color: #555B68;
+  transition: color 0.15s ease;
+}
+.sitemap-link:hover {
+  color: #425D07;
 }
 
 /* ============================================================
@@ -1293,7 +1306,11 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 [data-theme="dark"] [style*="color:#2F2F2F"],
 [data-theme="dark"] [style*="color:#2f2f2f"] { color: var(--color-fg) !important; }
 
-/* #8C8F94 → gris clair lisible */
+/* #5C606B / #8C8F94 → gris clair lisible */
+[data-theme="dark"] [class*="text-[#5C606B]"],
+[data-theme="dark"] [class*="text-[#5c606b]"],
+[data-theme="dark"] [style*="color:#5C606B"],
+[data-theme="dark"] [style*="color:#5c606b"],
 [data-theme="dark"] [class*="text-[#8C8F94]"],
 [data-theme="dark"] [class*="text-[#8c8f94]"],
 [data-theme="dark"] [style*="color:#8C8F94"],

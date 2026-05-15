@@ -734,25 +734,14 @@ export default function HomePage() {
             <p className="text-[#8C8F94] mb-6 text-sm leading-relaxed">
               Conseils professionnels de paysagiste — entretien, taille, arrosage, engazonnement, 4 saisons + checklist. Rédigé par Léo Maurice, fondateur de LM Espace Vert. Gratuit, sans inscription.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <a
-                href="/50-conseils-jardin-lm-espace-vert.pdf"
-                download
-                className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
-                style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
-              >
-                📥 Télécharger le guide PDF <ArrowRight size={14} />
-              </a>
-              <a
-                href="https://wa.me/33672587353?text=Je%20voudrais%20recevoir%20le%20guide%2050%20conseils%20jardinage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold border-2 transition-all hover:opacity-90"
-                style={{ borderColor: '#25D366', color: '#25D366' }}
-              >
-                Recevoir par WhatsApp
-              </a>
-            </div>
+            <a
+              href="/50-conseils-jardin-lm-espace-vert.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
+              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+            >
+              📥 Télécharger le guide <ArrowRight size={14} />
+            </a>
           </div>
         </div>
       </section>

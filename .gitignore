@@ -40,3 +40,5 @@ coverage
 apps/cms/.tmp
 apps/cms/build
 apps/cms/exports
+
+.vercel

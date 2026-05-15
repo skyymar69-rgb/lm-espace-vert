@@ -116,13 +116,16 @@ export function DigitalContactCard() {
               className="flex items-center gap-4 px-6 py-5 rounded-t-[20px]"
               style={{ backgroundColor: '#0B3D2C' }}
             >
-              <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/30 flex-shrink-0 bg-white/10">
+              <div
+                className="relative w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center"
+                style={{ backgroundColor: 'rgba(255,255,255,0.15)', padding: '4px', border: '2px solid rgba(255,255,255,0.3)' }}
+              >
                 <Image
-                  src="/images/leo-portrait.webp"
-                  alt="Léo Maurice"
+                  src="/logo.png"
+                  alt="LM Espace Vert"
                   fill
-                  className="object-cover"
-                  onError={() => {/* fallback silently */}}
+                  sizes="64px"
+                  style={{ objectFit: 'contain', padding: '4px' }}
                 />
               </div>
               <div>
