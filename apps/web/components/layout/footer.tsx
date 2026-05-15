@@ -289,6 +289,12 @@ export function Footer() {
               >
                 Confidentialité
               </Link>
+              <Link href="/accessibilite" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+              >
+                Accessibilité
+              </Link>
             </div>
           </div>
         </div>
