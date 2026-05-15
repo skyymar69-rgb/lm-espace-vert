@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, ArrowRight, Phone } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Paysagiste Lyon Nord — Zones d'intervention | LM Espace Vert",
     description: "Paysagiste couvrant 12 communes du nord-ouest lyonnais dans un rayon de 20 km. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/secteurs',
-    images: [{ url: '/images/zone-intervention.png', width: 1200, height: 630, alt: "Zones d'intervention LM Espace Vert — Lyon Nord" }],
+    images: [{ url: '/images/zone-intervention.webp', width: 1200, height: 630, alt: "Zones d'intervention LM Espace Vert — Lyon Nord" }],
   },
 }
 

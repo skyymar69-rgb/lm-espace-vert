@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Phone, MapPin } from 'lucide-react'
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Engazonnement Gazon Lyon Nord | LM Espace Vert",
     description: "Création de pelouses par semis ou rouleaux à Lyon nord. Prairies fleuries, regarnissage. LM Espace Vert. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/engazonnement',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-6.jpg', width: 1200, height: 630, alt: 'Engazonnement pelouse — LM Espace Vert' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-6.webp', width: 1200, height: 630, alt: 'Engazonnement pelouse — LM Espace Vert' }],
   },
 }
 
@@ -109,7 +109,7 @@ export default function EngazonnementPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/realisation-6.jpg"
+          src="/images/realisation-6.webp"
           alt="Engazonnement et création de pelouse à Lyon nord par LM Espace Vert"
           fill
           className="object-cover"

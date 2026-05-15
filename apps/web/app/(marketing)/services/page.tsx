@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -99,7 +99,7 @@ const services = [
     icon: Sprout,
     title: 'Création de jardins',
     slug: 'creation-jardins',
-    image: '/images/realisation-1.jpg',
+    image: '/images/realisation-1.webp',
     price: 'À partir de 1 500€',
     desc: "Votre jardin est une extension de votre maison. Nous concevons des espaces verts sur-mesure, de la petite terrasse au grand parc, en respectant vos goûts et les contraintes du terrain.",
     features: [
@@ -127,7 +127,7 @@ const services = [
     icon: Layers,
     title: 'Maçonnerie paysagère',
     slug: 'maconnerie-paysagere',
-    image: '/images/realisation-10.jpg',
+    image: '/images/realisation-10.webp',
     price: 'Devis gratuit',
     desc: "Les éléments minéraux structurent et valorisent votre jardin. Terrasses, allées, murets et escaliers réalisés avec des matériaux naturels de qualité pour un rendu esthétique et durable.",
     features: [
@@ -183,7 +183,7 @@ const services = [
     icon: Flower2,
     title: 'Engazonnement',
     slug: 'engazonnement',
-    image: '/images/realisation-6.jpg',
+    image: '/images/realisation-6.webp',
     price: 'À partir de 300€',
     desc: "Une belle pelouse est la base d'un jardin réussi. Nous créons votre gazon par semis ou en rouleaux selon vos besoins, et vous proposons des prairies fleuries pour plus de biodiversité.",
     features: [

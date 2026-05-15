@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,19 +17,19 @@ const realisations: Realisation[] = [
   {
     title: 'Création jardin contemporain — Limonest',
     category: 'Création',
-    image: '/images/realisation-1.jpg',
+    image: '/images/realisation-1.webp',
     year: '2025',
   },
   {
     title: 'Aménagement extérieur sur mesure — Limonest',
     category: 'Création',
-    image: '/images/realisation-3.jpg',
+    image: '/images/realisation-3.webp',
     year: '2025',
   },
   {
     title: 'Taille de haies copropriété — Limonest',
     category: 'Entretien',
-    image: '/images/taille-haies-1.jpg',
+    image: '/images/taille-haies-1.webp',
     year: '2025',
   },
   {
@@ -47,19 +47,19 @@ const realisations: Realisation[] = [
   {
     title: 'Jardin paysager résidentiel — Limonest',
     category: 'Création',
-    image: '/images/realisation-4.jpg',
+    image: '/images/realisation-4.webp',
     year: '2024',
   },
   {
     title: 'Terrasse et espace de vie — Limonest',
     category: 'Maçonnerie',
-    image: '/images/realisation-5.jpg',
+    image: '/images/realisation-5.webp',
     year: '2024',
   },
   {
     title: 'Création espaces extérieurs — Limonest',
     category: 'Création',
-    image: '/images/realisation-6.jpg',
+    image: '/images/realisation-6.webp',
     year: '2024',
   },
   {
@@ -77,19 +77,19 @@ const realisations: Realisation[] = [
   {
     title: 'Conception jardin sur mesure — Limonest',
     category: 'Création',
-    image: '/images/realisation-7.jpg',
+    image: '/images/realisation-7.webp',
     year: '2024',
   },
   {
     title: 'Aménagement cour et jardin — Limonest',
     category: 'Création',
-    image: '/images/realisation-9.jpg',
+    image: '/images/realisation-9.webp',
     year: '2023',
   },
   {
     title: 'Terrasse moderne et jardin — Limonest',
     category: 'Maçonnerie',
-    image: '/images/realisation-10.jpg',
+    image: '/images/realisation-10.webp',
     year: '2023',
   },
   {

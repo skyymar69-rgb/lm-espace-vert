@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Phone, MapPin } from 'lucide-react'
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Maçonnerie Paysagère Lyon Nord | LM Espace Vert",
     description: "Terrasses, allées, murets en pierre naturelle à Lyon nord. Maçonnerie paysagère haut de gamme. LM Espace Vert. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.jpg', width: 1200, height: 630, alt: 'Maçonnerie paysagère — LM Espace Vert' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.webp', width: 1200, height: 630, alt: 'Maçonnerie paysagère — LM Espace Vert' }],
   },
 }
 
@@ -109,7 +109,7 @@ export default function MaconneriePaysagerePage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/realisation-10.jpg"
+          src="/images/realisation-10.webp"
           alt="Maçonnerie paysagère — terrasse et murets en pierre naturelle à Lyon nord"
           fill
           className="object-cover"

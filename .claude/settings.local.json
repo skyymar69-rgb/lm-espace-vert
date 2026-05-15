@@ -67,7 +67,14 @@
       "WebFetch(domain:www.lmespacevert.fr)",
       "Bash(unzip -o \"C:/Users/Kayzen/Desktop/seo-geo-claude-skills-main.zip\" -d seo)",
       "Bash(find /tmp/skills/marketing/marketingskills-main/skills -name \"SKILL.md\" | sort | head -40 *)",
-      "Bash(find /tmp/skills/ -type f | sort)"
+      "Bash(find /tmp/skills/ -type f | sort)",
+      "Bash(dir /b *.jpg *.jpeg *.png)",
+      "Bash(where ffmpeg *)",
+      "Bash(where cwebp *)",
+      "Bash(where magick *)",
+      "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(node -e \"try{require\\('sharp'\\);console.log\\('sharp ok'\\)}catch\\(e\\){console.log\\('no sharp'\\)}\")",
+      "PowerShell($imgDir = \"D:\\\\16042026\\\\1x\\\\LM Espace vert\\\\apps\\\\web\\\\public\\\\images\"; $magick = \"C:\\\\Program Files\\\\ImageMagick-7.1.2-Q16-HDRI\\\\magick.exe\"; $files = @\\(\"illusra1.png\",\"leo-portrait.jpg\",\"realisation-1.jpg\",\"realisation-3.jpg\",\"realisation-4.jpg\",\"realisation-5.jpg\",\"realisation-6.jpg\",\"realisation-7.jpg\",\"realisation-9.jpg\",\"realisation-10.jpg\",\"taille-haies-1.jpg\",\"zone-intervention.png\"\\); foreach \\($name in $files\\) { $src = Join-Path $imgDir $name; $base = [System.IO.Path]::GetFileNameWithoutExtension\\($name\\); $dst = Join-Path $imgDir \"$base.webp\"; & $magick $src -quality 85 $dst; if \\(Test-Path $dst\\) { $kb = [math]::Round\\(\\(Get-Item $dst\\).Length/1KB,0\\); Write-Host \"OK: $name -> $base.webp \\(${kb}KB\\)\" } else { Write-Host \"FAIL: $name\" } })"
     ]
   }
 }

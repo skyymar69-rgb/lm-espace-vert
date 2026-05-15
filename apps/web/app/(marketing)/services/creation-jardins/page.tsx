@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Phone, MapPin } from 'lucide-react'
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Création de Jardins Paysagers Lyon Nord | LM Espace Vert",
     description: "Conception et création de jardins sur mesure à Saint-Didier-au-Mont-d'Or et Lyon nord. Étude paysagère, choix végétaux, massifs. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/creation-jardins',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.jpg', width: 1200, height: 630, alt: 'Création de jardins paysagers — LM Espace Vert' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.webp', width: 1200, height: 630, alt: 'Création de jardins paysagers — LM Espace Vert' }],
   },
 }
 
@@ -118,7 +118,7 @@ export default function CreationJardinsPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/realisation-1.jpg"
+          src="/images/realisation-1.webp"
           alt="Création de jardin paysager à Saint-Didier-au-Mont-d'Or par LM Espace Vert"
           fill
           className="object-cover"

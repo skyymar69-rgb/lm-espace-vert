@@ -1,4 +1,4 @@
-export type Article = {
+﻿export type Article = {
   slug: string
   category: string
   title: string
@@ -20,7 +20,7 @@ export const articles: Article[] = [
     date: '2026-03-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-jardin-printemps.webp',
     keywords: ['jardin printemps Lyon', 'entretien jardin mars', 'paysagiste Lyon nord'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -87,7 +87,7 @@ export const articles: Article[] = [
     date: '2026-03-01',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: '/images/blog-taille-haies.webp',
     keywords: ['taille haie', 'quand tailler haie', 'taille thuyas', 'taille laurier'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -161,7 +161,7 @@ export const articles: Article[] = [
     date: '2026-02-20',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/blog-creation-jardin.webp',
     keywords: ['tendances jardin 2026', 'jardin naturel', 'biodiversité jardin', 'aménagement extérieur'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -225,7 +225,7 @@ export const articles: Article[] = [
     date: '2026-01-10',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-massif-fleurs.webp',
     keywords: ['plantes ombre jardin', 'plantes sous arbres', 'jardin ombragé Lyon'],
     content: `
 <h2>Tirer parti de l'ombre au jardin</h2>
@@ -252,7 +252,7 @@ export const articles: Article[] = [
     date: '2026-01-25',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&q=80',
+    image: '/images/elagage-abattage.webp',
     keywords: ['élagage arbres', 'taille arbres fruitiers', 'quand élaguer', 'arboriste Lyon'],
     content: `
 <h2>L'élagage : une nécessité pour la santé et la sécurité</h2>
@@ -284,7 +284,7 @@ export const articles: Article[] = [
     date: '2025-12-10',
     readingTime: '8 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/blog-creation-jardin.webp',
     keywords: ['création jardin paysager', 'aménagement jardin étapes', 'paysagiste création jardin'],
     content: `
 <h2>Un jardin réussi se planifie</h2>
@@ -320,7 +320,7 @@ export const articles: Article[] = [
     date: '2025-11-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    image: '/images/blog-pelouse.webp',
     keywords: ['entretien pelouse', 'tonte gazon', 'calendrier pelouse', 'scarification gazon'],
     content: `
 <h2>Un programme mensuel pour une pelouse impeccable</h2>
@@ -356,7 +356,7 @@ export const articles: Article[] = [
     date: '2025-10-20',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?w=800&q=80',
+    image: '/images/arrosage-automatique.webp',
     keywords: ["arrosage automatique", "installation arrosage", "programmateur arrosage", "économie eau jardin"],
     content: `
 <h2>L'arrosage automatique : un investissement rentable</h2>
@@ -397,7 +397,7 @@ export const articles: Article[] = [
     date: '2025-09-05',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80',
+    image: '/images/travaux-paysagers.webp',
     keywords: ['entretien terrasse bois', 'lasure terrasse', 'nettoyage terrasse bois'],
     content: `
 <h2>Le bois en extérieur : un matériau vivant</h2>
@@ -429,7 +429,7 @@ export const articles: Article[] = [
     date: '2025-08-12',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-compostage.webp',
     keywords: ['compostage jardin', 'compost débutant', 'amendement naturel'],
     content: `
 <h2>Pourquoi composter ?</h2>
@@ -457,7 +457,7 @@ export const articles: Article[] = [
     date: '2025-07-08',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-massif-fleurs.webp',
     keywords: ['plantes mellifères', 'pollinisateurs jardin', 'biodiversité jardin'],
     content: `
 <h2>Pourquoi favoriser les pollinisateurs ?</h2>
@@ -489,7 +489,7 @@ export const articles: Article[] = [
     date: '2025-06-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: '/images/blog-rosiers.webp',
     keywords: ['taille rosiers', 'rosiers printemps', 'quand tailler rosiers'],
     content: `
 <h2>Les rosiers : reine du jardin, défi de la taille</h2>
@@ -519,7 +519,7 @@ export const articles: Article[] = [
     date: '2025-05-20',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    image: '/images/blog-gazon-rouleau.webp',
     keywords: ['réparer pelouse', 'regarnir gazon', 'zones dégarnies pelouse'],
     content: `
 <h2>Diagnostiquer avant d'agir</h2>
@@ -553,7 +553,7 @@ export const articles: Article[] = [
     date: '2025-04-25',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/vente-vegetaux.webp',
     keywords: ['potager débutant', 'créer potager', 'jardin légumes'],
     content: `
 <h2>Votre premier potager : choisir le bon emplacement</h2>
@@ -586,7 +586,7 @@ export const articles: Article[] = [
     date: '2025-03-30',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-massif-fleurs.webp',
     keywords: ['massif fleuri', 'massif 4 saisons', 'plantes vivaces associées'],
     content: `
 <h2>La clé : l'échelonnement des floraisons</h2>
@@ -619,7 +619,7 @@ export const articles: Article[] = [
     date: '2025-02-18',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/travaux-paysagers.webp',
     keywords: ['muret pierre sèche', 'construction muret jardin', 'maçonnerie paysagère'],
     content: `
 <h2>La pierre sèche : un patrimoine vivant</h2>
@@ -659,7 +659,7 @@ export const articles: Article[] = [
     date: '2025-01-20',
     readingTime: '8 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&q=80',
+    image: '/images/blog-elagage-arbre.webp',
     keywords: ['taille arbres fruitiers hiver', 'tailler pommier', 'taille fruitiers'],
     content: `
 <h2>L'importance de la taille hivernale des fruitiers</h2>
@@ -694,7 +694,7 @@ export const articles: Article[] = [
     date: '2024-12-05',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: '/images/blog-haie-verte.webp',
     keywords: ['haie mixte biodiversité', 'haie bocagère', 'planter haie'],
     content: `
 <h2>Pourquoi choisir une haie mixte ?</h2>
@@ -723,7 +723,7 @@ export const articles: Article[] = [
     date: '2024-11-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/blog-jardin-sec.webp',
     keywords: ['jardin sec', 'plantes sécheresse', 'jardin économe eau Lyon'],
     content: `
 <h2>Le défi des étés lyonnais</h2>
@@ -762,7 +762,7 @@ export const articles: Article[] = [
     date: '2024-10-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    image: '/images/blog-gazon-rouleau.webp',
     keywords: ['gazon rouleaux', 'semis gazon', 'engazonnement', 'créer pelouse'],
     content: `
 <h2>Deux méthodes, deux profils</h2>
@@ -791,7 +791,7 @@ export const articles: Article[] = [
     date: '2024-09-20',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/blog-creation-jardin.webp',
     keywords: ['plantes grimpantes pergola', 'glycine jasmin terrasse', 'aménagement pergola'],
     content: `
 <h2>Les grimpantes pour la pergola : critères de sélection</h2>
@@ -818,7 +818,7 @@ export const articles: Article[] = [
     date: '2024-08-25',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-automne.webp',
     keywords: ['jardin automne', 'entretien automne jardin', 'préparation hiver jardin'],
     content: `
 <h2>Pourquoi l'automne est une saison cruciale ?</h2>
@@ -857,7 +857,7 @@ export const articles: Article[] = [
     date: '2024-07-30',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: '/images/taille-haies-1.webp',
     keywords: ['entretien buis', 'pyrale buis', 'taille buis topiaire', 'remplacement buis'],
     content: `
 <h2>Le buis en péril</h2>
@@ -884,7 +884,7 @@ export const articles: Article[] = [
     date: '2024-06-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-compostage.webp',
     keywords: ['désherbage naturel', 'sans glyphosate', 'mauvaises herbes jardin'],
     content: `
 <h2>Désherber sans chimie : oui, c'est possible</h2>
@@ -920,7 +920,7 @@ export const articles: Article[] = [
     date: '2024-05-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/blog-arrosage-jardin.webp',
     keywords: ['drainage jardin', 'eau stagnante jardin', 'sol argileux drainage'],
     content: `
 <h2>Pourquoi l'eau stagne-t-elle dans mon jardin ?</h2>
@@ -954,7 +954,7 @@ export const articles: Article[] = [
     date: '2024-04-08',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/blog-allee-jardin.webp',
     keywords: ['jardin japonais', 'jardin zen', 'aménagement style japonais'],
     content: `
 <h2>L'esprit du jardin japonais</h2>
@@ -985,7 +985,7 @@ export const articles: Article[] = [
     date: '2024-03-12',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-compostage.webp',
     keywords: ['fertilisation naturelle jardin', 'engrais vert', 'purin ortie', 'compost jardin'],
     content: `
 <h2>Pourquoi fertiliser naturellement ?</h2>
@@ -1015,7 +1015,7 @@ export const articles: Article[] = [
     date: '2024-02-20',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/blog-allee-jardin.webp',
     keywords: ['revêtement allée jardin', 'dallage allée', 'gravier jardin', 'béton désactivé'],
     content: `
 <h2>Choisir le bon revêtement d'allée</h2>
@@ -1057,7 +1057,7 @@ export const articles: Article[] = [
     date: '2024-01-25',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-jardin-printemps.webp',
     keywords: ['diviser vivaces', 'multiplication vivaces', 'entretien vivaces printemps'],
     content: `
 <h2>Pourquoi diviser les vivaces ?</h2>
@@ -1091,7 +1091,7 @@ export const articles: Article[] = [
     date: '2023-12-10',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-compostage.webp',
     keywords: ['paillage jardin', 'mulch jardin', 'BRF paillage', 'matériau paillage'],
     content: `
 <h2>Le paillage : une des meilleures pratiques du jardin</h2>
@@ -1118,7 +1118,7 @@ export const articles: Article[] = [
     date: '2023-11-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/entretien-espaces-verts.webp',
     keywords: ['contrat entretien jardin', 'jardinier professionnel', 'entretien espaces verts'],
     content: `
 <h2>Pourquoi opter pour un contrat d'entretien ?</h2>
@@ -1160,7 +1160,7 @@ export const articles: Article[] = [
     date: '2023-10-20',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    image: '/images/blog-pelouse.webp',
     keywords: ['pelouse ombre', 'gazon ombre', 'entretien pelouse ombragée'],
     content: `
 <h2>Les défis de la pelouse à l'ombre</h2>
@@ -1189,7 +1189,7 @@ export const articles: Article[] = [
     date: '2023-09-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&q=80',
+    image: '/images/blog-elagage-arbre.webp',
     keywords: ['niwaki', 'taille japonaise pins', 'topiaire japonais', 'cloud pruning'],
     content: `
 <h2>Le niwaki : une philosophie, un art</h2>
@@ -1216,7 +1216,7 @@ export const articles: Article[] = [
     date: '2026-04-10',
     readingTime: '4 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/realisation-1.webp',
     keywords: ['paysagiste Caluire-et-Cuire', 'entretien jardin Caluire', 'création jardin Lyon nord'],
     excerpt: "LM Espace Vert intervient régulièrement à Caluire-et-Cuire pour la création et l'entretien de jardins. Découvrez nos conseils adaptés à cette commune lyonnaise.",
     content: `
@@ -1288,7 +1288,7 @@ export const articles: Article[] = [
     date: '2026-04-05',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: '/images/realisation-3.webp',
     keywords: ['paysagiste Écully', 'jardin prestige Écully', 'aménagement extérieur Écully'],
     excerpt: "Écully et ses propriétés de prestige demandent une approche paysagère d'exception. LM Espace Vert vous présente ses solutions pour des jardins haut de gamme.",
     content: `
@@ -1361,7 +1361,7 @@ export const articles: Article[] = [
     date: '2026-03-20',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&q=80',
+    image: '/images/blog-automne.webp',
     keywords: ['entretien jardin hiver Lyon', 'jardin hiver Rhône', 'taille arbres hiver'],
     excerpt: "Les mois de décembre et janvier sont propices à l'entretien hivernal. Découvrez ce qu'il faut faire dans votre jardin lyonnais pendant la saison froide.",
     content: `
@@ -1437,7 +1437,7 @@ export const articles: Article[] = [
     date: '2026-03-10',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    image: '/images/blog-pelouse.webp',
     keywords: ['problèmes pelouse Lyon', 'gazon jaune Lyon', 'mousses pelouse Lyon'],
     excerpt: "Mousses, mauvaises herbes, zones jaunes... Les problèmes de pelouse sont fréquents dans la région lyonnaise. Voici les solutions professionnelles de LM Espace Vert.",
     content: `
@@ -1511,7 +1511,7 @@ export const articles: Article[] = [
     date: '2026-05-10',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/realisation-1.jpg',
+    image: '/images/realisation-5.webp',
     keywords: ['paysagiste Tassin', 'jardin Tassin-la-Demi-Lune', 'entretien jardin Tassin', 'paysagiste Lyon ouest'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1559,7 +1559,7 @@ export const articles: Article[] = [
     date: '2026-05-08',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/realisation-3.jpg',
+    image: '/images/realisation-7.webp',
     keywords: ['paysagiste Dardilly', 'jardin Dardilly', 'création jardin Dardilly', 'espaces verts Dardilly'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1606,7 +1606,7 @@ export const articles: Article[] = [
     date: '2026-05-05',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/realisation-5.jpg',
+    image: '/images/realisation-9.webp',
     keywords: ["paysagiste Champagne-au-Mont-d'Or", 'jardin Champagne', 'entretien espaces verts Champagne', 'nord Lyon'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1651,7 +1651,7 @@ export const articles: Article[] = [
     date: '2026-04-20',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/entretien-espaces-verts.webp',
+    image: '/images/taille-haies-1.webp',
     keywords: ['taille haies Lyon', 'taille haies Rhône', 'quand tailler haie', 'taille haie arbuste'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1710,7 +1710,7 @@ export const articles: Article[] = [
     date: '2026-04-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/realisation-10.jpg',
+    image: '/images/blog-allee-jardin.webp',
     keywords: ['allée jardin Lyon', 'gravier stabilisé Lyon', 'pavés jardin Rhône', 'allée maçonnerie paysagère'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1758,7 +1758,7 @@ export const articles: Article[] = [
     date: '2026-04-01',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/realisation-7.jpg',
+    image: '/images/apres1.webp',
     keywords: ['entretien terrasse Lyon', 'terrasse bois Lyon', 'nettoyage terrasse pierre', 'entretien terrasse Rhône'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1813,7 +1813,7 @@ export const articles: Article[] = [
     date: '2026-03-25',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/realisation-4.jpg',
+    image: '/images/blog-jardin-sec.webp',
     keywords: ['jardin faible entretien Lyon', 'jardin économique entretien', 'plantes résistantes Lyon', 'jardinage facile Rhône'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1863,7 +1863,7 @@ export const articles: Article[] = [
     date: '2026-03-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/vente-vegetaux.webp',
+    image: '/images/blog-massif-fleurs.webp',
     keywords: ['prairie fleurie Lyon', 'biodiversité jardin Lyon', 'pollinisateurs Rhône', 'jardin naturel Lyon nord'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1974,7 +1974,7 @@ export const articles: Article[] = [
     date: '2026-01-20',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/travaux-paysagers.webp',
+    image: '/images/entretien-espaces-verts.webp',
     keywords: ['prix paysagiste Lyon', 'tarif paysagiste Rhône', 'coût jardin Lyon', 'devis paysagiste 2026'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2026,7 +2026,7 @@ export const articles: Article[] = [
     date: '2026-05-01',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    image: '/images/blog-pelouse.webp',
     keywords: ['entretien gazon printemps Lyon', 'scarification pelouse Lyon', 'tonte gazon mars avril', 'engrais printemps pelouse'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2109,7 +2109,7 @@ export const articles: Article[] = [
     date: '2026-04-28',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: '/images/blog-haie-verte.webp',
     keywords: ['haies persistantes Lyon', 'laurier haie Lyon', 'Photinia Lyon', 'haie persistante nord lyonnais'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2174,7 +2174,7 @@ export const articles: Article[] = [
     date: '2026-04-20',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-rosiers.webp',
     keywords: ['massif fleuri Lyon', 'massif 4 saisons Lyon', 'vivaces Lyon', 'plantation massif fleurs'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2258,7 +2258,7 @@ export const articles: Article[] = [
     date: '2026-04-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/travaux-paysagers.webp',
     keywords: ['terrassement jardin Lyon', 'terrassement paysagiste Lyon', 'prix terrassement jardin Rhône', 'création jardin étapes'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2338,7 +2338,7 @@ export const articles: Article[] = [
     date: '2026-05-08',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/realisation-4.webp',
     keywords: ['paysagiste Neuville-sur-Saône', 'jardin Neuville Saône', 'entretien jardin Neuville 69'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2414,7 +2414,7 @@ export const articles: Article[] = [
     date: '2026-05-05',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/realisation-6.webp',
     keywords: ['paysagiste Francheville', 'jardin Francheville 69340', 'entretien jardin Francheville', 'création jardin ouest Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2480,7 +2480,7 @@ export const articles: Article[] = [
     date: '2026-04-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    image: '/images/blog-jardin-printemps.webp',
     keywords: ['désherbage naturel Lyon', 'désherbage sans pesticides', 'mauvaises herbes jardin Lyon', 'écologie jardin Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2551,7 +2551,7 @@ export const articles: Article[] = [
     date: '2026-04-05',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&q=80',
+    image: '/images/blog-elagage-arbre.webp',
     keywords: ['arbres fruitiers Lyon', 'planter pommier Lyon', 'verger jardin lyonnais', 'fruitiers nord Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2625,7 +2625,7 @@ export const articles: Article[] = [
     date: '2026-03-28',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    image: '/images/apres2.webp',
     keywords: ['rénovation jardin Lyon', 'rénover jardin abandonné', 'transformation jardin lyonnais', 'avant après jardin Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2709,7 +2709,7 @@ export const articles: Article[] = [
     date: '2026-03-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80',
+    image: '/images/blog-creation-jardin.webp',
     keywords: ['pergola bois Lyon', 'terrasse bois Lyon', 'prix terrasse bois Rhône', 'matériau terrasse extérieur Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">

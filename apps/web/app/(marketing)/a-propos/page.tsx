@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Leaf, Award, Users, ShieldCheck, MapPin, Phone, Recycle, FlaskConical, Tractor, Star, Sprout } from 'lucide-react'
@@ -131,7 +131,7 @@ export default function AProposPage() {
                 {/* Portrait de Léo */}
                 <div className="relative flex-shrink-0 w-32 h-40 sm:w-40 sm:h-52">
                   <Image
-                    src="/images/leo-portrait.jpg"
+                    src="/images/leo-portrait.webp"
                     alt="Léo Maurice, fondateur de LM Espace Vert"
                     fill
                     className="rounded-2xl object-cover"
