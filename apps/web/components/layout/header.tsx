@@ -15,6 +15,8 @@ import {
   Flower2,
 } from 'lucide-react'
 import { MobileMenu } from './mobile-menu'
+import { ThemeToggle } from './theme-toggle'
+import { AccessibilityMenu } from './accessibility-menu'
 
 const navItems = [
   { href: '/services',     label: 'Services',     hasMega: true },
@@ -168,7 +170,13 @@ export function Header() {
           </nav>
 
           {/* ── Droite ── */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
+            {/* Accessibilité */}
+            <AccessibilityMenu />
+
+            {/* Thème clair/sombre */}
+            <ThemeToggle />
+
             {/* Téléphone (md+) */}
             <a
               href="tel:+33674734698"

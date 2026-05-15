@@ -119,6 +119,29 @@
 }
 
 /* ============================================================
+   DARK THEME (activé uniquement par le toggle utilisateur)
+   ============================================================ */
+:root[data-theme="dark"] {
+  --color-bg:            #0D0D0D;
+  --color-bg-subtle:     #141414;
+  --color-bg-elevated:   #1A1A1A;
+  --color-fg:            #F0F0EE;
+  --color-fg-muted:      #9CA3AF;
+  --color-fg-subtle:     #6B7280;
+  --color-primary:       #80BC00;
+  --color-primary-hover: #90D010;
+  --color-primary-fg:    #0D0D0D;
+  --color-cta:           #80BC00;
+  --color-cta-hover:     #90D010;
+  --color-green-light:   rgba(128, 188, 0, 0.12);
+  --color-green-medium:  #1F3021;
+  --color-border:        #2A2A2A;
+  --color-border-strong: #3A3A3A;
+  --color-focus:         #80BC00;
+  --color-shadow:        rgba(0,0,0,0.3);
+}
+
+/* ============================================================
    BASE STYLES
    ============================================================ */
 @layer base {

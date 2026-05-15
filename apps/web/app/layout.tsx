@@ -68,9 +68,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="fr"
+      suppressHydrationWarning
       className={`${raleway.variable} ${montserrat.variable} ${inter.variable}`}
     >
       <head>
+        {/* #1 No-flash: lit uniquement localStorage, défaut = light (jamais prefers-color-scheme) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(_){}})();`,
+          }}
+        />
         {/* #2 Preconnect hints for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
