@@ -174,7 +174,7 @@
     font-weight: 700;
     text-wrap: balance;
     line-height: 1.2;
-    color: #425D07;
+    color: var(--color-primary);
     letter-spacing: -0.01em;
   }
 
@@ -915,8 +915,8 @@ textarea:invalid:not(:placeholder-shown) {
   left: 0;
   right: 0;
   z-index: 49;
-  background: #FFFFFF;
-  border-top: 1px solid #EDEDED;
+  background: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-border);
   box-shadow: 0 -4px 16px rgba(0,0,0,0.07);
   padding: 10px 16px;
   display: flex;
@@ -1136,6 +1136,34 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 }
 
 /* ============================================================
+   MICRO-INTERACTIONS
+   ============================================================ */
+
+/* Smooth focus ring */
+*:focus-visible {
+  outline: 2px solid #80BC00;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Button press feedback */
+.btn-press:active {
+  transform: scale(0.97);
+}
+
+/* Link underline animation */
+.link-animated {
+  background-image: linear-gradient(#80BC00, #80BC00);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease;
+}
+.link-animated:hover {
+  background-size: 100% 2px;
+}
+
+/* ============================================================
    GARDEN CALENDAR
    ============================================================ */
 .calendar-month {
@@ -1163,3 +1191,197 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   font-weight: 700;
   flex-shrink: 0;
 }
+
+/* ============================================================
+   DARK MODE OVERRIDES
+   Correctifs pour composants à valeurs hex hardcodées.
+   L'attribut [data-theme="dark"] est posé sur <html> par
+   ThemeToggle via localStorage (jamais via prefers-color-scheme).
+   ============================================================ */
+
+/* Indique au navigateur d'adopter le rendu sombre (scrollbars, inputs, etc.) */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* --- Headings : #425D07 dur → couleur lisible sur fond sombre --- */
+[data-theme="dark"] h1:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]),
+[data-theme="dark"] h2:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]),
+[data-theme="dark"] h3:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]),
+[data-theme="dark"] h4:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]) {
+  color: var(--color-fg) !important;
+}
+
+/* --- Header principal --- */
+[data-theme="dark"] header {
+  background-color: var(--color-bg-elevated) !important;
+  border-bottom-color: var(--color-border) !important;
+}
+/* Liens de navigation */
+[data-theme="dark"] header nav a,
+[data-theme="dark"] header nav button:not([class*="bg-\[#80BC00\]"]):not([style]) {
+  color: var(--color-fg) !important;
+}
+[data-theme="dark"] header nav a:hover,
+[data-theme="dark"] header nav button:hover {
+  color: var(--color-cta) !important;
+}
+/* Téléphone dans le header */
+[data-theme="dark"] header a[href^="tel:"] {
+  color: var(--color-fg-muted) !important;
+}
+/* Boutons d'accessibilité et thème dans le header */
+[data-theme="dark"] header button.h-9 {
+  color: var(--color-fg-muted) !important;
+}
+[data-theme="dark"] header button.h-9:hover {
+  background-color: var(--color-bg-subtle) !important;
+  color: var(--color-fg) !important;
+}
+
+/* --- Mega-menu Services --- */
+[data-theme="dark"] #mega-menu-services .bg-white {
+  background-color: var(--color-bg-elevated) !important;
+  border-color: var(--color-border) !important;
+}
+[data-theme="dark"] #mega-menu-services .border-t {
+  border-color: var(--color-border) !important;
+}
+/* Hover items dans le mega-menu */
+[data-theme="dark"] #mega-menu-services a:hover {
+  background-color: var(--color-green-medium) !important;
+}
+
+/* --- Tous les panels / dropdowns (rôles ARIA) --- */
+[data-theme="dark"] [role="dialog"] {
+  background-color: var(--color-bg-elevated) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-fg);
+}
+[data-theme="dark"] [role="dialog"] p,
+[data-theme="dark"] [role="dialog"] span {
+  color: var(--color-fg-muted);
+}
+
+/* --- Sections de page avec bg-white --- */
+[data-theme="dark"] section.bg-white {
+  background-color: var(--color-bg) !important;
+}
+/* Sections with inline style backgroundColor #F7F5F0 (cream) */
+[data-theme="dark"] section[style*="F7F5F0"],
+[data-theme="dark"] section[style*="f7f5f0"] {
+  background-color: var(--color-bg-subtle) !important;
+}
+/* Sections bg-white générales (nav, aside…) */
+[data-theme="dark"] nav.bg-white,
+[data-theme="dark"] .bg-white:not(button):not(a):not(label):not([role="tab"]):not([role="button"]) {
+  background-color: var(--color-bg-elevated);
+}
+
+/* --- Cards / articles / listes d'items --- */
+[data-theme="dark"] article {
+  background-color: var(--color-bg-elevated);
+  border-color: var(--color-border);
+}
+/* Fond crème sur les li/cards d'items de service */
+[data-theme="dark"] li.bg-\[#F7F5F0\],
+[data-theme="dark"] [class*="bg-[#F7F5F0]"] {
+  background-color: var(--color-bg-subtle) !important;
+  border-color: var(--color-border) !important;
+}
+/* Details/summary FAQ */
+[data-theme="dark"] details {
+  border-color: var(--color-border) !important;
+}
+[data-theme="dark"] details summary {
+  background-color: var(--color-bg-elevated) !important;
+  color: var(--color-fg) !important;
+}
+[data-theme="dark"] details > div {
+  background-color: var(--color-bg-subtle) !important;
+  color: var(--color-fg-muted) !important;
+}
+
+/* --- Textes courants hardcodés --- */
+[data-theme="dark"] .text-\[#2F2F2F\] {
+  color: var(--color-fg) !important;
+}
+[data-theme="dark"] .text-\[#8C8F94\] {
+  color: var(--color-fg-muted) !important;
+}
+/* #425D07 sur fond sombre → utiliser la couleur primaire dark (lime) */
+[data-theme="dark"] .text-\[#425D07\]:not([style*="white"]) {
+  color: var(--color-primary) !important;
+}
+
+/* --- Borders courantes --- */
+[data-theme="dark"] .border-\[#EDEDED\] {
+  border-color: var(--color-border) !important;
+}
+[data-theme="dark"] .divide-\[#EDEDED\] > * + * {
+  border-color: var(--color-border) !important;
+}
+
+/* --- Inputs, textareas, selects --- */
+[data-theme="dark"] input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: var(--color-bg-elevated) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-fg) !important;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--color-fg-subtle) !important;
+}
+
+/* --- Sticky contact bar (mobile) --- */
+[data-theme="dark"] .sticky-contact-bar {
+  background-color: var(--color-bg-elevated) !important;
+  border-top-color: var(--color-border) !important;
+}
+
+/* --- Prose articles --- */
+[data-theme="dark"] .prose-article p,
+[data-theme="dark"] .prose-article li,
+[data-theme="dark"] .prose-article ul,
+[data-theme="dark"] .prose-article ol {
+  color: var(--color-fg-muted) !important;
+}
+[data-theme="dark"] .prose-article h2,
+[data-theme="dark"] .prose-article h3 {
+  color: var(--color-fg) !important;
+}
+[data-theme="dark"] .prose-article blockquote {
+  background-color: var(--color-bg-subtle) !important;
+  color: var(--color-fg-muted) !important;
+}
+[data-theme="dark"] .prose-article table {
+  border-color: var(--color-border) !important;
+}
+[data-theme="dark"] .prose-article th {
+  background-color: var(--color-bg-subtle) !important;
+  color: var(--color-fg) !important;
+}
+[data-theme="dark"] .prose-article td {
+  border-color: var(--color-border) !important;
+  color: var(--color-fg-muted) !important;
+}
+
+/* --- Breadcrumbs --- */
+[data-theme="dark"] nav[aria-label*="Ariane"],
+[data-theme="dark"] nav[aria-label*="ariane"] {
+  background-color: var(--color-bg-elevated) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* --- Announcement banner (fond vert foncé) — pas de changement --- */
+[data-theme="dark"] .announcement-banner {
+  /* garder le fond vert de la bannière */
+}
+
+/* --- Sections CTA (fond #0B3D2C explicite dans style=) — pas de changement ---
+   Les sections avec style="backgroundColor: '#0B3D2C'" ou similaire
+   conservent leur fond vert foncé ; pas besoin d'override car les inline
+   styles ont une spécificité plus haute que les classes CSS.
+--- */

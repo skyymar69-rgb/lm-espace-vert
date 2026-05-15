@@ -206,6 +206,42 @@ export default function ArrosageAutomatiquePage() {
         </div>
       </section>
 
+      {/* Zones d'intervention — chips */}
+      <section className="py-14 bg-white">
+        <div className="container mx-auto max-w-5xl px-4 sm:px-6 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>Nos secteurs</p>
+          <h2 className="font-display text-xl font-bold mb-5" style={{ color: '#425D07' }}>
+            Nous intervenons dans toutes les communes du nord-ouest lyonnais
+          </h2>
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              { slug: 'champagne', nom: "Champagne-au-Mont-d'Or" },
+              { slug: 'limonest', nom: 'Limonest' },
+              { slug: 'dardilly', nom: 'Dardilly' },
+              { slug: 'caluire', nom: 'Caluire-et-Cuire' },
+              { slug: 'ecuelly', nom: 'Écully' },
+              { slug: 'saint-cyr', nom: "Saint-Cyr-au-Mont-d'Or" },
+              { slug: 'curis', nom: "Curis-au-Mont-d'Or" },
+              { slug: 'tassin', nom: 'Tassin-la-Demi-Lune' },
+              { slug: 'collonges', nom: "Collonges-au-Mont-d'Or" },
+              { slug: 'francheville', nom: 'Francheville' },
+              { slug: 'neuville', nom: 'Neuville-sur-Saône' },
+              { slug: 'craponne', nom: 'Craponne' },
+            ].map((v) => (
+              <Link
+                key={v.slug}
+                href={`/secteur/${v.slug}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#EDEDED] px-4 py-1.5 text-xs font-medium hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+                style={{ color: '#2F2F2F', backgroundColor: '#F7F5F0' }}
+              >
+                <MapPin size={10} style={{ color: '#80BC00' }} aria-hidden="true" />
+                {v.nom}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section style={{ backgroundColor: '#0B3D2C' }} className="py-16 text-center">
         <div className="container mx-auto max-w-xl px-4 sm:px-6">

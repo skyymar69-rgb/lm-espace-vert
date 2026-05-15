@@ -62,7 +62,12 @@
       "Bash(curl -L \"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&q=85&fm=webp\" -o hero.webp --max-time 30)",
       "WebFetch(domain:www.senariz.fr)",
       "WebFetch(domain:www.alpaje.com)",
-      "WebFetch(domain:www.scenes-exterieures.com)"
+      "WebFetch(domain:www.scenes-exterieures.com)",
+      "WebFetch(domain:local-fr-public.s3.eu-west-3.amazonaws.com)",
+      "WebFetch(domain:www.lmespacevert.fr)",
+      "Bash(unzip -o \"C:/Users/Kayzen/Desktop/seo-geo-claude-skills-main.zip\" -d seo)",
+      "Bash(find /tmp/skills/marketing/marketingskills-main/skills -name \"SKILL.md\" | sort | head -40 *)",
+      "Bash(find /tmp/skills/ -type f | sort)"
     ]
   }
 }

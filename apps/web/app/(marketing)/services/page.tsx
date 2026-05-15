@@ -53,6 +53,19 @@ const services = [
       'Ramassage des feuilles',
       'Fertilisation et soins',
     ],
+    differentiants: [
+      'Contrat annuel avec planning détaillé — vous savez toujours quand nous passons',
+      'Matériels Husqvarna professionnels pour une coupe nette et respectueuse du végétal',
+      'Avantage fiscal SAP : 50% de crédit d\'impôt pour les particuliers',
+    ],
+    articles: [
+      { title: 'Comment préparer votre jardin au printemps à Lyon', slug: 'preparer-jardin-printemps-lyon' },
+      { title: 'Taille des haies : guide complet', slug: 'taille-haies-guide' },
+    ],
+    complementaires: [
+      { label: 'Élagage & Abattage', href: '/services/elagage-abattage' },
+      { label: 'Engazonnement', href: '/services/engazonnement' },
+    ],
   },
   {
     icon: TreePine,
@@ -67,6 +80,19 @@ const services = [
       'Broyage et évacuation des déchets',
       'Taille des arbres fruitiers',
       'Soins aux arbres remarquables',
+    ],
+    differentiants: [
+      'RC Pro élagage couvrant tous les risques sur vos biens et voisins',
+      'Broyage inclus : les déchets verts sont valorisés en paillage sur place',
+      'Certification CERTIPHYTO pour les traitements phytosanitaires si nécessaires',
+    ],
+    articles: [
+      { title: 'Quand tailler vos arbres à Lyon ?', slug: 'quand-tailler-arbres-lyon' },
+      { title: 'Élagage : les erreurs à éviter', slug: 'elagage-erreurs-eviter' },
+    ],
+    complementaires: [
+      { label: "Entretien d'espaces verts", href: '/services/entretien-espaces-verts' },
+      { label: 'Création de jardins', href: '/services/creation-jardins' },
     ],
   },
   {
@@ -83,6 +109,19 @@ const services = [
       'Plantation arbres et arbustes',
       'Aménagement extérieur complet',
     ],
+    differentiants: [
+      'Végétaux issus de pépinières locales rhône-alpines : plus résistants et écologiques',
+      'Conception paysagère sur-mesure avec plan 2D remis avant travaux',
+      'Service clé-en-main : de la conception à la première tonte, tout est géré',
+    ],
+    articles: [
+      { title: 'Créer un jardin méditerranéen à Lyon', slug: 'jardin-mediterraneen-lyon' },
+      { title: 'Les végétaux incontournables pour Lyon', slug: 'vegetaux-jardin-lyon' },
+    ],
+    complementaires: [
+      { label: 'Arrosage automatique', href: '/services/arrosage-automatique' },
+      { label: 'Maçonnerie paysagère', href: '/services/maconnerie-paysagere' },
+    ],
   },
   {
     icon: Layers,
@@ -97,6 +136,19 @@ const services = [
       'Murets et clôtures',
       'Escaliers extérieurs',
       'Dallage et pavage',
+    ],
+    differentiants: [
+      'Matériaux naturels locaux : pierre, ardoise et bois certifiés pour un rendu authentique',
+      'Maçonnerie paysagère intégrée au projet végétal pour une cohérence esthétique totale',
+      'Garantie décennale sur les ouvrages de maçonnerie, couverture RC Pro incluse',
+    ],
+    articles: [
+      { title: 'Terrasse en pierre : quel matériau choisir ?', slug: 'terrasse-pierre-matériaux' },
+      { title: 'Aménager ses allées de jardin', slug: 'allees-jardin-conseils' },
+    ],
+    complementaires: [
+      { label: 'Création de jardins', href: '/services/creation-jardins' },
+      { label: 'Arrosage automatique', href: '/services/arrosage-automatique' },
     ],
   },
   {
@@ -113,6 +165,19 @@ const services = [
       'Capteurs de pluie',
       'Maintenance annuelle',
     ],
+    differentiants: [
+      'Économie d\'eau certifiée : jusqu\'à 40% de consommation en moins vs arrosage manuel',
+      'Programmation intelligente avec capteurs météo intégrés — arrosage adaptatif',
+      'Service maintenance annuel inclus la première année pour un fonctionnement optimal',
+    ],
+    articles: [
+      { title: 'Arrosage automatique : quel système choisir ?', slug: 'arrosage-automatique-guide' },
+      { title: 'Économiser l\'eau au jardin', slug: 'economiser-eau-jardin' },
+    ],
+    complementaires: [
+      { label: 'Création de jardins', href: '/services/creation-jardins' },
+      { label: 'Engazonnement', href: '/services/engazonnement' },
+    ],
   },
   {
     icon: Flower2,
@@ -127,6 +192,19 @@ const services = [
       'Préparation du sol',
       'Prairie fleurie',
       'Regarnissage et rénovation',
+    ],
+    differentiants: [
+      'Mélange de semences adapté au climat lyonnais : ombre, soleil et mi-ombre selon votre terrain',
+      'Préparation du sol en profondeur — la base d\'une pelouse durable',
+      'Option prairie fleurie : biodiversité maximale et entretien réduit de 60%',
+    ],
+    articles: [
+      { title: 'Comment entretenir sa pelouse à Lyon ?', slug: 'entretien-pelouse-lyon' },
+      { title: 'Prairie fleurie vs gazon classique', slug: 'prairie-fleurie-vs-gazon' },
+    ],
+    complementaires: [
+      { label: 'Arrosage automatique', href: '/services/arrosage-automatique' },
+      { label: "Entretien d'espaces verts", href: '/services/entretien-espaces-verts' },
     ],
   },
 ]
@@ -239,6 +317,64 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
+
+                    {/* Pourquoi choisir LM Espace Vert pour ce service */}
+                    <div
+                      className="rounded-xl p-4 mb-5"
+                      style={{ backgroundColor: '#F7F5F0' }}
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#425D07' }}>
+                        Pourquoi choisir LM Espace Vert ?
+                      </p>
+                      <ul className="space-y-2">
+                        {service.differentiants.map((d) => (
+                          <li key={d} className="flex items-start gap-2 text-xs leading-relaxed" style={{ color: '#8C8F94' }}>
+                            <CheckCircle size={12} style={{ color: '#80BC00', flexShrink: 0, marginTop: 2 }} aria-hidden="true" />
+                            {d}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Articles liés */}
+                    <div className="mb-5">
+                      <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#8C8F94' }}>
+                        Articles liés
+                      </p>
+                      <div className="flex flex-col gap-1.5">
+                        {service.articles.map((a) => (
+                          <Link
+                            key={a.slug}
+                            href={`/blog/${a.slug}`}
+                            className="inline-flex items-center gap-1.5 text-xs transition-colors hover:underline"
+                            style={{ color: '#425D07' }}
+                          >
+                            <ArrowRight size={10} aria-hidden="true" />
+                            {a.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Services complémentaires */}
+                    <div className="mb-6">
+                      <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#8C8F94' }}>
+                        Services complémentaires
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {service.complementaires.map((s) => (
+                          <Link
+                            key={s.href}
+                            href={s.href}
+                            className="rounded-full border px-3 py-1 text-xs font-medium transition-colors hover:opacity-80"
+                            style={{ borderColor: '#EDEDED', color: '#2F2F2F', backgroundColor: '#ffffff' }}
+                          >
+                            {s.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
                     <div className="flex items-center gap-3">
                       <Link
                         href={`/services/${service.slug}`}

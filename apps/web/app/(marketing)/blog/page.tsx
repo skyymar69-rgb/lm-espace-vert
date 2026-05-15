@@ -79,7 +79,7 @@ export default async function BlogPage({
             </p>
           </div>
 
-          {/* Category filters */}
+          {/* Category filters — filtre rapide par query param */}
           <div className="mt-10 flex flex-wrap justify-center gap-2" role="navigation" aria-label="Filtrer par catégorie">
             <Link
               href="/blog"
@@ -106,6 +106,27 @@ export default async function BlogPage({
                 {cat} ({articles.filter((a) => a.category === cat).length})
               </Link>
             ))}
+          </div>
+
+          {/* Liens vers les pages catégories dédiées (pour le SEO) */}
+          <div className="mt-4 flex flex-wrap justify-center gap-2" aria-label="Pages catégories">
+            {[
+              { slug: 'conseils', label: 'Conseils' },
+              { slug: 'travaux', label: 'Travaux' },
+              { slug: 'zones', label: 'Zones' },
+              { slug: 'actualites', label: 'Actualités' },
+            ].map(({ slug, label }) => {
+              const count = articles.filter((a) => a.category.toLowerCase() === label.toLowerCase()).length
+              return (
+                <Link
+                  key={slug}
+                  href={`/blog/categorie/${slug}`}
+                  className="rounded-full border border-[#EDEDED] px-3 py-1 text-xs font-medium text-[#8C8F94] hover:border-[#80BC00] hover:text-[#80BC00] transition-colors"
+                >
+                  → {label} ({count})
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>

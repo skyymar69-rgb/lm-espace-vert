@@ -103,6 +103,14 @@ export function Header() {
 
   return (
     <>
+      {/* Skip link RGAA */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[9999] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-[#425D07] focus:font-semibold focus:text-sm focus:outline focus:outline-2 focus:outline-[#80BC00] focus:shadow-lg"
+      >
+        Aller au contenu
+      </a>
+
       <header
         className={`sticky top-0 z-40 bg-white border-b border-[#EDEDED] transition-shadow ${scrolled ? 'shadow-[rgba(0,0,0,0.06)_0px_4px_20px_0px]' : ''}`}
       >
@@ -112,7 +120,7 @@ export function Header() {
           <Link
             href="/"
             className="flex-shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#80BC00]"
-            aria-label="LM Espace Vert — retour à l'accueil"
+            aria-label="LM Espace Vert — Retour à l'accueil"
           >
             <Image
               src="/logo.png"

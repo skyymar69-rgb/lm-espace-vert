@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
+import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 type Realisation = {
   title: string
@@ -111,11 +112,52 @@ const categories = ['Tout', 'Création', 'Entretien', 'Élagage', 'Maçonnerie',
 
 export function RealisationsGallery() {
   const [activeCategory, setActiveCategory] = useState('Tout')
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const [lightboxVisible, setLightboxVisible] = useState(false)
 
   const filtered =
     activeCategory === 'Tout'
       ? realisations
       : realisations.filter((r) => r.category === activeCategory)
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index)
+    // trigger opacity animation on next tick
+    requestAnimationFrame(() => setLightboxVisible(true))
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeLightbox = useCallback(() => {
+    setLightboxVisible(false)
+    setTimeout(() => {
+      setLightboxIndex(null)
+      document.body.style.overflow = ''
+    }, 200)
+  }, [])
+
+  const goPrev = useCallback(() => {
+    if (lightboxIndex === null) return
+    setLightboxIndex((prev) => (prev === null ? null : (prev - 1 + filtered.length) % filtered.length))
+  }, [lightboxIndex, filtered.length])
+
+  const goNext = useCallback(() => {
+    if (lightboxIndex === null) return
+    setLightboxIndex((prev) => (prev === null ? null : (prev + 1) % filtered.length))
+  }, [lightboxIndex, filtered.length])
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowLeft') goPrev()
+      if (e.key === 'ArrowRight') goNext()
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [lightboxIndex, closeLightbox, goPrev, goNext])
+
+  const currentItem = lightboxIndex !== null ? filtered[lightboxIndex] : null
 
   return (
     <>
@@ -161,12 +203,17 @@ export function RealisationsGallery() {
             role="list"
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {filtered.map((r) => (
+            {filtered.map((r, index) => (
               <li key={r.title}>
                 <article className="group bg-white rounded-2xl overflow-hidden shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-[rgba(0,0,0,0.12)_0px_8px_40px_0px] transition-shadow">
                   {r.beforeAfter ? (
                     /* Before / After layout */
-                    <div className="relative h-60 overflow-hidden flex">
+                    <button
+                      type="button"
+                      className="relative h-60 overflow-hidden flex w-full text-left cursor-zoom-in"
+                      onClick={() => openLightbox(index)}
+                      aria-label={`Agrandir — ${r.title}`}
+                    >
                       <div className="relative flex-1 overflow-hidden">
                         <Image
                           src={r.beforeAfter.before}
@@ -220,10 +267,15 @@ export function RealisationsGallery() {
                         <p className="text-white font-semibold text-sm leading-snug">{r.title}</p>
                         <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.70)' }}>{r.year}</p>
                       </div>
-                    </div>
+                    </button>
                   ) : (
                     /* Standard single-image layout */
-                    <div className="relative h-60 overflow-hidden">
+                    <button
+                      type="button"
+                      className="relative h-60 overflow-hidden w-full cursor-zoom-in"
+                      onClick={() => openLightbox(index)}
+                      aria-label={`Agrandir — ${r.title}`}
+                    >
                       <Image
                         src={r.image}
                         alt={r.title}
@@ -248,7 +300,7 @@ export function RealisationsGallery() {
                         <p className="text-white font-semibold text-sm leading-snug">{r.title}</p>
                         <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.70)' }}>{r.year}</p>
                       </div>
-                    </div>
+                    </button>
                   )}
                   <div className="p-4">
                     <h2 className="font-semibold text-[#2F2F2F] text-sm leading-snug group-hover:text-[#80BC00] transition-colors">
@@ -278,6 +330,128 @@ export function RealisationsGallery() {
           )}
         </div>
       </section>
+
+      {/* ── LIGHTBOX ── */}
+      {lightboxIndex !== null && currentItem && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Image agrandie — ${currentItem.title}`}
+          className="fixed inset-0 z-[9000] flex items-center justify-center"
+          style={{
+            backgroundColor: 'rgba(0,0,0,0.92)',
+            opacity: lightboxVisible ? 1 : 0,
+            transition: 'opacity 0.2s ease',
+          }}
+          onClick={closeLightbox}
+        >
+          {/* Bouton fermer */}
+          <button
+            type="button"
+            onClick={closeLightbox}
+            aria-label="Fermer la lightbox"
+            className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+          >
+            <X size={22} aria-hidden="true" />
+          </button>
+
+          {/* Navigation précédent */}
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); goPrev() }}
+            aria-label="Image précédente"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+          >
+            <ChevronLeft size={28} aria-hidden="true" />
+          </button>
+
+          {/* Navigation suivant */}
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); goNext() }}
+            aria-label="Image suivante"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+          >
+            <ChevronRight size={28} aria-hidden="true" />
+          </button>
+
+          {/* Contenu centré */}
+          <div
+            className="relative flex flex-col items-center gap-4 px-16"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {currentItem.beforeAfter ? (
+              /* Avant/après côte à côte en lightbox */
+              <div className="flex gap-1 rounded-xl overflow-hidden" style={{ maxHeight: '90vh', maxWidth: '90vw' }}>
+                <div className="relative flex-1" style={{ minWidth: 0 }}>
+                  <div className="relative" style={{ width: '40vw', maxWidth: '500px', aspectRatio: '4/3' }}>
+                    <Image
+                      src={currentItem.beforeAfter.before}
+                      alt={`Avant — ${currentItem.title}`}
+                      fill
+                      sizes="40vw"
+                      className="object-cover"
+                      priority
+                    />
+                    <span
+                      className="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full"
+                      style={{ backgroundColor: 'rgba(0,0,0,0.6)', color: '#ffffff' }}
+                    >
+                      Avant
+                    </span>
+                  </div>
+                </div>
+                <div className="relative flex-1" style={{ minWidth: 0 }}>
+                  <div className="relative" style={{ width: '40vw', maxWidth: '500px', aspectRatio: '4/3' }}>
+                    <Image
+                      src={currentItem.beforeAfter.after}
+                      alt={`Après — ${currentItem.title}`}
+                      fill
+                      sizes="40vw"
+                      className="object-cover"
+                      priority
+                    />
+                    <span
+                      className="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full"
+                      style={{ backgroundColor: 'rgba(128,188,0,0.85)', color: '#ffffff' }}
+                    >
+                      Après
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              /* Image simple */
+              <div
+                className="relative rounded-xl overflow-hidden"
+                style={{ maxHeight: '90vh', maxWidth: '90vw', width: 'min(900px, 90vw)', aspectRatio: '16/10' }}
+              >
+                <Image
+                  src={currentItem.image}
+                  alt={currentItem.title}
+                  fill
+                  sizes="min(900px, 90vw)"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            )}
+
+            {/* Titre en bas */}
+            <div className="text-center">
+              <p className="text-white font-semibold text-base leading-snug">{currentItem.title}</p>
+              <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                {currentItem.category} · {currentItem.year}
+              </p>
+              {filtered.length > 1 && (
+                <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  {(lightboxIndex ?? 0) + 1} / {filtered.length} — Utilisez ← → pour naviguer
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

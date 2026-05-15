@@ -10,6 +10,8 @@ import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
 import { StatCounter } from '@/components/ui/stat-counter'
 import { FAQSection } from '@/components/ui/faq-section'
+import { ExitIntentPopup } from '@/components/ui/exit-intent-popup'
+import { NewsletterSignup } from '@/components/ui/newsletter-signup'
 
 export const metadata: Metadata = {
   title: "Paysagiste Saint-Didier-au-Mont-d'Or & Lyon — LM Espace Vert",
@@ -187,6 +189,9 @@ export default function HomePage() {
       <JsonLd data={faqPageJsonLd} />
       <JsonLd data={blogItemListJsonLd} />
 
+      {/* Exit intent popup — déclenché sur mouseleave vers barre navigateur */}
+      <ExitIntentPopup />
+
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end" aria-label="Hero — LM Espace Vert paysagiste">
         <Image
@@ -227,10 +232,16 @@ export default function HomePage() {
               Obtenir mon devis gratuit <ArrowRight size={14} />
             </Link>
             <Link
-              href="/realisations"
+              href="/tarifs"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold border border-white/35 text-white hover:bg-white/10 transition-colors"
             >
-              Voir nos 200+ réalisations
+              Estimer mon budget
+            </Link>
+            <Link
+              href="/realisations"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold border border-white/20 text-white/80 hover:bg-white/10 transition-colors"
+            >
+              Voir nos réalisations
             </Link>
           </div>
           {/* #5 — badge promo saisonnier */}
@@ -898,6 +909,11 @@ export default function HomePage() {
           >
             Ou envoyez-nous un message WhatsApp <ArrowRight size={13} />
           </a>
+
+          {/* Newsletter — inscription directement depuis la section CTA */}
+          <div className="mt-10 max-w-sm mx-auto">
+            <NewsletterSignup variant="compact" />
+          </div>
         </div>
       </section>
     </>

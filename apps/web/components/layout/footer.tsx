@@ -14,14 +14,19 @@ const serviceLinks = [
 ]
 
 const zones = [
-  { label: "Saint-Didier-au-Mont-d'Or", href: null },
+  { label: "Saint-Didier-au-Mont-d'Or",  href: null },
+  { label: "Champagne-au-Mont-d'Or",     href: '/secteur/champagne' },
+  { label: 'Limonest',                   href: '/secteur/limonest' },
+  { label: 'Dardilly',                   href: '/secteur/dardilly' },
   { label: 'Caluire-et-Cuire',           href: '/secteur/caluire' },
-  { label: 'Écully',                      href: '/secteur/ecuelly' },
-  { label: 'Tassin-la-Demi-Lune',         href: '/secteur/tassin' },
-  { label: 'Charbonnières-les-Bains',     href: null },
-  { label: 'Limonest',                    href: '/secteur/limonest' },
-  { label: 'Dardilly',                    href: '/secteur/dardilly' },
-  { label: "Champagne-au-Mont-d'Or",      href: '/secteur/champagne' },
+  { label: 'Écully',                     href: '/secteur/ecuelly' },
+  { label: "Saint-Cyr-au-Mont-d'Or",    href: '/secteur/saint-cyr' },
+  { label: "Curis-au-Mont-d'Or",        href: '/secteur/curis' },
+  { label: 'Tassin-la-Demi-Lune',       href: '/secteur/tassin' },
+  { label: "Collonges-au-Mont-d'Or",    href: '/secteur/collonges' },
+  { label: 'Francheville',              href: '/secteur/francheville' },
+  { label: 'Neuville-sur-Saône',        href: '/secteur/neuville' },
+  { label: 'Craponne',                  href: '/secteur/craponne' },
 ]
 
 export function Footer() {
@@ -180,7 +185,17 @@ export function Footer() {
                     )}
                   </li>
                 ))}
-                <li className="text-sm py-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>+ autres communes</li>
+                <li className="text-sm py-0.5 mt-1">
+                  <Link
+                    href="/secteurs"
+                    className="transition-colors font-semibold"
+                    style={{ color: '#80BC00' }}
+                    onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff' }}
+                    onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                  >
+                    → Voir toutes nos zones
+                  </Link>
+                </li>
               </ul>
             </div>
 

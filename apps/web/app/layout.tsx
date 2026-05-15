@@ -11,6 +11,11 @@ import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { BackToTop } from '@/components/ui/back-to-top'
 import { StickyContactBar } from '@/components/layout/sticky-contact-bar'
 import { AnnouncementBanner } from '@/components/layout/announcement-banner'
+// Vercel Analytics & Speed Insights
+// Si ces packages ne sont pas dans package.json, ajoutez-les :
+//   pnpm add @vercel/analytics @vercel/speed-insights
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   // #30 — metadataBase robuste avec fallback Vercel preview
@@ -230,8 +235,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex min-h-screen flex-col bg-[--color-bg] text-[--color-fg] font-sans antialiased">
         {/* #4 Skip link RGAA */}
         <a
-          href="#contenu-principal"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-[--color-bg-elevated] focus:px-4 focus:py-2 focus:text-[--color-fg] focus:outline focus:outline-2 focus:outline-[--color-focus]"
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-[#425D07] focus:font-semibold focus:text-sm focus:outline focus:outline-2 focus:outline-[#80BC00] focus:shadow-lg"
         >
           Aller au contenu principal
         </a>
@@ -247,7 +252,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dismissKey="banner-printemps-2026"
         />
 
-        <main id="contenu-principal" className="flex-1" tabIndex={-1}>
+        <main id="main-content" className="flex-1" tabIndex={-1}>
           {children}
         </main>
 
@@ -259,6 +264,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* #7 Back to top */}
         <BackToTop />
+
+        {/* Vercel Analytics & Speed Insights */}
+        <Analytics />
+        <SpeedInsights />
 
       </body>
     </html>

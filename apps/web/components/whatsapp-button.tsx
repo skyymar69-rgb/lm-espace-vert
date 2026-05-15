@@ -9,24 +9,78 @@ export function WhatsAppButton() {
   const href = `https://wa.me/${phone}?text=${message}`
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
-      {showTooltip && (
-        <div className="animate-fade-in rounded-lg bg-white px-4 py-3 shadow-lg border border-gray-100 text-sm text-gray-700 max-w-48 text-center leading-snug">
-          <p className="font-semibold text-gray-900">Léo Maurice</p>
-          <p>Réponse rapide sur WhatsApp</p>
-        </div>
-      )}
+    <div
+      className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2"
+      style={{ pointerEvents: 'none' }}
+    >
+      {/* Tooltip */}
+      <div
+        role="tooltip"
+        id="whatsapp-tooltip"
+        style={{
+          pointerEvents: 'none',
+          opacity: showTooltip ? 1 : 0,
+          transform: showTooltip ? 'translateY(0) scale(1)' : 'translateY(4px) scale(0.97)',
+          transition: 'opacity 0.2s, transform 0.2s',
+        }}
+        className="rounded-xl bg-white px-4 py-3 shadow-lg border border-gray-100 text-sm text-gray-700 max-w-48 text-center leading-snug"
+      >
+        <p className="font-semibold text-gray-900 text-xs">Discuter sur WhatsApp</p>
+        <p className="text-xs text-gray-500 mt-0.5">Réponse rapide garantie</p>
+      </div>
+
+      {/* Bouton WhatsApp */}
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contacter LM Espace Vert sur WhatsApp"
-        className="whatsapp-btn"
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
+        aria-label="Contacter LM Espace Vert sur WhatsApp — Discuter sur WhatsApp"
+        aria-describedby="whatsapp-tooltip"
         onFocus={() => setShowTooltip(true)}
         onBlur={() => setShowTooltip(false)}
+        style={{
+          pointerEvents: 'auto',
+          width: '56px',
+          height: '56px',
+          borderRadius: '50%',
+          backgroundColor: '#25D366',
+          color: '#ffffff',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 24px rgba(37,211,102,0.35)',
+          textDecoration: 'none',
+          animation: 'whatsappPulse 3s ease-out infinite',
+          transition: 'transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s',
+        }}
+        onMouseEnter={(e) => {
+          const el = e.currentTarget as HTMLAnchorElement
+          el.style.transform = 'scale(1.12)'
+          el.style.boxShadow = '0 8px 32px rgba(37,211,102,0.50)'
+          el.style.animation = 'none'
+          setShowTooltip(true)
+        }}
+        onMouseLeave={(e) => {
+          const el = e.currentTarget as HTMLAnchorElement
+          el.style.transform = 'scale(1)'
+          el.style.boxShadow = '0 4px 24px rgba(37,211,102,0.35)'
+          el.style.animation = 'whatsappPulse 3s ease-out infinite'
+          setShowTooltip(false)
+        }}
       >
+        <style>{`
+          @keyframes whatsappPulse {
+            0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+            70%  { box-shadow: 0 0 0 16px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+          }
+          @media (max-width: 640px) {
+            .whatsapp-float-btn {
+              width: 52px !important;
+              height: 52px !important;
+            }
+          }
+        `}</style>
         <svg
           width="28"
           height="28"

@@ -2016,6 +2016,770 @@ export const articles: Article[] = [
 <p>LM Espace Vert propose des devis gratuits et transparents pour tous vos projets à Lyon et dans un rayon de 20 km. <a href="/devis">Demandez un devis gratuit en ligne</a> ou appelez le <strong>06 74 73 46 98</strong> — Léo Maurice se déplace personnellement pour évaluer votre projet.</p>
     `.trim(),
   },
+  // ── 10 nouveaux articles Sprint 2 ──────────────────────────────────────────
+
+  {
+    slug: 'entretien-gazon-lyon-printemps',
+    category: 'Conseils',
+    title: 'Entretien du gazon au printemps à Lyon : le guide complet',
+    excerpt: 'Scarification, semis de rattrapage, premier désherbage, engrais de printemps... Notre guide semaine par semaine pour remettre votre pelouse lyonnaise en parfait état dès le retour des beaux jours.',
+    date: '2026-05-01',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    keywords: ['entretien gazon printemps Lyon', 'scarification pelouse Lyon', 'tonte gazon mars avril', 'engrais printemps pelouse'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Le printemps (mars–mai) est la période la plus importante pour la pelouse lyonnaise. Une bonne remise en état au printemps conditionne la santé du gazon pour toute la saison. Scarification, semis de rattrapage, engrais azoté et premier désherbage — voici le programme semaine par semaine.</p>
+</blockquote>
+
+<h2>Pourquoi le printemps est crucial pour votre gazon à Lyon</h2>
+<p>Après les pluies abondantes et les gelées de l'hiver lyonnais, votre pelouse sort souvent de mauvaise mine : feutre accumulé, zones clairsemées, mousses installées, sol compacté. Pas de panique — c'est la situation normale dans la région. Le printemps offre une fenêtre idéale pour remettre le gazon en état : températures douces (10–18°C), pluies régulières, ensoleillement croissant.</p>
+
+<p>LM Espace Vert réalise l'entretien printanier de pelouses dans toute la zone de <a href="/secteur/saint-didier">Saint-Didier-au-Mont-d'Or</a>, <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/dardilly">Dardilly</a> et des communes voisines. Voici notre programme professionnel que vous pouvez adapter en DIY.</p>
+
+<h2>Semaine par semaine : le calendrier de printemps</h2>
+
+<h3>Mi-mars : réveil en douceur</h3>
+<p>Dès que les températures nocturnes restent durablement au-dessus de 5°C (généralement mi-mars dans le Rhône), votre gazon sort de dormance. C'est le moment d'effectuer la <strong>première tonte haute</strong> : réglez la tondeuse à 6–7 cm. Cette coupe haute stimule la croissance latérale sans stresser les racines encore fragiles. Profitez-en pour inspecter l'état général : zones de mousse, plaques jaunies, taupinières, passages usés.</p>
+
+<h3>Fin mars – début avril : scarification</h3>
+<p>La <strong>scarification</strong> est l'opération la plus importante du printemps. Elle consiste à déchirer mécaniquement le feutre (accumulation de matières organiques mortes) qui s'est formé entre les brins de gazon et le sol. Ce feutre, s'il dépasse 1 cm, empêche l'eau, l'air et les nutriments de pénétrer dans le sol.</p>
+<ul>
+  <li>Utilisez un scarificateur électrique ou thermique (à louer chez les jardineries)</li>
+  <li>Passez une première fois en diagonale, puis une seconde fois perpendiculairement</li>
+  <li>Ramassez abondamment les déchets à la tondeuse ou au râteau</li>
+  <li>Votre pelouse ressemblera à un champ labouré — c'est normal, elle va vite repartir</li>
+</ul>
+
+<h3>Début avril : hersage et regarnissage</h3>
+<p>Après la scarification, <strong>hersez légèrement</strong> pour ameublir la surface du sol et créer un lit de germination. C'est le moment du <strong>semis de rattrapage</strong> : épandez du gazon à raison de 30–40 g/m² sur les zones clairsemées. Recouvrez légèrement à la main ou au râteau. Arrosez léger et régulier.</p>
+
+<h3>Mi-avril : premier apport d'engrais</h3>
+<p>Apportez un <strong>engrais de printemps riche en azote (N)</strong> pour stimuler la croissance et reverdir le gazon. Dans la région lyonnaise, les sols argileux peuvent nécessiter un apport complémentaire en calcium. Choisissez un engrais longue durée (3 mois) pour éviter une pousse trop explosive. Respectez les dosages — un excès d'azote favorise les maladies fongiques.</p>
+
+<h3>Fin avril – mai : premier désherbage</h3>
+<p>Les pissenlits, plantains, trèfles et autres adventices profitent de la remise en état pour s'installer. Désherbez sélectivement :</p>
+<ul>
+  <li><strong>Mécaniquement</strong> : couteau à désherber pour les pissenlits (ôter la racine pivotante)</li>
+  <li><strong>Thermique</strong> : désherbeur à flamme sur les allées et bordures</li>
+  <li><strong>Produits sélectifs</strong> : si la pression est forte, un désherbant sélectif gazon peut être utilisé (à éviter près des potagers)</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Période</th><th class="p-2 text-left">Action prioritaire</th><th class="p-2 text-left">Hauteur de coupe</th><th class="p-2 text-left">Arrosage</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Mi-mars</td><td class="p-2">1ère tonte haute + inspection</td><td class="p-2">6–7 cm</td><td class="p-2">Selon pluie</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Fin mars</td><td class="p-2">Scarification en profondeur</td><td class="p-2">—</td><td class="p-2">Léger post-scarif.</td></tr>
+<tr class="border-b"><td class="p-2">Début avril</td><td class="p-2">Semis de rattrapage + hersage</td><td class="p-2">5–6 cm</td><td class="p-2">2×/jour (semis)</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Mi-avril</td><td class="p-2">Engrais de printemps azoté</td><td class="p-2">4–5 cm</td><td class="p-2">Normal</td></tr>
+<tr class="border-b"><td class="p-2">Mai</td><td class="p-2">Désherbage + tonte régulière</td><td class="p-2">4–5 cm</td><td class="p-2">2× sem. si sec</td></tr>
+</tbody>
+</table></div>
+
+<h2>Les erreurs à éviter absolument</h2>
+<p>Même avec les meilleures intentions, certaines erreurs peuvent compromettre la remise en état de votre pelouse :</p>
+<ul>
+  <li><strong>Scarifier trop tôt</strong> : si le sol est encore détrempé ou gelé, vous compactez au lieu d'aérer</li>
+  <li><strong>Tondre trop court</strong> en mars : un gazon rasé au ras du sol se dessèche et ne résiste pas aux herbes invasives</li>
+  <li><strong>Sur-fertiliser</strong> : un excès d'azote provoque des coups de pouce puis une chute brutale, favorise les maladies et brûle les racines</li>
+  <li><strong>Ne pas arroser après le semis</strong> : les graines de gazon ont besoin d'une humidité constante les 3 premières semaines</li>
+</ul>
+
+<h2>Faire appel à LM Espace Vert pour la remise en état de printemps</h2>
+<p>Vous manquez de temps ou de matériel ? LM Espace Vert prend en charge la remise en état complète de votre pelouse au printemps : scarification, semis, engrais, premier désherbage. Nous intervenons dans tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou consultez notre service d'<a href="/services/entretien-espaces-verts">entretien d'espaces verts</a>.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Faut-il scarifier chaque printemps à Lyon ?</summary>
+  <div class="p-4"><p>Idéalement oui, surtout dans les jardins lyonnais avec des sols argileux qui se compactent facilement. Si votre feutre est inférieur à 1 cm, vous pouvez passer une année. La scarification d'automne (septembre) peut aussi remplacer celle du printemps si vous n'avez le temps que pour un seul passage.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quel engrais de printemps choisir pour un gazon lyonnais ?</summary>
+  <div class="p-4"><p>Choisissez un engrais NPK à prédominance azotée (ex. 20-5-10 ou 24-4-8) avec effet longue durée (3 mois). Sur les sols très argileux du nord lyonnais, un amendement calcique associé (chaux agricole) peut être bénéfique pour débloquer les nutriments. Évitez les engrais liquides à effet immédiat qui provoquent des à-coups de croissance.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'haies-persistantes-lyon-especes',
+    category: 'Conseils',
+    title: 'Meilleures haies persistantes pour Lyon nord : espèces et conseils',
+    excerpt: 'Laurier palme, Photinia, Pittosporum, Eleagnus... Quelles haies persistantes choisir pour le nord lyonnais ? Comparatif complet : croissance, résistance au gel, entretien requis.',
+    date: '2026-04-28',
+    readingTime: '6 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    keywords: ['haies persistantes Lyon', 'laurier haie Lyon', 'Photinia Lyon', 'haie persistante nord lyonnais'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Une haie persistante bien choisie pour le climat lyonnais doit résister aux hivers (gelées jusqu'à -15°C possibles), aux étés chauds et secs, et s'adapter aux sols souvent argileux du nord de l'agglomération. Voici notre sélection professionnelle.</p>
+</blockquote>
+
+<h2>Pourquoi choisir une haie persistante à Lyon nord ?</h2>
+<p>La haie persistante a l'avantage majeur de maintenir son feuillage toute l'année, offrant ainsi une intimité et une protection contre le vent constantes — particulièrement appréciables dans les quartiers résidentiels de <a href="/secteur/caluire">Caluire</a>, <a href="/secteur/limonest">Limonest</a>, <a href="/secteur/dardilly">Dardilly</a> et Saint-Didier-au-Mont-d'Or. Voici les espèces qui se comportent le mieux dans notre région.</p>
+
+<h2>Le Laurier palme (Prunus laurocerasus)</h2>
+<p>C'est la haie persistante la plus populaire dans le nord lyonnais. Robuste, dense, à croissance rapide (40–60 cm/an), il supporte les sols argileux et la mi-ombre. Ses grandes feuilles vernissées sont décoratives. Points de vigilance : il peut atteindre 4–6 m si non taillé, et ses fruits sont toxiques. Taille 2–3 fois/an au sécateur (jamais au taille-haie pour éviter les demi-feuilles).</p>
+<p><strong>Résistance au gel :</strong> jusqu'à -20°C. <strong>Exposition :</strong> soleil à mi-ombre. <strong>Sol :</strong> tous types, même argileux.</p>
+
+<h2>Le Photinia (Photinia × fraseri 'Red Robin')</h2>
+<p>Le Photinia est très apprécié pour ses nouvelles pousses rouge vif au printemps, qui tranchent sur le feuillage vert foncé persistant. Croissance moyenne (20–30 cm/an), il est parfait pour les haies de 1,5 à 3 m. Il préfère un sol bien drainé — attention dans les zones trop argileuses sans amendement. Taille légère 2–3 fois/an pour favoriser les nouvelles pousses rouges.</p>
+<p><strong>Résistance au gel :</strong> jusqu'à -15°C. <strong>Exposition :</strong> plein soleil. <strong>Sol :</strong> bien drainé, neutre à légèrement acide.</p>
+
+<h2>Le Pittosporum (Pittosporum tenuifolium)</h2>
+<p>Le Pittosporum est un arbuste élégant au feuillage persistant vert argenté ou panaché, très tendance dans les jardins contemporains lyonnais. Croissance lente à modérée. Ses fleurs printanières sont parfumées. Plus sensible au gel que le laurier : à réserver aux jardins abrités ou aux expositions est/ouest dans le Rhône.</p>
+<p><strong>Résistance au gel :</strong> jusqu'à -8 à -10°C (selon les hivers lyonnais, prévoir protection en cas de grand froid). <strong>Exposition :</strong> soleil à mi-ombre. <strong>Sol :</strong> bien drainé.</p>
+
+<h2>L'Eleagnus (Eleagnus × ebbingei)</h2>
+<p>L'Eleagnus est une des haies persistantes les plus résistantes disponibles pour notre région. Feuillage vert foncé dessus, argenté dessous (effet irisé au vent), croissance rapide (40–60 cm/an), résistant à la pollution, à la sécheresse et au sel. Parfait pour les haies écran anti-bruit. Ses petites fleurs automnales sont très parfumées. Taille annuelle en mars.</p>
+<p><strong>Résistance au gel :</strong> jusqu'à -20°C. <strong>Exposition :</strong> soleil à ombre. <strong>Sol :</strong> tous types.</p>
+
+<h2>Tableau comparatif des haies persistantes pour Lyon</h2>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Espèce</th><th class="p-2 text-left">Croissance/an</th><th class="p-2 text-left">Résistance gel</th><th class="p-2 text-left">Tailles/an</th><th class="p-2 text-left">Point fort</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Laurier palme</td><td class="p-2">40–60 cm</td><td class="p-2">–20°C</td><td class="p-2">2–3</td><td class="p-2">Polyvalence et robustesse</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Photinia 'Red Robin'</td><td class="p-2">20–30 cm</td><td class="p-2">–15°C</td><td class="p-2">2–3</td><td class="p-2">Feuillage rouge décoratif</td></tr>
+<tr class="border-b"><td class="p-2">Pittosporum</td><td class="p-2">15–25 cm</td><td class="p-2">–8 à –10°C</td><td class="p-2">1–2</td><td class="p-2">Élégance et parfum</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Eleagnus</td><td class="p-2">40–60 cm</td><td class="p-2">–20°C</td><td class="p-2">1</td><td class="p-2">Résistance extrême</td></tr>
+<tr class="border-b"><td class="p-2">If (Taxus baccata)</td><td class="p-2">10–20 cm</td><td class="p-2">–30°C</td><td class="p-2">1–2</td><td class="p-2">Longévité et topiaire</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Charme (Carpinus)</td><td class="p-2">30–50 cm</td><td class="p-2">–30°C</td><td class="p-2">1</td><td class="p-2">Semi-persistant, très résistant</td></tr>
+</tbody>
+</table></div>
+
+<h2>Nos conseils de plantation pour Lyon</h2>
+<p>Quelle que soit l'espèce choisie, la plantation en automne (octobre–novembre) est idéale pour les haies dans la région lyonnaise. Le sol encore chaud favorise l'enracinement avant l'hiver. En sol argileux, incorporez du sable grossier et du compost dans le trou de plantation. Paillez abondamment le premier été pour limiter le stress hydrique.</p>
+
+<p>LM Espace Vert réalise la plantation et l'entretien de haies dans tout le nord lyonnais. Consultez notre <a href="/services/taille-haies">service de taille de haies</a> ou <a href="/devis">demandez un devis gratuit</a>.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quelle haie persistante pousse le plus vite à Lyon ?</summary>
+  <div class="p-4"><p>Le Laurier palme et l'Eleagnus sont les plus rapides avec 40–60 cm de croissance annuelle. Si vous cherchez un écran rapide, ces deux espèces s'imposent. Pour une haie plus fine et raffinée, le Photinia offre un bon compromis entre vitesse et esthétisme.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quelle haie persistante demande le moins d'entretien ?</summary>
+  <div class="p-4"><p>L'Eleagnus est sans conteste la haie persistante la plus facile à entretenir : une taille annuelle en mars suffit. Il résiste également à la sécheresse, au vent et à la pollution. Le charme, bien que semi-persistant (il garde ses feuilles sèches en hiver), ne demande également qu'une taille par an.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'massif-fleuri-quatre-saisons-lyon',
+    category: 'Conseils',
+    title: 'Massif fleuri 4 saisons à Lyon : plantes et associations réussies',
+    excerpt: "Créer un massif qui fleurit toute l'année à Lyon : tulipes au printemps, lavande et gaura en été, asters en automne, hellébores en hiver. Nos associations et conseils pour le climat lyonnais.",
+    date: '2026-04-20',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    keywords: ['massif fleuri Lyon', 'massif 4 saisons Lyon', 'vivaces Lyon', 'plantation massif fleurs'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Un massif fleuri 4 saisons à Lyon repose sur un principe simple : associer des végétaux à floraisons décalées pour qu'il y ait toujours quelque chose en fleur, de janvier à décembre. Avec le bon choix d'espèces adaptées au climat lyonnais, c'est tout à fait réalisable sans entretien excessif.</p>
+</blockquote>
+
+<h2>La structure d'un massif 4 saisons réussi</h2>
+<p>Un massif harmonieux et fleuri toute l'année se construit en trois couches :</p>
+<ul>
+  <li><strong>La structure (arbustes persistants)</strong> : ils forment l'armature du massif en hiver, quand les vivaces sont en dormance</li>
+  <li><strong>Les vivaces</strong> : elles assurent la floraison principale de printemps à automne et reviennent chaque année</li>
+  <li><strong>Les bulbes et annuelles</strong> : ils complètent les vides et apportent une touche de couleur printanière ou estivale</li>
+</ul>
+
+<h2>Printemps (mars – mai) : l'explosion colorée</h2>
+<p>Le printemps lyonnais est la saison la plus généreuse pour les jardins. Profitez-en avec :</p>
+<ul>
+  <li><strong>Tulipes (Tulipa)</strong> : à planter en octobre-novembre, floraison mars-avril. Choisissez des variétés tardives (Darwin) qui s'acclimatent bien aux hivers lyonnais</li>
+  <li><strong>Narcisses (Narcissus)</strong> : plus naturels que les tulipes, ils se naturalisent facilement et reviennent d'année en année</li>
+  <li><strong>Pensées et myosotis</strong> : bisannuelles, elles couvrent le sol au printemps et cachent le feuillage des bulbes qui s'éteint</li>
+  <li><strong>Spirées (Spiraea)</strong> : arbustes à floraison blanche ou rose spectaculaire en avril-mai, très rustiques</li>
+</ul>
+
+<h2>Été (juin – septembre) : la plénitude</h2>
+<p>L'été lyonnais est chaud et peut être sec — choisissez des plantes résistantes à la chaleur :</p>
+<ul>
+  <li><strong>Lavande (Lavandula angustifolia 'Hidcote')</strong> : la reine des massifs estivaux lyonnais. Floraison juin-juillet, très mellifère, feuillage persistant argenté. À planter en plein soleil dans un sol bien drainé</li>
+  <li><strong>Sauge ornementale (Salvia nemorosa 'Caradonna')</strong> : épis violets de mai à septembre, résistante à la sécheresse, parfaite pour les massifs</li>
+  <li><strong>Gaura (Oenothera lindheimeri)</strong> : nuage de fleurs blanches et roses qui dansent au vent de juin à octobre. Tolère les étés chauds du Rhône</li>
+  <li><strong>Échinacée (Echinacea purpurea)</strong> : vivace majestueuse, floraison juillet-septembre, résistante à la chaleur</li>
+</ul>
+
+<h2>Automne (octobre – novembre) : les couleurs du soir</h2>
+<p>L'automne lyonnais est souvent doux et ensoleillé — profitez-en avec :</p>
+<ul>
+  <li><strong>Asters (Aster novi-belgii)</strong> : floraison spectaculaire en violet, rose ou blanc de septembre à novembre. Associez-les aux graminées pour un effet naturel</li>
+  <li><strong>Sédum / Orpin (Hylotelephium 'Herbstfreude')</strong> : fleurs roses en dôme, feuillage charnu, têtes florales décoratives même en hiver</li>
+  <li><strong>Anémone du Japon (Anemone × hybrida)</strong> : délicates fleurs blanches ou roses, floraison août-octobre</li>
+  <li><strong>Graminées ornementales</strong> : Miscanthus, Pennisetum — leurs aigrettes sont à leur apogée en automne et restent décoratives tout l'hiver</li>
+</ul>
+
+<h2>Hiver (décembre – février) : la discrétion élégante</h2>
+<p>L'hiver ne doit pas signifier massif mort. Des espèces bien choisies maintiennent l'intérêt visuel :</p>
+<ul>
+  <li><strong>Hellébore (Helleborus × hybridus)</strong> : fleurs de décembre à mars, feuillage persistant, parfait en sous-bois ou mi-ombre</li>
+  <li><strong>Cyclamen de Naples (Cyclamen hederifolium)</strong> : petites fleurs roses en septembre-novembre, feuillage argenté en hiver</li>
+  <li><strong>Skimmia japonica</strong> : arbuste persistant à baies rouges spectaculaires tout l'hiver</li>
+  <li><strong>Cornouiller (Cornus sanguinea)</strong> : rameaux rouges décoratifs tout l'hiver, feuillage automnal flamboyant</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Saison</th><th class="p-2 text-left">Plantes recommandées</th><th class="p-2 text-left">Couleurs</th><th class="p-2 text-left">Entretien</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Printemps</td><td class="p-2">Tulipes, narcisses, spirées</td><td class="p-2">Rouge, jaune, blanc, rose</td><td class="p-2">Désherbage, paillage</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Été</td><td class="p-2">Lavande, sauge, gaura, échinacée</td><td class="p-2">Violet, blanc, rose</td><td class="p-2">Arrosage si sec</td></tr>
+<tr class="border-b"><td class="p-2">Automne</td><td class="p-2">Asters, sédums, anémones</td><td class="p-2">Violet, rose, blanc</td><td class="p-2">Minimal</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Hiver</td><td class="p-2">Hellébores, cyclamens, skimmia</td><td class="p-2">Blanc, rose, rouge</td><td class="p-2">Aucun</td></tr>
+</tbody>
+</table></div>
+
+<h2>Créer votre massif 4 saisons avec LM Espace Vert</h2>
+<p>LM Espace Vert conçoit et réalise des massifs fleuris 4 saisons dans toute la zone lyonnaise. Nous sélectionnons les végétaux adaptés à votre exposition, votre sol et votre style. Consultez notre service de <a href="/services/creation-jardins">création de jardins</a> ou <a href="/devis">demandez un devis gratuit</a>.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quelle est la meilleure période pour planter un massif à Lyon ?</summary>
+  <div class="p-4"><p>L'automne (septembre-novembre) est idéal pour la majorité des arbustes et vivaces dans la région lyonnaise. Le sol est encore chaud, les pluies assurent l'arrosage naturel, et les plantes s'enracinent avant l'hiver. Les bulbes de printemps (tulipes, narcisses) doivent être plantés en octobre-novembre. Les annuelles se plantent au printemps après les dernières gelées (vers mi-avril dans le Rhône).</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Comment entretenir un massif fleuri avec peu de temps ?</summary>
+  <div class="p-4"><p>Le secret d'un massif peu gourmand en entretien est le paillage : une couche de 8 cm de BRF ou de copeaux réduit le désherbage de 80%. Choisissez des vivaces robustes qui n'ont pas besoin d'être arrosées une fois installées (lavande, gaura, sédum). Divisez les touffes tous les 3-4 ans pour maintenir leur vigueur. Une taille en fin d'hiver (mars) et un apport de compost annuel suffisent.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'terrassement-jardin-etapes-lyon',
+    category: 'Travaux',
+    title: 'Terrassement de jardin à Lyon : étapes, techniques et prix',
+    excerpt: 'Terrassement manuel ou mécanisé, évacuation des terres, sous-couche, nivelement... Tout comprendre sur le terrassement de jardin à Lyon, avec les prix au m² pratiqués dans le Rhône.',
+    date: '2026-04-15',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    keywords: ['terrassement jardin Lyon', 'terrassement paysagiste Lyon', 'prix terrassement jardin Rhône', 'création jardin étapes'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Le terrassement est l'étape fondatrice de tout projet de création de jardin ou d'aménagement extérieur. Un terrassement mal exécuté compromet la solidité des terrasses, le drainage du jardin et la longévité des plantations. Voici le guide complet de LM Espace Vert.</p>
+</blockquote>
+
+<h2>Qu'est-ce que le terrassement de jardin ?</h2>
+<p>Le terrassement désigne l'ensemble des opérations de déplacement et de mise en forme des terres pour préparer un site à recevoir un aménagement : terrasse, allée, pelouse, massifs, bassin. Il peut s'agir de décaisser (enlever de la terre), de remblayer (apporter de la terre), ou de mettre à niveau (égaliser).</p>
+
+<p>Dans la région lyonnaise, le terrassement est rendu complexe par plusieurs facteurs : sols argileux lourds, jardins souvent en pente (coteaux des Monts d'Or, bords de Saône), nappe phréatique parfois haute. LM Espace Vert réalise ces travaux dans tout le nord-ouest lyonnais : <a href="/secteur/saint-didier">Saint-Didier-au-Mont-d'Or</a>, <a href="/secteur/caluire">Caluire</a>, <a href="/secteur/dardilly">Dardilly</a> et communes voisines.</p>
+
+<h2>Étape 1 : Étude du sol et bornage</h2>
+<p>Avant tout terrassement, une analyse du sol s'impose. Dans le nord lyonnais, on rencontre fréquemment :</p>
+<ul>
+  <li><strong>Sols argileux</strong> : instables selon l'humidité, nécessitent un drainage préalable</li>
+  <li><strong>Présence de cailloux calcaires</strong> (Monts d'Or) : complique le travail mécanisé</li>
+  <li><strong>Couche de terre végétale fine</strong> (20–40 cm) : à conserver précieusement car difficile à remplacer</li>
+  <li><strong>Nappe perchée</strong> : à détecter avant de créer une cave ou un sous-sol aménagé</li>
+</ul>
+
+<h2>Étape 2 : Décapage de la terre végétale</h2>
+<p>La première opération consiste à <strong>décaper et stocker la terre végétale</strong> (horizon A, 20–40 cm). Cette terre précieuse, riche en micro-organismes, sera réutilisée lors de la finition. Elle ne doit pas être mélangée avec les terres de sous-sol argileuses ou calcaires.</p>
+
+<h2>Étape 3 : Terrassement manuel vs mécanisé</h2>
+<p>Le choix entre terrassement manuel et mécanisé dépend principalement de l'accessibilité du chantier :</p>
+<ul>
+  <li><strong>Terrassement mécanisé (mini-pelle, tractopelle)</strong> : rapide et économique pour les terrains accessibles. Le matériel peut entrer dans les jardins de plus de 2 m de large. Prix : 40–80 €/h selon le matériel</li>
+  <li><strong>Terrassement manuel</strong> : indispensable pour les jardins inaccessibles en machine (derrière une maison, escalier). Beaucoup plus coûteux en main-d'œuvre. Prix : 150–300 €/m³ excavé</li>
+  <li><strong>Mini-pelle télécommandée</strong> : solution intermédiaire pour les accès étroits (à partir de 80 cm de largeur)</li>
+</ul>
+
+<h2>Étape 4 : Évacuation des terres excédentaires</h2>
+<p>Les terres excavées doivent être évacuées en déchetterie professionnelle ou valorisées sur place (remblais, talus paysagers). À Lyon, l'évacuation coûte entre 100 et 150 €/tonne (benne + transport + dépôt). Pour 10 m³ de terre, comptez 1 à 2 bennes selon la densité.</p>
+
+<h2>Étape 5 : Sous-couche et drainage</h2>
+<p>Selon l'aménagement prévu, une sous-couche spécifique est nécessaire :</p>
+<ul>
+  <li><strong>Terrasse en dalle ou pavés</strong> : grave compactée (0/31.5) sur 15–20 cm, puis sable de pose sur 3–5 cm</li>
+  <li><strong>Pelouse ou plantation</strong> : vérification du drainage, pose de drains si nécessaire, retour de la terre végétale stockée</li>
+  <li><strong>Allée en gravier stabilisé</strong> : géotextile anti-repousse, puis gravier 8/16 sur 8–10 cm</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Type de travaux</th><th class="p-2 text-left">Prix indicatif à Lyon</th><th class="p-2 text-left">Délai type</th><th class="p-2 text-left">Remarque</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Décapage terre végétale</td><td class="p-2">8–15 €/m²</td><td class="p-2">1/2 journée</td><td class="p-2">Selon profondeur</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Terrassement mécanisé</td><td class="p-2">15–30 €/m³</td><td class="p-2">1–2 jours</td><td class="p-2">Accessible engin</td></tr>
+<tr class="border-b"><td class="p-2">Terrassement manuel</td><td class="p-2">150–300 €/m³</td><td class="p-2">Variable</td><td class="p-2">Inaccessible engin</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Évacuation terres (benne)</td><td class="p-2">100–150 €/tonne</td><td class="p-2">1 journée</td><td class="p-2">Transport inclus</td></tr>
+<tr class="border-b"><td class="p-2">Sous-couche grave + nivellement</td><td class="p-2">20–40 €/m²</td><td class="p-2">1 journée</td><td class="p-2">Selon finition</td></tr>
+</tbody>
+</table></div>
+
+<h2>Étape 6 : Finitions et contrôle</h2>
+<p>La dernière étape consiste à vérifier les niveaux, les pentes d'évacuation des eaux (minimum 2% vers l'extérieur pour les terrasses), et à préparer le chantier pour l'étape suivante (maçonnerie, plantation, engazonnement). Nos équipes utilisent des niveaux laser pour garantir des surfaces parfaitement planes.</p>
+
+<h2>Confier votre terrassement à LM Espace Vert</h2>
+<p>LM Espace Vert réalise tous les travaux de terrassement dans le nord-ouest lyonnais, de la préparation d'une simple terrasse à la création complète d'un jardin. Consultez notre service de <a href="/services/creation-jardins">création de jardins paysagers</a> et <a href="/services/maconnerie-paysagere">maçonnerie paysagère</a>. <a href="/devis">Demandez un devis gratuit</a> — nous nous déplaçons sans engagement.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Faut-il un permis de construire pour un terrassement de jardin à Lyon ?</summary>
+  <div class="p-4"><p>En général, non — un simple terrassement de jardin ne requiert pas de permis de construire dans les communes lyonnaises. Cependant, si le terrassement modifie le relief de plus de 2 m de hauteur ou s'il est situé en zone protégée (ABF — Architectes des Bâtiments de France), une déclaration préalable peut être exigée. Renseignez-vous auprès de votre mairie. LM Espace Vert vous accompagne dans ces démarches si nécessaire.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quelle est la meilleure saison pour terasser un jardin à Lyon ?</summary>
+  <div class="p-4"><p>Le printemps (mars-mai) et l'automne (septembre-novembre) sont les meilleures périodes pour les travaux de terrassement dans le Rhône. En été, les sols argileux se durcissent comme du béton et sont très difficiles à travailler. En hiver (décembre-février), le risque de gel rend les finitions délicates. Planifiez vos travaux hors périodes extrêmes pour de meilleurs résultats.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'paysagiste-neuville-sur-saone',
+    category: 'Zones',
+    title: 'Paysagiste Neuville-sur-Saône : LM Espace Vert à votre service',
+    excerpt: "LM Espace Vert intervient à Neuville-sur-Saône pour la création et l'entretien de jardins. Spécificités des jardins en bord de Saône et en pente, services proposés et témoignage client.",
+    date: '2026-05-08',
+    readingTime: '5 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    keywords: ['paysagiste Neuville-sur-Saône', 'jardin Neuville Saône', 'entretien jardin Neuville 69'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p>"LM Espace Vert est votre paysagiste local à Neuville-sur-Saône — une équipe qui connaît les spécificités de la commune, ses jardins en bord de Saône, ses coteaux et les contraintes particulières liées à la proximité du fleuve."</p>
+</blockquote>
+
+<h2>Neuville-sur-Saône : une commune aux jardins d'exception</h2>
+<p>Neuville-sur-Saône, chef-lieu du canton sur les rives de la Saône, possède des jardins très caractéristiques. La commune se divise en deux entités bien distinctes : les jardins des maisons de bord de Saône, souvent exposés à l'humidité et aux crues, et les jardins des quartiers perchés sur les coteaux, avec des pentes parfois importantes et une exposition plus sèche. LM Espace Vert maîtrise ces deux configurations pour des interventions précises et adaptées.</p>
+
+<h2>Les spécificités des jardins de Neuville-sur-Saône</h2>
+
+<h3>Les jardins en bord de Saône</h3>
+<p>Les propriétés situées à proximité immédiate de la Saône présentent des contraintes spécifiques :</p>
+<ul>
+  <li><strong>Sol alluvionnaire</strong> : riche mais parfois engorgé en eau lors des crues hivernales</li>
+  <li><strong>Risque d'inondation occasionnel</strong> : certaines zones sont en zone inondable — nous adaptons les plantations en conséquence (espèces tolérantes aux excès d'eau temporaires)</li>
+  <li><strong>Humidité élevée</strong> : favorable aux mousses et aux maladies fongiques — une aération correcte des massifs est indispensable</li>
+  <li><strong>Microclimat doux</strong> : la Saône tempère les températures et permet de cultiver des espèces moins rustiques</li>
+</ul>
+
+<h3>Les jardins en pente sur les coteaux</h3>
+<p>Les quartiers perchés de Neuville offrent de belles vues sur la vallée mais posent des défis techniques :</p>
+<ul>
+  <li><strong>Risque d'érosion</strong> : les fortes pluies lyonnaises peuvent éroder les talus non végétalisés ou non maintenus</li>
+  <li><strong>Maçonnerie de soutènement</strong> : murets en pierre sèche ou en gabions pour structurer les différents niveaux</li>
+  <li><strong>Accès difficile</strong> : certains jardins en pente nécessitent un travail manuel — LM Espace Vert est équipé pour ces configurations</li>
+  <li><strong>Exposition sud ou est</strong> : ces jardins bénéficient d'un excellent ensoleillement, favorable aux plantes méditerranéennes</li>
+</ul>
+
+<h2>Nos services à Neuville-sur-Saône</h2>
+<p>LM Espace Vert propose à Neuville-sur-Saône l'ensemble de ses prestations :</p>
+<ul>
+  <li><a href="/services/entretien-espaces-verts">Entretien régulier</a> : tonte, taille des haies, désherbage, ramassage de feuilles</li>
+  <li><a href="/services/creation-jardins">Création de jardins</a> : conception, terrassement, plantation, engazonnement</li>
+  <li><a href="/services/maconnerie-paysagere">Maçonnerie paysagère</a> : terrasses, allées, murets de soutènement, escaliers de jardin</li>
+  <li><a href="/services/elagage-abattage">Élagage et abattage</a> : arbres de bord de Saône, peupliers, saules — nous intervenons en sécurité</li>
+  <li><a href="/services/arrosage-automatique">Arrosage automatique</a> : systèmes enterrés avec programmateur connecté</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Prestation</th><th class="p-2 text-left">Fréquence</th><th class="p-2 text-left">Prix indicatif</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Tonte pelouse (200 m²)</td><td class="p-2">Bimensuelle en saison</td><td class="p-2">À partir de 60 €</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Taille haie (10 ml)</td><td class="p-2">2–3×/an</td><td class="p-2">À partir de 80 €</td></tr>
+<tr class="border-b"><td class="p-2">Entretien annuel complet</td><td class="p-2">Contrat annuel</td><td class="p-2">Sur devis</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Création jardin complet</td><td class="p-2">Unique</td><td class="p-2">Sur devis</td></tr>
+</tbody>
+</table></div>
+
+<h2>Témoignage client à Neuville-sur-Saône</h2>
+<p><em>"Nous avons confié à LM Espace Vert la rénovation complète de notre jardin en pente à Neuville. L'équipe a créé deux terrasses reliées par un escalier en pierre, planté une haie de lauriers pour nous isoler de la rue et installé un système d'arrosage automatique. Le résultat dépasse nos attentes — un vrai jardin paysager sur un terrain que nous pensions impossible à aménager."</em><br>— Famille B., propriétaires à Neuville-sur-Saône</p>
+
+<h2>Votre devis gratuit à Neuville-sur-Saône</h2>
+<p>LM Espace Vert se déplace sans engagement à Neuville-sur-Saône pour évaluer votre projet. Appelez-nous au <strong>06 74 73 46 98</strong> ou <a href="/devis">demandez un devis en ligne</a>. Notre base à Saint-Didier-au-Mont-d'Or est à 10 minutes de Neuville — nous assurons des délais d'intervention rapides.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">LM Espace Vert intervient-il régulièrement à Neuville-sur-Saône ?</summary>
+  <div class="p-4"><p>Oui. Neuville-sur-Saône fait partie de notre zone d'intervention principale. Nous y réalisons des interventions d'entretien régulier et des chantiers de création plusieurs fois par semaine. La distance de 10 km depuis notre base de Saint-Didier-au-Mont-d'Or permet des délais d'intervention très rapides.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quelles plantes recommandez-vous pour un jardin en bord de Saône ?</summary>
+  <div class="p-4"><p>Pour les jardins proches de la Saône, nous recommandons des espèces tolérantes aux sols humides : saules pleureurs, aulnes, ligulaires, phragmites décoratifs, iris des marais. Pour les zones hors inondation, les vivaces classiques conviennent très bien. Évitez les plantes méditerranéennes (lavande, cistus) qui détestent les sols engorgés.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'paysagiste-francheville',
+    category: 'Zones',
+    title: 'Paysagiste Francheville : création et entretien de jardins',
+    excerpt: "Paysagiste à Francheville (69340) : LM Espace Vert intervient pour la création et l'entretien de jardins dans cette commune résidentielle de l'ouest lyonnais. Grands jardins, haies, terrasses.",
+    date: '2026-05-05',
+    readingTime: '5 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    keywords: ['paysagiste Francheville', 'jardin Francheville 69340', 'entretien jardin Francheville', 'création jardin ouest Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Francheville</strong> (69340) est une commune résidentielle de l'ouest lyonnais reconnue pour ses quartiers pavillonnaires et ses grandes propriétés avec jardins. LM Espace Vert y intervient régulièrement pour des projets de création et d'entretien de jardins.</p>
+</blockquote>
+
+<h2>Francheville : une commune où le jardin est une priorité</h2>
+<p>Avec une population de plus de 14 000 habitants, Francheville est l'une des communes les plus verdoyantes de la première couronne lyonnaise. Ses quartiers (Le Pérollier, Charbonnières-les-Bains limitrophe, Le Bourg) regroupent de nombreuses propriétés avec jardins de taille importante — un terrain de jeu idéal pour les paysagistes.</p>
+
+<h2>Les spécificités des jardins de Francheville</h2>
+
+<h3>De grands jardins pavillonnaires</h3>
+<p>Contrairement à Lyon intra-muros, les propriétés de Francheville disposent souvent de jardins de 300 à plus de 1 000 m². Cette surface permet des projets ambitieux : grande pelouse, potager, terrasse, haies de clôture, verger... Ces jardins méritent une conception réfléchie pour concilier esthétisme et facilité d'entretien.</p>
+
+<h3>Sols et exposition</h3>
+<p>Les sols de Francheville sont principalement argilo-limoneux, avec une bonne fertilité naturelle mais un drainage parfois insuffisant. L'exposition varie fortement selon les quartiers : les zones basses (bords du Charbonnières) sont plus fraîches et ombragées, les hauteurs (Le Pérollier) bénéficient d'un excellent ensoleillement.</p>
+
+<h3>Des haies et des clôtures végétales</h3>
+<p>Dans les quartiers pavillonnaires de Francheville, la haie de clôture est omniprésente. LM Espace Vert entretient et renouvelle régulièrement les haies de lauriers, de thuyas, de photinias dans toute la commune.</p>
+
+<h2>Nos services à Francheville</h2>
+<ul>
+  <li><strong>Entretien annuel</strong> : contrats sur mesure incluant tonte, taille de haies, désherbage et soins saisonniers</li>
+  <li><strong>Création de jardins</strong> : du plan de composition à la plantation finale, en passant par le terrassement et la maçonnerie</li>
+  <li><strong>Rénovation de jardins existants</strong> : replantation, réorganisation, modernisation des aménagements vieillissants</li>
+  <li><strong>Arrosage automatique</strong> : indispensable pour les grandes surfaces lyonnaises en été</li>
+  <li><strong>Élagage et abattage</strong> : arbres matures et forestiers fréquents dans les propriétés franchévilardes</li>
+</ul>
+
+<h2>Pourquoi choisir LM Espace Vert à Francheville ?</h2>
+<p>LM Espace Vert est basé à Saint-Didier-au-Mont-d'Or, à 15 minutes de Francheville. Nous connaissons les spécificités de l'ouest lyonnais : les sols, le microclimat, les essences adaptées et les attentes des propriétaires de la région. Nos équipes interviennent avec du matériel professionnel, et nous proposons des <a href="/services/entretien-espaces-verts">contrats d'entretien</a> flexibles adaptés à votre emploi du temps.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Service</th><th class="p-2 text-left">Détails</th><th class="p-2 text-left">Délai devis</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Entretien jardin</td><td class="p-2">Contrat hebdomadaire, bimensuel ou mensuel</td><td class="p-2">48h</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Création jardin</td><td class="p-2">Visite + plan + devis détaillé</td><td class="p-2">1 semaine</td></tr>
+<tr class="border-b"><td class="p-2">Taille de haie</td><td class="p-2">Intervention ponctuelle ou contrat</td><td class="p-2">48h</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Élagage</td><td class="p-2">Visite obligatoire avant devis</td><td class="p-2">3–5 jours</td></tr>
+</tbody>
+</table></div>
+
+<h2>Contactez LM Espace Vert à Francheville</h2>
+<p>Vous êtes propriétaire à Francheville et souhaitez valoriser votre jardin ? LM Espace Vert est à votre disposition. Appelez le <strong>06 74 73 46 98</strong> ou <a href="/devis">demandez un devis gratuit en ligne</a>. Nous nous déplaçons dans toute la commune sans engagement pour évaluer votre projet et vous proposer une solution adaptée à votre budget et à vos envies.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">LM Espace Vert peut-il gérer entièrement mon jardin à Francheville ?</summary>
+  <div class="p-4"><p>Absolument. Nous proposons des contrats d'entretien complets qui couvrent toutes les interventions annuelles : tonte bimensuelle, taille des haies 2–3 fois/an, désherbage des massifs, ramassage des feuilles, scarification et regarnissage de la pelouse. Un interlocuteur unique, les mêmes équipes qui connaissent votre jardin — c'est notre engagement.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quel budget prévoir pour créer un jardin à Francheville ?</summary>
+  <div class="p-4"><p>Pour une création de jardin complète à Francheville (terrassement, allées, massifs, pelouse, arrosage), il faut généralement compter entre 80 et 200 €/m² selon la complexité et les matériaux choisis. Un jardin de 300 m² représente donc un budget de 24 000 à 60 000 €. Nous proposons des solutions adaptées à tous les budgets, et un devis détaillé et transparent après visite gratuite.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'desherbage-naturel-jardin-lyon',
+    category: 'Conseils',
+    title: 'Désherbage naturel sans pesticides à Lyon : 7 méthodes efficaces',
+    excerpt: 'Paillage, binette, vinaigre blanc, bicarbonate, eau bouillante, désherbage thermique... Comparatif des méthodes de désherbage naturel pour les jardins lyonnais, sans recours aux herbicides.',
+    date: '2026-04-10',
+    readingTime: '6 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    keywords: ['désherbage naturel Lyon', 'désherbage sans pesticides', 'mauvaises herbes jardin Lyon', 'écologie jardin Rhône'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Le glyphosate et la plupart des herbicides de synthèse sont interdits aux particuliers depuis 2019 en France. LM Espace Vert n'en utilise pas non plus dans ses interventions professionnelles. Voici notre guide complet des alternatives naturelles pour un désherbage efficace et respectueux de l'environnement.</p>
+</blockquote>
+
+<h2>Pourquoi désherber naturellement à Lyon ?</h2>
+<p>Dans la région lyonnaise, les mauvaises herbes peuvent être envahissantes : le pissenlit, le plantain, le liseron et le chiendent s'installent rapidement dans les massifs et les allées. La tentation d'utiliser un herbicide chimique est grande, mais les alternatives naturelles, bien appliquées, sont tout aussi efficaces pour les jardins de Saint-Didier-au-Mont-d'Or, <a href="/secteur/caluire">Caluire</a>, <a href="/secteur/dardilly">Dardilly</a> et communes voisines.</p>
+
+<h2>Méthode 1 : Le paillage préventif (la plus efficace)</h2>
+<p>Le paillage est de loin la méthode la plus efficace et la plus durable. En couvrant le sol de 8 à 10 cm de matière organique (BRF, copeaux, paille), vous privez les graines de mauvaises herbes de la lumière nécessaire à leur germination. Résultat : 80 à 90% de réduction du désherbage. Renouvelez le paillage une fois par an.</p>
+
+<h2>Méthode 2 : La binette et le sarcloir</h2>
+<p>Pour les massifs non paillés, la binette reste l'outil numéro 1. Le principe : travailler superficiellement (2–3 cm de profondeur) pour couper les racines des adventices au niveau du collet. <strong>Le bon moment</strong> : par temps sec, le matin. Les plantes déracinées sèchent rapidement au soleil. "Bine le matin pour le lendemain" — l'adage du jardinier reste valable. Évitez de retourner le sol en profondeur : cela ramène en surface des graines enfouies.</p>
+
+<h2>Méthode 3 : L'eau bouillante</h2>
+<p>L'eau à ébullition est une arme redoutable contre les herbes des allées et des jointures de dallage. Versée directement sur les plantes, elle détruit les cellules végétales instantanément. Simple, gratuit, immédiatement efficace. Inconvénients : action localisée, nécessite de répéter l'opération, et risque de brûlure pour le jardinier.</p>
+
+<h2>Méthode 4 : Le vinaigre blanc concentré</h2>
+<p>Le vinaigre blanc à 20° de concentration (disponible en grandes surfaces ou en jardineries), additionné de savon noir (agent mouillant) pour améliorer l'adhérence, est efficace sur les jeunes pousses d'adventices. Pulvérisez par temps ensoleillé et sans vent. <strong>Attention</strong> : le vinaigre acidifie légèrement le sol — à ne pas utiliser massivement ni à répéter trop souvent sur les mêmes zones, surtout sur les sols déjà acides.</p>
+
+<h2>Méthode 5 : Le bicarbonate de soude</h2>
+<p>Le bicarbonate de soude (500 g dans 5 litres d'eau) perturbe le fonctionnement cellulaire des plantes en modifiant leur osmose. Efficace sur les herbes annuelles dans les jointures des terrasses. Moins agressif que le vinaigre. À répéter après les pluies.</p>
+
+<h2>Méthode 6 : Le désherbage thermique (flamme ou vapeur)</h2>
+<p>Le désherbage thermique utilise la chaleur pour détruire les mauvaises herbes :</p>
+<ul>
+  <li><strong>Désherbeur à flamme</strong> (gaz) : efficace, rapide, adapté aux grandes surfaces d'allées. Attention au risque d'incendie en période sèche — jamais sur paillage végétal</li>
+  <li><strong>Désherbeur à vapeur</strong> : plus sûr, pas de risque d'incendie, efficace même en sous-paillage. Plus lent mais sans danger</li>
+  <li><strong>Principe</strong> : on ne brûle pas la plante, on détruit ses cellules. Un passage de 2–3 secondes suffit</li>
+</ul>
+
+<h2>Méthode 7 : Le géotextile (anti-repousse)</h2>
+<p>Pour les nouvelles plantations, le feutre de paysagiste installé sous le paillage forme une barrière physique quasi-infranchissable pour les mauvaises herbes. Percez-le à l'emplacement de chaque plant. Durée de vie : 10–15 ans. À coupler avec un paillage esthétique par-dessus (copeaux, graviers).</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Méthode</th><th class="p-2 text-left">Efficacité</th><th class="p-2 text-left">Coût</th><th class="p-2 text-left">Meilleur usage</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Paillage</td><td class="p-2">Très haute</td><td class="p-2">Moyen</td><td class="p-2">Massifs, sous arbustes</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Binette</td><td class="p-2">Haute</td><td class="p-2">Faible</td><td class="p-2">Massifs, potager</td></tr>
+<tr class="border-b"><td class="p-2">Eau bouillante</td><td class="p-2">Haute (choc)</td><td class="p-2">Très faible</td><td class="p-2">Allées, dallage</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Vinaigre blanc</td><td class="p-2">Moyenne</td><td class="p-2">Faible</td><td class="p-2">Jeunes pousses, joints</td></tr>
+<tr class="border-b"><td class="p-2">Thermique flamme</td><td class="p-2">Haute</td><td class="p-2">Moyen</td><td class="p-2">Grandes allées</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Géotextile</td><td class="p-2">Très haute</td><td class="p-2">Moyen</td><td class="p-2">Nouvelles plantations</td></tr>
+</tbody>
+</table></div>
+
+<h2>LM Espace Vert : désherbage 100% naturel</h2>
+<p>LM Espace Vert s'engage à n'utiliser aucun herbicide chimique dans ses interventions. Notre équipe combine paillage, désherbage mécanique et thermique pour des résultats durables dans le respect de votre santé et de l'environnement. <a href="/services/entretien-espaces-verts">Découvrez nos services d'entretien</a> ou <a href="/devis">demandez un devis gratuit</a>.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Le vinaigre blanc détruit-il les mauvaises herbes en profondeur à Lyon ?</summary>
+  <div class="p-4"><p>Le vinaigre blanc agit sur les parties aériennes de la plante et peut tuer les racines superficielles des herbes annuelles. En revanche, les plantes vivaces à racines profondes (liseron, chiendent, pissenlit) repoussent à partir de leurs racines non atteintes. Pour ces espèces tenaces, la combinaison binette + arrachage manuel + paillage est plus efficace sur le long terme.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Comment désherber naturellement entre les dalles de ma terrasse lyonnaise ?</summary>
+  <div class="p-4"><p>Pour les joints de terrasse, nous recommandons la combinaison eau bouillante + vinaigre blanc (pour les plantes récalcitrantes) + jointement à la résine de scellement pour éviter toute repousse future. Si les joints sont importants, un rejointement au mortier de chaux fin ou à la résine époxy élimine définitivement le problème.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'plantation-arbres-fruitiers-lyon',
+    category: 'Conseils',
+    title: 'Planter des arbres fruitiers à Lyon : espèces adaptées et conseils',
+    excerpt: 'Pommiers, poiriers, cerisiers, pêchers adaptés au climat lyonnais : espèces recommandées, exposition, préparation du sol, taille de formation et protection contre le gel tardif.',
+    date: '2026-04-05',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&q=80',
+    keywords: ['arbres fruitiers Lyon', 'planter pommier Lyon', 'verger jardin lyonnais', 'fruitiers nord Rhône'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> La région lyonnaise est favorable à la plupart des arbres fruitiers des zones tempérées. Le climat semi-continental (hivers froids, étés chauds) convient bien aux pommiers, poiriers et cerisiers. Les pêchers et les abricotiers demandent une exposition protégée du gel printanier. Voici notre guide de sélection et de plantation.</p>
+</blockquote>
+
+<h2>Le climat lyonnais et les arbres fruitiers</h2>
+<p>Lyon bénéficie d'un excellent climat pour la culture fruitière : les hivers froids permettent la vernalisation (repos hivernal indispensable aux fruitiers), les printemps doux favorisent la floraison et la pollinisation, et les étés chauds assurent une bonne maturation des fruits. Le principal risque est le <strong>gel tardif de printemps</strong> (gelées en mars-avril), qui peut brûler les fleurs des espèces à floraison précoce comme le pêcher et l'abricotier.</p>
+
+<h2>Les fruitiers incontournables pour le jardin lyonnais</h2>
+
+<h3>Le pommier (Malus domestica)</h3>
+<p>Le pommier est l'arbre fruitier le plus adapté à la région lyonnaise. Rustique (résiste à -25°C), il s'accommode de tous les types de sols (y compris argileux) et fleurit assez tard pour éviter les gelées. <strong>Variétés recommandées pour Lyon</strong> : Chantecler (tardive, excellente conservation), Reine des Reinettes (mi-saison, très aromatique), Goldrush (tardive, résistante aux maladies). Évitez les variétés très précoces (Gala) dans les zones froides du nord lyonnais.</p>
+
+<h3>Le poirier (Pyrus communis)</h3>
+<p>Le poirier demande un sol profond et un peu plus de chaleur que le pommier. Il convient bien aux expositions sud et sud-est sur les coteaux lyonnais. <strong>Variétés recommandées</strong> : Williams Bon Chrétien (août), Conférence (septembre, très productive), Beurré Hardy (septembre-octobre, rustique). Le poirier est autofertile mais donne de meilleurs résultats avec un pollinisateur de la même période.</p>
+
+<h3>Le cerisier (Prunus avium)</h3>
+<p>Le cerisier est magnifique au jardin et bien adapté aux sols calcaires du nord lyonnais. <strong>Variétés recommandées</strong> : Burlat (très précoce, fin mai), Reverchon (mi-saison, résistante aux maladies), Stella (autofertile — très pratique pour les petits jardins). Le gros problème du cerisier à Lyon : les oiseaux, et la mouche de la cerise. Utilisez des filets de protection si vous voulez profiter de la récolte.</p>
+
+<h3>Le pêcher (Prunus persica)</h3>
+<p>Le pêcher est possible à Lyon mais demande une exposition abritée (mur exposé au sud, espace protégé du vent de nord-est). Sa floraison très précoce (début mars) le rend vulnérable aux gelées tardives. <strong>Variétés recommandées</strong> : Redhaven (mi-saison), Dixired (précoce mais tolérante), pêches de vigne (plus rustiques). La cloque (maladie fongique) est à surveiller — un traitement préventif à la bouillie bordelaise avant le débourrement est indispensable à Lyon.</p>
+
+<h2>Exposition et préparation du sol</h2>
+<p>Pour tous les fruitiers, voici les règles de base dans la région lyonnaise :</p>
+<ul>
+  <li><strong>Exposition</strong> : plein soleil obligatoire (minimum 6h/jour). Orientez vos plantations au sud, sud-est ou est</li>
+  <li><strong>Sol</strong> : profond (50 cm minimum), bien drainé. Amendez les sols argileux avec du sable grossier et du compost</li>
+  <li><strong>Espacement</strong> : selon le porte-greffe choisi — demandez conseil à votre pépiniériste lyonnais</li>
+  <li><strong>Période de plantation</strong> : novembre à mars (hors gel), de préférence en novembre dans le Rhône</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Espèce</th><th class="p-2 text-left">Rusticité</th><th class="p-2 text-left">Risque gel tardif</th><th class="p-2 text-left">Sol préféré</th><th class="p-2 text-left">Difficulté</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Pommier</td><td class="p-2">–25°C</td><td class="p-2">Faible</td><td class="p-2">Tous types</td><td class="p-2">Facile</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Poirier</td><td class="p-2">–20°C</td><td class="p-2">Moyen</td><td class="p-2">Profond, bien drainé</td><td class="p-2">Moyen</td></tr>
+<tr class="border-b"><td class="p-2">Cerisier</td><td class="p-2">–25°C</td><td class="p-2">Moyen</td><td class="p-2">Calcaire bien drainé</td><td class="p-2">Facile</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Pêcher</td><td class="p-2">–15°C</td><td class="p-2">Élevé</td><td class="p-2">Léger, bien drainé</td><td class="p-2">Difficile</td></tr>
+<tr class="border-b"><td class="p-2">Prunier</td><td class="p-2">–25°C</td><td class="p-2">Faible</td><td class="p-2">Argileux toléré</td><td class="p-2">Facile</td></tr>
+</tbody>
+</table></div>
+
+<h2>La taille de formation des jeunes fruitiers</h2>
+<p>La taille de formation (les 3–5 premières années) conditionne la structure et la production de votre arbre pour toute sa vie. Les principales formes adaptées aux jardins lyonnais :</p>
+<ul>
+  <li><strong>Gobelet</strong> (pommier, cerisier) : 3–5 charpentières, centre aéré, facile à entretenir et à récolter</li>
+  <li><strong>Fuseau</strong> (pommier sur porte-greffe nain) : arbre compact, idéal pour les petits jardins</li>
+  <li><strong>Palmette</strong> (poirier, pêcher sur mur) : contre-espalier, optimise l'exposition au soleil et protège du gel</li>
+</ul>
+
+<p>La taille de formation des fruitiers est une opération délicate — LM Espace Vert peut vous accompagner dans cette étape clé. Consultez notre service de <a href="/services/elagage-abattage">taille et élagage</a> ou notre <a href="/blog/taille-arbres-fruitiers-hiver">guide de taille des fruitiers en hiver</a>.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Faut-il deux pommiers pour avoir des fruits à Lyon ?</summary>
+  <div class="p-4"><p>La plupart des pommiers et des poiriers sont autostériles : ils ont besoin d'un autre arbre de la même espèce à floraison simultanée pour se polliniser. Plantez donc au minimum 2 variétés différentes à floraison contemporaine. Il existe des "familiers" (plusieurs variétés greffées sur le même tronc) qui résolvent ce problème pour les petits jardins. Les cerisiers Stella et les prune-ers Reine-Claude d'Oullins sont autofertiles.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Comment protéger mes fruitiers du gel de printemps à Lyon ?</summary>
+  <div class="p-4"><p>Les gelées de mars-avril sont le principal risque pour les fruitiers à Lyon. Quelques protections efficaces : voile de forçage sur les arbustes fleuris (pêcher, abricotier), chauffette à bougie sous les petits arbres les nuits de gel annoncé, paillage du pied pour protéger les racines, et choix de variétés à floraison tardive pour les zones froides (nord Rhône). L'exposition abritée (mur au sud, angle de maison) divise par deux le risque de dégâts.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'renovation-jardin-avant-apres-lyon',
+    category: 'Travaux',
+    title: 'Rénovation de jardin à Lyon : transformer un espace négligé en 5 étapes',
+    excerpt: "Comment rénover un jardin à l'abandon à Lyon ? Diagnostic, désherbage total, amendement du sol, replantation, finitions : le guide complet de LM Espace Vert avec budget et avant/après.",
+    date: '2026-03-28',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80',
+    keywords: ['rénovation jardin Lyon', 'rénover jardin abandonné', 'transformation jardin lyonnais', 'avant après jardin Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Rénover un jardin à l'abandon est une opération qui demande méthode et patience. La tentation est souvent de replanter immédiatement — erreur fréquente. La clé du succès est de consacrer suffisamment de temps au diagnostic, au désherbage total et à la remise en état du sol avant toute plantation.</p>
+</blockquote>
+
+<h2>Pourquoi rénover un jardin à Lyon ?</h2>
+<p>Dans la région lyonnaise, de nombreuses propriétés — notamment à <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/dardilly">Dardilly</a> ou Neuville-sur-Saône — ont des jardins qui ont été négligés pendant des années : nouvelles acquisitions immobilières, changement de propriétaire, période de travaux longue... Un jardin à l'abandon peut sembler décourageant, mais avec la bonne méthode, il peut être transformé en espace de rêve.</p>
+
+<h2>Étape 1 : Le diagnostic complet</h2>
+<p>Avant de sortir la tondeuse, prenez le temps d'observer et d'analyser :</p>
+<ul>
+  <li><strong>Les végétaux existants</strong> : lesquels sont à conserver ? Un vieux rosier, un arbre mature, une haie structurante peuvent devenir les piliers du nouveau jardin</li>
+  <li><strong>Les mauvaises herbes dominantes</strong> : identifier les espèces (chiendent, liseron, ortie, rumex) permet de choisir la bonne technique d'éradication</li>
+  <li><strong>L'état du sol</strong> : compact, dégradé, manque de matière organique ? Un sol gravement dégradé peut nécessiter un apport de terre végétale</li>
+  <li><strong>Le relief et le drainage</strong> : y a-t-il des zones d'eau stagnante ? Des zones d'érosion ?</li>
+  <li><strong>Les aménagements existants</strong> : terrasse, allées, murets — sont-ils récupérables ou à refaire ?</li>
+</ul>
+
+<h2>Étape 2 : Le désherbage total</h2>
+<p>Pour un jardin fortement envahi, le désherbage total s'impose avant toute plantation. Plusieurs techniques :</p>
+<ul>
+  <li><strong>Bâchage occultant</strong> : la méthode la plus efficace et la plus écologique. Couvrez le sol d'une bâche noire ou de carton pendant 3 à 6 mois. La privation de lumière élimine 95% des mauvaises herbes, y compris les rhizomes de chiendent et de liseron. L'inconvénient : le délai</li>
+  <li><strong>Désherbage thermique massif</strong> : au désherbeur à flamme ou à vapeur. Plusieurs passages nécessaires</li>
+  <li><strong>Terrassement complet</strong> : dans les cas extrêmes, décaper 20 cm de sol contaminé et remplacer par de la terre végétale saine — solution radicale mais définitive</li>
+</ul>
+
+<h2>Étape 3 : Amendement et régénération du sol</h2>
+<p>Un jardin longtemps négligé a souvent un sol appauvri et compacté. La régénération passe par :</p>
+<ul>
+  <li><strong>Décompactage</strong> à la fourche-bêche ou au motoculteur : ameublir le sol sur 30–40 cm</li>
+  <li><strong>Apport de compost</strong> mûr (5–10 kg/m²) pour restaurer la vie microbienne</li>
+  <li><strong>Correction du pH</strong> si nécessaire : chaux agricole pour les sols trop acides (fréquent dans les jardins lyonnais sous-fertilisés)</li>
+  <li><strong>Sable grossier</strong> pour les sols très argileux (1 à 2 kg/m²)</li>
+</ul>
+
+<h2>Étape 4 : Le plan de rénovation</h2>
+<p>Sur la base du diagnostic, LM Espace Vert établit un plan de rénovation qui définit :</p>
+<ul>
+  <li>Les zones à conserver, à transformer, à créer</li>
+  <li>Le programme de replantation (arbustes, vivaces, gazon)</li>
+  <li>Les travaux de maçonnerie éventuels (nouvelle terrasse, allées, murets)</li>
+  <li>Le calendrier d'intervention sur 6–12 mois</li>
+</ul>
+
+<h2>Étape 5 : Replantation et finitions</h2>
+<p>La replantation suit une logique de stratification : d'abord les arbres et grands arbustes structurants, puis les haies, puis les vivaces et les couvre-sols, et enfin le gazon. Chaque couche de végétation est paillée dès sa mise en place.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Poste</th><th class="p-2 text-left">Prix indicatif (€/m²)</th><th class="p-2 text-left">Remarque</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Désherbage total + bâchage</td><td class="p-2">5–15 €/m²</td><td class="p-2">Selon envahissement</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Amendement + décompactage sol</td><td class="p-2">8–20 €/m²</td><td class="p-2">Compost + main d'œuvre</td></tr>
+<tr class="border-b"><td class="p-2">Engazonnement (semis)</td><td class="p-2">4–8 €/m²</td><td class="p-2">Fournitures incluses</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Plantation massifs (arbustes)</td><td class="p-2">20–50 €/m²</td><td class="p-2">Végétaux inclus</td></tr>
+<tr class="border-b"><td class="p-2">Terrasse + allées</td><td class="p-2">80–200 €/m²</td><td class="p-2">Selon matériaux</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Budget total rénovation complète</td><td class="p-2">50–120 €/m²</td><td class="p-2">Hors maçonnerie lourde</td></tr>
+</tbody>
+</table></div>
+
+<h2>Confier votre rénovation de jardin à LM Espace Vert</h2>
+<p>LM Espace Vert se spécialise dans la rénovation de jardins dans le nord et l'ouest lyonnais. De l'état d'abandon à l'espace de rêve, nous gérons l'intégralité du projet. Consultez notre service de <a href="/services/creation-jardins">création et rénovation de jardins</a> ou <a href="/devis">demandez un devis gratuit</a>.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Combien de temps faut-il pour rénover un jardin à Lyon ?</summary>
+  <div class="p-4"><p>Une rénovation complète prend généralement de 3 à 12 mois selon l'ampleur des travaux et la technique de désherbage choisie. Le bâchage occultant (6 mois idéalement) allonge le calendrier mais garantit les meilleurs résultats. Une rénovation légère (remise à niveau + replantation) peut se faire en 1 à 3 semaines. LM Espace Vert peut établir un planning précis après visite de votre jardin.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Faut-il enlever tout l'ancien sol d'un jardin à l'abandon ?</summary>
+  <div class="p-4"><p>Rarement. Dans la plupart des cas, un bon décompactage, un amendement en compost et un désherbage soigneux permettent de régénérer le sol existant. L'apport de terre végétale neuve est réservé aux situations où le sol existant est gravement dégradé (déchets de construction, pollution, érosion complète). Nous prélevons systématiquement un échantillon de sol pour analyse avant de recommander un apport de terre.</p></div>
+</details>
+    `.trim(),
+  },
+
+  {
+    slug: 'pergola-terrasse-bois-lyon',
+    category: 'Travaux',
+    title: 'Pergola et terrasse bois à Lyon : matériaux, entretien et prix',
+    excerpt: 'Pergola bioclimatique, terrasse en bois exotique, composite ou pin traité : comparatif des matériaux adaptés au climat lyonnais, entretien annuel recommandé et prix de pose en 2026.',
+    date: '2026-03-15',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80',
+    keywords: ['pergola bois Lyon', 'terrasse bois Lyon', 'prix terrasse bois Rhône', 'matériau terrasse extérieur Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> La terrasse et la pergola sont les aménagements extérieurs les plus demandés dans la région lyonnaise. Bien choisis et bien entretenus, ils durent 20 à 40 ans. Voici notre guide complet pour faire le bon choix de matériaux, avec les prix du marché lyonnais en 2026.</p>
+</blockquote>
+
+<h2>Pergola et terrasse : l'outdoor living à Lyon</h2>
+<p>Dans les jardins du nord-ouest lyonnais — de <a href="/secteur/saint-didier">Saint-Didier-au-Mont-d'Or</a> à <a href="/secteur/dardilly">Dardilly</a> en passant par <a href="/secteur/caluire">Caluire</a> — la terrasse avec pergola est devenue l'aménagement star des années 2020. Elle prolonge l'espace de vie intérieur vers l'extérieur, offre un espace repas et détente abrité, et valorise significativement le bien immobilier.</p>
+
+<h2>Les matériaux de terrasse adaptés au climat lyonnais</h2>
+
+<h3>Le bois exotique (Ipé, Teck, Cumaru)</h3>
+<p>Le bois exotique est le matériau premium par excellence pour les terrasses. Dense et imputrescible naturellement, il résiste aux intempéries sans traitement de fond. Le climat lyonnais (alternance de sécheresse estivale et de pluies d'hiver) convient bien à ces essences.</p>
+<ul>
+  <li><strong>Avantages</strong> : durabilité exceptionnelle (30–40 ans), esthétique chaleureuse, résistance aux chocs</li>
+  <li><strong>Inconvénients</strong> : prix élevé (80–150 €/m² fourni posé), entretien annuel à l'huile (2–3h pour 20 m²), polémiques sur l'origine (certifiez FSC)</li>
+  <li><strong>Entretien</strong> : nettoyage au printemps + application d'huile naturelle tous les 1–2 ans</li>
+</ul>
+
+<h3>Le pin traité autoclave classe IV</h3>
+<p>Le pin traité est la solution économique pour les terrasses de jardin lyonnaises. Le traitement autoclave l'imprègne d'un biocide protecteur qui lui confère une résistance à la putréfaction d'environ 15–20 ans.</p>
+<ul>
+  <li><strong>Avantages</strong> : prix accessible (40–70 €/m² posé), disponibilité large, facilité de coupe</li>
+  <li><strong>Inconvénients</strong> : durabilité inférieure aux exotiques, nécessite une lasure régulière, peut se déformer en conditions humides</li>
+  <li><strong>Entretien</strong> : lasure pénétrante tous les 2–3 ans</li>
+</ul>
+
+<h3>Le bois composite (lame composite)</h3>
+<p>Le composite (mélange de fibres de bois et de plastique recyclé) connaît un succès croissant dans les jardins lyonnais. Il imite le bois naturel mais ne nécessite quasiment aucun entretien.</p>
+<ul>
+  <li><strong>Avantages</strong> : entretien minimal (nettoyage annuel seul), teinte stable, résistance aux UV et à l'humidité, antidérapant, matière recyclée</li>
+  <li><strong>Inconvénients</strong> : aspect moins naturel que le bois vrai, peut chauffer par fortes chaleurs estivales, prix moyen-élevé (60–100 €/m² posé)</li>
+  <li><strong>Entretien</strong> : nettoyage au karcher doux une fois par an</li>
+</ul>
+
+<h2>La pergola : bioclimatique ou traditionnelle ?</h2>
+<p>La pergola traditionnelle en bois (ou en aluminium) est la solution la plus économique pour couvrir une terrasse. La pergola bioclimatique à lames orientables est la solution la plus confortable : elle s'ouvre pour laisser passer la lumière et se ferme automatiquement en cas de pluie ou de fort soleil.</p>
+<ul>
+  <li><strong>Pergola bois classique</strong> : 1 500–5 000 € pour 20 m²</li>
+  <li><strong>Pergola aluminium motorisée</strong> : 5 000–15 000 € pour 20 m² (selon motorisation et options)</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr style="background-color:#80BC00" class="text-white"><th class="p-2 text-left">Matériau</th><th class="p-2 text-left">Prix posé (€/m²)</th><th class="p-2 text-left">Durée de vie</th><th class="p-2 text-left">Entretien annuel</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Ipé / Teck</td><td class="p-2">80–150 €</td><td class="p-2">30–40 ans</td><td class="p-2">Huile (2–3h)</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Pin traité autoclave</td><td class="p-2">40–70 €</td><td class="p-2">15–20 ans</td><td class="p-2">Lasure tous les 2–3 ans</td></tr>
+<tr class="border-b"><td class="p-2">Douglas naturel</td><td class="p-2">55–85 €</td><td class="p-2">20–25 ans</td><td class="p-2">Huile ou lasure/an</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Composite</td><td class="p-2">60–100 €</td><td class="p-2">25–30 ans</td><td class="p-2">Nettoyage annuel</td></tr>
+<tr class="border-b"><td class="p-2">Dallage pierre naturelle</td><td class="p-2">80–200 €</td><td class="p-2">50+ ans</td><td class="p-2">Anti-mousse annuel</td></tr>
+</tbody>
+</table></div>
+
+<h2>Permis de construire pour une pergola à Lyon</h2>
+<p>En règle générale, une pergola de moins de 20 m² accolée à une habitation n'est pas soumise à permis de construire, mais peut nécessiter une déclaration préalable de travaux selon les PLU des communes lyonnaises. Certaines communes des Monts d'Or sont en zone ABF (Architectes des Bâtiments de France) et imposent des contraintes architecturales. Renseignez-vous auprès de votre mairie — LM Espace Vert peut vous accompagner dans ces démarches.</p>
+
+<h2>LM Espace Vert réalise votre terrasse et pergola</h2>
+<p>LM Espace Vert réalise terrasses en bois, dallage et pergolas dans tout le nord et l'ouest lyonnais. Consultez notre service de <a href="/services/maconnerie-paysagere">maçonnerie paysagère</a> pour en savoir plus ou <a href="/devis">demandez un devis gratuit</a>. Nous vous proposons un projet complet intégrant la terrasse, la pergola et l'aménagement végétal environnant.</p>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Quelle terrasse bois choisir pour un usage intense à Lyon ?</summary>
+  <div class="p-4"><p>Pour un usage intensif (famille avec enfants, réceptions fréquentes), nous recommandons le bois composite ou le bois exotique ipé. Ces deux matériaux résistent aux chocs, aux rayures et aux taches bien mieux que le pin traité. Le composite a l'avantage de ne pas chauffer autant que l'ipé en plein soleil estival — un point important dans les étés lyonnais de plus en plus chauds.</p></div>
+</details>
+
+<details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
+  <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Comment entretenir une terrasse bois à Lyon au printemps ?</summary>
+  <div class="p-4"><p>Au printemps (mars-avril), commencez par un nettoyage au karcher basse pression (max 100–150 bars) pour éliminer les mousses et les lichens qui se développent en hiver dans le climat lyonnais. Laissez sécher 48h. Appliquez ensuite une huile naturelle (bois exotiques) ou une lasure pénétrante (pin traité, douglas) à la brosse ou au rouleau. Évitez les produits filmogènes sur le bois naturel — le film se fissure rapidement. Pour notre guide détaillé, consultez notre article sur l'<a href="/blog/terrasse-bois-entretien">entretien des terrasses en bois</a>.</p></div>
+</details>
+    `.trim(),
+  },
 ]
 
 export const categories = [...new Set(articles.map((a) => a.category))].sort()

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { MapPin, Wrench, BookOpen, FileText, ChevronRight } from 'lucide-react'
+import { MapPin, Wrench, BookOpen, FileText, ChevronRight, Rss } from 'lucide-react'
 import { articles } from '@/lib/articles'
 
 export const metadata: Metadata = {
@@ -18,6 +18,9 @@ const mainPages = [
   { href: '/contact', label: 'Contact' },
   { href: '/devis', label: 'Devis gratuit' },
   { href: '/blog', label: 'Blog & Conseils jardinage' },
+  { href: '/tarifs', label: 'Tarifs' },
+  { href: '/guide-jardinage', label: 'Guide jardinage' },
+  { href: '/secteurs', label: 'Zones d\'intervention' },
 ]
 
 const servicePages = [
@@ -27,15 +30,29 @@ const servicePages = [
   { href: '/services/maconnerie-paysagere', label: 'Maçonnerie paysagère' },
   { href: '/services/arrosage-automatique', label: 'Arrosage automatique' },
   { href: '/services/engazonnement', label: 'Engazonnement' },
+  { href: '/services/taille-haies', label: 'Taille de haies' },
 ]
 
 const zonePages = [
+  { href: '/secteur/saint-didier', label: 'Paysagiste Saint-Didier-au-Mont-d\'Or' },
   { href: '/secteur/caluire', label: 'Paysagiste Caluire-et-Cuire' },
-  { href: '/secteur/ecuelly', label: 'Paysagiste Écully' },
+  { href: '/secteur/ecully', label: 'Paysagiste Écully' },
   { href: '/secteur/tassin', label: 'Paysagiste Tassin-la-Demi-Lune' },
   { href: '/secteur/limonest', label: 'Paysagiste Limonest' },
   { href: '/secteur/dardilly', label: 'Paysagiste Dardilly' },
   { href: '/secteur/champagne', label: "Paysagiste Champagne-au-Mont-d'Or" },
+  { href: '/secteur/neuville-sur-saone', label: 'Paysagiste Neuville-sur-Saône' },
+  { href: '/secteur/francheville', label: 'Paysagiste Francheville' },
+  { href: '/secteur/cailloux-sur-fontaines', label: 'Paysagiste Cailloux-sur-Fontaines' },
+  { href: '/secteur/genay', label: 'Paysagiste Genay' },
+  { href: '/secteur/poleymieux', label: 'Paysagiste Poleymieux-au-Mont-d\'Or' },
+]
+
+const blogCategoryPages = [
+  { href: '/blog/categorie/conseils', label: 'Catégorie : Conseils' },
+  { href: '/blog/categorie/travaux', label: 'Catégorie : Travaux' },
+  { href: '/blog/categorie/zones', label: 'Catégorie : Zones' },
+  { href: '/blog/categorie/actualites', label: 'Catégorie : Actualités' },
 ]
 
 const legalPages = [
@@ -47,7 +64,7 @@ const legalPages = [
   { href: '/cgv', label: 'Conditions générales de vente' },
 ]
 
-const recentArticles = articles.slice(0, 5)
+const recentArticles = articles.slice(0, 8)
 
 export default function PlanDuSitePage() {
   return (
@@ -149,7 +166,30 @@ export default function PlanDuSitePage() {
               </ul>
             </div>
 
-            {/* Blog */}
+            {/* Blog — catégories */}
+            <div>
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
+                  <BookOpen size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                </div>
+                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Blog — catégories</h2>
+              </div>
+              <ul className="space-y-2">
+                {blogCategoryPages.map((page) => (
+                  <li key={page.href}>
+                    <Link
+                      href={page.href}
+                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                    >
+                      <ChevronRight size={11} aria-hidden="true" />
+                      {page.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Blog — articles récents */}
             <div>
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
@@ -176,7 +216,7 @@ export default function PlanDuSitePage() {
                     style={{ color: '#425D07' }}
                   >
                     <ChevronRight size={11} aria-hidden="true" />
-                    Voir tous les articles
+                    Voir tous les articles ({articles.length})
                   </Link>
                 </li>
               </ul>
@@ -202,6 +242,40 @@ export default function PlanDuSitePage() {
                     </Link>
                   </li>
                 ))}
+              </ul>
+            </div>
+
+            {/* Flux RSS */}
+            <div>
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
+                  <Rss size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                </div>
+                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Flux &amp; Syndication</h2>
+              </div>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/rss.xml"
+                    className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <ChevronRight size={11} aria-hidden="true" />
+                    Flux RSS du blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/sitemap.xml"
+                    className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <ChevronRight size={11} aria-hidden="true" />
+                    Sitemap XML
+                  </Link>
+                </li>
               </ul>
             </div>
 

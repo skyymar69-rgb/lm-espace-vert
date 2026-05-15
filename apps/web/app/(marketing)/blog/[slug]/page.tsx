@@ -2,12 +2,14 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock, ChevronLeft, User, Tag, ArrowRight, Phone } from 'lucide-react'
+import { Calendar, Clock, ChevronLeft, User, Tag, Phone } from 'lucide-react'
 import { articles } from '@/lib/articles'
 import { ShareButtons } from '@/components/ui/share-buttons'
 import { ReadingProgress } from '@/components/ui/reading-progress'
 import { TableOfContents } from '@/components/ui/table-of-contents'
 import { SeasonalTip } from '@/components/ui/seasonal-tip'
+import { RelatedArticles } from '@/components/sections/related-articles'
+import { ServiceLinks } from '@/components/sections/service-links'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -42,14 +44,6 @@ export default async function ArticlePage({ params }: Props) {
   const article = articles.find((a) => a.slug === slug)
   if (!article) notFound()
 
-  const related = articles
-    .filter((a) => a.slug !== article.slug && a.category === article.category)
-    .slice(0, 3)
-
-  const others = related.length < 3
-    ? [...related, ...articles.filter((a) => a.slug !== article.slug && a.category !== article.category).slice(0, 3 - related.length)]
-    : related
-
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -82,13 +76,22 @@ export default async function ArticlePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ReadingProgress targetId="article-content" />
 
-      {/* Breadcrumb */}
+      {/* Breadcrumb avec catégorie */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-[#F7F5F0]">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
+          <ol role="list" className="flex flex-wrap items-center gap-2 text-sm text-[#8C8F94]">
             <li><Link href="/" className="hover:text-[#2F2F2F]">Accueil</Link></li>
             <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
             <li><Link href="/blog" className="hover:text-[#2F2F2F]">Blog</Link></li>
+            <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
+            <li>
+              <Link
+                href={`/blog?categorie=${encodeURIComponent(article.category)}`}
+                className="hover:text-[#2F2F2F]"
+              >
+                {article.category}
+              </Link>
+            </li>
             <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
             <li><span aria-current="page" className="line-clamp-1 text-[#425D07]">{article.title}</span></li>
           </ol>
@@ -258,56 +261,13 @@ export default async function ArticlePage({ params }: Props) {
                 </div>
               </div>
 
-              {/* Related articles */}
-              {others.length > 0 && (
-                <section className="mt-14" aria-labelledby="related-heading">
-                  <h2 id="related-heading" className="font-display text-xl font-bold text-[#2F2F2F] mb-6">
-                    Articles qui pourraient vous intéresser
-                  </h2>
-                  <ul role="list" className="grid gap-5 sm:grid-cols-3">
-                    {others.map((rel) => (
-                      <li key={rel.slug}>
-                        <article className="rounded-xl overflow-hidden bg-white border border-[#EDEDED] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                          <Link
-                            href={`/blog/${rel.slug}`}
-                            className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-                          >
-                            <div className="relative h-40 overflow-hidden bg-[#F7F5F0]">
-                              <Image
-                                src={rel.image}
-                                alt={rel.title}
-                                fill
-                                sizes="30vw"
-                                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                              />
-                            </div>
-                            <div className="p-4">
-                              <span
-                                className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-2"
-                                style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
-                              >
-                                {rel.category}
-                              </span>
-                              <h3 className="font-display font-semibold text-[#2F2F2F] text-sm leading-snug mb-3 line-clamp-2">
-                                {rel.title}
-                              </h3>
-                              <div className="flex items-center justify-between">
-                                <span className="text-xs text-[#8C8F94]">{rel.readingTime}</span>
-                                <span
-                                  className="text-xs font-semibold flex items-center gap-1 hover:text-[#80BC00]"
-                                  style={{ color: '#425D07' }}
-                                >
-                                  Lire <ArrowRight size={11} aria-hidden="true" />
-                                </span>
-                              </div>
-                            </div>
-                          </Link>
-                        </article>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
+              {/* Services liés à la catégorie de l'article */}
+              <ServiceLinks category={article.category} />
+
+              {/* Articles similaires (même catégorie en priorité) */}
+              <div className="mt-14">
+                <RelatedArticles currentSlug={article.slug} category={article.category} />
+              </div>
             </div>
 
             {/* Sidebar */}
