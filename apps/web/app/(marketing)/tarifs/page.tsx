@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
@@ -355,10 +355,10 @@ export default function TarifsPage() {
                   Demander un devis gratuit <ArrowRight size={14} />
                 </Link>
                 <Link
-                  href="tel:+33674734698"
+                  href="tel:+33672587353"
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
                 >
-                  06 74 73 46 98
+                  06 72 58 73 53
                 </Link>
               </div>
             </div>

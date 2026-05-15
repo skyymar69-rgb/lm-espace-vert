@@ -5,6 +5,7 @@
   excerpt: string
   content: string
   date: string
+  updatedAt?: string
   readingTime: string
   author: string
   image: string
@@ -85,6 +86,7 @@ export const articles: Article[] = [
     title: 'Taille des haies : quand et comment procéder selon les espèces',
     excerpt: 'Thuyas, lauriers, if, buis... Chaque espèce a ses propres règles de taille. Notre guide complet pour des haies toujours impeccables.',
     date: '2026-03-01',
+    updatedAt: '2026-05-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
     image: '/images/blog-taille-haies.webp',
@@ -144,7 +146,7 @@ export const articles: Article[] = [
 <p>Pour les haies hautes ou difficiles d'accès, LM Espace Vert dispose du matériel professionnel adapté et intervient en sécurité autour de <a href="/secteur/saint-didier">Saint-Didier-au-Mont-d'Or</a> et dans tout le nord lyonnais. Découvrez nos <a href="/services/taille-haies">prestations de taille de haies</a>.</p>
 
 <h2>Besoin d'un paysagiste professionnel ?</h2>
-<p>LM Espace Vert intervient dans un rayon de 20 km autour de <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/ecully">Écully</a>, <a href="/secteur/limonest">Limonest</a> et tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou appelez directement au 06 74 73 46 98.</p>
+<p>LM Espace Vert intervient dans un rayon de 20 km autour de <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/ecully">Écully</a>, <a href="/secteur/limonest">Limonest</a> et tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou appelez directement au 06 72 58 73 53.</p>
 
 <h2>Sources et références</h2>
 <ul>
@@ -208,7 +210,7 @@ export const articles: Article[] = [
 </div>
 
 <h2>Besoin d'un paysagiste professionnel ?</h2>
-<p>LM Espace Vert intervient dans un rayon de 20 km autour de <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/ecully">Écully</a>, <a href="/secteur/limonest">Limonest</a> et tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou appelez directement au 06 74 73 46 98.</p>
+<p>LM Espace Vert intervient dans un rayon de 20 km autour de <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/ecully">Écully</a>, <a href="/secteur/limonest">Limonest</a> et tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou appelez directement au 06 72 58 73 53.</p>
 
 <h2>Sources et références</h2>
 <ul>
@@ -250,30 +252,58 @@ export const articles: Article[] = [
     title: "Élagage des arbres : pourquoi, quand et comment intervenir ?",
     excerpt: "L'élagage n'est pas une simple coupe — c'est une chirurgie végétale. Comprendre ses enjeux vous permet d'agir au bon moment et de préserver la santé de vos arbres.",
     date: '2026-01-25',
+    updatedAt: '2026-05-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
     image: '/images/elagage-abattage.webp',
     keywords: ['élagage arbres', 'taille arbres fruitiers', 'quand élaguer', 'arboriste Lyon'],
     content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Définition :</strong> L'élagage est l'ensemble des tailles pratiquées sur les parties aériennes d'un arbre adulte dans un but sanitaire, sécuritaire ou esthétique. C'est une chirurgie végétale qui demande connaissance, technique et équipement adaptés.</p>
+</blockquote>
+
 <h2>L'élagage : une nécessité pour la santé et la sécurité</h2>
-<p>Un arbre mal taillé ou jamais entretenu peut devenir dangereux. Branches mortes, charpentières affaiblies, bois fendu : les risques sont réels, surtout lors des tempêtes qui frappent régulièrement la région lyonnaise.</p>
+<p>Un arbre mal taillé ou jamais entretenu peut devenir dangereux. Branches mortes, charpentières affaiblies, bois fendu : les risques sont réels, surtout lors des tempêtes qui frappent régulièrement la région lyonnaise. Dans les jardins des Monts d'Or et du nord lyonnais, LM Espace Vert intervient régulièrement pour des mises en sécurité préventives sur des arbres de haute tige.</p>
 
 <h2>Pourquoi élaguer ?</h2>
 <ul>
 <li><strong>Sécurité</strong> : éliminer les branches susceptibles de tomber sur des personnes ou des biens</li>
 <li><strong>Santé</strong> : favoriser la circulation de l'air, limiter les maladies et les parasites</li>
 <li><strong>Esthétique</strong> : maintenir un port harmonieux et équilibré</li>
-<li><strong>Luminosité</strong> : alléger la couronne pour laisser passer la lumière</li>
+<li><strong>Luminosité</strong> : alléger la couronne pour laisser passer la lumière dans le jardin et l'habitation</li>
+<li><strong>Longévité</strong> : un arbre régulièrement entretenu vit bien plus longtemps qu'un arbre laissé à l'abandon</li>
 </ul>
 
-<h2>Quand intervenir ?</h2>
-<p><strong>Arbres à feuilles caduques</strong> : en végétation (mars-octobre) ou en dormance (novembre-février). La taille en dormance est moins stressante pour l'arbre. <strong>Arbres fruitiers</strong> : hors gel, fin d'hiver (janvier-mars) pour les pommiers, poiriers et pêchers. <strong>Résineux</strong> : évitez les fortes chaleurs et les grands froids. Le printemps et l'automne sont idéaux.</p>
+<h2>Quand intervenir selon les espèces ?</h2>
+<p><strong>Arbres à feuilles caduques</strong> : en végétation (mars-octobre) ou en dormance (novembre-février). La taille en dormance est moins stressante pour l'arbre. <strong>Arbres fruitiers</strong> : hors gel, fin d'hiver (janvier-mars) pour les pommiers, poiriers et pêchers. <strong>Résineux</strong> : évitez les fortes chaleurs et les grands froids. Le printemps et l'automne sont idéaux. <strong>Cerisiers, pruniers</strong> : uniquement en été (juin-août), jamais en hiver pour éviter la moniliose.</p>
 
-<h2>Les coupes à éviter</h2>
-<p>L'écimage (coupe des branches maîtresses à mi-longueur) est à proscrire absolument. Cette pratique affaiblit l'arbre, favorise les maladies et crée des repousses anarchiques. Seul un arboriste qualifié doit intervenir sur les grosses branches.</p>
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Essence</th><th class="p-2 text-left">Période optimale</th><th class="p-2 text-left">Période à éviter</th><th class="p-2 text-left">Type d'intervention</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Chêne, frêne, hêtre</td><td class="p-2">Nov.–fév. (dormance)</td><td class="p-2">Printemps (montée sève)</td><td class="p-2">Élagage sanitaire + mise en sécurité</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Pommier, poirier</td><td class="p-2">Janv.–mars</td><td class="p-2">Été (stress hydrique)</td><td class="p-2">Taille de fructification</td></tr>
+<tr class="border-b"><td class="p-2">Cerisier, prunier</td><td class="p-2">Juin–août</td><td class="p-2">Hiver (risque moniliose)</td><td class="p-2">Aération + suppression</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Pins, épicéas</td><td class="p-2">Printemps + automne</td><td class="p-2">Grandes chaleurs + gel</td><td class="p-2">Nettoyage + mise en forme</td></tr>
+<tr class="border-b"><td class="p-2">Platane</td><td class="p-2">Nov.–janv.</td><td class="p-2">Fév.–avril (champignon)</td><td class="p-2">Recépage, tête de chat</td></tr>
+</tbody>
+</table></div>
 
-<h2>LM Espace Vert, votre spécialiste de l'élagage</h2>
-<p>Notre équipe est formée aux techniques d'élagage raisonné. Nous intervenons en sécurité avec du matériel professionnel dans toute la zone de Saint-Didier-au-Mont-d'Or, Caluire, Neuville-sur-Saône et les communes environnantes.</p>
+<h2>Les coupes à éviter absolument</h2>
+<p>L'<strong>écimage</strong> (coupe des branches maîtresses à mi-longueur) est à proscrire absolument. Cette pratique affaiblit l'arbre, favorise les maladies (chancres, pourriture) et crée des repousses anarchiques très vigoureuses (gourmands) qui reforment rapidement un volume plus important et moins sûr qu'avant. Le <strong>flush-cut</strong> (coupe ras du tronc sans laisser le collet de branche) empêche la cicatrisation naturelle et favorise les pourritures de cœur.</p>
+
+<div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <strong>À retenir :</strong>
+  <ul class="mt-2">
+    <li>Ne jamais élaguer les cerisiers et pruniers en hiver — risque de maladies graves</li>
+    <li>Désinfecter les outils entre chaque arbre (alcool 70°)</li>
+    <li>Protéger les plaies de plus de 5 cm avec de la pâte cicatrisante</li>
+    <li>Proscrire l'écimage — cette pratique nuit irrémédiablement à l'arbre</li>
+    <li>Un élagage annuel léger vaut mieux qu'un élagage sévère tous les 5 ans</li>
+  </ul>
+</div>
+
+<h2>LM Espace Vert, votre spécialiste de l'élagage à Lyon</h2>
+<p>Notre équipe est formée aux techniques d'élagage raisonné. Léo et ses collaborateurs interviennent en sécurité avec du matériel professionnel dans toute la zone de Saint-Didier-au-Mont-d'Or, Caluire, Neuville-sur-Saône et les communes environnantes. Consultez notre page dédiée à l'<a href="/services/elagage-abattage">élagage et abattage</a> ou <a href="/devis">demandez un devis gratuit</a>.</p>
     `.trim(),
   },
   {
@@ -282,34 +312,66 @@ export const articles: Article[] = [
     title: "Créer un jardin paysager : les 7 étapes clés d'un beau projet",
     excerpt: "De l'esquisse au chantier, un jardin réussi se construit méthodiquement. Découvrez le processus complet de création d'un espace paysager professionnel.",
     date: '2025-12-10',
+    updatedAt: '2026-05-15',
     readingTime: '8 min',
     author: 'Léo Maurice',
     image: '/images/blog-creation-jardin.webp',
     keywords: ['création jardin paysager', 'aménagement jardin étapes', 'paysagiste création jardin'],
     content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Un jardin paysager réussi naît de la rencontre entre l'analyse rigoureuse du terrain, l'écoute de vos usages et une sélection végétale adaptée au climat local. Chez LM Espace Vert, chaque création passe par 7 étapes structurantes pour vous garantir un résultat durable et esthétique.</p>
+</blockquote>
+
 <h2>Un jardin réussi se planifie</h2>
-<p>La création d'un jardin ne s'improvise pas. Chez LM Espace Vert, nous suivons un processus rigoureux en 7 étapes pour garantir un résultat à la hauteur de vos attentes.</p>
+<p>La création d'un jardin ne s'improvise pas. Chez LM Espace Vert, Léo et son équipe suivent un processus rigoureux en 7 étapes pour garantir un résultat à la hauteur de vos attentes. De la première visite sur site jusqu'au suivi post-plantation, chaque phase compte.</p>
 
 <h2>Étape 1 : L'analyse du terrain</h2>
-<p>Exposition (nord, sud, est, ouest), type de sol (argileux, calcaire, sableux), drainage, relief, ensoleillement, vents dominants… Chaque paramètre influence les choix végétaux et les aménagements.</p>
+<p>Exposition (nord, sud, est, ouest), type de sol (argileux, calcaire, sableux), drainage, relief, ensoleillement, vents dominants… Chaque paramètre influence les choix végétaux et les aménagements. Dans les jardins des Monts d'Or, le sol calcaire superficiel demande par exemple des amendements organiques et une sélection végétale spécifique.</p>
 
 <h2>Étape 2 : L'écoute de vos besoins</h2>
-<p>Jardin de contemplation ou actif ? Potager intégré ? Espace de jeux pour enfants ? Lieu de réception ? Vos usages définissent les zones fonctionnelles.</p>
+<p>Jardin de contemplation ou actif ? Potager intégré ? Espace de jeux pour enfants ? Lieu de réception ? Jardin à faible entretien ou au contraire travaillé ? Vos usages et votre mode de vie définissent les zones fonctionnelles et orientent toute la composition.</p>
 
 <h2>Étape 3 : Le plan de composition</h2>
-<p>Un plan coté formalise les volumes, les allées, les massifs, les espaces minéraux et les zones de plantation. Il est le contrat visuel entre vous et nous.</p>
+<p>Un plan coté formalise les volumes, les allées, les massifs, les espaces minéraux et les zones de plantation. Il est le contrat visuel entre vous et nous. Il permet de visualiser le projet fini, d'ajuster les proportions et de valider le budget avant tout démarrage de travaux.</p>
 
 <h2>Étape 4 : La sélection végétale</h2>
-<p>Nous choisissons des végétaux adaptés à votre sol et à votre climat local, en privilégiant les espèces résistantes aux étés chauds et aux hivers lyonnais.</p>
+<p>Nous choisissons des végétaux adaptés à votre sol et à votre microclimat local (ombre, chaleur, vent des crêtes), en privilégiant les espèces résistantes aux étés chauds lyonnais et aux hivers modérés de la région. Les plantes invasives ou trop gourmandes en eau sont systématiquement écartées.</p>
 
 <h2>Étape 5 : Les travaux de terrassement et de maçonnerie</h2>
-<p>Terrasses, allées, dallages, murets : les éléments structurants sont réalisés en premier, avant toute plantation.</p>
+<p>Terrasses, allées, dallages, murets de soutènement : les éléments structurants sont réalisés en premier, avant toute plantation. Cette phase peut représenter 40 à 60 % du budget total selon la topographie du terrain.</p>
 
 <h2>Étape 6 : Les plantations</h2>
-<p>Arbres, arbustes, vivaces, gazon — tout est mis en place selon les densités et les saisons recommandées.</p>
+<p>Arbres en tige, arbustes charpentiers, vivaces, gazon — tout est mis en place selon les densités et les saisons recommandées. Nous respectons scrupuleusement les règles de plantation (profondeur, distance, orientation) pour maximiser les chances de reprise.</p>
 
 <h2>Étape 7 : Le suivi post-plantation</h2>
-<p>Un jardin fraîchement créé nécessite un arrosage et un suivi attentifs durant les premières saisons. Nous assurons ce suivi pour garantir la reprise des végétaux.</p>
+<p>Un jardin fraîchement créé nécessite un arrosage soutenu et un suivi attentifs durant les 1 à 2 premières saisons. LM Espace Vert assure ce suivi pour garantir la reprise des végétaux et ajuster si nécessaire.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Étape</th><th class="p-2 text-left">Durée estimée</th><th class="p-2 text-left">Part du budget</th><th class="p-2 text-left">Points d'attention</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">1. Analyse terrain</td><td class="p-2">1 visite (gratuite)</td><td class="p-2">—</td><td class="p-2">Sol, exposition, contraintes</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">2. Écoute besoins</td><td class="p-2">1 rendez-vous</td><td class="p-2">—</td><td class="p-2">Usages, budget, délais</td></tr>
+<tr class="border-b"><td class="p-2">3. Plan de composition</td><td class="p-2">1–3 semaines</td><td class="p-2">5–10 %</td><td class="p-2">Validation avant chantier</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">4. Sélection végétale</td><td class="p-2">Incluse dans le plan</td><td class="p-2">15–30 %</td><td class="p-2">Espèces adaptées au microclimat</td></tr>
+<tr class="border-b"><td class="p-2">5. Terrassement + maçonnerie</td><td class="p-2">2–10 jours</td><td class="p-2">30–50 %</td><td class="p-2">Phase la plus impactante</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">6. Plantations</td><td class="p-2">1–3 jours</td><td class="p-2">20–35 %</td><td class="p-2">Saisons de plantation</td></tr>
+<tr class="border-b"><td class="p-2">7. Suivi post-plantation</td><td class="p-2">1–2 saisons</td><td class="p-2">5–10 %</td><td class="p-2">Arrosage + ajustements</td></tr>
+</tbody>
+</table></div>
+
+<div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <strong>À retenir :</strong>
+  <ul class="mt-2">
+    <li>L'analyse du sol est indispensable avant toute sélection végétale</li>
+    <li>Le terrassement représente souvent la moitié du budget — anticipez-le</li>
+    <li>Mieux vaut planter peu de végétaux de bonne qualité que beaucoup de petits sujets</li>
+    <li>Le suivi post-plantation est aussi important que la plantation elle-même</li>
+    <li>Les meilleures saisons de plantation sont le printemps (mars-mai) et l'automne (sept-nov)</li>
+  </ul>
+</div>
+
+<h2>Confiez votre projet à LM Espace Vert</h2>
+<p>Léo intervient dans toute la région lyonnaise pour la conception et la réalisation de jardins paysagers. De la villa contemporaine au mas provençal, de la cour de ville au parc des Monts d'Or, chaque projet est unique. <a href="/devis">Demandez votre devis gratuit</a> — la visite sur site est offerte.</p>
     `.trim(),
   },
   {
@@ -318,34 +380,62 @@ export const articles: Article[] = [
     title: "Le calendrier complet d'entretien de votre pelouse",
     excerpt: "Tonte, scarification, aération, semis, fertilisation… Chaque mois a ses tâches. Suivez ce calendrier adapté au climat de la région lyonnaise.",
     date: '2025-11-15',
+    updatedAt: '2026-05-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
     image: '/images/blog-pelouse.webp',
     keywords: ['entretien pelouse', 'tonte gazon', 'calendrier pelouse', 'scarification gazon'],
     content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Dans la région lyonnaise, septembre-octobre est la période la plus critique pour l'entretien de la pelouse. La scarification, l'aération et le regarnissage réalisés à cette période déterminent la qualité du gazon pour toute l'année suivante. Ne la manquez pas !</p>
+</blockquote>
+
 <h2>Un programme mensuel pour une pelouse impeccable</h2>
-<p>Dans la région de Lyon et du nord Rhône, le climat semi-continental impose un programme d'entretien adapté. Voici notre calendrier professionnel.</p>
+<p>Dans la région de Lyon et du nord Rhône, le climat semi-continental impose un programme d'entretien adapté. Les étés secs et chauds stressent la pelouse, les hivers doux favorisent les mousses et les maladies fongiques. Voici le calendrier professionnel de LM Espace Vert.</p>
 
 <h2>Janvier - Février : Repos et préparation</h2>
-<p>Évitez de marcher sur une pelouse gelée. Profitez-en pour affûter et réviser vos outils. Commandez vos semences et engrais.</p>
+<p>Évitez de marcher sur une pelouse gelée — les brins d'herbe cassent et créent des zones mortes. Profitez-en pour affûter et réviser vos outils (affûtage des lames de tondeuse). Commandez vos semences et engrais pour être prêt dès mars.</p>
 
 <h2>Mars : Réveil de la pelouse</h2>
-<p>Première tonte haute (6-7 cm). Scarification légère. Semis des zones clairsemées. Premier apport d'engrais de printemps riche en azote.</p>
+<p>Première tonte haute (6-7 cm) dès que la température dépasse 8 °C de façon régulière, généralement mi-mars dans le Rhône. Scarification légère pour éliminer le feutre hivernal. Semis des zones clairsemées (hâtives). Premier apport d'engrais de printemps riche en azote.</p>
 
 <h2>Avril - Mai : Pleine croissance</h2>
-<p>Tonte régulière toutes les semaines (hauteur 4-5 cm). Arrosage si pas de pluie. Désherbage sélectif des adventices (pissenlits, plantains).</p>
+<p>Tonte régulière toutes les semaines (hauteur 4-5 cm). Arrosage si pas de pluie significative pendant plus de 8-10 jours. Désherbage sélectif des adventices (pissenlits, plantains, renoncules). Aération par décompaction si le sol est tassé.</p>
 
-<h2>Juin - Août : Gestion de la chaleur</h2>
-<p>Remontez la hauteur de coupe à 6-7 cm pour protéger le sol. Arrosage préférable le matin tôt. Suspension de la fertilisation azotée.</p>
+<h2>Juin - Août : Gestion de la chaleur lyonnaise</h2>
+<p>Remontez la hauteur de coupe à 6-7 cm pour protéger le sol de l'évaporation et favoriser un enracinement plus profond. Arrosage préférable le matin tôt (6-8h) pour éviter les brûlures. Suspension de la fertilisation azotée — l'azote stimule la croissance et fragilise la pelouse en période de stress hydrique. Tolérez le jaunissement si votre gazon entre en dormance estivale — c'est un mécanisme naturel de protection, non une mort.</p>
 
 <h2>Septembre - Octobre : La grande remise en état</h2>
-<p>C'est <strong>la période la plus importante de l'année</strong> pour la pelouse. Scarification en profondeur, aération mécanique, regarnissage des zones dégarnies, apport d'engrais d'automne riche en potasse et phosphore.</p>
+<p>C'est <strong>la période la plus importante de l'année</strong> pour la pelouse. La conjonction sol encore chaud + températures douces + rosées matinales crée des conditions idéales pour la germination et l'enracinement. Interventions recommandées : scarification en profondeur (2-3 passages croisés), aération mécanique (décompacteur à fourches creux), regarnissage des zones dégarnies avec un mélange spécifique, apport d'engrais d'automne riche en potasse et phosphore (formule 4-12-12 ou similaire).</p>
 
 <h2>Novembre - Décembre : Derniers soins</h2>
-<p>Dernière tonte avant l'hiver (hauteur 5 cm). Ramassage soigneux des feuilles. Traitement anti-mousse si nécessaire.</p>
+<p>Dernière tonte avant l'hiver (hauteur 5 cm — ni trop court pour éviter les brûlures de gel, ni trop long pour limiter les maladies fongiques). Ramassage soigneux des feuilles (elles étouffent le gazon et favorisent la fonte des neiges). Traitement anti-mousse si nécessaire (soufre ou sulfate de fer).</p>
 
-<h2>Faire appel à LM Espace Vert</h2>
-<p>Nous proposons des contrats d'entretien de pelouse adaptés à vos besoins, de l'intervention ponctuelle au suivi annuel complet. Contactez-nous pour un devis.</p>
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Mois</th><th class="p-2 text-left">Tâche prioritaire</th><th class="p-2 text-left">Hauteur de tonte</th><th class="p-2 text-left">Fertilisation</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Janvier–février</td><td class="p-2">Repos — préparation matériel</td><td class="p-2">—</td><td class="p-2">—</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Mars</td><td class="p-2">1re tonte + scarification légère</td><td class="p-2">6–7 cm</td><td class="p-2">Engrais printemps (N fort)</td></tr>
+<tr class="border-b"><td class="p-2">Avril–mai</td><td class="p-2">Tonte hebdomadaire + désherbage</td><td class="p-2">4–5 cm</td><td class="p-2">Engrais gazon régulier</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Juin–août</td><td class="p-2">Tonte haute + arrosage matin</td><td class="p-2">6–7 cm</td><td class="p-2">Stop azote / potassium</td></tr>
+<tr class="border-b"><td class="p-2">Septembre–octobre</td><td class="p-2">Scarification + regarnissage ★★★</td><td class="p-2">5–6 cm</td><td class="p-2">Engrais automne (P+K)</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Novembre–décembre</td><td class="p-2">Dernière tonte + feuilles</td><td class="p-2">5 cm</td><td class="p-2">—</td></tr>
+</tbody>
+</table></div>
+
+<div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <strong>À retenir :</strong>
+  <ul class="mt-2">
+    <li>Ne jamais tondre une pelouse gelée — les brins cassent et créent des zones mortes</li>
+    <li>Remonter la hauteur de coupe à 6–7 cm en été pour lutter contre la chaleur</li>
+    <li>Septembre–octobre est la période d'entretien la plus importante de l'année</li>
+    <li>Arroser peu fréquemment mais en profondeur plutôt que souvent et superficiel</li>
+    <li>Un gazon qui jaunit en été n'est pas forcément mort — c'est souvent une dormance normale</li>
+  </ul>
+</div>
+
+<h2>Faire appel à LM Espace Vert pour votre pelouse</h2>
+<p>LM Espace Vert propose des contrats d'entretien de pelouse adaptés à vos besoins, de l'intervention ponctuelle au suivi annuel complet. Découvrez nos <a href="/services/entretien-jardin">prestations d'entretien</a> ou <a href="/devis">contactez-nous pour un devis gratuit</a>.</p>
     `.trim(),
   },
   {
@@ -760,27 +850,67 @@ export const articles: Article[] = [
     title: "Gazon en rouleaux ou semis : quelle solution choisir ?",
     excerpt: "Deux méthodes pour créer une belle pelouse, deux philosophies. Notre comparaison complète pour vous aider à faire le bon choix selon votre budget et vos délais.",
     date: '2024-10-15',
+    updatedAt: '2026-05-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
     image: '/images/blog-gazon-rouleau.webp',
     keywords: ['gazon rouleaux', 'semis gazon', 'engazonnement', 'créer pelouse'],
     content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Pour un résultat immédiat ou une pente à stabiliser, choisissez le gazon en rouleaux. Pour un budget serré, un choix de mélanges spécialisés (ombre, sécheresse, sport) ou une grande surface, optez pour le semis. Dans les deux cas, la préparation du sol est la clé du succès.</p>
+</blockquote>
+
 <h2>Deux méthodes, deux profils</h2>
-<p>Le gazon en rouleaux et le semis sont les deux façons principales de créer une pelouse. Le choix dépend de votre budget, du temps que vous pouvez consacrer à l'entretien initial et de vos délais.</p>
+<p>Le gazon en rouleaux et le semis sont les deux façons principales de créer une pelouse. Le choix dépend de votre budget, du temps que vous pouvez consacrer à l'entretien initial et de vos délais. Léo de LM Espace Vert vous aide ici à faire le bon choix pour votre situation.</p>
 
-<h2>Le gazon en rouleaux</h2>
-<p><strong>Avantages :</strong> résultat immédiat (3-4 semaines pour s'enraciner), idéal pour les pentes (le rouleau tient le sol), pelouse plus dense dès le départ, moins d'arrosage nécessaire.<br>
-<strong>Inconvénients :</strong> plus cher (3 à 5× plus que le semis), choix limité aux mélanges standards, risque de rejet si le sol n'est pas bien préparé.</p>
+<h2>Le gazon en rouleaux : immédiat et fiable</h2>
+<p>Le gazon en rouleaux est précultivé en pépinière pendant 12 à 18 mois avant d'être découpé en plaques et livré. Il s'enracine en 3 à 4 semaines selon la saison et la qualité de la préparation du sol.</p>
+<ul>
+  <li><strong>Avantages</strong> : résultat immédiat, idéal pour les pentes (le rouleau stabilise le sol), pelouse dense dès le départ, moins sensible aux mauvaises herbes en phase d'installation, moins d'arrosage intensif que le semis</li>
+  <li><strong>Inconvénients</strong> : 3 à 5 fois plus cher que le semis à surface égale, choix de mélanges limité aux variétés standards, risque de rejet si le sol n'est pas parfaitement préparé ou si le rouleau est posé sur sol sec en été</li>
+  <li><strong>Prix indicatif à Lyon</strong> : 20 à 35 €/m² fourni et posé, préparation du sol comprise</li>
+</ul>
 
-<h2>Le semis</h2>
-<p><strong>Avantages :</strong> économique, large choix de mélanges (gazon sportif, ombre, fleuri…), meilleure adaptation à long terme.<br>
-<strong>Inconvénients :</strong> délai de 6-8 semaines avant une pelouse présentable, arrosage intensif les premières semaines, sensible aux mauvaises herbes en germination.</p>
+<h2>Le semis : économique et personnalisable</h2>
+<p>Le semis consiste à épandre des graines de gazon directement sur un sol préparé. C'est la méthode la plus économique et la plus flexible en termes de composition végétale.</p>
+<ul>
+  <li><strong>Avantages</strong> : coût 3 à 5 fois inférieur au rouleau, très large choix de mélanges spécialisés (gazon résistant sécheresse, gazon d'ombre, gazon sportif intensif, gazon fleuri…), bonne adaptation à long terme au sol local</li>
+  <li><strong>Inconvénients</strong> : délai de 6 à 8 semaines avant une pelouse présentable (dont 3 semaines où le jardin est interdit de passage), arrosage intensif les 3 premières semaines (1 à 2 fois par jour), vulnérabilité aux oiseaux et aux mauvaises herbes pendant la germination</li>
+  <li><strong>Prix indicatif à Lyon</strong> : 8 à 18 €/m² fourni et semé, préparation du sol comprise</li>
+</ul>
 
-<h2>La préparation du sol : clé du succès</h2>
-<p>Quelle que soit la méthode choisie, la préparation du sol est déterminante : bêchage à 20 cm, élimination des cailloux et racines, apport de sable et de compost, nivellement, tassement léger.</p>
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Critère</th><th class="p-2 text-left">Gazon en rouleaux</th><th class="p-2 text-left">Semis</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Délai de praticabilité</td><td class="p-2">3–4 semaines</td><td class="p-2">6–8 semaines</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Prix (posé)</td><td class="p-2">20–35 €/m²</td><td class="p-2">8–18 €/m²</td></tr>
+<tr class="border-b"><td class="p-2">Choix de mélanges</td><td class="p-2">Limité (3–5 types)</td><td class="p-2">Très large (20+ mélanges)</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Arrosage installation</td><td class="p-2">Modéré</td><td class="p-2">Intensif (2×/jour 3 sem.)</td></tr>
+<tr class="border-b"><td class="p-2">Adapté aux pentes</td><td class="p-2">Excellent</td><td class="p-2">Moyen (filet anti-érosion)</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Résistance sécheresse (long terme)</td><td class="p-2">Bonne</td><td class="p-2">Excellente (si bon mélange)</td></tr>
+<tr class="border-b"><td class="p-2">Meilleure saison (Rhône)</td><td class="p-2">Avril–mai / sept.–oct.</td><td class="p-2">Sept.–oct. (prioritaire)</td></tr>
+</tbody>
+</table></div>
+
+<h2>La préparation du sol : clé du succès dans les deux cas</h2>
+<p>Quelle que soit la méthode choisie, la qualité de la préparation du sol est le facteur le plus déterminant. Un sol mal préparé condamne même le meilleur gazon en rouleaux à l'échec. Les étapes essentielles : décompactage à 20–25 cm de profondeur, élimination soigneuse des cailloux et des racines, apport de sable (si sol argileux) et de compost, nivellement avec plancher à niveau, tassement léger au rouleau.</p>
 
 <h2>Les meilleures périodes dans le Rhône</h2>
-<p>Septembre-octobre est la période optimale des deux méthodes. Le printemps (mars-avril) est une alternative, mais les chaleurs estivales peuvent stresser le gazon récent.</p>
+<p>Septembre-octobre reste la période optimale pour les deux méthodes dans le Rhône : sol encore chaud, températures douces, rosées matinales. Le printemps (mars-avril) est une excellente alternative, mais les chaleurs estivales qui suivent peuvent stresser une pelouse fraîchement installée — prévoyez un arrosage soutenu. Évitez absolument les semis en juillet-août : les risques de dessèchement pendant la germination sont très élevés.</p>
+
+<div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <strong>À retenir :</strong>
+  <ul class="mt-2">
+    <li>Rouleaux = rapidité + fiabilité, semis = économie + personnalisation</li>
+    <li>La préparation du sol est aussi importante que la méthode choisie</li>
+    <li>Septembre–octobre est la meilleure période dans le Rhône</li>
+    <li>Ne semez jamais en juillet–août (risque de dessèchement à la germination)</li>
+    <li>Pour les pentes &gt; 15%, préférez les rouleaux ou un filet anti-érosion avec le semis</li>
+  </ul>
+</div>
+
+<h2>LM Espace Vert réalise votre engazonnement à Lyon</h2>
+<p>LM Espace Vert réalise des engazonnements par semis et par rouleaux dans toute la région lyonnaise. Nous préparons le sol, sélectionnons le mélange adapté à votre terrain et assurons le suivi des premières semaines. <a href="/devis">Demandez un devis gratuit</a>.</p>
     `.trim(),
   },
   {
@@ -1149,7 +1279,7 @@ export const articles: Article[] = [
 </ul>
 
 <h2>Contactez LM Espace Vert</h2>
-<p>Nous proposons des contrats d'entretien sur mesure pour les particuliers et les professionnels de Saint-Didier-au-Mont-d'Or et dans un rayon de 20 km. Appelez-nous au 06 74 73 46 98 pour une visite gratuite.</p>
+<p>Nous proposons des contrats d'entretien sur mesure pour les particuliers et les professionnels de Saint-Didier-au-Mont-d'Or et dans un rayon de 20 km. Appelez-nous au 06 72 58 73 53 pour une visite gratuite.</p>
     `.trim(),
   },
   {
@@ -1266,7 +1396,7 @@ export const articles: Article[] = [
 
 <details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
   <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">LM Espace Vert intervient-il en urgence à Caluire après une tempête ?</summary>
-  <div class="p-4"><p>Oui. LM Espace Vert assure des interventions d'urgence pour l'élagage et l'abattage après les tempêtes dans toute la commune de Caluire-et-Cuire. Appelez le 06 74 73 46 98 pour une intervention rapide.</p></div>
+  <div class="p-4"><p>Oui. LM Espace Vert assure des interventions d'urgence pour l'élagage et l'abattage après les tempêtes dans toute la commune de Caluire-et-Cuire. Appelez le 06 72 58 73 53 pour une intervention rapide.</p></div>
 </details>
 
 <details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
@@ -1278,7 +1408,7 @@ export const articles: Article[] = [
 <p>Parmi nos réalisations récentes à Caluire-et-Cuire, citons la création d'une terrasse en dallage calcaire avec massifs intégrés dans le quartier du Mas-Rillier, la rénovation complète d'un jardin en pente avec terrasses successives dans les Hauteurs de Caluire, et l'installation d'un système d'arrosage automatique connecté pour une propriété du bord de Saône.</p>
 
 <h2>Contactez LM Espace Vert pour votre jardin à Caluire</h2>
-<p>Vous habitez Caluire-et-Cuire et souhaitez valoriser votre jardin ? <a href="/devis">Contactez LM Espace Vert</a> au <strong>06 74 73 46 98</strong> pour un devis gratuit. Léo Maurice se déplace dans toute la commune pour évaluer votre projet et vous proposer les solutions les mieux adaptées à votre terrain et à vos envies.</p>
+<p>Vous habitez Caluire-et-Cuire et souhaitez valoriser votre jardin ? <a href="/devis">Contactez LM Espace Vert</a> au <strong>06 72 58 73 53</strong> pour un devis gratuit. Léo Maurice se déplace dans toute la commune pour évaluer votre projet et vous proposer les solutions les mieux adaptées à votre terrain et à vos envies.</p>
     `.trim(),
   },
   {
@@ -1351,7 +1481,7 @@ export const articles: Article[] = [
 <p>LM Espace Vert a réalisé plusieurs jardins remarquables à Écully, dont un parc de 1 500 m² avec allées en calcaire, roseraie et bassin à nénuphars, et une terrasse contemporaine avec pergola bioclimatique et jardin structuré autour de topiaires en buis et en ilex.</p>
 
 <h2>Demandez votre devis à Écully</h2>
-<p>Vous êtes propriétaire à Écully et souhaitez sublimer votre extérieur ? LM Espace Vert est votre partenaire idéal. <a href="/devis">Demandez un devis gratuit</a> ou contactez-nous au <strong>06 74 73 46 98</strong> pour une visite sans engagement.</p>
+<p>Vous êtes propriétaire à Écully et souhaitez sublimer votre extérieur ? LM Espace Vert est votre partenaire idéal. <a href="/devis">Demandez un devis gratuit</a> ou contactez-nous au <strong>06 72 58 73 53</strong> pour une visite sans engagement.</p>
     `.trim(),
   },
   {
@@ -1423,11 +1553,11 @@ export const articles: Article[] = [
 
 <details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
   <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">LM Espace Vert intervient-il l'hiver dans toute la zone lyonnaise ?</summary>
-  <div class="p-4"><p>Oui. LM Espace Vert continue ses interventions tout l'hiver dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or : Caluire, Écully, Tassin, Dardilly, Champagne, Neuville et communes voisines. Appelez le 06 74 73 46 98 pour programmer une intervention hivernale.</p></div>
+  <div class="p-4"><p>Oui. LM Espace Vert continue ses interventions tout l'hiver dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or : Caluire, Écully, Tassin, Dardilly, Champagne, Neuville et communes voisines. Appelez le 06 72 58 73 53 pour programmer une intervention hivernale.</p></div>
 </details>
 
 <h2>Confiez votre jardin hivernal à LM Espace Vert</h2>
-<p>L'équipe LM Espace Vert continue ses interventions tout l'hiver dans le nord de Lyon. Nous prenons en charge la taille des arbres, la protection des plantes sensibles et les plantations hivernales. <a href="/devis">Demandez un devis gratuit</a> ou contactez-nous au <strong>06 74 73 46 98</strong> pour programmer une intervention.</p>
+<p>L'équipe LM Espace Vert continue ses interventions tout l'hiver dans le nord de Lyon. Nous prenons en charge la taille des arbres, la protection des plantes sensibles et les plantations hivernales. <a href="/devis">Demandez un devis gratuit</a> ou contactez-nous au <strong>06 72 58 73 53</strong> pour programmer une intervention.</p>
     `.trim(),
   },
   {
@@ -1497,7 +1627,7 @@ export const articles: Article[] = [
 </details>
 
 <h2>LM Espace Vert, expert de la pelouse dans le Rhône</h2>
-<p>Vous reconnaissez l'un de ces problèmes dans votre jardin ? LM Espace Vert intervient pour diagnostiquer et traiter les troubles de votre pelouse dans toute la zone de Saint-Didier-au-Mont-d'Or, <a href="/secteur/caluire">Caluire</a>, <a href="/secteur/ecully">Écully</a>, Tassin et les communes voisines. Appelez-nous au <strong>06 74 73 46 98</strong> pour un diagnostic gratuit ou <a href="/devis">demandez un devis en ligne</a>.</p>
+<p>Vous reconnaissez l'un de ces problèmes dans votre jardin ? LM Espace Vert intervient pour diagnostiquer et traiter les troubles de votre pelouse dans toute la zone de Saint-Didier-au-Mont-d'Or, <a href="/secteur/caluire">Caluire</a>, <a href="/secteur/ecully">Écully</a>, Tassin et les communes voisines. Appelez-nous au <strong>06 72 58 73 53</strong> pour un diagnostic gratuit ou <a href="/devis">demandez un devis en ligne</a>.</p>
     `.trim(),
   },
 
@@ -1547,7 +1677,7 @@ export const articles: Article[] = [
 <p>Faire appel à LM Espace Vert, c'est choisir un paysagiste qui connaît les sols, le microclimat et les espèces adaptées à votre secteur. Nos équipes interviennent rapidement, connaissent la commune et construisent des relations de confiance durables avec nos clients tassinois.</p>
 
 <h2>Besoin d'un paysagiste à Tassin-la-Demi-Lune ?</h2>
-<p>Contactez LM Espace Vert pour votre jardin à Tassin : appelez le <strong>06 74 73 46 98</strong> ou <a href="/devis">demandez un devis gratuit en ligne</a>. Léo Maurice se déplace personnellement pour évaluer votre projet.</p>
+<p>Contactez LM Espace Vert pour votre jardin à Tassin : appelez le <strong>06 72 58 73 53</strong> ou <a href="/devis">demandez un devis gratuit en ligne</a>. Léo Maurice se déplace personnellement pour évaluer votre projet.</p>
     `.trim(),
   },
 
@@ -1594,7 +1724,7 @@ export const articles: Article[] = [
 </div>
 
 <h2>Besoin d'un paysagiste à Dardilly ?</h2>
-<p>Contactez LM Espace Vert pour vos projets à Dardilly. Appelez le <strong>06 74 73 46 98</strong> ou <a href="/devis">demandez un devis gratuit</a>. Nous nous déplaçons sans engagement pour visiter votre terrain et étudier votre projet.</p>
+<p>Contactez LM Espace Vert pour vos projets à Dardilly. Appelez le <strong>06 72 58 73 53</strong> ou <a href="/devis">demandez un devis gratuit</a>. Nous nous déplaçons sans engagement pour visiter votre terrain et étudier votre projet.</p>
     `.trim(),
   },
 
@@ -1639,7 +1769,7 @@ export const articles: Article[] = [
 <p>Les sols calcaires de Champagne-au-Mont-d'Or sont particulièrement adaptés aux espèces méditerranéennes et aux plantes calcicoles. Nous recommandons : lavandes, romarins, iris, sedums, géraniums vivaces côté soleil ; hellébores, épimèdes, polygonatum en zones ombragées. Pour les haies, le charme et le laurier-tin sont parfaitement adaptés.</p>
 
 <h2>Besoin d'un paysagiste à Champagne-au-Mont-d'Or ?</h2>
-<p>Contactez LM Espace Vert pour votre jardin à Champagne-au-Mont-d'Or. Appelez le <strong>06 74 73 46 98</strong> ou <a href="/devis">demandez votre devis gratuit en ligne</a>. Nos équipes interviennent dans toute la commune et les alentours.</p>
+<p>Contactez LM Espace Vert pour votre jardin à Champagne-au-Mont-d'Or. Appelez le <strong>06 72 58 73 53</strong> ou <a href="/devis">demandez votre devis gratuit en ligne</a>. Nos équipes interviennent dans toute la commune et les alentours.</p>
     `.trim(),
   },
 
@@ -1698,7 +1828,7 @@ export const articles: Article[] = [
 </div>
 
 <h2>Besoin d'un paysagiste pour votre taille de haies à Lyon ?</h2>
-<p>Confiez la taille de vos haies à LM Espace Vert. <a href="/devis">Demandez un devis gratuit</a> ou appelez le <strong>06 74 73 46 98</strong>. Intervention rapide dans tout le nord et l'ouest lyonnais.</p>
+<p>Confiez la taille de vos haies à LM Espace Vert. <a href="/devis">Demandez un devis gratuit</a> ou appelez le <strong>06 72 58 73 53</strong>. Intervention rapide dans tout le nord et l'ouest lyonnais.</p>
     `.trim(),
   },
 
@@ -1962,7 +2092,7 @@ export const articles: Article[] = [
 <p>Un <a href="/services/arrosage-automatique">système d'arrosage automatique</a> bien programmé gère l'arrosage de nuit ou tôt le matin, s'adapte aux prévisions météo (capteur de pluie) et assure une couverture homogène. LM Espace Vert installe et programme des systèmes Hunter et Rain Bird dans toute la région lyonnaise.</p>
 
 <h2>Besoin d'un paysagiste pour votre arrosage estival à Lyon ?</h2>
-<p>LM Espace Vert installe vos systèmes d'arrosage automatique et vous conseille sur la gestion de l'eau dans votre jardin. <a href="/devis">Demandez un devis gratuit</a> ou appelez le <strong>06 74 73 46 98</strong>.</p>
+<p>LM Espace Vert installe vos systèmes d'arrosage automatique et vous conseille sur la gestion de l'eau dans votre jardin. <a href="/devis">Demandez un devis gratuit</a> ou appelez le <strong>06 72 58 73 53</strong>.</p>
     `.trim(),
   },
 
@@ -2013,7 +2143,7 @@ export const articles: Article[] = [
 <p>Les prestations d'entretien de jardin réalisées par un professionnel à domicile ouvrent droit au <strong>crédit d'impôt services à la personne (50% dans la limite de 5 000 €/an)</strong> pour les particuliers. Vérifiez que votre paysagiste est bien déclaré en SAP (Services À la Personne).</p>
 
 <h2>Demandez votre devis à LM Espace Vert</h2>
-<p>LM Espace Vert propose des devis gratuits et transparents pour tous vos projets à Lyon et dans un rayon de 20 km. <a href="/devis">Demandez un devis gratuit en ligne</a> ou appelez le <strong>06 74 73 46 98</strong> — Léo Maurice se déplace personnellement pour évaluer votre projet.</p>
+<p>LM Espace Vert propose des devis gratuits et transparents pour tous vos projets à Lyon et dans un rayon de 20 km. <a href="/devis">Demandez un devis gratuit en ligne</a> ou appelez le <strong>06 72 58 73 53</strong> — Léo Maurice se déplace personnellement pour évaluer votre projet.</p>
     `.trim(),
   },
   // ── 10 nouveaux articles Sprint 2 ──────────────────────────────────────────
@@ -2392,7 +2522,7 @@ export const articles: Article[] = [
 <p><em>"Nous avons confié à LM Espace Vert la rénovation complète de notre jardin en pente à Neuville. L'équipe a créé deux terrasses reliées par un escalier en pierre, planté une haie de lauriers pour nous isoler de la rue et installé un système d'arrosage automatique. Le résultat dépasse nos attentes — un vrai jardin paysager sur un terrain que nous pensions impossible à aménager."</em><br>— Famille B., propriétaires à Neuville-sur-Saône</p>
 
 <h2>Votre devis gratuit à Neuville-sur-Saône</h2>
-<p>LM Espace Vert se déplace sans engagement à Neuville-sur-Saône pour évaluer votre projet. Appelez-nous au <strong>06 74 73 46 98</strong> ou <a href="/devis">demandez un devis en ligne</a>. Notre base à Saint-Didier-au-Mont-d'Or est à 10 minutes de Neuville — nous assurons des délais d'intervention rapides.</p>
+<p>LM Espace Vert se déplace sans engagement à Neuville-sur-Saône pour évaluer votre projet. Appelez-nous au <strong>06 72 58 73 53</strong> ou <a href="/devis">demandez un devis en ligne</a>. Notre base à Saint-Didier-au-Mont-d'Or est à 10 minutes de Neuville — nous assurons des délais d'intervention rapides.</p>
 
 <details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
   <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">LM Espace Vert intervient-il régulièrement à Neuville-sur-Saône ?</summary>
@@ -2458,7 +2588,7 @@ export const articles: Article[] = [
 </table></div>
 
 <h2>Contactez LM Espace Vert à Francheville</h2>
-<p>Vous êtes propriétaire à Francheville et souhaitez valoriser votre jardin ? LM Espace Vert est à votre disposition. Appelez le <strong>06 74 73 46 98</strong> ou <a href="/devis">demandez un devis gratuit en ligne</a>. Nous nous déplaçons dans toute la commune sans engagement pour évaluer votre projet et vous proposer une solution adaptée à votre budget et à vos envies.</p>
+<p>Vous êtes propriétaire à Francheville et souhaitez valoriser votre jardin ? LM Espace Vert est à votre disposition. Appelez le <strong>06 72 58 73 53</strong> ou <a href="/devis">demandez un devis gratuit en ligne</a>. Nous nous déplaçons dans toute la commune sans engagement pour évaluer votre projet et vous proposer une solution adaptée à votre budget et à vos envies.</p>
 
 <details class="my-4 border border-[#80BC00] rounded-lg overflow-hidden">
   <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">LM Espace Vert peut-il gérer entièrement mon jardin à Francheville ?</summary>
@@ -2778,6 +2908,767 @@ export const articles: Article[] = [
   <summary class="bg-[#F7F5F0] p-3 cursor-pointer font-semibold">Comment entretenir une terrasse bois à Lyon au printemps ?</summary>
   <div class="p-4"><p>Au printemps (mars-avril), commencez par un nettoyage au karcher basse pression (max 100–150 bars) pour éliminer les mousses et les lichens qui se développent en hiver dans le climat lyonnais. Laissez sécher 48h. Appliquez ensuite une huile naturelle (bois exotiques) ou une lasure pénétrante (pin traité, douglas) à la brosse ou au rouleau. Évitez les produits filmogènes sur le bois naturel — le film se fissure rapidement. Pour notre guide détaillé, consultez notre article sur l'<a href="/blog/terrasse-bois-entretien">entretien des terrasses en bois</a>.</p></div>
 </details>
+    `.trim(),
+  },
+
+  // ─── 10 NOUVEAUX ARTICLES (Sprint 2) ───────────────────────────────────────
+
+  {
+    slug: 'pergola-tonnelle-jardin-lyon',
+    category: 'Conseils',
+    title: 'Pergola et tonnelle : créer un espace ombragé dans votre jardin à Lyon',
+    excerpt: 'Pergola en bois, en aluminium ou tonnelle végétale : découvrez comment créer un espace ombragé et convivial dans votre jardin lyonnais, du choix des matériaux aux solutions végétales.',
+    date: '2026-04-10',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-creation-jardin.webp',
+    keywords: ['pergola jardin Lyon', 'tonnelle jardin Lyon', 'espace ombragé jardin', 'pergola bois aluminium Lyon', 'aménagement extérieur Rhône'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Une pergola ou une tonnelle bien conçue transforme radicalement l'usage de votre jardin. Elle crée une pièce de vie extérieure, protège du soleil estival (de plus en plus intense à Lyon), et peut augmenter la valeur immobilière de votre bien de 5 à 15 %.</p>
+</blockquote>
+
+<h2>Pourquoi créer un espace ombragé à Lyon ?</h2>
+<p>Les étés lyonnais sont de plus en plus chauds : depuis 2019, la ville enregistre régulièrement des épisodes de canicule dépassant 38 °C. Dans ce contexte, disposer d'un espace ombragé dans son jardin n'est plus un luxe mais une nécessité. Pergola, tonnelle, voile d'ombrage ou structure végétale : les solutions existent pour tous les budgets et toutes les configurations de jardin.</p>
+<p>Pour les propriétaires de la région de Saint-Didier-au-Mont-d'Or, Caluire, Écully ou Dardilly, Léo et l'équipe de LM Espace Vert accompagnent régulièrement les projets d'aménagement de terrasse et d'espace ombragé. Voici notre guide complet pour faire le bon choix.</p>
+
+<h2>Pergola en bois : l'option naturelle et chaleureuse</h2>
+<p>La pergola en bois reste la solution la plus demandée dans les jardins lyonnais. Elle s'intègre harmonieusement dans les jardins bourgeois des Monts d'Or et apporte une touche de chaleur naturelle. Les essences adaptées au climat lyonnais sont le pin traité autoclave classe IV (économique), le douglas (esthétique et durable) et le robinier (résistance naturelle maximale).</p>
+<p>Une pergola en bois de 15 à 20 m² se construit en 2 à 3 jours avec une équipe professionnelle. Le coût varie de 2 500 à 6 000 € en fonction des dimensions, de l'essence de bois choisie et des finitions. Pour maximiser la durée de vie, prévoyez un traitement lazurant tous les 2 à 3 ans.</p>
+<ul>
+  <li><strong>Douglas</strong> : résistance naturelle, belle teinte miel, idéal sans traitement</li>
+  <li><strong>Pin traité autoclave</strong> : économique, durée de vie 20–25 ans</li>
+  <li><strong>Robinier (acacia)</strong> : résistance maximale (30+ ans), essence locale</li>
+  <li><strong>Châtaignier</strong> : très résistant, aspect rustique apprécié en zone rurale</li>
+</ul>
+
+<h2>Pergola en aluminium : modernité et zéro entretien</h2>
+<p>La pergola aluminium bioclimatique représente aujourd'hui le segment le plus dynamique du marché. Ses lames orientables permettent de moduler l'ombrage selon l'heure et l'ensoleillement. Motorisées et connectées, certaines se ferment automatiquement en cas de pluie grâce à un capteur météo. Elles s'accordent parfaitement avec l'architecture contemporaine des maisons neuves de Dardilly, Limonest et Champagne-au-Mont-d'Or.</p>
+<p>L'investissement est plus élevé : comptez 5 000 à 15 000 € pour une pergola bioclimatique motorisée de 20 m². Mais l'absence totale de maintenance (l'aluminium ne rouille pas et ne se déforme pas) et la durabilité (40 à 50 ans) en font souvent le meilleur investissement sur le long terme.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Type de pergola</th><th class="p-2 text-left">Prix indicatif (20 m²)</th><th class="p-2 text-left">Durée de vie</th><th class="p-2 text-left">Entretien</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Bois pin traité</td><td class="p-2">2 500–4 500 €</td><td class="p-2">20–25 ans</td><td class="p-2">Lazure tous les 3 ans</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Bois Douglas / Robinier</td><td class="p-2">4 000–7 000 €</td><td class="p-2">25–35 ans</td><td class="p-2">Huile tous les 2–3 ans</td></tr>
+<tr class="border-b"><td class="p-2">Aluminium fixe</td><td class="p-2">3 500–6 000 €</td><td class="p-2">40–50 ans</td><td class="p-2">Aucun</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Pergola bioclimatique motorisée</td><td class="p-2">6 000–15 000 €</td><td class="p-2">40–50 ans</td><td class="p-2">Nettoyage annuel</td></tr>
+<tr class="border-b"><td class="p-2">Tonnelle végétale (structure + plantes)</td><td class="p-2">800–3 000 €</td><td class="p-2">Variable</td><td class="p-2">Taille annuelle</td></tr>
+</tbody>
+</table></div>
+
+<h2>La tonnelle végétale : ombrage naturel et biodiversité</h2>
+<p>La tonnelle végétale consiste à installer une structure légère (métal, bois ou osier tressé) rapidement colonisée par des plantes grimpantes. C'est la solution la plus économique et la plus écologique pour créer de l'ombre au jardin. Elle accueille en prime les insectes pollinisateurs et les oiseaux.</p>
+<p>Les plantes grimpantes les plus adaptées au climat lyonnais pour une tonnelle dense et rapide : la glycine (spectaculaire mais envahissante), le chèvrefeuille (parfumé et mellifère), le houblon (croissance ultra-rapide, 6 à 8 m par saison), la vigne vierge (feuillage décoratif) et la clématite (floraison généreuse).</p>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Conseil de Léo :</strong> "Pour une tonnelle végétale rapidement ombragée à Lyon, associez un houblon japonais (croissance folle la première année) à une clématite Montana. Vous aurez de l'ombre dès le premier été et une floraison spectaculaire au printemps."</p>
+</blockquote>
+
+<h2>Réglementation : déclaration préalable ou permis de construire ?</h2>
+<p>En règle générale, une pergola de moins de 20 m² en emprise au sol et inférieure à 12 m de hauteur ne nécessite qu'une déclaration préalable de travaux, voire aucune démarche si la surface est inférieure à 5 m² en zone non protégée. Cependant, les communes des Monts d'Or (Saint-Cyr-au-Mont-d'Or, Poleymieux, La Tour-de-Salvagny) ont souvent des règles d'urbanisme spécifiques liées aux secteurs classés. LM Espace Vert peut vous accompagner dans vos démarches administratives.</p>
+
+<h2>Confiez votre projet à LM Espace Vert</h2>
+<p>Léo et son équipe réalisent des projets de pergolas et d'espaces ombragés dans toute la région lyonnaise : Saint-Didier-au-Mont-d'Or, Caluire, Écully, Francheville, Dardilly et communes environnantes. De l'étude de votre jardin au suivi de chantier, LM Espace Vert vous accompagne de A à Z. <a href="/devis">Demandez un devis gratuit</a> — réponse sous 48h.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'taille-arbres-fruitiers-rhone',
+    category: 'Conseils',
+    title: 'Taille des arbres fruitiers dans le Rhône : guide complet saison par saison',
+    excerpt: 'Pommier, poirier, prunier, cerisier, figuier : chaque arbre fruitier a ses exigences de taille. Notre guide saison par saison adapté au climat du Rhône pour des récoltes abondantes.',
+    date: '2026-04-05',
+    readingTime: '8 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-elagage-arbre.webp',
+    keywords: ['taille arbres fruitiers Rhône', 'tailler pommier poirier lyon', 'taille prunier cerisier', 'arbre fruitier entretien Rhône'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> La taille des arbres fruitiers est l'intervention la plus influente sur la qualité et la quantité des récoltes. Une taille bien maîtrisée améliore la luminosité des fruits, limite les maladies et prolonge la durée de vie de l'arbre. Dans le Rhône, le calendrier de taille est calé sur des repères locaux.</p>
+</blockquote>
+
+<h2>Pourquoi tailler les arbres fruitiers dans le Rhône ?</h2>
+<p>Le département du Rhône bénéficie d'un climat semi-continental favorable à la culture fruitière : étés chauds et secs, hivers modérément froids, peu de gelées tardives dévastatrices. Les jardins de Saint-Didier-au-Mont-d'Or, Poleymieux ou Limonest accueillent fréquemment pommiers, poiriers, pruniers et cerisiers. Mais sans taille régulière, ces arbres s'embroussaillent, s'asphyxient et produisent des fruits de moins bonne qualité.</p>
+<p>La taille remplit trois fonctions essentielles : <strong>former</strong> l'arbre (charpente, architecture), <strong>fructifier</strong> (équilibre végétatif-reproductif) et <strong>soigner</strong> (suppression des branches mortes, malades ou mal orientées). Léo de LM Espace Vert intervient régulièrement pour la taille d'arbres fruitiers dans tout le Rhône.</p>
+
+<h2>Calendrier de taille saison par saison pour le Rhône</h2>
+
+<h3>Hiver (décembre–février) : la taille de formation et de fructification</h3>
+<p>C'est la grande période de taille pour les arbres fruitiers à pépins (pommiers, poiriers). En période de dormance, la sève est au repos et les plaies cicatrisent bien. On supprime les branches croisées, les gourmands (pousses verticales vigoureuses) et on sélectionne les branches à fruit (rameaux courts porteurs de boutons floraux). Dans le Rhône, attendez la fin des grands froids, idéalement entre début janvier et mi-mars selon les années.</p>
+
+<h3>Printemps (mars–avril) : ébourgeonnage et taille en vert</h3>
+<p>L'ébourgeonnage consiste à supprimer les bourgeons surnuméraires pour concentrer l'énergie de l'arbre sur les fruits conservés. C'est aussi le moment de pincer les gourmands naissants avant qu'ils ne lignifient. Cette taille légère se fait à la main, sans outils tranchants, pendant la croissance végétative de mars à fin avril.</p>
+
+<h3>Été (juin–août) : taille estivale des cerises et prunes</h3>
+<p>Les arbres fruitiers à noyau (cerisier, prunier, pêcher) se taillent de préférence en été, après la récolte, pour limiter les risques de maladie fongique (moniliose, silver leaf). Le cerisier se taille en juin-juillet juste après la cueillette. Le prunier en juillet-août. L'été est aussi le moment d'éclaircir le feuillage pour exposer les fruits au soleil.</p>
+
+<h3>Automne (septembre–novembre) : suppression et nettoyage</h3>
+<p>L'automne est la période de nettoyage sanitaire : suppression des branches mortes, des momies de fruits (foyers de maladies), des crosses et des bois blessés. C'est aussi le moment de traiter au soufre mouillable contre la tavelure et de badigeonner les plaies importantes à la pâte cicatrisante.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Espèce</th><th class="p-2 text-left">Taille principale</th><th class="p-2 text-left">Période idéale (Rhône)</th><th class="p-2 text-left">Particularité</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Pommier</td><td class="p-2">Formation + fructification</td><td class="p-2">Janvier–mars</td><td class="p-2">Couper les bouquets de mai en excès</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Poirier</td><td class="p-2">Formation + fructification</td><td class="p-2">Janvier–mars</td><td class="p-2">Conserver les brachyblastes</td></tr>
+<tr class="border-b"><td class="p-2">Cerisier</td><td class="p-2">Aération + suppression</td><td class="p-2">Juin–juillet (post-récolte)</td><td class="p-2">Jamais en hiver (maladie)</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Prunier</td><td class="p-2">Éclaircissage + suppression</td><td class="p-2">Juillet–août</td><td class="p-2">Sensible à la moniliose</td></tr>
+<tr class="border-b"><td class="p-2">Pêcher</td><td class="p-2">Renouvellement des rameaux</td><td class="p-2">Février–mars</td><td class="p-2">Taille annuelle obligatoire</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Figuier</td><td class="p-2">Pincement + éclaircissage</td><td class="p-2">Mars + août</td><td class="p-2">Latex irritant — gants obligatoires</td></tr>
+</tbody>
+</table></div>
+
+<h2>Les outils indispensables pour une taille de qualité</h2>
+<ul>
+  <li><strong>Sécateur à lame franche</strong> (type Felco 2 ou Pradines) pour les rameaux jusqu'à 1,5 cm</li>
+  <li><strong>Ébrancheur à long manche</strong> pour les branches de 1,5 à 3 cm sans se mettre en danger</li>
+  <li><strong>Scie à élaguer</strong> (lame japonaise) pour les branches de plus de 3 cm</li>
+  <li><strong>Pâte cicatrisante</strong> (type Lac Balsam) pour les plaies de plus de 3 cm de diamètre</li>
+  <li><strong>Désinfectant (alcool à 70°)</strong> pour désinfecter les outils entre chaque arbre</li>
+</ul>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Le conseil de Léo :</strong> "Dans le Rhône, je préconise de ne jamais tailler les cerisiers et pruniers en hiver — le risque de silver leaf (plomb) et de moniliose est trop élevé. Attendez toujours la belle saison, après la récolte. Pour les pommiers et poiriers, le mois de février est idéal : les bourgeons commencent à gonfler et on voit mieux où en est l'arbre."</p>
+</blockquote>
+
+<h2>Faire appel à un professionnel pour vos arbres fruitiers</h2>
+<p>La taille des grands arbres fruitiers (cerisier de 6 m, vieux pommier centenaire) nécessite un matériel adapté et une expérience solide pour ne pas blesser l'arbre irrémédiablement. LM Espace Vert intervient pour la taille et l'élagage d'arbres fruitiers dans tout le département du Rhône. Découvrez notre service d'<a href="/services/elagage-abattage">élagage et abattage</a> ou <a href="/devis">demandez un devis gratuit</a> directement en ligne.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'gazon-resistant-canicule-lyon',
+    category: 'Conseils',
+    title: 'Quel gazon choisir pour résister à la canicule lyonnaise ?',
+    excerpt: 'Avec des étés de plus en plus chauds à Lyon, le choix des espèces de gazon est crucial. Découvrez quelles variétés résistent le mieux à la sécheresse et aux fortes chaleurs dans le Rhône.',
+    date: '2026-04-15',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-pelouse.webp',
+    keywords: ['gazon résistant chaleur Lyon', 'gazon sécheresse Rhône', 'pelouse canicule Lyon', 'variété gazon résistant été', 'pelouse été Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Lyon enregistre en moyenne 15 jours de canicule par an depuis 2020, contre 3 à 4 jours dans les années 1990. Bien choisir ses espèces gazonnantes et adapter son entretien permet d'éviter le brunissement estival et de réduire significativement la consommation d'eau.</p>
+</blockquote>
+
+<h2>Le défi climatique des pelouses lyonnaises</h2>
+<p>Le climat lyonnais est semi-continental avec une tendance au réchauffement marquée. Les étés 2022, 2023 et 2024 ont mis à rude épreuve les pelouses des jardins de Caluire, Écully, Saint-Didier-au-Mont-d'Or et du plateau de l'Ouest lyonnais. Sans adaptation, un gazon classique peut jaunir irrémédiablement en 10 à 15 jours de sécheresse intense à 35 °C.</p>
+<p>La bonne nouvelle : il existe des variétés sélectionnées pour leur résistance à la sécheresse et aux fortes chaleurs. Elles nécessitent moins d'eau, restent vertes plus longtemps et récupèrent rapidement après un stress hydrique. Léo de LM Espace Vert vous guide dans ce choix déterminant.</p>
+
+<h2>Les meilleures espèces de gazon pour Lyon</h2>
+
+<h3>La fétuque ovine (Festuca ovina) et la fétuque rouge demi-rampante</h3>
+<p>Les fétuques sont les championnes de la résistance à la sécheresse. Leur système racinaire profond (jusqu'à 40 cm) leur permet d'aller chercher l'eau en profondeur même en période de sécheresse. Leur principal avantage : elles entrent en dormance estivale (jaunissement) mais reprennent très rapidement dès les premières pluies sans dommages. Elles sont idéales pour les jardins des Monts d'Or aux sols calcaires et bien drainants.</p>
+
+<h3>Le ray-grass anglais (Lolium perenne) résistant sécheresse</h3>
+<p>Les nouvelles variétés de ray-grass anglais (RGA) sélectionnées après 2015 intègrent des gènes de résistance à la sécheresse. Le RGA reste le gazon de référence pour les pelouses sportives et les jardins d'usage intensif. Il se ressème facilement et présente une excellente reprise après stress. Choisissez les variétés labellisées "Drought tolerance" par le STRI (Sports Turf Research Institute).</p>
+
+<h3>La fétuque élevée (Festuca arundinacea)</h3>
+<p>La fétuque élevée est l'espèce la plus robuste de la famille. Elle résiste aussi bien à la chaleur qu'au piétinement et à l'ombre partielle. Son enracinement très profond en fait la meilleure candidate pour les jardins lyonnais exposés sud avec des sols légers. Son seul défaut : une texture un peu plus grossière que les autres fétuques, moins « veloutée » à l'aspect.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Espèce</th><th class="p-2 text-left">Résistance sécheresse</th><th class="p-2 text-left">Résistance chaleur</th><th class="p-2 text-left">Usage</th><th class="p-2 text-left">Aspect</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Fétuque ovine</td><td class="p-2">★★★★★</td><td class="p-2">★★★★★</td><td class="p-2">Ornement</td><td class="p-2">Fin, délicat</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Fétuque élevée</td><td class="p-2">★★★★★</td><td class="p-2">★★★★</td><td class="p-2">Sport + ornement</td><td class="p-2">Mi-fin</td></tr>
+<tr class="border-b"><td class="p-2">Fétuque rouge demi-rampante</td><td class="p-2">★★★★</td><td class="p-2">★★★★</td><td class="p-2">Ornement</td><td class="p-2">Très fin</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Ray-grass anglais nouvelle génération</td><td class="p-2">★★★</td><td class="p-2">★★★</td><td class="p-2">Sport + usage intensif</td><td class="p-2">Mi-grossier</td></tr>
+<tr class="border-b"><td class="p-2">Pâturin des prés</td><td class="p-2">★★</td><td class="p-2">★★</td><td class="p-2">Ornement frais</td><td class="p-2">Fin</td></tr>
+</tbody>
+</table></div>
+
+<h2>Les mélanges gazon anti-canicule recommandés pour Lyon</h2>
+<p>En pratique, un gazon est toujours un mélange d'espèces complémentaires. Pour le climat lyonnais, Léo recommande le mélange suivant :</p>
+<ul>
+  <li><strong>60 % fétuque élevée</strong> (résistance sécheresse + robustesse)</li>
+  <li><strong>25 % fétuque rouge demi-rampante</strong> (esthétique et densité)</li>
+  <li><strong>15 % ray-grass anglais nouvelle génération</strong> (rapidité de germination)</li>
+</ul>
+<p>Ce mélange offre un gazon dense, esthétique et résistant aux étés lyonnais. Il germe rapidement (7 à 14 jours) et développe un enracinement profond en 6 à 8 semaines.</p>
+
+<h2>Adapter son entretien pour réduire la consommation d'eau</h2>
+<p>Au-delà du choix des espèces, l'entretien joue un rôle déterminant dans la résistance à la canicule :</p>
+<ul>
+  <li><strong>Tondre haut</strong> (5–6 cm en été) pour limiter l'évaporation et favoriser l'enracinement profond</li>
+  <li><strong>Arroser peu mais profond</strong> (1 fois par semaine, 15 à 20 L/m²) plutôt que souvent et superficiel</li>
+  <li><strong>Arroser la nuit ou tôt le matin</strong> pour limiter l'évaporation</li>
+  <li><strong>Scarifier au printemps</strong> pour améliorer l'absorption de l'eau</li>
+  <li><strong>Passer de l'engrais riche en potassium</strong> en été : le K renforce les parois cellulaires et améliore la résistance au stress hydrique</li>
+</ul>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Conseil de Léo :</strong> "Ne paniquez pas si votre gazon jaunit en juillet-août à Lyon ! Une fétuque qui entre en dormance n'est pas morte — elle reprend en septembre. Le seul vrai indicateur, c'est le test du crayon : si vous plantez un crayon dans la pelouse et qu'il ressort humide en profondeur, votre gazon est sain. Si le sol est complètement sec à 5 cm, c'est le moment d'arroser profondément."</p>
+</blockquote>
+
+<h2>Besoin d'un gazon résistant pour votre jardin lyonnais ?</h2>
+<p>LM Espace Vert réalise des engazonnements par semis ou par rouleaux dans toute la région lyonnaise. Nous sélectionnons les mélanges adaptés à votre sol, votre exposition et votre usage. Consultez notre service d'<a href="/services/entretien-jardin">entretien de jardin</a> ou <a href="/devis">demandez un devis gratuit</a> — Léo vous répond personnellement sous 48h.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'amenagement-jardin-pente-monts-dor',
+    category: 'Travaux',
+    title: "Aménager un jardin en pente dans les Monts d'Or : nos solutions",
+    excerpt: "Les Monts d'Or offrent des panoramas exceptionnels mais leurs jardins en pente posent des défis réels : érosion, terrassement, escaliers... LM Espace Vert vous présente ses solutions éprouvées.",
+    date: '2026-04-20',
+    readingTime: '8 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-allee-jardin.webp',
+    keywords: ["jardin en pente Monts d'Or", "aménagement jardin en pente Lyon", 'terrassement pente Rhône', 'soutènement mur jardin', 'escalier jardin pente'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Un jardin en pente bien aménagé se valorise considérablement et offre souvent de spectaculaires points de vue. Le secret : stabiliser, terrasser, et planter intelligemment en respectant la topographie plutôt qu'en cherchant à tout aplanir.</p>
+</blockquote>
+
+<h2>Les jardins en pente des Monts d'Or : un défi et une opportunité</h2>
+<p>Les Monts d'Or, ce massif calcaire qui borde Lyon au nord-ouest, offrent des panoramas exceptionnels sur les plaines du Rhône et de la Saône. Mais leurs jardins — souvent escarpés, aux sols calcaires et secs — posent des défis d'aménagement que les propriétaires de Saint-Cyr-au-Mont-d'Or, Saint-Didier-au-Mont-d'Or, Poleymieux ou Collonges-au-Mont-d'Or connaissent bien.</p>
+<p>LM Espace Vert intervient régulièrement dans ces zones pour transformer des talus impossibles en jardins structurés, fonctionnels et magnifiques. Léo et son équipe ont développé une expertise spécifique sur les sols calcaires et les pentes des Monts d'Or.</p>
+
+<h2>Diagnostic et étude préalable : les pentes en chiffres</h2>
+<p>Avant tout projet, il faut qualifier la pente. On distingue généralement :</p>
+<ul>
+  <li><strong>Pente douce (0–8 %)</strong> : aménagement classique sans contrainte particulière</li>
+  <li><strong>Pente modérée (8–20 %)</strong> : terrassements simples, drainage important, végétaux adaptés</li>
+  <li><strong>Pente forte (20–40 %)</strong> : soutènement nécessaire, escaliers, végétalisation des talus</li>
+  <li><strong>Pente très forte (&gt;40 %)</strong> : étude géotechnique recommandée, solutions de soutènement lourdes</li>
+</ul>
+<p>Dans les Monts d'Or, on rencontre fréquemment des pentes de 20 à 50 %, parfois supérieures sur les flancs escarpés. Le sol calcaire, assez superficiel, pose des problèmes spécifiques de drainage et d'enracinement.</p>
+
+<h2>Les solutions de soutènement et de terrassement</h2>
+
+<h3>Les murets de soutènement en pierre sèche</h3>
+<p>La pierre sèche est la solution traditionnelle des Monts d'Or, parfaitement adaptée aux sols calcaires locaux. Elle utilise la pierre naturelle extraite du site ou des carrières locales (pierre de Villebois, calcaire de l'Ain). Un muret en pierre sèche crée des banquettes horizontales utilisables comme zones de culture, de détente ou de passage. Il est perméable à l'eau, bénéfique à la biodiversité (reptiles, insectes) et s'intègre parfaitement dans le paysage local.</p>
+
+<h3>Les gabions</h3>
+<p>Les gabions (cages métalliques remplies de pierres) sont une alternative moderne et économique au muret maçonné. Ils s'adaptent à toutes les formes, sont perméables à l'eau et très résistants mécaniquement. Ils conviennent parfaitement aux pentes fortes et aux grandes surfaces. L'aspect brut peut être adouci par des plantes grimpantes ou des vivaces plantées en façade.</p>
+
+<h3>Le terrassement en banquettes</h3>
+<p>Le terrassement crée des paliers horizontaux successifs qui multiplient les espaces utiles dans un jardin en pente. Chaque banquette peut accueillir une terrasse, un espace potager, un massif fleuri ou une zone de jeux. Le terrassement nécessite un engin mécanique (mini-pelle) et une évacuation des terres en excès.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Solution</th><th class="p-2 text-left">Pente adaptée</th><th class="p-2 text-left">Prix indicatif (ml)</th><th class="p-2 text-left">Points forts</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Pierre sèche</td><td class="p-2">20–60 %</td><td class="p-2">150–350 €/ml</td><td class="p-2">Esthétique, biodiversité, local</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Gabions</td><td class="p-2">30–70 %</td><td class="p-2">100–200 €/ml</td><td class="p-2">Économique, solide, perméable</td></tr>
+<tr class="border-b"><td class="p-2">Mur béton banché</td><td class="p-2">&gt;40 %</td><td class="p-2">200–500 €/ml</td><td class="p-2">Résistance maximale, durabilité</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Pieux bois (palplanches)</td><td class="p-2">15–35 %</td><td class="p-2">80–150 €/ml</td><td class="p-2">Naturel, économique, rapide</td></tr>
+<tr class="border-b"><td class="p-2">Végétalisation talus</td><td class="p-2">&lt;40 %</td><td class="p-2">15–40 €/m²</td><td class="p-2">Écologique, entretien minimal</td></tr>
+</tbody>
+</table></div>
+
+<h2>Les plantes pour stabiliser les talus des Monts d'Or</h2>
+<p>Certaines plantes sont particulièrement efficaces pour stabiliser les talus calcaires des Monts d'Or grâce à leurs racines traçantes et leur résistance à la sécheresse :</p>
+<ul>
+  <li><strong>Cotoneaster horizontalis</strong> : couvre-sol excellent, fruits décoratifs, résistant calcaire</li>
+  <li><strong>Rosmarinus officinalis (romarin)</strong> : parfumé, résistant sec, racines stabilisatrices</li>
+  <li><strong>Coronilla valentina</strong> : floraison jaune spectaculaire, très résistant chaleur</li>
+  <li><strong>Stipa tenuissima</strong> : graminée légère, effet mouvement dans le vent</li>
+  <li><strong>Hedera helix (lierre)</strong> : couvre-sol rapide mais à surveiller (invasif)</li>
+  <li><strong>Juniperus horizontalis</strong> : genévrier rampant, très résistant, esthétique</li>
+</ul>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Le conseil de Léo :</strong> "Dans les Monts d'Or, j'intègre toujours une solution de drainage avant de terrasser ou de soutenir. Les pluies d'orage peuvent être violentes dans ce secteur, et l'eau accumulée derrière un mur mal drainé peut faire céder le soutènement en quelques années. Un bon drainage, c'est 20 % du budget mais 80 % de la durabilité."</p>
+</blockquote>
+
+<h2>Escaliers de jardin : accéder à tous les niveaux</h2>
+<p>Dans un jardin en pente terrassé, les escaliers deviennent des éléments structurants. LM Espace Vert réalise des escaliers en traverses de chemin de fer (rustique), en béton balayé (contemporain), en pierre naturelle posée à joints ouverts (classique) ou en bois (chaleureux). Un escalier bien dimensionné (giron 30–35 cm, contremarche 14–18 cm) est à la fois sûr et esthétique.</p>
+
+<h2>Votre jardin en pente, notre expertise</h2>
+<p>LM Espace Vert maîtrise les spécificités des jardins en pente des Monts d'Or. De l'étude de faisabilité au terrassement, du soutènement à la végétalisation, nous prenons en charge votre projet de A à Z. <a href="/devis">Contactez-nous pour un devis gratuit</a> — Léo se déplace sur site pour évaluer votre terrain.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'entretien-haie-bocagere-lyon-nord',
+    category: 'Conseils',
+    title: 'Entretien d\'une haie bocagère à Lyon nord : biodiversité et esthétique',
+    excerpt: 'La haie bocagère est un véritable réservoir de biodiversité. Découvrez comment l\'entretenir correctement pour préserver sa valeur écologique et esthétique dans le contexte péri-urbain de Lyon nord.',
+    date: '2026-04-25',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-haie-verte.webp',
+    keywords: ['haie bocagère Lyon nord', 'entretien haie biodiversité', 'taille haie champêtre Rhône', 'haie naturelle nord Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Une haie bocagère bien entretenue héberge jusqu'à 1 500 espèces d'insectes, 60 espèces d'oiseaux nicheurs et des dizaines de mammifères. Elle est aussi le meilleur écran phonique et visuel naturel, et joue un rôle clé dans la régulation de l'eau dans les jardins péri-urbains de Lyon nord.</p>
+</blockquote>
+
+<h2>La haie bocagère : bien plus qu'une clôture végétale</h2>
+<p>Dans les communes de Lyon nord — Neuville-sur-Saône, Rochetaillée-sur-Saône, Curis-au-Mont-d'Or, Albigny-sur-Saône, Couzon-au-Mont-d'Or — la haie bocagère est un élément caractéristique du paysage. Composées d'essences locales mélangées (charme, cornouiller, prunellier, viorne, noisetier, aubépine...), ces haies multi-strates créent des corridors écologiques reliant les jardins privés aux espaces naturels environnants.</p>
+<p>Léo de LM Espace Vert intervient régulièrement pour l'entretien de ces haies patrimoniales. Sa philosophie : intervenir le minimum nécessaire, au bon moment, pour préserver la valeur écologique tout en maintenant une silhouette soignée.</p>
+
+<h2>Les essences typiques d'une haie bocagère du nord lyonnais</h2>
+<ul>
+  <li><strong>Charme (Carpinus betulus)</strong> : base de la haie champêtre, facile à former, conserve ses feuilles mortes en hiver</li>
+  <li><strong>Prunellier (Prunus spinosa)</strong> : épineux naturel, fleurs blanches printanières, baies nourrissantes pour les oiseaux</li>
+  <li><strong>Cornouiller sanguin (Cornus sanguinea)</strong> : rameaux rouges décoratifs, baies pour les oiseaux</li>
+  <li><strong>Viorne lantane (Viburnum lantana)</strong> : feuillage dense, fleurs blanches, résistance calcaire</li>
+  <li><strong>Aubépine (Crataegus monogyna)</strong> : haie défensive naturelle, fleurs mellifères, baies pour les merles</li>
+  <li><strong>Noisetier (Corylus avellana)</strong> : noisettes pour l'écureuil et les casse-noix, chatons mellifères en mars</li>
+  <li><strong>Sureau noir (Sambucus nigra)</strong> : fleurs comestibles, baies noires pour les oiseaux</li>
+</ul>
+
+<h2>Calendrier d'entretien d'une haie bocagère</h2>
+
+<h3>Quand intervenir (et quand ne pas intervenir)</h3>
+<p>La règle d'or en matière de haie bocagère : <strong>ne pas tailler entre le 15 avril et le 15 juillet</strong>. Cette période correspond à la nidification des oiseaux (mésanges, rouge-gorge, fauvette, merle) dans l'épaisseur de la haie. Intervenir pendant cette période détruit des nids, tue des oisillons et est passible d'amende (contravention de 4e classe, jusqu'à 750 €).</p>
+<p>Les bonnes périodes d'intervention sont : <strong>fin juillet à mi-septembre</strong> (après la nidification, avant les premières gelées) et <strong>décembre à mi-mars</strong> (dormance hivernale, sans sève).</p>
+
+<h3>La taille en têtard : une technique millénaire</h3>
+<p>La taille en têtard consiste à élaguer annuellement les branches sur un tronc court (1,2 à 1,8 m), laissant repousser une touffe de rameaux au sommet. Cette technique traditionnelle des bocages normands et berrichons est parfaitement adaptée aux charmes, aux frênes et aux saules des jardins de Lyon nord. Elle produit du bois de chauffage ou des fagots de petit bois, tout en maintenant l'arbre indéfiniment sans qu'il ne prenne de l'emprise.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Espèce</th><th class="p-2 text-left">Période de taille</th><th class="p-2 text-left">Fréquence</th><th class="p-2 text-left">Intérêt écologique</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Charme</td><td class="p-2">Août–sept. ou déc.–mars</td><td class="p-2">1 fois/an</td><td class="p-2">Abri oiseaux, chatons chenilles</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Prunellier</td><td class="p-2">Juillet–août</td><td class="p-2">1–2 fois/an</td><td class="p-2">Baies, épines protectrices</td></tr>
+<tr class="border-b"><td class="p-2">Aubépine</td><td class="p-2">Août–septembre</td><td class="p-2">1 fois/an</td><td class="p-2">Fleurs mellifères, baies</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Noisetier</td><td class="p-2">Décembre–février</td><td class="p-2">1 fois tous 2–3 ans</td><td class="p-2">Noisettes, chatons pollinisateurs</td></tr>
+<tr class="border-b"><td class="p-2">Sureau</td><td class="p-2">Décembre–mars</td><td class="p-2">1 fois/an</td><td class="p-2">Baies, fleurs comestibles</td></tr>
+</tbody>
+</table></div>
+
+<h2>Enrichir sa haie bocagère : les bonnes pratiques</h2>
+<p>Une haie bocagère en bonne santé se bonifie avec le temps si on la laisse évoluer naturellement. Quelques actions simples pour l'enrichir :</p>
+<ul>
+  <li>Laisser des andains (tas de bois mort) au pied de la haie : habitat pour les hérissons, les insectes, les tritons</li>
+  <li>Planter des bulbes de printemps (jacinthes des bois, jonquilles) sous la haie pour un effet naturel</li>
+  <li>Laisser quelques branches mortes debout (chandelles) pour les pics et les mésanges bleues</li>
+  <li>Installer des nichoirs à mésanges et à rouges-gorges dans la haie</li>
+</ul>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Le conseil de Léo :</strong> "Dans les propriétés de Lyon nord que j'entretiens, j'essaie toujours de convaincre les propriétaires de garder un ou deux mètres de haie non taillée par endroit — une zone refuge. C'est souvent là que les oiseaux nichent et que la vie s'exprime le plus intensément. Un jardin un peu 'imparfait' dans ses coins est bien plus riche qu'un jardin parfaitement tondu partout."</p>
+</blockquote>
+
+<h2>LM Espace Vert, spécialiste des haies bocagères dans le nord lyonnais</h2>
+<p>LM Espace Vert intervient pour l'entretien de haies bocagères dans toutes les communes de Lyon nord : Neuville-sur-Saône, Rochetaillée, Curis, Albigny, Fleurieu-sur-Saône et leurs communes voisines. Nous respectons scrupuleusement les périodes de nidification et travaillons avec des outils adaptés (taille-haie thermique, débroussailleuse). <a href="/devis">Demandez votre devis gratuit</a>.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'prix-createur-jardin-lyon-2026',
+    category: 'Conseils',
+    title: 'Tarif d\'un créateur de jardin à Lyon en 2026 : ce qu\'il faut savoir',
+    excerpt: 'Combien coûte la création d\'un jardin à Lyon en 2026 ? Du terrassement à la plantation, des allées à la terrasse : les vrais prix du marché lyonnais expliqués par LM Espace Vert.',
+    date: '2026-05-01',
+    readingTime: '9 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-creation-jardin.webp',
+    keywords: ['prix création jardin Lyon 2026', 'tarif paysagiste Lyon', 'coût aménagement jardin Rhône', 'devis jardin Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Le prix d'un jardin créé de zéro varie de 50 à plus de 300 €/m² selon la complexité, les matériaux et les prestations incluses. À Lyon en 2026, comptez en moyenne 80 à 150 €/m² pour un jardin complet avec terrassement, allées, gazonnement et plantations.</p>
+</blockquote>
+
+<h2>Pourquoi les prix varient-ils autant ?</h2>
+<p>Une des premières questions que posent les propriétaires lyonnais contactant LM Espace Vert concerne le budget. "Combien ça coûte de créer un jardin ?" est une question légitime mais dont la réponse dépend de nombreux facteurs : la surface, la topographie (plat ou en pente), l'accessibilité du chantier (entrée étroite, étage), les matériaux choisis (gazon naturel ou synthétique, dallage pierre ou béton), et le niveau de finition souhaité.</p>
+<p>Dans cet article, Léo vous donne les vrais prix du marché lyonnais en 2026, poste par poste, pour vous permettre de budgéter votre projet avec précision.</p>
+
+<h2>Les postes de coût d'une création de jardin</h2>
+
+<h3>Le terrassement et la préparation du sol</h3>
+<p>Le terrassement est souvent le poste le plus imprévisible car il dépend du sol en place. Un terrain argilo-calcaire des Monts d'Or peut nécessiter un décapage important, un apport de terre végétale et un drainage. Un terrain plat avec un bon sol existant peut se préparer en une journée.</p>
+<ul>
+  <li>Terrassement + évacuation terres : 15–40 €/m² selon la profondeur et l'accessibilité</li>
+  <li>Apport de terre végétale : 50–80 €/m³ fournie et étalée (1 m³ = env. 10 m² sur 10 cm)</li>
+  <li>Drainage (si sol imperméable) : 30–60 € par mètre linéaire de drain</li>
+</ul>
+
+<h3>Les allées et revêtements</h3>
+<p>Le choix du revêtement des allées influence fortement l'esthétique et le budget. Voici les prix posés (matériaux + main-d'œuvre) pour le marché lyonnais en 2026 :</p>
+<ul>
+  <li>Stabilisé renforcé (gravillon calcaire) : 30–50 €/m²</li>
+  <li>Dalles béton ou pierre reconstituée : 50–90 €/m²</li>
+  <li>Dallage pierre naturelle (grès, calcaire, ardoise) : 90–200 €/m²</li>
+  <li>Pavés granit ou béton : 70–130 €/m²</li>
+  <li>Terrasse bois composite : 70–110 €/m²</li>
+</ul>
+
+<h3>La pelouse et le gazon</h3>
+<ul>
+  <li>Semis gazon (préparation sol + semis + arrosage) : 8–18 €/m²</li>
+  <li>Gazon en rouleaux (pose complète) : 20–35 €/m²</li>
+  <li>Gazon synthétique (pose complète) : 45–85 €/m²</li>
+</ul>
+
+<h3>Les plantations</h3>
+<ul>
+  <li>Haie simple (thuyas, lauriers) : 15–30 €/ml fourni posé</li>
+  <li>Haie composée (essences mélangées) : 25–60 €/ml</li>
+  <li>Arbuste (C5–C10) : 30–80 € l'unité posé</li>
+  <li>Arbre tige (C20–C45) : 150–600 € l'unité posé</li>
+  <li>Massif de vivaces (plantation + paillage) : 30–60 €/m²</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Projet type</th><th class="p-2 text-left">Surface</th><th class="p-2 text-left">Budget estimatif 2026</th><th class="p-2 text-left">Inclus</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Petit jardin de ville</td><td class="p-2">50–100 m²</td><td class="p-2">3 000–8 000 €</td><td class="p-2">Allée, gazon, quelques arbustes</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Jardin maison individuelle</td><td class="p-2">150–300 m²</td><td class="p-2">10 000–25 000 €</td><td class="p-2">Terrassement, allée, terrasse, gazon, plantations</td></tr>
+<tr class="border-b"><td class="p-2">Jardin de prestige</td><td class="p-2">300–800 m²</td><td class="p-2">30 000–80 000 €</td><td class="p-2">Toutes prestations + arrosage auto + éclairage</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Jardin Monts d'Or en pente</td><td class="p-2">200–500 m²</td><td class="p-2">25 000–60 000 €</td><td class="p-2">Soutènement + terrassement + végétaux adaptés</td></tr>
+</tbody>
+</table></div>
+
+<h2>Ce qui influence le devis final</h2>
+<p>Au-delà des postes décrits ci-dessus, plusieurs éléments peuvent faire varier le budget significativement :</p>
+<ul>
+  <li><strong>Accessibilité du chantier</strong> : une entrée de 80 cm empêche toute intervention avec engin mécanisé — tout se fait à la main ou avec de petits outils, ce qui multiplie le temps de travail</li>
+  <li><strong>Distance de livraison des matériaux</strong> : dans les Monts d'Or, les routes étroites peuvent imposer des surcoûts logistiques</li>
+  <li><strong>Présence de réseaux enterrés</strong> (eau, électricité, assainissement) nécessitant des précautions</li>
+  <li><strong>Saison d'intervention</strong> : les délais d'intervention sont plus courts en hiver, mais le coût de plantation est similaire</li>
+</ul>
+
+<h2>Demandez un devis gratuit à LM Espace Vert</h2>
+<p>La seule façon d'obtenir un chiffre précis est de bénéficier d'une visite sur site. Léo se déplace gratuitement dans un rayon de 30 km autour de Lyon pour étudier votre terrain, comprendre vos besoins et vous remettre un devis détaillé. <a href="/devis">Remplissez notre formulaire de devis gratuit</a> — réponse sous 48h garantie.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'jardin-japonais-lyon',
+    category: 'Conseils',
+    title: 'Créer un jardin japonais à Lyon : plantes, minéral et sérénité',
+    excerpt: 'Le jardin japonais est l\'un des styles les plus demandés à Lyon pour sa capacité à créer un espace de calme et de méditation. Découvrez comment le concevoir et le planter dans le climat lyonnais.',
+    date: '2026-04-28',
+    readingTime: '8 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-massif-fleurs.webp',
+    keywords: ['jardin japonais Lyon', 'création jardin japonais Rhône', 'karesansui Lyon', 'plantes jardin japonais', 'paysagiste jardin zen Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Un jardin japonais authentique repose sur trois principes fondamentaux : le vide (ma), l'asymétrie (fukinsei) et la suggestion du paysage naturel. Il n'est pas une collection de plantes exotiques, mais une composition équilibrée de végétal, minéral et eau — ou de leur symbole.</p>
+</blockquote>
+
+<h2>Le jardin japonais : une philosophie autant qu'un style</h2>
+<p>De plus en plus de propriétaires lyonnais se tournent vers le jardin japonais, attirés par sa sérénité, son esthétique épurée et son faible entretien apparent. Léo reçoit régulièrement ce type de demande pour des jardins de Tassin-la-Demi-Lune, Saint-Genis-Laval ou Caluire-et-Cuire. Le jardin japonais n'est pas simplement un jardin avec des bambous et un pont rouge — c'est une vision du monde traduite en espace végétal.</p>
+<p>Il existe plusieurs types de jardins japonais : le karesansui (jardin sec de pierres), le tsubo-niwa (cour-jardin), le chaniwa (jardin de thé) et le stroll garden (jardin de promenade). Pour les jardins de particuliers lyonnais, nous travaillons le plus souvent sur des karesansui miniatures ou des jardins zen de cour intérieure.</p>
+
+<h2>Les éléments fondamentaux d'un jardin japonais</h2>
+
+<h3>Le minéral : pierres, graviers et sable</h3>
+<p>La pierre est l'élément central du jardin japonais. Elle symbolise les montagnes, les îles et la permanence. Chaque pierre est choisie individuellement pour sa forme, sa texture et sa couleur. Les graviers (suna) sont ratissés en motifs ondulants évoquant l'eau ou les nuages. Pour un jardin lyonnais, nous utilisons généralement des pierres de la région (calcaire des Monts d'Or, galets de la Saône) pour une intégration paysagère authentique.</p>
+
+<h3>L'eau et son symbole</h3>
+<p>L'eau est présente sous forme réelle (bassin, fontaine de bambou tsukubai) ou symbolique (graviers ratissés). Le son de l'eau est aussi important que sa présence visuelle. Le shishi-odoshi (balance en bambou qui claque régulièrement) est un élément classique qui crée un rythme sonore dans le jardin. Dans le climat lyonnais, un bassin intégré doit être équipé d'un système de filtration performant pour rester clair en été.</p>
+
+<h3>La végétation : minimalisme et évocation</h3>
+<p>Contrairement aux idées reçues, un jardin japonais ne comporte pas nécessairement de bambou ou de cerisier. La sélection végétale est guidée par les critères suivants : texture intéressante, port naturel évocateur, comportement saisonnier notable. Les plantes les plus utilisées dans les jardins japonais lyonnais :</p>
+<ul>
+  <li><strong>Acer palmatum</strong> (érable japonais) : pièce maîtresse, feuillage découpé, rougissement automnal spectaculaire</li>
+  <li><strong>Pinus mugo ou sylvestris en topiaire niwaki</strong> : pin sculpté en nuage, à la manière des jardins japonais authentiques</li>
+  <li><strong>Bambous en pot ou à rhizomes contrôlés</strong> (Phyllostachys aurea, Fargesia) : effet vertical et son du vent</li>
+  <li><strong>Prunus serrulata</strong> (cerisier japonais) : floraison printanière éphémère, concept de mono no aware</li>
+  <li><strong>Moss (mousses)</strong> : sols couverts de mousse évoquant les forêts de montagne japonaises</li>
+  <li><strong>Ophiopogon planiscapus 'Nigrescens'</strong> : gazon noir décoratif, excellent en couvre-sol</li>
+  <li><strong>Mahonia x media 'Charity'</strong> : floraison hivernale jaune, port architectural</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Style de jardin japonais</th><th class="p-2 text-left">Surface idéale</th><th class="p-2 text-left">Éléments clés</th><th class="p-2 text-left">Budget indicatif</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Karesansui (jardin sec)</td><td class="p-2">6–30 m²</td><td class="p-2">Pierres, graviers ratissés, quelques végétaux</td><td class="p-2">2 000–8 000 €</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Tsubo-niwa (cour-jardin)</td><td class="p-2">4–20 m²</td><td class="p-2">Lanterne, tsukubai, végétation choisie</td><td class="p-2">3 000–10 000 €</td></tr>
+<tr class="border-b"><td class="p-2">Jardin zen de promenade</td><td class="p-2">50–200 m²</td><td class="p-2">Allée de pas-japonais, bassin, arbres</td><td class="p-2">10 000–40 000 €</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Angle japonisant (intégration)</td><td class="p-2">10–40 m²</td><td class="p-2">Coin zen dans un jardin existant</td><td class="p-2">1 500–6 000 €</td></tr>
+</tbody>
+</table></div>
+
+<h2>Adapter le jardin japonais au climat lyonnais</h2>
+<p>Le Japon bénéficie d'un climat océanique tempéré humide très différent du climat lyonnais (semi-continental, étés chauds et secs). Cette différence impose quelques adaptations :</p>
+<ul>
+  <li>Installer un arrosage goutte-à-goutte ou micro-aspersion pour les plantes sensibles à la sécheresse (mousses, érables)</li>
+  <li>Protéger les érables japonais des expositions sud trop brûlantes — ils préfèrent une luminosité diffuse ou mi-ombre</li>
+  <li>Choisir des bambous à rhizomes traçants non invasifs (Fargesia) plutôt que les phyllostachys envahissants</li>
+  <li>Utiliser des pierres calcaires locales plutôt que des pierres importées pour l'intégration paysagère et l'écologie</li>
+</ul>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Le conseil de Léo :</strong> "Le jardin japonais que j'aime créer à Lyon n'est pas une copie des jardins de Kyoto — c'est une reinterprétation dans un contexte local. J'utilise des pierres de la Saône, des érables locaux, de la mousse naturelle qui pousse déjà sur le site. L'authenticité d'un jardin zen vient de sa cohérence avec son lieu, pas de ses accessoires."</p>
+</blockquote>
+
+<h2>Créez votre jardin zen avec LM Espace Vert</h2>
+<p>LM Espace Vert conçoit et réalise des jardins japonais et espaces zen dans toute la région lyonnaise. De l'étude de conception à la réalisation complète, Léo vous accompagne dans chaque étape. <a href="/devis">Demandez votre devis gratuit</a> et laissez-nous transformer votre espace en havre de paix.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'desherbage-naturel-jardin',
+    category: 'Conseils',
+    title: 'Désherbage naturel : nos 8 techniques pour un jardin sans produits chimiques',
+    excerpt: 'Exit le glyphosate ! Découvrez 8 techniques naturelles et efficaces de désherbage pour maintenir votre jardin propre et en bonne santé, sans polluer la terre ni les nappes phréatiques.',
+    date: '2026-04-12',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-compostage.webp',
+    keywords: ['désherbage naturel jardin', 'désherbage sans produits chimiques', 'alternatives glyphosate jardin', 'mauvaises herbes jardin Lyon', 'désherbage écologique Rhône'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Le glyphosate est interdit aux particuliers en France depuis 2019. Mais au-delà de la réglementation, les méthodes naturelles de désherbage sont souvent plus efficaces sur le long terme car elles s'attaquent aux causes (sol tassé, lumière disponible) plutôt qu'aux symptômes.</p>
+</blockquote>
+
+<h2>Pourquoi abandonner les herbicides chimiques ?</h2>
+<p>En France, l'utilisation du glyphosate et des herbicides de synthèse est interdite aux particuliers depuis le 1er janvier 2019 (Loi Labbé). Au-delà de la réglementation, les raisons d'adopter des alternatives naturelles sont nombreuses : préservation de la vie microbienne du sol, protection des nappes phréatiques, santé des enfants et animaux de compagnie qui jouent dans le jardin, et préservation de la biodiversité.</p>
+<p>Léo de LM Espace Vert applique systématiquement des méthodes sans produits chimiques dans les jardins qu'il entretient à Lyon, Caluire, Saint-Didier et toute la région. Voici les 8 techniques qu'il préconise.</p>
+
+<h2>Les 8 techniques de désherbage naturel</h2>
+
+<h3>1. Le paillage : la méthode reine</h3>
+<p>Le paillage est la technique la plus efficace et la plus économique de prévention du désherbage. En couvrant le sol d'une couche de matière organique (BRF, copeaux, paille, feuilles mortes) ou minérale (gravillon, pouzzolane), on prive les graines de mauvaises herbes de la lumière nécessaire à leur germination. Un paillage de 8 à 10 cm d'épaisseur réduit le désherbage de 70 à 90 %. Il améliore en prime la structure du sol, limite l'évaporation et apporte de la matière organique.</p>
+
+<h3>2. Le binage mécanique</h3>
+<p>Le binage consiste à sectionner les mauvaises herbes juste sous la surface du sol avec une binette ou une houe. Simple et efficace, il fonctionne mieux sur les sols légèrement humides. La règle d'or : "un coup de binage en vaut dix" — plus on bine tôt (mauvaises herbes jeunes), moins elles ont eu le temps de s'enraciner. À pratiquer régulièrement après chaque pluie au printemps et en été.</p>
+
+<h3>3. L'eau bouillante</h3>
+<p>Verser de l'eau bouillante directement sur les mauvaises herbes des allées pavées ou dallées détruit les feuilles et les racines superficielles par brûlure thermique. Efficace sur les jeunes pousses dans les joints de dallage, moins efficace sur les plantes à rhizomes profonds (chiendent, liseron). À répéter plusieurs fois de suite pour un effet durable.</p>
+
+<h3>4. Le vinaigre blanc concentré</h3>
+<p>Le vinaigre blanc à 14° d'acidité (vinaigre concentré cristal) détruit les feuilles et tiges des mauvaises herbes par acidification. Attention : il est également néfaste pour les plantes souhaitées et peut acidifier les joints calcaires. À utiliser uniquement sur les allées et loin des plantations. Ne pas utiliser les jours de pluie (dilution) ni en plein soleil (risque de brûlure des végétaux voisins).</p>
+
+<h3>5. La désherbeuse thermique (flamme)</h3>
+<p>La désherbeuse à gaz propane détruit les mauvaises herbes par choc thermique (80–100 °C appliqués une seconde). Elle est particulièrement efficace sur les allées gravillonnées, les bordures et les espaces pavés. Son efficacité est immédiate mais le traitement doit être répété 2 à 3 fois pour atteindre les racines. À proscrire en période de sécheresse prolongée (risque incendie) et près des paillages secs.</p>
+
+<h3>6. L'arrachage manuel et les outils spécialisés</h3>
+<p>L'arrachage manuel reste la méthode la plus précise et la plus radicale pour les mauvaises herbes à racines profondes (pissenlit, chardon). Des outils spécialisés facilitent cette opération : la déplantoir en L pour les racines pivotantes, la griffe pour les mauvaises herbes à rhizomes, la binette oscillante pour les surfaces importantes. Arrachés avant la montée en graines, les adventices ne se ressèment pas.</p>
+
+<h3>7. Les plantes couvre-sol compétitives</h3>
+<p>La meilleure façon d'éviter les mauvaises herbes est d'occuper le sol avec des plantes couvre-sol compétitives. Dans les massifs, des plantes comme la pachysandre, la vinca, le bergenia, l'ajuga ou l'heuchera couvrent le sol densément et étouffent la plupart des adventices. C'est la stratégie à long terme la plus efficace et la moins contraignante pour les jardiniers.</p>
+
+<h3>8. L'enherbement de la pelouse</h3>
+<p>Dans la pelouse, la meilleure défense contre les "mauvaises herbes" (plantain, pissenlit) est d'avoir un gazon dense et sain qui ne laisse pas d'espace à la concurrence. Un gazon bien tondu (5–6 cm en été), scarifié, fertilisé et arrosé au bon rythme ne laisse pas de place aux adventices. Le regarnissage des zones clairsemées au printemps est souvent plus efficace que le désherbage.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Technique</th><th class="p-2 text-left">Efficacité</th><th class="p-2 text-left">Coût</th><th class="p-2 text-left">Zone d'usage</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Paillage</td><td class="p-2">★★★★★</td><td class="p-2">Faible–moyen</td><td class="p-2">Massifs, potager, pieds d'arbres</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Binage mécanique</td><td class="p-2">★★★★</td><td class="p-2">Faible</td><td class="p-2">Partout (sol accessible)</td></tr>
+<tr class="border-b"><td class="p-2">Eau bouillante</td><td class="p-2">★★★</td><td class="p-2">Nul</td><td class="p-2">Joints, allées dures</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Vinaigre concentré</td><td class="p-2">★★★</td><td class="p-2">Très faible</td><td class="p-2">Allées uniquement</td></tr>
+<tr class="border-b"><td class="p-2">Désherbeuse thermique</td><td class="p-2">★★★★</td><td class="p-2">Moyen</td><td class="p-2">Allées, dallages, bordures</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Arrachage manuel</td><td class="p-2">★★★★★</td><td class="p-2">Nul (temps)</td><td class="p-2">Partout, mauvaises herbes isolées</td></tr>
+<tr class="border-b"><td class="p-2">Couvre-sol compétitifs</td><td class="p-2">★★★★★</td><td class="p-2">Moyen</td><td class="p-2">Massifs, sous-arbres</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Regarnissage pelouse</td><td class="p-2">★★★★</td><td class="p-2">Faible</td><td class="p-2">Pelouse</td></tr>
+</tbody>
+</table></div>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Le conseil de Léo :</strong> "Dans les jardins que j'entretiens à Lyon, je combine toujours le paillage (prévention) avec le binage mécanique (curatif). Cette combinaison réduit de 80 % le temps de désherbage annuel par rapport à un jardin non paillé. Et les vers de terre adorent les paillages organiques — votre sol s'améliore d'année en année."</p>
+</blockquote>
+
+<h2>Un entretien écologique par LM Espace Vert</h2>
+<p>LM Espace Vert s'engage dans une démarche d'entretien 100 % sans herbicides chimiques. Nous appliquons ces 8 techniques dans les contrats d'entretien annuels que nous proposons aux particuliers de la région lyonnaise. <a href="/services/entretien-jardin">Découvrez nos prestations d'entretien</a> ou <a href="/devis">demandez un devis gratuit</a> dès aujourd'hui.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'cloture-brise-vue-jardin-lyon',
+    category: 'Travaux',
+    title: 'Clôture et brise-vue : sécuriser et embellir votre jardin à Lyon',
+    excerpt: 'Palissade bois, brise-vue végétal, clôture aluminium ou occultant PVC : toutes les solutions pour sécuriser votre jardin lyonnais et créer un espace intime et préservé des regards.',
+    date: '2026-05-05',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-allee-jardin.webp',
+    keywords: ['clôture jardin Lyon', 'brise-vue jardin Rhône', 'palissade bois Lyon', 'occultant jardin Lyon', 'clôture paysagère Lyon'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Clôture et brise-vue sont complémentaires : la clôture délimite et sécurise, le brise-vue crée l'intimité. En zone péri-urbaine lyonnaise, combiner une clôture légère et un brise-vue végétal est souvent la solution la plus esthétique et la mieux perçue par le voisinage.</p>
+</blockquote>
+
+<h2>Clôture ou brise-vue : quelle différence ?</h2>
+<p>La clôture est une structure fixe qui délimite une propriété et assure une fonction de sécurité (empêcher l'intrusion, contenir les animaux). Le brise-vue est un dispositif — physique ou végétal — qui interrompt les lignes de vue sans nécessairement délimiter une propriété. Dans les jardins de la région lyonnaise, les deux fonctions sont souvent associées : une clôture légère doublée d'un brise-vue végétal, ou une palissade bois mi-ajourée-mi-pleine.</p>
+
+<h2>Les solutions de clôture pour les jardins lyonnais</h2>
+
+<h3>La palissade en bois : chaleur et naturel</h3>
+<p>La palissade en bois (lames verticales en pin traité autoclave, douglas ou robinier) est la solution la plus prisée dans les jardins des Monts d'Or et du plateau ouest lyonnais. Elle s'intègre naturellement dans les jardins plantés, se peint facilement et accepte les plantes grimpantes. Comptez 60 à 120 € par mètre linéaire (fourni posé, avec poteaux métalliques). Durée de vie : 15 à 25 ans selon l'essence.</p>
+
+<h3>La clôture aluminium : durabilité et modernité</h3>
+<p>Les systèmes de clôture en aluminium laqué (occultation par lames horizontales ou verticales) sont très demandés pour les jardins contemporains de Dardilly, Limonest ou Champagne-au-Mont-d'Or. L'aluminium ne rouille pas, ne nécessite aucune peinture et se décline dans toutes les teintes (anthracite, blanc, ton bois). Prix : 90 à 180 € par mètre linéaire posé.</p>
+
+<h3>L'occultant PVC sur grillage : économique et rapide</h3>
+<p>Pour les solutions rapides et économiques, les lames occultantes PVC ou composite s'insèrent dans un grillage rigide existant. Cette solution est moins esthétique que le bois ou l'aluminium mais très économique (20 à 50 € par mètre linéaire). Elle convient pour les limites de propriété côté fond de parcelle.</p>
+
+<h3>Le mur de clôture maçonné</h3>
+<p>Le mur en pierre sèche, en parpaing enduit ou en brique s'impose pour les propriétés nécessitant une clôture solide et définitive. Dans les Monts d'Or, le mur en moellons calcaires locaux est le matériau de référence pour les clôtures historiques. Prix : 200 à 500 € par mètre linéaire selon les matériaux et la hauteur.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Type de clôture</th><th class="p-2 text-left">Prix posé (ml)</th><th class="p-2 text-left">Durée de vie</th><th class="p-2 text-left">Style</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Palissade bois pin traité</td><td class="p-2">60–100 €</td><td class="p-2">15–20 ans</td><td class="p-2">Naturel, polyvalent</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Palissade Douglas / Robinier</td><td class="p-2">90–150 €</td><td class="p-2">20–30 ans</td><td class="p-2">Naturel premium</td></tr>
+<tr class="border-b"><td class="p-2">Aluminium occultant</td><td class="p-2">100–180 €</td><td class="p-2">40+ ans</td><td class="p-2">Contemporain</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Occultant PVC sur grillage</td><td class="p-2">20–50 €</td><td class="p-2">10–15 ans</td><td class="p-2">Économique</td></tr>
+<tr class="border-b"><td class="p-2">Mur maçonné</td><td class="p-2">200–500 €</td><td class="p-2">50+ ans</td><td class="p-2">Classique, solide</td></tr>
+</tbody>
+</table></div>
+
+<h2>Les brise-vue végétaux : l'option la plus belle</h2>
+<p>Le brise-vue végétal est la solution la plus esthétique et la plus durable. Une haie de lauriers-palmes, de thuyas, de photinia ou d'une haie mélangée biodiversifiée crée un écran naturel en 2 à 4 ans tout en offrant ombre, biodiversité et qualité de l'air. Elle se complète souvent d'une clôture légère en période de croissance.</p>
+<p>Pour les brise-vue sur terrasse ou balcon, les bacs plantés de bambous (Phyllostachys ou Fargesia), de graminées hautes ou de glycine en pergola créent un espace intime en quelques semaines.</p>
+
+<h2>Réglementation des clôtures à Lyon et dans le Rhône</h2>
+<p>La hauteur maximale des clôtures en zone urbaine est généralement régie par le Plan Local d'Urbanisme (PLU) de chaque commune. En règle générale, la hauteur est limitée à 2 m en limite séparative et peut varier selon les zones. Certaines communes du Rhône imposent des matériaux spécifiques dans les zones patrimoniales. LM Espace Vert vérifie systématiquement les règles d'urbanisme locales avant toute pose.</p>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Le conseil de Léo :</strong> "Ma recommandation pour les jardins de maisons individuelles en zone péri-urbaine lyonnaise : associez une clôture bois légère (lattes espacées, hauteur 1,2 m) avec une haie de lauriers ou de photinia à l'intérieur. Vous avez la délimitation légale immédiate et un brise-vue naturel et esthétique 3 ans plus tard. C'est le meilleur rapport qualité/esthétique/durabilité."</p>
+</blockquote>
+
+<h2>LM Espace Vert réalise vos clôtures et brise-vue</h2>
+<p>Léo et son équipe interviennent pour la pose de clôtures, palissades et brise-vue dans toute la zone lyonnaise. De l'étude des règles d'urbanisme à la finition, nous gérons votre projet clé en main. <a href="/devis">Demandez votre devis gratuit</a> — réponse sous 48h.</p>
+    `.trim(),
+  },
+
+  {
+    slug: 'paysagiste-saint-didier-au-mont-dor',
+    category: 'Zones',
+    title: "Paysagiste à Saint-Didier-au-Mont-d'Or : découvrez LM Espace Vert",
+    excerpt: "Saint-Didier-au-Mont-d'Or, commune phare des Monts d'Or lyonnais : LM Espace Vert y est le paysagiste de référence pour la création et l'entretien de jardins. Découvrez nos prestations.",
+    date: '2026-05-10',
+    readingTime: '6 min',
+    author: 'Léo Maurice',
+    image: '/images/zone-intervention.webp',
+    keywords: ["paysagiste Saint-Didier-au-Mont-d'Or", "jardin Saint-Didier Monts d'Or", 'entretien jardin Saint-Didier', "LM Espace Vert Saint-Didier", 'paysagiste Monts d\'Or'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Notre engagement :</strong> LM Espace Vert est votre paysagiste de proximité à Saint-Didier-au-Mont-d'Or. Entreprise locale fondée par Léo Maurice, nous intervenons quotidiennement dans cette commune et ses environs pour créer et entretenir des jardins qui vous ressemblent.</p>
+</blockquote>
+
+<h2>Saint-Didier-au-Mont-d'Or : des jardins d'exception dans un cadre naturel remarquable</h2>
+<p>Saint-Didier-au-Mont-d'Or est l'une des communes les plus prisées du nord lyonnais. Perchée dans les contreforts des Monts d'Or, à quelques kilomètres seulement du centre de Lyon, elle allie calme verdoyant, panoramas sur les plaines et qualité de vie exceptionnelle. Ses jardins — souvent vastes, en pente, et marqués par les sols calcaires caractéristiques des Monts d'Or — demandent une expertise spécifique que Léo et LM Espace Vert ont développée au fil des années.</p>
+<p>LM Espace Vert est basée dans le secteur et travaille quotidiennement à Saint-Didier-au-Mont-d'Or, Saint-Cyr-au-Mont-d'Or, Poleymieux-au-Mont-d'Or, Collonges-au-Mont-d'Or et les communes environnantes. Nous connaissons intimement les spécificités de ces terrains : les sols calcaires superficiels, les fortes pentes, le microclimat particulier des crêtes et les exigences esthétiques des propriétés de cette zone.</p>
+
+<h2>Nos prestations à Saint-Didier-au-Mont-d'Or</h2>
+
+<h3>Création de jardins</h3>
+<p>De la conception au suivi de chantier, LM Espace Vert crée des jardins qui s'intègrent harmonieusement dans le paysage des Monts d'Or. Nous maîtrisons les techniques de terrassement en pente, la création de murets de soutènement en pierre locale, la réalisation d'allées et terrasses adaptées aux contraintes topographiques de vos parcelles.</p>
+<p>Chaque projet commence par une visite gratuite sur site. Léo étudie votre terrain, votre maison, votre mode de vie et vos goûts pour vous proposer un projet personnalisé qui respecte l'esprit des lieux.</p>
+
+<h3>Entretien de jardin annuel</h3>
+<p>LM Espace Vert propose des contrats d'entretien annuels pour les propriétaires de Saint-Didier-au-Mont-d'Or qui souhaitent déléguer la gestion de leur jardin. Ces contrats comprennent : tonte régulière, taille des haies et arbustes, désherbage des massifs, traitement phytosanitaire raisonné, gestion des déchets verts et fertilisation saisonnière.</p>
+<p>La fréquence des passages est adaptée à la saison et à la taille du jardin (hebdomadaire en été, bimensuelle hors saison). Nos équipes sont disponibles même pendant vos périodes de vacances pour que vous retrouviez un jardin impeccable à votre retour.</p>
+
+<h3>Taille de haies et élagage</h3>
+<p>Les grandes haies de thuyas, de lauriers-palmes et de charmes-houblons qui caractérisent les propriétés de Saint-Didier-au-Mont-d'Or demandent un équipement professionnel (nacelle, perche télescopique, taille-haie thermique). LM Espace Vert dispose du matériel adapté et intervient en toute sécurité pour vos haies hautes.</p>
+
+<h3>Élagage et abattage</h3>
+<p>Les arbres de haute tige — chênes, frênes, châtaigniers et merisiers — sont nombreux dans les jardins des Monts d'Or. LM Espace Vert réalise leur élagage sanitaire, leur mise en sécurité et leur abattage si nécessaire, dans le respect de la réglementation et de votre sécurité.</p>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Prestation</th><th class="p-2 text-left">Spécificité Saint-Didier</th><th class="p-2 text-left">Période</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">Création de jardin</td><td class="p-2">Maîtrise des pentes calcaires</td><td class="p-2">Toute l'année</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Entretien annuel</td><td class="p-2">Contrat adapté aux grandes propriétés</td><td class="p-2">Mars–novembre</td></tr>
+<tr class="border-b"><td class="p-2">Taille haies hautes</td><td class="p-2">Haies de 3–5 m fréquentes dans le secteur</td><td class="p-2">Juil–août, déc–mars</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">Élagage grands arbres</td><td class="p-2">Chênes et frênes des versants</td><td class="p-2">Hiver–printemps</td></tr>
+<tr class="border-b"><td class="p-2">Terrassement en pente</td><td class="p-2">Spécialité LM Espace Vert Monts d'Or</td><td class="p-2">Printemps–automne</td></tr>
+</tbody>
+</table></div>
+
+<h2>Pourquoi choisir LM Espace Vert à Saint-Didier-au-Mont-d'Or ?</h2>
+<ul>
+  <li><strong>Proximité</strong> : nous connaissons ce secteur mieux que quiconque — réactivité maximale</li>
+  <li><strong>Expertise locale</strong> : sols calcaires, fortes pentes, espèces adaptées aux Monts d'Or</li>
+  <li><strong>Devis gratuit</strong> : Léo se déplace personnellement pour évaluer votre projet</li>
+  <li><strong>Travail soigné</strong> : finitions impeccables, respect des végétaux en place</li>
+  <li><strong>Tarifs transparents</strong> : devis détaillé poste par poste, sans surprise</li>
+</ul>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Léo vous dit :</strong> "Saint-Didier-au-Mont-d'Or, c'est ma commune de cœur. J'y travaille depuis le début de LM Espace Vert et je connais chaque jardin, chaque contrainte, chaque particularité du secteur. Quand vous faites appel à moi, vous avez un interlocuteur unique qui connaît votre jardin dans le temps — pas un sous-traitant différent à chaque passage."</p>
+</blockquote>
+
+<h2>Contactez LM Espace Vert pour votre jardin à Saint-Didier</h2>
+<p>Que vous ayez besoin d'un entretien régulier, d'un grand chantier de création ou simplement d'un conseil, Léo est disponible pour vous rencontrer. <a href="/devis">Remplissez le formulaire de devis gratuit</a> ou appelez directement au 06 72 58 73 53. Intervention sous 5 jours ouvrés dans le secteur Saint-Didier-au-Mont-d'Or.</p>
+    `.trim(),
+  },
+
+  // ─── ARTICLE SAP (Partie 5) ──────────────────────────────────────────────────
+
+  {
+    slug: 'credit-impot-jardinage-sap-lyon',
+    category: 'Conseils',
+    title: 'Crédit d\'impôt jardinage à Lyon : économisez 50% grâce au SAP',
+    excerpt: 'Saviez-vous que les prestations de jardinage à domicile ouvrent droit à un crédit d\'impôt de 50 % ? Découvrez comment profiter du dispositif SAP (Service à la Personne) avec LM Espace Vert à Lyon.',
+    date: '2026-05-08',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: '/images/blog-jardin-printemps.webp',
+    keywords: ['crédit impôt jardinage Lyon', 'SAP jardinage Lyon', 'service à la personne jardinage Rhône', 'avantage fiscal entretien jardin', 'déduction impôt jardinage'],
+    content: `
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>À retenir :</strong> Le jardinage à domicile est éligible au crédit d'impôt pour l'emploi à domicile (article 199 sexdecies du CGI). Vous bénéficiez de 50 % du montant des prestations en crédit d'impôt, dans la limite de 12 000 € de dépenses annuelles (soit 6 000 € de crédit d'impôt maximum). Ce dispositif s'applique que vous soyez imposable ou non.</p>
+</blockquote>
+
+<h2>Le crédit d'impôt jardinage : qu'est-ce que c'est exactement ?</h2>
+<p>Le Service à la Personne (SAP) est un dispositif créé par l'État français pour encourager l'emploi de proximité et aider les particuliers à déléguer certaines tâches du quotidien. Parmi les activités éligibles, le "petit jardinage à domicile" (code NAF 8130Z) permet aux particuliers de bénéficier d'un <strong>crédit d'impôt de 50 % sur les sommes dépensées</strong> pour l'entretien de leur jardin.</p>
+<p>Concrètement : si vous dépensez 2 000 € dans l'année pour l'entretien de votre jardin par LM Espace Vert, vous récupérez 1 000 € sous forme de crédit d'impôt sur votre déclaration de revenus. Le coût réel de la prestation n'est donc que de 1 000 €. Ce dispositif s'applique aussi bien aux personnes imposables qu'aux non-imposables (dans ce cas, le crédit est remboursé directement).</p>
+
+<h2>Quelles prestations de jardinage sont éligibles au SAP ?</h2>
+<p>Toutes les prestations de jardinage réalisées sur votre résidence principale ou secondaire sont éligibles, à condition qu'elles soient effectuées par une entreprise agréée SAP :</p>
+<ul>
+  <li>Tonte de pelouse et entretien de gazon</li>
+  <li>Taille de haies, arbustes et rosiers</li>
+  <li>Désherbage des massifs et allées</li>
+  <li>Ramassage de feuilles et nettoyage général du jardin</li>
+  <li>Paillage des massifs</li>
+  <li>Arrosage et soins des plantes en votre absence</li>
+  <li>Taille douce des arbres et arbustes (hors élagage de hauteur)</li>
+  <li>Scarification, aération et fertilisation de la pelouse</li>
+</ul>
+
+<p>Attention : certaines prestations <strong>ne sont pas éligibles</strong> au crédit d'impôt SAP : la création de jardin (terrassement, plantations initiales), l'élagage de grands arbres (considéré comme travaux), la pose de clôtures, l'installation d'arrosage automatique. Ces travaux peuvent toutefois ouvrir droit à d'autres dispositifs fiscaux (TVA à 10% sur les travaux).</p>
+
+<h2>Les conditions pour bénéficier du crédit d'impôt jardinage</h2>
+
+<h3>Conditions liées au particulier</h3>
+<ul>
+  <li>La prestation doit être réalisée sur votre <strong>résidence principale ou secondaire</strong> (pas sur un bien locatif si vous n'y habitez pas)</li>
+  <li>Vous devez être <strong>domicilié fiscalement en France</strong></li>
+  <li>La prestation doit être <strong>payée directement à l'entreprise</strong> (pas de paiement en espèces au-delà de 500 €)</li>
+  <li>Vous devez <strong>conserver les factures</strong> en cas de contrôle fiscal (pendant 3 ans)</li>
+</ul>
+
+<h3>Conditions liées à l'entreprise prestataire</h3>
+<ul>
+  <li>L'entreprise doit être <strong>déclarée et agréée en tant qu'organisme de Service à la Personne</strong> auprès de la DREETS (Direction Régionale de l'Économie, de l'Emploi, du Travail et des Solidarités)</li>
+  <li>Elle doit vous remettre une <strong>attestation fiscale annuelle</strong> récapitulant le montant des dépenses éligibles (document fourni automatiquement par les entreprises agréées)</li>
+</ul>
+
+<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">
+<thead><tr class="bg-[#80BC00] text-white"><th class="p-2 text-left">Dépenses annuelles</th><th class="p-2 text-left">Crédit d'impôt (50 %)</th><th class="p-2 text-left">Coût réel</th><th class="p-2 text-left">Économie</th></tr></thead>
+<tbody>
+<tr class="border-b"><td class="p-2">500 € (petite pelouse)</td><td class="p-2">250 €</td><td class="p-2">250 €</td><td class="p-2">50 %</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">1 200 € (jardin moyen)</td><td class="p-2">600 €</td><td class="p-2">600 €</td><td class="p-2">50 %</td></tr>
+<tr class="border-b"><td class="p-2">3 000 € (grand jardin)</td><td class="p-2">1 500 €</td><td class="p-2">1 500 €</td><td class="p-2">50 %</td></tr>
+<tr class="border-b bg-[#F7F5F0]"><td class="p-2">6 000 € (propriété)</td><td class="p-2">3 000 €</td><td class="p-2">3 000 €</td><td class="p-2">50 %</td></tr>
+<tr class="border-b"><td class="p-2">12 000 € (plafond)</td><td class="p-2">6 000 € (max)</td><td class="p-2">6 000 €</td><td class="p-2">50 %</td></tr>
+</tbody>
+</table></div>
+
+<h2>Comment déclarer le crédit d'impôt jardinage ?</h2>
+<p>La procédure est simple. Chaque année au printemps, LM Espace Vert vous remet une <strong>attestation fiscale</strong> récapitulant le montant total des prestations éligibles SAP réalisées dans l'année. Vous reportez ce montant sur votre déclaration de revenus (formulaire 2042 RICI, case 7DB pour les dépenses de services à la personne). Le calcul du crédit d'impôt est automatique.</p>
+<p>Pour les personnes non imposables, le crédit est directement remboursé par le Trésor public lors du traitement de la déclaration de revenus.</p>
+
+<h2>Les plafonds majorés pour certaines situations</h2>
+<p>Des plafonds de dépenses majorés s'appliquent dans certaines situations :</p>
+<ul>
+  <li>Plafond de base : <strong>12 000 €</strong> de dépenses, soit 6 000 € de crédit d'impôt</li>
+  <li>Majoration pour une première année de recours au SAP : <strong>+1 000 €</strong> (plafond à 13 000 €)</li>
+  <li>Majoration par enfant à charge : <strong>+1 000 €</strong></li>
+  <li>Majoration si ascendant de plus de 65 ans dans le foyer : <strong>+1 000 €</strong></li>
+  <li>Pour les personnes handicapées ou invalides : plafond porté à <strong>20 000 €</strong></li>
+</ul>
+
+<blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
+  <p><strong>Le conseil de Léo :</strong> "Beaucoup de nos clients à Lyon ne savent pas qu'ils récupèrent la moitié de ce qu'ils nous paient chaque année ! Je le dis systématiquement lors du premier rendez-vous. C'est souvent ce qui permet de franchir le pas et de confier l'entretien du jardin à un professionnel — le coût réel devient vraiment raisonnable comparé au temps et à la peine économisés."</p>
+</blockquote>
+
+<h2>LM Espace Vert est agréé Service à la Personne</h2>
+<p>LM Espace Vert est déclarée et agréée en tant qu'organisme de Service à la Personne auprès de la DREETS Auvergne-Rhône-Alpes. Toutes nos prestations d'entretien de jardin chez les particuliers ouvrent donc droit au crédit d'impôt de 50 %. Nous vous remettons automatiquement votre attestation fiscale chaque année en janvier pour votre déclaration de revenus.</p>
+<p>Nous intervenons dans tout le département du Rhône et les communes limitrophes : Lyon, Caluire-et-Cuire, Saint-Didier-au-Mont-d'Or, Écully, Tassin-la-Demi-Lune, Francheville, Dardilly, Limonest, Neuville-sur-Saône et bien d'autres.</p>
+<p><a href="/devis">Demandez votre devis gratuit</a> et profitez dès cette année du crédit d'impôt jardinage. Léo vous répond personnellement sous 48h.</p>
     `.trim(),
   },
 ]

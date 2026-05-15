@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -54,12 +54,12 @@ export function Footer() {
                 Demander un devis
               </Link>
               <a
-                href="tel:+33674734698"
+                href="tel:+33672587353"
                 className="rounded-full px-5 py-2.5 text-sm font-semibold flex items-center gap-2 transition-colors"
                 style={{ border: '1px solid rgba(255,255,255,0.35)', color: '#ffffff' }}
               >
                 <Phone size={14} aria-hidden="true" />
-                06 74 73 46 98
+                06 72 58 73 53
               </a>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function Footer() {
                   <MapPin size={16} aria-hidden="true" />
                 </a>
                 <a
-                  href="https://wa.me/33674734698"
+                  href="https://wa.me/33672587353"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
@@ -205,14 +205,14 @@ export function Footer() {
               <ul className="space-y-0.5">
                 <li>
                   <a
-                    href="tel:+33674734698"
+                    href="tel:+33672587353"
                     className="flex items-start gap-2 py-1 text-sm transition-colors"
                     style={{ color: 'rgba(255,255,255,0.7)' }}
                     onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
                     onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)' }}
                   >
                     <Phone size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
-                    06 74 73 46 98
+                    06 72 58 73 53
                   </a>
                 </li>
                 <li>
@@ -295,6 +295,18 @@ export function Footer() {
               >
                 Accessibilité
               </Link>
+              <span className="mx-1" style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
+              <a
+                href="https://internet.kayzen-lyon.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+              >
+                Fièrement réalisé par <span style={{ color: '#80BC00' }}>Kayzen Web</span>
+              </a>
             </div>
           </div>
         </div>

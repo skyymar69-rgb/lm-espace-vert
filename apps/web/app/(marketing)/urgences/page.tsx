@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Clock, MapPin, AlertTriangle, CheckCircle, TreePine, Home, Shield } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
@@ -6,7 +6,7 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: 'Intervention Urgente Paysagiste Lyon Nord | LM Espace Vert',
   description:
-    'Arbre tombé, tempête, haie endommagée : intervention d\'urgence sous 24h à Lyon nord. Paysagiste disponible 7j/7. Appelez le 06 74 73 46 98.',
+    'Arbre tombé, tempête, haie endommagée : intervention d\'urgence sous 24h à Lyon nord. Paysagiste disponible 7j/7. Appelez le 06 72 58 73 53.',
   alternates: { canonical: 'https://www.lmespacevert.fr/urgences' },
   openGraph: {
     title: 'Urgence Paysagiste Lyon Nord — Intervention sous 24h | LM Espace Vert',
@@ -20,7 +20,7 @@ const emergencyServiceJsonLd = {
   '@type': 'EmergencyService',
   name: 'LM Espace Vert — Intervention Urgence Paysagiste',
   description: 'Service d\'intervention urgente paysagiste à Lyon nord : arbre tombé, tempête, haie endommagée. Disponible 7j/7.',
-  telephone: '+33674734698',
+  telephone: '+33672587353',
   url: 'https://www.lmespacevert.fr/urgences',
   address: {
     '@type': 'PostalAddress',
@@ -44,7 +44,7 @@ const emergencyServiceJsonLd = {
     '@type': 'ServiceChannel',
     servicePhone: {
       '@type': 'ContactPoint',
-      telephone: '+33674734698',
+      telephone: '+33672587353',
       contactType: 'emergency',
       availableLanguage: 'French',
     },
@@ -79,7 +79,7 @@ const faqJsonLd = {
       name: 'Intervenez-vous le week-end pour les urgences ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oui, LM Espace Vert intervient 7 jours sur 7 pour les urgences paysagères. Appelez le 06 74 73 46 98 à tout moment pour une situation d\'urgence (arbre tombé, dommages de tempête, arbre dangereux).',
+        text: 'Oui, LM Espace Vert intervient 7 jours sur 7 pour les urgences paysagères. Appelez le 06 72 58 73 53 à tout moment pour une situation d\'urgence (arbre tombé, dommages de tempête, arbre dangereux).',
       },
     },
     {
@@ -165,7 +165,7 @@ const communes = [
 const faqs = [
   {
     question: 'Intervenez-vous le week-end pour les urgences ?',
-    answer: 'Oui, LM Espace Vert intervient 7 jours sur 7 pour les urgences paysagères. Appelez le 06 74 73 46 98 à tout moment pour une situation d\'urgence. Nous mettons tout en œuvre pour répondre rapidement, y compris les samedis, dimanches et jours fériés.',
+    answer: 'Oui, LM Espace Vert intervient 7 jours sur 7 pour les urgences paysagères. Appelez le 06 72 58 73 53 à tout moment pour une situation d\'urgence. Nous mettons tout en œuvre pour répondre rapidement, y compris les samedis, dimanches et jours fériés.',
   },
   {
     question: 'Quels types d\'urgences paysagères traitez-vous ?',
@@ -248,17 +248,17 @@ export default function UrgencesPage() {
 
           {/* Numéro de téléphone très grand */}
           <a
-            href="tel:+33674734698"
+            href="tel:+33672587353"
             className="inline-block font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white hover:opacity-80 transition-opacity mb-8"
-            aria-label="Appeler le 06 74 73 46 98 pour une urgence paysagiste"
+            aria-label="Appeler le 06 72 58 73 53 pour une urgence paysagiste"
           >
-            06 74 73 46 98
+            06 72 58 73 53
           </a>
 
           {/* 3 boutons d'action */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center justify-center gap-2.5 rounded-full px-8 py-4 text-base font-bold transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#E40420', color: '#ffffff', boxShadow: '0 0 30px rgba(228,4,32,0.4)' }}
             >
@@ -266,7 +266,7 @@ export default function UrgencesPage() {
               Appeler maintenant
             </a>
             <a
-              href="https://wa.me/33674734698?text=URGENCE%20%3A%20j%27ai%20besoin%20d%27une%20intervention%20paysagiste%20rapide."
+              href="https://wa.me/33672587353?text=URGENCE%20%3A%20j%27ai%20besoin%20d%27une%20intervention%20paysagiste%20rapide."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 rounded-full px-8 py-4 text-base font-bold transition-opacity hover:opacity-90"
@@ -353,12 +353,12 @@ export default function UrgencesPage() {
 
           <div className="text-center mt-10">
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#E40420', color: '#ffffff' }}
             >
               <Phone size={18} aria-hidden="true" />
-              Appeler pour une urgence : 06 74 73 46 98
+              Appeler pour une urgence : 06 72 58 73 53
             </a>
           </div>
         </div>
@@ -403,7 +403,7 @@ export default function UrgencesPage() {
                   Votre commune n'est pas listée&nbsp;?
                 </p>
                 <p className="text-xs text-[#8C8F94] leading-relaxed">
-                  Appelez-nous quand même au <a href="tel:+33674734698" className="font-semibold hover:underline" style={{ color: '#425D07' }}>06 74 73 46 98</a>. Selon la gravité de la situation, nous pouvons intervenir au-delà de notre zone habituelle.
+                  Appelez-nous quand même au <a href="tel:+33672587353" className="font-semibold hover:underline" style={{ color: '#425D07' }}>06 72 58 73 53</a>. Selon la gravité de la situation, nous pouvons intervenir au-delà de notre zone habituelle.
                 </p>
               </div>
             </div>
@@ -447,15 +447,15 @@ export default function UrgencesPage() {
             Un arbre tombé ou un sinistre non sécurisé peut aggraver les dégâts. Contactez-nous immédiatement.
           </p>
           <a
-            href="tel:+33674734698"
+            href="tel:+33672587353"
             className="inline-block font-display text-4xl sm:text-5xl font-bold text-white hover:opacity-80 transition-opacity mb-6"
-            aria-label="Appeler le 06 74 73 46 98 pour une urgence"
+            aria-label="Appeler le 06 72 58 73 53 pour une urgence"
           >
-            📞 06 74 73 46 98
+            📞 06 72 58 73 53
           </a>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold bg-white hover:opacity-90 transition-opacity"
               style={{ color: '#E40420' }}
             >
@@ -463,7 +463,7 @@ export default function UrgencesPage() {
               Appeler maintenant
             </a>
             <a
-              href="https://wa.me/33674734698?text=URGENCE%20%3A%20j%27ai%20besoin%20d%27une%20intervention%20paysagiste%20rapide."
+              href="https://wa.me/33672587353?text=URGENCE%20%3A%20j%27ai%20besoin%20d%27une%20intervention%20paysagiste%20rapide."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold border-2 border-white/50 text-white hover:bg-white/10 transition-colors"

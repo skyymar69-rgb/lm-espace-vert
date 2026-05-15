@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "node scripts/generate-guide-pdf.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -17,6 +18,7 @@
     "@radix-ui/react-navigation-menu": "^1.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-toast": "^1.2.6",
+    "@react-pdf/renderer": "^4.5.1",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "class-variance-authority": "^0.7.1",
@@ -35,6 +37,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
+    "@fontsource/montserrat": "^5.2.8",
     "@lm/config-typescript": "workspace:*",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/node": "^22.15.21",

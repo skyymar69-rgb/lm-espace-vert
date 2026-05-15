@@ -1,333 +1,307 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock, ChevronLeft, User, Tag, Phone } from 'lucide-react'
+import { notFound } from 'next/navigation'
+import { ArrowRight, Clock, User, Tag } from 'lucide-react'
+import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
-import { ShareButtons } from '@/components/ui/share-buttons'
-import { ReadingProgress } from '@/components/ui/reading-progress'
-import { TableOfContents } from '@/components/ui/table-of-contents'
-import { SeasonalTip } from '@/components/ui/seasonal-tip'
-import { RelatedArticles } from '@/components/sections/related-articles'
-import { ServiceLinks } from '@/components/sections/service-links'
 
-type Props = { params: Promise<{ slug: string }> }
-
-export function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }))
+interface PageProps {
+  params: Promise<{ slug: string }>
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateStaticParams() {
+  return articles.map((article) => ({ slug: article.slug }))
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const article = articles.find((a) => a.slug === slug)
   if (!article) return {}
+
+  const description = article.excerpt.length > 160
+    ? article.excerpt.slice(0, 157) + '...'
+    : article.excerpt
+
   return {
-    title: article.title,
-    description: article.excerpt,
-    keywords: article.keywords,
-    authors: [{ name: article.author }],
+    title: `${article.title} | LM Espace Vert`,
+    description,
     alternates: { canonical: `https://www.lmespacevert.fr/blog/${article.slug}` },
     openGraph: {
       title: article.title,
-      description: article.excerpt,
+      description,
       url: `https://www.lmespacevert.fr/blog/${article.slug}`,
       type: 'article',
       publishedTime: article.date,
-      authors: [article.author],
-      images: [{ url: article.image, alt: article.title }],
+      modifiedTime: article.updatedAt ?? article.date,
+      authors: ['Léo Maurice'],
+      images: [
+        {
+          url: `https://www.lmespacevert.fr${article.image}`,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description,
+      images: [`https://www.lmespacevert.fr${article.image}`],
     },
   }
 }
 
-export default async function ArticlePage({ params }: Props) {
+export default async function BlogArticlePage({ params }: PageProps) {
   const { slug } = await params
   const article = articles.find((a) => a.slug === slug)
   if (!article) notFound()
 
-  const jsonLd = {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.lmespacevert.fr/blog' },
+      { '@type': 'ListItem', position: 3, name: article.title, item: `https://www.lmespacevert.fr/blog/${article.slug}` },
+    ],
+  }
+
+  const blogPostingSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: article.title,
     description: article.excerpt,
-    image: article.image,
+    image: `https://www.lmespacevert.fr${article.image}`,
+    url: `https://www.lmespacevert.fr/blog/${article.slug}`,
     datePublished: article.date,
-    // #18 — enrichissements
-    wordCount: Math.round(article.content.length / 6),
-    articleSection: article.category,
+    dateModified: article.updatedAt ?? article.date,
     inLanguage: 'fr-FR',
-    timeRequired: article.readingTime,
     author: {
       '@type': 'Person',
-      name: article.author,
-      jobTitle: 'Paysagiste',
-      worksFor: { '@type': 'LocalBusiness', name: 'LM Espace Vert', url: 'https://www.lmespacevert.fr' },
+      name: 'Léo Maurice',
+      jobTitle: 'Paysagiste fondateur',
+      url: 'https://www.lmespacevert.fr/a-propos',
     },
     publisher: {
-      '@type': 'Organization',
+      '@type': 'LocalBusiness',
+      '@id': 'https://www.lmespacevert.fr/#business',
       name: 'LM Espace Vert',
-      logo: { '@type': 'ImageObject', url: 'https://www.lmespacevert.fr/logo.png' },
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.lmespacevert.fr/logo.png',
+      },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.lmespacevert.fr/blog/${article.slug}` },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.lmespacevert.fr/blog/${article.slug}`,
+    },
     keywords: article.keywords.join(', '),
   }
 
+  const relatedArticles = articles
+    .filter((a) => a.slug !== article.slug)
+    .slice(0, 3)
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ReadingProgress targetId="article-content" />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={blogPostingSchema} />
 
-      {/* Breadcrumb avec catégorie */}
-      <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-[#F7F5F0]">
+      {/* Breadcrumb */}
+      <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
-          <ol role="list" className="flex flex-wrap items-center gap-2 text-sm text-[#8C8F94]">
-            <li><Link href="/" className="hover:text-[#2F2F2F]">Accueil</Link></li>
-            <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
-            <li><Link href="/blog" className="hover:text-[#2F2F2F]">Blog</Link></li>
-            <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
-            <li>
-              <Link
-                href={`/blog?categorie=${encodeURIComponent(article.category)}`}
-                className="hover:text-[#2F2F2F]"
-              >
-                {article.category}
-              </Link>
-            </li>
-            <li aria-hidden="true" className="text-[#D8D8D8]">/</li>
-            <li><span aria-current="page" className="line-clamp-1 text-[#425D07]">{article.title}</span></li>
+          <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
+            <li><Link href="/" className="hover:text-[#2F2F2F] transition-colors">Accueil</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link href="/blog" className="hover:text-[#2F2F2F] transition-colors">Blog</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><span aria-current="page" className="text-[#2F2F2F] line-clamp-1">{article.title}</span></li>
           </ol>
         </div>
       </nav>
 
-      <div className="bg-white py-12 px-4">
-        <div className="container mx-auto max-w-7xl sm:px-6">
-          <div className="grid gap-10 lg:grid-cols-[1fr_300px]">
+      {/* Hero image */}
+      <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
+        <Image
+          src={article.image}
+          alt={article.title}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to top, rgba(11,61,44,0.80) 0%, rgba(11,61,44,0.20) 60%, transparent 100%)' }}
+        />
+        <div className="absolute bottom-0 left-0 right-0 container mx-auto max-w-4xl px-4 sm:px-6 pb-8">
+          <span
+            className="inline-block rounded-full px-3 py-1 text-xs font-semibold text-white mb-3"
+            style={{ backgroundColor: '#80BC00' }}
+          >
+            {article.category}
+          </span>
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+            {article.title}
+          </h1>
+        </div>
+      </div>
 
-            {/* Main content */}
-            <div className="max-w-4xl">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-1 text-sm text-[#8C8F94] hover:text-[#425D07] mb-8 transition-colors"
-              >
-                <ChevronLeft size={16} aria-hidden="true" />
-                Retour au blog
-              </Link>
-
-              {/* Hero image */}
-              <div className="relative mb-8 h-80 sm:h-96 overflow-hidden rounded-2xl bg-[#F7F5F0]">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  priority
-                  sizes="(max-width: 896px) 100vw, 840px"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Header */}
-              <header className="mb-8">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span
-                    className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                    style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
-                  >
-                    {article.category}
-                  </span>
-                  {article.keywords.slice(0, 2).map((kw) => (
-                    <span key={kw} className="inline-flex items-center gap-1 rounded-full border border-[#EDEDED] px-3 py-1 text-xs text-[#8C8F94]">
-                      <Tag size={9} aria-hidden="true" /> {kw}
-                    </span>
-                  ))}
-                </div>
-
-                <h1 className="font-display text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight" style={{ color: '#2F2F2F' }}>
-                  {article.title}
-                </h1>
-                <p className="mt-4 text-lg text-[#8C8F94] leading-relaxed">{article.excerpt}</p>
-
-                <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#8C8F94] border-b border-[#EDEDED] pb-6">
-                  <span className="flex items-center gap-1.5">
-                    <User size={14} aria-hidden="true" />
-                    <span className="font-medium text-[#2F2F2F]">{article.author}</span>
-                    <span>· Paysagiste LM Espace Vert</span>
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <Calendar size={14} aria-hidden="true" />
-                    <time dateTime={article.date}>
-                      {new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
-                    </time>
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <Clock size={14} aria-hidden="true" />
-                    {article.readingTime} de lecture
-                  </span>
-                </div>
-              </header>
-
-              {/* TOC (mobile) */}
-              <div className="mb-8 lg:hidden">
-                <TableOfContents contentId="article-content" />
-              </div>
-
-              {/* Article content */}
-              <article id="article-content" className="prose-article">
-                <div dangerouslySetInnerHTML={{ __html: article.content }} />
-              </article>
-
-              {/* Tags */}
-              <div className="mt-10 pt-6 border-t border-[#EDEDED]">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#8C8F94] mb-3 flex items-center gap-1.5">
-                  <Tag size={12} aria-hidden="true" /> Mots-clés
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {article.keywords.map((kw) => (
-                    <span
-                      key={kw}
-                      className="rounded-full border border-[#EDEDED] px-3 py-1 text-xs text-[#8C8F94]"
-                    >
-                      {kw}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Share */}
-              <div className="mt-8 pt-6 border-t border-[#EDEDED]">
-                <ShareButtons
-                  title={article.title}
-                  url={`https://www.lmespacevert.fr/blog/${article.slug}`}
-                  text={article.excerpt}
-                />
-              </div>
-
-              {/* Author bio */}
-              <div className="mt-10 rounded-2xl border border-[#EDEDED] bg-[#F7F5F0] p-6 flex gap-5 items-start">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-white font-display font-bold text-xl flex-shrink-0"
-                  style={{ backgroundColor: '#425D07' }}
-                >
-                  LM
-                </div>
-                <div>
-                  <p className="font-bold text-[#2F2F2F]">{article.author}</p>
-                  <p className="text-sm font-medium" style={{ color: '#425D07' }}>Paysagiste — LM Espace Vert</p>
-                  <p className="mt-2 text-sm text-[#8C8F94] leading-relaxed">
-                    Artisan paysagiste passionné basé à Saint-Didier-au-Mont-d&apos;Or. Spécialisé en création,
-                    entretien et aménagement paysager dans le nord-ouest lyonnais depuis plus de 5 ans.
-                  </p>
-                  <div className="mt-3 flex gap-2 flex-wrap">
-                    <Link
-                      href="/a-propos"
-                      className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold border transition-colors"
-                      style={{ borderColor: '#425D07', color: '#425D07' }}
-                    >
-                      Profil complet
-                    </Link>
-                    <a
-                      href="tel:+33674734698"
-                      className="inline-flex items-center gap-1 rounded-full border border-[#EDEDED] px-3 py-1 text-xs text-[#8C8F94] hover:border-[#2F2F2F] transition-colors"
-                    >
-                      <Phone size={11} aria-hidden="true" />
-                      Contacter Léo
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA box */}
-              <div
-                className="mt-12 rounded-2xl p-8 text-white text-center"
-                style={{ backgroundColor: '#0B3D2C' }}
-              >
-                <h2 className="font-display text-xl font-bold">Besoin d&apos;un paysagiste près de chez vous ?</h2>
-                <p className="mt-2 text-white/80 text-sm">
-                  LM Espace Vert intervient dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or.
-                </p>
-                <div className="mt-5 flex flex-wrap justify-center gap-3">
-                  <a
-                    href="tel:+33674734698"
-                    className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-bold text-sm hover:bg-white/90 transition-colors"
-                    style={{ color: '#0B3D2C' }}
-                  >
-                    <Phone size={14} aria-hidden="true" />
-                    06 74 73 46 98
-                  </a>
-                  <Link
-                    href="/devis"
-                    className="inline-flex items-center gap-2 rounded-full border-2 border-white px-5 py-2.5 font-bold text-sm text-white hover:bg-white/10 transition-colors"
-                  >
-                    Devis gratuit
-                  </Link>
-                </div>
-              </div>
-
-              {/* Services liés à la catégorie de l'article */}
-              <ServiceLinks category={article.category} />
-
-              {/* Articles similaires (même catégorie en priorité) */}
-              <div className="mt-14">
-                <RelatedArticles currentSlug={article.slug} category={article.category} />
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <aside className="hidden lg:block space-y-6 sticky top-24 self-start">
-              <TableOfContents contentId="article-content" />
-
-              {/* CTA encart */}
-              <div
-                className="rounded-2xl p-6"
-                style={{ backgroundColor: 'rgba(128,188,0,0.08)', border: '1px solid rgba(128,188,0,0.2)' }}
-              >
-                <h3 className="font-display font-bold text-base text-[#2F2F2F] mb-2">Besoin d&apos;un paysagiste ?</h3>
-                <p className="text-sm text-[#8C8F94] mb-4 leading-relaxed">
-                  Devis gratuit sous 48h. Intervention dans le nord-ouest lyonnais.
-                </p>
-                <div className="space-y-2.5">
-                  <a
-                    href="tel:+33674734698"
-                    className="flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5 font-bold text-sm text-white transition-colors hover:opacity-90"
-                    style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
-                  >
-                    <Phone size={14} aria-hidden="true" />
-                    Appeler Léo
-                  </a>
-                  <Link
-                    href="/devis"
-                    className="flex w-full items-center justify-center rounded-full border-2 px-4 py-2.5 font-bold text-sm transition-colors hover:bg-[#425D07] hover:text-white"
-                    style={{ borderColor: '#425D07', color: '#425D07' }}
-                  >
-                    Devis gratuit
-                  </Link>
-                </div>
-              </div>
-
-              <div className="rounded-xl border border-[#EDEDED] bg-white p-5">
-                <h3 className="font-bold text-sm text-[#2F2F2F] mb-4">Conseil du mois</h3>
-                <SeasonalTip />
-              </div>
-
-              <div className="rounded-xl border border-[#EDEDED] bg-white p-5">
-                <h3 className="font-bold text-sm text-[#2F2F2F] mb-3">Catégories</h3>
-                <div className="space-y-1.5">
-                  {[...new Set(articles.map((a) => a.category))].slice(0, 6).map((cat) => (
-                    <Link
-                      key={cat}
-                      href={`/blog?categorie=${encodeURIComponent(cat)}`}
-                      className="flex items-center justify-between text-sm text-[#8C8F94] hover:text-[#80BC00] py-1 transition-colors"
-                    >
-                      <span>{cat}</span>
-                      <span className="text-xs bg-[#F7F5F0] px-2 py-0.5 rounded-full">
-                        {articles.filter((a) => a.category === cat).length}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </aside>
+      {/* Meta bar */}
+      <div className="border-b border-[#EDEDED] bg-white">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6 py-4">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-[#8C8F94]">
+            <span className="flex items-center gap-1.5">
+              <User size={14} aria-hidden="true" />
+              <span>{article.author}</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock size={14} aria-hidden="true" />
+              <time dateTime={article.date}>
+                {new Date(article.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock size={14} aria-hidden="true" />
+              <span>{article.readingTime} de lecture</span>
+            </span>
           </div>
         </div>
       </div>
+
+      {/* Article content */}
+      <article className="bg-white py-12">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+          {/* Lead */}
+          <p className="text-lg leading-relaxed mb-8 font-medium" style={{ color: '#425D07' }}>
+            {article.excerpt}
+          </p>
+
+          {/* Body HTML */}
+          <div
+            className="prose prose-green max-w-none text-[#2F2F2F] leading-relaxed
+              [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4
+              [&_h3]:font-display [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-3
+              [&_p]:mb-4 [&_p]:text-[#2F2F2F]
+              [&_ul]:pl-5 [&_ul]:mb-4 [&_li]:mb-1 [&_li]:list-disc
+              [&_ol]:pl-5 [&_ol]:mb-4 [&_ol>li]:mb-1 [&_ol>li]:list-decimal
+              [&_a]:underline [&_a]:font-medium
+              [&_strong]:font-semibold"
+            style={{'--tw-prose-links': '#425D07'} as React.CSSProperties}
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          />
+
+          {/* Keywords */}
+          {article.keywords.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-[#EDEDED]">
+              <div className="flex flex-wrap items-center gap-2">
+                <Tag size={14} style={{ color: '#8C8F94' }} aria-hidden="true" />
+                {article.keywords.map((kw) => (
+                  <span
+                    key={kw}
+                    className="rounded-full px-3 py-1 text-xs font-medium border border-[#EDEDED]"
+                    style={{ color: '#425D07', backgroundColor: '#F7F5F0' }}
+                  >
+                    {kw}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </article>
+
+      {/* Author card */}
+      <section className="bg-white pb-12">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="rounded-2xl border border-[#EDEDED] p-6 flex items-start gap-5" style={{ backgroundColor: '#F7F5F0' }}>
+            <div
+              className="flex-shrink-0 w-14 h-14 rounded-full border-2 overflow-hidden"
+              style={{ borderColor: '#80BC00' }}
+            >
+              <Image
+                src="/images/leo-portrait.webp"
+                alt="Léo Maurice, fondateur de LM Espace Vert"
+                width={56}
+                height={56}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p className="font-bold text-sm" style={{ color: '#2F2F2F' }}>{article.author}</p>
+              <p className="text-xs mb-2" style={{ color: '#8C8F94' }}>Fondateur &amp; paysagiste — LM Espace Vert</p>
+              <p className="text-sm" style={{ color: '#8C8F94' }}>
+                Paysagiste professionnel à Saint-Didier-au-Mont-d&apos;Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. Spécialiste des jardins dans le nord-ouest lyonnais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{ backgroundColor: '#0B3D2C' }} className="py-12 text-center">
+        <div className="container mx-auto max-w-xl px-4 sm:px-6">
+          <h2 className="font-display text-xl font-bold text-white mb-2">Un projet de jardin à Lyon nord ?</h2>
+          <p className="text-white/70 mb-5 text-sm">Devis gratuit · Réponse sous 24h · Rayon 20 km</p>
+          <Link
+            href="/devis"
+            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+          >
+            Demander un devis gratuit <ArrowRight size={14} aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Related articles */}
+      {relatedArticles.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+            <h2 className="font-display text-2xl font-bold mb-8" style={{ color: '#425D07' }}>
+              Articles similaires
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {relatedArticles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/blog/${a.slug}`}
+                  className="group rounded-2xl border border-[#EDEDED] overflow-hidden hover:shadow-md transition-shadow bg-white"
+                >
+                  <div className="relative h-44 overflow-hidden">
+                    <Image
+                      src={a.image}
+                      alt={a.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <span
+                      className="text-xs font-semibold uppercase tracking-widest"
+                      style={{ color: '#80BC00' }}
+                    >
+                      {a.category}
+                    </span>
+                    <h3 className="font-bold text-base mt-1 mb-2 group-hover:underline" style={{ color: '#2F2F2F' }}>
+                      {a.title}
+                    </h3>
+                    <p className="text-sm line-clamp-2" style={{ color: '#8C8F94' }}>{a.excerpt}</p>
+                    <span
+                      className="inline-flex items-center gap-1 text-xs font-semibold mt-3"
+                      style={{ color: '#425D07' }}
+                    >
+                      Lire l&apos;article <ArrowRight size={12} aria-hidden="true" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   )
 }

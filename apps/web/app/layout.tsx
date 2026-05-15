@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next'
+﻿import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { raleway, montserrat, inter } from './fonts'
 import './globals.css'
@@ -7,6 +7,7 @@ import { Footer } from '@/components/layout/footer'
 import { SiteMapSection } from '@/components/layout/site-map-section'
 import { CookieBanner } from '@/components/layout/cookie-banner'
 import { WhatsAppButton } from '@/components/whatsapp-button'
+import { FloatingSocialBar } from '@/components/ui/floating-social-bar'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { BackToTop } from '@/components/ui/back-to-top'
 import { StickyContactBar } from '@/components/layout/sticky-contact-bar'
@@ -196,7 +197,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'Léo Maurice',
               jobTitle: 'Paysagiste créateur',
               worksFor: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
-              telephone: '+33674734698',
+              telephone: '+33672587353',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: "Saint-Didier-au-Mont-d'Or",
@@ -261,6 +262,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CookieBanner />
         <StickyContactBar />
         <WhatsAppButton />
+        <FloatingSocialBar />
 
         {/* #7 Back to top */}
         <BackToTop />

@@ -1,14 +1,26 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { ContactForm } from '@/components/forms/contact-form'
 
 export const metadata: Metadata = {
-  title: 'Nous contacter — LM Espace Vert',
-  description:
-    'Contactez LM Espace Vert pour un devis gratuit ou toute question. Paysagiste à Lyon, disponible du lundi au vendredi. Réponse sous 24h.',
+  title: 'Nous contacter — LM Espace Vert, paysagiste Lyon',
+  description: "Contactez LM Espace Vert pour un devis gratuit ou toute question sur votre jardin. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. Réponse garantie sous 24h.",
   alternates: { canonical: 'https://www.lmespacevert.fr/contact' },
+  openGraph: {
+    title: 'Contacter LM Espace Vert — Paysagiste Lyon nord',
+    description: "Contactez LM Espace Vert pour un devis gratuit. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. Réponse garantie sous 24h.",
+    url: 'https://www.lmespacevert.fr/contact',
+    type: 'website',
+    images: [{ url: 'https://www.lmespacevert.fr/images/photo-equipe.webp', width: 1200, height: 630, alt: 'Contacter LM Espace Vert — paysagiste Lyon nord' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contacter LM Espace Vert — Paysagiste Lyon nord',
+    description: "Devis gratuit sous 24h. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi.",
+    images: ['https://www.lmespacevert.fr/images/photo-equipe.webp'],
+  },
 }
 
 const breadcrumbSchema = {
@@ -30,7 +42,7 @@ const contactPageSchema = {
     '@type': 'LocalBusiness',
     '@id': 'https://www.lmespacevert.fr/#business',
     name: 'LM Espace Vert',
-    telephone: '+33674734698',
+    telephone: '+33672587353',
     email: 'contact@lmespacevert.fr',
     url: 'https://www.lmespacevert.fr',
     address: {
@@ -45,7 +57,7 @@ const contactPageSchema = {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+33674734698',
+      telephone: '+33672587353',
       contactType: 'customer service',
       contactOption: 'TollFree',
       availableLanguage: 'French',
@@ -119,7 +131,7 @@ export default function ContactPage() {
                 </p>
                 <div className="grid grid-cols-3 gap-3">
                   <a
-                    href="tel:+33674734698"
+                    href="tel:+33672587353"
                     className="flex flex-col items-center gap-2 rounded-xl border border-[#EDEDED] bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
                     style={{ color: '#425D07' }}
                   >
@@ -127,7 +139,7 @@ export default function ContactPage() {
                     Appeler
                   </a>
                   <a
-                    href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
+                    href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-2 rounded-xl border bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
@@ -150,7 +162,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 {/* Téléphone */}
                 <a
-                  href="tel:+33674734698"
+                  href="tel:+33672587353"
                   className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
                 >
                   <div
@@ -161,7 +173,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold text-lg group-hover:text-[#425D07] transition-colors" style={{ color: '#2F2F2F' }}>
-                      06 74 73 46 98
+                      06 72 58 73 53
                     </p>
                     <p className="text-sm" style={{ color: '#8C8F94' }}>
                       Disponible Lun-Ven 8h-18h, Sam 8h-12h
@@ -171,7 +183,7 @@ export default function ContactPage() {
 
                 {/* WhatsApp avec message pré-rempli */}
                 <a
-                  href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
+                  href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group border-2"
@@ -185,7 +197,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold text-lg" style={{ color: '#128C7E' }}>WhatsApp — Écrire maintenant</p>
-                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous quelques minutes · Message pré-rempli</p>
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous 1h en journée · Message pré-rempli</p>
                   </div>
                 </a>
 
@@ -233,6 +245,14 @@ export default function ContactPage() {
                     Réponse garantie sous 24h — aucun engagement
                   </p>
                 </div>
+
+                {/* Badge SAP */}
+                <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(66,93,7,0.05)', borderColor: 'rgba(66,93,7,0.2)' }}>
+                  <CheckCircle size={20} style={{ color: '#425D07' }} aria-hidden="true" />
+                  <p className="text-sm font-semibold" style={{ color: '#425D07' }}>
+                    Agréé Service à la Personne — crédit d&apos;impôt 50%
+                  </p>
+                </div>
               </div>
 
               {/* Horaires de disponibilité */}
@@ -278,7 +298,7 @@ export default function ContactPage() {
                   Ou passez-nous un message WhatsApp maintenant
                 </p>
                 <a
-                  href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
+                  href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
@@ -317,7 +337,7 @@ export default function ContactPage() {
           </ul>
           <p className="text-center text-sm mt-6" style={{ color: '#8C8F94' }}>
             Votre commune n&apos;est pas dans la liste ?{' '}
-            <a href="tel:+33674734698" className="font-medium hover:underline" style={{ color: '#425D07' }}>
+            <a href="tel:+33672587353" className="font-medium hover:underline" style={{ color: '#425D07' }}>
               Appelez-nous
             </a>{' '}
             pour vérifier.

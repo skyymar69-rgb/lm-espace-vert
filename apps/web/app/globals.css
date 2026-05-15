@@ -1454,3 +1454,83 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 [data-theme="dark"] .toc { background: var(--color-bg-subtle) !important; border-color: var(--color-border) !important; }
 [data-theme="dark"] .toc a { color: var(--color-fg-muted) !important; }
 [data-theme="dark"] .toc a:hover { color: var(--color-cta) !important; }
+
+/* ============================================================
+   DESIGN PREMIUM — Animations & Effets
+   ============================================================ */
+
+/* Image hover effects premium */
+.img-zoom {
+  overflow: hidden;
+  border-radius: inherit;
+}
+.img-zoom img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease;
+}
+.img-zoom:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.1) brightness(1.03);
+}
+
+/* Cards premium avec hover élévation */
+.card-premium {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 12px rgba(66,93,7,0.08);
+}
+
+/* Gradient text utilitaire */
+.text-gradient-green {
+  background: linear-gradient(135deg, #425D07 0%, #80BC00 60%, #A8D800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Floating social sidebar animation */
+.social-sidebar-item {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Glow effect sur CTA verts */
+.cta-glow:hover {
+  box-shadow: 0 0 30px rgba(128, 188, 0, 0.4), 0 4px 20px rgba(66, 93, 7, 0.2);
+}
+
+/* Backdrop premium pour modales */
+.modal-backdrop {
+  backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(11, 61, 44, 0.7);
+}
+
+/* Section divider décoratif */
+.section-leaf-divider::after {
+  content: '🌿';
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  opacity: 0.6;
+}
+
+/* Animation d'apparition pour les sections */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Print styles premium */
+@media print {
+  .no-print, nav, .whatsapp-float, .social-sidebar { display: none !important; }
+  body { font-size: 12pt; color: #000; background: #fff; }
+  a { color: #000; text-decoration: underline; }
+  .container { max-width: 100%; padding: 0; }
+}

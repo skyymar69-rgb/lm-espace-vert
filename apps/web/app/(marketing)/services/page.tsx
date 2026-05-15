@@ -506,10 +506,10 @@ export default function ServicesPage() {
               Demander un devis
             </Link>
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 font-bold text-white transition-colors hover:bg-white/25"
             >
-              <Phone size={16} aria-hidden="true" /> 06 74 73 46 98
+              <Phone size={16} aria-hidden="true" /> 06 72 58 73 53
             </a>
           </div>
         </div>

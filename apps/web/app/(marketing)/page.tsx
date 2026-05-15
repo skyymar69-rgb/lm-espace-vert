@@ -32,7 +32,7 @@ const localBusinessJsonLd = {
   alternateName: 'LM Paysage',
   description: "Paysagiste professionnel basé à Saint-Didier-au-Mont-d'Or, spécialisé en création de jardins, entretien d'espaces verts, élagage et maçonnerie paysagère.",
   url: 'https://www.lmespacevert.fr',
-  telephone: '+33674734698',
+  telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
   address: {
     '@type': 'PostalAddress',
@@ -130,7 +130,7 @@ const faqPageJsonLd = {
       name: 'Comment obtenir un devis gratuit ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Contactez-nous par téléphone au 06 74 73 46 98, via le formulaire de contact ou directement via WhatsApp. Nous nous déplaçons gratuitement pour évaluer votre projet et vous remettons un devis détaillé sous 48h.',
+        text: 'Contactez-nous par téléphone au 06 72 58 73 53, via le formulaire de contact ou directement via WhatsApp. Nous nous déplaçons gratuitement pour évaluer votre projet et vous remettons un devis détaillé sous 48h.',
       },
     },
     {
@@ -200,6 +200,8 @@ export default function HomePage() {
           fill
           className="object-cover object-center"
           priority
+          quality={90}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
         />
         <div
           className="absolute inset-0"
@@ -326,6 +328,10 @@ export default function HomePage() {
                 width={640}
                 height={480}
                 className="object-cover w-full h-[420px] lg:h-[480px]"
+                quality={90}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                placeholder="empty"
+                loading="lazy"
               />
             </div>
             <div>
@@ -448,8 +454,9 @@ export default function HomePage() {
                     alt={svc.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width:640px)100vw,(max-width:1024px)50vw,33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
+                    quality={80}
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
@@ -662,18 +669,22 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {[
-              { ville: "Saint-Didier-au-Mont-d'Or", slug: null },
+              { ville: "Saint-Didier-au-Mont-d'Or", slug: "saint-didier" },
               { ville: "Caluire-et-Cuire", slug: "caluire" },
               { ville: "Écully", slug: "ecuelly" },
               { ville: "Tassin-la-Demi-Lune", slug: "tassin" },
               { ville: "Limonest", slug: "limonest" },
               { ville: "Dardilly", slug: "dardilly" },
               { ville: "Champagne-au-Mont-d'Or", slug: "champagne" },
-              { ville: "Neuville-sur-Saône", slug: null },
-              { ville: "Craponne", slug: null },
-              { ville: "Francheville", slug: null },
-              { ville: "Charbonnières-les-Bains", slug: null },
-              { ville: "Collonges-au-Mont-d'Or", slug: null },
+              { ville: "Neuville-sur-Saône", slug: "neuville" },
+              { ville: "Craponne", slug: "craponne" },
+              { ville: "Francheville", slug: "francheville" },
+              { ville: "Charbonnières-les-Bains", slug: "charbonnieres" },
+              { ville: "Collonges-au-Mont-d'Or", slug: "collonges" },
+              { ville: "Saint-Cyr-au-Mont-d'Or", slug: "saint-cyr" },
+              { ville: "Curis-au-Mont-d'Or", slug: "curis" },
+              { ville: "Poleymieux-au-Mont-d'Or", slug: "poleymieux" },
+              { ville: "Albigny-sur-Saône", slug: "albigny" },
             ].map(({ ville, slug }) => (
               slug ? (
                 <Link
@@ -691,15 +702,21 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center">
-            <iframe
-              src="https://www.smappen.fr/app/embed/?lat=45.833&lng=4.800&d=20000&color=80BC00"
-              width="100%"
-              height="400"
-              className="rounded-2xl border border-[#EDEDED] shadow-sm"
-              style={{ maxWidth: '700px', display: 'block', margin: '0 auto' }}
-              title="Zone d'intervention LM Espace Vert — 20km autour de Saint-Didier-au-Mont-d'Or"
-              loading="lazy"
-            />
+            <div
+              className="relative rounded-2xl overflow-hidden border border-[#EDEDED] shadow-sm"
+              style={{ maxWidth: '700px', margin: '0 auto', height: '350px' }}
+            >
+              <iframe
+                src="https://www.smappen.fr/app/iframe/3aZB6cZtg9t_UTJH"
+                width="100%"
+                height="100%"
+                className="absolute inset-0 w-full h-full"
+                style={{ border: 'none' }}
+                title="Zone d'intervention paysagiste LM Espace Vert — rayon 20 km autour de Saint-Didier-au-Mont-d'Or"
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -708,21 +725,34 @@ export default function HomePage() {
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-16 border-y border-[#EDEDED]" aria-label="Guide gratuit jardinage">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-4" style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}>
+              📄 Guide PDF gratuit — 50 pages
+            </div>
             <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3" style={{ color: '#425D07' }}>
-              📥 Téléchargez notre guide : 10 conseils pour un jardin impeccable toute l&apos;année
+              50 conseils pour un jardin impeccable toute l&apos;année
             </h2>
             <p className="text-[#8C8F94] mb-6 text-sm leading-relaxed">
-              Profitez de nos conseils professionnels de paysagiste — entretien, taille, arrosage, engazonnement — pour garder votre jardin parfait en toutes saisons. Gratuit, sans inscription.
+              Conseils professionnels de paysagiste — entretien, taille, arrosage, engazonnement, 4 saisons + checklist. Rédigé par Léo Maurice, fondateur de LM Espace Vert. Gratuit, sans inscription.
             </p>
-            <a
-              href="https://wa.me/33674734698?text=Je%20voudrais%20recevoir%20le%20guide%20jardinage"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#25D366', color: '#ffffff' }}
-            >
-              Recevoir le guide par WhatsApp <ArrowRight size={14} />
-            </a>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a
+                href="/50-conseils-jardin-lm-espace-vert.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
+                style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+              >
+                📥 Télécharger le guide PDF <ArrowRight size={14} />
+              </a>
+              <a
+                href="https://wa.me/33672587353?text=Je%20voudrais%20recevoir%20le%20guide%2050%20conseils%20jardinage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold border-2 transition-all hover:opacity-90"
+                style={{ borderColor: '#25D366', color: '#25D366' }}
+              >
+                Recevoir par WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -767,9 +797,10 @@ export default function HomePage() {
                     src={article.image}
                     alt={article.title}
                     fill
-                    sizes="(max-width:640px)100vw,(max-width:1024px)50vw,25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
+                    quality={80}
                   />
                 </div>
                 <div className="p-5">
@@ -815,7 +846,7 @@ export default function HomePage() {
               },
               {
                 question: "Comment obtenir un devis gratuit ?",
-                answer: "Contactez-nous par téléphone au 06 74 73 46 98, via le formulaire de contact ou directement via WhatsApp. Nous nous déplaçons gratuitement pour évaluer votre projet et vous remettons un devis détaillé sous 48h.",
+                answer: "Contactez-nous par téléphone au 06 72 58 73 53, via le formulaire de contact ou directement via WhatsApp. Nous nous déplaçons gratuitement pour évaluer votre projet et vous remettons un devis détaillé sous 48h.",
               },
               {
                 question: "Proposez-vous des contrats d'entretien annuels ?",
@@ -885,23 +916,23 @@ export default function HomePage() {
               Demander un devis <ArrowRight size={14} />
             </Link>
             <Link
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              <Phone size={14} /> 06 74 73 46 98
+              <Phone size={14} /> 06 72 58 73 53
             </Link>
           </div>
           {/* #24 — numéro en grand */}
           <a
-            href="tel:+33674734698"
+            href="tel:+33672587353"
             className="block text-2xl sm:text-3xl font-bold text-white hover:opacity-80 transition-opacity mb-4"
-            aria-label="Appeler le 06 74 73 46 98"
+            aria-label="Appeler le 06 72 58 73 53"
           >
-            📞 06 74 73 46 98
+            📞 06 72 58 73 53
           </a>
           {/* #25 — lien WhatsApp */}
           <a
-            href="https://wa.me/33674734698"
+            href="https://wa.me/33672587353"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity"

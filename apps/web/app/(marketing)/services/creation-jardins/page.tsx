@@ -1,18 +1,25 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, Phone, MapPin } from 'lucide-react'
+import { ArrowRight, CheckCircle, Phone, MapPin, Star, Shield, Leaf } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
   title: "Création de Jardins Paysagers Lyon Nord | LM Espace Vert",
-  description: "Conception et création de jardins sur mesure à Saint-Didier-au-Mont-d'Or et Lyon nord. Étude paysagère, choix végétaux, massifs. Devis gratuit.",
+  description: "Paysagiste créateur à Saint-Didier-au-Mont-d'Or, LM Espace Vert conçoit votre jardin sur mesure à Lyon nord. Plan 2D/3D, choix végétaux, massifs floraux. Devis gratuit sous 24h.",
   alternates: { canonical: 'https://www.lmespacevert.fr/services/creation-jardins' },
   openGraph: {
-    title: "Création de Jardins Paysagers Lyon Nord | LM Espace Vert",
-    description: "Conception et création de jardins sur mesure à Saint-Didier-au-Mont-d'Or et Lyon nord. Étude paysagère, choix végétaux, massifs. Devis gratuit.",
+    title: "Création de Jardins Paysagers — LM Espace Vert, paysagiste Lyon",
+    description: "Paysagiste créateur à Saint-Didier-au-Mont-d'Or, LM Espace Vert conçoit votre jardin sur mesure à Lyon nord. Plan 2D/3D, choix végétaux, massifs floraux. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/creation-jardins',
+    type: 'website',
     images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.webp', width: 1200, height: 630, alt: 'Création de jardins paysagers — LM Espace Vert' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Création de Jardins Paysagers — LM Espace Vert, paysagiste Lyon",
+    description: "Paysagiste créateur à Saint-Didier-au-Mont-d'Or, LM Espace Vert conçoit votre jardin sur mesure à Lyon nord. Devis gratuit sous 24h.",
+    images: ['https://www.lmespacevert.fr/images/realisation-1.webp'],
   },
 }
 
@@ -25,16 +32,23 @@ const features = [
   'Aménagement de rocailles et jardins japonisants',
 ]
 
+const advantages = [
+  { icon: Leaf, title: 'Conception personnalisée', desc: 'Chaque jardin est unique, pensé selon vos goûts et votre terrain.' },
+  { icon: Shield, title: 'Essences adaptées au Rhône', desc: 'Plantes robustes, résistantes et favorables à la biodiversité locale.' },
+  { icon: Star, title: 'Garantie plantations 1 an', desc: 'Nous garantissons la reprise de toutes les plantations réalisées.' },
+]
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Création de jardins paysagers',
   serviceType: 'Création de jardins paysagers',
+  url: 'https://www.lmespacevert.fr/services/creation-jardins',
   description: "Conception et création de jardins paysagers sur mesure à Saint-Didier-au-Mont-d'Or et dans tout le nord-ouest lyonnais. Étude paysagère, plans, choix végétaux, massifs floraux, plantation.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'LM Espace Vert',
-    telephone: '+33674734698',
+    telephone: '+33672587353',
     address: {
       '@type': 'PostalAddress',
       addressLocality: "Saint-Didier-au-Mont-d'Or",
@@ -54,7 +68,6 @@ const serviceSchema = {
     priceCurrency: 'EUR',
     eligibleRegion: 'FR',
   },
-  // #20 — hasOfferCatalog + termsOfService
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Prestations de création de jardins',
@@ -66,7 +79,6 @@ const serviceSchema = {
   termsOfService: 'Devis gratuit, sans engagement',
 }
 
-// #6 — BreadcrumbList
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -96,11 +108,22 @@ const faqs = [
   },
 ]
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+}
+
 export default function CreationJardinsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
@@ -135,13 +158,22 @@ export default function CreationJardinsPage() {
           <p className="text-white/80 text-lg max-w-xl mb-6">
             Un jardin unique, conçu sur mesure selon vos goûts et votre terrain, à Lyon nord.
           </p>
-          <Link
-            href="/devis"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
-          >
-            Devis gratuit <ArrowRight size={14} />
-          </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/devis"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+            >
+              Devis gratuit <ArrowRight size={14} />
+            </Link>
+            {/* Amélioration 1 — Badge prix indicatif */}
+            <span
+              className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
+              style={{ backgroundColor: 'rgba(128,188,0,0.18)', color: '#425D07' }}
+            >
+              À partir de 2 500 €
+            </span>
+          </div>
         </div>
       </section>
 
@@ -182,6 +214,46 @@ export default function CreationJardinsPage() {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Amélioration 2 — Section Avantages */}
+      <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-center" style={{ color: '#80BC00' }}>Pourquoi nous choisir</p>
+          <h2 className="font-display text-2xl font-bold mb-10 text-center" style={{ color: '#425D07' }}>
+            Les avantages de notre service création de jardins
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {advantages.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl p-6 border border-[#EDEDED] flex flex-col items-center text-center gap-3">
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
+                  <Icon size={20} style={{ color: '#425D07' }} aria-hidden="true" />
+                </span>
+                <h3 className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>{title}</h3>
+                <p className="text-xs leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Amélioration 4 — Témoignage client */}
+      <section className="py-14 bg-white">
+        <div className="container mx-auto max-w-3xl px-4 sm:px-6">
+          <blockquote className="rounded-2xl border border-[#EDEDED] p-8 text-center" style={{ backgroundColor: '#F7F5F0' }}>
+            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 étoiles">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={16} fill="#80BC00" style={{ color: '#80BC00' }} aria-hidden="true" />
+              ))}
+            </div>
+            <p className="text-base italic leading-relaxed mb-4" style={{ color: '#2F2F2F' }}>
+              &ldquo;LM Espace Vert a transformé notre terrain en véritable havre de paix. Léo est à l&apos;écoute, professionnel et le résultat dépasse largement nos attentes. Toutes les plantes ont bien repris après un an, conformément à la garantie promise.&rdquo;
+            </p>
+            <footer className="text-sm font-semibold" style={{ color: '#425D07' }}>
+              Marie L. — Caluire-et-Cuire
+            </footer>
+          </blockquote>
         </div>
       </section>
 
@@ -265,10 +337,10 @@ export default function CreationJardinsPage() {
               Demander un devis
             </Link>
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              <Phone size={14} aria-hidden="true" /> 06 74 73 46 98
+              <Phone size={14} aria-hidden="true" /> 06 72 58 73 53
             </a>
           </div>
         </div>

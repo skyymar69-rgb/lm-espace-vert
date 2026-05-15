@@ -1,18 +1,25 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, Phone, MapPin } from 'lucide-react'
+import { ArrowRight, CheckCircle, Phone, MapPin, Star, Clock, Camera, Ban } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
   title: "Entretien Espaces Verts Lyon Nord | LM Espace Vert",
-  description: "Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or : tonte, taille de haies, désherbage. Contrats annuels. Devis gratuit.",
+  description: "LM Espace Vert assure l'entretien de vos espaces verts à Lyon nord : tonte, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
   alternates: { canonical: 'https://www.lmespacevert.fr/services/entretien-espaces-verts' },
   openGraph: {
-    title: "Entretien Espaces Verts Lyon Nord | LM Espace Vert",
-    description: "Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or : tonte, taille de haies, désherbage. Contrats annuels. Devis gratuit.",
+    title: "Entretien Espaces Verts Lyon Nord — LM Espace Vert, paysagiste",
+    description: "LM Espace Vert assure l'entretien de vos espaces verts à Lyon nord : tonte, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
+    type: 'website',
     images: [{ url: 'https://www.lmespacevert.fr/images/entretien-espaces-verts.webp', width: 1200, height: 630, alt: "Entretien d'espaces verts — LM Espace Vert" }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Entretien Espaces Verts Lyon Nord — LM Espace Vert, paysagiste",
+    description: "Tonte, taille de haies, désherbage à Lyon nord. Contrats d'entretien annuels sur mesure. Devis gratuit sous 24h.",
+    images: ['https://www.lmespacevert.fr/images/entretien-espaces-verts.webp'],
   },
 }
 
@@ -21,11 +28,12 @@ const serviceSchema = {
   '@type': 'Service',
   name: "Entretien d'espaces verts",
   serviceType: "Entretien d'espaces verts",
+  url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
   description: "Entretien régulier d'espaces verts à Saint-Didier-au-Mont-d'Or et dans le nord-ouest lyonnais : tonte de pelouse, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'LM Espace Vert',
-    telephone: '+33674734698',
+    telephone: '+33672587353',
     address: {
       '@type': 'PostalAddress',
       addressLocality: "Saint-Didier-au-Mont-d'Or",
@@ -48,7 +56,6 @@ const serviceSchema = {
   termsOfService: 'Devis gratuit, sans engagement',
 }
 
-// #6 — BreadcrumbList
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -66,6 +73,12 @@ const features = [
   'Ramassage des feuilles et branchages',
   'Fertilisation et amendement du sol',
   'Contrats annuels avec passages planifiés',
+]
+
+const advantages = [
+  { icon: Clock, title: 'Planning régulier', desc: 'Des passages planifiés à l\'avance pour un jardin toujours impeccable.' },
+  { icon: Camera, title: 'Rapport photo', desc: 'Compte-rendu photo après chaque intervention, disponible dans votre espace client.' },
+  { icon: Ban, title: 'Sans contrat d\'engagement', desc: 'Flexibilité totale : vous choisissez la fréquence et pouvez modifier à tout moment.' },
 ]
 
 const faqs = [
@@ -87,11 +100,22 @@ const faqs = [
   },
 ]
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+}
+
 export default function EntretienEspacesVertsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
@@ -126,13 +150,22 @@ export default function EntretienEspacesVertsPage() {
           <p className="text-white/80 text-lg max-w-xl mb-6">
             Un jardin toujours impeccable grâce à nos contrats d&apos;entretien sur mesure à Lyon nord.
           </p>
-          <Link
-            href="/devis"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
-          >
-            Devis gratuit <ArrowRight size={14} />
-          </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/devis"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+            >
+              Devis gratuit <ArrowRight size={14} />
+            </Link>
+            {/* Amélioration 1 — Badge prix indicatif */}
+            <span
+              className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
+              style={{ backgroundColor: 'rgba(128,188,0,0.18)', color: '#425D07' }}
+            >
+              À partir de 89 € / passage
+            </span>
+          </div>
         </div>
       </section>
 
@@ -173,6 +206,46 @@ export default function EntretienEspacesVertsPage() {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Amélioration 2 — Section Avantages */}
+      <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-center" style={{ color: '#80BC00' }}>Pourquoi nous choisir</p>
+          <h2 className="font-display text-2xl font-bold mb-10 text-center" style={{ color: '#425D07' }}>
+            Les avantages de notre service d&apos;entretien
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {advantages.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl p-6 border border-[#EDEDED] flex flex-col items-center text-center gap-3">
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
+                  <Icon size={20} style={{ color: '#425D07' }} aria-hidden="true" />
+                </span>
+                <h3 className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>{title}</h3>
+                <p className="text-xs leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Amélioration 4 — Témoignage client */}
+      <section className="py-14 bg-white">
+        <div className="container mx-auto max-w-3xl px-4 sm:px-6">
+          <blockquote className="rounded-2xl border border-[#EDEDED] p-8 text-center" style={{ backgroundColor: '#F7F5F0' }}>
+            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 étoiles">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={16} fill="#80BC00" style={{ color: '#80BC00' }} aria-hidden="true" />
+              ))}
+            </div>
+            <p className="text-base italic leading-relaxed mb-4" style={{ color: '#2F2F2F' }}>
+              &ldquo;Cela fait deux ans que LM Espace Vert entretient notre jardin. Sérieux, ponctuel, et le jardin est toujours nickel. La photo envoyée après chaque passage nous rassure même quand on est en déplacement.&rdquo;
+            </p>
+            <footer className="text-sm font-semibold" style={{ color: '#425D07' }}>
+              Jean-Pierre M. — Limonest
+            </footer>
+          </blockquote>
         </div>
       </section>
 
@@ -256,10 +329,10 @@ export default function EntretienEspacesVertsPage() {
               Demander un devis
             </Link>
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              <Phone size={14} aria-hidden="true" /> 06 74 73 46 98
+              <Phone size={14} aria-hidden="true" /> 06 72 58 73 53
             </a>
           </div>
         </div>

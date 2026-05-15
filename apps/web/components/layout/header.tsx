@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
@@ -17,6 +17,7 @@ import {
 import { MobileMenu } from './mobile-menu'
 import { ThemeToggle } from './theme-toggle'
 import { AccessibilityMenu } from './accessibility-menu'
+import { DigitalContactCard } from '@/components/ui/digital-contact-card'
 
 const navItems = [
   { href: '/services',     label: 'Services',     hasMega: true },
@@ -185,14 +186,17 @@ export function Header() {
             {/* Thème clair/sombre */}
             <ThemeToggle />
 
+            {/* Carte de contact numérique */}
+            <DigitalContactCard />
+
             {/* Téléphone (md+) */}
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[#2F2F2F] hover:text-[#80BC00] transition-colors"
-              aria-label="Appeler LM Espace Vert au 06 74 73 46 98"
+              aria-label="Appeler LM Espace Vert au 06 72 58 73 53"
             >
               <Phone size={14} aria-hidden="true" />
-              06 74 73 46 98
+              06 72 58 73 53
             </a>
 
             {/* Devis gratuit */}
@@ -239,7 +243,7 @@ export function Header() {
                 </div>
 
                 {/* Footer link */}
-                <div className="mt-4 pt-4 border-t border-[#EDEDED]">
+                <div className="mt-4 pt-4 border-t border-[#EDEDED] flex items-center justify-between gap-4 flex-wrap">
                   <Link
                     href="/services"
                     onClick={() => setMegaOpen(false)}
@@ -247,6 +251,14 @@ export function Header() {
                     style={{ color: '#425D07' }}
                   >
                     Voir toutes nos prestations →
+                  </Link>
+                  <Link
+                    href="/processus"
+                    onClick={() => setMegaOpen(false)}
+                    className="text-xs font-medium hover:underline"
+                    style={{ color: '#8C8F94' }}
+                  >
+                    Notre processus
                   </Link>
                 </div>
               </div>

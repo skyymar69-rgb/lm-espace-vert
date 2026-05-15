@@ -6,9 +6,21 @@ import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
   title: "À propos de LM Espace Vert — Léo Maurice, paysagiste à Lyon",
-  description:
-    "Découvrez l'histoire, les valeurs et l'équipe de LM Espace Vert, paysagiste professionnel à Saint-Didier-au-Mont-d'Or depuis 2019.",
+  description: "Découvrez Léo Maurice, paysagiste fondateur de LM Espace Vert à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés dans le nord-ouest lyonnais.",
   alternates: { canonical: 'https://www.lmespacevert.fr/a-propos' },
+  openGraph: {
+    title: "À propos — Léo Maurice, paysagiste fondateur de LM Espace Vert",
+    description: "Découvrez Léo Maurice, paysagiste fondateur de LM Espace Vert à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés dans le nord-ouest lyonnais.",
+    url: 'https://www.lmespacevert.fr/a-propos',
+    type: 'website',
+    images: [{ url: 'https://www.lmespacevert.fr/images/photo-equipe.webp', width: 1200, height: 630, alt: 'Léo Maurice, fondateur de LM Espace Vert, paysagiste à Lyon' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "À propos — Léo Maurice, paysagiste fondateur de LM Espace Vert",
+    description: "Paysagiste à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés à Lyon nord.",
+    images: ['https://www.lmespacevert.fr/images/photo-equipe.webp'],
+  },
 }
 
 const values = [
@@ -65,7 +77,7 @@ const localBusinessSchema = {
   name: 'LM Espace Vert',
   description: "Paysagiste professionnel à Saint-Didier-au-Mont-d'Or depuis 2019. Création, entretien et aménagement de jardins dans le nord-ouest lyonnais.",
   url: 'https://www.lmespacevert.fr',
-  telephone: '+33674734698',
+  telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
   image: 'https://www.lmespacevert.fr/images/photo-equipe.webp',
   logo: 'https://www.lmespacevert.fr/logo.png',
@@ -95,10 +107,20 @@ const localBusinessSchema = {
   priceRange: '€€',
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://www.lmespacevert.fr/a-propos' },
+  ],
+}
+
 export default function AProposPage() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
       <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
@@ -167,16 +189,17 @@ export default function AProposPage() {
                   d&apos;être beau, vivant et refléter la personnalité de ceux qui l&apos;habitent.
                 </p>
                 <p>
-                  Formé en horticulture et paysagisme, Léo allie savoir-faire technique et sensibilité
-                  artistique. Il intervient aussi bien sur l&apos;entretien régulier de jardins que sur
-                  des créations complètes, en apportant toujours la même attention aux détails et le
-                  même respect du végétal. Son approche est simple : écouter, conseiller honnêtement,
-                  et réaliser.
+                  Titulaire d&apos;un <strong className="text-[#2F2F2F]">BEP Travaux paysagers</strong> et
+                  d&apos;un <strong className="text-[#2F2F2F]">Bac Pro Aménagements Paysagers</strong>, Léo
+                  a complété sa formation par plusieurs années de terrain aux côtés de paysagistes reconnus
+                  de la région lyonnaise avant de créer sa propre structure. Il allie savoir-faire technique
+                  — taille, élagage, maçonnerie paysagère — et sensibilité artistique pour des jardins qui durent.
                 </p>
                 <p>
-                  En 5 ans, LM Espace Vert est devenu un acteur reconnu du paysagisme dans le
-                  nord-ouest lyonnais. Avec plus de 200 projets réalisés et une note parfaite de 5/5
-                  sur Google, la confiance de ses clients est la meilleure des récompenses.
+                  En plus de 7 ans d&apos;expérience terrain, il a développé une approche singulière :
+                  écouter vraiment, conseiller honnêtement, et réaliser avec soin. Résultat : plus de
+                  200 projets réalisés, 150+ clients fidèles et une note de 4,9/5 sur Google.
+                  La confiance de ses clients reste sa meilleure récompense.
                 </p>
               </div>
 
@@ -478,11 +501,11 @@ export default function AProposPage() {
               <ArrowRight size={15} aria-hidden="true" />
             </Link>
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/25"
             >
               <Phone size={15} aria-hidden="true" />
-              06 74 73 46 98
+              06 72 58 73 53
             </a>
           </div>
         </div>

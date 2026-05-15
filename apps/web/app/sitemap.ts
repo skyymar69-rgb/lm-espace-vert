@@ -18,6 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tarifs`,                      lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/guide-jardinage`,             lastModified: now, changeFrequency: 'weekly',  priority: 0.75 },
     { url: `${BASE_URL}/secteurs`,                    lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE_URL}/urgences`,                    lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/engagements`,                 lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/avant-apres`,                 lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/certifications`,              lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/processus`,                   lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     // Pages catégories blog
     { url: `${BASE_URL}/blog/categorie/conseils`,     lastModified: now, changeFrequency: 'weekly',  priority: 0.65 },
     { url: `${BASE_URL}/blog/categorie/travaux`,      lastModified: now, changeFrequency: 'weekly',  priority: 0.65 },
@@ -58,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
     url: `${BASE_URL}/blog/${article.slug}`,
     lastModified: new Date(article.date),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
 

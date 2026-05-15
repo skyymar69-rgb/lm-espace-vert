@@ -1,9 +1,18 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CheckCircle, Clock, Gift, Shield, Phone, MessageCircle, Star } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { DevisForm } from '@/components/forms/devis-form'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Devis gratuit', item: 'https://www.lmespacevert.fr/devis' },
+  ],
+}
 
 const quoteActionSchema = {
   '@context': 'https://schema.org',
@@ -13,7 +22,7 @@ const quoteActionSchema = {
     '@type': 'LandscapingBusiness',
     name: 'LM Espace Vert',
     url: 'https://www.lmespacevert.fr',
-    telephone: '+33674734698',
+    telephone: '+33672587353',
   },
   offers: {
     '@type': 'Offer',
@@ -29,15 +38,28 @@ const quoteActionSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Demander un devis gratuit — LM Espace Vert',
-  description:
-    'Obtenez un devis gratuit et sans engagement de LM Espace Vert pour votre projet de jardin. Réponse sous 24h.',
+  title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
+  description: "Obtenez un devis gratuit et sans engagement de LM Espace Vert pour votre jardin à Lyon nord. Visite sur place offerte, réponse garantie sous 24h. Paysagiste à Saint-Didier-au-Mont-d'Or.",
   alternates: { canonical: 'https://www.lmespacevert.fr/devis' },
+  openGraph: {
+    title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
+    description: "Obtenez un devis gratuit pour votre jardin à Lyon nord. Visite sur place offerte, réponse garantie sous 24h. Paysagiste certifié à Saint-Didier-au-Mont-d'Or.",
+    url: 'https://www.lmespacevert.fr/devis',
+    type: 'website',
+    images: [{ url: 'https://www.lmespacevert.fr/images/photo-equipe.webp', width: 1200, height: 630, alt: 'Demander un devis gratuit à LM Espace Vert, paysagiste Lyon' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
+    description: "Devis gratuit et sans engagement pour votre jardin à Lyon nord. Réponse garantie sous 24h.",
+    images: ['https://www.lmespacevert.fr/images/photo-equipe.webp'],
+  },
 }
 
 export default function DevisPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={quoteActionSchema} />
 
       {/* Breadcrumb */}
@@ -82,12 +104,12 @@ export default function DevisPage() {
           {/* Phone */}
           <div className="mt-6">
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-3 rounded-2xl px-6 py-4 text-white font-bold text-lg shadow-md hover:opacity-90 transition-opacity"
               style={{ backgroundColor: '#425D07' }}
             >
               <Phone size={22} aria-hidden="true" />
-              06 74 73 46 98
+              06 72 58 73 53
             </a>
             <p className="mt-2 text-sm" style={{ color: '#8C8F94' }}>Lun–Ven 8h–18h · Sam 8h–12h</p>
           </div>
@@ -219,15 +241,15 @@ export default function DevisPage() {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="tel:+33674734698"
+                    href="tel:+33672587353"
                     className="flex items-center gap-3 text-sm font-bold hover:underline"
                     style={{ color: '#425D07' }}
                   >
                     <Phone size={16} style={{ color: '#425D07' }} aria-hidden="true" />
-                    06 74 73 46 98
+                    06 72 58 73 53
                   </a>
                   <a
-                    href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20devis%20gratuit%20pour%20mon%20jardin."
+                    href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20devis%20gratuit%20pour%20mon%20jardin."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-sm font-medium hover:underline"

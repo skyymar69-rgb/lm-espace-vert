@@ -5,26 +5,30 @@ import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
   title: "Paysagiste Lyon Nord — Zones d'intervention | LM Espace Vert",
-  description: "LM Espace Vert intervient dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or : Caluire, Écully, Dardilly, Limonest, Tassin, Champagne, Neuville-sur-Saône et plus. Devis gratuit.",
+  description: "LM Espace Vert intervient dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or : Caluire, Écully, Dardilly, Limonest, Tassin, Champagne, Neuville-sur-Saône, Charbonnières et plus. Devis gratuit.",
   alternates: { canonical: 'https://www.lmespacevert.fr/secteurs' },
   openGraph: {
     title: "Paysagiste Lyon Nord — Zones d'intervention | LM Espace Vert",
-    description: "Paysagiste couvrant 12 communes du nord-ouest lyonnais dans un rayon de 20 km. Devis gratuit sous 24h.",
+    description: "Paysagiste couvrant 16 communes du nord-ouest lyonnais dans un rayon de 20 km. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/secteurs',
     images: [{ url: '/images/zone-intervention.webp', width: 1200, height: 630, alt: "Zones d'intervention LM Espace Vert — Lyon Nord" }],
   },
 }
 
 const villes = [
+  { slug: 'saint-didier', nom: "Saint-Didier-au-Mont-d'Or", codePostal: '69370', distance: '0 km', description: 'Notre commune de base — paysagiste local depuis 2019' },
   { slug: 'champagne', nom: "Champagne-au-Mont-d'Or", codePostal: '69410', distance: '3 km', description: 'Commune voisine de prestige sur les coteaux' },
+  { slug: 'poleymieux', nom: "Poleymieux-au-Mont-d'Or", codePostal: '69250', distance: '6 km', description: 'Village bocager classé, jardins naturels et vergers' },
   { slug: 'limonest', nom: 'Limonest', codePostal: '69760', distance: '5 km', description: 'Zone principale, créations paysagères ambitieuses' },
   { slug: 'dardilly', nom: 'Dardilly', codePostal: '69570', distance: '7 km', description: 'Maisons individuelles et parcs résidentiels' },
+  { slug: 'charbonnieres', nom: 'Charbonnières-les-Bains', codePostal: '69260', distance: '8 km', description: 'Station thermale, villas Art Déco et parcs de prestige' },
   { slug: 'caluire', nom: 'Caluire-et-Cuire', codePostal: '69300', distance: '8 km', description: 'Villas et jardins bourgeois, confluent Rhône/Saône' },
   { slug: 'ecuelly', nom: 'Écully', codePostal: '69130', distance: '10 km', description: 'Propriétés de prestige, jardins haut de gamme' },
   { slug: 'saint-cyr', nom: "Saint-Cyr-au-Mont-d'Or", codePostal: '69450', distance: '10 km', description: 'Jardins panoramiques, coteaux du Mont d\'Or' },
+  { slug: 'collonges', nom: "Collonges-au-Mont-d'Or", codePostal: '69660', distance: '11 km', description: 'Prestige en bord de Saône, topiaire et jardins d\'exception' },
   { slug: 'curis', nom: "Curis-au-Mont-d'Or", codePostal: '69250', distance: '12 km', description: 'Village authentique entre forêts et vignes' },
   { slug: 'tassin', nom: 'Tassin-la-Demi-Lune', codePostal: '69160', distance: '12 km', description: 'Pavillons modernes et jardins familiaux' },
-  { slug: 'collonges', nom: "Collonges-au-Mont-d'Or", codePostal: '69660', distance: '11 km', description: 'Prestige en bord de Saône, topiaire et jardins d\'exception' },
+  { slug: 'albigny', nom: 'Albigny-sur-Saône', codePostal: '69250', distance: '13 km', description: 'Bord de Saône, prairies alluviales et coteaux boisés' },
   { slug: 'francheville', nom: 'Francheville', codePostal: '69340', distance: '14 km', description: 'Jardins naturels aux portes du Parc du Vallon' },
   { slug: 'neuville', nom: 'Neuville-sur-Saône', codePostal: '69250', distance: '15 km', description: 'Bord de Saône, maisons de caractère' },
   { slug: 'craponne', nom: 'Craponne', codePostal: '69290', distance: '16 km', description: 'Lotissements résidentiels, jardins de maisons neuves' },
@@ -37,7 +41,7 @@ const localBusinessSchema = {
   name: 'LM Espace Vert',
   description: "Paysagiste professionnel basé à Saint-Didier-au-Mont-d'Or, intervenant dans un rayon de 20 km sur le nord-ouest lyonnais.",
   url: 'https://www.lmespacevert.fr',
-  telephone: '+33674734698',
+  telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
   address: {
     '@type': 'PostalAddress',
@@ -98,7 +102,7 @@ export default function SecteursPage() {
             Zones d&apos;intervention
           </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
-            LM Espace Vert réalise tous vos projets paysagers dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or. Découvrez nos 12 communes d&apos;intervention.
+            LM Espace Vert réalise tous vos projets paysagers dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or. Découvrez nos 16 communes d&apos;intervention.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
@@ -109,10 +113,10 @@ export default function SecteursPage() {
               Devis gratuit <ArrowRight size={14} />
             </Link>
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full border border-white/35 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              <Phone size={14} aria-hidden="true" /> 06 74 73 46 98
+              <Phone size={14} aria-hidden="true" /> 06 72 58 73 53
             </a>
           </div>
         </div>
@@ -144,11 +148,45 @@ export default function SecteursPage() {
         </div>
       </section>
 
+      {/* Zone principale : Saint-Didier-au-Mont-d'Or */}
+      <section className="py-14 bg-white border-b border-[#EDEDED]">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="rounded-2xl border-2 p-8 sm:p-10 flex flex-col sm:flex-row gap-8 items-start" style={{ borderColor: '#80BC00', backgroundColor: 'rgba(128,188,0,0.04)' }}>
+            <div className="flex-shrink-0">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B3D2C' }}>
+                <MapPin size={24} style={{ color: '#80BC00' }} aria-hidden="true" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: '#80BC00' }}>Zone principale</p>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3" style={{ color: '#425D07' }}>
+                Saint-Didier-au-Mont-d&apos;Or — Notre commune d&apos;origine
+              </h2>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: '#8C8F94' }}>
+                Basés à <strong style={{ color: '#2F2F2F' }}>Saint-Didier-au-Mont-d&apos;Or (69370)</strong> depuis 2019, nous connaissons chaque jardin, chaque type de sol et chaque nuance de ce territoire des Monts d&apos;Or. C&apos;est ici que nous réalisons nos projets les plus ambitieux, avec des délais d&apos;intervention imbattables — souvent le jour même pour les urgences.
+              </p>
+              <div className="flex flex-wrap gap-4 text-xs font-medium mb-5" style={{ color: '#425D07' }}>
+                <span>✓ Intervention le jour même possible</span>
+                <span>✓ 95+ jardins entretenus sur la commune</span>
+                <span>✓ Connaissance du sol et du microclimat local</span>
+              </div>
+              <Link
+                href="/secteur/saint-didier"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}
+              >
+                Voir la page Saint-Didier <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Grille des villes */}
       <section className="py-20" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>12 communes</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>16 communes</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
               Toutes nos zones d&apos;intervention
             </h2>
@@ -196,10 +234,13 @@ export default function SecteursPage() {
           </h2>
           <div className="space-y-4 text-sm leading-relaxed" style={{ color: '#8C8F94' }}>
             <p>
-              Basé à <strong style={{ color: '#2F2F2F' }}>Saint-Didier-au-Mont-d&apos;Or (69370)</strong>, LM Espace Vert intervient dans toutes les communes situées dans un rayon de 20 km. Cette couverture géographique nous permet d&apos;être réactifs : déplacement rapide, devis gratuit sous 48h et interventions régulières sans surcoût de déplacement excessif.
+              Basé à <strong style={{ color: '#2F2F2F' }}>Saint-Didier-au-Mont-d&apos;Or (69370)</strong> depuis 2019, LM Espace Vert intervient dans toutes les communes situées dans un rayon de 20 km. Cette couverture géographique nous permet d&apos;être réactifs : déplacement rapide, devis gratuit sous 48h et interventions régulières sans surcoût de déplacement excessif.
             </p>
             <p>
-              Que vous soyez propriétaire d&apos;une villa à <Link href="/secteur/ecuelly" style={{ color: '#425D07' }} className="font-medium hover:underline">Écully</Link>, d&apos;un pavillon à <Link href="/secteur/tassin" style={{ color: '#425D07' }} className="font-medium hover:underline">Tassin-la-Demi-Lune</Link>, d&apos;une propriété de prestige à <Link href="/secteur/champagne" style={{ color: '#425D07' }} className="font-medium hover:underline">Champagne-au-Mont-d&apos;Or</Link> ou d&apos;une maison de caractère à <Link href="/secteur/neuville" style={{ color: '#425D07' }} className="font-medium hover:underline">Neuville-sur-Saône</Link>, nous adaptons nos prestations à votre contexte local : type de sol, végétation régionale, contraintes réglementaires.
+              Que vous soyez propriétaire d&apos;une villa à <Link href="/secteur/ecuelly" style={{ color: '#425D07' }} className="font-medium hover:underline">Écully</Link>, d&apos;un pavillon à <Link href="/secteur/tassin" style={{ color: '#425D07' }} className="font-medium hover:underline">Tassin-la-Demi-Lune</Link>, d&apos;une propriété de prestige à <Link href="/secteur/champagne" style={{ color: '#425D07' }} className="font-medium hover:underline">Champagne-au-Mont-d&apos;Or</Link>, d&apos;une maison de caractère à <Link href="/secteur/neuville" style={{ color: '#425D07' }} className="font-medium hover:underline">Neuville-sur-Saône</Link>, d&apos;une villa Art Déco à <Link href="/secteur/charbonnieres" style={{ color: '#425D07' }} className="font-medium hover:underline">Charbonnières-les-Bains</Link> ou d&apos;une propriété rurale à <Link href="/secteur/poleymieux" style={{ color: '#425D07' }} className="font-medium hover:underline">Poleymieux-au-Mont-d&apos;Or</Link>, nous adaptons nos prestations à votre contexte local : type de sol, végétation régionale, contraintes réglementaires.
+            </p>
+            <p>
+              Nos nouvelles zones d&apos;intervention incluent également <Link href="/secteur/saint-didier" style={{ color: '#425D07' }} className="font-medium hover:underline">Saint-Didier-au-Mont-d&apos;Or</Link> (notre base), <Link href="/secteur/albigny" style={{ color: '#425D07' }} className="font-medium hover:underline">Albigny-sur-Saône</Link> et tout le secteur des Monts d&apos;Or nord.
             </p>
             <p>
               Tous nos devis sont gratuits et sans engagement. Nous nous déplaçons pour évaluer votre projet sur site, comprendre vos attentes et vous proposer une solution sur mesure, dans les délais et le budget convenus.
@@ -224,10 +265,10 @@ export default function SecteursPage() {
               Demander mon devis gratuit <ArrowRight size={14} />
             </Link>
             <a
-              href="tel:+33674734698"
+              href="tel:+33672587353"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              <Phone size={14} aria-hidden="true" /> 06 74 73 46 98
+              <Phone size={14} aria-hidden="true" /> 06 72 58 73 53
             </a>
           </div>
         </div>

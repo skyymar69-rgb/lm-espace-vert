@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Home, Wrench, ImageIcon, FileText, ArrowRight } from 'lucide-react'
 
@@ -125,12 +125,12 @@ export default function NotFound() {
         <div className="mt-10 pt-6 border-t border-[#EDEDED]">
           <p className="text-xs text-[#8C8F94] mb-2">Besoin d&apos;aide immédiate&nbsp;? Appelez-nous :</p>
           <a
-            href="tel:+33674734698"
+            href="tel:+33672587353"
             className="text-xl font-bold hover:opacity-80 transition-opacity"
             style={{ color: '#425D07' }}
-            aria-label="Appeler LM Espace Vert au 06 74 73 46 98"
+            aria-label="Appeler LM Espace Vert au 06 72 58 73 53"
           >
-            📞 06 74 73 46 98
+            📞 06 72 58 73 53
           </a>
         </div>
       </div>

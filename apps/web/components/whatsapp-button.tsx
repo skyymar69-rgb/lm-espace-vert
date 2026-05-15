@@ -1,10 +1,10 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 
 export function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false)
-  const phone = '33674734698'
+  const phone = '33672587353'
   const message = encodeURIComponent("Bonjour Léo, je souhaite obtenir un devis pour mon jardin.")
   const href = `https://wa.me/${phone}?text=${message}`
 

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { Phone, FileText, MessageCircle } from 'lucide-react'
@@ -38,7 +38,7 @@ export function StickyContactBar() {
     >
       {/* WhatsApp */}
       <a
-        href="https://wa.me/33674734698"
+        href="https://wa.me/33672587353"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -64,7 +64,7 @@ export function StickyContactBar() {
 
       {/* Appeler */}
       <a
-        href="tel:+33674734698"
+        href="tel:+33672587353"
         style={{
           flex: 1,
           display: 'flex',
