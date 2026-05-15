@@ -1,6 +1,30 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Clock, Gift, Shield, Phone, MessageCircle, Star } from 'lucide-react'
+import { CheckCircle, Clock, Gift, Shield, Phone, MessageCircle, Star, Zap, Award } from 'lucide-react'
+import { JsonLd } from '@/components/seo/json-ld'
+
+const quoteActionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Devis paysagiste gratuit',
+  provider: {
+    '@type': 'LandscapingBusiness',
+    name: 'LM Espace Vert',
+    url: 'https://www.lmespacevert.fr',
+    telephone: '+33674734698',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR',
+    description: 'Devis gratuit et sans engagement — visite sur place offerte — réponse sous 48h',
+  },
+  potentialAction: {
+    '@type': 'QuoteAction',
+    target: 'https://www.lmespacevert.fr/devis',
+    name: 'Demander un devis gratuit',
+  },
+}
 
 export const metadata: Metadata = {
   title: 'Demander un devis gratuit — LM Espace Vert',
@@ -29,6 +53,7 @@ const labelClass = 'block text-xs font-semibold uppercase tracking-wider mb-2 te
 export default function DevisPage() {
   return (
     <>
+      <JsonLd data={quoteActionSchema} />
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
@@ -47,12 +72,35 @@ export default function DevisPage() {
       {/* Hero */}
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <h1 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-bold" style={{ color: '#2F2F2F' }}>
-            Demandez votre devis gratuit
-          </h1>
-          <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
-            Sans engagement · Réponse sous 24h · Visite gratuite
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            Devis 100% gratuit &amp; sans engagement
           </p>
+          <h1 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-bold" style={{ color: '#425D07' }}>
+            Votre devis gratuit en 3 étapes
+          </h1>
+          <p className="mt-4 text-lg max-w-xl mx-auto" style={{ color: '#8C8F94' }}>
+            Remplissez le formulaire · Visite gratuite sous 48h · Devis détaillé sans surprise
+          </p>
+
+          {/* Trust badge */}
+          <div className="mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold border" style={{ backgroundColor: 'rgba(128,188,0,0.08)', borderColor: 'rgba(128,188,0,0.3)', color: '#425D07' }}>
+            <CheckCircle size={15} aria-hidden="true" />
+            Réponse garantie sous 24h
+          </div>
+
+          {/* Phone prominent */}
+          <div className="mt-6">
+            <a
+              href="tel:+33674734698"
+              className="inline-flex items-center gap-3 rounded-2xl px-6 py-4 text-white font-bold text-lg shadow-md hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#425D07' }}
+            >
+              <Phone size={22} aria-hidden="true" />
+              06 74 73 46 98
+            </a>
+            <p className="mt-2 text-sm" style={{ color: '#8C8F94' }}>Lun–Ven 8h–18h · Sam 8h–12h</p>
+          </div>
+
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {badges.map(({ icon: Icon, label }) => (
               <div
@@ -62,6 +110,83 @@ export default function DevisPage() {
               >
                 <Icon size={16} style={{ color: '#425D07' }} aria-hidden="true" />
                 {label}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Steps */}
+      <section className="bg-white border-b border-[#EDEDED] py-10">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <ol className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { num: 1, title: 'Remplissez le formulaire', desc: 'Décrivez votre projet en 2 minutes. Aucun engagement.' },
+              { num: 2, title: 'Visite gratuite', desc: 'Nous nous déplaçons chez vous pour évaluer votre chantier.' },
+              { num: 3, title: 'Devis sous 48h', desc: 'Recevez un devis clair, détaillé et sans mauvaise surprise.' },
+            ].map(({ num, title, desc }) => (
+              <li key={num} className="flex items-start gap-4">
+                <div
+                  className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                  style={{ backgroundColor: '#80BC00' }}
+                  aria-hidden="true"
+                >
+                  {num}
+                </div>
+                <div>
+                  <p className="font-semibold text-sm" style={{ color: '#425D07' }}>{title}</p>
+                  <p className="text-xs mt-0.5 leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Ce qui est inclus */}
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-12">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-8">
+            <h2 className="font-display text-2xl font-bold" style={{ color: '#425D07' }}>Ce qui est inclus</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {[
+              { icon: Gift, title: 'Visite gratuite', desc: 'Déplacement offert sur votre chantier pour évaluer votre projet.' },
+              { icon: Clock, title: 'Devis sous 48h', desc: 'Réponse rapide et devis détaillé remis en main propre ou par email.' },
+              { icon: Shield, title: 'Sans engagement', desc: 'Aucune obligation de suite. Vous êtes libre d\'accepter ou non.' },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl border border-[#EDEDED] p-6 text-center shadow-sm">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}>
+                  <Icon size={22} style={{ color: '#80BC00' }} aria-hidden="true" />
+                </div>
+                <p className="font-bold text-sm mb-1" style={{ color: '#425D07' }}>{title}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pourquoi nous choisir */}
+      <section className="bg-white py-12 border-b border-[#EDEDED]">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-8">
+            <h2 className="font-display text-2xl font-bold" style={{ color: '#425D07' }}>Pourquoi nous choisir ?</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {[
+              { icon: Zap, title: 'Rapidité', desc: 'Réponse sous 24h, visite sous 48h, devis remis sans délai.' },
+              { icon: Award, title: 'Qualité', desc: '5 étoiles sur Google · 28 avis clients · Finitions soignées.' },
+              { icon: Shield, title: 'RC Pro', desc: 'Couverture complète en responsabilité civile professionnelle.' },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="flex items-start gap-4 rounded-2xl border border-[#EDEDED] p-5">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(66,93,7,0.08)' }}>
+                  <Icon size={18} style={{ color: '#425D07' }} aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="font-bold text-sm" style={{ color: '#425D07' }}>{title}</p>
+                  <p className="text-xs mt-0.5 leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -281,21 +406,21 @@ export default function DevisPage() {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="tel:+33XXXXXXXXX"
-                    className="flex items-center gap-3 text-sm font-medium hover:underline"
-                    style={{ color: '#2F2F2F' }}
+                    href="tel:+33674734698"
+                    className="flex items-center gap-3 text-sm font-bold hover:underline"
+                    style={{ color: '#425D07' }}
                   >
-                    <Phone size={16} style={{ color: '#425D07' }} aria-hidden="true" />
-                    +33 (0)X XX XX XX XX
+                    <Phone size={18} style={{ color: '#425D07' }} aria-hidden="true" />
+                    06 74 73 46 98
                   </a>
                   <a
-                    href="https://wa.me/33XXXXXXXXX"
+                    href="https://wa.me/33674734698?text=Bonjour%2C%20je%20souhaite%20un%20devis%20gratuit%20pour%20mon%20jardin."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-sm font-medium hover:underline"
                     style={{ color: '#2F2F2F' }}
                   >
-                    <MessageCircle size={16} style={{ color: '#425D07' }} aria-hidden="true" />
+                    <MessageCircle size={16} style={{ color: '#25D366' }} aria-hidden="true" />
                     WhatsApp — réponse rapide
                   </a>
                 </div>

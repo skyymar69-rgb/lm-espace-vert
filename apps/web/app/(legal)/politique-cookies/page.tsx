@@ -29,8 +29,9 @@ export default function PolitiqueCookiesPage() {
             </thead>
             <tbody>
               <tr><td><code>theme</code></td><td>Mémoriser votre préférence d'affichage (clair/sombre)</td><td>1 an</td></tr>
+              <tr><td><code>a11y-font</code></td><td>Mémoriser votre préférence de taille de texte (accessibilité)</td><td>1 an</td></tr>
               <tr><td><code>__Host-csrf</code></td><td>Sécurité (prévention CSRF)</td><td>Session</td></tr>
-              <tr><td><code>cookie-consent</code></td><td>Mémoriser vos choix relatifs aux cookies</td><td>6 mois</td></tr>
+              <tr><td><code>cookie-consent</code></td><td>Mémoriser vos choix relatifs aux cookies (bannière de consentement)</td><td>6 mois</td></tr>
             </tbody>
           </table>
         </div>

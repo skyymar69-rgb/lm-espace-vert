@@ -28,37 +28,37 @@ const navItems = [
 
 const megaServices = [
   {
-    href: '/services',
+    href: '/services/creation-jardins',
     label: 'Création de jardins',
     desc: 'Conception paysagère sur-mesure',
     Icon: Sprout,
   },
   {
-    href: '/services',
+    href: '/services/entretien-espaces-verts',
     label: 'Entretien régulier',
     desc: 'Tonte, taille et désherbage',
     Icon: Scissors,
   },
   {
-    href: '/services',
+    href: '/services/elagage-abattage',
     label: 'Élagage & Abattage',
     desc: 'Arbres remarquables & sécurité',
     Icon: TreePine,
   },
   {
-    href: '/services',
+    href: '/services/maconnerie-paysagere',
     label: 'Maçonnerie paysagère',
     desc: 'Terrasses, allées et murets',
     Icon: Layers,
   },
   {
-    href: '/services',
+    href: '/services/arrosage-automatique',
     label: 'Arrosage automatique',
     desc: 'Installation & programmation',
     Icon: Droplets,
   },
   {
-    href: '/services',
+    href: '/services/engazonnement',
     label: 'Engazonnement',
     desc: 'Semis, rouleaux, prairie fleurie',
     Icon: Flower2,

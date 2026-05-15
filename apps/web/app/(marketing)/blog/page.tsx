@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description: 'Conseils pratiques de votre paysagiste : taille, entretien, création de jardin, plantes...',
     url: 'https://www.lmespacevert.fr/blog',
     type: 'website',
+    images: [{ url: '/images/realisation-1.jpg', width: 1200, height: 630, alt: 'Blog jardinage LM Espace Vert' }],
   },
 }
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
@@ -133,22 +133,23 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                {/* WhatsApp */}
+                {/* WhatsApp — prominent */}
                 <a
-                  href="https://wa.me/33674734698"
+                  href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20devis%20gratuit%20pour%20mon%20projet%20de%20jardin."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
+                  className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group border-2"
+                  style={{ backgroundColor: 'rgba(37,211,102,0.06)', borderColor: '#25D366' }}
                 >
                   <div
-                    className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-white"
+                    className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center text-white"
                     style={{ backgroundColor: '#25D366' }}
                   >
-                    <MessageCircle size={22} aria-hidden="true" />
+                    <MessageCircle size={26} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold" style={{ color: '#2F2F2F' }}>WhatsApp direct</p>
-                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse rapide</p>
+                    <p className="font-bold text-lg" style={{ color: '#128C7E' }}>WhatsApp — Écrire maintenant</p>
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous quelques minutes · Devis gratuit</p>
                   </div>
                 </a>
 
@@ -169,13 +170,32 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                {/* Adresse */}
-                <div className="flex items-center gap-4 px-5 py-3" style={{ color: '#8C8F94' }}>
+                {/* Adresse + Google Maps */}
+                <div className="flex items-center gap-4 px-5 py-3 rounded-2xl border border-[#EDEDED] bg-white">
                   <MapPin size={20} className="flex-shrink-0" style={{ color: '#425D07' }} aria-hidden="true" />
-                  <span className="text-sm">
-                    Saint-Didier-au-Mont-d&apos;Or,{' '}
-                    <strong style={{ color: '#2F2F2F' }}>69370 Rhône</strong>
-                  </span>
+                  <div className="flex-1">
+                    <span className="text-sm" style={{ color: '#8C8F94' }}>
+                      Saint-Didier-au-Mont-d&apos;Or,{' '}
+                      <strong style={{ color: '#2F2F2F' }}>69370 Rhône</strong>
+                    </span>
+                    <a
+                      href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-xs font-semibold mt-0.5 hover:underline"
+                      style={{ color: '#425D07' }}
+                    >
+                      Obtenir l&apos;itinéraire →
+                    </a>
+                  </div>
+                </div>
+
+                {/* Badge réassurance */}
+                <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(128,188,0,0.06)', borderColor: 'rgba(128,188,0,0.3)' }}>
+                  <CheckCircle size={20} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  <p className="text-sm font-semibold" style={{ color: '#425D07' }}>
+                    Réponse garantie sous 24h — aucun engagement
+                  </p>
                 </div>
               </div>
 

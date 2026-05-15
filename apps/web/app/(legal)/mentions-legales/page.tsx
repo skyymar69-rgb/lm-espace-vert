@@ -20,20 +20,17 @@ export default function MentionsLegalesPage() {
         </p>
         <ul>
           <li><strong>Raison sociale :</strong> LM Espace Vert</li>
-          <li><strong>Forme juridique :</strong> [À compléter]</li>
-          <li><strong>Capital social :</strong> [À compléter] €</li>
-          <li><strong>SIREN :</strong> [À compléter]</li>
-          <li><strong>SIRET (siège) :</strong> [À compléter]</li>
-          <li><strong>RCS :</strong> [À compléter]</li>
-          <li><strong>N° TVA intracommunautaire :</strong> FR[À compléter]</li>
-          <li><strong>Code APE / NAF :</strong> 8130Z – Services d'aménagement paysager</li>
-          <li><strong>Siège social :</strong> [À compléter — adresse complète]</li>
-          <li><strong>Téléphone :</strong> [À compléter]</li>
-          <li><strong>Email :</strong> contact@lmespacevert.fr</li>
+          <li><strong>Forme juridique :</strong> Auto-entrepreneur (micro-entreprise)</li>
+          <li><strong>Dirigeant :</strong> Léo Maurice</li>
+          <li><strong>SIRET :</strong> [À compléter — en attente d&apos;immatriculation]</li>
+          <li><strong>Code APE / NAF :</strong> 8130Z – Services d&apos;aménagement paysager</li>
+          <li><strong>Siège social :</strong> Saint-Didier-au-Mont-d&apos;Or, 69370 Rhône</li>
+          <li><strong>Téléphone :</strong> <a href="tel:+33674734698">06 74 73 46 98</a></li>
+          <li><strong>Email :</strong> <a href="mailto:contact@lmespacevert.fr">contact@lmespacevert.fr</a></li>
         </ul>
 
         <h2>2. Directeur de la publication</h2>
-        <p>[À compléter — Nom Prénom], en qualité de [gérant / président].</p>
+        <p>Léo Maurice, en qualité d&apos;auto-entrepreneur.</p>
 
         <h2>3. Hébergeur</h2>
         <p>Le site est hébergé par :</p>

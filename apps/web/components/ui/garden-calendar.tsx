@@ -32,18 +32,18 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
 
   if (compact) {
     return (
-      <div className="rounded-xl border border-[--color-border] bg-[--color-bg-elevated] p-4">
+      <div className="rounded-xl border border-[#EDEDED] bg-white p-4">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xl" aria-hidden="true">{current.emoji}</span>
           <div>
-            <p className="font-bold text-sm text-[--color-fg]">Travaux de {current.label}</p>
-            <p className="text-xs text-[--color-fg-subtle]">{current.season}</p>
+            <p className="font-bold text-sm" style={{ color: '#2F2F2F' }}>Travaux de {current.label}</p>
+            <p className="text-xs" style={{ color: '#8C8F94' }}>{current.season}</p>
           </div>
         </div>
         <ul className="space-y-1">
           {current.tasks.map((task) => (
-            <li key={task} className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[--color-primary] flex-shrink-0" aria-hidden="true" />
+            <li key={task} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
+              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#80BC00' }} aria-hidden="true" />
               {task}
             </li>
           ))}
@@ -53,10 +53,10 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
   }
 
   return (
-    <div className="rounded-2xl border border-[--color-border] bg-[--color-bg-elevated] overflow-hidden">
+    <div className="rounded-2xl border border-[#EDEDED] bg-white overflow-hidden">
       {/* Header */}
-      <div className="bg-[--color-primary] px-6 py-4 text-[--color-primary-fg]">
-        <h3 className="font-display font-bold text-lg">Calendrier d'entretien</h3>
+      <div className="px-6 py-4 text-white" style={{ backgroundColor: '#425D07' }}>
+        <h3 className="font-display font-bold text-lg">Calendrier d&apos;entretien</h3>
         <p className="text-sm opacity-80">Que faire dans votre jardin, mois par mois</p>
       </div>
 
@@ -65,11 +65,12 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
         {calendarData.map((m) => (
           <button
             key={m.month}
-            className={`text-center p-2.5 rounded-lg transition-colors ${
+            className="text-center p-2.5 rounded-lg transition-colors"
+            style={
               m.month === currentMonth
-                ? 'bg-[--color-green-primary] text-white'
-                : 'hover:bg-[--color-bg-subtle] text-[--color-fg-muted]'
-            }`}
+                ? { backgroundColor: '#80BC00', color: '#ffffff' }
+                : { color: '#8C8F94' }
+            }
           >
             <span className="block text-lg" aria-hidden="true">{m.emoji}</span>
             <span className="block text-xs font-semibold mt-0.5">{m.label}</span>
@@ -78,14 +79,14 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
       </div>
 
       {/* Current month detail */}
-      <div className="border-t border-[--color-border] px-6 py-4">
-        <p className="font-semibold text-sm text-[--color-fg] mb-2">
+      <div className="border-t border-[#EDEDED] px-6 py-4">
+        <p className="font-semibold text-sm mb-2" style={{ color: '#2F2F2F' }}>
           Ce mois-ci ({current.label}) :
         </p>
         <ul className="space-y-1.5">
           {current.tasks.map((task) => (
-            <li key={task} className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-              <span className="text-[--color-primary]" aria-hidden="true">✓</span>
+            <li key={task} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
+              <span style={{ color: '#80BC00' }} aria-hidden="true">✓</span>
               {task}
             </li>
           ))}

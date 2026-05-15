@@ -441,6 +441,62 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── SECTION : ZONE D'INTERVENTION ── */}
+      <section className="bg-white py-16" aria-labelledby="zone-heading">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Zone Couverte</p>
+            <h2 id="zone-heading" className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
+              Paysagiste dans un rayon de 20 km
+            </h2>
+            <p className="text-[#8C8F94] mt-3 max-w-xl mx-auto">
+              Basé à Saint-Didier-au-Mont-d&apos;Or, nous intervenons dans tout le nord-ouest lyonnais.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {[
+              { ville: "Saint-Didier-au-Mont-d'Or", slug: null },
+              { ville: "Caluire-et-Cuire", slug: "caluire" },
+              { ville: "Écully", slug: "ecuelly" },
+              { ville: "Tassin-la-Demi-Lune", slug: "tassin" },
+              { ville: "Limonest", slug: "limonest" },
+              { ville: "Dardilly", slug: "dardilly" },
+              { ville: "Champagne-au-Mont-d'Or", slug: "champagne" },
+              { ville: "Neuville-sur-Saône", slug: null },
+              { ville: "Craponne", slug: null },
+              { ville: "Francheville", slug: null },
+              { ville: "Charbonnières-les-Bains", slug: null },
+              { ville: "Collonges-au-Mont-d'Or", slug: null },
+            ].map(({ ville, slug }) => (
+              slug ? (
+                <Link
+                  key={ville}
+                  href={`/secteur/${slug}`}
+                  className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#8C8F94] hover:border-[#80BC00] hover:text-[#425D07] transition-colors flex items-center gap-1.5"
+                >
+                  <MapPin size={11} aria-hidden="true" /> {ville}
+                </Link>
+              ) : (
+                <span key={ville} className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm text-[#8C8F94] flex items-center gap-1.5">
+                  <MapPin size={11} aria-hidden="true" /> {ville}
+                </span>
+              )
+            ))}
+          </div>
+          <div className="text-center">
+            <iframe
+              src="https://www.smappen.fr/app/embed/?lat=45.833&lng=4.800&d=20000&color=80BC00"
+              width="100%"
+              height="400"
+              className="rounded-2xl border border-[#EDEDED] shadow-sm"
+              style={{ maxWidth: '700px', display: 'block', margin: '0 auto' }}
+              title="Zone d'intervention LM Espace Vert — 20km autour de Saint-Didier-au-Mont-d'Or"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION 8 : BLOG PREVIEW ── */}
       <section className="bg-white py-20 lg:py-24" aria-labelledby="blog-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">

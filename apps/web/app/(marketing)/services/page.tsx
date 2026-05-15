@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: "Nos Prestations Paysagères | LM Espace Vert",
     description: "Entretien, élagage, création de jardins, maçonnerie paysagère, arrosage automatique et engazonnement. Paysagiste à Saint-Didier-au-Mont-d'Or, rayon 20 km.",
     url: 'https://www.lmespacevert.fr/services',
+    images: [{ url: '/images/entretien-espaces-verts.webp', width: 1200, height: 630, alt: 'Paysagiste LM Espace Vert — Services' }],
   },
 }
 

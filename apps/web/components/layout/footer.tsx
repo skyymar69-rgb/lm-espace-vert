@@ -14,14 +14,14 @@ const serviceLinks = [
 ]
 
 const zones = [
-  "Saint-Didier-au-Mont-d'Or",
-  'Caluire-et-Cuire',
-  'Écully',
-  'Tassin-la-Demi-Lune',
-  'Charbonnières-les-Bains',
-  'Limonest',
-  'Dardilly',
-  "Champagne-au-Mont-d'Or",
+  { label: "Saint-Didier-au-Mont-d'Or", href: null },
+  { label: 'Caluire-et-Cuire',           href: '/secteur/caluire' },
+  { label: 'Écully',                      href: '/secteur/ecuelly' },
+  { label: 'Tassin-la-Demi-Lune',         href: '/secteur/tassin' },
+  { label: 'Charbonnières-les-Bains',     href: null },
+  { label: 'Limonest',                    href: '/secteur/limonest' },
+  { label: 'Dardilly',                    href: '/secteur/dardilly' },
+  { label: "Champagne-au-Mont-d'Or",      href: '/secteur/champagne' },
 ]
 
 export function Footer() {
@@ -164,8 +164,20 @@ export function Footer() {
               </p>
               <ul className="space-y-0.5">
                 {zones.map((zone) => (
-                  <li key={zone} className="text-sm py-0.5" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                    {zone}
+                  <li key={zone.label} className="text-sm py-0.5">
+                    {zone.href ? (
+                      <Link
+                        href={zone.href}
+                        className="transition-colors"
+                        style={{ color: 'rgba(255,255,255,0.7)' }}
+                        onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                        onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)' }}
+                      >
+                        {zone.label}
+                      </Link>
+                    ) : (
+                      <span style={{ color: 'rgba(255,255,255,0.7)' }}>{zone.label}</span>
+                    )}
                   </li>
                 ))}
                 <li className="text-sm py-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>+ autres communes</li>

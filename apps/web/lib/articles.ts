@@ -47,6 +47,9 @@ export const articles: Article[] = [
 
 <h2>Besoin d'aide pour préparer votre jardin ?</h2>
 <p>LM Espace Vert intervient dans toute la zone de Saint-Didier-au-Mont-d'Or, Caluire, Écully et les communes environnantes pour vous aider à démarrer la saison dans les meilleures conditions. Contactez-nous pour un devis gratuit.</p>
+
+<h2>Besoin d'un paysagiste professionnel ?</h2>
+<p>LM Espace Vert intervient dans un rayon de 20 km autour de <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/ecuelly">Écully</a>, <a href="/secteur/limonest">Limonest</a> et tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou appelez directement au 06 74 73 46 98.</p>
     `.trim(),
   },
   {
@@ -85,6 +88,9 @@ export const articles: Article[] = [
 
 <h2>Faire appel à un professionnel</h2>
 <p>Pour les haies hautes ou difficiles d'accès, LM Espace Vert dispose du matériel professionnel adapté et intervient en sécurité autour de Saint-Didier-au-Mont-d'Or et dans tout le nord lyonnais.</p>
+
+<h2>Besoin d'un paysagiste professionnel ?</h2>
+<p>LM Espace Vert intervient dans un rayon de 20 km autour de <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/ecuelly">Écully</a>, <a href="/secteur/limonest">Limonest</a> et tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou appelez directement au 06 74 73 46 98.</p>
     `.trim(),
   },
   {
@@ -115,6 +121,9 @@ export const articles: Article[] = [
 
 <h2>5. Les terrasses végétalisées</h2>
 <p>Toits verts, murs végétaux, bacs et jardinières : même en ville, le végétal s'invite partout. LM Espace Vert conçoit des terrasses végétalisées à Lyon et dans tout le nord-ouest lyonnais.</p>
+
+<h2>Besoin d'un paysagiste professionnel ?</h2>
+<p>LM Espace Vert intervient dans un rayon de 20 km autour de <a href="/secteur/caluire">Caluire-et-Cuire</a>, <a href="/secteur/ecuelly">Écully</a>, <a href="/secteur/limonest">Limonest</a> et tout le nord-ouest lyonnais. <a href="/devis">Demandez un devis gratuit</a> ou appelez directement au 06 74 73 46 98.</p>
     `.trim(),
   },
   {
@@ -1107,6 +1116,172 @@ export const articles: Article[] = [
 
 <h2>La patience comme outil principal</h2>
 <p>Le niwaki ne se crée pas en une saison. Un beau sujet demande 5 à 10 ans de travail progressif. LM Espace Vert propose un suivi pluriannuel pour créer des niwaki remarquables dans vos jardins.</p>
+    `.trim(),
+  },
+  {
+    slug: 'paysagiste-caluire-et-cuire',
+    category: 'Conseils locaux',
+    title: 'Paysagiste à Caluire-et-Cuire : nos conseils pour votre jardin',
+    date: '2026-04-10',
+    readingTime: '4 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    keywords: ['paysagiste Caluire-et-Cuire', 'entretien jardin Caluire', 'création jardin Lyon nord'],
+    excerpt: "LM Espace Vert intervient régulièrement à Caluire-et-Cuire pour la création et l'entretien de jardins. Découvrez nos conseils adaptés à cette commune lyonnaise.",
+    content: `
+<h2>Caluire-et-Cuire : une commune aux jardins variés</h2>
+<p>Située immédiatement au nord de Lyon, Caluire-et-Cuire offre une grande diversité de jardins : des petites parcelles de centre-ville aux propriétés avec parc dans les quartiers résidentiels de Cuire-le-Bas ou de Montessuy. LM Espace Vert intervient régulièrement sur cette commune pour accompagner les propriétaires dans la création et l'entretien de leurs espaces verts.</p>
+
+<h2>Les spécificités des jardins caluirards</h2>
+<h3>Un sol argilo-calcaire typique</h3>
+<p>Les sols de Caluire-et-Cuire sont majoritairement argilo-calcaires, tendance que l'on retrouve dans tout le nord-est de l'agglomération lyonnaise. Ce type de sol retient bien l'humidité en hiver mais peut se dessécher rapidement en été. Pour nos interventions, nous préconisons systématiquement un amendement à base de compost et de sable grossier pour améliorer la structure et le drainage.</p>
+
+<h3>Des jardins souvent en pente</h3>
+<p>Avec les coteaux qui surplombent la Saône et le Rhône, de nombreuses propriétés de Caluire présentent des jardins en forte pente. Ces situations nécessitent une approche paysagère spécifique : terrasses plantées, murets de soutènement en pierre sèche ou en gabions, cheminements adaptés. LM Espace Vert maîtrise ces aménagements particuliers.</p>
+
+<h2>Quels végétaux choisir à Caluire-et-Cuire ?</h2>
+<p>La commune bénéficie d'un microclima légèrement plus frais que le centre de Lyon. Voici les végétaux que nous recommandons le plus souvent :</p>
+<ul>
+<li><strong>Haies persistantes</strong> : photinia, laurier-tin, charme — résistants aux hivers et faciles d'entretien</li>
+<li><strong>Arbustes à fleurs</strong> : deutzia, weigelia, philadelphus pour les jardins exposés est ou ouest</li>
+<li><strong>Vivaces</strong> : hémérocalles, hostas en sous-bois, échinacées en plein soleil</li>
+<li><strong>Arbres de taille moyenne</strong> : érable champêtre, alisier blanc, cerisier à fleurs</li>
+</ul>
+
+<h2>L'entretien régulier des jardins caluirards</h2>
+<p>Nous proposons à nos clients de Caluire-et-Cuire des contrats d'entretien adaptés à leur jardin : tonte régulière, taille des haies deux à trois fois par an, désherbage des massifs, scarification de la pelouse au printemps et en automne. Nos équipes interviennent dans toute la commune, de Caluire-le-Bas au plateau de Montessuy.</p>
+
+<h2>Projets de création à Caluire : nos réalisations</h2>
+<p>Parmi nos réalisations récentes à Caluire-et-Cuire, citons la création d'une terrasse en dallage calcaire avec massifs intégrés dans le quartier du Mas-Rillier, la rénovation complète d'un jardin en pente avec terrasses successives dans les Hauteurs de Caluire, et l'installation d'un système d'arrosage automatique connecté pour une propriété du bord de Saône.</p>
+
+<h2>Contactez LM Espace Vert pour votre jardin à Caluire</h2>
+<p>Vous habitez Caluire-et-Cuire et souhaitez valoriser votre jardin ? Contactez LM Espace Vert au <strong>06 74 73 46 98</strong> pour un devis gratuit. Léo Maurice se déplace dans toute la commune pour évaluer votre projet et vous proposer les solutions les mieux adaptées à votre terrain et à vos envies.</p>
+    `.trim(),
+  },
+  {
+    slug: 'paysagiste-ecully',
+    category: 'Conseils locaux',
+    title: 'Paysagiste à Écully : créer un jardin haut de gamme',
+    date: '2026-04-05',
+    readingTime: '5 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    keywords: ['paysagiste Écully', 'jardin prestige Écully', 'aménagement extérieur Écully'],
+    excerpt: "Écully et ses propriétés de prestige demandent une approche paysagère d'exception. LM Espace Vert vous présente ses solutions pour des jardins haut de gamme.",
+    content: `
+<h2>Écully : une commune où le jardin est un art de vivre</h2>
+<p>Commune résidentielle du nord-ouest lyonnais, Écully est connue pour ses propriétés cossues, ses grandes maisons bourgeoises et ses villas contemporaines dotées de parcs. Les jardins y sont souvent ambitieux, confiés à des paysagistes capables de concevoir des espaces à la hauteur de ces belles demeures. LM Espace Vert, basé à Saint-Didier-au-Mont-d'Or, intervient régulièrement à Écully pour des projets de création et d'entretien haut de gamme.</p>
+
+<h2>Les jardins de prestige : ce qui fait la différence</h2>
+<h3>La conception sur mesure</h3>
+<p>Un jardin haut de gamme à Écully ne s'improvise pas. Il commence toujours par une phase d'analyse approfondie : étude de l'exposition, du sol, de la topographie, mais aussi des besoins et de l'esthétique recherchée par les propriétaires. Chez LM Espace Vert, nous élaborons un plan de composition détaillé avant tout démarrage de chantier.</p>
+
+<h3>Les matériaux nobles</h3>
+<p>Pour les propriétés d'Écully, nous privilégions des matériaux de qualité : dallage en pierre naturelle (calcaire du Jura, granit ou pierre de Bourgogne), bois exotiques certifiés FSC pour les terrasses, mobilier de jardin haut de gamme. Ces choix garantissent durabilité et esthétique dans la durée.</p>
+
+<h2>Les végétaux adaptés au microclima d'Écully</h2>
+<p>Écully bénéficie d'un microclima particulier, légèrement plus doux grâce à sa situation en fond de vallon. Ce contexte favorise :</p>
+<ul>
+<li><strong>Les palmiers de Chine (Trachycarpus fortunei)</strong> : résistants jusqu'à -15°C, ils apportent une touche exotique et d'élégance</li>
+<li><strong>Les magnolias</strong> : grandiflora pour les grands espaces, Stellata pour les jardins plus modestes</li>
+<li><strong>Les bambous en touffe</strong> : Phyllostachys et Fargesia pour les claustras végétaux</li>
+<li><strong>Les rosiers anglais de David Austin</strong> : pour des massifs floraux raffinés et parfumés</li>
+<li><strong>Les graminées ornementales</strong> : Miscanthus, Pennisetum, Stipa — légèreté et mouvement</li>
+</ul>
+
+<h2>L'entretien des jardins haut de gamme à Écully</h2>
+<p>Nos contrats d'entretien pour les propriétés d'Écully sont conçus pour maintenir un niveau de présentation irréprochable tout au long de l'année. Cela inclut une tonte précise avec ramassage, la taille soignée des topiaires et des haies, le désherbage fin des massifs, les soins saisonniers aux plantes fragiles et le suivi de l'arrosage automatique.</p>
+
+<h2>Nos réalisations à Écully</h2>
+<p>LM Espace Vert a réalisé plusieurs jardins remarquables à Écully, dont un parc de 1 500 m² avec allées en calcaire, roseraie et bassin à nénuphars, et une terrasse contemporaine avec pergola bioclimatique et jardin structuré autour de topiaires en buis et en ilex.</p>
+
+<h2>Demandez votre devis à Écully</h2>
+<p>Vous êtes propriétaire à Écully et souhaitez sublimer votre extérieur ? LM Espace Vert est votre partenaire idéal. Contactez-nous au <strong>06 74 73 46 98</strong> ou via notre formulaire en ligne pour une visite et un devis gratuit, sans engagement.</p>
+    `.trim(),
+  },
+  {
+    slug: 'entretien-jardin-hiver-lyon',
+    category: 'Entretien saisonnier',
+    title: 'Entretien jardin en hiver à Lyon : que faire en décembre-janvier ?',
+    date: '2026-03-20',
+    readingTime: '6 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&q=80',
+    keywords: ['entretien jardin hiver Lyon', 'jardin hiver Rhône', 'taille arbres hiver'],
+    excerpt: "Les mois de décembre et janvier sont propices à l'entretien hivernal. Découvrez ce qu'il faut faire dans votre jardin lyonnais pendant la saison froide.",
+    content: `
+<h2>L'hiver lyonnais et votre jardin</h2>
+<p>Contrairement à ce que l'on pourrait croire, le jardin n'est pas en congé pendant l'hiver. Dans la région de Lyon, les mois de décembre et janvier offrent une fenêtre idéale pour un grand nombre de travaux d'entretien et de préparation. Le sol est froid mais rarement gelé en permanence, et l'absence de végétation facilite de nombreuses interventions.</p>
+
+<h2>Les travaux prioritaires en décembre</h2>
+<h3>La taille des arbres et arbustes à feuilles caduques</h3>
+<p>En dormance complète, les arbres et arbustes supportent parfaitement la taille. C'est le moment idéal pour intervenir sur les charpentières, supprimer les branches mortes ou malades et réduire les volumes devenus trop importants. Exception : les espèces sensibles à la bactériose comme les cerisiers, à ne tailler qu'au printemps.</p>
+
+<h3>La protection des plantes frileuses</h3>
+<p>Si vous n'avez pas encore protégé vos plantes méditerranéennes (laurier sauce, olivier, palmier) ou vos plantes en pot, c'est urgent. Utilisez des voiles d'hivernage (2-3 épaisseurs) et paillez généreusement le pied. Dans le nord de Lyon, les gelées peuvent descendre sous -8°C les nuits les plus froides.</p>
+
+<h3>La plantation des arbres et arbustes</h3>
+<p>Décembre est un excellent mois pour planter les arbres à racines nues et les arbustes rustiques. Le sol encore relativement chaud permet aux racines de s'installer avant l'hiver. Arrosez après plantation même si la pluie est présente.</p>
+
+<h2>Les travaux de janvier</h2>
+<h3>La taille des arbres fruitiers</h3>
+<p>Janvier est le mois par excellence pour tailler pommiers et poiriers. La dormance est à son maximum, les risques de maladies sont limités. Taillez par temps sec et sans gel, avec des outils propres et tranchants. Appliquez un cicatrisant naturel sur les grosses coupes.</p>
+
+<h3>Le nettoyage des massifs</h3>
+<p>Profitez de l'absence de végétation pour nettoyer en profondeur vos massifs : désherbage à la main, récupération des feuilles mortes, suppression des tiges mortes des vivaces. Laissez cependant les structures décoratives des graminées — elles nourrissent les oiseaux et abritent les insectes.</p>
+
+<h3>La planification des projets à venir</h3>
+<p>Janvier est aussi le mois idéal pour planifier vos projets de jardin pour la saison à venir. LM Espace Vert est disponible pour vous recevoir et étudier vos projets lors d'une visite conseil sans engagement.</p>
+
+<h2>Ce qu'il ne faut PAS faire en hiver</h2>
+<ul>
+<li><strong>Tailler les rosiers</strong> : trop tôt, attendez fin février - début mars</li>
+<li><strong>Tondre une pelouse gelée</strong> : vous briserez les herbes, laissant des traces brunes</li>
+<li><strong>Travailler un sol gelé ou détrempé</strong> : vous détruisez sa structure</li>
+<li><strong>Fertiliser</strong> : les engrais n'ont aucun effet en dormance</li>
+</ul>
+
+<h2>Confiez votre jardin hivernal à LM Espace Vert</h2>
+<p>L'équipe LM Espace Vert continue ses interventions tout l'hiver dans le nord de Lyon. Nous prenons en charge la taille des arbres, la protection des plantes sensibles et les plantations hivernales. Contactez-nous au <strong>06 74 73 46 98</strong> pour programmer une intervention.</p>
+    `.trim(),
+  },
+  {
+    slug: 'gazon-pelouse-lyon-problemes',
+    category: 'Entretien pelouse',
+    title: 'Les 7 problèmes de pelouse courants à Lyon et comment les résoudre',
+    date: '2026-03-10',
+    readingTime: '7 min',
+    author: 'Léo Maurice',
+    image: 'https://images.unsplash.com/photo-1628352081506-83c43123e54d?w=800&q=80',
+    keywords: ['problèmes pelouse Lyon', 'gazon jaune Lyon', 'mousses pelouse Lyon'],
+    excerpt: "Mousses, mauvaises herbes, zones jaunes... Les problèmes de pelouse sont fréquents dans la région lyonnaise. Voici les solutions professionnelles de LM Espace Vert.",
+    content: `
+<h2>Votre pelouse lyonnaise face aux défis climatiques et pédologiques</h2>
+<p>La région de Lyon réunit plusieurs facteurs qui compliquent l'entretien des pelouses : des hivers humides propices au développement des mousses, des étés chauds et secs qui jaunissent les gazons, des sols argileux qui se compactent rapidement, et des variations de température importantes entre les saisons. LM Espace Vert traite ces problèmes quotidiennement. Voici les 7 situations les plus courantes et leurs solutions.</p>
+
+<h2>Problème n°1 : l'envahissement par les mousses</h2>
+<p>La mousse est le problème n°1 des pelouses lyonnaises, surtout dans les jardins exposés nord ou semi-ombragés. Elle s'installe dans les zones acides, compactées et mal drainées. Solution professionnelle : scarification mécanique en profondeur au printemps ou en automne, traitement antimousse à base de sulfate de fer, puis aération au décompacteur, apport de chaux si le pH est trop bas, et regarnissage.</p>
+
+<h2>Problème n°2 : les zones jaunes ou brunes en été</h2>
+<p>En juillet-août, certaines zones de pelouse jaunissent ou brunissent. Plusieurs causes possibles : stress hydrique, attaques de tipules (larves de cousins qui rongent les racines), ou champignons. Diagnostiquez en tirant sur la pelouse : si elle se soulève facilement comme un tapis, il s'agit de larves. Solution : traitement biologique au nématode (Steinernema feltiae), arrosage régulier tôt le matin, remontée de la hauteur de coupe à 7 cm.</p>
+
+<h2>Problème n°3 : les mauvaises herbes envahissantes</h2>
+<p>Pissenlits, plantains, renouées, véroniques... Dans un gazon dense et bien entretenu, les adventices ont du mal à s'installer. Mais dans une pelouse fragilisée, elles prolifèrent. Solution : désherbage sélectif (herbicide sélectif gazon ou désherbage manuel), regarnissage immédiat des zones dégagées pour éviter que d'autres mauvaises herbes ne colonisent l'espace.</p>
+
+<h2>Problème n°4 : le compactage du sol</h2>
+<p>Très fréquent sur les pelouses en argile lyonnaise, le compactage empêche l'eau et l'air de pénétrer. La pelouse reste gorgée d'eau en hiver et se dessèche vite en été. Symptômes : eau qui stagne en surface, pelouse qui rebondit sous les pieds, mousse qui prend le dessus. Solution : aération mécanique avec décompacteur à lames ou à fourches, apport de sable grossier de calibre 0/4, scarification.</p>
+
+<h2>Problème n°5 : les traces laissées par les animaux</h2>
+<p>Les brûlures d'urine de chiens (taches jaunes cerclées de vert foncé) et les fouilles de taupes (taupinières) sont fréquentes dans les jardins résidentiels. Pour les brûlures d'urine : arrosez immédiatement après passage du chien, regarnissez les zones touchées. Pour les taupes : aplatissez les taupinières avant tonte et consultez un professionnel si l'infestation est importante.</p>
+
+<h2>Problème n°6 : le gazon clairsemé à l'ombre</h2>
+<p>Sous les arbres ou en exposition nord, le gazon s'étire et devient clairsemé. La concurrence racinaire aggrave le manque de lumière. Solution : utilisez un mélange spécial ombre (Festuca rubra, Poa nemoralis), maintenez une hauteur de coupe plus élevée (7-8 cm), fertilisez avec un engrais pauvre en azote. Si l'ombre est trop dense, remplacez par un couvre-sol adapté.</p>
+
+<h2>Problème n°7 : le feutrage excessif</h2>
+<p>Le feutre (couche de matière organique entre le gazon et le sol) est normal jusqu'à 1 cm d'épaisseur. Au-delà, il étouffe la pelouse, bloque l'eau et favorise les maladies. Solution annuelle : scarification mécanique au printemps (mars-avril) ou en automne (septembre-octobre), suivie d'une fertilisation et d'un regarnissage éventuels.</p>
+
+<h2>LM Espace Vert, expert de la pelouse dans le Rhône</h2>
+<p>Vous reconnaissez l'un de ces problèmes dans votre jardin ? LM Espace Vert intervient pour diagnostiquer et traiter les troubles de votre pelouse dans toute la zone de Saint-Didier-au-Mont-d'Or, Caluire, Écully, Tassin et les communes voisines. Appelez-nous au <strong>06 74 73 46 98</strong> pour un diagnostic gratuit.</p>
     `.trim(),
   },
 ]
