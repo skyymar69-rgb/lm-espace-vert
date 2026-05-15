@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: "Terrasses, allées et murets en pierre naturelle à Lyon nord par LM Espace Vert. Maçonnerie paysagère haut de gamme avec garantie décennale. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.webp', width: 1200, height: 630, alt: 'Maçonnerie paysagère — terrasse en pierre à Lyon nord' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/travaux-paysagers.webp', width: 1200, height: 630, alt: 'Maçonnerie paysagère — terrasse en pierre à Lyon nord' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Maçonnerie Paysagère Lyon Nord — LM Espace Vert, paysagiste",
     description: "Terrasses, allées et murets en pierre naturelle à Lyon nord. Garantie décennale. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/realisation-1.webp'],
+    images: ['https://www.lmespacevert.fr/images/travaux-paysagers.webp'],
   },
 }
 
@@ -133,7 +133,7 @@ export default function MaconneriePaysagerePage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/realisation-10.webp"
+          src="/images/travaux-paysagers.webp"
           alt="Maçonnerie paysagère — terrasse et murets en pierre naturelle à Lyon nord"
           fill
           className="object-cover"

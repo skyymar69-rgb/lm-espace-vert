@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: "LM Espace Vert crée votre pelouse à Lyon nord par semis ou gazon en rouleaux. Préparation du sol, prairies fleuries, regarnissage. Résultat garanti. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/engazonnement',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-6.webp', width: 1200, height: 630, alt: 'Création de pelouse par engazonnement à Lyon nord — LM Espace Vert' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/blog-gazon-rouleau.webp', width: 1200, height: 630, alt: 'Création de pelouse par engazonnement à Lyon nord — LM Espace Vert' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Engazonnement & Création de Pelouses Lyon Nord — LM Espace Vert",
     description: "Création de pelouses par semis ou gazon en rouleaux à Lyon nord. Résultat garanti. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/realisation-6.webp'],
+    images: ['https://www.lmespacevert.fr/images/blog-gazon-rouleau.webp'],
   },
 }
 
@@ -132,7 +132,7 @@ export default function EngazonnementPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/realisation-6.webp"
+          src="/images/blog-gazon-rouleau.webp"
           alt="Engazonnement et création de pelouse à Lyon nord par LM Espace Vert"
           fill
           className="object-cover"

@@ -74,10 +74,10 @@ const localBusinessJsonLd = {
 const services = [
   { icon: Scissors, title: "Entretien d'espaces verts", desc: 'Tonte, taille de haies, désherbage. Votre jardin toujours impeccable.', image: '/images/entretien-espaces-verts.webp', href: '/services/entretien-espaces-verts' },
   { icon: TreePine, title: 'Élagage & Abattage', desc: 'Élagage raisonné et abattage sécurisé par des professionnels équipés.', image: '/images/elagage-abattage.webp', href: '/services/elagage-abattage' },
-  { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: '/images/realisation-1.webp', href: '/services/creation-jardins' },
-  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/realisation-10.webp', href: '/services/maconnerie-paysagere' },
+  { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: '/images/blog-creation-jardin.webp', href: '/services/creation-jardins' },
+  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/travaux-paysagers.webp', href: '/services/maconnerie-paysagere' },
   { icon: Droplets, title: 'Arrosage automatique', desc: "Systèmes d'arrosage intelligents pour économiser l'eau.", image: '/images/arrosage-automatique.webp', href: '/services/arrosage-automatique' },
-  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/realisation-6.webp', href: '/services/engazonnement' },
+  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/blog-gazon-rouleau.webp', href: '/services/engazonnement' },
 ] as const
 
 // #17 — durées estimées sous chaque step

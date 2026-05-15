@@ -227,7 +227,7 @@ export const articles: Article[] = [
     date: '2026-01-10',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/blog-massif-fleurs.webp',
+    image: '/images/entretien-espaces-verts.webp',
     keywords: ['plantes ombre jardin', 'plantes sous arbres', 'jardin ombragé Lyon'],
     content: `
 <h2>Tirer parti de l'ombre au jardin</h2>
@@ -315,7 +315,7 @@ export const articles: Article[] = [
     updatedAt: '2026-05-15',
     readingTime: '8 min',
     author: 'Léo Maurice',
-    image: '/images/blog-creation-jardin.webp',
+    image: '/images/travaux-paysagers.webp',
     keywords: ['création jardin paysager', 'aménagement jardin étapes', 'paysagiste création jardin'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -487,7 +487,7 @@ export const articles: Article[] = [
     date: '2025-09-05',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/travaux-paysagers.webp',
+    image: '/images/realisation-9.webp',
     keywords: ['entretien terrasse bois', 'lasure terrasse', 'nettoyage terrasse bois'],
     content: `
 <h2>Le bois en extérieur : un matériau vivant</h2>
@@ -709,7 +709,7 @@ export const articles: Article[] = [
     date: '2025-02-18',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/travaux-paysagers.webp',
+    image: '/images/realisation-4.webp',
     keywords: ['muret pierre sèche', 'construction muret jardin', 'maçonnerie paysagère'],
     content: `
 <h2>La pierre sèche : un patrimoine vivant</h2>
@@ -921,7 +921,7 @@ export const articles: Article[] = [
     date: '2024-09-20',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/blog-creation-jardin.webp',
+    image: '/images/realisation-6.webp',
     keywords: ['plantes grimpantes pergola', 'glycine jasmin terrasse', 'aménagement pergola'],
     content: `
 <h2>Les grimpantes pour la pergola : critères de sélection</h2>
@@ -1014,7 +1014,7 @@ export const articles: Article[] = [
     date: '2024-06-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/blog-compostage.webp',
+    image: '/images/entretien-espaces-verts.webp',
     keywords: ['désherbage naturel', 'sans glyphosate', 'mauvaises herbes jardin'],
     content: `
 <h2>Désherber sans chimie : oui, c'est possible</h2>
@@ -1050,7 +1050,7 @@ export const articles: Article[] = [
     date: '2024-05-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/blog-arrosage-jardin.webp',
+    image: '/images/travaux-paysagers.webp',
     keywords: ['drainage jardin', 'eau stagnante jardin', 'sol argileux drainage'],
     content: `
 <h2>Pourquoi l'eau stagne-t-elle dans mon jardin ?</h2>
@@ -1084,7 +1084,7 @@ export const articles: Article[] = [
     date: '2024-04-08',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/blog-allee-jardin.webp',
+    image: '/images/realisation-10.webp',
     keywords: ['jardin japonais', 'jardin zen', 'aménagement style japonais'],
     content: `
 <h2>L'esprit du jardin japonais</h2>
@@ -1187,7 +1187,7 @@ export const articles: Article[] = [
     date: '2024-01-25',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/blog-jardin-printemps.webp',
+    image: '/images/blog-rosiers.webp',
     keywords: ['diviser vivaces', 'multiplication vivaces', 'entretien vivaces printemps'],
     content: `
 <h2>Pourquoi diviser les vivaces ?</h2>
@@ -1221,7 +1221,7 @@ export const articles: Article[] = [
     date: '2023-12-10',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/blog-compostage.webp',
+    image: '/images/blog-automne.webp',
     keywords: ['paillage jardin', 'mulch jardin', 'BRF paillage', 'matériau paillage'],
     content: `
 <h2>Le paillage : une des meilleures pratiques du jardin</h2>
@@ -1888,7 +1888,7 @@ export const articles: Article[] = [
     date: '2026-04-01',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/apres1.webp',
+    image: '/images/travaux-paysagers.webp',
     keywords: ['entretien terrasse Lyon', 'terrasse bois Lyon', 'nettoyage terrasse pierre', 'entretien terrasse Rhône'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2755,7 +2755,7 @@ export const articles: Article[] = [
     date: '2026-03-28',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/apres2.webp',
+    image: '/images/blog-creation-jardin.webp',
     keywords: ['rénovation jardin Lyon', 'rénover jardin abandonné', 'transformation jardin lyonnais', 'avant après jardin Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2839,7 +2839,7 @@ export const articles: Article[] = [
     date: '2026-03-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/blog-creation-jardin.webp',
+    image: '/images/realisation-1.webp',
     keywords: ['pergola bois Lyon', 'terrasse bois Lyon', 'prix terrasse bois Rhône', 'matériau terrasse extérieur Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2921,7 +2921,7 @@ export const articles: Article[] = [
     date: '2026-04-10',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/blog-creation-jardin.webp',
+    image: '/images/realisation-3.webp',
     keywords: ['pergola jardin Lyon', 'tonnelle jardin Lyon', 'espace ombragé jardin', 'pergola bois aluminium Lyon', 'aménagement extérieur Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3334,7 +3334,7 @@ export const articles: Article[] = [
     date: '2026-04-28',
     readingTime: '8 min',
     author: 'Léo Maurice',
-    image: '/images/blog-massif-fleurs.webp',
+    image: '/images/blog-jardin-sec.webp',
     keywords: ['jardin japonais Lyon', 'création jardin japonais Rhône', 'karesansui Lyon', 'plantes jardin japonais', 'paysagiste jardin zen Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3469,7 +3469,7 @@ export const articles: Article[] = [
     date: '2026-05-05',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/blog-allee-jardin.webp',
+    image: '/images/blog-haie-verte.webp',
     keywords: ['clôture jardin Lyon', 'brise-vue jardin Rhône', 'palissade bois Lyon', 'occultant jardin Lyon', 'clôture paysagère Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3528,7 +3528,7 @@ export const articles: Article[] = [
     date: '2026-05-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/zone-intervention.webp',
+    image: '/images/realisation-10.webp',
     keywords: ["paysagiste Saint-Didier-au-Mont-d'Or", "jardin Saint-Didier Monts d'Or", 'entretien jardin Saint-Didier', "LM Espace Vert Saint-Didier", 'paysagiste Monts d\'Or'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
