@@ -1193,106 +1193,146 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 }
 
 /* ============================================================
-   DARK MODE OVERRIDES
-   Correctifs pour composants à valeurs hex hardcodées.
-   L'attribut [data-theme="dark"] est posé sur <html> par
-   ThemeToggle via localStorage (jamais via prefers-color-scheme).
+   DARK MODE OVERRIDES V2 — robuste, sélecteurs corrigés
+   IMPORTANT : on utilise [class*="..."] et [style*="..."]
+   car les sélecteurs .text-\[\#xxx\] nécessitent d'échapper
+   le # en \# en CSS — source d'erreurs silencieuses.
    ============================================================ */
 
-/* Indique au navigateur d'adopter le rendu sombre (scrollbars, inputs, etc.) */
-[data-theme="dark"] {
-  color-scheme: dark;
-}
+[data-theme="dark"] { color-scheme: dark; }
 
-/* --- Headings : #425D07 dur → couleur lisible sur fond sombre --- */
-[data-theme="dark"] h1:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]),
-[data-theme="dark"] h2:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]),
-[data-theme="dark"] h3:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]),
-[data-theme="dark"] h4:not([class*="text-white"]):not([style*="white"]):not([style*="#fff"]) {
-  color: var(--color-fg) !important;
-}
-
-/* --- Header principal --- */
+/* ── 1. HEADER ─────────────────────────────────────────── */
 [data-theme="dark"] header {
   background-color: var(--color-bg-elevated) !important;
   border-bottom-color: var(--color-border) !important;
 }
-/* Liens de navigation */
 [data-theme="dark"] header nav a,
-[data-theme="dark"] header nav button:not([class*="bg-\[#80BC00\]"]):not([style]) {
+[data-theme="dark"] header nav button:not([style*="#80BC00"]):not([style*="#425D07"]) {
   color: var(--color-fg) !important;
 }
 [data-theme="dark"] header nav a:hover,
-[data-theme="dark"] header nav button:hover {
-  color: var(--color-cta) !important;
-}
-/* Téléphone dans le header */
-[data-theme="dark"] header a[href^="tel:"] {
-  color: var(--color-fg-muted) !important;
-}
-/* Boutons d'accessibilité et thème dans le header */
-[data-theme="dark"] header button.h-9 {
-  color: var(--color-fg-muted) !important;
-}
+[data-theme="dark"] header nav button:hover { color: var(--color-cta) !important; }
+[data-theme="dark"] header a[href^="tel:"] { color: var(--color-fg-muted) !important; }
+[data-theme="dark"] header button.h-9 { color: var(--color-fg-muted) !important; }
 [data-theme="dark"] header button.h-9:hover {
   background-color: var(--color-bg-subtle) !important;
   color: var(--color-fg) !important;
 }
 
-/* --- Mega-menu Services --- */
-[data-theme="dark"] #mega-menu-services .bg-white {
+/* ── 2. MEGA-MENU & DROPDOWNS ────────────────────────────── */
+[data-theme="dark"] #mega-menu-services [class*="bg-white"] {
   background-color: var(--color-bg-elevated) !important;
   border-color: var(--color-border) !important;
 }
-[data-theme="dark"] #mega-menu-services .border-t {
-  border-color: var(--color-border) !important;
-}
-/* Hover items dans le mega-menu */
-[data-theme="dark"] #mega-menu-services a:hover {
-  background-color: var(--color-green-medium) !important;
-}
-
-/* --- Tous les panels / dropdowns (rôles ARIA) --- */
+[data-theme="dark"] #mega-menu-services [class*="border-t"] { border-color: var(--color-border) !important; }
+[data-theme="dark"] #mega-menu-services a:hover { background-color: var(--color-green-medium) !important; }
 [data-theme="dark"] [role="dialog"] {
   background-color: var(--color-bg-elevated) !important;
   border-color: var(--color-border) !important;
   color: var(--color-fg);
 }
-[data-theme="dark"] [role="dialog"] p,
-[data-theme="dark"] [role="dialog"] span {
+
+/* ── 3. COULEURS DE TEXTE — CLASSES & INLINE STYLES ─────── */
+
+/* #2F2F2F (charcoal) → blanc cassé */
+[data-theme="dark"] [class*="text-[#2F2F2F]"],
+[data-theme="dark"] [class*="text-[#2f2f2f]"],
+[data-theme="dark"] [style*="color: #2F2F2F"],
+[data-theme="dark"] [style*="color: #2f2f2f"] {
+  color: var(--color-fg) !important;
+}
+
+/* #8C8F94 (muted) → gris clair lisible */
+[data-theme="dark"] [class*="text-[#8C8F94]"],
+[data-theme="dark"] [class*="text-[#8c8f94]"],
+[data-theme="dark"] [style*="color: #8C8F94"],
+[data-theme="dark"] [style*="color: #8c8f94"] {
+  color: var(--color-fg-muted) !important;
+}
+
+/* #425D07 (vert titre) → lime en dark */
+[data-theme="dark"] [class*="text-[#425D07]"],
+[data-theme="dark"] [class*="text-[#425d07]"],
+[data-theme="dark"] [style*="color: #425D07"],
+[data-theme="dark"] [style*="color: #425d07"] {
+  color: var(--color-primary) !important; /* #80BC00 */
+}
+
+/* #6B6B6B et similaires (gris moyen) → fg-muted */
+[data-theme="dark"] [class*="text-[#6"],
+[data-theme="dark"] [style*="color: #6"] {
+  color: var(--color-fg-muted) !important;
+}
+
+/* ── 4. HEADINGS AVEC INLINE STYLE COLOR ─────────────────── */
+[data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4 {
+  color: var(--color-fg);
+}
+/* Headings intentionnellement blancs (sections CTA) — préserver */
+[data-theme="dark"] h1[class*="text-white"],
+[data-theme="dark"] h2[class*="text-white"],
+[data-theme="dark"] h3[class*="text-white"],
+[data-theme="dark"] h1[style*="#ffffff"], [data-theme="dark"] h2[style*="#ffffff"],
+[data-theme="dark"] h1[style*="#fff"],    [data-theme="dark"] h2[style*="#fff"] {
+  color: #ffffff !important;
+}
+/* Headings avec inline #425D07 → lime */
+[data-theme="dark"] h1[style*="425D07"], [data-theme="dark"] h2[style*="425D07"],
+[data-theme="dark"] h3[style*="425D07"], [data-theme="dark"] h4[style*="425D07"] {
+  color: var(--color-primary) !important;
+}
+
+/* ── 5. PARAGRAPHES ET LISTES ────────────────────────────── */
+/* Paragraphes qui héritent d'un fond devenu sombre */
+[data-theme="dark"] section.bg-white p,
+[data-theme="dark"] section.bg-white li,
+[data-theme="dark"] section[style*="F7F5F0"] p,
+[data-theme="dark"] section[style*="F7F5F0"] li {
   color: var(--color-fg-muted);
 }
-
-/* --- Sections de page avec bg-white --- */
-[data-theme="dark"] section.bg-white {
-  background-color: var(--color-bg) !important;
+/* Mais préserver le blanc dans les sections dark (CTAs) */
+[data-theme="dark"] section[style*="0B3D2C"] p,
+[data-theme="dark"] section[style*="0B3D2C"] li,
+[data-theme="dark"] section[style*="425D07"] p,
+[data-theme="dark"] section[style*="425D07"] li {
+  color: rgba(255,255,255,0.75) !important;
 }
-/* Sections with inline style backgroundColor #F7F5F0 (cream) */
+
+/* ── 6. BACKGROUNDS SECTIONS ─────────────────────────────── */
+[data-theme="dark"] section.bg-white { background-color: var(--color-bg) !important; }
 [data-theme="dark"] section[style*="F7F5F0"],
-[data-theme="dark"] section[style*="f7f5f0"] {
-  background-color: var(--color-bg-subtle) !important;
-}
-/* Sections bg-white générales (nav, aside…) */
-[data-theme="dark"] nav.bg-white,
-[data-theme="dark"] .bg-white:not(button):not(a):not(label):not([role="tab"]):not([role="button"]) {
+[data-theme="dark"] section[style*="f7f5f0"] { background-color: var(--color-bg-subtle) !important; }
+/* nav, divs blancs hors boutons */
+[data-theme="dark"] nav[class*="bg-white"],
+[data-theme="dark"] div[class*="bg-white"]:not([role="button"]) {
   background-color: var(--color-bg-elevated);
 }
 
-/* --- Cards / articles / listes d'items --- */
-[data-theme="dark"] article {
-  background-color: var(--color-bg-elevated);
-  border-color: var(--color-border);
-}
-/* Fond crème sur les li/cards d'items de service */
-[data-theme="dark"] li.bg-\[#F7F5F0\],
-[data-theme="dark"] [class*="bg-[#F7F5F0]"] {
+/* ── 7. BACKGROUNDS CARTES & ITEMS ────────────────────────── */
+[data-theme="dark"] article { background-color: var(--color-bg-elevated); border-color: var(--color-border); }
+[data-theme="dark"] [class*="bg-[#F7F5F0]"],
+[data-theme="dark"] [style*="backgroundColor: '#F7F5F0'"],
+[data-theme="dark"] [style*="background-color: #F7F5F0"],
+[data-theme="dark"] [style*="background-color: #f7f5f0"] {
   background-color: var(--color-bg-subtle) !important;
+}
+[data-theme="dark"] [class*="bg-white"]:not(button):not(a):not([role]) {
+  background-color: var(--color-bg-elevated);
+}
+
+/* ── 8. BORDERS ──────────────────────────────────────────── */
+[data-theme="dark"] [class*="border-[#EDEDED]"],
+[data-theme="dark"] [class*="border-[#ededed]"],
+[data-theme="dark"] [style*="borderColor: '#EDEDED'"],
+[data-theme="dark"] [style*="border-color: #EDEDED"],
+[data-theme="dark"] [style*="border-color: #ededed"] {
   border-color: var(--color-border) !important;
 }
-/* Details/summary FAQ */
-[data-theme="dark"] details {
-  border-color: var(--color-border) !important;
-}
+[data-theme="dark"] [class*="divide-"] > * + * { border-color: var(--color-border); }
+
+/* ── 9. FAQ ACCORDÉONS ────────────────────────────────────── */
+[data-theme="dark"] details { border-color: var(--color-border) !important; }
 [data-theme="dark"] details summary {
   background-color: var(--color-bg-elevated) !important;
   color: var(--color-fg) !important;
@@ -1302,28 +1342,8 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   color: var(--color-fg-muted) !important;
 }
 
-/* --- Textes courants hardcodés --- */
-[data-theme="dark"] .text-\[#2F2F2F\] {
-  color: var(--color-fg) !important;
-}
-[data-theme="dark"] .text-\[#8C8F94\] {
-  color: var(--color-fg-muted) !important;
-}
-/* #425D07 sur fond sombre → utiliser la couleur primaire dark (lime) */
-[data-theme="dark"] .text-\[#425D07\]:not([style*="white"]) {
-  color: var(--color-primary) !important;
-}
-
-/* --- Borders courantes --- */
-[data-theme="dark"] .border-\[#EDEDED\] {
-  border-color: var(--color-border) !important;
-}
-[data-theme="dark"] .divide-\[#EDEDED\] > * + * {
-  border-color: var(--color-border) !important;
-}
-
-/* --- Inputs, textareas, selects --- */
-[data-theme="dark"] input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+/* ── 10. INPUTS & FORMULAIRES ────────────────────────────── */
+[data-theme="dark"] input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
 [data-theme="dark"] textarea,
 [data-theme="dark"] select {
   background-color: var(--color-bg-elevated) !important;
@@ -1331,34 +1351,20 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   color: var(--color-fg) !important;
 }
 [data-theme="dark"] input::placeholder,
-[data-theme="dark"] textarea::placeholder {
-  color: var(--color-fg-subtle) !important;
-}
+[data-theme="dark"] textarea::placeholder { color: var(--color-fg-subtle) !important; }
+[data-theme="dark"] label { color: var(--color-fg-muted); }
 
-/* --- Sticky contact bar (mobile) --- */
-[data-theme="dark"] .sticky-contact-bar {
-  background-color: var(--color-bg-elevated) !important;
-  border-top-color: var(--color-border) !important;
-}
-
-/* --- Prose articles --- */
+/* ── 11. PROSE ARTICLES ──────────────────────────────────── */
 [data-theme="dark"] .prose-article p,
-[data-theme="dark"] .prose-article li,
-[data-theme="dark"] .prose-article ul,
-[data-theme="dark"] .prose-article ol {
-  color: var(--color-fg-muted) !important;
-}
+[data-theme="dark"] .prose-article li { color: var(--color-fg-muted) !important; }
 [data-theme="dark"] .prose-article h2,
-[data-theme="dark"] .prose-article h3 {
-  color: var(--color-fg) !important;
-}
+[data-theme="dark"] .prose-article h3 { color: var(--color-fg) !important; }
+[data-theme="dark"] .prose-article strong { color: var(--color-fg) !important; }
 [data-theme="dark"] .prose-article blockquote {
   background-color: var(--color-bg-subtle) !important;
   color: var(--color-fg-muted) !important;
 }
-[data-theme="dark"] .prose-article table {
-  border-color: var(--color-border) !important;
-}
+[data-theme="dark"] .prose-article table { border-color: var(--color-border) !important; }
 [data-theme="dark"] .prose-article th {
   background-color: var(--color-bg-subtle) !important;
   color: var(--color-fg) !important;
@@ -1368,20 +1374,21 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   color: var(--color-fg-muted) !important;
 }
 
-/* --- Breadcrumbs --- */
-[data-theme="dark"] nav[aria-label*="Ariane"],
-[data-theme="dark"] nav[aria-label*="ariane"] {
+/* ── 12. COMPOSANTS LAYOUT ────────────────────────────────── */
+[data-theme="dark"] nav[aria-label*="Ariane"] {
   background-color: var(--color-bg-elevated) !important;
   border-color: var(--color-border) !important;
 }
-
-/* --- Announcement banner (fond vert foncé) — pas de changement --- */
-[data-theme="dark"] .announcement-banner {
-  /* garder le fond vert de la bannière */
+[data-theme="dark"] .sticky-contact-bar {
+  background-color: var(--color-bg-elevated) !important;
+  border-top-color: var(--color-border) !important;
 }
-
-/* --- Sections CTA (fond #0B3D2C explicite dans style=) — pas de changement ---
-   Les sections avec style="backgroundColor: '#0B3D2C'" ou similaire
-   conservent leur fond vert foncé ; pas besoin d'override car les inline
-   styles ont une spécificité plus haute que les classes CSS.
---- */
+/* Cookie banner */
+[data-theme="dark"] [class*="cookie"],
+[data-theme="dark"] [id*="cookie"] {
+  background-color: var(--color-bg-elevated) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-fg) !important;
+}
+/* Announcement banner — préserver le fond vert */
+/* Footer — déjà dark green, pas de changement nécessaire */
