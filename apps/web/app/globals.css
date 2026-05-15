@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 /* ============================================================
    TAILWIND THEME TOKENS
@@ -1246,41 +1246,41 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 }
 
 /* B) Inline style background-color : blanc */
-[data-theme="dark"] [style*="background-color: #FFFFFF"],
-[data-theme="dark"] [style*="background-color: #ffffff"],
-[data-theme="dark"] [style*="background-color: white"],
-[data-theme="dark"] [style*="background-color: rgb(255, 255, 255)"] {
+[data-theme="dark"] [style*="background-color:#FFFFFF"],
+[data-theme="dark"] [style*="background-color:#ffffff"],
+[data-theme="dark"] [style*="background-color:white"],
+[data-theme="dark"] [style*="background-color:rgb(255, 255, 255)"] {
   background-color: var(--color-bg-elevated) !important;
 }
 /* Inline style background-color : crème */
-[data-theme="dark"] [style*="background-color: #F7F5F0"],
-[data-theme="dark"] [style*="background-color: #f7f5f0"] {
+[data-theme="dark"] [style*="background-color:#F7F5F0"],
+[data-theme="dark"] [style*="background-color:#f7f5f0"] {
   background-color: var(--color-bg-subtle) !important;
 }
 
 /* C) Inline style background (raccourci) */
-[data-theme="dark"] [style*="background: #FFFFFF"],
-[data-theme="dark"] [style*="background: #ffffff"],
-[data-theme="dark"] [style*="background: white"] {
+[data-theme="dark"] [style*="background:#FFFFFF"],
+[data-theme="dark"] [style*="background:#ffffff"],
+[data-theme="dark"] [style*="background:white"] {
   background: var(--color-bg-elevated) !important;
 }
-[data-theme="dark"] [style*="background: #F7F5F0"],
-[data-theme="dark"] [style*="background: #f7f5f0"] {
+[data-theme="dark"] [style*="background:#F7F5F0"],
+[data-theme="dark"] [style*="background:#f7f5f0"] {
   background: var(--color-bg-subtle) !important;
 }
 
 /* D) Rétablir les fonds qui doivent rester clairs (CTA verts) */
-[data-theme="dark"] [style*="background-color: #80BC00"],
-[data-theme="dark"] [style*="background-color: #425D07"],
-[data-theme="dark"] [style*="background-color: #0B3D2C"],
+[data-theme="dark"] [style*="background-color:#80BC00"],
+[data-theme="dark"] [style*="background-color:#425D07"],
+[data-theme="dark"] [style*="background-color:#0B3D2C"],
 [data-theme="dark"] [style*="backgroundColor: '#80BC00'"],
 [data-theme="dark"] [style*="backgroundColor: '#425D07'"],
 [data-theme="dark"] [style*="backgroundColor: '#0B3D2C'"] {
   background-color: unset !important; /* laisse le style inline agir */
 }
 /* Boutons CTA lime */
-[data-theme="dark"] a[style*="background-color: #80BC00"],
-[data-theme="dark"] button[style*="background-color: #80BC00"] {
+[data-theme="dark"] a[style*="background-color:#80BC00"],
+[data-theme="dark"] button[style*="background-color:#80BC00"] {
   background-color: #80BC00 !important;
   color: #ffffff !important;
 }
@@ -1290,25 +1290,25 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 /* #2F2F2F → blanc cassé */
 [data-theme="dark"] [class*="text-[#2F2F2F]"],
 [data-theme="dark"] [class*="text-[#2f2f2f]"],
-[data-theme="dark"] [style*="color: #2F2F2F"],
-[data-theme="dark"] [style*="color: #2f2f2f"] { color: var(--color-fg) !important; }
+[data-theme="dark"] [style*="color:#2F2F2F"],
+[data-theme="dark"] [style*="color:#2f2f2f"] { color: var(--color-fg) !important; }
 
 /* #8C8F94 → gris clair lisible */
 [data-theme="dark"] [class*="text-[#8C8F94]"],
 [data-theme="dark"] [class*="text-[#8c8f94]"],
-[data-theme="dark"] [style*="color: #8C8F94"],
-[data-theme="dark"] [style*="color: #8c8f94"] { color: var(--color-fg-muted) !important; }
+[data-theme="dark"] [style*="color:#8C8F94"],
+[data-theme="dark"] [style*="color:#8c8f94"] { color: var(--color-fg-muted) !important; }
 
 /* #425D07 → lime */
 [data-theme="dark"] [class*="text-[#425D07]"],
 [data-theme="dark"] [class*="text-[#425d07]"],
-[data-theme="dark"] [style*="color: #425D07"],
-[data-theme="dark"] [style*="color: #425d07"] { color: var(--color-cta) !important; }
+[data-theme="dark"] [style*="color:#425D07"],
+[data-theme="dark"] [style*="color:#425d07"] { color: var(--color-cta) !important; }
 
 /* #6B6B6B → fg-muted */
 [data-theme="dark"] [class*="text-[#6B6B6B]"],
-[data-theme="dark"] [style*="color: #6B6B6B"],
-[data-theme="dark"] [style*="color: #6b6b6b"] { color: var(--color-fg-muted) !important; }
+[data-theme="dark"] [style*="color:#6B6B6B"],
+[data-theme="dark"] [style*="color:#6b6b6b"] { color: var(--color-fg-muted) !important; }
 
 /* Texte gris générique Tailwind */
 [data-theme="dark"] .text-gray-500,
@@ -1342,7 +1342,7 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 }
 
 /* ── 6. PARAGRAPHES & LISTES ─────────────────────────────── */
-[data-theme="dark"] p:not([style*="color: #80BC00"]):not([style*="color: #ffffff"]) {
+[data-theme="dark"] p:not([style*="color:#80BC00"]):not([style*="color:#ffffff"]) {
   color: var(--color-fg-muted);
 }
 /* Réserver le blanc pour les sections CTA */
@@ -1352,10 +1352,10 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   color: rgba(255,255,255,0.80) !important;
 }
 /* Conserver les spans colorés intentionnels */
-[data-theme="dark"] span[style*="color: #80BC00"] { color: #80BC00 !important; }
-[data-theme="dark"] span[style*="color: #425D07"] { color: var(--color-cta) !important; }
-[data-theme="dark"] li[style*="color: #80BC00"],
-[data-theme="dark"] p[style*="color: #80BC00"] { color: #80BC00 !important; }
+[data-theme="dark"] span[style*="color:#80BC00"] { color: #80BC00 !important; }
+[data-theme="dark"] span[style*="color:#425D07"] { color: var(--color-cta) !important; }
+[data-theme="dark"] li[style*="color:#80BC00"],
+[data-theme="dark"] p[style*="color:#80BC00"] { color: #80BC00 !important; }
 
 /* ── 7. ARTICLES & CARTES ────────────────────────────────── */
 [data-theme="dark"] article:not([style*="0B3D2C"]):not([style*="425D07"]) {
@@ -1366,13 +1366,13 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 /* ── 8. BORDERS ──────────────────────────────────────────── */
 [data-theme="dark"] [class*="border-[#EDEDED]"],
 [data-theme="dark"] [class*="border-[#ededed]"],
-[data-theme="dark"] [style*="border-color: #EDEDED"],
-[data-theme="dark"] [style*="border-color: #ededed"],
-[data-theme="dark"] [style*="borderColor: #EDEDED"] {
+[data-theme="dark"] [style*="border-color:#EDEDED"],
+[data-theme="dark"] [style*="border-color:#ededed"],
+[data-theme="dark"] [style*="borderColor:#EDEDED"] {
   border-color: var(--color-border) !important;
 }
 [data-theme="dark"] [class*="border-[#D8D8D8]"],
-[data-theme="dark"] [style*="border-color: #D8D8D8"] { border-color: var(--color-border-strong) !important; }
+[data-theme="dark"] [style*="border-color:#D8D8D8"] { border-color: var(--color-border-strong) !important; }
 [data-theme="dark"] [class*="divide-"] > * + * { border-color: var(--color-border); }
 [data-theme="dark"] .border-b { border-bottom-color: var(--color-border); }
 [data-theme="dark"] .border-t { border-top-color: var(--color-border); }
