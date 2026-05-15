@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "Élagage & Abattage d'Arbres Lyon Nord | LM Espace Vert",
     description: "Élagage raisonné et abattage sécurisé à Saint-Didier-au-Mont-d'Or et Lyon nord. Broyage déchets. CERTIPHYTO. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/elagage-abattage',
+    images: [{ url: 'https://www.lmespacevert.fr/images/elagage-abattage.webp', width: 1200, height: 630, alt: "Élagage et abattage d'arbres — LM Espace Vert" }],
   },
 }
 
@@ -44,6 +45,18 @@ const serviceSchema = {
     priceCurrency: 'EUR',
     eligibleRegion: 'FR',
   },
+  termsOfService: 'Devis gratuit, sans engagement',
+}
+
+// #6 — BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Élagage & Abattage', item: 'https://www.lmespacevert.fr/services/elagage-abattage' },
+  ],
 }
 
 const features = [
@@ -78,6 +91,7 @@ export default function ElagageAbattagePage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

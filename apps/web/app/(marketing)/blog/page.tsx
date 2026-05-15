@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react'
 import { articles, categories } from '@/lib/articles'
+import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
   title: 'Blog jardinage & paysagisme — Conseils de votre paysagiste Lyon nord',
@@ -16,6 +17,19 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/images/realisation-1.jpg', width: 1200, height: 630, alt: 'Blog jardinage LM Espace Vert' }],
   },
+}
+
+// #19 — ItemList schema liste des articles du blog
+const blogItemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Conseils jardinage — LM Espace Vert',
+  itemListElement: articles.slice(0, 5).map((article, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: article.title,
+    url: `https://www.lmespacevert.fr/blog/${article.slug}`,
+  })),
 }
 
 export default async function BlogPage({
@@ -33,6 +47,7 @@ export default async function BlogPage({
 
   return (
     <>
+      <JsonLd data={blogItemListJsonLd} />
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">

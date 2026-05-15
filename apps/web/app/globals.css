@@ -271,6 +271,11 @@
   to   { background-position:  400px 0; }
 }
 
+@keyframes slideInRight {
+  0%   { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
@@ -387,6 +392,17 @@ code:not([class*="language-"]) {
 /* ============================================================
    PROSE — long-form article content
    ============================================================ */
+/* Prose blockquote — fond #F7F5F0, bordure gauche #80BC00 */
+.prose-article blockquote {
+  background-color: #F7F5F0;
+  border-left: 4px solid #80BC00;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1rem 1.5rem;
+  font-style: italic;
+  color: var(--color-fg-muted);
+  margin: 1.5rem 0;
+}
+
 .prose-article h2 {
   font-size: clamp(1.25rem, 2.5vw, 1.625rem);
   margin-top: 2.5rem;
@@ -559,6 +575,18 @@ code:not([class*="language-"]) {
 .badge-amber {
   background-color: var(--color-amber-light);
   color: #92400E;
+}
+.badge-new {
+  background-color: #80BC00;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ============================================================
@@ -962,6 +990,18 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 }
 .toc a:hover       { color: var(--color-primary); padding-left: 4px; }
 .toc a.toc-h3      { padding-left: 16px; font-size: 13px; }
+
+/* Sticky TOC on desktop */
+@media (min-width: 1024px) {
+  .toc-sticky {
+    position: sticky;
+    top: 6rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #EDEDED transparent;
+  }
+}
 
 /* ============================================================
    PROGRESS STEP (multi-step form)

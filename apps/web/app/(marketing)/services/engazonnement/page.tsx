@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "Engazonnement Gazon Lyon Nord | LM Espace Vert",
     description: "Création de pelouses par semis ou rouleaux à Lyon nord. Prairies fleuries, regarnissage. LM Espace Vert. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/engazonnement',
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-6.jpg', width: 1200, height: 630, alt: 'Engazonnement pelouse — LM Espace Vert' }],
   },
 }
 
@@ -44,6 +45,18 @@ const serviceSchema = {
     priceCurrency: 'EUR',
     eligibleRegion: 'FR',
   },
+  termsOfService: 'Devis gratuit, sans engagement',
+}
+
+// #6 — BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Engazonnement', item: 'https://www.lmespacevert.fr/services/engazonnement' },
+  ],
 }
 
 const features = [
@@ -78,6 +91,7 @@ export default function EngazonnementPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Leaf, Award, Users, ShieldCheck, MapPin } from 'lucide-react'
+import { ArrowRight, Leaf, Award, Users, ShieldCheck, MapPin, Phone } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
@@ -14,33 +14,34 @@ export const metadata: Metadata = {
 const values = [
   {
     icon: <Leaf size={24} aria-hidden="true" />,
-    title: 'Éco-responsabilité',
-    desc: 'Nous privilégions des produits respectueux de l\'environnement, des végétaux adaptés au climat local et une politique zéro pesticide pour des jardins sains et durables.',
+    title: 'Passion',
+    desc: 'Le jardinage est avant tout une vocation. Léo apporte son enthousiasme et sa curiosité à chaque projet, des plus simples aux plus complexes.',
   },
   {
     icon: <Award size={24} aria-hidden="true" />,
-    title: 'Passion & Expertise',
-    desc: 'Avec 5 ans d\'expérience et une formation continue, Léo apporte un savoir-faire reconnu à chaque chantier. La passion du métier se ressent dans chaque détail.',
+    title: 'Qualité',
+    desc: 'Avec 5 ans d\'expérience et une formation continue, Léo apporte un savoir-faire reconnu. La qualité se ressent dans chaque détail, chaque finition.',
   },
   {
     icon: <Users size={24} aria-hidden="true" />,
-    title: 'Service personnalisé',
-    desc: 'Chaque jardin est unique, chaque client l\'est aussi. Nous prenons le temps d\'écouter vos envies pour vous proposer un projet sur mesure, avec devis gratuit.',
+    title: 'Durabilité',
+    desc: 'Nous privilégions des végétaux adaptés au climat local, des pratiques éco-responsables et une politique zéro pesticide pour des jardins durables.',
   },
 ]
 
 const timeline = [
-  { year: '2019', label: 'Création de LM Espace Vert' },
-  { year: '2021', label: 'Développement, 100+ clients' },
-  { year: '2023', label: 'Spécialisation en création paysagère' },
-  { year: '2025', label: '200+ projets réalisés' },
+  { year: '2019', label: 'Fondation de LM Espace Vert à Saint-Didier-au-Mont-d\'Or' },
+  { year: '2020', label: 'Premières grandes réalisations : jardins et terrasses' },
+  { year: '2022', label: 'Agréments SAP et certification CERTIPHYTO obtenus' },
+  { year: '2024', label: 'Expansion — 20 communes desservies, 150+ clients fidèles' },
+  { year: '2026', label: 'Nouveau site web et 200+ projets réalisés' },
 ]
 
 const certifications = [
-  { label: 'RC Pro assurée', desc: 'Responsabilité civile professionnelle' },
-  { label: 'Agréé SAP', desc: 'Service à la Personne — avantage fiscal 50%' },
-  { label: 'CERTIPHYTO', desc: 'Certification phytosanitaire officielle' },
-  { label: 'Matériels Husqvarna', desc: 'Équipements professionnels certifiés' },
+  { label: 'RC Pro assurée', desc: 'Responsabilité civile professionnelle', icon: <ShieldCheck size={22} aria-hidden="true" /> },
+  { label: 'Agréé SAP', desc: 'Service à la Personne — avantage fiscal 50%', icon: <Award size={22} aria-hidden="true" /> },
+  { label: 'CERTIPHYTO', desc: 'Certification phytosanitaire officielle', icon: <Leaf size={22} aria-hidden="true" /> },
+  { label: 'Matériels Husqvarna', desc: 'Équipements professionnels certifiés', icon: <ShieldCheck size={22} aria-hidden="true" /> },
 ]
 
 const zones = [
@@ -124,16 +125,31 @@ export default function AProposPage() {
       <section aria-labelledby="histoire-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            {/* Image */}
-            <div>
-              <Image
-                src="/images/presentation.webp"
-                alt="Léo Maurice, fondateur de LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
-                width={600}
-                height={384}
-                className="rounded-2xl object-cover w-full h-96"
-                priority
-              />
+            {/* Images : portrait + présentation */}
+            <div className="flex flex-col gap-4">
+              <div className="relative flex gap-4">
+                {/* Portrait de Léo */}
+                <div className="relative flex-shrink-0 w-32 h-40 sm:w-40 sm:h-52">
+                  <Image
+                    src="/images/leo-portrait.jpg"
+                    alt="Léo Maurice, fondateur de LM Espace Vert"
+                    fill
+                    className="rounded-2xl object-cover"
+                    priority
+                  />
+                </div>
+                {/* Photo principale */}
+                <div className="relative flex-1 overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/presentation.webp"
+                    alt="Léo Maurice, fondateur de LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
             {/* Texte */}
             <div>
@@ -166,27 +182,22 @@ export default function AProposPage() {
 
               {/* Timeline */}
               <div className="mt-8">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-0">
+                <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#80BC00' }}>
+                  NOTRE PARCOURS
+                </h3>
+                <ol className="relative border-l-2" style={{ borderColor: '#EDEDED' }}>
                   {timeline.map((item, i) => (
-                    <div key={item.year} className="flex sm:flex-1 items-start sm:flex-col gap-3 sm:gap-1 sm:items-center sm:text-center">
-                      <div className="flex sm:flex-col items-center sm:items-center gap-2 sm:gap-1 flex-1">
-                        <div
-                          className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold"
-                          style={{ backgroundColor: '#80BC00' }}
-                        >
-                          {item.year.slice(2)}
-                        </div>
-                        <div className="sm:mt-2">
-                          <p className="text-xs font-bold" style={{ color: '#80BC00' }}>{item.year}</p>
-                          <p className="text-xs text-[#8C8F94] leading-snug max-w-[120px]">{item.label}</p>
-                        </div>
-                      </div>
-                      {i < timeline.length - 1 && (
-                        <div className="hidden sm:block flex-1 h-px mt-5" style={{ backgroundColor: '#EDEDED' }} />
-                      )}
-                    </div>
+                    <li key={item.year} className={`relative pl-6 ${i < timeline.length - 1 ? 'pb-5' : ''}`}>
+                      <span
+                        className="absolute -left-[9px] top-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold text-white"
+                        style={{ backgroundColor: '#80BC00' }}
+                        aria-hidden="true"
+                      />
+                      <p className="text-xs font-bold" style={{ color: '#80BC00' }}>{item.year}</p>
+                      <p className="text-xs leading-snug mt-0.5" style={{ color: '#8C8F94' }}>{item.label}</p>
+                    </li>
                   ))}
-                </div>
+                </ol>
               </div>
             </div>
           </div>
@@ -288,19 +299,28 @@ export default function AProposPage() {
       <section className="py-16 text-center" style={{ backgroundColor: '#0B3D2C' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#ffffff' }}>
-            Travaillons ensemble
+            Rencontrez Léo
           </h2>
           <p className="mb-8" style={{ color: '#bbf7d0' }}>
-            Confiez votre jardin à un paysagiste passionné. Devis gratuit, sans engagement.
+            Confiez votre jardin à un paysagiste passionné. Devis gratuit, sans engagement. Léo répond personnellement à chaque demande.
           </p>
-          <Link
-            href="/devis"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
-          >
-            Demander un devis gratuit
-            <ArrowRight size={15} aria-hidden="true" />
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="/devis"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+            >
+              Demander un devis gratuit
+              <ArrowRight size={15} aria-hidden="true" />
+            </Link>
+            <a
+              href="tel:+33674734698"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/25"
+            >
+              <Phone size={15} aria-hidden="true" />
+              06 74 73 46 98
+            </a>
+          </div>
         </div>
       </section>
     </>

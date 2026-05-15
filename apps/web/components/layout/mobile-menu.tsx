@@ -3,9 +3,27 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, FileText, Facebook, Instagram } from 'lucide-react'
+import { Menu, X, Phone, FileText, Facebook, Instagram, MapPin, ChevronRight } from 'lucide-react'
 
 type NavItem = { href: string; label: string }
+
+const serviceDescriptions: Record<string, string> = {
+  '/services': 'Entretien, création, élagage…',
+  '/realisations': 'Nos projets réalisés',
+  '/a-propos': 'Notre histoire & valeurs',
+  '/contact': 'Nous écrire',
+  '/devis': 'Devis gratuit en 24h',
+  '/blog': 'Conseils jardin',
+}
+
+const zones = [
+  "Saint-Didier-au-Mont-d'Or",
+  'Caluire-et-Cuire',
+  'Écully',
+  'Tassin-la-Demi-Lune',
+  'Limonest',
+  'Dardilly',
+]
 
 export function MobileMenu({ items }: { items: readonly NavItem[] }) {
   const [open, setOpen] = useState(false)
@@ -58,10 +76,24 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
           />
 
           {/* Drawer */}
-          <div className="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl flex flex-col animate-slide-down">
+          <div
+            className="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl flex flex-col"
+            style={{ animation: 'slideInRight 0.3s cubic-bezier(0.25, 1, 0.5, 1) both' }}
+          >
+            {/* Bandeau téléphone */}
+            <a
+              href="tel:+33674734698"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#0B3D2C' }}
+            >
+              <Phone size={14} aria-hidden="true" />
+              06 74 73 46 98 — Appelez Léo
+            </a>
+
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-[#EDEDED]">
-              <span className="font-display font-bold text-[#2F2F2F]">Menu</span>
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#EDEDED]">
+              <span className="font-display font-bold" style={{ color: '#2F2F2F' }}>Menu</span>
               <button
                 onClick={() => { setOpen(false); triggerRef.current?.focus() }}
                 aria-label="Fermer le menu"
@@ -76,27 +108,54 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
               <ul role="list" className="space-y-1">
                 {items.map((item) => {
                   const active = pathname === item.href || pathname.startsWith(item.href + '/')
+                  const desc = serviceDescriptions[item.href]
                   return (
                     <li key={item.href}>
                       <Link
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition-colors ${
+                        className={`flex items-center justify-between rounded-xl px-4 py-3 transition-colors ${
                           active
-                            ? 'bg-[rgba(128,188,0,0.08)] text-[#425D07] font-semibold'
-                            : 'text-[#2F2F2F] hover:bg-[rgba(128,188,0,0.08)] hover:text-[#80BC00]'
+                            ? 'font-semibold'
+                            : 'text-[#2F2F2F] hover:bg-[rgba(128,188,0,0.08)]'
                         }`}
+                        style={active ? { backgroundColor: 'rgba(128,188,0,0.08)', color: '#425D07' } : undefined}
                         aria-current={active ? 'page' : undefined}
                       >
-                        {item.label}
-                        {active && (
-                          <span className="w-2 h-2 rounded-full bg-[#80BC00]" aria-hidden="true" />
-                        )}
+                        <span>
+                          <span className="block text-sm font-semibold">{item.label}</span>
+                          {desc && (
+                            <span className="block text-xs mt-0.5" style={{ color: '#8C8F94' }}>{desc}</span>
+                          )}
+                        </span>
+                        {active
+                          ? <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#80BC00' }} aria-hidden="true" />
+                          : <ChevronRight size={14} className="flex-shrink-0" style={{ color: '#8C8F94' }} aria-hidden="true" />
+                        }
                       </Link>
                     </li>
                   )
                 })}
               </ul>
+
+              {/* Section zones */}
+              <div className="mt-6 pt-5 border-t" style={{ borderColor: '#EDEDED' }}>
+                <p className="px-4 text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#8C8F94' }}>
+                  Nos zones d&apos;intervention
+                </p>
+                <ul className="flex flex-wrap gap-2 px-4">
+                  {zones.map((zone) => (
+                    <li
+                      key={zone}
+                      className="flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs"
+                      style={{ borderColor: '#EDEDED', color: '#425D07', backgroundColor: '#F7F5F0' }}
+                    >
+                      <MapPin size={10} aria-hidden="true" style={{ color: '#80BC00' }} />
+                      {zone}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </nav>
 
             {/* Bottom CTAs */}
@@ -104,23 +163,15 @@ export function MobileMenu({ items }: { items: readonly NavItem[] }) {
               <Link
                 href="/devis"
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-3 text-sm font-bold transition-opacity hover:opacity-90"
                 style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
               >
                 <FileText size={16} aria-hidden="true" />
-                Devis gratuit
+                Devis gratuit — Réponse sous 24h
               </Link>
-              <a
-                href="tel:+33674734698"
-                className="inline-flex items-center justify-center gap-2 w-full rounded-full px-5 py-2.5 text-sm font-semibold border border-[#D8D8D8] text-[#2F2F2F] hover:text-[#80BC00] hover:border-[#80BC00] transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                <Phone size={16} aria-hidden="true" />
-                06 74 73 46 98
-              </a>
 
               {/* Social links */}
-              <div className="flex justify-center gap-3 pt-2">
+              <div className="flex justify-center gap-3 pt-1">
                 <a href="https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="h-9 w-9 flex items-center justify-center rounded-full bg-[#F7F5F0] text-[#2F2F2F] hover:bg-[#1877F2] hover:text-white transition-colors">
                   <Facebook size={16} aria-hidden="true" />
                 </a>

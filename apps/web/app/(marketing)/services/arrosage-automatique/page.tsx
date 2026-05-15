@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "Installation Arrosage Automatique Lyon | LM Espace Vert",
     description: "Installation et programmation de systèmes d'arrosage automatique à Lyon nord. Économies d'eau garanties. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/arrosage-automatique',
+    images: [{ url: 'https://www.lmespacevert.fr/images/arrosage-automatique.webp', width: 1200, height: 630, alt: "Arrosage automatique — LM Espace Vert" }],
   },
 }
 
@@ -44,6 +45,18 @@ const serviceSchema = {
     priceCurrency: 'EUR',
     eligibleRegion: 'FR',
   },
+  termsOfService: 'Devis gratuit, sans engagement',
+}
+
+// #6 — BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Arrosage automatique', item: 'https://www.lmespacevert.fr/services/arrosage-automatique' },
+  ],
 }
 
 const features = [
@@ -78,6 +91,7 @@ export default function ArrosageAutomatiquePage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

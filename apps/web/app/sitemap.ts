@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/maconnerie-paysagere`,     lastModified: now, changeFrequency: 'monthly' as const, priority: 0.85 },
     { url: `${BASE_URL}/services/arrosage-automatique`,     lastModified: now, changeFrequency: 'monthly' as const, priority: 0.85 },
     { url: `${BASE_URL}/services/engazonnement`,            lastModified: now, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${BASE_URL}/plan-du-site`,                 lastModified: now, changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/mentions-legales`,            lastModified: now, changeFrequency: 'yearly',  priority: 0.2 },
     { url: `${BASE_URL}/politique-confidentialite`,   lastModified: now, changeFrequency: 'yearly',  priority: 0.2 },
     { url: `${BASE_URL}/politique-cookies`,           lastModified: now, changeFrequency: 'yearly',  priority: 0.2 },

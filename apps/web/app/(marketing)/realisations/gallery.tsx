@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 type Realisation = {
@@ -257,6 +258,13 @@ export function RealisationsGallery() {
                       <span>{r.category}</span>
                       <span>{r.year}</span>
                     </div>
+                    <Link
+                      href="/devis"
+                      className="mt-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all hover:opacity-90"
+                      style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                    >
+                      Demander un projet similaire →
+                    </Link>
                   </div>
                 </article>
               </li>

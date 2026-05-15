@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { RealisationsGallery } from './gallery'
+import { GoogleReviewsBadge } from '@/components/ui/google-reviews-badge'
 
 export const metadata: Metadata = {
   title: 'Nos réalisations — Portfolio paysagiste Lyon | LM Espace Vert',
@@ -40,6 +41,33 @@ export default function RealisationsPage() {
           <p className="mt-4 max-w-xl mx-auto text-lg text-[#8C8F94]">
             Découvrez quelques-uns de nos projets paysagers réalisés dans le nord-ouest lyonnais.
           </p>
+          <div className="mt-6 flex justify-center">
+            <GoogleReviewsBadge rating={5.0} count={28} />
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section aria-label="Chiffres clés" className="border-b bg-white" style={{ borderColor: '#EDEDED' }}>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <dl className="grid grid-cols-3 divide-x py-8" style={{ borderColor: '#EDEDED' }}>
+            {[
+              { value: '200+', label: 'Projets réalisés' },
+              { value: '20 km', label: 'Rayon d\'intervention' },
+              { value: '5 ans', label: 'D\'expérience' },
+            ].map((stat, i) => (
+              <div
+                key={stat.label}
+                className="flex flex-col items-center gap-1 px-4 text-center"
+                style={{ borderLeft: i > 0 ? '1px solid #EDEDED' : 'none' }}
+              >
+                <dt className="font-display text-2xl font-bold sm:text-3xl" style={{ color: '#425D07' }}>
+                  {stat.value}
+                </dt>
+                <dd className="text-xs sm:text-sm" style={{ color: '#8C8F94' }}>{stat.label}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

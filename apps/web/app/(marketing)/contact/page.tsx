@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
+import { ContactForm } from '@/components/forms/contact-form'
 
 export const metadata: Metadata = {
   title: 'Nous contacter — LM Espace Vert',
@@ -69,10 +70,6 @@ const communes = [
   "Poleymieux-au-Mont-d'Or",
 ]
 
-const inputClass =
-  'w-full px-5 py-3.5 rounded-full border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#80BC00] focus:ring-2 focus:ring-[rgba(128,188,0,0.15)] transition-all'
-const labelClass = 'block text-xs font-semibold uppercase tracking-wider mb-2 text-[#2F2F2F]'
-
 export default function ContactPage() {
   return (
     <>
@@ -96,6 +93,10 @@ export default function ContactPage() {
             <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
               Réponse garantie sous 24h · Devis gratuit
             </p>
+            {/* Response promise */}
+            <p className="mt-2 text-sm font-medium" style={{ color: '#425D07' }}>
+              Réponse sous 2h en semaine, 24h le week-end
+            </p>
           </div>
         </div>
       </section>
@@ -111,8 +112,43 @@ export default function ContactPage() {
                 Comment nous joindre&nbsp;?
               </h2>
 
+              {/* Contact direct alternatives */}
+              <div className="mb-8 rounded-2xl border border-[#EDEDED] p-5" style={{ backgroundColor: '#F7F5F0' }}>
+                <p className="font-semibold text-sm mb-4" style={{ color: '#2F2F2F' }}>
+                  Vous préférez un contact direct&nbsp;?
+                </p>
+                <div className="grid grid-cols-3 gap-3">
+                  <a
+                    href="tel:+33674734698"
+                    className="flex flex-col items-center gap-2 rounded-xl border border-[#EDEDED] bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
+                    style={{ color: '#425D07' }}
+                  >
+                    <Phone size={20} style={{ color: '#0B3D2C' }} aria-hidden="true" />
+                    Appeler
+                  </a>
+                  <a
+                    href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-2 rounded-xl border bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
+                    style={{ borderColor: '#25D366', color: '#128C7E' }}
+                  >
+                    <MessageCircle size={20} style={{ color: '#25D366' }} aria-hidden="true" />
+                    WhatsApp
+                  </a>
+                  <a
+                    href="mailto:contact@lmespacevert.fr"
+                    className="flex flex-col items-center gap-2 rounded-xl border border-[#EDEDED] bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
+                    style={{ color: '#0B3D2C' }}
+                  >
+                    <Mail size={20} style={{ color: '#0B3D2C' }} aria-hidden="true" />
+                    Email
+                  </a>
+                </div>
+              </div>
+
               <div className="space-y-4">
-                {/* Téléphone — grande carte */}
+                {/* Téléphone */}
                 <a
                   href="tel:+33674734698"
                   className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
@@ -133,9 +169,9 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                {/* WhatsApp — prominent */}
+                {/* WhatsApp avec message pré-rempli */}
                 <a
-                  href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20devis%20gratuit%20pour%20mon%20projet%20de%20jardin."
+                  href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group border-2"
@@ -149,7 +185,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold text-lg" style={{ color: '#128C7E' }}>WhatsApp — Écrire maintenant</p>
-                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous quelques minutes · Devis gratuit</p>
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous quelques minutes · Message pré-rempli</p>
                   </div>
                 </a>
 
@@ -170,7 +206,7 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                {/* Adresse + Google Maps */}
+                {/* Adresse */}
                 <div className="flex items-center gap-4 px-5 py-3 rounded-2xl border border-[#EDEDED] bg-white">
                   <MapPin size={20} className="flex-shrink-0" style={{ color: '#425D07' }} aria-hidden="true" />
                   <div className="flex-1">
@@ -199,11 +235,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Horaires */}
+              {/* Horaires de disponibilité */}
               <div className="mt-8 rounded-2xl border border-[#EDEDED] shadow-sm overflow-hidden">
                 <div className="flex items-center gap-3 px-5 py-4 border-b border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
                   <Clock size={18} style={{ color: '#425D07' }} aria-hidden="true" />
-                  <span className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>Horaires d&apos;ouverture</span>
+                  <span className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>Horaires de disponibilité</span>
                 </div>
                 <table className="w-full text-sm">
                   <tbody>
@@ -226,105 +262,32 @@ export default function ContactPage() {
 
             {/* Colonne droite — formulaire */}
             <div className="rounded-2xl border border-[#EDEDED] shadow-sm p-8">
-              <h3 className="font-display text-xl font-bold mb-6" style={{ color: '#2F2F2F' }}>
+              <h3 className="font-display text-xl font-bold mb-2" style={{ color: '#2F2F2F' }}>
                 Envoyez-nous un message
               </h3>
+              <p className="text-sm mb-6" style={{ color: '#8C8F94' }}>
+                Réponse sous 2h en semaine, 24h le week-end
+              </p>
 
-              <form
-                action="/api/contact"
-                method="POST"
-                noValidate
-                aria-label="Formulaire de contact"
-                className="space-y-5"
-              >
-                <div>
-                  <label htmlFor="nom" className={labelClass}>
-                    Nom <span aria-label="obligatoire">*</span>
-                  </label>
-                  <input
-                    id="nom"
-                    name="nom"
-                    type="text"
-                    required
-                    autoComplete="name"
-                    placeholder="Jean Dupont"
-                    className={inputClass}
-                  />
-                </div>
+              {/* The existing ContactForm component handles loading state, validation, success/error */}
+              <ContactForm />
 
-                <div>
-                  <label htmlFor="telephone" className={labelClass}>Téléphone</label>
-                  <input
-                    id="telephone"
-                    name="telephone"
-                    type="tel"
-                    autoComplete="tel"
-                    placeholder="06 XX XX XX XX"
-                    className={inputClass}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className={labelClass}>
-                    Email <span aria-label="obligatoire">*</span>
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    placeholder="jean@exemple.fr"
-                    className={inputClass}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="prestation" className={labelClass}>
-                    Type de prestation <span aria-label="obligatoire">*</span>
-                  </label>
-                  <select
-                    id="prestation"
-                    name="prestation"
-                    required
-                    className={inputClass}
-                  >
-                    <option value="">Sélectionner une prestation</option>
-                    <option value="entretien">Entretien</option>
-                    <option value="elagage">Élagage</option>
-                    <option value="creation">Création</option>
-                    <option value="maconnerie">Maçonnerie</option>
-                    <option value="arrosage">Arrosage</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className={labelClass}>
-                    Message <span aria-label="obligatoire">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    placeholder="Décrivez votre projet ou votre question..."
-                    className="w-full px-5 py-3.5 rounded-2xl border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#80BC00] focus:ring-2 focus:ring-[rgba(128,188,0,0.15)] transition-all resize-y min-h-[120px]"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-                >
-                  Envoyer le message →
-                </button>
-
-                <p className="text-xs text-center" style={{ color: '#8C8F94' }}>
-                  🔒 Vos données sont protégées et ne seront jamais partagées.
+              {/* WhatsApp fallback */}
+              <div className="mt-6 pt-6 border-t border-[#EDEDED] text-center">
+                <p className="text-sm mb-3" style={{ color: '#8C8F94' }}>
+                  Ou passez-nous un message WhatsApp maintenant
                 </p>
-              </form>
+                <a
+                  href="https://wa.me/33674734698?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: '#25D366' }}
+                >
+                  <MessageCircle size={16} aria-hidden="true" />
+                  Écrire sur WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>

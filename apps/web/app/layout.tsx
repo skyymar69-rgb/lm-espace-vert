@@ -13,7 +13,12 @@ import { StickyContactBar } from '@/components/layout/sticky-contact-bar'
 import { AnnouncementBanner } from '@/components/layout/announcement-banner'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'),
+  // #30 — metadataBase robuste avec fallback Vercel preview
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'
+  ),
   title: {
     default: "LM Espace Vert — Paysagiste Saint-Didier-au-Mont-d'Or & Lyon",
     template: '%s | LM Espace Vert',
@@ -41,6 +46,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'LM Espace Vert', url: 'https://www.lmespacevert.fr' }],
   creator: 'Kayzen Web',
+  // #9 — Catégorie
+  category: 'Paysagisme',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
@@ -57,17 +64,35 @@ export const metadata: Metadata = {
       },
     ],
   },
+  // #10 — Twitter enrichi
   twitter: {
     card: 'summary_large_image',
+    site: '@lm_espacevert',
+    creator: '@lm_espacevert',
     title: "LM Espace Vert — Paysagiste créateur à Lyon",
     description: "LM Espace Vert, paysagiste créateur à Lyon. Création, entretien et aménagement de jardins haut de gamme.",
+    images: ['https://www.lmespacevert.fr/images/travaux-paysagers.webp'],
   },
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true },
   },
-  alternates: { canonical: 'https://www.lmespacevert.fr' },
+  // #8 — alternates avec hreflang
+  alternates: {
+    canonical: 'https://www.lmespacevert.fr',
+    languages: {
+      'fr-FR': 'https://www.lmespacevert.fr',
+      'x-default': 'https://www.lmespacevert.fr',
+    },
+  },
+  // #7 — Géolocalisation locale
+  other: {
+    'geo.region': 'FR-69',
+    'geo.placename': "Saint-Didier-au-Mont-d'Or",
+    'geo.position': '45.833;4.800',
+    'ICBM': '45.833, 4.800',
+  },
   verification: {
     // Add Google Search Console verification here when available
   },
@@ -101,6 +126,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://api.open-meteo.com" />
+        {/* #11 — DNS prefetch supplémentaires */}
+        <link rel="preconnect" href="https://maps.app.goo.gl" />
+        <link rel="dns-prefetch" href="https://local-fr-public.s3.eu-west-3.amazonaws.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://www.smappen.fr" />
         {/* #3 Favicon */}
@@ -131,6 +159,50 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/',
                 'https://www.instagram.com/lm_espacevert',
                 'https://maps.app.goo.gl/rA4sfge3evAuVJLC9',
+              ],
+            }),
+          }}
+        />
+        {/* #1 — WebSite schema avec SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              '@id': 'https://www.lmespacevert.fr/#website',
+              name: 'LM Espace Vert',
+              url: 'https://www.lmespacevert.fr',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://www.lmespacevert.fr/blog?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
+        {/* #2 — Person schema Léo Maurice */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Léo Maurice',
+              jobTitle: 'Paysagiste créateur',
+              worksFor: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
+              telephone: '+33674734698',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: "Saint-Didier-au-Mont-d'Or",
+                postalCode: '69370',
+              },
+              knowsAbout: [
+                'Paysagisme',
+                'Horticulture',
+                'Création de jardins',
+                'Élagage',
+                'Maçonnerie paysagère',
               ],
             }),
           }}

@@ -255,6 +255,13 @@ export function Footer() {
               >
                 Kayzen Web
               </a>
+              {/* #29 — Lien Plan du site */}
+              <Link href="/plan-du-site" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
+              >
+                Plan du site
+              </Link>
               <Link href="/mentions-legales" className="transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
                 onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#80BC00' }}
                 onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}

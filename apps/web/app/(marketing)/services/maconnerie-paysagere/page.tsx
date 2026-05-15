@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "Maçonnerie Paysagère Lyon Nord | LM Espace Vert",
     description: "Terrasses, allées, murets en pierre naturelle à Lyon nord. Maçonnerie paysagère haut de gamme. LM Espace Vert. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.jpg', width: 1200, height: 630, alt: 'Maçonnerie paysagère — LM Espace Vert' }],
   },
 }
 
@@ -44,6 +45,18 @@ const serviceSchema = {
     priceCurrency: 'EUR',
     eligibleRegion: 'FR',
   },
+  termsOfService: 'Devis gratuit, sans engagement',
+}
+
+// #6 — BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Maçonnerie paysagère', item: 'https://www.lmespacevert.fr/services/maconnerie-paysagere' },
+  ],
 }
 
 const features = [
@@ -78,6 +91,7 @@ export default function MaconneriePaysagerePage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

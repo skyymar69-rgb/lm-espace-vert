@@ -6,7 +6,7 @@ const securityHeaders = [
     value: 'max-age=63072000; includeSubDomains; preload',
   },
   { key: 'X-Content-Type-Options', value: 'nosniff' },
-  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
   {
     key: 'Permissions-Policy',
@@ -50,6 +50,11 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // #21 — Redirects SEO
+      { source: '/services/elagage', destination: '/services/elagage-abattage', permanent: true },
+      { source: '/services/entretien', destination: '/services/entretien-espaces-verts', permanent: true },
+      { source: '/jardin', destination: '/services/creation-jardins', permanent: true },
+      { source: '/devis-gratuit', destination: '/devis', permanent: true },
     ]
   },
 }

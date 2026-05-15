@@ -12,8 +12,18 @@ export const metadata: Metadata = {
     title: "Création de Jardins Paysagers Lyon Nord | LM Espace Vert",
     description: "Conception et création de jardins sur mesure à Saint-Didier-au-Mont-d'Or et Lyon nord. Étude paysagère, choix végétaux, massifs. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/creation-jardins',
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.jpg', width: 1200, height: 630, alt: 'Création de jardins paysagers — LM Espace Vert' }],
   },
 }
+
+const features = [
+  'Visite et étude paysagère gratuite',
+  'Plan 2D/3D de votre futur jardin',
+  'Sélection végétale adaptée au sol et au climat',
+  'Création de massifs floraux quatre saisons',
+  "Plantation d'arbres, arbustes et vivaces",
+  'Aménagement de rocailles et jardins japonisants',
+]
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -44,16 +54,28 @@ const serviceSchema = {
     priceCurrency: 'EUR',
     eligibleRegion: 'FR',
   },
+  // #20 — hasOfferCatalog + termsOfService
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Prestations de création de jardins',
+    itemListElement: features.map((f) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: f },
+    })),
+  },
+  termsOfService: 'Devis gratuit, sans engagement',
 }
 
-const features = [
-  'Visite et étude paysagère gratuite',
-  'Plan 2D/3D de votre futur jardin',
-  'Sélection végétale adaptée au sol et au climat',
-  'Création de massifs floraux quatre saisons',
-  "Plantation d'arbres, arbustes et vivaces",
-  'Aménagement de rocailles et jardins japonisants',
-]
+// #6 — BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Création de jardins', item: 'https://www.lmespacevert.fr/services/creation-jardins' },
+  ],
+}
 
 const faqs = [
   {
@@ -78,6 +100,7 @@ export default function CreationJardinsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

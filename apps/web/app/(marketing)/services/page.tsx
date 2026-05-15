@@ -11,8 +11,11 @@ import {
   CheckCircle,
   ArrowRight,
   Phone,
+  Home,
+  Building2,
 } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
+import { CertificationsBar } from '@/components/ui/certifications-bar'
 
 export const metadata: Metadata = {
   title: "Nos Prestations Paysagères | LM Espace Vert",
@@ -39,7 +42,9 @@ const services = [
   {
     icon: Scissors,
     title: "Entretien d'espaces verts",
+    slug: 'entretien-espaces-verts',
     image: '/images/entretien-espaces-verts.webp',
+    price: 'À partir de 80€/passage',
     desc: "Un jardin entretenu régulièrement est un jardin en bonne santé. Nous proposons des contrats d'entretien sur mesure : tonte, taille de haies, désherbage, fertilisation et soins saisonniers.",
     features: [
       'Tonte hebdomadaire ou bimensuelle',
@@ -52,7 +57,9 @@ const services = [
   {
     icon: TreePine,
     title: 'Élagage & Abattage',
+    slug: 'elagage-abattage',
     image: '/images/elagage-abattage.webp',
+    price: 'Devis gratuit',
     desc: "L'élagage est une intervention délicate qui demande expertise et équipement. Nos professionnels interviennent pour la taille douce, l'élagage raisonné et l'abattage en toute sécurité.",
     features: [
       'Élagage de formation et sécurité',
@@ -65,7 +72,9 @@ const services = [
   {
     icon: Sprout,
     title: 'Création de jardins',
+    slug: 'creation-jardins',
     image: '/images/realisation-1.jpg',
+    price: 'À partir de 1 500€',
     desc: "Votre jardin est une extension de votre maison. Nous concevons des espaces verts sur-mesure, de la petite terrasse au grand parc, en respectant vos goûts et les contraintes du terrain.",
     features: [
       'Étude et conception paysagère',
@@ -78,7 +87,9 @@ const services = [
   {
     icon: Layers,
     title: 'Maçonnerie paysagère',
+    slug: 'maconnerie-paysagere',
     image: '/images/realisation-10.jpg',
+    price: 'Devis gratuit',
     desc: "Les éléments minéraux structurent et valorisent votre jardin. Terrasses, allées, murets et escaliers réalisés avec des matériaux naturels de qualité pour un rendu esthétique et durable.",
     features: [
       'Terrasses en pierres naturelles',
@@ -91,7 +102,9 @@ const services = [
   {
     icon: Droplets,
     title: 'Arrosage automatique',
+    slug: 'arrosage-automatique',
     image: '/images/arrosage-automatique.webp',
+    price: 'À partir de 800€',
     desc: "Économisez l'eau et du temps avec un système d'arrosage automatique sur mesure. Installation, programmation et maintenance de systèmes d'arrosage intelligents adaptés à votre jardin.",
     features: [
       'Installation complète',
@@ -104,7 +117,9 @@ const services = [
   {
     icon: Flower2,
     title: 'Engazonnement',
+    slug: 'engazonnement',
     image: '/images/realisation-6.jpg',
+    price: 'À partir de 300€',
     desc: "Une belle pelouse est la base d'un jardin réussi. Nous créons votre gazon par semis ou en rouleaux selon vos besoins, et vous proposons des prairies fleuries pour plus de biodiversité.",
     features: [
       'Semis de pelouse',
@@ -164,6 +179,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Certifications bar */}
+      <CertificationsBar />
+
       {/* Services grid */}
       <section aria-label="Liste des services" className="bg-white py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
@@ -186,16 +204,24 @@ export default function ServicesPage() {
                     />
                   </div>
                   <div className="p-7">
-                    <div className="mb-3 flex items-center gap-3">
-                      <div
-                        className="flex h-10 w-10 items-center justify-center rounded-xl"
-                        style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}
-                      >
-                        <Icon size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
+                    <div className="mb-3 flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="flex h-10 w-10 items-center justify-center rounded-xl"
+                          style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}
+                        >
+                          <Icon size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
+                        </div>
+                        <h2 className="font-display text-xl font-bold" style={{ color: '#425D07' }}>
+                          {service.title}
+                        </h2>
                       </div>
-                      <h2 className="font-display text-xl font-bold" style={{ color: '#425D07' }}>
-                        {service.title}
-                      </h2>
+                      <span
+                        className="flex-shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold"
+                        style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
+                      >
+                        {service.price}
+                      </span>
                     </div>
                     <p className="mb-5 leading-relaxed text-[#8C8F94]">{service.desc}</p>
                     <ul className="mb-6 space-y-1.5">
@@ -213,17 +239,117 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      href="/devis"
-                      className="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3"
-                      style={{ color: '#425D07' }}
-                    >
-                      Devis pour ce service <ArrowRight size={14} aria-hidden="true" />
-                    </Link>
+                    <div className="flex items-center gap-3">
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3"
+                        style={{ color: '#425D07' }}
+                      >
+                        En savoir plus <ArrowRight size={14} aria-hidden="true" />
+                      </Link>
+                      <Link
+                        href="/devis"
+                        className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold transition-opacity hover:opacity-90 ml-auto"
+                        style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                      >
+                        Devis gratuit
+                      </Link>
+                    </div>
                   </div>
                 </article>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparatif Particuliers / Professionnels */}
+      <section aria-labelledby="comparatif-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+              NOS CLIENTS
+            </p>
+            <h2 id="comparatif-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+              Particuliers &amp; Professionnels
+            </h2>
+            <p className="mt-3 text-base" style={{ color: '#8C8F94' }}>
+              Nous adaptons nos prestations à vos besoins spécifiques
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
+            {/* Particuliers */}
+            <div className="rounded-2xl border bg-white p-8 shadow-sm" style={{ borderColor: '#EDEDED' }}>
+              <div
+                className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-white"
+                style={{ backgroundColor: '#80BC00' }}
+              >
+                <Home size={22} aria-hidden="true" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-3" style={{ color: '#425D07' }}>Particuliers</h3>
+              <ul className="space-y-2.5">
+                {[
+                  'Avantage fiscal 50% (agrément SAP)',
+                  'Entretien régulier du jardin',
+                  'Création de jardin sur mesure',
+                  'Terrasse et aménagements',
+                  'Arrosage automatique',
+                  'Devis gratuit en 24h',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
+                    <CheckCircle size={14} style={{ color: '#80BC00' }} aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Professionnels */}
+            <div className="rounded-2xl border bg-white p-8 shadow-sm" style={{ borderColor: '#EDEDED' }}>
+              <div
+                className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-white"
+                style={{ backgroundColor: '#0B3D2C' }}
+              >
+                <Building2 size={22} aria-hidden="true" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-3" style={{ color: '#425D07' }}>Professionnels</h3>
+              <ul className="space-y-2.5">
+                {[
+                  'Copropriétés et résidences',
+                  'Entreprises et bureaux',
+                  'Collectivités locales',
+                  'Contrats d\'entretien annuels',
+                  'Interventions régulières planifiées',
+                  'Facturation adaptée',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
+                    <CheckCircle size={14} style={{ color: '#80BC00' }} aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA — aide au choix */}
+      <section className="bg-white py-10">
+        <div className="container mx-auto max-w-3xl px-4 sm:px-6">
+          <div
+            className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border px-6 py-5"
+            style={{ borderColor: '#EDEDED', backgroundColor: '#F7F5F0' }}
+          >
+            <p className="text-sm font-medium" style={{ color: '#2F2F2F' }}>
+              <span className="font-bold">Vous ne savez pas quel service choisir ?</span>
+              <span style={{ color: '#8C8F94' }}> Décrivez-nous votre projet, nous vous orienterons.</span>
+            </p>
+            <Link
+              href="/contact"
+              className="flex-shrink-0 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}
+            >
+              Contactez-nous <ArrowRight size={14} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

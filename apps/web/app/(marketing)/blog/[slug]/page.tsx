@@ -57,6 +57,11 @@ export default async function ArticlePage({ params }: Props) {
     description: article.excerpt,
     image: article.image,
     datePublished: article.date,
+    // #18 — enrichissements
+    wordCount: Math.round(article.content.length / 6),
+    articleSection: article.category,
+    inLanguage: 'fr-FR',
+    timeRequired: article.readingTime,
     author: {
       '@type': 'Person',
       name: article.author,

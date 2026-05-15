@@ -47,12 +47,24 @@ export async function POST(req: NextRequest) {
     )
   }
 
+  // Extract optional extra fields (not part of the validated schema)
+  const projectType = typeof raw['projectType'] === 'string' ? raw['projectType'].trim() : ''
+  const commune = typeof raw['commune'] === 'string' ? raw['commune'].trim() : ''
+
   // Send email (only if RESEND_API_KEY is configured)
   const resendKey = process.env['RESEND_API_KEY']
   if (resendKey) {
     try {
       const { Resend } = await import('resend')
       const resend = new Resend(resendKey)
+
+      const extraLines = [
+        projectType ? `Type de projet : ${projectType}` : '',
+        commune ? `Commune : ${commune}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n')
+
       await resend.emails.send({
         from: 'contact@lmespacevert.fr',
         to: ['devis@lmespacevert.fr'],
@@ -66,6 +78,7 @@ Téléphone : ${parsed.data.telephone ?? 'Non renseigné'}
 Code postal : ${parsed.data.codePostal}
 Sujet : ${parsed.data.sujet}
 Newsletter : ${parsed.data.newsletter ? 'Oui' : 'Non'}
+${extraLines ? `\n${extraLines}` : ''}
 
 Message :
 ${parsed.data.message}
@@ -77,7 +90,7 @@ ${parsed.data.message}
     }
   } else {
     // Dev mode: log to console
-    console.info('[Contact form]', parsed.data)
+    console.info('[Contact form]', { ...parsed.data, projectType, commune })
   }
 
   return Response.json({ ok: true })

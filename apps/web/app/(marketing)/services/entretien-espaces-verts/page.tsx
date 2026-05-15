@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "Entretien Espaces Verts Lyon Nord | LM Espace Vert",
     description: "Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or : tonte, taille de haies, désherbage. Contrats annuels. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
+    images: [{ url: 'https://www.lmespacevert.fr/images/entretien-espaces-verts.webp', width: 1200, height: 630, alt: "Entretien d'espaces verts — LM Espace Vert" }],
   },
 }
 
@@ -44,6 +45,18 @@ const serviceSchema = {
     priceCurrency: 'EUR',
     eligibleRegion: 'FR',
   },
+  termsOfService: 'Devis gratuit, sans engagement',
+}
+
+// #6 — BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: "Entretien d'espaces verts", item: 'https://www.lmespacevert.fr/services/entretien-espaces-verts' },
+  ],
 }
 
 const features = [
@@ -78,6 +91,7 @@ export default function EntretienEspacesVertsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
