@@ -5,20 +5,20 @@ import { ArrowRight, Leaf, Award, Users, ShieldCheck, MapPin, Recycle, FlaskConi
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
-  title: "À propos de LM Espace Vert — Léo Maurice, paysagiste à Lyon",
-  description: "Découvrez Léo Maurice, paysagiste fondateur de LM Espace Vert à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés dans le nord-ouest lyonnais.",
+  title: "Ã€ propos de LM Espace Vert â€” LÃ©o Maurice, paysagiste Ã  Lyon",
+  description: "DÃ©couvrez LÃ©o Maurice, paysagiste fondateur de LM Espace Vert Ã  Saint-Didier-au-Mont-d'Or depuis 2019. CertifiÃ© CERTIPHYTO, agrÃ©Ã© SAP. 200+ projets rÃ©alisÃ©s dans le nord-ouest lyonnais.",
   alternates: { canonical: 'https://www.lmespacevert.fr/a-propos' },
   openGraph: {
-    title: "À propos — Léo Maurice, paysagiste fondateur de LM Espace Vert",
-    description: "Découvrez Léo Maurice, paysagiste fondateur de LM Espace Vert à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés dans le nord-ouest lyonnais.",
+    title: "Ã€ propos â€” LÃ©o Maurice, paysagiste fondateur de LM Espace Vert",
+    description: "DÃ©couvrez LÃ©o Maurice, paysagiste fondateur de LM Espace Vert Ã  Saint-Didier-au-Mont-d'Or depuis 2019. CertifiÃ© CERTIPHYTO, agrÃ©Ã© SAP. 200+ projets rÃ©alisÃ©s dans le nord-ouest lyonnais.",
     url: 'https://www.lmespacevert.fr/a-propos',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Léo Maurice, fondateur de LM Espace Vert, paysagiste à Lyon' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'LÃ©o Maurice, fondateur de LM Espace Vert, paysagiste Ã  Lyon' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "À propos — Léo Maurice, paysagiste fondateur de LM Espace Vert",
-    description: "Paysagiste à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés à Lyon nord.",
+    title: "Ã€ propos â€” LÃ©o Maurice, paysagiste fondateur de LM Espace Vert",
+    description: "Paysagiste Ã  Saint-Didier-au-Mont-d'Or depuis 2019. CertifiÃ© CERTIPHYTO, agrÃ©Ã© SAP. 200+ projets rÃ©alisÃ©s Ã  Lyon nord.",
     images: ['https://www.lmespacevert.fr/images/leo-portrait.webp'],
   },
 }
@@ -27,47 +27,47 @@ const values = [
   {
     icon: <Leaf size={24} aria-hidden="true" />,
     title: 'Passion',
-    desc: 'Le jardinage est avant tout une vocation. Léo apporte son enthousiasme et sa curiosité à chaque projet, des plus simples aux plus complexes.',
+    desc: 'Le jardinage est avant tout une vocation. LÃ©o apporte son enthousiasme et sa curiositÃ© Ã  chaque projet, des plus simples aux plus complexes.',
   },
   {
     icon: <Award size={24} aria-hidden="true" />,
-    title: 'Qualité',
-    desc: 'Avec 5 ans d\'expérience et une formation continue, Léo apporte un savoir-faire reconnu. La qualité se ressent dans chaque détail, chaque finition.',
+    title: 'QualitÃ©',
+    desc: 'Avec 5 ans d\'expÃ©rience et une formation continue, LÃ©o apporte un savoir-faire reconnu. La qualitÃ© se ressent dans chaque dÃ©tail, chaque finition.',
   },
   {
     icon: <Users size={24} aria-hidden="true" />,
-    title: 'Durabilité',
-    desc: 'Nous privilégions des végétaux adaptés au climat local, des pratiques éco-responsables et une politique zéro pesticide pour des jardins durables.',
+    title: 'DurabilitÃ©',
+    desc: 'Nous privilÃ©gions des vÃ©gÃ©taux adaptÃ©s au climat local, des pratiques Ã©co-responsables et une politique zÃ©ro pesticide pour des jardins durables.',
   },
 ]
 
 const timeline = [
-  { year: '2019', label: 'Fondation de LM Espace Vert à Saint-Didier-au-Mont-d\'Or' },
-  { year: '2020', label: 'Premières grandes réalisations : jardins et terrasses' },
-  { year: '2022', label: 'Agréments SAP et certification CERTIPHYTO obtenus' },
-  { year: '2024', label: 'Expansion — 20 communes desservies, 150+ clients fidèles' },
-  { year: '2026', label: 'Nouveau site web et 200+ projets réalisés' },
+  { year: '2019', label: 'Fondation de LM Espace Vert Ã  Saint-Didier-au-Mont-d\'Or' },
+  { year: '2020', label: 'PremiÃ¨res grandes rÃ©alisations : jardins et terrasses' },
+  { year: '2022', label: 'AgrÃ©ments SAP et certification CERTIPHYTO obtenus' },
+  { year: '2024', label: 'Expansion â€” 20 communes desservies, 150+ clients fidÃ¨les' },
+  { year: '2026', label: 'Nouveau site web et 200+ projets rÃ©alisÃ©s' },
 ]
 
 const certifications = [
-  { label: 'RC Pro assurée', desc: 'Responsabilité civile professionnelle', icon: <ShieldCheck size={22} aria-hidden="true" /> },
-  { label: 'Agréé SAP', desc: 'Service à la Personne — avantage fiscal 50%', icon: <Award size={22} aria-hidden="true" /> },
+  { label: 'RC Pro assurÃ©e', desc: 'ResponsabilitÃ© civile professionnelle', icon: <ShieldCheck size={22} aria-hidden="true" /> },
+  { label: 'AgrÃ©Ã© SAP', desc: 'Service Ã  la Personne â€” avantage fiscal 50%', icon: <Award size={22} aria-hidden="true" /> },
   { label: 'CERTIPHYTO', desc: 'Certification phytosanitaire officielle', icon: <Leaf size={22} aria-hidden="true" /> },
-  { label: 'Matériels Husqvarna', desc: 'Équipements professionnels certifiés', icon: <ShieldCheck size={22} aria-hidden="true" /> },
+  { label: 'MatÃ©riels Husqvarna', desc: 'Ã‰quipements professionnels certifiÃ©s', icon: <ShieldCheck size={22} aria-hidden="true" /> },
 ]
 
 const zones = [
   "Saint-Didier-au-Mont-d'Or",
   'Caluire-et-Cuire',
-  'Écully',
+  'Ã‰cully',
   'Tassin-la-Demi-Lune',
-  'Charbonnières-les-Bains',
+  'CharbonniÃ¨res-les-Bains',
   'Limonest',
   'Dardilly',
   'Craponne',
   'Francheville',
   "Collonges-au-Mont-d'Or",
-  'Neuville-sur-Saône',
+  'Neuville-sur-SaÃ´ne',
 ]
 
 const localBusinessSchema = {
@@ -75,14 +75,14 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://www.lmespacevert.fr/#business',
   name: 'LM Espace Vert',
-  description: "Paysagiste professionnel à Saint-Didier-au-Mont-d'Or depuis 2019. Création, entretien et aménagement de jardins dans le nord-ouest lyonnais.",
+  description: "Paysagiste professionnel Ã  Saint-Didier-au-Mont-d'Or depuis 2019. CrÃ©ation, entretien et amÃ©nagement de jardins dans le nord-ouest lyonnais.",
   url: 'https://www.lmespacevert.fr',
   telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
   image: 'https://www.lmespacevert.fr/images/leo-portrait.webp',
   logo: 'https://www.lmespacevert.fr/logo.png',
   foundingDate: '2019',
-  founder: { '@type': 'Person', name: 'Léo Maurice' },
+  founder: { '@type': 'Person', name: 'LÃ©o Maurice' },
   address: {
     '@type': 'PostalAddress',
     streetAddress: "Saint-Didier-au-Mont-d'Or",
@@ -104,7 +104,7 @@ const localBusinessSchema = {
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', credentialCategory: 'CERTIPHYTO' },
   ],
-  priceRange: '€€',
+  priceRange: 'â‚¬â‚¬',
 }
 
 const breadcrumbSchema = {
@@ -112,7 +112,7 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://www.lmespacevert.fr/a-propos' },
+    { '@type': 'ListItem', position: 2, name: 'Ã€ propos', item: 'https://www.lmespacevert.fr/a-propos' },
   ],
 }
 
@@ -129,7 +129,7 @@ export default function AProposPage() {
             <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
               <li><Link href="/" className="hover:text-[#2F2F2F] transition-colors">Accueil</Link></li>
               <li aria-hidden="true">/</li>
-              <li><span aria-current="page" className="text-[#2F2F2F]">À propos</span></li>
+              <li><span aria-current="page" className="text-[#2F2F2F]">Ã€ propos</span></li>
             </ol>
           </nav>
           <div className="max-w-2xl">
@@ -137,7 +137,7 @@ export default function AProposPage() {
               Notre Histoire
             </h1>
             <p className="mt-4 text-lg text-[#8C8F94]">
-              L&apos;histoire d&apos;un paysagiste passionné au service de vos jardins
+              L&apos;histoire d&apos;un paysagiste passionnÃ© au service de vos jardins
             </p>
           </div>
         </div>
@@ -147,14 +147,14 @@ export default function AProposPage() {
       <section aria-labelledby="histoire-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            {/* Images : portrait + présentation */}
+            {/* Images : portrait + prÃ©sentation */}
             <div className="flex flex-col gap-4">
               <div className="relative flex gap-4">
-                {/* Portrait de Léo */}
+                {/* Portrait de LÃ©o */}
                 <div className="relative flex-shrink-0 w-32 h-40 sm:w-40 sm:h-52 overflow-hidden shadow-lg" style={{ borderRadius: '20px' }}>
                   <Image
                     src="/images/leo-portrait.webp"
-                    alt="Léo Maurice, fondateur de LM Espace Vert"
+                    alt="LÃ©o Maurice, fondateur de LM Espace Vert"
                     fill
                     className="object-cover"
                     priority
@@ -164,7 +164,7 @@ export default function AProposPage() {
                 <div className="relative flex-1 overflow-hidden shadow-lg" style={{ borderRadius: '24px' }}>
                   <Image
                     src="/images/presentation.webp"
-                    alt="Léo Maurice, fondateur de LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
+                    alt="LÃ©o Maurice, fondateur de LM Espace Vert, paysagiste Ã  Saint-Didier-au-Mont-d'Or"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -179,27 +179,27 @@ export default function AProposPage() {
                 NOTRE HISTOIRE
               </p>
               <h2 id="histoire-heading" className="font-display text-3xl font-bold sm:text-4xl mb-6" style={{ color: '#425D07' }}>
-                Léo Maurice, paysagiste depuis 2019
+                LÃ©o Maurice, paysagiste depuis 2019
               </h2>
               <div className="space-y-4 text-[#8C8F94] leading-relaxed">
                 <p>
-                  Natif du Rhône et amoureux de la nature depuis toujours, Léo Maurice a fondé
-                  <strong className="text-[#2F2F2F]"> LM Espace Vert</strong> en 2019 à
-                  Saint-Didier-au-Mont-d&apos;Or avec une conviction forte : chaque extérieur mérite
-                  d&apos;être beau, vivant et refléter la personnalité de ceux qui l&apos;habitent.
+                  Natif du RhÃ´ne et amoureux de la nature depuis toujours, LÃ©o Maurice a fondÃ©
+                  <strong className="text-[#2F2F2F]"> LM Espace Vert</strong> en 2019 Ã 
+                  Saint-Didier-au-Mont-d&apos;Or avec une conviction forte : chaque extÃ©rieur mÃ©rite
+                  d&apos;Ãªtre beau, vivant et reflÃ©ter la personnalitÃ© de ceux qui l&apos;habitent.
                 </p>
                 <p>
                   Titulaire d&apos;un <strong className="text-[#2F2F2F]">BEP Travaux paysagers</strong> et
-                  d&apos;un <strong className="text-[#2F2F2F]">Bac Pro Aménagements Paysagers</strong>, Léo
-                  a complété sa formation par plusieurs années de terrain aux côtés de paysagistes reconnus
-                  de la région lyonnaise avant de créer sa propre structure. Il allie savoir-faire technique
-                  — taille, élagage, maçonnerie paysagère — et sensibilité artistique pour des jardins qui durent.
+                  d&apos;un <strong className="text-[#2F2F2F]">Bac Pro AmÃ©nagements Paysagers</strong>, LÃ©o
+                  a complÃ©tÃ© sa formation par plusieurs annÃ©es de terrain aux cÃ´tÃ©s de paysagistes reconnus
+                  de la rÃ©gion lyonnaise avant de crÃ©er sa propre structure. Il allie savoir-faire technique
+                  â€” taille, Ã©lagage, maÃ§onnerie paysagÃ¨re â€” et sensibilitÃ© artistique pour des jardins qui durent.
                 </p>
                 <p>
-                  En plus de 7 ans d&apos;expérience terrain, il a développé une approche singulière :
-                  écouter vraiment, conseiller honnêtement, et réaliser avec soin. Résultat : plus de
-                  200 projets réalisés, 150+ clients fidèles et une note de 4,9/5 sur Google.
-                  La confiance de ses clients reste sa meilleure récompense.
+                  En plus de 7 ans d&apos;expÃ©rience terrain, il a dÃ©veloppÃ© une approche singuliÃ¨re :
+                  Ã©couter vraiment, conseiller honnÃªtement, et rÃ©aliser avec soin. RÃ©sultat : plus de
+                  200 projets rÃ©alisÃ©s, 150+ clients fidÃ¨les et une note de 4,9/5 sur Google.
+                  La confiance de ses clients reste sa meilleure rÃ©compense.
                 </p>
               </div>
 
@@ -294,7 +294,7 @@ export default function AProposPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
-              NOS RÉSULTATS
+              NOS RÃ‰SULTATS
             </p>
             <h2 id="chiffres-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
               LM Espace Vert en chiffres
@@ -302,10 +302,10 @@ export default function AProposPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
-              { value: '150+', label: 'clients fidèles' },
-              { value: '500+', label: 'arbres taillés / an' },
-              { value: '50+', label: 'jardins créés' },
-              { value: '7 ans', label: "d'expérience" },
+              { value: '150+', label: 'clients fidÃ¨les' },
+              { value: '500+', label: 'arbres taillÃ©s / an' },
+              { value: '50+', label: 'jardins crÃ©Ã©s' },
+              { value: '7 ans', label: "d'expÃ©rience" },
             ].map(({ value, label }) => (
               <div key={label} className="rounded-2xl border border-[#EDEDED] bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
                 <p className="font-display text-4xl font-bold" style={{ color: '#425D07' }}>{value}</p>
@@ -313,15 +313,15 @@ export default function AProposPage() {
               </div>
             ))}
           </div>
-          {/* Étoiles Google */}
+          {/* Ã‰toiles Google */}
           <div className="mt-10 flex flex-col items-center gap-2">
-            <div className="flex items-center gap-1" aria-label="Note 4,9 sur 5 étoiles" role="img">
+            <div className="flex items-center gap-1" aria-label="Note 4,9 sur 5 Ã©toiles" role="img">
               {[1, 2, 3, 4, 5].map((s) => (
                 <Star key={s} size={22} fill="#80BC00" stroke="none" aria-hidden="true" />
               ))}
             </div>
             <p className="text-sm" style={{ color: '#8C8F94' }}>
-              <strong style={{ color: '#2F2F2F' }}>4,9 / 5</strong> — 47 avis vérifiés Google
+              <strong style={{ color: '#2F2F2F' }}>4,9 / 5</strong> â€” 47 avis vÃ©rifiÃ©s Google
             </p>
           </div>
         </div>
@@ -332,13 +332,13 @@ export default function AProposPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
-              ÉCO-RESPONSABILITÉ
+              Ã‰CO-RESPONSABILITÃ‰
             </p>
             <h2 id="engagements-env-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
               Nos engagements environnementaux
             </h2>
             <p className="mt-3 text-base max-w-2xl mx-auto" style={{ color: '#8C8F94' }}>
-              Parce qu&apos;un paysagiste se doit d&apos;être exemplaire sur le plan environnemental.
+              Parce qu&apos;un paysagiste se doit d&apos;Ãªtre exemplaire sur le plan environnemental.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -346,22 +346,22 @@ export default function AProposPage() {
               {
                 icon: Sprout,
                 title: 'Plantes locales',
-                desc: "Nous sélectionnons en priorité des végétaux issus de pépinières de la région Auvergne-Rhône-Alpes, adaptés au climat local et favorables à la biodiversité.",
+                desc: "Nous sÃ©lectionnons en prioritÃ© des vÃ©gÃ©taux issus de pÃ©piniÃ¨res de la rÃ©gion Auvergne-RhÃ´ne-Alpes, adaptÃ©s au climat local et favorables Ã  la biodiversitÃ©.",
               },
               {
                 icon: FlaskConical,
-                title: 'Réduction des pesticides',
-                desc: "Politique zéro pesticide chimique sur les jardins de particuliers. Nous privilégions la lutte biologique, les purins végétaux et les solutions naturelles.",
+                title: 'RÃ©duction des pesticides',
+                desc: "Politique zÃ©ro pesticide chimique sur les jardins de particuliers. Nous privilÃ©gions la lutte biologique, les purins vÃ©gÃ©taux et les solutions naturelles.",
               },
               {
                 icon: Recycle,
                 title: 'Compostage',
-                desc: "Les déchets verts des chantiers sont broyés et valorisés : compostage, paillage ou retour au sol. Rien ne part à la poubelle si cela peut servir.",
+                desc: "Les dÃ©chets verts des chantiers sont broyÃ©s et valorisÃ©s : compostage, paillage ou retour au sol. Rien ne part Ã  la poubelle si cela peut servir.",
               },
               {
                 icon: Award,
                 title: 'Certification RGE',
-                desc: "La certification RGE Eco-jardin est en cours d'obtention pour 2026. Elle reconnaît les professionnels engagés dans des pratiques paysagères durables.",
+                desc: "La certification RGE Eco-jardin est en cours d'obtention pour 2026. Elle reconnaÃ®t les professionnels engagÃ©s dans des pratiques paysagÃ¨res durables.",
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div
@@ -397,34 +397,34 @@ export default function AProposPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
-              NOTRE RÉSEAU
+              NOTRE RÃ‰SEAU
             </p>
             <h2 id="partenaires-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
               Partenaires &amp; fournisseurs
             </h2>
             <p className="mt-3 text-base max-w-2xl mx-auto" style={{ color: '#8C8F94' }}>
-              Des partenaires sélectionnés pour leur qualité et leur ancrage local.
+              Des partenaires sÃ©lectionnÃ©s pour leur qualitÃ© et leur ancrage local.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
             {[
               {
                 icon: Leaf,
-                title: 'Pépinières locales',
-                desc: "Nous travaillons avec plusieurs pépinières de la région Rhône-Alpes pour l'approvisionnement en végétaux. Des espèces locales, produites sans pesticides, livrées en circuit court.",
+                title: 'PÃ©piniÃ¨res locales',
+                desc: "Nous travaillons avec plusieurs pÃ©piniÃ¨res de la rÃ©gion RhÃ´ne-Alpes pour l'approvisionnement en vÃ©gÃ©taux. Des espÃ¨ces locales, produites sans pesticides, livrÃ©es en circuit court.",
                 badge: 'Circuit court',
               },
               {
                 icon: Tractor,
-                title: 'Husqvarna — Partenaire officiel',
-                desc: "LM Espace Vert utilise exclusivement des équipements professionnels Husqvarna : tondeuses, tronçonneuses, taille-haies et robots. Des outils fiables pour un travail de précision.",
+                title: 'Husqvarna â€” Partenaire officiel',
+                desc: "LM Espace Vert utilise exclusivement des Ã©quipements professionnels Husqvarna : tondeuses, tronÃ§onneuses, taille-haies et robots. Des outils fiables pour un travail de prÃ©cision.",
                 badge: 'Partenaire officiel',
               },
               {
                 icon: Users,
-                title: 'Coopératives agricoles Rhône',
-                desc: "Pour les amendements, engrais organiques et substrats, nous nous approvisionnons auprès de coopératives agricoles du département du Rhône, favorisant une agriculture locale.",
-                badge: 'Rhône (69)',
+                title: 'CoopÃ©ratives agricoles RhÃ´ne',
+                desc: "Pour les amendements, engrais organiques et substrats, nous nous approvisionnons auprÃ¨s de coopÃ©ratives agricoles du dÃ©partement du RhÃ´ne, favorisant une agriculture locale.",
+                badge: 'RhÃ´ne (69)',
               },
             ].map(({ icon: Icon, title, desc, badge }) => (
               <div
@@ -485,12 +485,12 @@ export default function AProposPage() {
       {/* CTA */}
       <section className="py-20 text-center" style={{ backgroundColor: '#0B3D2C', background: 'linear-gradient(135deg, #0B3D2C 0%, #425D07 100%)' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#80BC00' }}>RENCONTREZ L&apos;ÉQUIPE</p>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#80BC00' }}>RENCONTREZ L&apos;Ã‰QUIPE</p>
           <h2 className="font-display text-3xl font-bold mb-4" style={{ color: '#ffffff' }}>
-            Confiez votre jardin à Léo
+            Confiez votre jardin Ã  LÃ©o
           </h2>
           <p className="mb-8 text-base" style={{ color: '#bbf7d0' }}>
-            Devis gratuit, sans engagement. Léo répond personnellement à chaque demande sous 24h.
+            Devis gratuit, sans engagement. LÃ©o rÃ©pond personnellement Ã  chaque demande sous 24h.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link

@@ -28,7 +28,7 @@ const quoteActionSchema = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'EUR',
-    description: 'Devis gratuit et sans engagement — visite sur place offerte — réponse sous 48h',
+    description: 'Devis gratuit et sans engagement â€” visite sur place offerte â€” rÃ©ponse sous 48h',
   },
   potentialAction: {
     '@type': 'QuoteAction',
@@ -38,20 +38,20 @@ const quoteActionSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
-  description: "Obtenez un devis gratuit et sans engagement de LM Espace Vert pour votre jardin à Lyon nord. Visite sur place offerte, réponse garantie sous 24h. Paysagiste à Saint-Didier-au-Mont-d'Or.",
+  title: 'Devis Gratuit Paysagiste Lyon â€” LM Espace Vert',
+  description: "Obtenez un devis gratuit et sans engagement de LM Espace Vert pour votre jardin Ã  Lyon nord. Visite sur place offerte, rÃ©ponse garantie sous 24h. Paysagiste Ã  Saint-Didier-au-Mont-d'Or.",
   alternates: { canonical: 'https://www.lmespacevert.fr/devis' },
   openGraph: {
-    title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
-    description: "Obtenez un devis gratuit pour votre jardin à Lyon nord. Visite sur place offerte, réponse garantie sous 24h. Paysagiste certifié à Saint-Didier-au-Mont-d'Or.",
+    title: 'Devis Gratuit Paysagiste Lyon â€” LM Espace Vert',
+    description: "Obtenez un devis gratuit pour votre jardin Ã  Lyon nord. Visite sur place offerte, rÃ©ponse garantie sous 24h. Paysagiste certifiÃ© Ã  Saint-Didier-au-Mont-d'Or.",
     url: 'https://www.lmespacevert.fr/devis',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Demander un devis gratuit à LM Espace Vert, paysagiste Lyon' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Demander un devis gratuit Ã  LM Espace Vert, paysagiste Lyon' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
-    description: "Devis gratuit et sans engagement pour votre jardin à Lyon nord. Réponse garantie sous 24h.",
+    title: 'Devis Gratuit Paysagiste Lyon â€” LM Espace Vert',
+    description: "Devis gratuit et sans engagement pour votre jardin Ã  Lyon nord. RÃ©ponse garantie sous 24h.",
     images: ['https://www.lmespacevert.fr/images/leo-portrait.webp'],
   },
 }
@@ -91,10 +91,10 @@ export default function DevisPage() {
             Devis 100% gratuit &amp; sans engagement
           </div>
           <h1 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold" style={{ color: '#425D07' }}>
-            Votre devis gratuit en 3 étapes
+            Votre devis gratuit en 3 Ã©tapes
           </h1>
           <p className="mt-4 text-lg max-w-xl mx-auto leading-relaxed" style={{ color: '#8C8F94' }}>
-            Remplissez le formulaire · Visite gratuite sous 48h · Devis détaillé sans surprise
+            Remplissez le formulaire Â· Visite gratuite sous 48h Â· Devis dÃ©taillÃ© sans surprise
           </p>
 
           {/* Trust badges row */}
@@ -104,27 +104,27 @@ export default function DevisPage() {
               style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
             >
               <CheckCircle size={15} aria-hidden="true" />
-              Réponse sous 24h
+              RÃ©ponse sous 24h
             </div>
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
               style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
             >
               <Shield size={15} aria-hidden="true" />
-              RC Pro certifié
+              RC Pro certifiÃ©
             </div>
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
               style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
             >
               <Star size={15} fill="#425D07" aria-hidden="true" />
-              5.0 · 28 avis Google
+              5.0 Â· 28 avis Google
             </div>
           </div>
 
           {/* Social proof */}
           <p className="mt-4 text-sm font-medium" style={{ color: '#8C8F94' }}>
-            Plus de 200 devis envoyés cette année
+            Plus de 200 devis envoyÃ©s cette annÃ©e
           </p>
 
           {/* Phone */}
@@ -137,7 +137,7 @@ export default function DevisPage() {
               <Phone size={22} aria-hidden="true" />
               06 72 58 73 53
             </a>
-            <p className="mt-2 text-sm" style={{ color: '#8C8F94' }}>Lun–Ven 8h–18h · Sam 8h–12h</p>
+            <p className="mt-2 text-sm" style={{ color: '#8C8F94' }}>Lunâ€“Ven 8hâ€“18h Â· Sam 8hâ€“12h</p>
           </div>
         </div>
       </section>
@@ -147,9 +147,9 @@ export default function DevisPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-[1fr_380px]">
 
-            {/* Left — Form area */}
+            {/* Left â€” Form area */}
             <div>
-              {/* Why request a quote — 3 advantages BEFORE the form */}
+              {/* Why request a quote â€” 3 advantages BEFORE the form */}
               <div className="mb-8 rounded-2xl border border-[#EDEDED] p-6" style={{ backgroundColor: 'rgba(128,188,0,0.05)' }}>
                 <h2 className="font-semibold text-sm mb-4" style={{ color: '#425D07' }}>
                   Pourquoi demander un devis&nbsp;?
@@ -157,7 +157,7 @@ export default function DevisPage() {
                 <ul className="space-y-2.5">
                   {[
                     'Visite gratuite sur place',
-                    'Devis détaillé sous 48h',
+                    'Devis dÃ©taillÃ© sous 48h',
                     'Sans engagement de votre part',
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm" style={{ color: '#2F2F2F' }}>
@@ -168,10 +168,10 @@ export default function DevisPage() {
                 </ul>
               </div>
 
-              {/* Alert — scarcity */}
+              {/* Alert â€” scarcity */}
               <div className="mb-6 flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-medium" style={{ backgroundColor: 'rgba(255,167,0,0.08)', borderColor: 'rgba(255,167,0,0.35)', color: '#92600A' }}>
                 <span aria-hidden="true">?</span>
-                3 créneaux disponibles cette semaine
+                3 crÃ©neaux disponibles cette semaine
               </div>
 
               {/* Form card */}
@@ -183,14 +183,14 @@ export default function DevisPage() {
               <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs" style={{ color: '#8C8F94' }}>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
-                  Réponse garantie sous 24h
+                  RÃ©ponse garantie sous 24h
                 </span>
-                <span aria-hidden="true">·</span>
+                <span aria-hidden="true">Â·</span>
                 <span className="flex items-center gap-1.5">
                   <Shield size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
-                  Données sécurisées
+                  DonnÃ©es sÃ©curisÃ©es
                 </span>
-                <span aria-hidden="true">·</span>
+                <span aria-hidden="true">Â·</span>
                 <span className="flex items-center gap-1.5">
                   <Gift size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
                   Sans engagement
@@ -198,10 +198,10 @@ export default function DevisPage() {
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right â€” Sidebar */}
             <aside className="space-y-6">
 
-              {/* Léo portrait + signature */}
+              {/* LÃ©o portrait + signature */}
               <div className="rounded-2xl border border-[#EDEDED] bg-white p-6 shadow-sm">
                 <div className="flex items-center gap-4 mb-4">
                   <div
@@ -210,19 +210,19 @@ export default function DevisPage() {
                   >
                     <Image
                       src="/images/leo-portrait.webp"
-                      alt="Léo, fondateur LM Espace Vert"
+                      alt="LÃ©o, fondateur LM Espace Vert"
                       width={64}
                       height={64}
                       className="object-cover w-full h-full"
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-sm" style={{ color: '#2F2F2F' }}>Léo M.</p>
-                    <p className="text-xs" style={{ color: '#8C8F94' }}>Fondateur · LM Espace Vert</p>
+                    <p className="font-bold text-sm" style={{ color: '#2F2F2F' }}>LÃ©o M.</p>
+                    <p className="text-xs" style={{ color: '#8C8F94' }}>Fondateur Â· LM Espace Vert</p>
                   </div>
                 </div>
                 <p className="text-sm italic leading-relaxed" style={{ color: '#8C8F94' }}>
-                  &ldquo;Je réponds personnellement à chaque demande. Votre projet mérite une attention particulière.&rdquo;
+                  &ldquo;Je rÃ©ponds personnellement Ã  chaque demande. Votre projet mÃ©rite une attention particuliÃ¨re.&rdquo;
                 </p>
               </div>
 
@@ -234,16 +234,16 @@ export default function DevisPage() {
                   ))}
                   <span className="font-bold text-sm" style={{ color: '#2F2F2F' }}>5.0</span>
                 </div>
-                <p className="text-xs mb-3" style={{ color: '#8C8F94' }}>28 avis Google vérifiés</p>
+                <p className="text-xs mb-3" style={{ color: '#8C8F94' }}>28 avis Google vÃ©rifiÃ©s</p>
                 {/* Devis-specific testimonial */}
                 <blockquote>
                   <p className="text-sm italic leading-relaxed" style={{ color: '#8C8F94' }}>
-                    &ldquo;J&apos;ai reçu un devis en 24h, très professionnel. Léo s&apos;est déplacé le lendemain pour évaluer mon jardin.&rdquo;
+                    &ldquo;J&apos;ai reÃ§u un devis en 24h, trÃ¨s professionnel. LÃ©o s&apos;est dÃ©placÃ© le lendemain pour Ã©valuer mon jardin.&rdquo;
                   </p>
                   <footer className="mt-2">
                     <p className="text-sm font-semibold" style={{ color: '#2F2F2F' }}>Sophie M.</p>
                     <div className="flex items-center gap-1">
-                      <p className="text-xs" style={{ color: '#8C8F94' }}>Écully</p>
+                      <p className="text-xs" style={{ color: '#8C8F94' }}>Ã‰cully</p>
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} size={10} fill="#F4B400" style={{ color: '#F4B400' }} aria-hidden="true" />
                       ))}
@@ -258,9 +258,9 @@ export default function DevisPage() {
                 <ul role="list" className="space-y-3">
                   {[
                     { icon: CheckCircle, text: 'Devis gratuit et sans engagement' },
-                    { icon: Clock, text: 'Réponse garantie sous 24h' },
+                    { icon: Clock, text: 'RÃ©ponse garantie sous 24h' },
                     { icon: Gift, text: 'Visite sur place offerte' },
-                    { icon: Shield, text: 'Professionnel certifié RC Pro' },
+                    { icon: Shield, text: 'Professionnel certifiÃ© RC Pro' },
                   ].map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-start gap-3">
                       <div className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}>
@@ -276,7 +276,7 @@ export default function DevisPage() {
               <div className="rounded-2xl p-5 border border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
                 <p className="font-semibold text-sm mb-1" style={{ color: '#2F2F2F' }}>Contact direct</p>
                 <p className="text-xs mb-4" style={{ color: '#8C8F94' }}>
-                  Préférez nous appeler ? Lun–Ven 8h–18h.
+                  PrÃ©fÃ©rez nous appeler ? Lunâ€“Ven 8hâ€“18h.
                 </p>
                 <div className="space-y-3">
                   <a
@@ -295,7 +295,7 @@ export default function DevisPage() {
                     style={{ color: '#2F2F2F' }}
                   >
                     <MessageCircle size={15} style={{ color: '#25D366' }} aria-hidden="true" />
-                    WhatsApp — réponse rapide
+                    WhatsApp â€” rÃ©ponse rapide
                   </a>
                 </div>
               </div>
