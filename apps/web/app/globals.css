@@ -89,6 +89,8 @@
    BRAND TOKENS & THEME VARIABLES
    ============================================================ */
 :root {
+  color-scheme: light;
+
   --brand:              #425D07;
   --brand-deep:         #334506;
 
