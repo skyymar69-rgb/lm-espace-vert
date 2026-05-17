@@ -114,7 +114,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="fr"
-      suppressHydrationWarning
       className={`${raleway.variable} ${montserrat.variable} ${inter.variable}`}
     >
       <head>

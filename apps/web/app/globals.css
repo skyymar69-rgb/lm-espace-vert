@@ -904,7 +904,7 @@ textarea:invalid:not(:placeholder-shown) {
    ============================================================ */
 .back-to-top {
   position: fixed;
-  bottom: 96px;
+  bottom: 24px;
   right: 24px;
   z-index: 10;
   width: 44px;
@@ -1232,6 +1232,7 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   flex-shrink: 0;
 }
 
+/* ============================================================
    DESIGN PREMIUM — Animations & Effets
    ============================================================ */
 
@@ -1291,12 +1292,6 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   font-size: 1.5rem;
   margin: 1rem 0;
   opacity: 0.6;
-}
-
-/* Animation d'apparition pour les sections */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-on-scroll {

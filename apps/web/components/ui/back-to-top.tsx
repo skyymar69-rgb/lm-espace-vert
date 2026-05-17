@@ -17,11 +17,12 @@ export function BackToTop() {
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Retour en haut de page"
       title="Retour en haut"
+      className="group"
       style={{
         position: 'fixed',
-        bottom: '96px',
-        left: '24px',
-        right: 'auto',
+        bottom: '24px',
+        right: '24px',
+        left: 'auto',
         zIndex: 40,
         width: '44px',
         height: '44px',
@@ -32,24 +33,12 @@ export function BackToTop() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: 'rgba(0,0,0,0.08) 0px 4px 12px 0px',
+        boxShadow: 'rgba(0,0,0,0.12) 0px 4px 16px 0px',
         cursor: 'pointer',
         transition: 'opacity 0.3s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s',
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? 'auto' : 'none',
         transform: visible ? 'translateY(0)' : 'translateY(12px)',
-      }}
-      onMouseEnter={(e) => {
-        const el = e.currentTarget as HTMLButtonElement
-        el.style.backgroundColor = '#334506'
-        el.style.borderColor = '#334506'
-        el.style.transform = 'translateY(-3px)'
-      }}
-      onMouseLeave={(e) => {
-        const el = e.currentTarget as HTMLButtonElement
-        el.style.backgroundColor = '#425D07'
-        el.style.borderColor = '#425D07'
-        el.style.transform = visible ? 'translateY(0)' : 'translateY(12px)'
       }}
     >
       <ChevronUp size={20} aria-hidden="true" />

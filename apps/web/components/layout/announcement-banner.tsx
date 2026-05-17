@@ -14,18 +14,18 @@ type Props = {
 export function AnnouncementBanner({ message, href, cta, dismissKey = 'banner-v1' }: Props) {
   const [dismissed, setDismissed] = useState(() => {
     if (typeof window === 'undefined') return false
-    return sessionStorage.getItem(dismissKey) === '1'
+    return localStorage.getItem(dismissKey) === '1'
   })
 
   const dismiss = () => {
-    sessionStorage.setItem(dismissKey, '1')
+    localStorage.setItem(dismissKey, '1')
     setDismissed(true)
   }
 
   if (dismissed) return null
 
   return (
-    <div className="announcement-banner" role="banner">
+    <div className="announcement-banner" role="banner" aria-live="polite">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-center gap-3">
         <span className="text-white/90">{message}</span>
         {href && cta && (

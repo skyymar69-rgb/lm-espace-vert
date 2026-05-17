@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Bloquer les pages sans valeur SEO
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+
+# Sitemap
+Sitemap: https://www.lmespacevert.fr/sitemap.xml

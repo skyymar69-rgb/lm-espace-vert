@@ -185,7 +185,6 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={localBusinessJsonLd} />
-      <JsonLd data={aggregateRatingJsonLd} />
       <JsonLd data={faqPageJsonLd} />
       <JsonLd data={blogItemListJsonLd} />
 
@@ -195,8 +194,8 @@ export default function HomePage() {
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end" aria-label="Hero — LM Espace Vert paysagiste">
         <Image
-          src="/images/realisation-1.webp"
-          alt="LM Espace Vert — Jardin aménagé avec terrasse à Limonest"
+          src="/images/scraped/Création d’espaces extérieurs paysagers près de Limonest.jpeg"
+          alt="LM Espace Vert — Création d'un jardin paysager à Limonest"
           fill
           className="object-cover object-top"
           priority
@@ -357,7 +356,7 @@ export default function HomePage() {
                   <Leaf size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Label Qualipaysage
                 </span>
                 <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#5C606B' }}>
-                  ♻ Éco-responsable
+                  <Leaf size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Éco-responsable
                 </span>
               </div>
               <Link
@@ -422,7 +421,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 4 : SERVICES ── */}
-      <section className="bg-white py-20 lg:py-24" aria-labelledby="services-heading">
+      <section id="services" className="bg-white py-20 lg:py-24" aria-labelledby="services-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Nos Prestations</p>
@@ -430,7 +429,7 @@ export default function HomePage() {
               Tous vos projets extérieurs
             </h2>
             <p className="text-[#5C606B] mt-3">
-              De la taille de haies à la création complète, nous sublimions votre espace vert.
+              De la taille de haies à la création complète, nous sublimions chaque espace extérieur.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

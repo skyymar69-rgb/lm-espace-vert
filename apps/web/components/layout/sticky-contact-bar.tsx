@@ -27,10 +27,10 @@ export function StickyContactBar() {
         backgroundColor: '#FFFFFF',
         borderTop: '1px solid #EDEDED',
         boxShadow: '0 -4px 16px rgba(0,0,0,0.07)',
-        padding: '6px 12px',
+        padding: '6px 12px env(safe-area-inset-bottom)',
         display: 'flex',
         gap: '8px',
-        height: '44px',
+        height: 'calc(44px + env(safe-area-inset-bottom))',
         alignItems: 'center',
       }}
       role="complementary"
