@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "realisations",
+  "info": {
+    "singularName": "realisation",
+    "pluralName": "realisations",
+    "displayName": "Réalisation",
+    "description": "Projets réalisés par LM Espace Vert"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "imageAvant": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "imageApres": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "categorie": {
+      "type": "enumeration",
+      "enum": ["creation", "entretien", "elagage", "maconnerie", "arrosage", "engazonnement"]
+    },
+    "ville": {
+      "type": "string"
+    },
+    "duree": {
+      "type": "string"
+    },
+    "annee": {
+      "type": "integer"
+    }
+  }
+}

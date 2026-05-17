@@ -123,7 +123,22 @@
       "Bash(curl -L -o \"avant2.webp\" \"https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=800&q=85&fit=crop&crop=left\" -s -w \"avant2: %{size_download}b\\\\n\")",
       "Bash(curl -L -o \"apres1.webp\" \"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=85&fit=crop&crop=right\" -s -w \"apres1: %{size_download}b\\\\n\")",
       "Bash(curl -L -o \"apres2.webp\" \"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&fit=crop&crop=right\" -s -w \"apres2: %{size_download}b\\\\n\")",
-      "Bash(powershell -Command \"\\(Get-Content page.tsx\\) -replace '#8C8F94', '#5C606B' | Set-Content page.tsx -Encoding utf8\")"
+      "Bash(powershell -Command \"\\(Get-Content page.tsx\\) -replace '#8C8F94', '#5C606B' | Set-Content page.tsx -Encoding utf8\")",
+      "Bash(git commit -m 'fix: suppression curseur feuille personnalisé *)",
+      "Bash(npm run *)",
+      "Bash(Start-Process powershell *)",
+      "Bash(Select-Object Id)",
+      "PowerShell(cd \"D:\\\\16042026\\\\1x\\\\LM Espace vert\\\\apps\\\\web\"; Start-Process powershell -ArgumentList \"-NoProfile\", \"-Command\", \"npm run dev 2>&1 | Out-File -FilePath 'C:\\\\Users\\\\Kayzen\\\\AppData\\\\Local\\\\Temp\\\\devserver.log' -Encoding utf8\" -PassThru | Select-Object Id)",
+      "mcp__Claude_in_Chrome__read_console_messages",
+      "Bash(findstr \":3000 \\\\|:3001 \\\\|:3002 \")",
+      "Bash(findstr LISTENING)",
+      "PowerShell(Stop-Process -Id 9964 -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Id 11024 -Force -ErrorAction SilentlyContinue)",
+      "Bash(powershell -Command \"\\(Get-Item 'app/\\(marketing\\)/page.tsx'\\).LastWriteTime\")",
+      "Bash(dir \"D:\\\\16042026\\\\1x\\\\LM Espace vert\\\\apps\\\\web\\\\public\\\\images\" /B)",
+      "Bash(findstr /i \"vegeta concept realis avant apres\")",
+      "PowerShell(Get-ChildItem \"D:\\\\16042026\\\\1x\\\\LM Espace vert\\\\apps\\\\web\\\\public\\\\images\" | Where-Object { $_.Name -match \"vegeta|concept|realis|avant|apres|transfo|site-map|sitemap\" } | Select-Object Name)",
+      "Bash(sed -i 's/photo-equipe\\\\.webp/leo-portrait.webp/g' \"D:\\\\16042026\\\\1x\\\\LM Espace vert\\\\apps\\\\web\\\\app\\\\\\(marketing\\)\\\\blog\\\\categorie\\\\[cat]\\\\page.tsx\")"
     ]
   }
 }

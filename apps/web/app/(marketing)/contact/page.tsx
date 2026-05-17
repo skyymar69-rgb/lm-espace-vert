@@ -1,25 +1,25 @@
-ï»¿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { ContactForm } from '@/components/forms/contact-form'
 
 export const metadata: Metadata = {
-  title: 'Nous contacter â€” LM Espace Vert, paysagiste Lyon',
-  description: "Contactez LM Espace Vert pour un devis gratuit ou toute question sur votre jardin. Paysagiste Ã  Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. RÃ©ponse garantie sous 24h.",
+  title: 'Nous contacter — LM Espace Vert, paysagiste Lyon',
+  description: "Contactez LM Espace Vert pour un devis gratuit ou toute question sur votre jardin. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. Réponse garantie sous 24h.",
   alternates: { canonical: 'https://www.lmespacevert.fr/contact' },
   openGraph: {
-    title: 'Contacter LM Espace Vert â€” Paysagiste Lyon nord',
-    description: "Contactez LM Espace Vert pour un devis gratuit. Paysagiste Ã  Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. RÃ©ponse garantie sous 24h.",
+    title: 'Contacter LM Espace Vert — Paysagiste Lyon nord',
+    description: "Contactez LM Espace Vert pour un devis gratuit. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. Réponse garantie sous 24h.",
     url: 'https://www.lmespacevert.fr/contact',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/photo-equipe.webp', width: 1200, height: 630, alt: 'Contacter LM Espace Vert â€” paysagiste Lyon nord' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Contacter LM Espace Vert — paysagiste Lyon nord' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contacter LM Espace Vert â€” Paysagiste Lyon nord',
-    description: "Devis gratuit sous 24h. Paysagiste Ã  Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi.",
-    images: ['https://www.lmespacevert.fr/images/photo-equipe.webp'],
+    title: 'Contacter LM Espace Vert — Paysagiste Lyon nord',
+    description: "Devis gratuit sous 24h. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi.",
+    images: ['https://www.lmespacevert.fr/images/leo-portrait.webp'],
   },
 }
 
@@ -37,7 +37,7 @@ const contactPageSchema = {
   '@type': 'ContactPage',
   name: 'Contactez LM Espace Vert',
   url: 'https://www.lmespacevert.fr/contact',
-  description: 'Contactez LM Espace Vert pour un devis gratuit ou toute question. Paysagiste Ã  Lyon, disponible du lundi au vendredi.',
+  description: 'Contactez LM Espace Vert pour un devis gratuit ou toute question. Paysagiste à Lyon, disponible du lundi au vendredi.',
   mainEntity: {
     '@type': 'LocalBusiness',
     '@id': 'https://www.lmespacevert.fr/#business',
@@ -69,9 +69,9 @@ const communes = [
   "Saint-Didier-au-Mont-d'Or",
   'Limonest',
   'Dardilly',
-  'Ã‰cully',
+  'Écully',
   'Tassin-la-Demi-Lune',
-  'CharbonniÃ¨res-les-Bains',
+  'Charbonnières-les-Bains',
   'La Tour-de-Salvagny',
   "Champagne-au-Mont-d'Or",
   'Cailloux-sur-Fontaines',
@@ -104,10 +104,10 @@ export default function ContactPage() {
               Nous contacter
             </h1>
             <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
-              RÃ©ponse garantie sous 24h Â· Sans engagement
+              Réponse garantie sous 24h · Sans engagement
             </p>
             <p className="mt-2 text-sm font-medium" style={{ color: '#425D07' }}>
-              RÃ©ponse sous 2h en semaine, 24h le week-end
+              Réponse sous 2h en semaine, 24h le week-end
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
 
-            {/* Colonne gauche â€” infos contact */}
+            {/* Colonne gauche — infos contact */}
             <div>
               <h2 className="font-display text-2xl font-bold mb-8" style={{ color: '#425D07' }}>
                 Comment nous joindre&nbsp;?
@@ -127,7 +127,7 @@ export default function ContactPage() {
               {/* Contact direct alternatives */}
               <div className="mb-8 rounded-2xl border border-[#EDEDED] p-5" style={{ backgroundColor: '#F7F5F0' }}>
                 <p className="font-semibold text-sm mb-4" style={{ color: '#2F2F2F' }}>
-                  Vous prÃ©fÃ©rez un contact direct&nbsp;?
+                  Vous préférez un contact direct&nbsp;?
                 </p>
                 <div className="grid grid-cols-3 gap-3">
                   <a
@@ -160,7 +160,7 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-4">
-                {/* TÃ©lÃ©phone */}
+                {/* Téléphone */}
                 <a
                   href="tel:+33672587353"
                   className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
@@ -181,7 +181,7 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                {/* WhatsApp avec message prÃ©-rempli */}
+                {/* WhatsApp avec message pré-rempli */}
                 <a
                   href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
                   target="_blank"
@@ -196,8 +196,8 @@ export default function ContactPage() {
                     <MessageCircle size={26} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold text-lg" style={{ color: '#128C7E' }}>WhatsApp â€” Ã‰crire maintenant</p>
-                    <p className="text-sm" style={{ color: '#8C8F94' }}>RÃ©ponse sous 1h en journÃ©e Â· Message prÃ©-rempli</p>
+                    <p className="font-bold text-lg" style={{ color: '#128C7E' }}>WhatsApp — Écrire maintenant</p>
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous 1h en journée · Message pré-rempli</p>
                   </div>
                 </a>
 
@@ -214,7 +214,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold" style={{ color: '#2F2F2F' }}>contact@lmespacevert.fr</p>
-                    <p className="text-sm" style={{ color: '#8C8F94' }}>RÃ©ponse sous 24h</p>
+                    <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous 24h</p>
                   </div>
                 </a>
 
@@ -224,7 +224,7 @@ export default function ContactPage() {
                   <div className="flex-1">
                     <span className="text-sm" style={{ color: '#8C8F94' }}>
                       Saint-Didier-au-Mont-d&apos;Or,{' '}
-                      <strong style={{ color: '#2F2F2F' }}>69370 RhÃ´ne</strong>
+                      <strong style={{ color: '#2F2F2F' }}>69370 Rhône</strong>
                     </span>
                     <a
                       href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
@@ -233,16 +233,16 @@ export default function ContactPage() {
                       className="block text-xs font-semibold mt-0.5 hover:underline"
                       style={{ color: '#425D07' }}
                     >
-                      Obtenir l&apos;itinÃ©raire â†’
+                      Obtenir l&apos;itinéraire ?
                     </a>
                   </div>
                 </div>
 
-                {/* Badge rÃ©assurance */}
+                {/* Badge réassurance */}
                 <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(128,188,0,0.06)', borderColor: 'rgba(128,188,0,0.3)' }}>
                   <CheckCircle size={20} style={{ color: '#80BC00' }} aria-hidden="true" />
                   <p className="text-sm font-semibold" style={{ color: '#425D07' }}>
-                    RÃ©ponse garantie sous 24h â€” aucun engagement
+                    Réponse garantie sous 24h — aucun engagement
                   </p>
                 </div>
 
@@ -250,39 +250,39 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(66,93,7,0.05)', borderColor: 'rgba(66,93,7,0.2)' }}>
                   <CheckCircle size={20} style={{ color: '#425D07' }} aria-hidden="true" />
                   <p className="text-sm font-semibold" style={{ color: '#425D07' }}>
-                    AgrÃ©Ã© Service Ã  la Personne â€” crÃ©dit d&apos;impÃ´t 50%
+                    Agréé Service à la Personne — crédit d&apos;impôt 50%
                   </p>
                 </div>
               </div>
 
-              {/* Horaires de disponibilitÃ© */}
+              {/* Horaires de disponibilité */}
               <div className="mt-8 rounded-2xl border border-[#EDEDED] shadow-sm overflow-hidden">
                 <div className="flex items-center gap-3 px-5 py-4 border-b border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(66,93,7,0.1)' }}>
                     <Clock size={15} style={{ color: '#425D07' }} aria-hidden="true" />
                   </div>
-                  <span className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>Horaires de disponibilitÃ©</span>
+                  <span className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>Horaires de disponibilité</span>
                 </div>
                 <table className="w-full text-sm">
                   <tbody>
                     <tr className="border-b border-[#EDEDED] hover:bg-[#F7F5F0] transition-colors">
-                      <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Lundi â€“ Vendredi</td>
-                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 â€“ 18h00</td>
+                      <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Lundi – Vendredi</td>
+                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 – 18h00</td>
                     </tr>
                     <tr className="border-b border-[#EDEDED] hover:bg-[#F7F5F0] transition-colors">
                       <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Samedi</td>
-                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 â€“ 12h00</td>
+                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 – 12h00</td>
                     </tr>
                     <tr className="hover:bg-[#F7F5F0] transition-colors">
                       <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Dimanche</td>
-                      <td className="px-5 py-3.5 font-medium text-right" style={{ color: '#8C8F94' }}>FermÃ©</td>
+                      <td className="px-5 py-3.5 font-medium text-right" style={{ color: '#8C8F94' }}>Fermé</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-            {/* Colonne droite â€” formulaire */}
+            {/* Colonne droite — formulaire */}
             <div className="rounded-2xl border border-[#EDEDED] shadow-[0_8px_40px_rgba(0,0,0,0.07)] p-8">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
@@ -293,7 +293,7 @@ export default function ContactPage() {
                 </h3>
               </div>
               <p className="text-sm mb-6" style={{ color: '#8C8F94' }}>
-                RÃ©ponse sous 2h en semaine, 24h le week-end
+                Réponse sous 2h en semaine, 24h le week-end
               </p>
 
               {/* The existing ContactForm component handles loading state, validation, success/error */}
@@ -302,7 +302,7 @@ export default function ContactPage() {
               {/* WhatsApp fallback */}
               <div className="mt-6 pt-6 border-t border-[#EDEDED] text-center">
                 <p className="text-sm mb-3" style={{ color: '#8C8F94' }}>
-                  PrÃ©fÃ©rez un contact immÃ©diat ?
+                  Préférez un contact immédiat ?
                 </p>
                 <a
                   href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20renseignement%20..."
@@ -312,7 +312,7 @@ export default function ContactPage() {
                   style={{ backgroundColor: '#25D366', boxShadow: '0 4px 16px rgba(37,211,102,0.3)' }}
                 >
                   <MessageCircle size={16} aria-hidden="true" />
-                  Ã‰crire sur WhatsApp
+                  Écrire sur WhatsApp
                 </a>
               </div>
             </div>
@@ -347,7 +347,7 @@ export default function ContactPage() {
             <a href="tel:+33672587353" className="font-medium hover:underline" style={{ color: '#425D07' }}>
               Appelez-nous
             </a>{' '}
-            pour vÃ©rifier.
+            pour vérifier.
           </p>
         </div>
       </section>

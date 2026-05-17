@@ -67,7 +67,7 @@ const localBusinessSchema = {
   url: 'https://www.lmespacevert.fr',
   telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
-  image: 'https://www.lmespacevert.fr/images/photo-equipe.webp',
+  image: 'https://www.lmespacevert.fr/images/leo-portrait.webp',
   logo: 'https://www.lmespacevert.fr/logo.png',
   foundingDate: '2019',
   founder: { '@type': 'Person', name: 'Léo Maurice' },

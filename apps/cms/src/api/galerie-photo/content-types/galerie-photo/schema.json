@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galerie_photos",
+  "info": {
+    "singularName": "galerie-photo",
+    "pluralName": "galerie-photos",
+    "displayName": "Photo Galerie",
+    "description": "Photos de la galerie réalisations"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "categorie": {
+      "type": "enumeration",
+      "enum": ["creation", "entretien", "elagage", "maconnerie", "arrosage", "engazonnement", "avant-apres"],
+      "required": true
+    },
+    "ville": {
+      "type": "string"
+    },
+    "annee": {
+      "type": "integer"
+    },
+    "ordre": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

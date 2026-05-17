@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "parametre_sites",
+  "info": {
+    "singularName": "parametre-site",
+    "pluralName": "parametre-sites",
+    "displayName": "Paramètres du site",
+    "description": "Réglages globaux du site"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "telephone": {
+      "type": "string",
+      "default": "06 72 58 73 53"
+    },
+    "whatsapp": {
+      "type": "string",
+      "default": "33672587353"
+    },
+    "email": {
+      "type": "email",
+      "default": "contact@lmespacevert.fr"
+    },
+    "adresse": {
+      "type": "string",
+      "default": "Saint-Didier-au-Mont-d'Or, 69370"
+    },
+    "horairesLun": {
+      "type": "string",
+      "default": "08h00 - 18h00"
+    },
+    "horairesSam": {
+      "type": "string",
+      "default": "08h00 - 12h00"
+    },
+    "banniereMessage": {
+      "type": "string"
+    },
+    "banniereActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

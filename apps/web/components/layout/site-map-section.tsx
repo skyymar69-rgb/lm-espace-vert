@@ -18,6 +18,11 @@ const mainPages = [
     photo: '/images/realisation-1.webp',
   },
   {
+    label: 'Galerie',
+    href: '/galerie',
+    photo: '/images/realisation-5.webp',
+  },
+  {
     label: 'Blog & Conseils',
     href: '/blog',
     photo: '/images/blog-jardin-printemps.webp',
@@ -25,7 +30,7 @@ const mainPages = [
   {
     label: 'À propos',
     href: '/a-propos',
-    photo: '/images/photo-equipe.webp',
+    photo: '/images/leo-portrait.webp',
   },
 ]
 
@@ -59,7 +64,8 @@ const subLinkColumns = [
       { label: 'À propos',         href: '/a-propos' },
       { label: 'Tarifs',           href: '/tarifs' },
       { label: 'Réalisations',     href: '/realisations' },
-      { label: 'Avant/Après',      href: '/realisations' },
+      { label: 'Galerie photos',   href: '/galerie' },
+      { label: 'Avant/Après',      href: '/avant-apres' },
       { label: 'Notre processus',  href: '/a-propos' },
     ],
   },
