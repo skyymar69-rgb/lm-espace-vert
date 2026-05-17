@@ -107,10 +107,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
-    { media: '(prefers-color-scheme: dark)', color: '#0f1a0f' },
-  ],
+  themeColor: '#FFFFFF',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -121,12 +118,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${raleway.variable} ${montserrat.variable} ${inter.variable}`}
     >
       <head>
-        {/* #1 No-flash: lit uniquement localStorage, défaut = light (jamais prefers-color-scheme) */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(_){}})();`,
-          }}
-        />
         {/* Preconnect: 3 origins max (next/font auto-handles Google Fonts) */}
         <link rel="preconnect" href="https://api.open-meteo.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://vitals.vercel-insights.com" crossOrigin="anonymous" />

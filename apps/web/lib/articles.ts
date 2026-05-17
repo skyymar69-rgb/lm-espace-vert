@@ -676,7 +676,7 @@ export const articles: Article[] = [
     date: '2025-03-30',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Aménagement de cour et jardin extérieur près de Limonest.jpeg',
+    image: "/images/scraped/Aménagement de cour et jardin extérieur près de Limonest.jpeg",
     keywords: ['massif fleuri', 'massif 4 saisons', 'plantes vivaces associées'],
     content: `
 <h2>La clé : l'échelonnement des floraisons</h2>
@@ -853,7 +853,7 @@ export const articles: Article[] = [
     updatedAt: '2026-05-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Tonte de pelouse et entretien d'espaces verts près de Limonest.jpeg',
+    image: "/images/scraped/Tonte de pelouse et entretien d'espaces verts près de Limonest.jpeg",
     keywords: ['gazon rouleaux', 'semis gazon', 'engazonnement', 'créer pelouse'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1014,7 +1014,7 @@ export const articles: Article[] = [
     date: '2024-06-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or.webp',
+    image: "/images/scraped/Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or.webp",
     keywords: ['désherbage naturel', 'sans glyphosate', 'mauvaises herbes jardin'],
     content: `
 <h2>Désherber sans chimie : oui, c'est possible</h2>
@@ -1050,7 +1050,7 @@ export const articles: Article[] = [
     date: '2024-05-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Travaux paysagers à Saint-Didier-au-Mont-d'Or.webp',
+    image: "/images/scraped/Travaux paysagers à Saint-Didier-au-Mont-d'Or.webp",
     keywords: ['drainage jardin', 'eau stagnante jardin', 'sol argileux drainage'],
     content: `
 <h2>Pourquoi l'eau stagne-t-elle dans mon jardin ?</h2>
@@ -1115,7 +1115,7 @@ export const articles: Article[] = [
     date: '2024-03-12',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Étude du terrain près de Limonest.webp',
+    image: "/images/scraped/Étude du terrain près de Limonest.webp",
     keywords: ['fertilisation naturelle jardin', 'engrais vert', 'purin ortie', 'compost jardin'],
     content: `
 <h2>Pourquoi fertiliser naturellement ?</h2>
@@ -1187,7 +1187,7 @@ export const articles: Article[] = [
     date: '2024-01-25',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Service d'entretien de jardin et espaces verts à Limonest.jpeg',
+    image: "/images/scraped/Service d'entretien de jardin et espaces verts à Limonest.jpeg",
     keywords: ['diviser vivaces', 'multiplication vivaces', 'entretien vivaces printemps'],
     content: `
 <h2>Pourquoi diviser les vivaces ?</h2>
@@ -1221,7 +1221,7 @@ export const articles: Article[] = [
     date: '2023-12-10',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Maintenance et nettoyage d'espaces verts à Limonest  0.jpeg',
+    image: "/images/scraped/Maintenance et nettoyage d'espaces verts à Limonest  0.jpeg",
     keywords: ['paillage jardin', 'mulch jardin', 'BRF paillage', 'matériau paillage'],
     content: `
 <h2>Le paillage : une des meilleures pratiques du jardin</h2>
@@ -1248,7 +1248,7 @@ export const articles: Article[] = [
     date: '2023-11-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Entretien d'espaces verts1.jpeg',
+    image: "/images/scraped/Entretien d'espaces verts1.jpeg",
     keywords: ['contrat entretien jardin', 'jardinier professionnel', 'entretien espaces verts'],
     content: `
 <h2>Pourquoi opter pour un contrat d'entretien ?</h2>
@@ -1290,7 +1290,7 @@ export const articles: Article[] = [
     date: '2023-10-20',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Chemin de gravier bordé de pelouse menant à des maisons modernes à Limonest.webp',
+    image: "/images/scraped/Chemin de gravier bordé de pelouse menant à des maisons modernes à Limonest.webp",
     keywords: ['pelouse ombre', 'gazon ombre', 'entretien pelouse ombragée'],
     content: `
 <h2>Les défis de la pelouse à l'ombre</h2>
@@ -1319,7 +1319,7 @@ export const articles: Article[] = [
     date: '2023-09-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Sécurisation des arbres près de Limonest.webp',
+    image: "/images/scraped/Sécurisation des arbres près de Limonest.webp",
     keywords: ['niwaki', 'taille japonaise pins', 'topiaire japonais', 'cloud pruning'],
     content: `
 <h2>Le niwaki : une philosophie, un art</h2>
@@ -1346,7 +1346,7 @@ export const articles: Article[] = [
     date: '2026-04-10',
     readingTime: '4 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Escalier en bois et gravier Limonest.webp',
+    image: "/images/scraped/Escalier en bois et gravier Limonest.webp",
     keywords: ['paysagiste Caluire-et-Cuire', 'entretien jardin Caluire', 'création jardin Lyon nord'],
     excerpt: "LM Espace Vert intervient régulièrement à Caluire-et-Cuire pour la création et l'entretien de jardins. Découvrez nos conseils adaptés à cette commune lyonnaise.",
     content: `
@@ -1491,7 +1491,7 @@ export const articles: Article[] = [
     date: '2026-03-20',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Déroulement d'un projet d'aménagement paysager près de Limonest.webp',
+    image: "/images/scraped/Déroulement d'un projet d'aménagement paysager près de Limonest.webp",
     keywords: ['entretien jardin hiver Lyon', 'jardin hiver Rhône', 'taille arbres hiver'],
     excerpt: "Les mois de décembre et janvier sont propices à l'entretien hivernal. Découvrez ce qu'il faut faire dans votre jardin lyonnais pendant la saison froide.",
     content: `
@@ -1567,7 +1567,7 @@ export const articles: Article[] = [
     date: '2026-03-10',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Conception d'espaces verts et aménagement paysager à Limonest.jpeg',
+    image: "/images/scraped/Conception d'espaces verts et aménagement paysager à Limonest.jpeg",
     keywords: ['problèmes pelouse Lyon', 'gazon jaune Lyon', 'mousses pelouse Lyon'],
     excerpt: "Mousses, mauvaises herbes, zones jaunes... Les problèmes de pelouse sont fréquents dans la région lyonnaise. Voici les solutions professionnelles de LM Espace Vert.",
     content: `
@@ -1736,7 +1736,7 @@ export const articles: Article[] = [
     date: '2026-05-05',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Aménagements extérieurs.jpeg',
+    image: "/images/scraped/Aménagements extérieurs.jpeg",
     keywords: ["paysagiste Champagne-au-Mont-d'Or", 'jardin Champagne', 'entretien espaces verts Champagne', 'nord Lyon'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1781,7 +1781,7 @@ export const articles: Article[] = [
     date: '2026-04-20',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Coupe et entretien de haies et arbustes à Limonest1.jpeg',
+    image: "/images/scraped/Coupe et entretien de haies et arbustes à Limonest1.jpeg",
     keywords: ['taille haies Lyon', 'taille haies Rhône', 'quand tailler haie', 'taille haie arbuste'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1840,7 +1840,7 @@ export const articles: Article[] = [
     date: '2026-04-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Travaux d'aménagement extérieur avec allée et plantations à Limonest.jpeg',
+    image: "/images/scraped/Travaux d'aménagement extérieur avec allée et plantations à Limonest.jpeg",
     keywords: ['allée jardin Lyon', 'gravier stabilisé Lyon', 'pavés jardin Rhône', 'allée maçonnerie paysagère'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1888,7 +1888,7 @@ export const articles: Article[] = [
     date: '2026-04-01',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Travaux de création paysagère pour espaces extérieurs près de Limonest.jpeg',
+    image: "/images/scraped/Travaux de création paysagère pour espaces extérieurs près de Limonest.jpeg",
     keywords: ['entretien terrasse Lyon', 'terrasse bois Lyon', 'nettoyage terrasse pierre', 'entretien terrasse Rhône'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1943,7 +1943,7 @@ export const articles: Article[] = [
     date: '2026-03-25',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg',
+    image: "/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg",
     keywords: ['jardin faible entretien Lyon', 'jardin économique entretien', 'plantes résistantes Lyon', 'jardinage facile Rhône'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -1993,7 +1993,7 @@ export const articles: Article[] = [
     date: '2026-03-15',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Création paysagère et aménagement extérieur de jardin près de Limonest.jpeg',
+    image: "/images/scraped/Création paysagère et aménagement extérieur de jardin près de Limonest.jpeg",
     keywords: ['prairie fleurie Lyon', 'biodiversité jardin Lyon', 'pollinisateurs Rhône', 'jardin naturel Lyon nord'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2052,7 +2052,7 @@ export const articles: Article[] = [
     date: '2026-02-15',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Travaux de création paysagère pour extérieur près de Limonest.jpeg',
+    image: "/images/scraped/Travaux de création paysagère pour extérieur près de Limonest.jpeg",
     keywords: ['arrosage jardin été Lyon', 'canicule jardin Rhône', 'économie eau jardin', 'arrosage automatique Lyon'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2104,7 +2104,7 @@ export const articles: Article[] = [
     date: '2026-01-20',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Aménagement extérieur avec création paysagère sur mesure près de Limonest.jpeg',
+    image: "/images/scraped/Aménagement extérieur avec création paysagère sur mesure près de Limonest.jpeg",
     keywords: ['prix paysagiste Lyon', 'tarif paysagiste Rhône', 'coût jardin Lyon', 'devis paysagiste 2026'],
     content: `
 <div class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2156,7 +2156,7 @@ export const articles: Article[] = [
     date: '2026-05-01',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Conception d'un projet de création paysagère près de Limonest.webp',
+    image: "/images/scraped/Conception d'un projet de création paysagère près de Limonest.webp",
     keywords: ['entretien gazon printemps Lyon', 'scarification pelouse Lyon', 'tonte gazon mars avril', 'engrais printemps pelouse'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2239,7 +2239,7 @@ export const articles: Article[] = [
     date: '2026-04-28',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Élagage et taille de haies.jpeg',
+    image: "/images/scraped/Élagage et taille de haies.jpeg",
     keywords: ['haies persistantes Lyon', 'laurier haie Lyon', 'Photinia Lyon', 'haie persistante nord lyonnais'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2304,7 +2304,7 @@ export const articles: Article[] = [
     date: '2026-04-20',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Élagage sécurisé et taille de haies sur mesure près de Limonest2.jpeg',
+    image: "/images/scraped/Élagage sécurisé et taille de haies sur mesure près de Limonest2.jpeg",
     keywords: ['massif fleuri Lyon', 'massif 4 saisons Lyon', 'vivaces Lyon', 'plantation massif fleurs'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2388,7 +2388,7 @@ export const articles: Article[] = [
     date: '2026-04-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Création d'espace extérieur paysager près de Limonest.jpeg',
+    image: "/images/scraped/Création d'espace extérieur paysager près de Limonest.jpeg",
     keywords: ['terrassement jardin Lyon', 'terrassement paysagiste Lyon', 'prix terrassement jardin Rhône', 'création jardin étapes'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2468,7 +2468,7 @@ export const articles: Article[] = [
     date: '2026-05-08',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Création d'espaces extérieurs paysagers près de Limonest.jpeg',
+    image: "/images/scraped/Création d'espaces extérieurs paysagers près de Limonest.jpeg",
     keywords: ['paysagiste Neuville-sur-Saône', 'jardin Neuville Saône', 'entretien jardin Neuville 69'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2544,7 +2544,7 @@ export const articles: Article[] = [
     date: '2026-05-05',
     readingTime: '5 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/Matériel utilisé pour l'élagage près de Limonest.webp',
+    image: "/images/scraped/Matériel utilisé pour l'élagage près de Limonest.webp",
     keywords: ['paysagiste Francheville', 'jardin Francheville 69340', 'entretien jardin Francheville', 'création jardin ouest Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2610,7 +2610,7 @@ export const articles: Article[] = [
     date: '2026-04-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-01.jpg',
+    image: "/images/scraped/allotravaux-01.jpg",
     keywords: ['désherbage naturel Lyon', 'désherbage sans pesticides', 'mauvaises herbes jardin Lyon', 'écologie jardin Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2681,7 +2681,7 @@ export const articles: Article[] = [
     date: '2026-04-05',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-02.jpg',
+    image: "/images/scraped/allotravaux-02.jpg",
     keywords: ['arbres fruitiers Lyon', 'planter pommier Lyon', 'verger jardin lyonnais', 'fruitiers nord Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2755,7 +2755,7 @@ export const articles: Article[] = [
     date: '2026-03-28',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-03.jpg',
+    image: "/images/scraped/allotravaux-03.jpg",
     keywords: ['rénovation jardin Lyon', 'rénover jardin abandonné', 'transformation jardin lyonnais', 'avant après jardin Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2839,7 +2839,7 @@ export const articles: Article[] = [
     date: '2026-03-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-04.jpg',
+    image: "/images/scraped/allotravaux-04.jpg",
     keywords: ['pergola bois Lyon', 'terrasse bois Lyon', 'prix terrasse bois Rhône', 'matériau terrasse extérieur Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2921,7 +2921,7 @@ export const articles: Article[] = [
     date: '2026-04-10',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-05.jpg',
+    image: "/images/scraped/allotravaux-05.jpg",
     keywords: ['pergola jardin Lyon', 'tonnelle jardin Lyon', 'espace ombragé jardin', 'pergola bois aluminium Lyon', 'aménagement extérieur Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -2981,7 +2981,7 @@ export const articles: Article[] = [
     date: '2026-04-05',
     readingTime: '8 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-06.jpg',
+    image: "/images/scraped/allotravaux-06.jpg",
     keywords: ['taille arbres fruitiers Rhône', 'tailler pommier poirier lyon', 'taille prunier cerisier', 'arbre fruitier entretien Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3044,7 +3044,7 @@ export const articles: Article[] = [
     date: '2026-04-15',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-07.jpg',
+    image: "/images/scraped/allotravaux-07.jpg",
     keywords: ['gazon résistant chaleur Lyon', 'gazon sécheresse Rhône', 'pelouse canicule Lyon', 'variété gazon résistant été', 'pelouse été Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3113,7 +3113,7 @@ export const articles: Article[] = [
     date: '2026-04-20',
     readingTime: '8 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-08.jpg',
+    image: "/images/scraped/allotravaux-08.jpg",
     keywords: ["jardin en pente Monts d'Or", "aménagement jardin en pente Lyon", 'terrassement pente Rhône', 'soutènement mur jardin', 'escalier jardin pente'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3187,7 +3187,7 @@ export const articles: Article[] = [
     date: '2026-04-25',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-09.jpg',
+    image: "/images/scraped/allotravaux-09.jpg",
     keywords: ['haie bocagère Lyon nord', 'entretien haie biodiversité', 'taille haie champêtre Rhône', 'haie naturelle nord Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3255,7 +3255,7 @@ export const articles: Article[] = [
     date: '2026-05-01',
     readingTime: '9 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-10.jpg',
+    image: "/images/scraped/allotravaux-10.jpg",
     keywords: ['prix création jardin Lyon 2026', 'tarif paysagiste Lyon', 'coût aménagement jardin Rhône', 'devis jardin Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3334,7 +3334,7 @@ export const articles: Article[] = [
     date: '2026-04-28',
     readingTime: '8 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-11.jpg',
+    image: "/images/scraped/allotravaux-11.jpg",
     keywords: ['jardin japonais Lyon', 'création jardin japonais Rhône', 'karesansui Lyon', 'plantes jardin japonais', 'paysagiste jardin zen Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3401,7 +3401,7 @@ export const articles: Article[] = [
     date: '2026-04-12',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-12.jpg',
+    image: "/images/scraped/allotravaux-12.jpg",
     keywords: ['désherbage naturel jardin', 'désherbage sans produits chimiques', 'alternatives glyphosate jardin', 'mauvaises herbes jardin Lyon', 'désherbage écologique Rhône'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3469,7 +3469,7 @@ export const articles: Article[] = [
     date: '2026-05-05',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-13.jpg',
+    image: "/images/scraped/allotravaux-13.jpg",
     keywords: ['clôture jardin Lyon', 'brise-vue jardin Rhône', 'palissade bois Lyon', 'occultant jardin Lyon', 'clôture paysagère Lyon'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3528,7 +3528,7 @@ export const articles: Article[] = [
     date: '2026-05-10',
     readingTime: '6 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-14.jpg',
+    image: "/images/scraped/allotravaux-14.jpg",
     keywords: ["paysagiste Saint-Didier-au-Mont-d'Or", "jardin Saint-Didier Monts d'Or", 'entretien jardin Saint-Didier', "LM Espace Vert Saint-Didier", 'paysagiste Monts d\'Or'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">
@@ -3594,7 +3594,7 @@ export const articles: Article[] = [
     date: '2026-05-08',
     readingTime: '7 min',
     author: 'Léo Maurice',
-    image: '/images/scraped/allotravaux-15.jpg',
+    image: "/images/scraped/allotravaux-15.jpg",
     keywords: ['crédit impôt jardinage Lyon', 'SAP jardinage Lyon', 'service à la personne jardinage Rhône', 'avantage fiscal entretien jardin', 'déduction impôt jardinage'],
     content: `
 <blockquote class="bg-[#F7F5F0] rounded-xl p-4 my-4 border-l-4 border-[#80BC00] text-[#2F2F2F]">

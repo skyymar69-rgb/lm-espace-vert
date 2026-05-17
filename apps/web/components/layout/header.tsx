@@ -8,7 +8,6 @@ import {
   ChevronDown,
 } from 'lucide-react'
 import { MobileMenu } from './mobile-menu'
-import { ThemeToggle } from './theme-toggle'
 import { AccessibilityMenu } from './accessibility-menu'
 import { WeatherWidget } from '@/components/ui/weather-widget'
 
@@ -179,9 +178,6 @@ export function Header() {
 
             {/* Accessibilité */}
             <AccessibilityMenu />
-
-            {/* Thème clair/sombre */}
-            <ThemeToggle />
 
             {/* Devis gratuit */}
             <Link
