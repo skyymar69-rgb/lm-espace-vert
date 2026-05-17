@@ -10,12 +10,12 @@ import {
 import { MobileMenu } from './mobile-menu'
 import { ThemeToggle } from './theme-toggle'
 import { AccessibilityMenu } from './accessibility-menu'
-import { DigitalContactCard } from '@/components/ui/digital-contact-card'
 import { WeatherWidget } from '@/components/ui/weather-widget'
 
 const navItems = [
   { href: '/services',     label: 'Services',     hasMega: true },
   { href: '/realisations', label: 'Réalisations',  hasMega: false },
+  { href: '/galerie',      label: 'Galerie',        hasMega: false },
   { href: '/blog',         label: 'Blog',          hasMega: false },
   { href: '/a-propos',     label: 'À propos',      hasMega: false },
   { href: '/contact',      label: 'Contact',       hasMega: false },
@@ -182,9 +182,6 @@ export function Header() {
 
             {/* Thème clair/sombre */}
             <ThemeToggle />
-
-            {/* Carte de contact numérique */}
-            <DigitalContactCard />
 
             {/* Devis gratuit */}
             <Link

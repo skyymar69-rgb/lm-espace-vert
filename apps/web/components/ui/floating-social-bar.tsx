@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Facebook, Instagram, Wrench } from 'lucide-react'
+import { Phone, Facebook } from 'lucide-react'
 
 const items = [
   {
@@ -26,31 +26,6 @@ const items = [
     href: 'https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/',
     isPhone: false,
     icon: <Facebook size={18} aria-hidden="true" />,
-    color: '#0B3D2C',
-  },
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/lm_espacevert',
-    isPhone: false,
-    icon: <Instagram size={18} aria-hidden="true" />,
-    color: '#0B3D2C',
-  },
-  {
-    label: 'AlloVoisins',
-    href: 'https://www.allovoisins.com/p/lmespacevert-1',
-    isPhone: false,
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <text x="2" y="16" fontSize="11" fontWeight="bold" fontFamily="sans-serif">AV</text>
-      </svg>
-    ),
-    color: '#0B3D2C',
-  },
-  {
-    label: 'Travaux.com',
-    href: 'https://www.travaux.com/professionnel/lm-espace-vert',
-    isPhone: false,
-    icon: <Wrench size={18} aria-hidden="true" />,
     color: '#0B3D2C',
   },
 ]

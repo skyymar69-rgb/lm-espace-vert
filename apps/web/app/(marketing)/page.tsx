@@ -77,7 +77,7 @@ const services = [
   { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: '/images/blog-creation-jardin.webp', href: '/services/creation-jardins' },
   { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/travaux-paysagers.webp', href: '/services/maconnerie-paysagere' },
   { icon: Droplets, title: 'Arrosage automatique', desc: "Systèmes d'arrosage intelligents pour économiser l'eau.", image: '/images/arrosage-automatique.webp', href: '/services/arrosage-automatique' },
-  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/blog-gazon-rouleau.webp', href: '/services/engazonnement' },
+  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/blog-pelouse.webp', href: '/services/engazonnement' },
 ] as const
 
 // #17 — durées estimées sous chaque step
@@ -195,8 +195,8 @@ export default function HomePage() {
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end" aria-label="Hero — LM Espace Vert paysagiste">
         <Image
-          src="https://local-fr-public.s3.eu-west-3.amazonaws.com/prod/webtool/userfiles/150252/Travaux%20paysagers%20%C3%A0%20Saint-Didier-au-Mont-d%27Or.webp"
-          alt="LM Espace Vert — Travaux paysagers à Saint-Didier-au-Mont-d'Or"
+          src="/images/realisation-1.webp"
+          alt="LM Espace Vert — Jardin aménagé à Saint-Didier-au-Mont-d'Or"
           fill
           className="object-cover object-center"
           priority
@@ -213,9 +213,9 @@ export default function HomePage() {
             Paysagiste · Saint-Didier-au-Mont-d&apos;Or &amp; Lyon Nord
           </p>
           {/* #1 — titre outcome-focused */}
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] max-w-2xl mb-3" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.25))' }}>
-            Votre jardin transformé,<br />
-            <span style={{ color: '#80BC00' }}>résultat garanti.</span>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] max-w-2xl mb-3 text-balance" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.25))' }}>
+            Votre jardin transformé,{' '}
+            <span style={{ color: '#4A7A00' }}>résultat garanti.</span>
           </h1>
           {/* #1 — sous-titre enrichi */}
           <p className="text-white/60 text-sm font-medium mb-5 tracking-wide" style={{ animationDelay: '100ms' }} data-animate="fade-in-up">
@@ -232,12 +232,6 @@ export default function HomePage() {
               style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
             >
               Obtenir mon devis gratuit <ArrowRight size={14} />
-            </Link>
-            <Link
-              href="/tarifs"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold border border-white/35 text-white hover:bg-white/10 transition-colors"
-            >
-              Estimer mon budget
             </Link>
             <Link
               href="/realisations"
@@ -287,17 +281,17 @@ export default function HomePage() {
           <dl className="grid grid-cols-2 sm:grid-cols-4 gap-8 divide-x divide-[#EDEDED]">
             <div className="text-center">
               <dt className="font-display text-4xl sm:text-5xl font-bold" style={{ color: '#425D07' }}>
-                <StatCounter value={5} suffix="+" />
+                <StatCounter value={5} suffix=" ans" />
               </dt>
               <Calendar size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>Années d&apos;expérience</dd>
+              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>d&apos;expérience</dd>
             </div>
             <div className="text-center">
               <dt className="font-display text-4xl sm:text-5xl font-bold" style={{ color: '#425D07' }}>
                 <StatCounter value={200} suffix="+" />
               </dt>
               <Users size={16} className="mx-auto mt-1 mb-1" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>Clients satisfaits</dd>
+              <dd className="text-sm font-semibold" style={{ color: '#425D07' }}>Jardins réalisés</dd>
             </div>
             <div className="text-center">
               <dt className="font-display text-4xl sm:text-5xl font-bold" style={{ color: '#425D07' }}>
@@ -323,8 +317,8 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="rounded-2xl overflow-hidden shadow-md">
               <Image
-                src="/images/photo-equipe.webp"
-                alt="Léo Maurice et l'équipe LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
+                src="/images/leo-portrait.webp"
+                alt="Léo Maurice, fondateur et paysagiste LM Espace Vert à Saint-Didier-au-Mont-d'Or"
                 width={640}
                 height={480}
                 className="object-cover w-full h-[420px] lg:h-[480px]"
@@ -642,19 +636,31 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 10 : ILS NOUS FONT CONFIANCE ── */}
-      {/* Juste après la section "Pourquoi nous choisir" — badges texte partenaires */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-12 border-t border-[#EDEDED]" aria-label="Nos partenaires et certifications">
+      {/* Cartes partenaires & certifications avec icônes et descriptions */}
+      <section style={{ backgroundColor: '#F7F5F0' }} className="py-14 border-t border-[#EDEDED]" aria-label="Nos partenaires et certifications">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#5C606B' }}>Ils nous font confiance</p>
-          <div className="flex flex-wrap justify-center gap-6 items-center">
-            {['RC Pro', 'CERTIPHYTO', 'Husqvarna', 'SAP'].map((partner) => (
-              <span
-                key={partner}
-                className="rounded-xl border px-5 py-2.5 text-sm font-bold tracking-wide"
-                style={{ borderColor: '#EDEDED', color: '#425D07', backgroundColor: '#ffffff' }}
+          <p className="text-center text-xs font-semibold uppercase tracking-widest mb-8" style={{ color: '#5C606B' }}>Ils nous font confiance</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { Icon: Shield, label: 'RC Pro', desc: 'Responsabilité Civile Professionnelle' },
+              { Icon: Leaf, label: 'CERTIPHYTO', desc: 'Certifié produits phytosanitaires' },
+              { Icon: Scissors, label: 'Husqvarna', desc: 'Matériel professionnel agréé' },
+              { Icon: Users, label: 'SAP', desc: 'Service à la Personne agréé' },
+            ].map(({ Icon, label, desc }) => (
+              <div
+                key={label}
+                className="flex flex-col items-center text-center gap-3 rounded-2xl border bg-white px-5 py-6 shadow-sm"
+                style={{ borderColor: '#EDEDED' }}
               >
-                {partner}
-              </span>
+                <div
+                  className="w-11 h-11 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(128,188,0,0.10)' }}
+                >
+                  <Icon size={20} style={{ color: '#80BC00' }} aria-hidden="true" />
+                </div>
+                <p className="text-sm font-bold" style={{ color: '#425D07' }}>{label}</p>
+                <p className="text-xs leading-snug" style={{ color: '#5C606B' }}>{desc}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -666,7 +672,7 @@ export default function HomePage() {
           <div className="text-center mb-10">
             <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#425D07' }}>Zone Couverte</p>
             <h2 id="zone-heading" className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
-              📍 Zone d&apos;intervention — rayon de 20 km
+              Zone d&apos;intervention — rayon de 20 km
             </h2>
             <p className="text-[#5C606B] mt-3 max-w-xl mx-auto">
               Basé à Saint-Didier-au-Mont-d&apos;Or, nous intervenons dans tout le nord-ouest lyonnais.

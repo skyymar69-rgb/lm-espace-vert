@@ -27,10 +27,10 @@ export function StickyContactBar() {
         backgroundColor: '#FFFFFF',
         borderTop: '1px solid #EDEDED',
         boxShadow: '0 -4px 16px rgba(0,0,0,0.07)',
-        padding: '10px 16px',
+        padding: '6px 12px',
         display: 'flex',
         gap: '8px',
-        height: '56px',
+        height: '44px',
         alignItems: 'center',
       }}
       role="complementary"
@@ -50,9 +50,9 @@ export function StickyContactBar() {
           borderRadius: '12px',
           backgroundColor: '#25D366',
           padding: '0 8px',
-          height: '36px',
+          height: '30px',
           fontWeight: 600,
-          fontSize: '13px',
+          fontSize: '12px',
           color: '#FFFFFF',
           textDecoration: 'none',
         }}
@@ -74,9 +74,9 @@ export function StickyContactBar() {
           borderRadius: '12px',
           backgroundColor: '#425D07',
           padding: '0 8px',
-          height: '36px',
+          height: '30px',
           fontWeight: 600,
-          fontSize: '13px',
+          fontSize: '12px',
           color: '#FFFFFF',
           textDecoration: 'none',
         }}
@@ -98,9 +98,9 @@ export function StickyContactBar() {
           borderRadius: '12px',
           backgroundColor: '#80BC00',
           padding: '0 8px',
-          height: '36px',
+          height: '30px',
           fontWeight: 600,
-          fontSize: '13px',
+          fontSize: '12px',
           color: '#FFFFFF',
           textDecoration: 'none',
         }}
