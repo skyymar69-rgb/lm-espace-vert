@@ -72,12 +72,12 @@ const localBusinessJsonLd = {
 
 // #6 — liens spécifiques vers chaque page service
 const services = [
-  { icon: Scissors, title: "Entretien d'espaces verts", desc: 'Tonte, taille de haies, désherbage. Votre jardin toujours impeccable.', image: '/images/entretien-espaces-verts.webp', href: '/services/entretien-espaces-verts' },
-  { icon: TreePine, title: 'Élagage & Abattage', desc: 'Élagage raisonné et abattage sécurisé par des professionnels équipés.', image: '/images/elagage-abattage.webp', href: '/services/elagage-abattage' },
-  { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: '/images/blog-creation-jardin.webp', href: '/services/creation-jardins' },
-  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/travaux-paysagers.webp', href: '/services/maconnerie-paysagere' },
-  { icon: Droplets, title: 'Arrosage automatique', desc: "Systèmes d'arrosage intelligents pour économiser l'eau.", image: '/images/arrosage-automatique.webp', href: '/services/arrosage-automatique' },
-  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/blog-pelouse.webp', href: '/services/engazonnement' },
+  { icon: Scissors, title: "Entretien d'espaces verts", desc: 'Tonte, taille de haies, désherbage. Votre jardin toujours impeccable.', image: '/images/service-taille-haie.jpg', href: '/services/entretien-espaces-verts' },
+  { icon: TreePine, title: 'Élagage & Abattage', desc: 'Élagage raisonné et abattage sécurisé par des professionnels équipés.', image: '/images/service-elagage.jpg', href: '/services/elagage-abattage' },
+  { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: '/images/service-jardin-amenage-2.jpg', href: '/services/creation-jardins' },
+  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/service-terrasse.jpg', href: '/services/maconnerie-paysagere' },
+  { icon: Droplets, title: 'Arrosage automatique', desc: "Systèmes d'arrosage intelligents pour économiser l'eau.", image: '/images/service-arrosage.jpg', href: '/services/arrosage-automatique' },
+  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/service-gazon.jpg', href: '/services/engazonnement' },
 ] as const
 
 // #17 — durées estimées sous chaque step
@@ -195,8 +195,8 @@ export default function HomePage() {
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end" aria-label="Hero — LM Espace Vert paysagiste">
         <Image
-          src="/images/realisation-1.webp"
-          alt="LM Espace Vert — Jardin aménagé à Saint-Didier-au-Mont-d'Or"
+          src="/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg"
+          alt="LM Espace Vert — Jardin aménagé avec terrasse moderne à Limonest"
           fill
           className="object-cover object-center"
           priority
@@ -386,8 +386,8 @@ export default function HomePage() {
           </div>
           <div className="grid sm:grid-cols-2 gap-8">
             {[
-              { before: '/images/avant1.webp', after: '/images/apres1.webp', title: "Création jardin — Saint-Didier-au-Mont-d'Or", label: 'Création complète · 3 semaines' },
-              { before: '/images/avant2.webp', after: '/images/apres2.webp', title: 'Aménagement extérieur — Limonest', label: 'Maçonnerie paysagère · 2 semaines' },
+              { before: '/images/scraped/avant1.webp', after: '/images/scraped/apres1.webp', title: "Création jardin — Saint-Didier-au-Mont-d'Or", label: 'Création complète · 3 semaines' },
+              { before: '/images/scraped/avant2.webp', after: '/images/scraped/apres2.webp', title: 'Aménagement extérieur — Limonest', label: 'Maçonnerie paysagère · 2 semaines' },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl overflow-hidden border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]">
                 <div className="grid grid-cols-2 gap-0.5 bg-[#EDEDED]">

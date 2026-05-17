@@ -15,100 +15,124 @@ type Realisation = {
 
 const realisations: Realisation[] = [
   {
-    title: 'Création jardin contemporain — Limonest',
+    title: 'Aménagement de cour et jardin — Limonest',
     category: 'Création',
-    image: '/images/realisation-1.webp',
+    image: '/images/scraped/Aménagement de cour et jardin extérieur près de Limonest.jpeg',
     year: '2025',
   },
   {
-    title: 'Aménagement extérieur sur mesure — Limonest',
-    category: 'Création',
-    image: '/images/realisation-3.webp',
-    year: '2025',
-  },
-  {
-    title: 'Taille de haies copropriété — Limonest',
-    category: 'Entretien',
-    image: '/images/taille-haies-1.webp',
-    year: '2025',
-  },
-  {
-    title: 'Entretien espaces verts — Saint-Didier',
-    category: 'Entretien',
-    image: '/images/entretien-espaces-verts.webp',
-    year: '2025',
-  },
-  {
-    title: 'Élagage raisonné — Saint-Didier',
+    title: 'Taille de haies professionnelle — Limonest',
     category: 'Élagage',
-    image: '/images/elagage-abattage.webp',
+    image: '/images/scraped/Service professionnel de taille de haies à Limonest.jpeg',
     year: '2025',
   },
   {
-    title: 'Jardin paysager résidentiel — Limonest',
-    category: 'Création',
-    image: '/images/realisation-4.webp',
-    year: '2024',
-  },
-  {
-    title: 'Terrasse et espace de vie — Limonest',
-    category: 'Maçonnerie',
-    image: '/images/realisation-5.webp',
-    year: '2024',
-  },
-  {
-    title: 'Création espaces extérieurs — Limonest',
-    category: 'Création',
-    image: '/images/realisation-6.webp',
-    year: '2024',
-  },
-  {
-    title: 'Aménagement paysager — Saint-Didier',
-    category: 'Création',
-    image: '/images/travaux-paysagers.webp',
-    year: '2024',
-  },
-  {
-    title: 'Pose arrosage automatique — Saint-Didier',
+    title: "Pose d'arrosage automatique — Saint-Didier",
     category: 'Arrosage',
-    image: '/images/arrosage-automatique.webp',
-    year: '2024',
-  },
-  {
-    title: 'Conception jardin sur mesure — Limonest',
-    category: 'Création',
-    image: '/images/realisation-7.webp',
-    year: '2024',
-  },
-  {
-    title: 'Aménagement cour et jardin — Limonest',
-    category: 'Création',
-    image: '/images/realisation-9.webp',
-    year: '2023',
-  },
-  {
-    title: 'Terrasse moderne et jardin — Limonest',
-    category: 'Maçonnerie',
-    image: '/images/realisation-10.webp',
-    year: '2023',
-  },
-  {
-    title: 'Transformation jardin — Limonest',
-    category: 'Avant/Après',
-    image: '/images/apres1.webp',
+    image: "/images/scraped/Pose d'arrosage automatique à Saint-Didier-au-Mont-d'Or.webp",
     year: '2025',
-    beforeAfter: { before: '/images/avant1.webp', after: '/images/apres1.webp' },
   },
   {
-    title: 'Rénovation aménagement extérieur — Limonest',
-    category: 'Avant/Après',
-    image: '/images/apres2.webp',
+    title: 'Entretien des haies — Limonest',
+    category: 'Entretien',
+    image: '/images/scraped/Entretien des haies près de Limonest .webp',
+    year: '2025',
+    beforeAfter: {
+      before: '/images/scraped/avant1.webp',
+      after: '/images/scraped/apres1.webp',
+    },
+  },
+  {
+    title: 'Jardin avec terrasse moderne — Limonest',
+    category: 'Création',
+    image: '/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg',
+    year: '2025',
+  },
+  {
+    title: 'Élagage toutes hauteurs — Limonest',
+    category: 'Élagage',
+    image: '/images/scraped/Élagage toutes hauteurs près de Limonest .webp',
+    year: '2025',
+  },
+  {
+    title: "Réseau d'irrigation enterré — Limonest",
+    category: 'Arrosage',
+    image: "/images/scraped/Pose du réseau d'irrigation enterré près de Limonest.webp",
+    year: '2025',
+  },
+  {
+    title: 'Création paysagère sur mesure — Limonest',
+    category: 'Création',
+    image: '/images/scraped/Aménagement extérieur avec création paysagère sur mesure près de Limonest.jpeg',
     year: '2024',
-    beforeAfter: { before: '/images/avant2.webp', after: '/images/apres2.webp' },
+    beforeAfter: {
+      before: '/images/scraped/avant2.webp',
+      after: '/images/scraped/apres2.webp',
+    },
+  },
+  {
+    title: "Entretien d'espaces verts — Limonest",
+    category: 'Entretien',
+    image: "/images/scraped/Entretien d'espaces verts et jardins près de Limones.jpeg",
+    year: '2024',
+  },
+  {
+    title: "Élagage sécurisé — Limonest",
+    category: 'Élagage',
+    image: '/images/scraped/Élagage sécurisé et taille de haies sur mesure près de Limonest2.jpeg',
+    year: '2024',
+  },
+  {
+    title: "Réglage du système d'arrosage — Limonest",
+    category: 'Arrosage',
+    image: "/images/scraped/Réglage du système d'arrosage près de Limonest.webp",
+    year: '2024',
+  },
+  {
+    title: 'Conception de jardin paysager — Limonest',
+    category: 'Création',
+    image: "/images/scraped/Conception de jardin paysager et aménagement extérieur à Limonest.jpeg",
+    year: '2024',
+  },
+  {
+    title: "Tonte de pelouse et entretien — Limonest",
+    category: 'Entretien',
+    image: '/images/scraped/Tonte de pelouse et entretien d\'espaces verts près de Limonest.jpeg',
+    year: '2024',
+  },
+  {
+    title: "Travaux d'élagage — Saint-Didier",
+    category: 'Élagage',
+    image: "/images/scraped/Travaux d'élagage à Saint-Didier-au-Mont-d'Or.webp",
+    year: '2024',
+  },
+  {
+    title: "Maintenance arrosage automatique — Limonest",
+    category: 'Arrosage',
+    image: "/images/scraped/Maintenance du système d'arrosage près de Limonest.webp",
+    year: '2023',
+  },
+  {
+    title: "Allée de gravier et jardin — Limonest",
+    category: 'Création',
+    image: '/images/scraped/Allée de gravier dans un jardin avec arbres élagués et un panier de basket Limonest.webp',
+    year: '2023',
+  },
+  {
+    title: "Taille de haies et arbustes — Limonest",
+    category: 'Élagage',
+    image: "/images/scraped/Coupe et entretien de haies et arbustes à Limonest.jpeg",
+    year: '2023',
+  },
+  {
+    title: "Service d'entretien de jardin — Limonest",
+    category: 'Entretien',
+    image: "/images/scraped/Service d'entretien de jardin et espaces verts à Limonest.jpeg",
+    year: '2023',
   },
 ]
 
-const categories = ['Tout', 'Création', 'Entretien', 'Élagage', 'Maçonnerie', 'Arrosage', 'Avant/Après']
+const categories = ['Tout', 'Création', 'Entretien', 'Élagage', 'Arrosage']
 
 export function RealisationsGallery() {
   const [activeCategory, setActiveCategory] = useState('Tout')

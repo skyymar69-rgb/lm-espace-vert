@@ -5,31 +5,31 @@ import { ArrowRight, CheckCircle, Phone, MapPin, Star, ShieldCheck, Recycle, Awa
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
-  title: "Ã‰lagage & Abattage d'Arbres Lyon Nord | LM Espace Vert",
-  description: "Ã‰lagage raisonnÃ© et abattage sÃ©curisÃ© d'arbres Ã  Lyon nord par LM Espace Vert, certifiÃ© CERTIPHYTO. Broyage des dÃ©chets inclus. Intervention sur Saint-Didier, Caluire, Ã‰cully. Devis gratuit.",
+  title: "Élagage & Abattage d'Arbres Lyon Nord | LM Espace Vert",
+  description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord par LM Espace Vert, certifié CERTIPHYTO. Broyage des déchets inclus. Intervention sur Saint-Didier, Caluire, Écully. Devis gratuit.",
   alternates: { canonical: 'https://www.lmespacevert.fr/services/elagage-abattage' },
   openGraph: {
-    title: "Ã‰lagage & Abattage d'Arbres Lyon Nord â€” LM Espace Vert",
-    description: "Ã‰lagage raisonnÃ© et abattage sÃ©curisÃ© d'arbres Ã  Lyon nord par LM Espace Vert, certifiÃ© CERTIPHYTO. Broyage des dÃ©chets inclus. Devis gratuit.",
+    title: "Élagage & Abattage d'Arbres Lyon Nord — LM Espace Vert",
+    description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord par LM Espace Vert, certifié CERTIPHYTO. Broyage des déchets inclus. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/elagage-abattage',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/elagage-abattage.webp', width: 1200, height: 630, alt: "Ã‰lagage et abattage d'arbres â€” LM Espace Vert" }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/service-elagage-2.jpg', width: 1200, height: 630, alt: "Élagage et abattage d'arbres — LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Ã‰lagage & Abattage d'Arbres Lyon Nord â€” LM Espace Vert",
-    description: "Ã‰lagage raisonnÃ© et abattage sÃ©curisÃ© d'arbres Ã  Lyon nord. CertifiÃ© CERTIPHYTO. Devis gratuit.",
-    images: ['https://www.lmespacevert.fr/images/elagage-abattage.webp'],
+    title: "Élagage & Abattage d'Arbres Lyon Nord — LM Espace Vert",
+    description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord. Certifié CERTIPHYTO. Devis gratuit.",
+    images: ['https://www.lmespacevert.fr/images/service-elagage-2.jpg'],
   },
 }
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: "Ã‰lagage et abattage d'arbres",
-  serviceType: "Ã‰lagage et abattage d'arbres",
+  name: "Élagage et abattage d'arbres",
+  serviceType: "Élagage et abattage d'arbres",
   url: 'https://www.lmespacevert.fr/services/elagage-abattage',
-  description: "Ã‰lagage raisonnÃ©, taille douce et abattage sÃ©curisÃ© d'arbres Ã  Saint-Didier-au-Mont-d'Or et dans le nord-ouest lyonnais. Broyage et Ã©vacuation des dÃ©chets. Ã‰quipe certifiÃ©e CERTIPHYTO.",
+  description: "Élagage raisonné, taille douce et abattage sécurisé d'arbres à Saint-Didier-au-Mont-d'Or et dans le nord-ouest lyonnais. Broyage et évacuation des déchets. Équipe certifiée CERTIPHYTO.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'LM Espace Vert',
@@ -62,41 +62,41 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
     { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
-    { '@type': 'ListItem', position: 3, name: 'Ã‰lagage & Abattage', item: 'https://www.lmespacevert.fr/services/elagage-abattage' },
+    { '@type': 'ListItem', position: 3, name: 'Élagage & Abattage', item: 'https://www.lmespacevert.fr/services/elagage-abattage' },
   ],
 }
 
 const features = [
-  "Ã‰lagage de formation et d'entretien",
-  "Taille douce pour la santÃ© de l'arbre",
-  'Abattage dirigÃ© avec techniques sÃ©curisÃ©es',
-  'Broyage sur place et Ã©vacuation des dÃ©chets',
+  "Élagage de formation et d'entretien",
+  "Taille douce pour la santé de l'arbre",
+  'Abattage dirigé avec techniques sécurisées',
+  'Broyage sur place et évacuation des déchets',
   'Soins aux arbres remarquables (pansements, traitements)',
-  'Certification CERTIPHYTO â€” produits phyto maÃ®trisÃ©s',
+  'Certification CERTIPHYTO — produits phyto maîtrisés',
 ]
 
 const advantages = [
-  { icon: Award, title: 'Ã‰quipe certifiÃ©e CERTIPHYTO', desc: 'Professionnels formÃ©s et certifiÃ©s pour des interventions sÃ»res et respectueuses.' },
-  { icon: ShieldCheck, title: 'Techniques ISA respectÃ©es', desc: 'Coupes propres selon les standards internationaux pour prÃ©server la vitalitÃ© des arbres.' },
-  { icon: Recycle, title: 'DÃ©chets valorisÃ©s', desc: 'Broyage sur place en BRF paillage, Ã©vacuation vers filiÃ¨res de compostage.' },
+  { icon: Award, title: 'Équipe certifiée CERTIPHYTO', desc: 'Professionnels formés et certifiés pour des interventions sûres et respectueuses.' },
+  { icon: ShieldCheck, title: 'Techniques ISA respectées', desc: 'Coupes propres selon les standards internationaux pour préserver la vitalité des arbres.' },
+  { icon: Recycle, title: 'Déchets valorisés', desc: 'Broyage sur place en BRF paillage, évacuation vers filières de compostage.' },
 ]
 
 const faqs = [
   {
-    q: "Quelle est la diffÃ©rence entre l'Ã©lagage et l'abattage ?",
-    a: "L'Ã©lagage consiste Ã  tailler les branches d'un arbre vivant pour amÃ©liorer sa forme, sa santÃ© ou rÃ©duire les risques. L'abattage est l'opÃ©ration qui consiste Ã  couper l'arbre en totalitÃ© lorsqu'il est dangereux, mort, ou qu'il gÃªne dÃ©finitivement. Nos experts Ã©valuent systÃ©matiquement la meilleure option lors de la visite gratuite.",
+    q: "Quelle est la différence entre l'élagage et l'abattage ?",
+    a: "L'élagage consiste à tailler les branches d'un arbre vivant pour améliorer sa forme, sa santé ou réduire les risques. L'abattage est l'opération qui consiste à couper l'arbre en totalité lorsqu'il est dangereux, mort, ou qu'il gêne définitivement. Nos experts évaluent systématiquement la meilleure option lors de la visite gratuite.",
   },
   {
-    q: "Avez-vous besoin d'une autorisation pour abattre un arbre Ã  Lyon ?",
-    a: "En zone urbaine dans le RhÃ´ne, l'abattage d'arbres de plus de 1m de circonfÃ©rence peut nÃ©cessiter une dÃ©claration prÃ©alable auprÃ¨s de la mairie. En lotissement ou dans certaines zones protÃ©gÃ©es, une autorisation est obligatoire. Nous vous conseillons sur les dÃ©marches administratives et pouvons effectuer les demandes en votre nom.",
+    q: "Avez-vous besoin d'une autorisation pour abattre un arbre à Lyon ?",
+    a: "En zone urbaine dans le Rhône, l'abattage d'arbres de plus de 1m de circonférence peut nécessiter une déclaration préalable auprès de la mairie. En lotissement ou dans certaines zones protégées, une autorisation est obligatoire. Nous vous conseillons sur les démarches administratives et pouvons effectuer les demandes en votre nom.",
   },
   {
-    q: "Quelle est la bonne saison pour Ã©laguer un arbre Ã  Lyon nord ?",
-    a: "L'Ã©lagage se pratique idÃ©alement Ã  la fin de l'hiver (fÃ©vrier-mars) avant la reprise de vÃ©gÃ©tation, ou en Ã©tÃ© aprÃ¨s la montÃ©e de sÃ¨ve (juillet-aoÃ»t). Certains arbres comme les cerisiers et fruitiers doivent Ãªtre taillÃ©s en dehors des pÃ©riodes humides pour Ã©viter les maladies. Nous adaptons le calendrier Ã  chaque essence.",
+    q: "Quelle est la bonne saison pour élaguer un arbre à Lyon nord ?",
+    a: "L'élagage se pratique idéalement à la fin de l'hiver (février-mars) avant la reprise de végétation, ou en été après la montée de sève (juillet-août). Certains arbres comme les cerisiers et fruitiers doivent être taillés en dehors des périodes humides pour éviter les maladies. Nous adaptons le calendrier à chaque essence.",
   },
   {
-    q: "Que faites-vous des dÃ©chets d'Ã©lagage ?",
-    a: "Tous les dÃ©chets issus de nos interventions d'Ã©lagage et d'abattage sont broyÃ©s sur place (lorsque c'est possible) pour produire du BRF (Bois RamÃ©al FragmentÃ©) que vous pouvez utiliser en paillage. Les branches plus grosses sont Ã©vacuÃ©es et orientÃ©es vers des filiÃ¨res de valorisation Ã©nergÃ©tique ou de compostage. Nous laissons votre jardin propre.",
+    q: "Que faites-vous des déchets d'élagage ?",
+    a: "Tous les déchets issus de nos interventions d'élagage et d'abattage sont broyés sur place (lorsque c'est possible) pour produire du BRF (Bois Raméal Fragmenté) que vous pouvez utiliser en paillage. Les branches plus grosses sont évacuées et orientées vers des filières de valorisation énergétique ou de compostage. Nous laissons votre jardin propre.",
   },
 ]
 
@@ -125,7 +125,7 @@ export default function ElagageAbattagePage() {
             <li aria-hidden="true">/</li>
             <li><Link href="/services" className="hover:text-[#2F2F2F] transition-colors">Services</Link></li>
             <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[#2F2F2F]">Ã‰lagage &amp; Abattage</span></li>
+            <li><span aria-current="page" className="text-[#2F2F2F]">Élagage &amp; Abattage</span></li>
           </ol>
         </div>
       </nav>
@@ -133,8 +133,8 @@ export default function ElagageAbattagePage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/elagage-abattage.webp"
-          alt="Ã‰lagage et abattage d'arbres Ã  Lyon nord par LM Espace Vert"
+          src="/images/service-elagage-2.jpg"
+          alt="Élagage et abattage d'arbres à Lyon nord par LM Espace Vert"
           fill
           className="object-cover rounded-b-none"
           priority
@@ -145,10 +145,10 @@ export default function ElagageAbattagePage() {
         />
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 pb-12">
           <h1 id="service-heading" className="font-display text-4xl sm:text-5xl font-bold text-white mb-3">
-            Ã‰lagage &amp; Abattage
+            Élagage &amp; Abattage
           </h1>
           <p className="text-white/80 text-lg max-w-xl mb-6">
-            Interventions sÃ©curisÃ©es sur vos arbres Ã  Lyon nord par des professionnels certifiÃ©s CERTIPHYTO.
+            Interventions sécurisées sur vos arbres à Lyon nord par des professionnels certifiés CERTIPHYTO.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Link
@@ -159,7 +159,7 @@ export default function ElagageAbattagePage() {
               Devis gratuit <ArrowRight size={14} />
             </Link>
             <a
-              href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20devis%20pour%20de%20l%27Ã©lagage..."
+              href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20devis%20pour%20de%20l%27élagage..."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white border border-white/40 hover:bg-white/15 transition-colors"
@@ -170,7 +170,7 @@ export default function ElagageAbattagePage() {
               className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
               style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: '#ffffff' }}
             >
-              Ã€ partir de 250 â‚¬
+              À partir de 250 €
             </span>
           </div>
         </div>
@@ -183,17 +183,17 @@ export default function ElagageAbattagePage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Notre expertise</p>
               <h2 className="font-display text-3xl font-bold mb-5" style={{ color: '#425D07' }}>
-                Ã‰lagage raisonnÃ© pour des arbres en bonne santÃ©
+                Élagage raisonné pour des arbres en bonne santé
               </h2>
               <div className="text-[#8C8F94] leading-relaxed space-y-4">
                 <p>
-                  L&apos;Ã©lagage est une opÃ©ration qui demande une connaissance approfondie des espÃ¨ces arborÃ©es, de leur biologie et de leur comportement. Chez LM Espace Vert, nos arboristes interviennent Ã  Saint-Didier-au-Mont-d&apos;Or, Caluire, Ã‰cully, Neuville-sur-SaÃ´ne et dans tout le nord-ouest lyonnais pour pratiquer un Ã©lagage respectueux qui prÃ©serve la vitalitÃ© de vos arbres.
+                  L&apos;élagage est une opération qui demande une connaissance approfondie des espèces arborées, de leur biologie et de leur comportement. Chez LM Espace Vert, nos arboristes interviennent à Saint-Didier-au-Mont-d&apos;Or, Caluire, Écully, Neuville-sur-Saône et dans tout le nord-ouest lyonnais pour pratiquer un élagage respectueux qui préserve la vitalité de vos arbres.
                 </p>
                 <p>
-                  Nous pratiquons la taille douce selon les mÃ©thodes de l&apos;ISA (International Society of Arboriculture) : coupes propres, angles corrects, pas de tÃªtardage abusif. Pour les arbres remarquables ou classÃ©s, nous rÃ©alisons des soins spÃ©ciaux avec traitement des plaies et surveillance phytosanitaire. Notre Ã©quipe est certifiÃ©e CERTIPHYTO pour l&apos;utilisation contrÃ´lÃ©e des produits phytosanitaires.
+                  Nous pratiquons la taille douce selon les méthodes de l&apos;ISA (International Society of Arboriculture) : coupes propres, angles corrects, pas de têtardage abusif. Pour les arbres remarquables ou classés, nous réalisons des soins spéciaux avec traitement des plaies et surveillance phytosanitaire. Notre équipe est certifiée CERTIPHYTO pour l&apos;utilisation contrôlée des produits phytosanitaires.
                 </p>
                 <p>
-                  Lorsqu&apos;un arbre est irrÃ©mÃ©diablement compromis, dangereux ou gÃªnant, l&apos;abattage dirigÃ© s&apos;impose. Nous maÃ®trisons les techniques d&apos;abattage en milieu contraint (proche de bÃ¢timents, lignes Ã©lectriques, clÃ´tures) grÃ¢ce Ã  notre matÃ©riel professionnel. Tous les dÃ©chets sont broyÃ©s ou Ã©vacuÃ©s, votre propriÃ©tÃ© est rendue propre aprÃ¨s chaque chantier.
+                  Lorsqu&apos;un arbre est irrémédiablement compromis, dangereux ou gênant, l&apos;abattage dirigé s&apos;impose. Nous maîtrisons les techniques d&apos;abattage en milieu contraint (proche de bâtiments, lignes électriques, clôtures) grâce à notre matériel professionnel. Tous les déchets sont broyés ou évacués, votre propriété est rendue propre après chaque chantier.
                 </p>
               </div>
               <Link
@@ -201,7 +201,7 @@ export default function ElagageAbattagePage() {
                 className="inline-flex items-center gap-2 text-sm font-semibold mt-6 hover:gap-3 transition-all"
                 style={{ color: '#425D07' }}
               >
-                Voir nos rÃ©alisations <ArrowRight size={14} />
+                Voir nos réalisations <ArrowRight size={14} />
               </Link>
             </div>
             <ul className="space-y-3">
@@ -216,12 +216,12 @@ export default function ElagageAbattagePage() {
         </div>
       </section>
 
-      {/* AmÃ©lioration 2 â€” Section Avantages */}
+      {/* Amélioration 2 — Section Avantages */}
       <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-center" style={{ color: '#80BC00' }}>Pourquoi nous choisir</p>
           <h2 className="font-display text-2xl font-bold mb-10 text-center" style={{ color: '#425D07' }}>
-            Les avantages de notre service Ã©lagage
+            Les avantages de notre service élagage
           </h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {advantages.map(({ icon: Icon, title, desc }) => (
@@ -237,32 +237,32 @@ export default function ElagageAbattagePage() {
         </div>
       </section>
 
-      {/* AmÃ©lioration 4 â€” TÃ©moignage client */}
+      {/* Amélioration 4 — Témoignage client */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <blockquote className="rounded-2xl border border-[#EDEDED] p-8 text-center" style={{ backgroundColor: '#F7F5F0' }}>
-            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 Ã©toiles">
+            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 étoiles">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={16} fill="#80BC00" style={{ color: '#80BC00' }} aria-hidden="true" />
               ))}
             </div>
             <p className="text-base italic leading-relaxed mb-4" style={{ color: '#2F2F2F' }}>
-              &ldquo;Deux grands pins proches de la maison m&apos;inquiÃ©taient depuis longtemps. L&apos;Ã©quipe de LM Espace Vert est intervenue rapidement, en toute sÃ©curitÃ©. Travail soignÃ©, chantier propre. Je recommande sans hÃ©siter.&rdquo;
+              &ldquo;Deux grands pins proches de la maison m&apos;inquiétaient depuis longtemps. L&apos;équipe de LM Espace Vert est intervenue rapidement, en toute sécurité. Travail soigné, chantier propre. Je recommande sans hésiter.&rdquo;
             </p>
             <footer className="text-sm font-semibold" style={{ color: '#425D07' }}>
-              Bernard T. â€” Ã‰cully
+              Bernard T. — Écully
             </footer>
           </blockquote>
         </div>
       </section>
 
-      {/* Zone gÃ©ographique */}
+      {/* Zone géographique */}
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <MapPin size={24} style={{ color: '#80BC00' }} className="mx-auto mb-3" aria-hidden="true" />
           <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#425D07' }}>Zone d&apos;intervention</h2>
           <p className="text-[#8C8F94] max-w-xl mx-auto">
-            LM Espace Vert rÃ©alise ce service dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Ã‰cully, Tassin, Limonest, Dardilly, Champagne, Neuville-sur-SaÃ´ne et tout le nord-ouest lyonnais.
+            LM Espace Vert réalise ce service dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Écully, Tassin, Limonest, Dardilly, Champagne, Neuville-sur-Saône et tout le nord-ouest lyonnais.
           </p>
         </div>
       </section>
@@ -271,13 +271,13 @@ export default function ElagageAbattagePage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3 text-center" style={{ color: '#80BC00' }}>FAQ</p>
-          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>Questions frÃ©quentes</h2>
+          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>Questions fréquentes</h2>
           <div className="space-y-3">
             {faqs.map((faq) => (
               <details key={faq.q} className="faq-item">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-sm bg-white" style={{ color: '#2F2F2F' }}>
                   {faq.q}
-                  <span className="faq-icon ml-4 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs" style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#80BC00' }}>â–¾</span>
+                  <span className="faq-icon ml-4 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs" style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#80BC00' }}>▾</span>
                 </summary>
                 <div className="faq-body">
                   {faq.a}
@@ -288,7 +288,7 @@ export default function ElagageAbattagePage() {
         </div>
       </section>
 
-      {/* Zones d'intervention â€” chips */}
+      {/* Zones d'intervention — chips */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-5xl px-4 sm:px-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>Nos secteurs</p>
@@ -301,13 +301,13 @@ export default function ElagageAbattagePage() {
               { slug: 'limonest', nom: 'Limonest' },
               { slug: 'dardilly', nom: 'Dardilly' },
               { slug: 'caluire', nom: 'Caluire-et-Cuire' },
-              { slug: 'ecuelly', nom: 'Ã‰cully' },
+              { slug: 'ecuelly', nom: 'Écully' },
               { slug: 'saint-cyr', nom: "Saint-Cyr-au-Mont-d'Or" },
               { slug: 'curis', nom: "Curis-au-Mont-d'Or" },
               { slug: 'tassin', nom: 'Tassin-la-Demi-Lune' },
               { slug: 'collonges', nom: "Collonges-au-Mont-d'Or" },
               { slug: 'francheville', nom: 'Francheville' },
-              { slug: 'neuville', nom: 'Neuville-sur-SaÃ´ne' },
+              { slug: 'neuville', nom: 'Neuville-sur-Saône' },
               { slug: 'craponne', nom: 'Craponne' },
             ].map((v) => (
               <Link
@@ -327,8 +327,8 @@ export default function ElagageAbattagePage() {
       {/* CTA */}
       <section style={{ backgroundColor: '#0B3D2C' }} className="py-16 text-center">
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold text-white mb-3">Votre projet Ã©lagage, on en parle ?</h2>
-          <p className="text-white/70 mb-6">Devis gratuit Â· RÃ©ponse sous 24h Â· Rayon 20 km</p>
+          <h2 className="font-display text-2xl font-bold text-white mb-3">Votre projet élagage, on en parle ?</h2>
+          <p className="text-white/70 mb-6">Devis gratuit · Réponse sous 24h · Rayon 20 km</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"

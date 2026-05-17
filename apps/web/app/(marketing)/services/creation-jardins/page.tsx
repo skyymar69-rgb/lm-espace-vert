@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: "Paysagiste crÃ©ateur Ã  Saint-Didier-au-Mont-d'Or, LM Espace Vert conÃ§oit votre jardin sur mesure Ã  Lyon nord. Plan 2D/3D, choix vÃ©gÃ©taux, massifs floraux. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/creation-jardins',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.webp', width: 1200, height: 630, alt: 'CrÃ©ation de jardins paysagers â€” LM Espace Vert' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/service-jardin-amenage-2.jpg', width: 1200, height: 630, alt: 'CrÃ©ation de jardins paysagers â€” LM Espace Vert' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "CrÃ©ation de Jardins Paysagers â€” LM Espace Vert, paysagiste Lyon",
     description: "Paysagiste crÃ©ateur Ã  Saint-Didier-au-Mont-d'Or, LM Espace Vert conÃ§oit votre jardin sur mesure Ã  Lyon nord. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/realisation-1.webp'],
+    images: ['https://www.lmespacevert.fr/images/service-jardin-amenage-2.jpg'],
   },
 }
 
@@ -141,7 +141,7 @@ export default function CreationJardinsPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/realisation-1.webp"
+          src="/images/service-jardin-amenage-2.jpg"
           alt="CrÃ©ation de jardin paysager Ã  Saint-Didier-au-Mont-d'Or par LM Espace Vert"
           fill
           className="object-cover"

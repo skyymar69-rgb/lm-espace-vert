@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: "LM Espace Vert installe votre systÃ¨me d'arrosage automatique sur mesure Ã  Lyon nord. Programmateurs connectÃ©s, Ã©conomies d'eau jusqu'Ã  40 %. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/arrosage-automatique',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/arrosage-automatique.webp', width: 1200, height: 630, alt: "Installation arrosage automatique Ã  Lyon nord â€” LM Espace Vert" }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/service-arrosage-2.jpg', width: 1200, height: 630, alt: "Installation arrosage automatique Ã  Lyon nord â€” LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Installation Arrosage Automatique Lyon â€” LM Espace Vert",
     description: "Arrosage automatique sur mesure Ã  Lyon nord. Ã‰conomies d'eau jusqu'Ã  40 %. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/arrosage-automatique.webp'],
+    images: ['https://www.lmespacevert.fr/images/service-arrosage-2.jpg'],
   },
 }
 
@@ -133,7 +133,7 @@ export default function ArrosageAutomatiquePage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/arrosage-automatique.webp"
+          src="/images/service-arrosage-2.jpg"
           alt="Installation d'arrosage automatique Ã  Lyon nord par LM Espace Vert"
           fill
           className="object-cover"

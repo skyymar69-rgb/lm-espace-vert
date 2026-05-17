@@ -6,20 +6,20 @@ import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
   title: "Entretien Espaces Verts Lyon Nord | LM Espace Vert",
-  description: "LM Espace Vert assure l'entretien de vos espaces verts Ã  Lyon nord : tonte, taille de haies, dÃ©sherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
+  description: "LM Espace Vert assure l'entretien de vos espaces verts à Lyon nord : tonte, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
   alternates: { canonical: 'https://www.lmespacevert.fr/services/entretien-espaces-verts' },
   openGraph: {
-    title: "Entretien Espaces Verts Lyon Nord â€” LM Espace Vert, paysagiste",
-    description: "LM Espace Vert assure l'entretien de vos espaces verts Ã  Lyon nord : tonte, taille de haies, dÃ©sherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
+    title: "Entretien Espaces Verts Lyon Nord — LM Espace Vert, paysagiste",
+    description: "LM Espace Vert assure l'entretien de vos espaces verts à Lyon nord : tonte, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/entretien-espaces-verts.webp', width: 1200, height: 630, alt: "Entretien d'espaces verts â€” LM Espace Vert" }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/service-taille-haie.jpg', width: 1200, height: 630, alt: "Entretien d'espaces verts — LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Entretien Espaces Verts Lyon Nord â€” LM Espace Vert, paysagiste",
-    description: "Tonte, taille de haies, dÃ©sherbage Ã  Lyon nord. Contrats d'entretien annuels sur mesure. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/entretien-espaces-verts.webp'],
+    title: "Entretien Espaces Verts Lyon Nord — LM Espace Vert, paysagiste",
+    description: "Tonte, taille de haies, désherbage à Lyon nord. Contrats d'entretien annuels sur mesure. Devis gratuit sous 24h.",
+    images: ['https://www.lmespacevert.fr/images/service-taille-haie.jpg'],
   },
 }
 
@@ -29,7 +29,7 @@ const serviceSchema = {
   name: "Entretien d'espaces verts",
   serviceType: "Entretien d'espaces verts",
   url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
-  description: "Entretien rÃ©gulier d'espaces verts Ã  Saint-Didier-au-Mont-d'Or et dans le nord-ouest lyonnais : tonte de pelouse, taille de haies, dÃ©sherbage, fertilisation. Contrats annuels sur mesure.",
+  description: "Entretien régulier d'espaces verts à Saint-Didier-au-Mont-d'Or et dans le nord-ouest lyonnais : tonte de pelouse, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'LM Espace Vert',
@@ -69,34 +69,34 @@ const breadcrumbSchema = {
 const features = [
   'Tonte hebdomadaire ou bimensuelle selon la saison',
   'Taille de haies et arbustes ornementaux',
-  'DÃ©sherbage manuel et traitement phyto raisonnÃ©',
+  'Désherbage manuel et traitement phyto raisonné',
   'Ramassage des feuilles et branchages',
   'Fertilisation et amendement du sol',
-  'Contrats annuels avec passages planifiÃ©s',
+  'Contrats annuels avec passages planifiés',
 ]
 
 const advantages = [
-  { icon: Clock, title: 'Planning rÃ©gulier', desc: 'Des passages planifiÃ©s Ã  l\'avance pour un jardin toujours impeccable.' },
-  { icon: Camera, title: 'Rapport photo', desc: 'Compte-rendu photo aprÃ¨s chaque intervention, disponible dans votre espace client.' },
-  { icon: Ban, title: 'Sans contrat d\'engagement', desc: 'FlexibilitÃ© totale : vous choisissez la frÃ©quence et pouvez modifier Ã  tout moment.' },
+  { icon: Clock, title: 'Planning régulier', desc: 'Des passages planifiés à l\'avance pour un jardin toujours impeccable.' },
+  { icon: Camera, title: 'Rapport photo', desc: 'Compte-rendu photo après chaque intervention, disponible dans votre espace client.' },
+  { icon: Ban, title: 'Sans contrat d\'engagement', desc: 'Flexibilité totale : vous choisissez la fréquence et pouvez modifier à tout moment.' },
 ]
 
 const faqs = [
   {
-    q: "Proposez-vous des contrats d'entretien annuels Ã  Lyon nord ?",
-    a: "Oui, nous proposons des contrats d'entretien sur mesure avec un nombre de passages dÃ©fini Ã  l'avance. Ces contrats couvrent la tonte, la taille de haies, le dÃ©sherbage et les soins saisonniers. Ils peuvent inclure de 6 Ã  30 passages par an selon vos besoins et la taille de votre jardin Ã  Caluire, Ã‰cully, Limonest ou partout dans le nord-ouest lyonnais.",
+    q: "Proposez-vous des contrats d'entretien annuels à Lyon nord ?",
+    a: "Oui, nous proposons des contrats d'entretien sur mesure avec un nombre de passages défini à l'avance. Ces contrats couvrent la tonte, la taille de haies, le désherbage et les soins saisonniers. Ils peuvent inclure de 6 à 30 passages par an selon vos besoins et la taille de votre jardin à Caluire, Écully, Limonest ou partout dans le nord-ouest lyonnais.",
   },
   {
-    q: "Ã€ quelle frÃ©quence faut-il tondre la pelouse Ã  Lyon ?",
-    a: "Ã€ Lyon, la saison de pousse s'Ã©tend d'avril Ã  octobre. Pendant cette pÃ©riode, une tonte hebdomadaire est recommandÃ©e pour maintenir une hauteur de gazon optimale entre 5 et 7 cm. En dehors de la saison, une tonte mensuelle suffit gÃ©nÃ©ralement. Nous adaptons la frÃ©quence selon la mÃ©tÃ©o et la croissance rÃ©elle de votre pelouse.",
+    q: "À quelle fréquence faut-il tondre la pelouse à Lyon ?",
+    a: "À Lyon, la saison de pousse s'étend d'avril à octobre. Pendant cette période, une tonte hebdomadaire est recommandée pour maintenir une hauteur de gazon optimale entre 5 et 7 cm. En dehors de la saison, une tonte mensuelle suffit généralement. Nous adaptons la fréquence selon la météo et la croissance réelle de votre pelouse.",
   },
   {
-    q: "Utilisez-vous des produits chimiques pour le dÃ©sherbage ?",
-    a: "Nous privilÃ©gions le dÃ©sherbage manuel et les produits phytosanitaires raisonnÃ©s certifiÃ©s CERTIPHYTO. Pour les mauvaises herbes persistantes, nous proposons des alternatives bio comme le dÃ©sherbage thermique Ã  la vapeur. Notre objectif est de prÃ©server la santÃ© de votre sol et la biodiversitÃ© de votre jardin.",
+    q: "Utilisez-vous des produits chimiques pour le désherbage ?",
+    a: "Nous privilégions le désherbage manuel et les produits phytosanitaires raisonnés certifiés CERTIPHYTO. Pour les mauvaises herbes persistantes, nous proposons des alternatives bio comme le désherbage thermique à la vapeur. Notre objectif est de préserver la santé de votre sol et la biodiversité de votre jardin.",
   },
   {
-    q: "Entretenez-vous les espaces verts de copropriÃ©tÃ©s et d'entreprises ?",
-    a: "Oui, LM Espace Vert intervient pour les particuliers, les copropriÃ©tÃ©s, les syndics et les entreprises du nord-ouest lyonnais. Nous Ã©tablissons des contrats pluriannuels avec des interventions planifiÃ©es et des rapports d'entretien rÃ©guliers pour les gestionnaires de patrimoine.",
+    q: "Entretenez-vous les espaces verts de copropriétés et d'entreprises ?",
+    a: "Oui, LM Espace Vert intervient pour les particuliers, les copropriétés, les syndics et les entreprises du nord-ouest lyonnais. Nous établissons des contrats pluriannuels avec des interventions planifiées et des rapports d'entretien réguliers pour les gestionnaires de patrimoine.",
   },
 ]
 
@@ -133,8 +133,8 @@ export default function EntretienEspacesVertsPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/entretien-espaces-verts.webp"
-          alt="Entretien d'espaces verts Ã  Saint-Didier-au-Mont-d'Or par LM Espace Vert"
+          src="/images/service-taille-haie.jpg"
+          alt="Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or par LM Espace Vert"
           fill
           className="object-cover"
           priority
@@ -148,7 +148,7 @@ export default function EntretienEspacesVertsPage() {
             Entretien d&apos;Espaces Verts
           </h1>
           <p className="text-white/80 text-lg max-w-xl mb-6">
-            Un jardin toujours impeccable grÃ¢ce Ã  nos contrats d&apos;entretien sur mesure Ã  Lyon nord.
+            Un jardin toujours impeccable grâce à nos contrats d&apos;entretien sur mesure à Lyon nord.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Link
@@ -170,7 +170,7 @@ export default function EntretienEspacesVertsPage() {
               className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
               style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: '#ffffff' }}
             >
-              Ã€ partir de 89 â‚¬ / passage
+              À partir de 89 € / passage
             </span>
           </div>
         </div>
@@ -183,17 +183,17 @@ export default function EntretienEspacesVertsPage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Notre expertise</p>
               <h2 className="font-display text-3xl font-bold mb-5" style={{ color: '#425D07' }}>
-                Un entretien rÃ©gulier pour un jardin en pleine santÃ©
+                Un entretien régulier pour un jardin en pleine santé
               </h2>
               <div className="text-[#8C8F94] leading-relaxed space-y-4">
                 <p>
-                  Un jardin bien entretenu, c&apos;est avant tout un jardin suivi avec mÃ©thode et rÃ©gularitÃ©. Chez LM Espace Vert, nos Ã©quipes interviennent Ã  Saint-Didier-au-Mont-d&apos;Or, Caluire, Ã‰cully, Limonest et dans tout le nord-ouest lyonnais pour assurer l&apos;entretien hebdomadaire, bimensuel ou mensuel de vos espaces verts.
+                  Un jardin bien entretenu, c&apos;est avant tout un jardin suivi avec méthode et régularité. Chez LM Espace Vert, nos équipes interviennent à Saint-Didier-au-Mont-d&apos;Or, Caluire, Écully, Limonest et dans tout le nord-ouest lyonnais pour assurer l&apos;entretien hebdomadaire, bimensuel ou mensuel de vos espaces verts.
                 </p>
                 <p>
-                  Notre service d&apos;entretien comprend la tonte de pelouse avec ramassage des tontes, la taille des haies et des arbustes ornementaux selon les calendriers de vÃ©gÃ©tation, le dÃ©sherbage manuel des allÃ©es et massifs, ainsi que la fertilisation saisonniÃ¨re. Chaque intervention est tracÃ©e et vous recevez un compte-rendu Ã  chaque passage.
+                  Notre service d&apos;entretien comprend la tonte de pelouse avec ramassage des tontes, la taille des haies et des arbustes ornementaux selon les calendriers de végétation, le désherbage manuel des allées et massifs, ainsi que la fertilisation saisonnière. Chaque intervention est tracée et vous recevez un compte-rendu à chaque passage.
                 </p>
                 <p>
-                  Nous travaillons aussi bien pour les particuliers que pour les professionnels, les copropriÃ©tÃ©s et les entreprises du secteur lyonnais. Nos contrats sont flexibles : vous choisissez les prestations incluses, la frÃ©quence et la pÃ©riode d&apos;intervention, sans mauvaise surprise sur votre facture.
+                  Nous travaillons aussi bien pour les particuliers que pour les professionnels, les copropriétés et les entreprises du secteur lyonnais. Nos contrats sont flexibles : vous choisissez les prestations incluses, la fréquence et la période d&apos;intervention, sans mauvaise surprise sur votre facture.
                 </p>
               </div>
               <Link
@@ -201,7 +201,7 @@ export default function EntretienEspacesVertsPage() {
                 className="inline-flex items-center gap-2 text-sm font-semibold mt-6 hover:gap-3 transition-all"
                 style={{ color: '#425D07' }}
               >
-                Voir nos rÃ©alisations <ArrowRight size={14} />
+                Voir nos réalisations <ArrowRight size={14} />
               </Link>
             </div>
             <ul className="space-y-3">
@@ -216,7 +216,7 @@ export default function EntretienEspacesVertsPage() {
         </div>
       </section>
 
-      {/* AmÃ©lioration 2 â€” Section Avantages */}
+      {/* Amélioration 2 — Section Avantages */}
       <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-center" style={{ color: '#80BC00' }}>Pourquoi nous choisir</p>
@@ -237,32 +237,32 @@ export default function EntretienEspacesVertsPage() {
         </div>
       </section>
 
-      {/* AmÃ©lioration 4 â€” TÃ©moignage client */}
+      {/* Amélioration 4 — Témoignage client */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <blockquote className="rounded-2xl border border-[#EDEDED] p-8 text-center" style={{ backgroundColor: '#F7F5F0' }}>
-            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 Ã©toiles">
+            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 étoiles">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={16} fill="#80BC00" style={{ color: '#80BC00' }} aria-hidden="true" />
               ))}
             </div>
             <p className="text-base italic leading-relaxed mb-4" style={{ color: '#2F2F2F' }}>
-              &ldquo;Cela fait deux ans que LM Espace Vert entretient notre jardin. SÃ©rieux, ponctuel, et le jardin est toujours nickel. La photo envoyÃ©e aprÃ¨s chaque passage nous rassure mÃªme quand on est en dÃ©placement.&rdquo;
+              &ldquo;Cela fait deux ans que LM Espace Vert entretient notre jardin. Sérieux, ponctuel, et le jardin est toujours nickel. La photo envoyée après chaque passage nous rassure même quand on est en déplacement.&rdquo;
             </p>
             <footer className="text-sm font-semibold" style={{ color: '#425D07' }}>
-              Jean-Pierre M. â€” Limonest
+              Jean-Pierre M. — Limonest
             </footer>
           </blockquote>
         </div>
       </section>
 
-      {/* Zone gÃ©ographique */}
+      {/* Zone géographique */}
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <MapPin size={24} style={{ color: '#80BC00' }} className="mx-auto mb-3" aria-hidden="true" />
           <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#425D07' }}>Zone d&apos;intervention</h2>
           <p className="text-[#8C8F94] max-w-xl mx-auto">
-            LM Espace Vert rÃ©alise ce service dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Ã‰cully, Tassin, Limonest, Dardilly, Champagne, Neuville-sur-SaÃ´ne et tout le nord-ouest lyonnais.
+            LM Espace Vert réalise ce service dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Écully, Tassin, Limonest, Dardilly, Champagne, Neuville-sur-Saône et tout le nord-ouest lyonnais.
           </p>
         </div>
       </section>
@@ -271,13 +271,13 @@ export default function EntretienEspacesVertsPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3 text-center" style={{ color: '#80BC00' }}>FAQ</p>
-          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>Questions frÃ©quentes</h2>
+          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>Questions fréquentes</h2>
           <div className="space-y-3">
             {faqs.map((faq) => (
               <details key={faq.q} className="faq-item">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-sm bg-white" style={{ color: '#2F2F2F' }}>
                   {faq.q}
-                  <span className="faq-icon ml-4 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs" style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#80BC00' }}>â–¾</span>
+                  <span className="faq-icon ml-4 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs" style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#80BC00' }}>▾</span>
                 </summary>
                 <div className="faq-body">
                   {faq.a}
@@ -288,7 +288,7 @@ export default function EntretienEspacesVertsPage() {
         </div>
       </section>
 
-      {/* Zones d'intervention â€” chips */}
+      {/* Zones d'intervention — chips */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-5xl px-4 sm:px-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>Nos secteurs</p>
@@ -301,13 +301,13 @@ export default function EntretienEspacesVertsPage() {
               { slug: 'limonest', nom: 'Limonest' },
               { slug: 'dardilly', nom: 'Dardilly' },
               { slug: 'caluire', nom: 'Caluire-et-Cuire' },
-              { slug: 'ecuelly', nom: 'Ã‰cully' },
+              { slug: 'ecuelly', nom: 'Écully' },
               { slug: 'saint-cyr', nom: "Saint-Cyr-au-Mont-d'Or" },
               { slug: 'curis', nom: "Curis-au-Mont-d'Or" },
               { slug: 'tassin', nom: 'Tassin-la-Demi-Lune' },
               { slug: 'collonges', nom: "Collonges-au-Mont-d'Or" },
               { slug: 'francheville', nom: 'Francheville' },
-              { slug: 'neuville', nom: 'Neuville-sur-SaÃ´ne' },
+              { slug: 'neuville', nom: 'Neuville-sur-Saône' },
               { slug: 'craponne', nom: 'Craponne' },
             ].map((v) => (
               <Link
@@ -328,7 +328,7 @@ export default function EntretienEspacesVertsPage() {
       <section style={{ backgroundColor: '#0B3D2C' }} className="py-16 text-center">
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-white mb-3">Votre entretien, on en parle ?</h2>
-          <p className="text-white/70 mb-6">Devis gratuit Â· RÃ©ponse sous 24h Â· Rayon 20 km</p>
+          <p className="text-white/70 mb-6">Devis gratuit · Réponse sous 24h · Rayon 20 km</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
