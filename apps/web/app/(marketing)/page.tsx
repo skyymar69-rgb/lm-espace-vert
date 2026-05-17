@@ -195,10 +195,10 @@ export default function HomePage() {
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end" aria-label="Hero — LM Espace Vert paysagiste">
         <Image
-          src="/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg"
-          alt="LM Espace Vert — Jardin aménagé avec terrasse moderne à Limonest"
+          src="/images/realisation-1.webp"
+          alt="LM Espace Vert — Jardin aménagé avec terrasse à Limonest"
           fill
-          className="object-cover object-center"
+          className="object-cover object-top"
           priority
           quality={90}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
