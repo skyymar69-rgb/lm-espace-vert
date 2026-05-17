@@ -17,8 +17,10 @@ async function fetchStrapi<T>(endpoint: string, params: Record<string, string> =
   }
 }
 
+type StrapiRecord = Record<string, unknown>
+
 export async function getStrapiArticles() {
-  return fetchStrapi<any[]>('articles', {
+  return fetchStrapi<StrapiRecord[]>('articles', {
     'sort[0]': 'publishedAt:desc',
     'populate': 'image',
     'pagination[pageSize]': '100',
@@ -26,7 +28,7 @@ export async function getStrapiArticles() {
 }
 
 export async function getStrapiGallery() {
-  return fetchStrapi<any[]>('galerie-photos', {
+  return fetchStrapi<StrapiRecord[]>('galerie-photos', {
     'sort[0]': 'ordre:asc',
     'populate': 'image',
     'pagination[pageSize]': '100',
@@ -34,7 +36,7 @@ export async function getStrapiGallery() {
 }
 
 export async function getStrapiRealisations() {
-  return fetchStrapi<any[]>('realisations', {
+  return fetchStrapi<StrapiRecord[]>('realisations', {
     'sort[0]': 'annee:desc',
     'populate[0]': 'imageAvant',
     'populate[1]': 'imageApres',
@@ -43,7 +45,7 @@ export async function getStrapiRealisations() {
 }
 
 export async function getStrapiTemoignages() {
-  return fetchStrapi<any[]>('temoignages', {
+  return fetchStrapi<StrapiRecord[]>('temoignages', {
     'sort[0]': 'createdAt:desc',
     'populate': '*',
     'pagination[pageSize]': '20',
@@ -51,5 +53,5 @@ export async function getStrapiTemoignages() {
 }
 
 export async function getStrapiSettings() {
-  return fetchStrapi<any>('parametre-site')
+  return fetchStrapi<StrapiRecord>('parametre-site')
 }
