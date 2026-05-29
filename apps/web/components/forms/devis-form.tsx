@@ -38,6 +38,7 @@ interface FormState {
   telephone: string
   email: string
   message: string
+  consentement: boolean
 }
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -112,8 +113,10 @@ export function DevisForm() {
     telephone: '',
     email: '',
     message: '',
+    consentement: false,
   })
   const [phoneError, setPhoneError] = useState('')
+  const [prenomError, setPrenomError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const startedAtRef = useRef<number>(Date.now())
@@ -136,6 +139,14 @@ export function DevisForm() {
     }
   }
 
+  function handlePrenomBlur() {
+    if (form.prenom.trim().length > 0 && form.prenom.trim().length < 2) {
+      setPrenomError('Veuillez saisir votre prénom (2 caractères minimum)')
+    } else {
+      setPrenomError('')
+    }
+  }
+
   function canProceedStep1() {
     return form.projectType !== ''
   }
@@ -149,7 +160,8 @@ export function DevisForm() {
       form.prenom.trim().length >= 2 &&
       form.telephone.trim().length > 0 &&
       isValidFrenchPhone(form.telephone) &&
-      phoneError === ''
+      phoneError === '' &&
+      form.consentement === true
     )
   }
 
@@ -169,20 +181,22 @@ export function DevisForm() {
       .filter(Boolean)
       .join('\n')
 
-    const body = new URLSearchParams({
+    const bodyParams: Record<string, string> = {
       prenom: form.prenom,
       nom: '—',
-      email: form.email || 'non@renseigne.fr',
       telephone: form.telephone.replace(/\D/g, ''),
-      codePostal: '69000',
       sujet: 'devis',
       message: fullMessage,
-      consentement: 'true',
+      consentement: String(form.consentement),
       newsletter: 'false',
       startedAt: String(startedAtRef.current),
       projectType: form.projectType,
       commune: form.commune,
-    })
+    }
+    if (form.email.trim()) {
+      bodyParams.email = form.email.trim()
+    }
+    const body = new URLSearchParams(bodyParams)
 
     try {
       const res = await fetch('/api/contact', {
@@ -454,11 +468,24 @@ export function DevisForm() {
               type="text"
               placeholder="Jean"
               value={form.prenom}
-              onChange={(e) => setForm((f) => ({ ...f, prenom: e.target.value }))}
+              onChange={(e) => {
+                setForm((f) => ({ ...f, prenom: e.target.value }))
+                if (prenomError && e.target.value.trim().length >= 2) setPrenomError('')
+              }}
+              onBlur={handlePrenomBlur}
               className={inputClass}
               autoComplete="given-name"
               required
+              aria-required="true"
+              aria-invalid={prenomError ? 'true' : undefined}
+              aria-describedby={prenomError ? 'prenom-error' : undefined}
+              style={{ borderColor: prenomError ? '#ef4444' : undefined }}
             />
+            {prenomError && (
+              <p id="prenom-error" className="mt-1.5 text-xs" style={{ color: '#ef4444' }} role="alert">
+                {prenomError}
+              </p>
+            )}
           </div>
 
           {/* Téléphone */}
@@ -477,6 +504,8 @@ export function DevisForm() {
               autoComplete="tel"
               inputMode="tel"
               required
+              aria-required="true"
+              aria-invalid={phoneError ? 'true' : undefined}
               aria-describedby={phoneError ? 'phone-error' : undefined}
               style={{
                 borderColor: phoneError ? '#ef4444' : undefined,
@@ -528,6 +557,32 @@ export function DevisForm() {
             <p className="text-right text-xs mt-1" style={{ color: '#8C8F94' }}>
               {form.message.length}/500
             </p>
+          </div>
+
+          {/* Consentement RGPD */}
+          <div className="mb-6 flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="consentement-devis"
+              checked={form.consentement}
+              onChange={(e) => setForm((f) => ({ ...f, consentement: e.target.checked }))}
+              required
+              aria-required="true"
+              className="mt-0.5 h-4 w-4 rounded border-[#D8D8D8] accent-[#80BC00] focus-visible:outline focus-visible:outline-2"
+            />
+            <label htmlFor="consentement-devis" className="text-xs leading-relaxed" style={{ color: '#2F2F2F' }}>
+              J&apos;accepte que mes données soient utilisées pour être recontacté(e) — voir la{' '}
+              <a
+                href="/politique-confidentialite"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:opacity-80"
+                style={{ color: '#425D07' }}
+              >
+                politique de confidentialité
+              </a>
+              . <span aria-label="obligatoire" style={{ color: '#80BC00' }}>*</span>
+            </label>
           </div>
 
           {/* Submit */}

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Leaf, Award, Users, ShieldCheck, MapPin, Recycle, FlaskConical, Tractor, Star, Sprout } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
+import { GOOGLE_RATING, GOOGLE_RATING_NUM, GOOGLE_REVIEWS, EXPERIENCE_YEARS, PROJECTS_DONE } from '@/lib/business'
 
 export const metadata: Metadata = {
   title: "À propos de LM Espace Vert — Léo Maurice, paysagiste à Lyon",
@@ -32,7 +33,7 @@ const values = [
   {
     icon: <Award size={24} aria-hidden="true" />,
     title: 'Qualité',
-    desc: 'Avec 5 ans d\'expérience et une formation continue, Léo apporte un savoir-faire reconnu. La qualité se ressent dans chaque détail, chaque finition.',
+    desc: `Avec ${EXPERIENCE_YEARS} ans d'expérience et une formation continue, Léo apporte un savoir-faire reconnu. La qualité se ressent dans chaque détail, chaque finition.`,
   },
   {
     icon: <Users size={24} aria-hidden="true" />,
@@ -100,7 +101,7 @@ const localBusinessSchema = {
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '12:00' },
   ],
   areaServed: zones.map((name) => ({ '@type': 'City', name })),
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '47', bestRating: '5', worstRating: '1' },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: GOOGLE_RATING_NUM, reviewCount: String(GOOGLE_REVIEWS), bestRating: '5', worstRating: '1' },
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', credentialCategory: 'CERTIPHYTO' },
   ],
@@ -196,9 +197,9 @@ export default function AProposPage() {
                   — taille, élagage, maçonnerie paysagère — et sensibilité artistique pour des jardins qui durent.
                 </p>
                 <p>
-                  En plus de 7 ans d&apos;expérience terrain, il a développé une approche singulière :
+                  En plus de {EXPERIENCE_YEARS} ans d&apos;expérience terrain, il a développé une approche singulière :
                   écouter vraiment, conseiller honnêtement, et réaliser avec soin. Résultat : plus de
-                  200 projets réalisés, 150+ clients fidèles et une note de 4,9/5 sur Google.
+                  {PROJECTS_DONE} projets réalisés, 150+ clients fidèles et une note de {GOOGLE_RATING}/5 sur Google.
                   La confiance de ses clients reste sa meilleure récompense.
                 </p>
               </div>
@@ -304,8 +305,8 @@ export default function AProposPage() {
             {[
               { value: '150+', label: 'clients fidèles' },
               { value: '500+', label: 'arbres taillés / an' },
-              { value: '50+', label: 'jardins créés' },
-              { value: '7 ans', label: "d'expérience" },
+              { value: PROJECTS_DONE, label: 'projets réalisés' },
+              { value: `${EXPERIENCE_YEARS} ans`, label: "d'expérience" },
             ].map(({ value, label }) => (
               <div key={label} className="rounded-2xl border border-[#EDEDED] bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
                 <p className="font-display text-4xl font-bold" style={{ color: '#425D07' }}>{value}</p>
@@ -315,13 +316,13 @@ export default function AProposPage() {
           </div>
           {/* Étoiles Google */}
           <div className="mt-10 flex flex-col items-center gap-2">
-            <div className="flex items-center gap-1" aria-label="Note 4,9 sur 5 étoiles" role="img">
+            <div className="flex items-center gap-1" aria-label={`Note ${GOOGLE_RATING} sur 5 étoiles`} role="img">
               {[1, 2, 3, 4, 5].map((s) => (
                 <Star key={s} size={22} fill="#80BC00" stroke="none" aria-hidden="true" />
               ))}
             </div>
             <p className="text-sm" style={{ color: '#8C8F94' }}>
-              <strong style={{ color: '#2F2F2F' }}>4,9 / 5</strong> — 47 avis vérifiés Google
+              <strong style={{ color: '#2F2F2F' }}>{GOOGLE_RATING} / 5</strong> — {GOOGLE_REVIEWS} avis vérifiés Google
             </p>
           </div>
         </div>

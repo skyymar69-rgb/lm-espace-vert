@@ -245,6 +245,7 @@ export function ContactForm() {
               href="/politique-confidentialite"
               className="underline underline-offset-2 hover:text-[--color-fg] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[--color-focus]"
               target="_blank"
+              rel="noopener noreferrer"
             >
               politique de confidentialité
             </Link>. <span aria-label="obligatoire">*</span>

@@ -1,6 +1,6 @@
 ﻿import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { raleway, montserrat, inter } from './fonts'
+import { raleway, montserrat } from './fonts'
 import './globals.css'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
@@ -19,12 +19,9 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
-  // #30 — metadataBase robuste avec fallback Vercel preview
-  metadataBase: new URL(
-    process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'
-  ),
+  // metadataBase = domaine de production canonique (URLs OG/Twitter toujours absolues
+  // vers www.lmespacevert.fr, y compris sur les déploiements preview).
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'),
   title: {
     default: "LM Espace Vert — Paysagiste Saint-Didier-au-Mont-d'Or & Lyon",
     template: '%s | LM Espace Vert',
@@ -114,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="fr"
-      className={`${raleway.variable} ${montserrat.variable} ${inter.variable}`}
+      className={`${raleway.variable} ${montserrat.variable}`}
     >
       <head>
         {/* Preconnect: 3 origins max (next/font auto-handles Google Fonts) */}
@@ -144,7 +141,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               logo: { '@type': 'ImageObject', url: 'https://www.lmespacevert.fr/logo.png' },
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+33-6-74-73-46-98',
+                telephone: '+33672587353',
                 contactType: 'customer service',
                 areaServed: 'FR',
                 availableLanguage: 'French',

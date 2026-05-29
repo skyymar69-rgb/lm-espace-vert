@@ -25,7 +25,7 @@ export function AnnouncementBanner({ message, href, cta, dismissKey = 'banner-v1
   if (dismissed) return null
 
   return (
-    <div className="announcement-banner" role="banner" aria-live="polite">
+    <div className="announcement-banner" role="region" aria-label="Annonce" aria-live="polite">
       <div className="container mx-auto max-w-7xl px-10 sm:px-16 flex items-center justify-center gap-3">
         <span className="text-white/85 leading-relaxed">{message}</span>
         {href && cta && (

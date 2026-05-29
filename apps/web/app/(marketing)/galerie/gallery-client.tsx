@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { X, ChevronLeft, ChevronRight, ArrowRight, FileText } from 'lucide-react'
 import { realisationsPhotos, photoCategories, catLabel } from '@/lib/realisations-photos'
 
@@ -16,14 +16,25 @@ export function GalerieClient() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [lightboxVisible, setLightboxVisible] = useState(false)
 
+  // Focus management — WCAG 2.4.3
+  const triggerRef = useRef<HTMLElement | null>(null)
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null)
+  const dialogRef = useRef<HTMLDivElement | null>(null)
+
   const filtered =
     activeCat === 'tout'
       ? photos
       : photos.filter((p) => p.cat === activeCat)
 
   const openLightbox = (index: number) => {
+    // Memorise the element that triggered the lightbox so we can restore focus on close
+    triggerRef.current = document.activeElement as HTMLElement
     setLightboxIndex(index)
-    requestAnimationFrame(() => setLightboxVisible(true))
+    requestAnimationFrame(() => {
+      setLightboxVisible(true)
+      // Move focus into the dialog (close button) after the next paint
+      requestAnimationFrame(() => closeButtonRef.current?.focus())
+    })
     document.body.style.overflow = 'hidden'
   }
 
@@ -32,6 +43,9 @@ export function GalerieClient() {
     setTimeout(() => {
       setLightboxIndex(null)
       document.body.style.overflow = ''
+      // Restore focus to the element that opened the lightbox — WCAG 2.4.3
+      triggerRef.current?.focus()
+      triggerRef.current = null
     }, 200)
   }, [])
 
@@ -48,9 +62,37 @@ export function GalerieClient() {
   useEffect(() => {
     if (lightboxIndex === null) return
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeLightbox()
-      if (e.key === 'ArrowLeft') goPrev()
-      if (e.key === 'ArrowRight') goNext()
+      if (e.key === 'Escape') { closeLightbox(); return }
+      if (e.key === 'ArrowLeft') { goPrev(); return }
+      if (e.key === 'ArrowRight') { goNext(); return }
+
+      // Focus trap — confine Tab/Shift+Tab to focusable elements inside the dialog
+      if (e.key === 'Tab' && dialogRef.current) {
+        const focusable = Array.from(
+          dialogRef.current.querySelectorAll<HTMLElement>(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          )
+        ).filter((el) => !el.hasAttribute('disabled') && el.tabIndex !== -1)
+
+        if (focusable.length === 0) { e.preventDefault(); return }
+
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+
+        if (e.shiftKey) {
+          // Shift+Tab: if focus is on first, wrap to last
+          if (document.activeElement === first) {
+            e.preventDefault()
+            last.focus()
+          }
+        } else {
+          // Tab: if focus is on last, wrap to first
+          if (document.activeElement === last) {
+            e.preventDefault()
+            first.focus()
+          }
+        }
+      }
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
@@ -401,6 +443,7 @@ export function GalerieClient() {
       {/* ── LIGHTBOX ── */}
       {lightboxIndex !== null && currentPhoto && (
         <div
+          ref={dialogRef}
           role="dialog"
           aria-modal="true"
           aria-label={`Lightbox — ${currentPhoto.title}`}
@@ -421,6 +464,7 @@ export function GalerieClient() {
         >
           {/* Fermer */}
           <button
+            ref={closeButtonRef}
             type="button"
             onClick={closeLightbox}
             aria-label="Fermer la lightbox"

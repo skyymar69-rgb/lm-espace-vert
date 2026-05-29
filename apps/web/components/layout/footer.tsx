@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Mail, MapPin, Clock, Facebook, Instagram, MessageCircle, Leaf } from 'lucide-react'
+import { INSTAGRAM, FACEBOOK, GOOGLE_MAPS, WHATSAPP } from '@/lib/social'
 
 // #1 — Liens vers les pages de service individuelles
 const serviceLinks = [
@@ -30,25 +31,25 @@ const zones = [
   { label: 'Craponne',                  href: '/secteur/craponne' },
 ]
 
-// #2 — Icônes réseaux sociaux avec URL réelle Google Maps
+// #2 — Icônes réseaux sociaux — URLs depuis la source de vérité @/lib/social
 const socialLinks = [
   {
-    href: 'https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/',
+    href: FACEBOOK,
     label: 'Facebook LM Espace Vert',
     icon: <Facebook size={16} aria-hidden="true" />,
   },
   {
-    href: 'https://www.instagram.com/lm_espace_vert/',
+    href: INSTAGRAM,
     label: 'Instagram LM Espace Vert',
     icon: <Instagram size={16} aria-hidden="true" />,
   },
   {
-    href: 'https://maps.app.goo.gl/rA4sfge3evAuVJLC9',
+    href: GOOGLE_MAPS,
     label: 'LM Espace Vert sur Google Maps',
     icon: <MapPin size={16} aria-hidden="true" />,
   },
   {
-    href: 'https://wa.me/33672587353',
+    href: WHATSAPP,
     label: 'Contacter via WhatsApp',
     icon: <MessageCircle size={16} aria-hidden="true" />,
   },
@@ -80,7 +81,7 @@ export function Footer() {
                 Demander un devis
               </Link>
               <a
-                href="https://wa.me/33672587353"
+                href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full px-6 py-3 text-sm font-semibold flex items-center gap-2 transition-all hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
@@ -202,7 +203,7 @@ export function Footer() {
                 <ul className="space-y-1">
                   <li>
                     <a
-                      href="https://wa.me/33672587353"
+                      href={WHATSAPP}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-start gap-2.5 py-1 text-sm transition-colors duration-150 hover:text-[#80BC00] focus-visible:text-[#80BC00]"

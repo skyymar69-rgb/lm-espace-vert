@@ -1,6 +1,26 @@
 import type { NextConfig } from 'next'
 
+// Content-Security-Policy — protège des injections (XSS) tout en autorisant
+// les services réellement utilisés : Vercel Analytics/Speed Insights, Google Analytics,
+// l'iframe de zone Smappen, l'API météo open-meteo. 'unsafe-inline' est requis par les
+// blocs JSON-LD inline, le snippet gtag et les nombreux style={} du site.
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://va.vercel-scripts.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob:",
+  "font-src 'self' data:",
+  "connect-src 'self' https://api.open-meteo.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com",
+  "frame-src https://www.smappen.fr",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+  "upgrade-insecure-requests",
+].join('; ')
+
 const securityHeaders = [
+  { key: 'Content-Security-Policy', value: csp },
   {
     key: 'Strict-Transport-Security',
     value: 'max-age=63072000; includeSubDomains; preload',
@@ -56,6 +76,8 @@ const nextConfig: NextConfig = {
       { source: '/services/entretien', destination: '/services/entretien-espaces-verts', permanent: true },
       { source: '/jardin', destination: '/services/creation-jardins', permanent: true },
       { source: '/devis-gratuit', destination: '/devis', permanent: true },
+      // /services/taille-haies n'existe pas comme page → rattaché à l'entretien
+      { source: '/services/taille-haies', destination: '/services/entretien-espaces-verts', permanent: true },
     ]
   },
 }

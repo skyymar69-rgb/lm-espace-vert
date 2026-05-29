@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { CertificationsBar } from '@/components/ui/certifications-bar'
+import { GOOGLE_RATING, GOOGLE_RATING_NUM, GOOGLE_REVIEWS, EXPERIENCE_YEARS } from '@/lib/business'
 
 export const metadata: Metadata = {
   title: 'Nos Engagements | LM Espace Vert — Qualité & Environnement',
@@ -51,8 +52,8 @@ const localBusinessSchema = {
   },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '47',
+    ratingValue: GOOGLE_RATING_NUM,
+    reviewCount: String(GOOGLE_REVIEWS),
     bestRating: '5',
     worstRating: '1',
   },
@@ -97,7 +98,7 @@ const engagements = [
   {
     icon: Heart,
     title: 'Satisfaction client',
-    desc: 'Votre satisfaction est notre priorité absolue. Léo assure un suivi personnalisé après chaque chantier et reste disponible pour répondre à vos questions. 4,9/5 sur Google avec 47 avis vérifiés.',
+    desc: `Votre satisfaction est notre priorité absolue. Léo assure un suivi personnalisé après chaque chantier et reste disponible pour répondre à vos questions. ${GOOGLE_RATING}/5 sur Google avec ${GOOGLE_REVIEWS} avis vérifiés.`,
     detail: 'Appel de suivi 30 jours après les travaux. Retouche offerte si insatisfaction signalée sous 7 jours.',
     color: '#0B3D2C',
   },
@@ -164,10 +165,10 @@ export default function EngagementsPage() {
                 style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
               >
                 <Star size={13} fill="#80BC00" stroke="none" aria-hidden="true" />
-                4,9/5 — 47 avis Google
+                {GOOGLE_RATING}/5 — {GOOGLE_REVIEWS} avis Google
               </span>
               <span className="inline-flex items-center rounded-full border border-[#EDEDED] bg-white px-4 py-1.5 text-sm font-medium" style={{ color: '#8C8F94' }}>
-                7 ans d&apos;expérience
+                {EXPERIENCE_YEARS} ans d&apos;expérience
               </span>
             </div>
           </div>
@@ -282,8 +283,8 @@ export default function EngagementsPage() {
                   <Star key={s} size={20} fill="#80BC00" stroke="none" aria-hidden="true" />
                 ))}
               </div>
-              <span className="font-bold text-lg" style={{ color: '#2F2F2F' }}>4,9</span>
-              <span className="text-sm" style={{ color: '#8C8F94' }}>/ 5 · 47 avis vérifiés Google</span>
+              <span className="font-bold text-lg" style={{ color: '#2F2F2F' }}>{GOOGLE_RATING}</span>
+              <span className="text-sm" style={{ color: '#8C8F94' }}>/ 5 · {GOOGLE_REVIEWS} avis vérifiés Google</span>
             </div>
           </div>
           <div className="grid gap-6 sm:grid-cols-3">
@@ -326,9 +327,9 @@ export default function EngagementsPage() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
-              { value: '7 ans', label: 'd\'expérience' },
+              { value: `${EXPERIENCE_YEARS} ans`, label: 'd\'expérience' },
               { value: '200+', label: 'projets réalisés' },
-              { value: '4,9/5', label: 'note Google' },
+              { value: `${GOOGLE_RATING}/5`, label: 'note Google' },
               { value: '100%', label: 'devis respectés' },
             ].map(({ value, label }) => (
               <div key={label} className="bg-white rounded-2xl border border-[#EDEDED] p-6 shadow-sm">

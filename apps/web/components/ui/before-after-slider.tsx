@@ -23,6 +23,16 @@ export function BeforeAfterSlider({ before, after, label, height = 400 }: Props)
     setPos(newPos)
   }, [])
 
+  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
+    // Respect prefers-reduced-motion: still allow keyboard control (motion is positional, not animated)
+    let next: number | null = null
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); next = Math.max(5,  pos - 5) }
+    if (e.key === 'ArrowRight') { e.preventDefault(); next = Math.min(95, pos + 5) }
+    if (e.key === 'Home')       { e.preventDefault(); next = 5 }
+    if (e.key === 'End')        { e.preventDefault(); next = 95 }
+    if (next !== null) setPos(next)
+  }, [pos])
+
   return (
     <div>
       {label && <p className="text-sm font-semibold text-[#8C8F94] mb-3 text-center">{label}</p>}
@@ -37,7 +47,6 @@ export function BeforeAfterSlider({ before, after, label, height = 400 }: Props)
         onTouchStart={(e) => { dragging.current = true; updatePos(e.touches[0].clientX) }}
         onTouchMove={(e) => { if (dragging.current) updatePos(e.touches[0].clientX) }}
         onTouchEnd={() => { dragging.current = false }}
-        role="img"
         aria-label={`Comparaison avant/après${label ? ` — ${label}` : ''}`}
       >
         {/* After (full) */}
@@ -59,11 +68,17 @@ export function BeforeAfterSlider({ before, after, label, height = 400 }: Props)
           APRÈS
         </span>
 
-        {/* Handle */}
+        {/* Handle — keyboard-accessible slider */}
         <div
           className="before-after-handle"
           style={{ left: `${pos}%` }}
-          aria-hidden="true"
+          role="slider"
+          tabIndex={0}
+          aria-label="Curseur de comparaison avant/après"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(pos)}
+          onKeyDown={handleKeyDown}
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">

@@ -9,6 +9,7 @@ import {
 import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
 import { beforeAfterPairs, heroPhoto } from '@/lib/realisations-photos'
+import { GOOGLE_RATING, GOOGLE_RATING_NUM, GOOGLE_REVIEWS, EXPERIENCE_YEARS } from '@/lib/business'
 import { StatCounter } from '@/components/ui/stat-counter'
 import { FAQSection } from '@/components/ui/faq-section'
 import { ExitIntentPopup } from '@/components/ui/exit-intent-popup'
@@ -66,8 +67,8 @@ const localBusinessJsonLd = {
   hasMap: 'https://maps.app.goo.gl/rA4sfge3evAuVJLC9',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '28',
+    ratingValue: GOOGLE_RATING_NUM,
+    reviewCount: String(GOOGLE_REVIEWS),
     bestRating: '5',
   },
 }
@@ -108,8 +109,8 @@ const aggregateRatingJsonLd = {
     name: 'LM Espace Vert',
     '@id': 'https://www.lmespacevert.fr/#business',
   },
-  ratingValue: '5.0',
-  reviewCount: '28',
+  ratingValue: GOOGLE_RATING_NUM,
+  reviewCount: String(GOOGLE_REVIEWS),
   bestRating: '5',
   worstRating: '1',
 }
@@ -217,7 +218,8 @@ export default function HomePage() {
             fill
             className="object-cover object-center"
             priority
-            quality={90}
+            fetchPriority="high"
+            quality={82}
             sizes="100vw"
           />
         </div>
@@ -242,7 +244,7 @@ export default function HomePage() {
           </h1>
           {/* #1 — sous-titre enrichi */}
           <p className="text-sm font-semibold mb-6 tracking-[0.12em] uppercase" style={{ color: 'rgba(128,188,0,0.85)' }} data-animate="fade-in-up">
-            5 ans d&apos;expérience · 200+ jardins réalisés · Devis gratuit sous 24h
+            {EXPERIENCE_YEARS} ans d&apos;expérience · 200+ jardins réalisés · Devis gratuit sous 24h
           </p>
           <p className="text-lg max-w-xl mb-10 leading-relaxed" style={{ color: 'rgba(255,255,255,0.78)' }}>
             LM Espace Vert crée, entretient et sublime vos espaces extérieurs dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Écully, Limonest, Tassin, Dardilly et tout le nord-ouest lyonnais.
@@ -287,7 +289,7 @@ export default function HomePage() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={12} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />
               ))}
-              <span className="ml-0.5">5★ Google (28 avis)</span>
+              <span className="ml-0.5">{GOOGLE_RATING}/5 Google · {GOOGLE_REVIEWS} avis</span>
             </a>
             <span className="flex items-center gap-1.5 text-sm" style={{ color: 'rgba(255,255,255,0.58)' }}>
               <Clock size={13} />Réponse sous 24h
@@ -306,7 +308,7 @@ export default function HomePage() {
           <dl className="grid grid-cols-2 sm:grid-cols-4 gap-0 divide-x divide-[#EDEDED]">
             <div className="text-center px-6 py-2">
               <dt className="font-display font-black leading-none" style={{ fontSize: 'clamp(3rem, 7vw, 5rem)', color: '#0B3D2C', letterSpacing: '-0.03em' }}>
-                <StatCounter value={5} suffix=" ans" />
+                <StatCounter value={EXPERIENCE_YEARS} suffix=" ans" />
               </dt>
               <Calendar size={18} className="mx-auto mt-2 mb-2" style={{ color: '#80BC00' }} aria-hidden="true" />
               <dd className="text-xs font-semibold uppercase tracking-wider" style={{ color: '#5C606B' }}>d&apos;expérience</dd>
@@ -327,10 +329,10 @@ export default function HomePage() {
             </div>
             <div className="text-center px-6 py-2">
               <dt className="font-display font-black leading-none" style={{ fontSize: 'clamp(3rem, 7vw, 5rem)', color: '#0B3D2C', letterSpacing: '-0.03em' }}>
-                <StatCounter value={28} suffix=" avis" />
+                <StatCounter value={GOOGLE_REVIEWS} suffix=" avis" />
               </dt>
               <Star size={18} className="mx-auto mt-2 mb-2" style={{ color: '#80BC00' }} aria-hidden="true" />
-              <dd className="text-xs font-semibold uppercase tracking-wider" style={{ color: '#5C606B' }}>Note 5★ Google</dd>
+              <dd className="text-xs font-semibold uppercase tracking-wider" style={{ color: '#5C606B' }}>Note {GOOGLE_RATING}/5 Google</dd>
             </div>
           </dl>
         </div>
@@ -347,8 +349,8 @@ export default function HomePage() {
                 width={640}
                 height={480}
                 className="object-cover w-full h-full"
-                quality={90}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                quality={82}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 placeholder="empty"
                 loading="lazy"
               />
@@ -391,7 +393,7 @@ export default function HomePage() {
                   <Award size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Agréé SAP
                 </span>
                 <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#5C606B' }}>
-                  <Leaf size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Label Qualipaysage
+                  <Leaf size={13} style={{ color: '#425D07' }} aria-hidden="true" /> CERTIPHYTO
                 </span>
                 <span className="rounded-full border border-[#EDEDED] px-4 py-1.5 text-sm flex items-center gap-1.5" style={{ color: '#5C606B' }}>
                   <Leaf size={13} style={{ color: '#425D07' }} aria-hidden="true" /> Éco-responsable
@@ -480,7 +482,7 @@ export default function HomePage() {
               Tous vos projets extérieurs
             </h2>
             <p className="mt-4 leading-relaxed" style={{ color: '#5C606B' }}>
-              De la taille de haies à la création complète, nous sublimions chaque espace extérieur.
+              De la taille de haies à la création complète, nous sublimons chaque espace extérieur.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -575,8 +577,8 @@ export default function HomePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
             {[
-              { Icon: Award, title: "5 ans d'expérience", desc: "Formation professionnelle en horticulture et paysagisme. Un savoir-faire reconnu dans la région lyonnaise." },
-              { Icon: Star, title: '5/5 Google · 28 avis', desc: "La satisfaction de nos clients est notre meilleure carte de visite. Lisez leurs témoignages sincères.", extra: "Plus de 200 clients satisfaits depuis 2019" },
+              { Icon: Award, title: `${EXPERIENCE_YEARS} ans d'expérience`, desc: "Formation professionnelle en horticulture et paysagisme. Un savoir-faire reconnu dans la région lyonnaise." },
+              { Icon: Star, title: `${GOOGLE_RATING}/5 Google · ${GOOGLE_REVIEWS} avis`, desc: "La satisfaction de nos clients est notre meilleure carte de visite. Lisez leurs témoignages sincères.", extra: "Plus de 200 clients satisfaits depuis 2019" },
               { Icon: Leaf, title: 'Éco-responsable', desc: "Produits phyto raisonnés, compostage, préservation de la biodiversité. La nature, on y tient." },
               { Icon: Shield, title: 'Assuré RC Pro', desc: "Responsabilité civile professionnelle à jour. Vous êtes protégés en toutes circonstances." },
             ].map(({ Icon, title, desc, extra }) => (
@@ -656,11 +658,11 @@ export default function HomePage() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />
               ))}
-              <span className="ml-2.5 text-sm font-bold" style={{ color: '#2F2F2F' }}>5.0</span>
-              <span className="text-sm ml-1" style={{ color: '#5C606B' }}>— 28 avis Google</span>
+              <span className="ml-2.5 text-sm font-bold" style={{ color: '#2F2F2F' }}>{GOOGLE_RATING}</span>
+              <span className="text-sm ml-1" style={{ color: '#5C606B' }}>— {GOOGLE_REVIEWS} avis Google</span>
             </div>
             <div className="flex justify-center mt-4">
-              <GoogleReviewsBadge rating={5.0} count={28} />
+              <GoogleReviewsBadge rating={Number(GOOGLE_RATING_NUM)} count={GOOGLE_REVIEWS} />
             </div>
           </div>
           <ul role="list" className="grid sm:grid-cols-3 gap-8">
@@ -814,7 +816,8 @@ export default function HomePage() {
                 style={{ border: 'none' }}
                 title="Zone d'intervention paysagiste LM Espace Vert — rayon 20 km autour de Saint-Didier-au-Mont-d'Or"
                 loading="lazy"
-                allowFullScreen
+                sandbox="allow-scripts allow-same-origin allow-popups"
+                allow="fullscreen"
               />
             </div>
           </div>
@@ -1036,17 +1039,7 @@ export default function HomePage() {
               WhatsApp
             </a>
           </div>
-          <p className="text-xs mb-8" style={{ color: 'rgba(255,255,255,0.45)' }}>★★★★★ · 28 avis Google</p>
-          {/* #25 — lien WhatsApp */}
-          <a
-            href="https://wa.me/33672587353"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity"
-            style={{ color: '#80BC00' }}
-          >
-            Ou envoyez-nous un message WhatsApp <ArrowRight size={13} />
-          </a>
+          <p className="text-xs mb-8" style={{ color: 'rgba(255,255,255,0.45)' }}>★★★★★ · {GOOGLE_RATING}/5 · {GOOGLE_REVIEWS} avis Google</p>
 
           {/* Newsletter — inscription directement depuis la section CTA */}
           <div className="mt-12 max-w-sm mx-auto">

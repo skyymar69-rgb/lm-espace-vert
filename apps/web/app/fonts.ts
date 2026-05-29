@@ -1,4 +1,4 @@
-import { Raleway, Montserrat, Inter } from 'next/font/google'
+import { Raleway, Montserrat } from 'next/font/google'
 
 export const raleway = Raleway({
   subsets: ['latin', 'latin-ext'],
@@ -12,11 +12,4 @@ export const montserrat = Montserrat({
   display: 'swap',
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-montserrat',
-})
-
-export const inter = Inter({
-  subsets: ['latin', 'latin-ext'],
-  display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-inter',
 })
