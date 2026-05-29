@@ -229,13 +229,13 @@ export function Header() {
                       onClick={() => setMegaOpen(false)}
                       className="group flex flex-col gap-2 rounded-xl p-3 hover:bg-[#F2F8E7] transition-colors duration-150 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
                     >
-                      <div className="relative w-full h-12 rounded-lg overflow-hidden">
+                      <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden bg-[#F2F8E7]">
                         <Image
                           src={photo}
                           alt=""
                           fill
-                          sizes="160px"
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="(max-width: 1024px) 33vw, 220px"
+                          className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
                       <span className="text-sm font-semibold text-[#2F2F2F] leading-snug group-hover:text-[#425D07] transition-colors">{label}</span>
