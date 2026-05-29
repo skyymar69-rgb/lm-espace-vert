@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: "LM Espace Vert assure l'entretien de vos espaces verts à Lyon nord : tonte, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/service-taille-haie.jpg', width: 1200, height: 630, alt: "Entretien d'espaces verts — LM Espace Vert" }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-08.webp', width: 1200, height: 630, alt: "Entretien d'espaces verts — LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Entretien Espaces Verts Lyon Nord — LM Espace Vert, paysagiste",
     description: "Tonte, taille de haies, désherbage à Lyon nord. Contrats d'entretien annuels sur mesure. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/service-taille-haie.jpg'],
+    images: ['https://www.lmespacevert.fr/images/realisations/lm-08.webp'],
   },
 }
 
@@ -133,7 +133,7 @@ export default function EntretienEspacesVertsPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/service-taille-haie.jpg"
+          src="/images/realisations/lm-08.webp"
           alt="Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or par LM Espace Vert"
           fill
           className="object-cover"

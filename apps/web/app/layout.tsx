@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description: "LM Espace Vert, paysagiste créateur à Lyon. Création, entretien et aménagement de jardins haut de gamme.",
     images: [
       {
-        url: 'https://www.lmespacevert.fr/images/travaux-paysagers.webp',
+        url: 'https://www.lmespacevert.fr/images/realisations/lm-09.webp',
         width: 1200,
         height: 630,
         alt: 'LM Espace Vert — Paysagiste Lyon Nord',
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     creator: '@lm_espacevert',
     title: "LM Espace Vert — Paysagiste créateur à Lyon",
     description: "LM Espace Vert, paysagiste créateur à Lyon. Création, entretien et aménagement de jardins haut de gamme.",
-    images: ['https://www.lmespacevert.fr/images/travaux-paysagers.webp'],
+    images: ['https://www.lmespacevert.fr/images/realisations/lm-09.webp'],
   },
   robots: {
     index: true,

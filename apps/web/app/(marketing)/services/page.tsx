@@ -43,7 +43,7 @@ const services = [
     icon: Scissors,
     title: "Entretien d'espaces verts",
     slug: 'entretien-espaces-verts',
-    image: '/images/entretien-espaces-verts.webp',
+    image: '/images/realisations/lm-15.webp',
     price: 'À partir de 80€/passage',
     desc: "Un jardin entretenu régulièrement est un jardin en bonne santé. Nous proposons des contrats d'entretien sur mesure : tonte, taille de haies, désherbage, fertilisation et soins saisonniers.",
     features: [
@@ -71,7 +71,7 @@ const services = [
     icon: TreePine,
     title: 'Élagage & Abattage',
     slug: 'elagage-abattage',
-    image: '/images/elagage-abattage.webp',
+    image: '/images/realisations/lm-07.webp',
     price: 'Devis gratuit',
     desc: "L'élagage est une intervention délicate qui demande expertise et équipement. Nos professionnels interviennent pour la taille douce, l'élagage raisonné et l'abattage en toute sécurité.",
     features: [
@@ -99,7 +99,7 @@ const services = [
     icon: Sprout,
     title: 'Création de jardins',
     slug: 'creation-jardins',
-    image: '/images/realisation-1.webp',
+    image: '/images/realisations/lm-16.webp',
     price: 'À partir de 1 500€',
     desc: "Votre jardin est une extension de votre maison. Nous concevons des espaces verts sur-mesure, de la petite terrasse au grand parc, en respectant vos goûts et les contraintes du terrain.",
     features: [
@@ -127,7 +127,7 @@ const services = [
     icon: Layers,
     title: 'Maçonnerie paysagère',
     slug: 'maconnerie-paysagere',
-    image: '/images/realisation-10.webp',
+    image: '/images/realisations/lm-34.webp',
     price: 'Devis gratuit',
     desc: "Les éléments minéraux structurent et valorisent votre jardin. Terrasses, allées, murets et escaliers réalisés avec des matériaux naturels de qualité pour un rendu esthétique et durable.",
     features: [
@@ -155,7 +155,7 @@ const services = [
     icon: Droplets,
     title: 'Arrosage automatique',
     slug: 'arrosage-automatique',
-    image: '/images/arrosage-automatique.webp',
+    image: '/images/realisations/lm-13.webp',
     price: 'À partir de 800€',
     desc: "Économisez l'eau et du temps avec un système d'arrosage automatique sur mesure. Installation, programmation et maintenance de systèmes d'arrosage intelligents adaptés à votre jardin.",
     features: [
@@ -183,7 +183,7 @@ const services = [
     icon: Flower2,
     title: 'Engazonnement',
     slug: 'engazonnement',
-    image: '/images/realisation-6.webp',
+    image: '/images/realisations/lm-41.webp',
     price: 'À partir de 300€',
     desc: "Une belle pelouse est la base d'un jardin réussi. Nous créons votre gazon par semis ou en rouleaux selon vos besoins, et vous proposons des prairies fleuries pour plus de biodiversité.",
     features: [

@@ -4,76 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useCallback } from 'react'
 import { X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
+import { realisationsPhotos, photoCategories, catLabel } from '@/lib/realisations-photos'
 
-type Photo = {
-  src: string
-  titre: string
-  cat: string
-  ville: string
-}
-
-const categories = [
-  { id: 'tout', label: 'Toutes nos réalisations' },
-  { id: 'creation', label: 'Création de jardins' },
-  { id: 'entretien', label: 'Entretien' },
-  { id: 'elagage', label: 'Élagage' },
-  { id: 'arrosage', label: 'Arrosage' },
-]
-
-const photos: Photo[] = [
-  // Création & Aménagement
-  { src: '/images/scraped/Aménagement de cour et jardin extérieur près de Limonest.jpeg', titre: 'Aménagement de cour et jardin', cat: 'creation', ville: 'Limonest' },
-  { src: '/images/scraped/Aménagement extérieur avec création paysagère sur mesure près de Limonest.jpeg', titre: 'Création paysagère sur mesure', cat: 'creation', ville: 'Limonest' },
-  { src: '/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg', titre: 'Jardin avec terrasse moderne', cat: 'creation', ville: 'Limonest' },
-  { src: '/images/scraped/Aménagements extérieurs.jpeg', titre: 'Aménagements extérieurs', cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Conception de jardin paysager et aménagement extérieur à Limonest.jpeg", titre: 'Conception de jardin paysager', cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/conception d'espace extérieur sur mesure à Limonest.jpeg", titre: "Espace extérieur sur mesure", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Conception d'espaces verts et aménagement paysager à Limonest.jpeg", titre: "Espaces verts et aménagement paysager", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Création d'espace extérieur paysager près de Limonest.jpeg", titre: "Espace extérieur paysager", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Création d'espaces extérieurs paysagers près de Limonest.jpeg", titre: "Espaces extérieurs paysagers", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Création paysagère et aménagement extérieur de jardin près de Limonest.jpeg", titre: "Création paysagère et aménagement", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Réalisation de jardin paysager et aménagement extérieur à Limonest.jpeg", titre: "Jardin paysager réalisé", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Travaux de création paysagère pour espaces extérieurs près de Limonest.jpeg", titre: "Création paysagère extérieure", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Travaux de création paysagère pour extérieur près de Limonest.jpeg", titre: "Travaux paysagers extérieurs", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Travaux d'aménagement extérieur avec allée et plantations à Limonest.jpeg", titre: "Allée et plantations", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Allée de gravier dans un jardin avec arbres élagués et un panier de basket Limonest.webp", titre: "Allée de gravier aménagée", cat: 'creation', ville: 'Limonest' },
-  { src: '/images/scraped/Chemin de gravier bordé de pelouse menant à des maisons modernes à Limonest.webp', titre: "Chemin de gravier et pelouse", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Escalier en bois et gravier Limonest.webp", titre: "Escalier en bois et gravier", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Espace extérieur en gravier avec mur de soutènement à Limonest.webp", titre: "Espace gravier avec mur de soutènement", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Conception d'un projet de création paysagère près de Limonest.webp", titre: "Projet de création paysagère", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Plantation de végétaux près de Limonest.webp", titre: "Plantation de végétaux", cat: 'creation', ville: 'Limonest' },
-  { src: '/images/scraped/Pose de gazon près de Limonest.webp', titre: "Pose de gazon", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Vente de végétaux à Saint-Didier-au-Mont-d'Or.webp", titre: "Végétaux et plantations", cat: 'creation', ville: "Saint-Didier-au-Mont-d'Or" },
-  { src: "/images/scraped/Déroulement d'un projet d'aménagement paysager près de Limonest.webp", titre: "Suivi de chantier paysager", cat: 'creation', ville: 'Limonest' },
-  { src: "/images/scraped/Étude du terrain près de Limonest.webp", titre: "Étude de terrain", cat: 'creation', ville: 'Limonest' },
-  { src: '/images/scraped/Travaux paysagers à Saint-Didier-au-Mont-d\'Or.webp', titre: "Travaux paysagers", cat: 'creation', ville: "Saint-Didier-au-Mont-d'Or" },
-  // Entretien
-  { src: "/images/scraped/Entretien d'espaces verts et jardins près de Limones.jpeg", titre: "Entretien d'espaces verts", cat: 'entretien', ville: 'Limonest' },
-  { src: "/images/scraped/Entretien d'espaces verts1.jpeg", titre: "Entretien de jardin", cat: 'entretien', ville: 'Limonest' },
-  { src: "/images/scraped/Service d'entretien de jardin et espaces verts à Limonest.jpeg", titre: "Service d'entretien de jardin", cat: 'entretien', ville: 'Limonest' },
-  { src: '/images/scraped/Tonte de pelouse et entretien d\'espaces verts près de Limonest.jpeg', titre: "Tonte de pelouse", cat: 'entretien', ville: 'Limonest' },
-  { src: "/images/scraped/Maintenance et nettoyage d'espaces verts à Limonest.jpeg", titre: "Nettoyage d'espaces verts", cat: 'entretien', ville: 'Limonest' },
-  { src: "/images/scraped/Un paysagiste a nettoyé un jardin à Limonest.webp", titre: "Nettoyage de jardin", cat: 'entretien', ville: 'Limonest' },
-  { src: "/images/scraped/Entretien des haies près de Limonest .webp", titre: "Entretien des haies", cat: 'entretien', ville: 'Limonest' },
-  { src: "/images/scraped/Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or.webp", titre: "Entretien espaces verts", cat: 'entretien', ville: "Saint-Didier-au-Mont-d'Or" },
-  // Élagage
-  { src: '/images/scraped/Élagage et taille de haies.jpeg', titre: 'Élagage et taille de haies', cat: 'elagage', ville: 'Limonest' },
-  { src: '/images/scraped/Élagage sécurisé et taille de haies sur mesure près de Limonest2.jpeg', titre: 'Élagage sécurisé sur mesure', cat: 'elagage', ville: 'Limonest' },
-  { src: '/images/scraped/Élagage toutes hauteurs près de Limonest .webp', titre: 'Élagage toutes hauteurs', cat: 'elagage', ville: 'Limonest' },
-  { src: "/images/scraped/Travaux d'élagage pour entretien de jardin près de Limonest.jpeg", titre: "Travaux d'élagage", cat: 'elagage', ville: 'Limonest' },
-  { src: "/images/scraped/Coupe et entretien de haies et arbustes à Limonest.jpeg", titre: 'Taille de haies et arbustes', cat: 'elagage', ville: 'Limonest' },
-  { src: "/images/scraped/Coupe et entretien de haies et arbustes à Limonest1.jpeg", titre: 'Entretien de haies et arbustes', cat: 'elagage', ville: 'Limonest' },
-  { src: "/images/scraped/Service professionnel de taille de haies à Limonest.jpeg", titre: 'Taille de haies professionnelle', cat: 'elagage', ville: 'Limonest' },
-  { src: "/images/scraped/Travaux d'élagage à Saint-Didier-au-Mont-d'Or.webp", titre: "Élagage à Saint-Didier", cat: 'elagage', ville: "Saint-Didier-au-Mont-d'Or" },
-  { src: "/images/scraped/Sécurisation des arbres près de Limonest.webp", titre: "Sécurisation des arbres", cat: 'elagage', ville: 'Limonest' },
-  { src: "/images/scraped/Matériel utilisé pour l'élagage près de Limonest.webp", titre: "Matériel d'élagage professionnel", cat: 'elagage', ville: 'Limonest' },
-  // Arrosage
-  { src: "/images/scraped/Pose d'arrosage automatique à Saint-Didier-au-Mont-d'Or.webp", titre: "Pose d'arrosage automatique", cat: 'arrosage', ville: "Saint-Didier-au-Mont-d'Or" },
-  { src: "/images/scraped/Pose du réseau d'irrigation enterré près de Limonest.webp", titre: "Réseau d'irrigation enterré", cat: 'arrosage', ville: 'Limonest' },
-  { src: "/images/scraped/Réglage du système d'arrosage près de Limonest.webp", titre: "Réglage du système d'arrosage", cat: 'arrosage', ville: 'Limonest' },
-  { src: "/images/scraped/Maintenance du système d'arrosage près de Limonest.webp", titre: "Maintenance arrosage automatique", cat: 'arrosage', ville: 'Limonest' },
-  { src: "/images/scraped/Un paysagiste utilise des arroseurs pour un gazon fraîchement taillé à Limonest.webp", titre: "Arrosage automatique en action", cat: 'arrosage', ville: 'Limonest' },
-]
+const categories = photoCategories
+const photos = realisationsPhotos
 
 export const photoCount = photos.length
 
@@ -129,11 +63,14 @@ export function GalerieClient() {
       {/* ── FILTRES ── */}
       <div
         style={{
-          backgroundColor: '#ffffff',
-          borderBottom: '1px solid #EDEDED',
+          backgroundColor: 'rgba(255,255,255,0.95)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          borderBottom: '1px solid rgba(0,0,0,0.07)',
           position: 'sticky',
           top: '72px',
           zIndex: 10,
+          boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
         }}
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
@@ -160,16 +97,30 @@ export function GalerieClient() {
                   style={{
                     flexShrink: 0,
                     borderRadius: '9999px',
-                    padding: '0.5rem 1.125rem',
+                    padding: '0.4375rem 1.125rem',
                     fontSize: '0.8125rem',
                     fontWeight: 600,
-                    border: isActive ? 'none' : '1px solid #D8D8D8',
+                    border: isActive ? '1.5px solid #80BC00' : '1.5px solid #E0E0E0',
                     backgroundColor: isActive ? '#80BC00' : 'transparent',
                     color: isActive ? '#0B3D2C' : '#5C606B',
                     cursor: 'pointer',
-                    transition: 'all 0.15s ease',
+                    transition: 'all 0.2s ease',
                     whiteSpace: 'nowrap',
                     outline: 'none',
+                    letterSpacing: '0.01em',
+                    boxShadow: isActive ? '0 2px 12px rgba(128,188,0,0.30)' : 'none',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLButtonElement).style.borderColor = '#80BC00'
+                      ;(e.currentTarget as HTMLButtonElement).style.color = '#425D07'
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLButtonElement).style.borderColor = '#E0E0E0'
+                      ;(e.currentTarget as HTMLButtonElement).style.color = '#5C606B'
+                    }
                   }}
                 >
                   {cat.label}
@@ -177,7 +128,8 @@ export function GalerieClient() {
                     style={{
                       marginLeft: '0.375rem',
                       fontSize: '0.7rem',
-                      opacity: isActive ? 0.65 : 0.45,
+                      opacity: isActive ? 0.7 : 0.45,
+                      fontWeight: 500,
                     }}
                   >
                     ({count})
@@ -219,97 +171,118 @@ export function GalerieClient() {
               role="list"
               className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
               style={{
-                gap: '0.75rem',
+                gap: '1rem',
                 listStyle: 'none',
                 padding: 0,
                 margin: 0,
               }}
             >
-              {filtered.map((photo, index) => (
-                <li key={`${photo.src}-${index}`}>
-                  <button
-                    type="button"
-                    onClick={() => openLightbox(index)}
-                    aria-label={`Agrandir — ${photo.titre}, ${photo.ville}`}
-                    className="group"
-                    style={{
-                      display: 'block',
-                      width: '100%',
-                      position: 'relative',
-                      aspectRatio: '1 / 1',
-                      overflow: 'hidden',
-                      borderRadius: '0.75rem',
-                      cursor: 'zoom-in',
-                      border: 'none',
-                      padding: 0,
-                      backgroundColor: '#EDEDED',
-                    }}
+              {filtered.map((photo, index) => {
+                const isPortrait = photo.orient === 'portrait'
+                return (
+                  <li
+                    key={`${photo.src}-${index}`}
+                    style={isPortrait ? { gridRow: 'span 2' } : undefined}
                   >
-                    <Image
-                      src={photo.src}
-                      alt={`${photo.titre} — ${photo.ville}`}
-                      fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
-                      quality={80}
-                    />
-                    {/* Overlay hover */}
-                    <div
-                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    <button
+                      type="button"
+                      onClick={() => openLightbox(index)}
+                      aria-label={`Agrandir — ${photo.title}, ${photo.ville}`}
+                      className="group"
                       style={{
-                        background: 'linear-gradient(to top, rgba(11,61,44,0.92) 0%, rgba(11,61,44,0.4) 55%, transparent 100%)',
+                        display: 'block',
+                        width: '100%',
+                        height: '100%',
+                        minHeight: isPortrait ? '360px' : '180px',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        borderRadius: '1rem',
+                        cursor: 'zoom-in',
+                        border: 'none',
+                        padding: 0,
+                        backgroundColor: '#E8EDE8',
+                        boxShadow: '0 2px 16px rgba(11,61,44,0.08)',
+                        transition: 'box-shadow 0.3s ease, transform 0.3s ease',
                       }}
-                      aria-hidden="true"
-                    />
-                    {/* Infos hover */}
-                    <div
-                      className="absolute bottom-0 left-0 right-0 p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 8px 40px rgba(11,61,44,0.18)'
+                        ;(e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-2px)'
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 2px 16px rgba(11,61,44,0.08)'
+                        ;(e.currentTarget as HTMLButtonElement).style.transform = 'translateY(0)'
+                      }}
                     >
-                      <p
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.07]"
+                        loading="lazy"
+                        quality={80}
+                      />
+                      {/* Overlay hover — dégradé deux tons */}
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
                         style={{
-                          color: '#ffffff',
-                          fontWeight: 700,
-                          fontSize: '0.8125rem',
-                          lineHeight: 1.3,
-                          textShadow: '0 1px 4px rgba(0,0,0,0.5)',
+                          background: 'linear-gradient(160deg, rgba(11,61,44,0.18) 0%, rgba(11,61,44,0.78) 65%, rgba(66,93,7,0.92) 100%)',
                         }}
+                        aria-hidden="true"
+                      />
+                      {/* Infos hover */}
+                      <div
+                        className="absolute bottom-0 left-0 right-0 p-3 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-350"
                       >
-                        {photo.titre}
-                      </p>
-                      <p
-                        style={{
-                          color: 'rgba(255,255,255,0.75)',
-                          fontSize: '0.7rem',
-                          marginTop: '0.2rem',
-                          fontWeight: 500,
-                        }}
-                      >
-                        📍 {photo.ville}
-                      </p>
-                    </div>
-                    {/* Badge catégorie */}
-                    <div className="absolute top-2 left-2">
-                      <span
-                        style={{
-                          display: 'inline-block',
-                          backgroundColor: 'rgba(11,61,44,0.72)',
-                          backdropFilter: 'blur(4px)',
-                          color: '#80BC00',
-                          fontSize: '0.65rem',
-                          fontWeight: 700,
-                          padding: '0.2rem 0.5rem',
-                          borderRadius: '9999px',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.04em',
-                        }}
-                      >
-                        {categories.find((c) => c.id === photo.cat)?.label.split(' ')[0]}
-                      </span>
-                    </div>
-                  </button>
-                </li>
-              ))}
+                        <p
+                          style={{
+                            color: '#ffffff',
+                            fontWeight: 700,
+                            fontSize: '0.8125rem',
+                            lineHeight: 1.35,
+                            textShadow: '0 1px 6px rgba(0,0,0,0.45)',
+                            letterSpacing: '0.01em',
+                          }}
+                        >
+                          {photo.title}
+                        </p>
+                        <p
+                          style={{
+                            color: 'rgba(255,255,255,0.72)',
+                            fontSize: '0.6875rem',
+                            marginTop: '0.25rem',
+                            fontWeight: 500,
+                            letterSpacing: '0.02em',
+                          }}
+                        >
+                          📍 {photo.ville}
+                        </p>
+                      </div>
+                      {/* Badge catégorie */}
+                      <div className="absolute top-2.5 left-2.5">
+                        <span
+                          style={{
+                            display: 'inline-block',
+                            backgroundColor: 'rgba(11,61,44,0.78)',
+                            backdropFilter: 'blur(6px)',
+                            WebkitBackdropFilter: 'blur(6px)',
+                            color: '#80BC00',
+                            fontSize: '0.625rem',
+                            fontWeight: 700,
+                            padding: '0.2rem 0.55rem',
+                            borderRadius: '9999px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            border: '1px solid rgba(128,188,0,0.22)',
+                          }}
+                        >
+                          {catLabel[photo.cat]}
+                        </span>
+                      </div>
+                    </button>
+                  </li>
+                )
+              })}
             </ul>
           )}
         </div>
@@ -414,7 +387,7 @@ export function GalerieClient() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`Lightbox — ${currentPhoto.titre}`}
+          aria-label={`Lightbox — ${currentPhoto.title}`}
           style={{
             position: 'fixed',
             inset: 0,
@@ -422,9 +395,11 @@ export function GalerieClient() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: 'rgba(0,0,0,0.94)',
+            backgroundColor: 'rgba(5,20,14,0.92)',
+            backdropFilter: 'blur(18px)',
+            WebkitBackdropFilter: 'blur(18px)',
             opacity: lightboxVisible ? 1 : 0,
-            transition: 'opacity 0.2s ease',
+            transition: 'opacity 0.25s ease',
           }}
           onClick={closeLightbox}
         >
@@ -435,22 +410,27 @@ export function GalerieClient() {
             aria-label="Fermer la lightbox"
             style={{
               position: 'absolute',
-              top: '1rem',
-              right: '1rem',
+              top: '1.25rem',
+              right: '1.25rem',
               zIndex: 10,
-              width: '2.5rem',
-              height: '2.5rem',
+              width: '2.75rem',
+              height: '2.75rem',
               borderRadius: '9999px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: '#ffffff',
-              backgroundColor: 'rgba(255,255,255,0.1)',
-              border: '1px solid rgba(255,255,255,0.2)',
+              backgroundColor: 'rgba(255,255,255,0.12)',
+              border: '1px solid rgba(255,255,255,0.18)',
               cursor: 'pointer',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+              transition: 'background-color 0.2s ease',
             }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.22)' }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.12)' }}
           >
-            <X size={20} aria-hidden="true" />
+            <X size={18} aria-hidden="true" />
           </button>
 
           {/* Précédent */}
@@ -460,23 +440,36 @@ export function GalerieClient() {
             aria-label="Photo précédente"
             style={{
               position: 'absolute',
-              left: '1rem',
+              left: '1.25rem',
               top: '50%',
               transform: 'translateY(-50%)',
               zIndex: 10,
-              width: '2.75rem',
-              height: '2.75rem',
+              width: '3rem',
+              height: '3rem',
               borderRadius: '9999px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: '#ffffff',
-              backgroundColor: 'rgba(255,255,255,0.1)',
-              border: '1px solid rgba(255,255,255,0.2)',
+              backgroundColor: 'rgba(255,255,255,0.10)',
+              border: '1px solid rgba(255,255,255,0.18)',
               cursor: 'pointer',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+              transition: 'background-color 0.2s ease, transform 0.2s ease',
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLButtonElement
+              el.style.backgroundColor = 'rgba(128,188,0,0.22)'
+              el.style.borderColor = 'rgba(128,188,0,0.5)'
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLButtonElement
+              el.style.backgroundColor = 'rgba(255,255,255,0.10)'
+              el.style.borderColor = 'rgba(255,255,255,0.18)'
             }}
           >
-            <ChevronLeft size={26} aria-hidden="true" />
+            <ChevronLeft size={24} aria-hidden="true" />
           </button>
 
           {/* Suivant */}
@@ -486,71 +479,99 @@ export function GalerieClient() {
             aria-label="Photo suivante"
             style={{
               position: 'absolute',
-              right: '1rem',
+              right: '1.25rem',
               top: '50%',
               transform: 'translateY(-50%)',
               zIndex: 10,
-              width: '2.75rem',
-              height: '2.75rem',
+              width: '3rem',
+              height: '3rem',
               borderRadius: '9999px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: '#ffffff',
-              backgroundColor: 'rgba(255,255,255,0.1)',
-              border: '1px solid rgba(255,255,255,0.2)',
+              backgroundColor: 'rgba(255,255,255,0.10)',
+              border: '1px solid rgba(255,255,255,0.18)',
               cursor: 'pointer',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+              transition: 'background-color 0.2s ease, border-color 0.2s ease',
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLButtonElement
+              el.style.backgroundColor = 'rgba(128,188,0,0.22)'
+              el.style.borderColor = 'rgba(128,188,0,0.5)'
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLButtonElement
+              el.style.backgroundColor = 'rgba(255,255,255,0.10)'
+              el.style.borderColor = 'rgba(255,255,255,0.18)'
             }}
           >
-            <ChevronRight size={26} aria-hidden="true" />
+            <ChevronRight size={24} aria-hidden="true" />
           </button>
 
           {/* Contenu */}
           <div
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', padding: '0 4rem', maxWidth: '100vw' }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', padding: '0 4.5rem', maxWidth: '100vw' }}
             onClick={(e) => e.stopPropagation()}
           >
             <div
               style={{
                 position: 'relative',
-                borderRadius: '0.75rem',
+                borderRadius: '1rem',
                 overflow: 'hidden',
-                maxHeight: '82vh',
+                maxHeight: '80vh',
                 maxWidth: '90vw',
                 width: 'min(860px, 88vw)',
                 aspectRatio: '4 / 3',
+                boxShadow: '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)',
               }}
             >
               <Image
                 src={currentPhoto.src}
-                alt={`${currentPhoto.titre} — ${currentPhoto.ville}`}
+                alt={currentPhoto.alt}
                 fill
                 sizes="min(860px, 88vw)"
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
 
-            <div style={{ textAlign: 'center' }}>
+            {/* Légende */}
+            <div
+              style={{
+                textAlign: 'center',
+                backgroundColor: 'rgba(255,255,255,0.05)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '0.75rem',
+                padding: '0.75rem 1.5rem',
+                minWidth: '280px',
+              }}
+            >
               <p
                 style={{
                   color: '#ffffff',
                   fontWeight: 700,
                   fontSize: '1rem',
                   lineHeight: 1.3,
-                  marginBottom: '0.25rem',
+                  marginBottom: '0.3rem',
+                  letterSpacing: '0.01em',
                 }}
               >
-                {currentPhoto.titre}
+                {currentPhoto.title}
               </p>
-              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem' }}>
-                📍 {currentPhoto.ville} ·{' '}
-                <span style={{ color: '#80BC00' }}>
+              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8125rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                <span>📍 {currentPhoto.ville}</span>
+                <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
+                <span style={{ color: '#80BC00', fontWeight: 600 }}>
                   {categories.find((c) => c.id === currentPhoto.cat)?.label}
                 </span>
               </p>
               {filtered.length > 1 && (
-                <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', marginTop: '0.375rem' }}>
+                <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.7rem', marginTop: '0.4rem', letterSpacing: '0.02em' }}>
                   {(lightboxIndex ?? 0) + 1} / {filtered.length} — ← → pour naviguer · Échap pour fermer
                 </p>
               )}

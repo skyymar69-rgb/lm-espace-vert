@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord par LM Espace Vert, certifié CERTIPHYTO. Broyage des déchets inclus. Devis gratuit.",
     url: 'https://www.lmespacevert.fr/services/elagage-abattage',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/service-elagage-2.jpg', width: 1200, height: 630, alt: "Élagage et abattage d'arbres — LM Espace Vert" }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-06.webp', width: 1200, height: 630, alt: "Élagage et abattage d'arbres — LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Élagage & Abattage d'Arbres Lyon Nord — LM Espace Vert",
     description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord. Certifié CERTIPHYTO. Devis gratuit.",
-    images: ['https://www.lmespacevert.fr/images/service-elagage-2.jpg'],
+    images: ['https://www.lmespacevert.fr/images/realisations/lm-06.webp'],
   },
 }
 
@@ -133,7 +133,7 @@ export default function ElagageAbattagePage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/service-elagage-2.jpg"
+          src="/images/realisations/lm-06.webp"
           alt="Élagage et abattage d'arbres à Lyon nord par LM Espace Vert"
           fill
           className="object-cover rounded-b-none"

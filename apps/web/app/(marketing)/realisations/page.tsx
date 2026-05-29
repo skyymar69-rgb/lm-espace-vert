@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     description: 'Découvrez le portfolio de LM Espace Vert : jardins, terrasses en pierre, engazonnements et parcs dans le nord-ouest lyonnais. Plus de 200 projets réalisés depuis 2019.',
     url: 'https://www.lmespacevert.fr/realisations',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisation-1.webp', width: 1200, height: 630, alt: 'Portfolio réalisations paysagiste LM Espace Vert Lyon' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-09.webp', width: 1200, height: 630, alt: 'Portfolio réalisations paysagiste LM Espace Vert Lyon' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Réalisations LM Espace Vert — Portfolio paysagiste Lyon nord',
     description: 'Jardins, terrasses et aménagements paysagers dans le nord-ouest lyonnais. Plus de 200 projets depuis 2019.',
-    images: ['https://www.lmespacevert.fr/images/realisation-1.webp'],
+    images: ['https://www.lmespacevert.fr/images/realisations/lm-09.webp'],
   },
 }
 

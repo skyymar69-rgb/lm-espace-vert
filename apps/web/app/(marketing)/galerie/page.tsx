@@ -6,7 +6,7 @@ import { GalerieClient } from './gallery-client'
 export const metadata: Metadata = {
   title: 'Galerie Photos — Réalisations LM Espace Vert Lyon',
   description:
-    "Parcourez la galerie photo de LM Espace Vert : jardins créés, entretien d'espaces verts, élagage, maçonnerie paysagère et transformations avant/après dans le nord-ouest lyonnais. Plus de 34 photos de réalisations.",
+    "Parcourez la galerie photo de LM Espace Vert : jardins créés, entretien d'espaces verts, élagage, maçonnerie paysagère et transformations avant/après dans le nord-ouest lyonnais. 42 photos de réalisations authentiques.",
   alternates: { canonical: 'https://www.lmespacevert.fr/galerie' },
   openGraph: {
     title: 'Galerie Photos — Réalisations LM Espace Vert Lyon',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.lmespacevert.fr/images/realisation-1.webp',
+        url: 'https://www.lmespacevert.fr/images/realisations/lm-09.webp',
         width: 1200,
         height: 630,
         alt: 'Galerie réalisations paysagiste LM Espace Vert Lyon',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Galerie Photos — Réalisations LM Espace Vert Lyon',
     description: 'Jardins, terrasses et aménagements paysagers dans le nord-ouest lyonnais.',
-    images: ['https://www.lmespacevert.fr/images/realisation-1.webp'],
+    images: ['https://www.lmespacevert.fr/images/realisations/lm-09.webp'],
   },
 }
 
@@ -174,7 +174,7 @@ export default function GaleriePage() {
               }}
             >
               <Camera size={15} aria-hidden="true" />
-              34 photos
+                          42 photos
             </span>
             <span
               style={{

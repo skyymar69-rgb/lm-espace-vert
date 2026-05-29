@@ -5,31 +5,31 @@ import { ArrowRight, CheckCircle, Phone, MapPin, Star, Gem, ShieldCheck, Clock }
 import { JsonLd } from '@/components/seo/json-ld'
 
 export const metadata: Metadata = {
-  title: "MaÃ§onnerie PaysagÃ¨re Lyon Nord | LM Espace Vert",
-  description: "Terrasses, allÃ©es et murets en pierre naturelle Ã  Lyon nord par LM Espace Vert. MaÃ§onnerie paysagÃ¨re haut de gamme avec garantie dÃ©cennale. Devis gratuit sous 24h, intervention sur 20 km.",
+  title: "Maçonnerie Paysagère Lyon Nord | LM Espace Vert",
+  description: "Terrasses, allées et murets en pierre naturelle à Lyon nord par LM Espace Vert. Maçonnerie paysagère haut de gamme avec garantie décennale. Devis gratuit sous 24h, intervention sur 20 km.",
   alternates: { canonical: 'https://www.lmespacevert.fr/services/maconnerie-paysagere' },
   openGraph: {
-    title: "MaÃ§onnerie PaysagÃ¨re Lyon Nord â€” LM Espace Vert, paysagiste",
-    description: "Terrasses, allÃ©es et murets en pierre naturelle Ã  Lyon nord par LM Espace Vert. MaÃ§onnerie paysagÃ¨re haut de gamme avec garantie dÃ©cennale. Devis gratuit sous 24h.",
+    title: "Maçonnerie Paysagère Lyon Nord — LM Espace Vert, paysagiste",
+    description: "Terrasses, allées et murets en pierre naturelle à Lyon nord par LM Espace Vert. Maçonnerie paysagère haut de gamme avec garantie décennale. Devis gratuit sous 24h.",
     url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/service-terrasse.jpg', width: 1200, height: 630, alt: 'MaÃ§onnerie paysagÃ¨re â€” terrasse en pierre Ã  Lyon nord' }],
+    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-28.webp', width: 1200, height: 630, alt: 'Maçonnerie paysagère — terrasse en pierre à Lyon nord' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "MaÃ§onnerie PaysagÃ¨re Lyon Nord â€” LM Espace Vert, paysagiste",
-    description: "Terrasses, allÃ©es et murets en pierre naturelle Ã  Lyon nord. Garantie dÃ©cennale. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/service-terrasse.jpg'],
+    title: "Maçonnerie Paysagère Lyon Nord — LM Espace Vert, paysagiste",
+    description: "Terrasses, allées et murets en pierre naturelle à Lyon nord. Garantie décennale. Devis gratuit sous 24h.",
+    images: ['https://www.lmespacevert.fr/images/realisations/lm-28.webp'],
   },
 }
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'MaÃ§onnerie paysagÃ¨re',
-  serviceType: 'MaÃ§onnerie paysagÃ¨re',
+  name: 'Maçonnerie paysagère',
+  serviceType: 'Maçonnerie paysagère',
   url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
-  description: "CrÃ©ation de terrasses, allÃ©es, murets et escaliers en pierre naturelle Ã  Lyon nord. MaÃ§onnerie paysagÃ¨re haut de gamme pour valoriser durablement votre extÃ©rieur.",
+  description: "Création de terrasses, allées, murets et escaliers en pierre naturelle à Lyon nord. Maçonnerie paysagère haut de gamme pour valoriser durablement votre extérieur.",
   provider: {
     '@type': 'LocalBusiness',
     name: 'LM Espace Vert',
@@ -62,41 +62,41 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
     { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
-    { '@type': 'ListItem', position: 3, name: 'MaÃ§onnerie paysagÃ¨re', item: 'https://www.lmespacevert.fr/services/maconnerie-paysagere' },
+    { '@type': 'ListItem', position: 3, name: 'Maçonnerie paysagère', item: 'https://www.lmespacevert.fr/services/maconnerie-paysagere' },
   ],
 }
 
 const features = [
   'Terrasses en pierre naturelle, ardoise ou granit',
-  'AllÃ©es et chemins en gravier stabilisÃ© ou pavÃ©s',
-  'Murets de soutÃ¨nement en pierre sÃ¨che ou maÃ§onnÃ©s',
-  'Escaliers extÃ©rieurs de jardin',
+  'Allées et chemins en gravier stabilisé ou pavés',
+  'Murets de soutènement en pierre sèche ou maçonnés',
+  'Escaliers extérieurs de jardin',
   'Dallage et pavage sur mesure',
-  'ClÃ´tures, pergolas et structures bois-pierre',
+  'Clôtures, pergolas et structures bois-pierre',
 ]
 
 const advantages = [
-  { icon: Gem, title: 'MatÃ©riaux nobles sÃ©lectionnÃ©s', desc: 'Pierre de Bourgogne, granit gris, calcaire dorÃ© â€” des matÃ©riaux durables et Ã©lÃ©gants.' },
-  { icon: ShieldCheck, title: 'Garantie dÃ©cennale', desc: 'Tous nos ouvrages maÃ§onnÃ©s sont couverts par la garantie dÃ©cennale obligatoire.' },
-  { icon: Clock, title: 'DÃ©lais tenus', desc: 'Planning de chantier dÃ©taillÃ©, dÃ©but et fin de travaux garantis par contrat.' },
+  { icon: Gem, title: 'Matériaux nobles sélectionnés', desc: 'Pierre de Bourgogne, granit gris, calcaire doré — des matériaux durables et élégants.' },
+  { icon: ShieldCheck, title: 'Garantie décennale', desc: 'Tous nos ouvrages maçonnés sont couverts par la garantie décennale obligatoire.' },
+  { icon: Clock, title: 'Délais tenus', desc: 'Planning de chantier détaillé, début et fin de travaux garantis par contrat.' },
 ]
 
 const faqs = [
   {
-    q: "Quels matÃ©riaux utilisez-vous pour les terrasses paysagÃ¨res Ã  Lyon ?",
-    a: "Nous travaillons principalement avec des pierres naturelles de qualitÃ© : calcaire du Beaujolais, granit, ardoise, travertin, ainsi que des pavÃ©s en porphyre pour les allÃ©es. Nous pouvons Ã©galement rÃ©aliser des terrasses en bÃ©ton dÃ©sactivÃ©, en bois composite ou en carrelage extÃ©rieur grand format. Le choix du matÃ©riau dÃ©pend de votre budget, du style de votre maison et des contraintes de votre terrain.",
+    q: "Quels matériaux utilisez-vous pour les terrasses paysagères à Lyon ?",
+    a: "Nous travaillons principalement avec des pierres naturelles de qualité : calcaire du Beaujolais, granit, ardoise, travertin, ainsi que des pavés en porphyre pour les allées. Nous pouvons également réaliser des terrasses en béton désactivé, en bois composite ou en carrelage extérieur grand format. Le choix du matériau dépend de votre budget, du style de votre maison et des contraintes de votre terrain.",
   },
   {
-    q: "Combien coÃ»te la crÃ©ation d'une terrasse paysagÃ¨re Ã  Ã‰cully ou Limonest ?",
-    a: "Le coÃ»t d'une terrasse en maÃ§onnerie paysagÃ¨re varie selon la superficie, les matÃ©riaux et la complexitÃ© du chantier. En pierre naturelle, comptez gÃ©nÃ©ralement entre 150 et 350 â‚¬/mÂ² pose comprise. Pour un projet complet incluant terrassement, fondations et finitions, nous Ã©tablissons un devis dÃ©taillÃ© aprÃ¨s visite gratuite de votre propriÃ©tÃ©.",
+    q: "Combien coûte la création d'une terrasse paysagère à Écully ou Limonest ?",
+    a: "Le coût d'une terrasse en maçonnerie paysagère varie selon la superficie, les matériaux et la complexité du chantier. En pierre naturelle, comptez généralement entre 150 et 350 â‚¬/mÂ² pose comprise. Pour un projet complet incluant terrassement, fondations et finitions, nous établissons un devis détaillé après visite gratuite de votre propriété.",
   },
   {
-    q: "Est-il nÃ©cessaire d'obtenir un permis de construire pour une terrasse ?",
-    a: "Pour une terrasse de plain-pied sans fondation ni toiture, aucune autorisation n'est gÃ©nÃ©ralement requise. Si la terrasse est surÃ©levÃ©e (plus de 60 cm) ou couverte, une dÃ©claration prÃ©alable de travaux est nÃ©cessaire. En secteur protÃ©gÃ© (ZPPAUP, ABF), des rÃ¨gles spÃ©cifiques s'appliquent. Nous vous accompagnons dans les dÃ©marches administratives si nÃ©cessaire.",
+    q: "Est-il nécessaire d'obtenir un permis de construire pour une terrasse ?",
+    a: "Pour une terrasse de plain-pied sans fondation ni toiture, aucune autorisation n'est généralement requise. Si la terrasse est surélevée (plus de 60 cm) ou couverte, une déclaration préalable de travaux est nécessaire. En secteur protégé (ZPPAUP, ABF), des règles spécifiques s'appliquent. Nous vous accompagnons dans les démarches administratives si nécessaire.",
   },
   {
-    q: "RÃ©alisez-vous des murets de soutÃ¨nement Ã  Lyon nord ?",
-    a: "Oui, la construction de murets de soutÃ¨nement en pierre sÃ¨che ou maÃ§onnÃ©s est l'une de nos spÃ©cialitÃ©s. Ils sont indispensables pour gÃ©rer les dÃ©nivelÃ©s frÃ©quents dans les propriÃ©tÃ©s du nord-ouest lyonnais (Caluire, Saint-Didier, Limonest). Nous Ã©tudions le drainage et les charges Ã  retenir pour dimensionner correctement chaque ouvrage.",
+    q: "Réalisez-vous des murets de soutènement à Lyon nord ?",
+    a: "Oui, la construction de murets de soutènement en pierre sèche ou maçonnés est l'une de nos spécialités. Ils sont indispensables pour gérer les dénivelés fréquents dans les propriétés du nord-ouest lyonnais (Caluire, Saint-Didier, Limonest). Nous étudions le drainage et les charges à retenir pour dimensionner correctement chaque ouvrage.",
   },
 ]
 
@@ -125,7 +125,7 @@ export default function MaconneriePaysagerePage() {
             <li aria-hidden="true">/</li>
             <li><Link href="/services" className="hover:text-[#2F2F2F] transition-colors">Services</Link></li>
             <li aria-hidden="true">/</li>
-            <li><span aria-current="page" className="text-[#2F2F2F]">MaÃ§onnerie paysagÃ¨re</span></li>
+            <li><span aria-current="page" className="text-[#2F2F2F]">Maçonnerie paysagère</span></li>
           </ol>
         </div>
       </nav>
@@ -133,8 +133,8 @@ export default function MaconneriePaysagerePage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[380px] flex items-end" aria-labelledby="service-heading">
         <Image
-          src="/images/service-terrasse.jpg"
-          alt="MaÃ§onnerie paysagÃ¨re â€” terrasse et murets en pierre naturelle Ã  Lyon nord"
+          src="/images/realisations/lm-28.webp"
+          alt="Maçonnerie paysagère — terrasse et murets en pierre naturelle à Lyon nord"
           fill
           className="object-cover"
           priority
@@ -145,10 +145,10 @@ export default function MaconneriePaysagerePage() {
         />
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 pb-12">
           <h1 id="service-heading" className="font-display text-4xl sm:text-5xl font-bold text-white mb-3">
-            MaÃ§onnerie PaysagÃ¨re
+            Maçonnerie Paysagère
           </h1>
           <p className="text-white/80 text-lg max-w-xl mb-6">
-            Terrasses, allÃ©es et murets en pierre naturelle pour structurer et valoriser votre jardin.
+            Terrasses, allées et murets en pierre naturelle pour structurer et valoriser votre jardin.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Link
@@ -158,12 +158,12 @@ export default function MaconneriePaysagerePage() {
             >
               Devis gratuit <ArrowRight size={14} />
             </Link>
-            {/* AmÃ©lioration 1 â€” Badge prix indicatif */}
+            {/* Amélioration 1 — Badge prix indicatif */}
             <span
               className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
               style={{ backgroundColor: 'rgba(128,188,0,0.18)', color: '#425D07' }}
             >
-              Ã€ partir de 1 200 â‚¬
+              À partir de 1 200 â‚¬
             </span>
           </div>
         </div>
@@ -176,17 +176,17 @@ export default function MaconneriePaysagerePage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Notre expertise</p>
               <h2 className="font-display text-3xl font-bold mb-5" style={{ color: '#425D07' }}>
-                Des ouvrages minÃ©raux qui durent et embellissent
+                Des ouvrages minéraux qui durent et embellissent
               </h2>
               <div className="text-[#8C8F94] leading-relaxed space-y-4">
                 <p>
-                  La maÃ§onnerie paysagÃ¨re est l&apos;art de combiner la pierre, le bÃ©ton et les matÃ©riaux minÃ©raux avec la vÃ©gÃ©tation pour crÃ©er des espaces extÃ©rieurs harmonieux et durables. Chez LM Espace Vert, nous maÃ®trisons l&apos;ensemble des techniques â€” du pavage traditionnel aux murets en pierre sÃ¨che â€” pour structurer les jardins de Lyon nord avec Ã©lÃ©gance.
+                  La maçonnerie paysagère est l&apos;art de combiner la pierre, le béton et les matériaux minéraux avec la végétation pour créer des espaces extérieurs harmonieux et durables. Chez LM Espace Vert, nous maîtrisons l&apos;ensemble des techniques — du pavage traditionnel aux murets en pierre sèche — pour structurer les jardins de Lyon nord avec élégance.
                 </p>
                 <p>
-                  Chaque rÃ©alisation commence par une Ã©tude du terrain : pentes, drainage, nature du sol, accÃ¨s. Nous concevons ensuite les ouvrages en cohÃ©rence avec l&apos;architecture de votre maison et le style de votre jardin. Nous sÃ©lectionnons des matÃ©riaux nobles et durables â€” pierre de Bourgogne, granit gris, calcaire dorÃ© â€” qui s&apos;inscrivent dans la tradition paysagÃ¨re du Beaujolais et du RhÃ´ne.
+                  Chaque réalisation commence par une étude du terrain : pentes, drainage, nature du sol, accès. Nous concevons ensuite les ouvrages en cohérence avec l&apos;architecture de votre maison et le style de votre jardin. Nous sélectionnons des matériaux nobles et durables — pierre de Bourgogne, granit gris, calcaire doré — qui s&apos;inscrivent dans la tradition paysagère du Beaujolais et du Rhône.
                 </p>
                 <p>
-                  Que vous souhaitiez une terrasse panoramique Ã  Limonest, une allÃ©e en pavÃ©s Ã  Caluire ou un muret de soutÃ¨nement Ã  Saint-Didier-au-Mont-d&apos;Or, nos artisans rÃ©alisent votre projet avec soin, dans le respect des dÃ©lais et des budgets dÃ©finis. La garantie dÃ©cennale couvre l&apos;ensemble de nos ouvrages maÃ§onnÃ©s.
+                  Que vous souhaitiez une terrasse panoramique à Limonest, une allée en pavés à Caluire ou un muret de soutènement à Saint-Didier-au-Mont-d&apos;Or, nos artisans réalisent votre projet avec soin, dans le respect des délais et des budgets définis. La garantie décennale couvre l&apos;ensemble de nos ouvrages maçonnés.
                 </p>
               </div>
               <Link
@@ -194,7 +194,7 @@ export default function MaconneriePaysagerePage() {
                 className="inline-flex items-center gap-2 text-sm font-semibold mt-6 hover:gap-3 transition-all"
                 style={{ color: '#425D07' }}
               >
-                Voir nos rÃ©alisations <ArrowRight size={14} />
+                Voir nos réalisations <ArrowRight size={14} />
               </Link>
             </div>
             <ul className="space-y-3">
@@ -209,12 +209,12 @@ export default function MaconneriePaysagerePage() {
         </div>
       </section>
 
-      {/* AmÃ©lioration 2 â€” Section Avantages */}
+      {/* Amélioration 2 — Section Avantages */}
       <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-center" style={{ color: '#80BC00' }}>Pourquoi nous choisir</p>
           <h2 className="font-display text-2xl font-bold mb-10 text-center" style={{ color: '#425D07' }}>
-            Les avantages de notre maÃ§onnerie paysagÃ¨re
+            Les avantages de notre maçonnerie paysagère
           </h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {advantages.map(({ icon: Icon, title, desc }) => (
@@ -230,32 +230,32 @@ export default function MaconneriePaysagerePage() {
         </div>
       </section>
 
-      {/* AmÃ©lioration 4 â€” TÃ©moignage client */}
+      {/* Amélioration 4 — Témoignage client */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <blockquote className="rounded-2xl border border-[#EDEDED] p-8 text-center" style={{ backgroundColor: '#F7F5F0' }}>
-            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 Ã©toiles">
+            <div className="flex justify-center gap-0.5 mb-4" aria-label="5 étoiles">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={16} fill="#80BC00" style={{ color: '#80BC00' }} aria-hidden="true" />
               ))}
             </div>
             <p className="text-base italic leading-relaxed mb-4" style={{ color: '#2F2F2F' }}>
-              &ldquo;Notre terrasse en calcaire est tout simplement magnifique. LM Espace Vert a su respecter nos envies tout en apportant de vrais conseils techniques. Un chantier propre, des artisans sÃ©rieux, et un rÃ©sultat qui valorise vraiment notre bien.&rdquo;
+              &ldquo;Notre terrasse en calcaire est tout simplement magnifique. LM Espace Vert a su respecter nos envies tout en apportant de vrais conseils techniques. Un chantier propre, des artisans sérieux, et un résultat qui valorise vraiment notre bien.&rdquo;
             </p>
             <footer className="text-sm font-semibold" style={{ color: '#425D07' }}>
-              Sophie R. â€” Dardilly
+              Sophie R. — Dardilly
             </footer>
           </blockquote>
         </div>
       </section>
 
-      {/* Zone gÃ©ographique */}
+      {/* Zone géographique */}
       <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <MapPin size={24} style={{ color: '#80BC00' }} className="mx-auto mb-3" aria-hidden="true" />
           <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#425D07' }}>Zone d&apos;intervention</h2>
           <p className="text-[#8C8F94] max-w-xl mx-auto">
-            LM Espace Vert rÃ©alise ce service dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Ã‰cully, Tassin, Limonest, Dardilly, Champagne, Neuville-sur-SaÃ´ne et tout le nord-ouest lyonnais.
+            LM Espace Vert réalise ce service dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Écully, Tassin, Limonest, Dardilly, Champagne, Neuville-sur-Saône et tout le nord-ouest lyonnais.
           </p>
         </div>
       </section>
@@ -263,7 +263,7 @@ export default function MaconneriePaysagerePage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>Questions frÃ©quentes</h2>
+          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>Questions fréquentes</h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
               <details key={faq.q} className="border border-[#EDEDED] rounded-xl overflow-hidden">
@@ -279,7 +279,7 @@ export default function MaconneriePaysagerePage() {
         </div>
       </section>
 
-      {/* Zones d'intervention â€” chips */}
+      {/* Zones d'intervention — chips */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-5xl px-4 sm:px-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>Nos secteurs</p>
@@ -292,13 +292,13 @@ export default function MaconneriePaysagerePage() {
               { slug: 'limonest', nom: 'Limonest' },
               { slug: 'dardilly', nom: 'Dardilly' },
               { slug: 'caluire', nom: 'Caluire-et-Cuire' },
-              { slug: 'ecuelly', nom: 'Ã‰cully' },
+              { slug: 'ecuelly', nom: 'Écully' },
               { slug: 'saint-cyr', nom: "Saint-Cyr-au-Mont-d'Or" },
               { slug: 'curis', nom: "Curis-au-Mont-d'Or" },
               { slug: 'tassin', nom: 'Tassin-la-Demi-Lune' },
               { slug: 'collonges', nom: "Collonges-au-Mont-d'Or" },
               { slug: 'francheville', nom: 'Francheville' },
-              { slug: 'neuville', nom: 'Neuville-sur-SaÃ´ne' },
+              { slug: 'neuville', nom: 'Neuville-sur-Saône' },
               { slug: 'craponne', nom: 'Craponne' },
             ].map((v) => (
               <Link
@@ -318,8 +318,8 @@ export default function MaconneriePaysagerePage() {
       {/* CTA */}
       <section style={{ backgroundColor: '#0B3D2C' }} className="py-16 text-center">
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold text-white mb-3">Votre projet maÃ§onnerie, on en parle ?</h2>
-          <p className="text-white/70 mb-6">Devis gratuit Â· RÃ©ponse sous 24h Â· Rayon 20 km</p>
+          <h2 className="font-display text-2xl font-bold text-white mb-3">Votre projet maçonnerie, on en parle ?</h2>
+          <p className="text-white/70 mb-6">Devis gratuit · Réponse sous 24h · Rayon 20 km</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"

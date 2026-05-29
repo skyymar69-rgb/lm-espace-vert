@@ -106,38 +106,42 @@ export function Header() {
       </a>
 
       <header
-        className={`sticky top-0 z-40 border-b border-[#EDEDED] transition-all ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-[rgba(0,0,0,0.06)_0px_4px_20px_0px]' : 'bg-white'}`}
+        className={`sticky top-0 z-40 transition-all duration-300 ${
+          scrolled
+            ? 'bg-white/96 backdrop-blur-md shadow-[0_2px_24px_rgba(11,61,44,0.10)] border-b border-[#E8E8E8]'
+            : 'bg-white border-b border-[#EDEDED]'
+        }`}
       >
-        <div className="container mx-auto max-w-7xl flex items-center justify-between h-[72px] px-4 sm:px-6">
+        <div className="container mx-auto max-w-7xl flex items-center justify-between h-[76px] px-4 sm:px-6">
 
           {/* ── Logo ── */}
           <Link
             href="/"
-            className="flex-shrink-0 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#80BC00]"
+            className="flex-shrink-0 transition-all duration-200 hover:opacity-85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#80BC00] rounded-sm"
             aria-label="LM Espace Vert — Retour à l'accueil"
           >
             <Image
               src="/logo.png"
               alt="LM Espace Vert"
-              width={140}
+              width={148}
               height={56}
               priority
-              className="h-10 w-auto object-contain"
+              className="h-11 w-auto object-contain"
             />
           </Link>
 
           {/* ── Nav centre (desktop) ── */}
-          <nav role="navigation" aria-label="Navigation principale" className="hidden lg:flex items-center gap-0.5">
+          <nav role="navigation" aria-label="Navigation principale" className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const active = pathname === item.href || pathname.startsWith(item.href + '/')
               if (item.hasMega) {
                 return (
                   <div key={item.href} onMouseEnter={openMega} onMouseLeave={closeMega}>
                     <button
-                      className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] ${
+                      className={`group relative flex items-center gap-1 px-3.5 py-2 text-sm font-medium tracking-wide transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] focus-visible:rounded-md ${
                         active || megaOpen
-                          ? 'text-[#425D07] font-semibold border-b-2 border-[#80BC00]'
-                          : 'text-[#2F2F2F] hover:text-[#80BC00]'
+                          ? 'text-[#425D07] font-semibold'
+                          : 'text-[#2F2F2F] hover:text-[#425D07]'
                       }`}
                       aria-expanded={megaOpen}
                       aria-haspopup="true"
@@ -146,9 +150,16 @@ export function Header() {
                     >
                       {item.label}
                       <ChevronDown
-                        size={14}
+                        size={13}
                         aria-hidden="true"
                         className={`transition-transform duration-200 ${megaOpen ? 'rotate-180' : ''}`}
+                      />
+                      {/* Underline indicator */}
+                      <span
+                        className={`absolute bottom-0 left-2 right-2 h-[2px] rounded-full bg-[#80BC00] transition-transform duration-200 origin-left ${
+                          active || megaOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                        }`}
+                        aria-hidden="true"
                       />
                     </button>
                   </div>
@@ -158,32 +169,42 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] ${
+                  className={`group relative px-3.5 py-2 text-sm font-medium tracking-wide transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] focus-visible:rounded-md ${
                     active
-                      ? 'text-[#425D07] font-semibold border-b-2 border-[#80BC00]'
-                      : 'text-[#2F2F2F] hover:text-[#80BC00]'
+                      ? 'text-[#425D07] font-semibold'
+                      : 'text-[#2F2F2F] hover:text-[#425D07]'
                   }`}
                   aria-current={active ? 'page' : undefined}
                 >
                   {item.label}
+                  {/* Underline indicator */}
+                  <span
+                    className={`absolute bottom-0 left-2 right-2 h-[2px] rounded-full bg-[#80BC00] transition-transform duration-200 origin-left ${
+                      active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    }`}
+                    aria-hidden="true"
+                  />
                 </Link>
               )
             })}
           </nav>
 
           {/* ── Droite ── */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5">
             {/* Météo Lyon */}
             <WeatherWidget />
 
             {/* Accessibilité */}
             <AccessibilityMenu />
 
+            {/* Séparateur vertical discret */}
+            <span className="hidden sm:block w-px h-5 bg-[#E0E0E0] mx-1" aria-hidden="true" />
+
             {/* Devis gratuit */}
             <Link
               href="/devis"
-              className="hidden sm:inline-flex items-center rounded-full px-5 py-2 text-sm font-bold transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              className="hidden sm:inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-200 hover:brightness-110 hover:shadow-[0_4px_16px_rgba(128,188,0,0.35)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+              style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: '0 2px 12px rgba(128,188,0,0.25)' }}
             >
               Devis gratuit
             </Link>
@@ -205,37 +226,37 @@ export function Header() {
           >
             {/* Centred panel */}
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 pb-6">
-              <div className="max-w-2xl mx-auto bg-white shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] rounded-2xl border border-[#EDEDED] p-6 mt-1">
+              <div className="max-w-2xl mx-auto bg-white/98 backdrop-blur-sm shadow-[0_8px_40px_rgba(11,61,44,0.12),0_2px_8px_rgba(0,0,0,0.06)] rounded-2xl border border-[#E8EDE4] p-6 mt-2">
                 {/* 3×2 grid */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-3">
                   {megaServices.map(({ href, label, desc, photo }) => (
                     <Link
                       key={label}
                       href={href}
                       onClick={() => setMegaOpen(false)}
-                      className="flex flex-col gap-1.5 rounded-xl p-3 hover:bg-[#F4F9E8] transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                      className="group flex flex-col gap-2 rounded-xl p-3 hover:bg-[#F2F8E7] transition-colors duration-150 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
                     >
-                      <div className="relative w-full h-10 rounded-lg overflow-hidden">
+                      <div className="relative w-full h-12 rounded-lg overflow-hidden">
                         <Image
                           src={photo}
                           alt=""
                           fill
                           sizes="160px"
-                          className="object-cover"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
-                      <span className="text-sm font-semibold text-[#2F2F2F] leading-snug">{label}</span>
-                      <span className="text-xs text-[#6B6B6B]">{desc}</span>
+                      <span className="text-sm font-semibold text-[#2F2F2F] leading-snug group-hover:text-[#425D07] transition-colors">{label}</span>
+                      <span className="text-xs text-[#6B6B6B] leading-snug">{desc}</span>
                     </Link>
                   ))}
                 </div>
 
                 {/* Footer link */}
-                <div className="mt-4 pt-4 border-t border-[#EDEDED] flex items-center justify-between gap-4 flex-wrap">
+                <div className="mt-5 pt-4 border-t border-[#EBEBEB] flex items-center justify-between gap-4 flex-wrap">
                   <Link
                     href="/services"
                     onClick={() => setMegaOpen(false)}
-                    className="text-sm font-semibold hover:underline"
+                    className="text-sm font-semibold transition-colors hover:text-[#80BC00]"
                     style={{ color: '#425D07' }}
                   >
                     Voir toutes nos prestations →
@@ -243,7 +264,7 @@ export function Header() {
                   <Link
                     href="/processus"
                     onClick={() => setMegaOpen(false)}
-                    className="text-xs font-medium hover:underline"
+                    className="text-xs font-medium transition-colors hover:text-[#425D07]"
                     style={{ color: '#5C606B' }}
                   >
                     Notre processus

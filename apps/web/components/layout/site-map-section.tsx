@@ -5,32 +5,32 @@ const mainPages = [
   {
     label: 'Accueil',
     href: '/',
-    photo: '/images/scraped/Chemin de gravier bordé de pelouse menant à des maisons modernes à Limonest.webp',
+    photo: '/images/realisations/lm-09.webp',
   },
   {
     label: 'Nos Services',
     href: '/services',
-    photo: '/images/scraped/Coupe et entretien de haies et arbustes à Limonest1.jpeg',
+    photo: '/images/realisations/lm-30.webp',
   },
   {
     label: 'Réalisations',
     href: '/realisations',
-    photo: '/images/scraped/Réalisation de jardin paysager et aménagement extérieur à Limonest.jpeg',
+    photo: '/images/realisations/lm-34.webp',
   },
   {
     label: 'Galerie',
     href: '/galerie',
-    photo: '/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg',
+    photo: '/images/realisations/lm-18.webp',
   },
   {
     label: 'Blog & Conseils',
     href: '/blog',
-    photo: '/images/scraped/Élagage et taille de haies.jpeg',
+    photo: '/images/realisations/lm-20.webp',
   },
   {
     label: 'À propos',
     href: '/a-propos',
-    photo: '/images/scraped/Étude du terrain près de Limonest.webp',
+    photo: '/images/realisations/lm-16.webp',
   },
 ]
 

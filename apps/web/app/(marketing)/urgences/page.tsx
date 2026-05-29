@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Urgence Paysagiste Lyon Nord — Intervention sous 24h | LM Espace Vert',
     description: 'Arbre tombé, tempête, haie endommagée : intervention d\'urgence sous 24h à Lyon nord.',
-    images: [{ url: '/images/elagage-abattage.webp', width: 1200, height: 630, alt: 'Intervention urgence paysagiste Lyon' }],
+    images: [{ url: '/images/realisations/lm-07.webp', width: 1200, height: 630, alt: 'Intervention urgence paysagiste Lyon' }],
   },
 }
 

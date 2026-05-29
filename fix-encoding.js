@@ -1,8 +1,10 @@
 const fs = require('fs');
 
 const files = [
-  'apps/web/app/(marketing)/services/elagage-abattage/page.tsx',
-  'apps/web/app/(marketing)/services/entretien-espaces-verts/page.tsx'
+  'apps/web/app/(marketing)/services/creation-jardins/page.tsx',
+  'apps/web/app/(marketing)/services/maconnerie-paysagere/page.tsx',
+  'apps/web/app/(marketing)/services/arrosage-automatique/page.tsx',
+  'apps/web/app/(marketing)/services/engazonnement/page.tsx'
 ];
 
 // cp1252 mojibake: UTF-8 bytes of a character were decoded as Windows-1252 bytes,

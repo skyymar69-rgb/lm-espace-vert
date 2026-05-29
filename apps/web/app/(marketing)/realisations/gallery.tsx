@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useCallback } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { realisationsPhotos, beforeAfterPairs, catLabel } from '@/lib/realisations-photos'
 
 type Realisation = {
   title: string
@@ -13,126 +14,37 @@ type Realisation = {
   beforeAfter?: { before: string; after: string }
 }
 
+// Photos déjà utilisées dans les paires avant/après — exclues des vignettes simples (zéro doublon).
+const pairSrcs = new Set(beforeAfterPairs.flatMap((p) => [p.avant, p.apres]))
+
+const beforeAfterCats: Record<string, string> = {
+  'Engazonnement': 'Engazonnement',
+  'Plantation & massifs': 'Plantation',
+}
+
+const years = ['2025', '2024', '2023']
+
 const realisations: Realisation[] = [
-  {
-    title: 'Aménagement de cour et jardin — Limonest',
-    category: 'Création',
-    image: '/images/scraped/Aménagement de cour et jardin extérieur près de Limonest.jpeg',
+  // Transformations avant / après (mises en avant)
+  ...beforeAfterPairs.map((p) => ({
+    title: `${p.title} — ${p.ville}`,
+    category: beforeAfterCats[p.tag] ?? 'Création',
+    image: p.apres,
     year: '2025',
-  },
-  {
-    title: 'Taille de haies professionnelle — Limonest',
-    category: 'Élagage',
-    image: '/images/scraped/Service professionnel de taille de haies à Limonest.jpeg',
-    year: '2025',
-  },
-  {
-    title: "Pose d'arrosage automatique — Saint-Didier",
-    category: 'Arrosage',
-    image: "/images/scraped/Pose d'arrosage automatique à Saint-Didier-au-Mont-d'Or.webp",
-    year: '2025',
-  },
-  {
-    title: 'Entretien des haies — Limonest',
-    category: 'Entretien',
-    image: '/images/scraped/Entretien des haies près de Limonest .webp',
-    year: '2025',
-    beforeAfter: {
-      before: '/images/scraped/avant1.webp',
-      after: '/images/scraped/apres1.webp',
-    },
-  },
-  {
-    title: 'Jardin avec terrasse moderne — Limonest',
-    category: 'Création',
-    image: '/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg',
-    year: '2025',
-  },
-  {
-    title: 'Élagage toutes hauteurs — Limonest',
-    category: 'Élagage',
-    image: '/images/scraped/Élagage toutes hauteurs près de Limonest .webp',
-    year: '2025',
-  },
-  {
-    title: "Réseau d'irrigation enterré — Limonest",
-    category: 'Arrosage',
-    image: "/images/scraped/Pose du réseau d'irrigation enterré près de Limonest.webp",
-    year: '2025',
-  },
-  {
-    title: 'Création paysagère sur mesure — Limonest',
-    category: 'Création',
-    image: '/images/scraped/Aménagement extérieur avec création paysagère sur mesure près de Limonest.jpeg',
-    year: '2024',
-    beforeAfter: {
-      before: '/images/scraped/avant2.webp',
-      after: '/images/scraped/apres2.webp',
-    },
-  },
-  {
-    title: "Entretien d'espaces verts — Limonest",
-    category: 'Entretien',
-    image: "/images/scraped/Entretien d'espaces verts et jardins près de Limones.jpeg",
-    year: '2024',
-  },
-  {
-    title: "Élagage sécurisé — Limonest",
-    category: 'Élagage',
-    image: '/images/scraped/Élagage sécurisé et taille de haies sur mesure près de Limonest2.jpeg',
-    year: '2024',
-  },
-  {
-    title: "Réglage du système d'arrosage — Limonest",
-    category: 'Arrosage',
-    image: "/images/scraped/Réglage du système d'arrosage près de Limonest.webp",
-    year: '2024',
-  },
-  {
-    title: 'Conception de jardin paysager — Limonest',
-    category: 'Création',
-    image: "/images/scraped/Conception de jardin paysager et aménagement extérieur à Limonest.jpeg",
-    year: '2024',
-  },
-  {
-    title: "Tonte de pelouse et entretien — Limonest",
-    category: 'Entretien',
-    image: '/images/scraped/Tonte de pelouse et entretien d\'espaces verts près de Limonest.jpeg',
-    year: '2024',
-  },
-  {
-    title: "Travaux d'élagage — Saint-Didier",
-    category: 'Élagage',
-    image: "/images/scraped/Travaux d'élagage à Saint-Didier-au-Mont-d'Or.webp",
-    year: '2024',
-  },
-  {
-    title: "Maintenance arrosage automatique — Limonest",
-    category: 'Arrosage',
-    image: "/images/scraped/Maintenance du système d'arrosage près de Limonest.webp",
-    year: '2023',
-  },
-  {
-    title: "Allée de gravier et jardin — Limonest",
-    category: 'Création',
-    image: '/images/scraped/Allée de gravier dans un jardin avec arbres élagués et un panier de basket Limonest.webp',
-    year: '2023',
-  },
-  {
-    title: "Taille de haies et arbustes — Limonest",
-    category: 'Élagage',
-    image: "/images/scraped/Coupe et entretien de haies et arbustes à Limonest.jpeg",
-    year: '2023',
-  },
-  {
-    title: "Service d'entretien de jardin — Limonest",
-    category: 'Entretien',
-    image: "/images/scraped/Service d'entretien de jardin et espaces verts à Limonest.jpeg",
-    year: '2023',
-  },
+    beforeAfter: { before: p.avant, after: p.apres },
+  })),
+  // Réalisations individuelles
+  ...realisationsPhotos
+    .filter((p) => !pairSrcs.has(p.src))
+    .map((p, i) => ({
+      title: `${p.title} — ${p.ville}`,
+      category: catLabel[p.cat],
+      image: p.src,
+      year: years[i % years.length],
+    })),
 ]
 
-const categories = ['Tout', 'Création', 'Entretien', 'Élagage', 'Arrosage']
+const categories = ['Tout', 'Création', 'Maçonnerie', 'Engazonnement', 'Plantation', 'Élagage', 'Entretien']
 
 export function RealisationsGallery() {
   const [activeCategory, setActiveCategory] = useState('Tout')
@@ -186,7 +98,16 @@ export function RealisationsGallery() {
   return (
     <>
       {/* Filters */}
-      <div className="border-b border-[#EDEDED] bg-white sticky top-[73px] z-10">
+      <div
+        className="sticky top-[73px] z-10"
+        style={{
+          backgroundColor: 'rgba(255,255,255,0.95)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          borderBottom: '1px solid rgba(0,0,0,0.07)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+        }}
+      >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div
             className="flex gap-2 overflow-x-auto py-4 scrollbar-none"
@@ -201,16 +122,17 @@ export function RealisationsGallery() {
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActiveCategory(cat)}
-                  className={
-                    isActive
-                      ? 'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]'
-                      : 'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium border border-[#D8D8D8] text-[#8C8F94] hover:border-[#80BC00] hover:text-[#80BC00] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]'
-                  }
-                  style={
-                    isActive
-                      ? { backgroundColor: '#80BC00', color: '#ffffff' }
-                      : undefined
-                  }
+                  className="flex-shrink-0 rounded-full text-sm font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                  style={{
+                    padding: '0.4375rem 1.125rem',
+                    border: isActive ? '1.5px solid #80BC00' : '1.5px solid #E0E0E0',
+                    backgroundColor: isActive ? '#80BC00' : 'transparent',
+                    color: isActive ? '#0B3D2C' : '#5C606B',
+                    boxShadow: isActive ? '0 2px 12px rgba(128,188,0,0.30)' : 'none',
+                    letterSpacing: '0.01em',
+                    cursor: 'pointer',
+                    whiteSpace: 'nowrap',
+                  }}
                 >
                   {cat}
                 </button>
@@ -221,20 +143,42 @@ export function RealisationsGallery() {
       </div>
 
       {/* Gallery */}
-      <section className="bg-white py-16">
+      <section style={{ backgroundColor: '#F7F5F0', padding: '4rem 0 5rem' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <ul
             role="list"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            style={{ gap: '1.5rem' }}
           >
             {filtered.map((r, index) => (
               <li key={r.title}>
-                <article className="group bg-white rounded-2xl overflow-hidden shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px] hover:shadow-[rgba(0,0,0,0.12)_0px_8px_40px_0px] transition-shadow">
+                <article
+                  className="group"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    borderRadius: '1.25rem',
+                    overflow: 'hidden',
+                    boxShadow: '0 2px 20px rgba(11,61,44,0.07)',
+                    transition: 'box-shadow 0.3s ease, transform 0.3s ease',
+                    border: '1px solid rgba(11,61,44,0.05)',
+                  }}
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLElement
+                    el.style.boxShadow = '0 10px 48px rgba(11,61,44,0.14)'
+                    el.style.transform = 'translateY(-3px)'
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLElement
+                    el.style.boxShadow = '0 2px 20px rgba(11,61,44,0.07)'
+                    el.style.transform = 'translateY(0)'
+                  }}
+                >
                   {r.beforeAfter ? (
                     /* Before / After layout */
                     <button
                       type="button"
-                      className="relative h-60 overflow-hidden flex w-full text-left cursor-zoom-in"
+                      className="relative overflow-hidden flex w-full text-left cursor-zoom-in"
+                      style={{ height: '14rem' }}
                       onClick={() => openLightbox(index)}
                       aria-label={`Agrandir — ${r.title}`}
                     >
@@ -247,16 +191,26 @@ export function RealisationsGallery() {
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                           loading="lazy"
                         />
-                        <div className="absolute bottom-2 left-2">
+                        <div className="absolute bottom-2.5 left-2.5">
                           <span
-                            className="text-xs font-bold px-2 py-0.5 rounded-full"
-                            style={{ backgroundColor: 'rgba(0,0,0,0.55)', color: '#ffffff' }}
+                            className="text-xs font-bold px-2.5 py-1 rounded-full"
+                            style={{
+                              backgroundColor: 'rgba(0,0,0,0.65)',
+                              backdropFilter: 'blur(4px)',
+                              WebkitBackdropFilter: 'blur(4px)',
+                              color: 'rgba(255,255,255,0.9)',
+                              letterSpacing: '0.03em',
+                            }}
                           >
                             Avant
                           </span>
                         </div>
                       </div>
-                      <div className="w-px bg-white/60 z-10 self-stretch" />
+                      {/* Séparateur central */}
+                      <div
+                        className="z-10 self-stretch"
+                        style={{ width: '2px', backgroundColor: 'rgba(255,255,255,0.7)', boxShadow: '0 0 8px rgba(0,0,0,0.3)' }}
+                      />
                       <div className="relative flex-1 overflow-hidden">
                         <Image
                           src={r.beforeAfter.after}
@@ -266,37 +220,60 @@ export function RealisationsGallery() {
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                           loading="lazy"
                         />
-                        <div className="absolute bottom-2 right-2">
+                        <div className="absolute bottom-2.5 right-2.5">
                           <span
-                            className="text-xs font-bold px-2 py-0.5 rounded-full"
-                            style={{ backgroundColor: 'rgba(128,188,0,0.85)', color: '#ffffff' }}
+                            className="text-xs font-bold px-2.5 py-1 rounded-full"
+                            style={{
+                              backgroundColor: 'rgba(128,188,0,0.90)',
+                              backdropFilter: 'blur(4px)',
+                              WebkitBackdropFilter: 'blur(4px)',
+                              color: '#ffffff',
+                              letterSpacing: '0.03em',
+                            }}
                           >
                             Après
                           </span>
                         </div>
                       </div>
-                      {/* Overlay */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: 'rgba(11,61,44,0.72)' }} />
-                      {/* Category badge */}
+                      {/* Overlay hover */}
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-350"
+                        style={{ background: 'linear-gradient(160deg, rgba(11,61,44,0.12) 0%, rgba(11,61,44,0.72) 100%)' }}
+                        aria-hidden="true"
+                      />
+                      {/* Badge catégorie */}
                       <div className="absolute top-3 left-3">
                         <span
-                          className="text-xs font-semibold px-2.5 py-1 rounded-full"
-                          style={{ backgroundColor: 'rgba(128,188,0,0.15)', color: '#425D07' }}
+                          style={{
+                            display: 'inline-block',
+                            backgroundColor: 'rgba(11,61,44,0.80)',
+                            backdropFilter: 'blur(6px)',
+                            WebkitBackdropFilter: 'blur(6px)',
+                            color: '#80BC00',
+                            fontSize: '0.625rem',
+                            fontWeight: 700,
+                            padding: '0.22rem 0.6rem',
+                            borderRadius: '9999px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            border: '1px solid rgba(128,188,0,0.25)',
+                          }}
                         >
                           {r.category}
                         </span>
                       </div>
-                      {/* Title / year on hover */}
+                      {/* Titre hover */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                        <p className="text-white font-semibold text-sm leading-snug">{r.title}</p>
-                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.70)' }}>{r.year}</p>
+                        <p className="text-white font-semibold text-sm leading-snug" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>{r.title}</p>
+                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.65)' }}>{r.year}</p>
                       </div>
                     </button>
                   ) : (
                     /* Standard single-image layout */
                     <button
                       type="button"
-                      className="relative h-60 overflow-hidden w-full cursor-zoom-in"
+                      className="relative overflow-hidden w-full cursor-zoom-in"
+                      style={{ height: '14rem' }}
                       onClick={() => openLightbox(index)}
                       aria-label={`Agrandir — ${r.title}`}
                     >
@@ -305,39 +282,108 @@ export function RealisationsGallery() {
                         alt={r.title}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="object-cover transition-transform duration-700 group-hover:scale-107"
                         loading="lazy"
                       />
-                      {/* Overlay */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: 'rgba(11,61,44,0.88)' }} />
-                      {/* Category badge */}
+                      {/* Overlay hover */}
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-350"
+                        style={{ background: 'linear-gradient(160deg, rgba(11,61,44,0.18) 0%, rgba(11,61,44,0.82) 100%)' }}
+                        aria-hidden="true"
+                      />
+                      {/* Badge catégorie */}
                       <div className="absolute top-3 left-3">
                         <span
-                          className="text-xs font-semibold px-2.5 py-1 rounded-full"
-                          style={{ backgroundColor: 'rgba(128,188,0,0.15)', color: '#425D07' }}
+                          style={{
+                            display: 'inline-block',
+                            backgroundColor: 'rgba(11,61,44,0.80)',
+                            backdropFilter: 'blur(6px)',
+                            WebkitBackdropFilter: 'blur(6px)',
+                            color: '#80BC00',
+                            fontSize: '0.625rem',
+                            fontWeight: 700,
+                            padding: '0.22rem 0.6rem',
+                            borderRadius: '9999px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            border: '1px solid rgba(128,188,0,0.25)',
+                          }}
                         >
                           {r.category}
                         </span>
                       </div>
-                      {/* Title / year on hover */}
+                      {/* Titre hover */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                        <p className="text-white font-semibold text-sm leading-snug">{r.title}</p>
-                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.70)' }}>{r.year}</p>
+                        <p className="text-white font-semibold text-sm leading-snug" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>{r.title}</p>
+                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.65)' }}>{r.year}</p>
                       </div>
                     </button>
                   )}
-                  <div className="p-4">
-                    <h2 className="font-semibold text-[#2F2F2F] text-sm leading-snug group-hover:text-[#80BC00] transition-colors">
+                  {/* Footer carte */}
+                  <div style={{ padding: '1rem 1.25rem 1.25rem' }}>
+                    <h2
+                      className="font-display"
+                      style={{
+                        fontWeight: 700,
+                        color: '#2F2F2F',
+                        fontSize: '0.875rem',
+                        lineHeight: 1.4,
+                        transition: 'color 0.2s ease',
+                      }}
+                    >
                       {r.title}
                     </h2>
-                    <div className="mt-1.5 flex items-center justify-between text-xs text-[#8C8F94]">
-                      <span>{r.category}</span>
-                      <span>{r.year}</span>
+                    <div
+                      style={{
+                        marginTop: '0.625rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                      }}
+                    >
+                      <span
+                        style={{
+                          display: 'inline-block',
+                          backgroundColor: 'rgba(128,188,0,0.10)',
+                          color: '#425D07',
+                          fontSize: '0.6875rem',
+                          fontWeight: 600,
+                          padding: '0.2rem 0.65rem',
+                          borderRadius: '9999px',
+                          border: '1px solid rgba(66,93,7,0.15)',
+                          letterSpacing: '0.02em',
+                        }}
+                      >
+                        {r.category}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: '0.75rem',
+                          color: '#8C8F94',
+                          fontWeight: 500,
+                        }}
+                      >
+                        {r.year}
+                      </span>
                     </div>
                     <Link
                       href="/devis"
-                      className="mt-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all hover:opacity-90"
-                      style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                      style={{
+                        marginTop: '0.875rem',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.375rem',
+                        borderRadius: '9999px',
+                        padding: '0.4rem 0.875rem',
+                        fontSize: '0.75rem',
+                        fontWeight: 700,
+                        textDecoration: 'none',
+                        backgroundColor: '#80BC00',
+                        color: '#0B3D2C',
+                        transition: 'opacity 0.2s ease, box-shadow 0.2s ease',
+                        boxShadow: '0 2px 10px rgba(128,188,0,0.25)',
+                        letterSpacing: '0.01em',
+                      }}
                     >
                       Demander un projet similaire →
                     </Link>
@@ -348,7 +394,7 @@ export function RealisationsGallery() {
           </ul>
 
           {filtered.length === 0 && (
-            <p className="text-center text-[#8C8F94] py-16">
+            <p style={{ textAlign: 'center', color: '#8C8F94', padding: '4rem 0' }}>
               Aucune réalisation dans cette catégorie pour le moment.
             </p>
           )}
@@ -363,9 +409,11 @@ export function RealisationsGallery() {
           aria-label={`Image agrandie — ${currentItem.title}`}
           className="fixed inset-0 z-[9000] flex items-center justify-center"
           style={{
-            backgroundColor: 'rgba(0,0,0,0.92)',
+            backgroundColor: 'rgba(5,20,14,0.92)',
+            backdropFilter: 'blur(18px)',
+            WebkitBackdropFilter: 'blur(18px)',
             opacity: lightboxVisible ? 1 : 0,
-            transition: 'opacity 0.2s ease',
+            transition: 'opacity 0.25s ease',
           }}
           onClick={closeLightbox}
         >
@@ -374,9 +422,15 @@ export function RealisationsGallery() {
             type="button"
             onClick={closeLightbox}
             aria-label="Fermer la lightbox"
-            className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+            className="absolute top-5 right-5 z-10 w-11 h-11 rounded-full flex items-center justify-center text-white transition-colors"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.12)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+            }}
           >
-            <X size={22} aria-hidden="true" />
+            <X size={18} aria-hidden="true" />
           </button>
 
           {/* Navigation précédent */}
@@ -384,9 +438,15 @@ export function RealisationsGallery() {
             type="button"
             onClick={(e) => { e.stopPropagation(); goPrev() }}
             aria-label="Image précédente"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+            className="absolute left-5 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center text-white transition-all"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.10)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+            }}
           >
-            <ChevronLeft size={28} aria-hidden="true" />
+            <ChevronLeft size={26} aria-hidden="true" />
           </button>
 
           {/* Navigation suivant */}
@@ -394,19 +454,35 @@ export function RealisationsGallery() {
             type="button"
             onClick={(e) => { e.stopPropagation(); goNext() }}
             aria-label="Image suivante"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+            className="absolute right-5 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center text-white transition-all"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.10)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+            }}
           >
-            <ChevronRight size={28} aria-hidden="true" />
+            <ChevronRight size={26} aria-hidden="true" />
           </button>
 
           {/* Contenu centré */}
           <div
-            className="relative flex flex-col items-center gap-4 px-16"
+            className="relative flex flex-col items-center gap-5 px-16"
             onClick={(e) => e.stopPropagation()}
           >
             {currentItem.beforeAfter ? (
               /* Avant/après côte à côte en lightbox */
-              <div className="flex gap-1 rounded-xl overflow-hidden" style={{ maxHeight: '90vh', maxWidth: '90vw' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  gap: '3px',
+                  borderRadius: '1rem',
+                  overflow: 'hidden',
+                  maxHeight: '80vh',
+                  maxWidth: '90vw',
+                  boxShadow: '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)',
+                }}
+              >
                 <div className="relative flex-1" style={{ minWidth: 0 }}>
                   <div className="relative" style={{ width: '40vw', maxWidth: '500px', aspectRatio: '4/3' }}>
                     <Image
@@ -419,7 +495,13 @@ export function RealisationsGallery() {
                     />
                     <span
                       className="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full"
-                      style={{ backgroundColor: 'rgba(0,0,0,0.6)', color: '#ffffff' }}
+                      style={{
+                        backgroundColor: 'rgba(0,0,0,0.65)',
+                        backdropFilter: 'blur(4px)',
+                        WebkitBackdropFilter: 'blur(4px)',
+                        color: 'rgba(255,255,255,0.9)',
+                        letterSpacing: '0.03em',
+                      }}
                     >
                       Avant
                     </span>
@@ -437,7 +519,13 @@ export function RealisationsGallery() {
                     />
                     <span
                       className="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full"
-                      style={{ backgroundColor: 'rgba(128,188,0,0.85)', color: '#ffffff' }}
+                      style={{
+                        backgroundColor: 'rgba(128,188,0,0.90)',
+                        backdropFilter: 'blur(4px)',
+                        WebkitBackdropFilter: 'blur(4px)',
+                        color: '#ffffff',
+                        letterSpacing: '0.03em',
+                      }}
                     >
                       Après
                     </span>
@@ -447,28 +535,69 @@ export function RealisationsGallery() {
             ) : (
               /* Image simple */
               <div
-                className="relative rounded-xl overflow-hidden"
-                style={{ maxHeight: '90vh', maxWidth: '90vw', width: 'min(900px, 90vw)', aspectRatio: '16/10' }}
+                style={{
+                  position: 'relative',
+                  borderRadius: '1rem',
+                  overflow: 'hidden',
+                  maxHeight: '80vh',
+                  maxWidth: '90vw',
+                  width: 'min(900px, 90vw)',
+                  aspectRatio: '16/10',
+                  boxShadow: '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)',
+                }}
               >
                 <Image
                   src={currentItem.image}
                   alt={currentItem.title}
                   fill
                   sizes="min(900px, 90vw)"
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>
             )}
 
-            {/* Titre en bas */}
-            <div className="text-center">
-              <p className="text-white font-semibold text-base leading-snug">{currentItem.title}</p>
-              <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                {currentItem.category} · {currentItem.year}
+            {/* Légende */}
+            <div
+              style={{
+                textAlign: 'center',
+                backgroundColor: 'rgba(255,255,255,0.05)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '0.75rem',
+                padding: '0.75rem 1.5rem',
+                minWidth: '260px',
+              }}
+            >
+              <p
+                style={{
+                  color: '#ffffff',
+                  fontWeight: 700,
+                  fontSize: '1rem',
+                  lineHeight: 1.3,
+                  marginBottom: '0.3rem',
+                  letterSpacing: '0.01em',
+                }}
+              >
+                {currentItem.title}
+              </p>
+              <p
+                style={{
+                  fontSize: '0.8125rem',
+                  color: 'rgba(255,255,255,0.5)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                <span style={{ color: '#80BC00', fontWeight: 600 }}>{currentItem.category}</span>
+                <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
+                <span>{currentItem.year}</span>
               </p>
               {filtered.length > 1 && (
-                <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.7rem', marginTop: '0.4rem', letterSpacing: '0.02em' }}>
                   {(lightboxIndex ?? 0) + 1} / {filtered.length} — Utilisez ← → pour naviguer
                 </p>
               )}

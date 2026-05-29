@@ -722,7 +722,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
       title: ville.metaTitle,
       description: ville.metaDescription,
       url: `https://www.lmespacevert.fr/secteur/${villeSlug}`,
-      images: [{ url: '/images/travaux-paysagers.webp', width: 1200, height: 630, alt: `Paysagiste ${ville.nom}` }],
+      images: [{ url: '/images/realisations/lm-18.webp', width: 1200, height: 630, alt: `Paysagiste ${ville.nom}` }],
     },
   }
 }
@@ -789,7 +789,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       {/* Hero */}
       <section className="relative py-20 lg:py-28 overflow-hidden" style={{ backgroundColor: '#0B3D2C' }}>
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/travaux-paysagers.webp" alt="" fill className="object-cover" />
+          <Image src="/images/realisations/lm-18.webp" alt="" fill className="object-cover" />
         </div>
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl">

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, MapPin } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
+import { beforeAfterPairs } from '@/lib/realisations-photos'
 
 export const metadata: Metadata = {
   title: "Avant / Après — Transformations jardins par LM Espace Vert",
@@ -19,56 +20,7 @@ const breadcrumbSchema = {
   ],
 }
 
-const projects = [
-  {
-    title: 'Jardin privatif entièrement repensé',
-    ville: "Saint-Didier-au-Mont-d'Or",
-    description: 'Transformation complète d\'un jardin en friche : création de massifs, pose de gazon en rouleau, allée gravillonnée et éclairage extérieur.',
-    avant: '/images/scraped/avant1.webp',
-    apres: '/images/scraped/apres1.webp',
-    tag: 'Création complète',
-  },
-  {
-    title: 'Haie bocagère & clôture végétale',
-    ville: 'Limonest',
-    description: 'Remplacement d\'une haie de thuyas par une haie champêtre mélangée : charmilles, lauriers, viburnum et hêtres pourpres.',
-    avant: '/images/scraped/avant2.webp',
-    apres: '/images/scraped/apres2.webp',
-    tag: 'Plantation',
-  },
-  {
-    title: 'Terrasse & massifs paysagers',
-    ville: 'Limonest',
-    description: 'Création d\'une terrasse en dalles naturelles avec massifs fleuris, allée gravillonnée et haies taillées en périphérie.',
-    avant: '/images/scraped/Conception d\'un projet de création paysagère près de Limonest.webp',
-    apres: '/images/scraped/Aménagement extérieur de jardin près de Limonest avec terrasse moderne.jpeg',
-    tag: 'Maçonnerie paysagère',
-  },
-  {
-    title: 'Engazonnement & arrosage automatique',
-    ville: 'Limonest',
-    description: 'Remise en état d\'un terrain : amendement du sol, pose de gazon en rouleau et installation d\'un réseau d\'arrosage enterré. Résultat impeccable en 3 semaines.',
-    avant: '/images/scraped/Pose du réseau d\'irrigation enterré près de Limonest.webp',
-    apres: '/images/scraped/Pose de gazon près de Limonest.webp',
-    tag: 'Engazonnement',
-  },
-  {
-    title: 'Élagage et sécurisation d\'arbres',
-    ville: "Saint-Didier-au-Mont-d'Or",
-    description: 'Élagage sévère d\'arbres surplombant la maison. Dégagement de la vue, sécurisation et valorisation du jardin par nos équipes équipées.',
-    avant: '/images/scraped/Matériel utilisé pour l\'élagage près de Limonest.webp',
-    apres: '/images/scraped/Travaux d\'élagage à Saint-Didier-au-Mont-d\'Or.webp',
-    tag: 'Élagage',
-  },
-  {
-    title: 'Aménagement paysager sur mesure',
-    ville: 'Limonest',
-    description: 'Conception et réalisation d\'un espace extérieur complet : allée, massifs paysagers, plantations et espaces engazonnés, entièrement repensés.',
-    avant: '/images/scraped/Déroulement d\'un projet d\'aménagement paysager près de Limonest.webp',
-    apres: '/images/scraped/Aménagement extérieur avec création paysagère sur mesure près de Limonest.jpeg',
-    tag: 'Aménagement paysager',
-  },
-]
+const projects = beforeAfterPairs
 
 export default function AvantApresPage() {
   return (

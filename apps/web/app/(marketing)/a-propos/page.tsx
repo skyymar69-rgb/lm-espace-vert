@@ -163,7 +163,7 @@ export default function AProposPage() {
                 {/* Photo principale */}
                 <div className="relative flex-1 overflow-hidden shadow-lg" style={{ borderRadius: '24px' }}>
                   <Image
-                    src="/images/presentation.webp"
+                    src="/images/realisations/lm-18.webp"
                     alt="Léo Maurice, fondateur de LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or"
                     fill
                     className="object-cover"
