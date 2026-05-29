@@ -714,15 +714,30 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   const { ville: villeSlug } = await params
   const ville = villes[villeSlug]
   if (!ville) return {}
+
+  // Titles and descriptions enriched with local SEO keywords
+  const title = `Paysagiste ${ville.nom} (${ville.codePostal}) — Entretien, Création, Devis Gratuit | LM Espace Vert`
+  const description = `LM Espace Vert, paysagiste à ${ville.nom} (${ville.codePostal}) : création de jardins, entretien, élagage, terrasses. Artisan local basé à ${ville.distance} — devis gratuit sous 24h. ${ville.services[0].split('·')[0].trim()} et plus.`
+
   return {
-    title: ville.metaTitle,
-    description: ville.metaDescription,
+    title,
+    description,
+    keywords: [
+      `paysagiste ${ville.nom}`,
+      `paysagiste ${ville.codePostal}`,
+      `entretien jardin ${ville.nom}`,
+      `création jardin ${ville.nom}`,
+      `élagage ${ville.nom}`,
+      `devis gratuit paysagiste ${ville.nom}`,
+      'LM Espace Vert',
+      'paysagiste Lyon nord',
+    ],
     alternates: { canonical: `https://www.lmespacevert.fr/secteur/${villeSlug}` },
     openGraph: {
-      title: ville.metaTitle,
-      description: ville.metaDescription,
+      title,
+      description,
       url: `https://www.lmespacevert.fr/secteur/${villeSlug}`,
-      images: [{ url: '/images/realisations/lm-18.webp', width: 1200, height: 630, alt: `Paysagiste ${ville.nom}` }],
+      images: [{ url: '/images/realisations/lm-18.webp', width: 1200, height: 630, alt: `Paysagiste ${ville.nom} — LM Espace Vert` }],
     },
   }
 }
@@ -732,30 +747,59 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
   const ville = villes[villeSlug]
   if (!ville) notFound()
 
+  const areaServedCity = {
+    '@type': 'City',
+    name: ville.nomComplet,
+    postalCode: ville.codePostal,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: ville.gpsLat,
+      longitude: ville.gpsLng,
+    },
+  }
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `https://www.lmespacevert.fr/secteur/${villeSlug}`,
     name: 'LM Espace Vert',
-    description: `Paysagiste professionnel intervenant à ${ville.nom}`,
+    description: `Paysagiste professionnel intervenant à ${ville.nom} : création de jardins, entretien, élagage et maçonnerie paysagère. Devis gratuit.`,
     url: `https://www.lmespacevert.fr/secteur/${villeSlug}`,
     telephone: '+33672587353',
-    areaServed: {
-      '@type': 'City',
-      name: ville.nomComplet,
-      postalCode: ville.codePostal,
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: ville.gpsLat,
-        longitude: ville.gpsLng,
-      },
-    },
+    areaServed: areaServedCity,
     address: {
       '@type': 'PostalAddress',
       addressLocality: "Saint-Didier-au-Mont-d'Or",
       postalCode: '69370',
       addressCountry: 'FR',
     },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `Services paysagers à ${ville.nom}`,
+      itemListElement: ville.services.map((s, i) => ({
+        '@type': 'Offer',
+        position: i + 1,
+        itemOffered: {
+          '@type': 'Service',
+          name: s.split('·')[0].trim(),
+          areaServed: areaServedCity,
+        },
+      })),
+    },
+  }
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `Paysagiste à ${ville.nom}`,
+    description: `Création de jardins, entretien, élagage et maçonnerie paysagère à ${ville.nom} (${ville.codePostal}). Devis gratuit sous 24h.`,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'LM Espace Vert',
+      '@id': 'https://www.lmespacevert.fr',
+    },
+    areaServed: areaServedCity,
+    url: `https://www.lmespacevert.fr/secteur/${villeSlug}`,
   }
 
   const breadcrumbSchema = {
@@ -771,6 +815,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
   return (
     <>
       <JsonLd data={jsonLd} />
+      <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       {/* Breadcrumb */}
@@ -861,13 +906,27 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <div className="flex flex-wrap justify-center gap-3 mt-10">
             <Link
               href="/services"
               className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
               style={{ color: '#2F2F2F' }}
             >
               Toutes nos prestations <ArrowRight size={14} />
+            </Link>
+            <Link
+              href="/galerie"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              style={{ color: '#2F2F2F' }}
+            >
+              Galerie de réalisations <ArrowRight size={14} />
+            </Link>
+            <Link
+              href="/avant-apres"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              style={{ color: '#2F2F2F' }}
+            >
+              Avant / Après <ArrowRight size={14} />
             </Link>
           </div>
         </div>

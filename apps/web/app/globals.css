@@ -21,7 +21,7 @@
   --color-bg-elevated:     #FFFFFF;
   --color-fg:              #2F2F2F;
   --color-fg-muted:        #5C606B;
-  --color-fg-subtle:       #AAAAAA;
+  --color-fg-subtle:       #6B6F78; /* was #AAAAAA — raised to WCAG AA on white */
   --color-primary:         #425D07;
   --color-primary-hover:   #334506;
   --color-primary-fg:      #FFFFFF;
@@ -100,7 +100,7 @@
   --color-bg-elevated:  #FFFFFF;
   --color-fg:           #2F2F2F;
   --color-fg-muted:     #5C606B;
-  --color-fg-subtle:    #AAAAAA;
+  --color-fg-subtle:    #6B6F78; /* was #AAAAAA — raised to WCAG AA on white */
   --color-primary:      #425D07;
   --color-primary-hover:#334506;
   --color-primary-fg:   #FFFFFF;
@@ -1332,8 +1332,31 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
   opacity: 0.6;
 }
 
+/*
+ * Reveal au scroll — à activer via JS en ajoutant la classe `.is-visible`
+ * sur l'élément lorsqu'il entre dans le viewport (IntersectionObserver).
+ * État initial : invisible + décalé vers le bas.
+ * État final   : visible + en place (transition CSS).
+ */
 .animate-on-scroll {
-  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)),
+              transform 0.55s var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1));
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respecte prefers-reduced-motion : l'élément s'affiche immédiatement */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Print styles premium */

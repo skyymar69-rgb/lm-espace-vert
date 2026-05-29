@@ -25,20 +25,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 60, // 60 jours
     dangerouslyAllowSVG: false,
     contentDispositionType: 'inline',
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'local-fr-public.s3.eu-west-3.amazonaws.com',
-      },
-    ],
+    remotePatterns: [],
   },
   async headers() {
     return [

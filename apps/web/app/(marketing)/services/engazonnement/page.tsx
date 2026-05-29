@@ -109,12 +109,25 @@ const faqSchema = {
   })),
 }
 
+const imageObjectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-04.webp',
+  url: 'https://www.lmespacevert.fr/images/realisations/lm-04.webp',
+  name: 'Engazonnement et création de pelouse à Lyon nord par LM Espace Vert',
+  caption: 'Création de pelouse par semis à Caluire-et-Cuire — LM Espace Vert, engazonnement et gazon en rouleaux Lyon nord',
+  representativeOfPage: true,
+  width: 1200,
+  height: 800,
+}
+
 export default function EngazonnementPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
+      <JsonLd data={imageObjectSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useCallback } from 'react'
-import { X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight, ArrowRight, FileText } from 'lucide-react'
 import { realisationsPhotos, photoCategories, catLabel } from '@/lib/realisations-photos'
 
 const categories = photoCategories
@@ -257,6 +257,22 @@ export function GalerieClient() {
                         >
                           📍 {photo.ville}
                         </p>
+                        <span
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '0.25rem',
+                            marginTop: '0.45rem',
+                            fontSize: '0.6rem',
+                            fontWeight: 700,
+                            color: '#80BC00',
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                          }}
+                          aria-hidden="true"
+                        >
+                          <FileText size={10} /> Devis similaire
+                        </span>
                       </div>
                       {/* Badge catégorie */}
                       <div className="absolute top-2.5 left-2.5">
@@ -575,6 +591,31 @@ export function GalerieClient() {
                   {(lightboxIndex ?? 0) + 1} / {filtered.length} — ← → pour naviguer · Échap pour fermer
                 </p>
               )}
+              {/* CTA lightbox */}
+              <div style={{ marginTop: '0.875rem' }}>
+                <Link
+                  href="/devis"
+                  onClick={closeLightbox}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    backgroundColor: '#80BC00',
+                    color: '#0B3D2C',
+                    borderRadius: '9999px',
+                    padding: '0.5rem 1.125rem',
+                    fontSize: '0.8125rem',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    boxShadow: '0 4px 18px rgba(128,188,0,0.35)',
+                    letterSpacing: '0.01em',
+                    transition: 'opacity 0.2s ease',
+                  }}
+                >
+                  <FileText size={14} aria-hidden="true" />
+                  Demander un projet similaire
+                </Link>
+              </div>
             </div>
           </div>
         </div>

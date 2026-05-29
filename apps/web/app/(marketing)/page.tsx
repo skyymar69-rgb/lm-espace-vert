@@ -13,6 +13,7 @@ import { StatCounter } from '@/components/ui/stat-counter'
 import { FAQSection } from '@/components/ui/faq-section'
 import { ExitIntentPopup } from '@/components/ui/exit-intent-popup'
 import { NewsletterSignup } from '@/components/ui/newsletter-signup'
+import { GoogleReviewsBadge } from '@/components/ui/google-reviews-badge'
 
 export const metadata: Metadata = {
   title: "Paysagiste Saint-Didier-au-Mont-d'Or & Lyon — LM Espace Vert",
@@ -182,7 +183,21 @@ const blogItemListJsonLd = {
   })),
 }
 
+function getSeasonalPromo(): { emoji: string; label: string; offer: string } {
+  const month = new Date().getMonth() // 0-11
+  if (month >= 2 && month <= 4) {
+    return { emoji: '🌱', label: 'Printemps', offer: '-10 % sur la création de jardin' }
+  } else if (month >= 5 && month <= 7) {
+    return { emoji: '☀️', label: 'Été', offer: 'Arrosage automatique offert dès 2 000 € de travaux' }
+  } else if (month >= 8 && month <= 10) {
+    return { emoji: '🍂', label: 'Automne', offer: 'Taille de haies + débroussaillage -15 %' }
+  } else {
+    return { emoji: '❄️', label: 'Hiver', offer: 'Devis offert + visite conseil gratuite' }
+  }
+}
+
 export default function HomePage() {
+  const promo = getSeasonalPromo()
   return (
     <>
       <JsonLd data={localBusinessJsonLd} />
@@ -195,15 +210,17 @@ export default function HomePage() {
 
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end" aria-label="Hero — LM Espace Vert paysagiste">
-        <Image
-          src={heroPhoto.src}
-          alt={heroPhoto.alt}
-          fill
-          className="object-cover object-center"
-          priority
-          quality={90}
-          sizes="100vw"
-        />
+        <div className="absolute inset-0 overflow-hidden ken-burns" aria-hidden="true">
+          <Image
+            src={heroPhoto.src}
+            alt={heroPhoto.alt}
+            fill
+            className="object-cover object-center"
+            priority
+            quality={90}
+            sizes="100vw"
+          />
+        </div>
         {/* Overlay raffiné : dégradé vertical profond en bas + teinte latérale gauche */}
         <div
           className="absolute inset-0"
@@ -254,7 +271,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold border transition-opacity hover:opacity-80 backdrop-blur-sm"
               style={{ borderColor: 'rgba(128,188,0,0.6)', color: '#80BC00', backgroundColor: 'rgba(128,188,0,0.08)' }}
             >
-              🌱 Printemps 2026 : -10% sur la création de jardin
+              {promo.emoji} {promo.label} : {promo.offer}
             </Link>
           </div>
           {/* #2 — trust badges + social-proof bar Google */}
@@ -351,7 +368,19 @@ export default function HomePage() {
                 Depuis 2019, nous avons transformé plus de 200 jardins dans le nord-ouest lyonnais.
               </p>
               <p className="text-[#5C606B] leading-relaxed mb-6">
-                De la conception à l&apos;entretien régulier, nous intervenons chez les particuliers et les professionnels dans tout le nord-ouest lyonnais.
+                De la{' '}
+                <Link href="/services/creation-jardins" className="underline decoration-dotted underline-offset-2 hover:text-[#425D07] transition-colors" style={{ color: '#425D07' }}>
+                  conception de jardins
+                </Link>{' '}
+                à l&apos;
+                <Link href="/services/entretien-espaces-verts" className="underline decoration-dotted underline-offset-2 hover:text-[#425D07] transition-colors" style={{ color: '#425D07' }}>
+                  entretien régulier
+                </Link>
+                , nous intervenons chez les particuliers et les professionnels dans tout le{' '}
+                <Link href="/secteurs" className="underline decoration-dotted underline-offset-2 hover:text-[#425D07] transition-colors" style={{ color: '#425D07' }}>
+                  nord-ouest lyonnais
+                </Link>
+                .
               </p>
               {/* #16 — badges avec icônes authority */}
               <div className="flex flex-wrap gap-3 mb-8">
@@ -389,7 +418,11 @@ export default function HomePage() {
               Avant &amp; Après — le résultat parle
             </h2>
             <p className="mt-4 leading-relaxed" style={{ color: '#5C606B' }}>
-              Chaque jardin que nous transformons est une nouvelle histoire. Voici quelques exemples concrets de nos interventions.
+              Chaque jardin que nous transformons est une nouvelle histoire. Voici quelques exemples concrets de nos{' '}
+              <Link href="/avant-apres" className="underline decoration-dotted underline-offset-2 hover:text-[#425D07] transition-colors" style={{ color: '#425D07' }}>
+                interventions avant/après
+              </Link>
+              .
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-10">
@@ -415,6 +448,17 @@ export default function HomePage() {
                     <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#80BC00' }} aria-hidden="true" />
                     {item.tag} · {item.description}
                   </p>
+                  {/* Micro-stats : icônes type + ville */}
+                  <div className="flex flex-wrap items-center gap-3 mt-3 pt-3" style={{ borderTop: '1px solid rgba(237,237,237,0.8)' }}>
+                    <span className="inline-flex items-center gap-1 text-xs font-medium" style={{ color: '#425D07' }}>
+                      <Leaf size={11} aria-hidden="true" style={{ color: '#80BC00' }} />
+                      {item.tag}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-xs" style={{ color: '#5C606B' }}>
+                      <MapPin size={11} aria-hidden="true" />
+                      {item.ville}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -614,6 +658,9 @@ export default function HomePage() {
               ))}
               <span className="ml-2.5 text-sm font-bold" style={{ color: '#2F2F2F' }}>5.0</span>
               <span className="text-sm ml-1" style={{ color: '#5C606B' }}>— 28 avis Google</span>
+            </div>
+            <div className="flex justify-center mt-4">
+              <GoogleReviewsBadge rating={5.0} count={28} />
             </div>
           </div>
           <ul role="list" className="grid sm:grid-cols-3 gap-8">

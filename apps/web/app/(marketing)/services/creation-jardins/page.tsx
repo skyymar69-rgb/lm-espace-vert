@@ -118,12 +118,25 @@ const faqSchema = {
   })),
 }
 
+const imageObjectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-10.webp',
+  url: 'https://www.lmespacevert.fr/images/realisations/lm-10.webp',
+  name: "Création de jardin paysager à Saint-Didier-au-Mont-d'Or par LM Espace Vert",
+  caption: "Jardin paysager créé sur mesure à Saint-Didier-au-Mont-d'Or — LM Espace Vert, paysagiste Lyon nord",
+  representativeOfPage: true,
+  width: 1200,
+  height: 800,
+}
+
 export default function CreationJardinsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
+      <JsonLd data={imageObjectSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

@@ -110,12 +110,25 @@ const faqSchema = {
   })),
 }
 
+const imageObjectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-08.webp',
+  url: 'https://www.lmespacevert.fr/images/realisations/lm-08.webp',
+  name: "Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or par LM Espace Vert",
+  caption: "Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or — tonte, taille de haies, désherbage — LM Espace Vert",
+  representativeOfPage: true,
+  width: 1200,
+  height: 800,
+}
+
 export default function EntretienEspacesVertsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
+      <JsonLd data={imageObjectSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

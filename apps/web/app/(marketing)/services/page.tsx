@@ -38,12 +38,96 @@ const breadcrumbSchema = {
   ],
 }
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Prestations paysagères — LM Espace Vert',
+  description: "Liste des services de paysagisme proposés par LM Espace Vert dans le nord-ouest lyonnais",
+  url: 'https://www.lmespacevert.fr/services',
+  numberOfItems: 6,
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: "Entretien d'espaces verts",
+      url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
+      item: {
+        '@type': 'Service',
+        name: "Entretien d'espaces verts",
+        url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
+        provider: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Élagage & Abattage',
+      url: 'https://www.lmespacevert.fr/services/elagage-abattage',
+      item: {
+        '@type': 'Service',
+        name: 'Élagage & Abattage',
+        url: 'https://www.lmespacevert.fr/services/elagage-abattage',
+        provider: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Création de jardins',
+      url: 'https://www.lmespacevert.fr/services/creation-jardins',
+      item: {
+        '@type': 'Service',
+        name: 'Création de jardins',
+        url: 'https://www.lmespacevert.fr/services/creation-jardins',
+        provider: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: 'Maçonnerie paysagère',
+      url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
+      item: {
+        '@type': 'Service',
+        name: 'Maçonnerie paysagère',
+        url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
+        provider: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      name: 'Arrosage automatique',
+      url: 'https://www.lmespacevert.fr/services/arrosage-automatique',
+      item: {
+        '@type': 'Service',
+        name: 'Arrosage automatique',
+        url: 'https://www.lmespacevert.fr/services/arrosage-automatique',
+        provider: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 6,
+      name: 'Engazonnement',
+      url: 'https://www.lmespacevert.fr/services/engazonnement',
+      item: {
+        '@type': 'Service',
+        name: 'Engazonnement',
+        url: 'https://www.lmespacevert.fr/services/engazonnement',
+        provider: { '@type': 'LocalBusiness', name: 'LM Espace Vert' },
+      },
+    },
+  ],
+}
+
 const services = [
   {
     icon: Scissors,
     title: "Entretien d'espaces verts",
     slug: 'entretien-espaces-verts',
     image: '/images/realisations/lm-15.webp',
+    imageAlt: "Entretien d'espaces verts à Limonest — tonte et taille de haies par LM Espace Vert",
     price: 'À partir de 80€/passage',
     desc: "Un jardin entretenu régulièrement est un jardin en bonne santé. Nous proposons des contrats d'entretien sur mesure : tonte, taille de haies, désherbage, fertilisation et soins saisonniers.",
     features: [
@@ -72,6 +156,7 @@ const services = [
     title: 'Élagage & Abattage',
     slug: 'elagage-abattage',
     image: '/images/realisations/lm-07.webp',
+    imageAlt: "Élagage et abattage d'arbres à Écully par LM Espace Vert",
     price: 'Devis gratuit',
     desc: "L'élagage est une intervention délicate qui demande expertise et équipement. Nos professionnels interviennent pour la taille douce, l'élagage raisonné et l'abattage en toute sécurité.",
     features: [
@@ -100,6 +185,7 @@ const services = [
     title: 'Création de jardins',
     slug: 'creation-jardins',
     image: '/images/realisations/lm-16.webp',
+    imageAlt: "Création de jardin paysager à Caluire-et-Cuire par LM Espace Vert",
     price: 'À partir de 1 500€',
     desc: "Votre jardin est une extension de votre maison. Nous concevons des espaces verts sur-mesure, de la petite terrasse au grand parc, en respectant vos goûts et les contraintes du terrain.",
     features: [
@@ -128,6 +214,7 @@ const services = [
     title: 'Maçonnerie paysagère',
     slug: 'maconnerie-paysagere',
     image: '/images/realisations/lm-34.webp',
+    imageAlt: 'Maçonnerie paysagère — terrasse en pierre naturelle à Dardilly par LM Espace Vert',
     price: 'Devis gratuit',
     desc: "Les éléments minéraux structurent et valorisent votre jardin. Terrasses, allées, murets et escaliers réalisés avec des matériaux naturels de qualité pour un rendu esthétique et durable.",
     features: [
@@ -156,6 +243,7 @@ const services = [
     title: 'Arrosage automatique',
     slug: 'arrosage-automatique',
     image: '/images/realisations/lm-13.webp',
+    imageAlt: "Installation d'arrosage automatique à Champagne-au-Mont-d'Or par LM Espace Vert",
     price: 'À partir de 800€',
     desc: "Économisez l'eau et du temps avec un système d'arrosage automatique sur mesure. Installation, programmation et maintenance de systèmes d'arrosage intelligents adaptés à votre jardin.",
     features: [
@@ -184,6 +272,7 @@ const services = [
     title: 'Engazonnement',
     slug: 'engazonnement',
     image: '/images/realisations/lm-41.webp',
+    imageAlt: "Engazonnement et création de pelouse à Neuville-sur-Saône par LM Espace Vert",
     price: 'À partir de 300€',
     desc: "Une belle pelouse est la base d'un jardin réussi. Nous créons votre gazon par semis ou en rouleaux selon vos besoins, et vous proposons des prairies fleuries pour plus de biodiversité.",
     features: [
@@ -213,6 +302,7 @@ export default function ServicesPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={itemListSchema} />
 
       {/* Hero */}
       <section className="py-16 section-gradient-top">
@@ -274,7 +364,7 @@ export default function ServicesPage() {
                   <div className="relative h-52 overflow-hidden">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={service.imageAlt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"

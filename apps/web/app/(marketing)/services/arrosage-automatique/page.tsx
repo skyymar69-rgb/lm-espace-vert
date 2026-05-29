@@ -110,12 +110,25 @@ const faqSchema = {
   })),
 }
 
+const imageObjectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-11.webp',
+  url: 'https://www.lmespacevert.fr/images/realisations/lm-11.webp',
+  name: "Installation d'arrosage automatique à Lyon nord par LM Espace Vert",
+  caption: "Système d'arrosage automatique installé à Champagne-au-Mont-d'Or — LM Espace Vert, arrosage intelligent Lyon nord",
+  representativeOfPage: true,
+  width: 1200,
+  height: 800,
+}
+
 export default function ArrosageAutomatiquePage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
+      <JsonLd data={imageObjectSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

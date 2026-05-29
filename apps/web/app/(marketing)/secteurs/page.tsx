@@ -74,11 +74,28 @@ const breadcrumbSchema = {
   ],
 }
 
+const communesItemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: "Communes d'intervention — LM Espace Vert",
+  description: "Liste des 16 communes desservies par LM Espace Vert dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or.",
+  url: 'https://www.lmespacevert.fr/secteurs',
+  numberOfItems: villes.length,
+  itemListElement: villes.map((v, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: `Paysagiste ${v.nom} (${v.codePostal})`,
+    description: v.description,
+    url: `https://www.lmespacevert.fr/secteur/${v.slug}`,
+  })),
+}
+
 export default function SecteursPage() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={communesItemListSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">

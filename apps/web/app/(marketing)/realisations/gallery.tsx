@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState, useEffect, useCallback } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { realisationsPhotos, beforeAfterPairs, catLabel } from '@/lib/realisations-photos'
+import { BeforeAfterSlider } from '@/components/ui/before-after-slider'
 
 type Realisation = {
   title: string
@@ -471,66 +472,20 @@ export function RealisationsGallery() {
             onClick={(e) => e.stopPropagation()}
           >
             {currentItem.beforeAfter ? (
-              /* Avant/après côte à côte en lightbox */
+              /* Slider avant/après interactif en lightbox */
               <div
                 style={{
-                  display: 'flex',
-                  gap: '3px',
                   borderRadius: '1rem',
                   overflow: 'hidden',
-                  maxHeight: '80vh',
-                  maxWidth: '90vw',
+                  width: 'min(800px, 85vw)',
                   boxShadow: '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)',
                 }}
               >
-                <div className="relative flex-1" style={{ minWidth: 0 }}>
-                  <div className="relative" style={{ width: '40vw', maxWidth: '500px', aspectRatio: '4/3' }}>
-                    <Image
-                      src={currentItem.beforeAfter.before}
-                      alt={`Avant — ${currentItem.title}`}
-                      fill
-                      sizes="40vw"
-                      className="object-cover"
-                      priority
-                    />
-                    <span
-                      className="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full"
-                      style={{
-                        backgroundColor: 'rgba(0,0,0,0.65)',
-                        backdropFilter: 'blur(4px)',
-                        WebkitBackdropFilter: 'blur(4px)',
-                        color: 'rgba(255,255,255,0.9)',
-                        letterSpacing: '0.03em',
-                      }}
-                    >
-                      Avant
-                    </span>
-                  </div>
-                </div>
-                <div className="relative flex-1" style={{ minWidth: 0 }}>
-                  <div className="relative" style={{ width: '40vw', maxWidth: '500px', aspectRatio: '4/3' }}>
-                    <Image
-                      src={currentItem.beforeAfter.after}
-                      alt={`Après — ${currentItem.title}`}
-                      fill
-                      sizes="40vw"
-                      className="object-cover"
-                      priority
-                    />
-                    <span
-                      className="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full"
-                      style={{
-                        backgroundColor: 'rgba(128,188,0,0.90)',
-                        backdropFilter: 'blur(4px)',
-                        WebkitBackdropFilter: 'blur(4px)',
-                        color: '#ffffff',
-                        letterSpacing: '0.03em',
-                      }}
-                    >
-                      Après
-                    </span>
-                  </div>
-                </div>
+                <BeforeAfterSlider
+                  before={{ src: currentItem.beforeAfter.before, alt: `Avant — ${currentItem.title}` }}
+                  after={{ src: currentItem.beforeAfter.after, alt: `Après — ${currentItem.title}` }}
+                  height={420}
+                />
               </div>
             ) : (
               /* Image simple */

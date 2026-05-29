@@ -110,12 +110,25 @@ const faqSchema = {
   })),
 }
 
+const imageObjectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-28.webp',
+  url: 'https://www.lmespacevert.fr/images/realisations/lm-28.webp',
+  name: 'Maçonnerie paysagère — terrasse et murets en pierre naturelle à Lyon nord',
+  caption: 'Terrasse en pierre naturelle et murets paysagers réalisés à Dardilly — LM Espace Vert, maçonnerie paysagère Lyon nord',
+  representativeOfPage: true,
+  width: 1200,
+  height: 800,
+}
+
 export default function MaconneriePaysagerePage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
+      <JsonLd data={imageObjectSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED] bg-white">
