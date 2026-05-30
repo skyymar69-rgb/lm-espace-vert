@@ -434,16 +434,16 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-10">
             {[
               {
-                title: 'Aménagement complet de jardin',
-                sub: 'Pelouse, allée pavée et remise en état',
-                before: { src: '/images/avant-apres/avant1.webp', alt: 'Avant — jardin en friche avant aménagement paysager' },
-                after: { src: '/images/avant-apres/apres1.webp', alt: 'Après — jardin aménagé avec pelouse soignée et allée pavée' },
-              },
-              {
                 title: 'Débroussaillage et remise en état',
                 sub: 'Nettoyage, taille et entretien',
-                before: { src: '/images/avant-apres/avant2.webp', alt: 'Avant — talus envahi par la végétation' },
-                after: { src: '/images/avant-apres/apres2.webp', alt: 'Après — talus débroussaillé et nettoyé le long du mur' },
+                before: { src: '/images/avant-apres/avant1.webp', alt: 'Avant — végétation envahissante le long d’un mur' },
+                after: { src: '/images/avant-apres/apres1.webp', alt: 'Après — espace débroussaillé et mur dégagé' },
+              },
+              {
+                title: 'Aménagement complet de jardin',
+                sub: 'Pelouse, allée pavée et remise en état',
+                before: { src: '/images/avant-apres/avant2.webp', alt: 'Avant — jardin en friche avant aménagement paysager' },
+                after: { src: '/images/avant-apres/apres2.webp', alt: 'Après — jardin aménagé avec pelouse soignée et allée pavée' },
               },
             ].map((p) => (
               <div
