@@ -32,7 +32,7 @@ const megaServices = [
     href: '/services/entretien-espaces-verts',
     label: 'Entretien régulier',
     desc: 'Tonte, taille et désherbage',
-    photo: '/images/entretien-espaces-verts.webp',
+    photo: '/images/realisations/lm-24.webp',
   },
   {
     href: '/services/elagage-abattage',
@@ -44,7 +44,7 @@ const megaServices = [
     href: '/services/maconnerie-paysagere',
     label: 'Maçonnerie paysagère',
     desc: 'Terrasses, allées et murets',
-    photo: '/images/travaux-paysagers.webp',
+    photo: '/images/realisations/lm-28.webp',
   },
   {
     href: '/services/arrosage-automatique',

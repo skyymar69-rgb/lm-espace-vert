@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
-import { heroPhoto } from '@/lib/realisations-photos'
+import { HeroSlideshow } from '@/components/ui/hero-slideshow'
 import { BeforeAfterSlider } from '@/components/ui/before-after-slider'
 import { PartnersMarquee } from '@/components/sections/partners-marquee'
 import { GOOGLE_RATING, GOOGLE_RATING_NUM, GOOGLE_REVIEWS, EXPERIENCE_YEARS } from '@/lib/business'
@@ -213,18 +213,8 @@ export default function HomePage() {
 
       {/* ── SECTION 1 : HERO ── */}
       <section className="relative min-h-[100svh] flex items-end" aria-label="Hero — LM Espace Vert paysagiste">
-        <div className="absolute inset-0 overflow-hidden ken-burns" aria-hidden="true">
-          <Image
-            src={heroPhoto.src}
-            alt={heroPhoto.alt}
-            fill
-            className="object-cover object-center"
-            priority
-            fetchPriority="high"
-            quality={82}
-            sizes="100vw"
-          />
-        </div>
+        {/* Slideshow 3 photos HD + curseur rond transparent */}
+        <HeroSlideshow />
         {/* Overlay : voile latéral (lisibilité du texte à gauche) — la photo du jardin reste bien visible à droite et en haut */}
         <div
           className="absolute inset-0"
