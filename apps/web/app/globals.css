@@ -1749,7 +1749,7 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 .hero-scroll-cue {
   position: absolute;
   left: 50%;
-  bottom: 26px;
+  bottom: 72px;
   transform: translateX(-50%);
   z-index: 16;
   display: flex;
