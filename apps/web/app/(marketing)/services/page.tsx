@@ -305,10 +305,10 @@ export default function ServicesPage() {
       <JsonLd data={itemListSchema} />
 
       {/* Hero */}
-      <section className="py-16 section-gradient-top">
+      <section className="py-20 section-gradient-top">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav aria-label="Fil d'Ariane" className="mb-6">
+          <nav aria-label="Fil d'Ariane" className="mb-8">
             <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
               <li>
                 <Link href="/" className="hover:text-[#2F2F2F] transition-colors">
@@ -325,10 +325,13 @@ export default function ServicesPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight" style={{ color: '#425D07' }}>
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>
+              Paysagiste Lyon Nord
+            </p>
+            <h1 className="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-tight" style={{ color: '#4A6320' }}>
               Nos Prestations Paysagères
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-[#8C8F94]">
+            <p className="mt-5 text-[1.0625rem] leading-relaxed text-[#5C606B]">
               De l&apos;entretien hebdomadaire à la création complète, LM Espace Vert prend en
               charge l&apos;ensemble de vos projets extérieurs.
             </p>
@@ -376,22 +379,22 @@ export default function ServicesPage() {
                       <div className="flex items-center gap-3">
                         <div
                           className="flex h-10 w-10 items-center justify-center rounded-xl"
-                          style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}
+                          style={{ backgroundColor: 'rgba(116,154,48,0.1)' }}
                         >
-                          <Icon size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
+                          <Icon size={18} style={{ color: '#749A30' }} aria-hidden="true" />
                         </div>
-                        <h2 className="font-display text-xl font-bold" style={{ color: '#425D07' }}>
+                        <h2 className="font-display text-[1.1875rem] font-bold leading-tight" style={{ color: '#4A6320' }}>
                           {service.title}
                         </h2>
                       </div>
                       <span
                         className="flex-shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold"
-                        style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
+                        style={{ backgroundColor: 'rgba(116,154,48,0.1)', color: '#4A6320' }}
                       >
                         {service.price}
                       </span>
                     </div>
-                    <p className="mb-5 leading-relaxed text-[#8C8F94]">{service.desc}</p>
+                    <p className="mb-5 text-[1.0625rem] leading-relaxed text-[#5C606B]">{service.desc}</p>
                     <ul className="mb-6 space-y-1.5">
                       {service.features.map((f) => (
                         <li
@@ -400,7 +403,7 @@ export default function ServicesPage() {
                         >
                           <CheckCircle
                             size={14}
-                            style={{ color: '#80BC00' }}
+                            style={{ color: '#749A30' }}
                             aria-hidden="true"
                           />
                           {f}
@@ -411,15 +414,15 @@ export default function ServicesPage() {
                     {/* Pourquoi choisir LM Espace Vert pour ce service */}
                     <div
                       className="rounded-xl p-4 mb-5"
-                      style={{ backgroundColor: '#F7F5F0' }}
+                      style={{ backgroundColor: '#F4F1E9' }}
                     >
-                      <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#425D07' }}>
+                      <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#4A6320' }}>
                         Pourquoi choisir LM Espace Vert ?
                       </p>
                       <ul className="space-y-2">
                         {service.differentiants.map((d) => (
                           <li key={d} className="flex items-start gap-2 text-xs leading-relaxed" style={{ color: '#8C8F94' }}>
-                            <CheckCircle size={12} style={{ color: '#80BC00', flexShrink: 0, marginTop: 2 }} aria-hidden="true" />
+                            <CheckCircle size={12} style={{ color: '#749A30', flexShrink: 0, marginTop: 2 }} aria-hidden="true" />
                             {d}
                           </li>
                         ))}
@@ -437,7 +440,7 @@ export default function ServicesPage() {
                             key={a.slug}
                             href={`/blog/${a.slug}`}
                             className="inline-flex items-center gap-1.5 text-xs transition-colors hover:underline"
-                            style={{ color: '#425D07' }}
+                            style={{ color: '#4A6320' }}
                           >
                             <ArrowRight size={10} aria-hidden="true" />
                             {a.title}
@@ -469,14 +472,14 @@ export default function ServicesPage() {
                       <Link
                         href={`/services/${service.slug}`}
                         className="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3"
-                        style={{ color: '#425D07' }}
+                        style={{ color: '#4A6320' }}
                       >
                         En savoir plus <ArrowRight size={14} aria-hidden="true" />
                       </Link>
                       <Link
                         href="/devis"
-                        className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold transition-opacity hover:opacity-90 ml-auto"
-                        style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                        className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold transition-colors hover:opacity-90 ml-auto"
+                        style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
                       >
                         Devis gratuit
                       </Link>
@@ -490,16 +493,16 @@ export default function ServicesPage() {
       </section>
 
       {/* Comparatif Particuliers / Professionnels */}
-      <section aria-labelledby="comparatif-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
+      <section aria-labelledby="comparatif-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>
               NOS CLIENTS
             </p>
-            <h2 id="comparatif-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="comparatif-heading" className="font-display text-[clamp(2rem,4vw,3rem)] font-bold" style={{ color: '#4A6320' }}>
               Particuliers &amp; Professionnels
             </h2>
-            <p className="mt-3 text-base" style={{ color: '#8C8F94' }}>
+            <p className="mt-4 text-[1.0625rem]" style={{ color: '#5C606B' }}>
               Nous adaptons nos prestations à vos besoins spécifiques
             </p>
           </div>
@@ -508,11 +511,11 @@ export default function ServicesPage() {
             <div className="rounded-2xl border bg-white p-8 shadow-sm" style={{ borderColor: '#EDEDED' }}>
               <div
                 className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-white"
-                style={{ backgroundColor: '#80BC00' }}
+                style={{ backgroundColor: '#749A30' }}
               >
                 <Home size={22} aria-hidden="true" />
               </div>
-              <h3 className="font-display text-xl font-bold mb-3" style={{ color: '#425D07' }}>Particuliers</h3>
+              <h3 className="font-display text-xl font-bold mb-3" style={{ color: '#4A6320' }}>Particuliers</h3>
               <ul className="space-y-2.5">
                 {[
                   'Avantage fiscal 50% (agrément SAP)',
@@ -523,7 +526,7 @@ export default function ServicesPage() {
                   'Devis gratuit en 24h',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
-                    <CheckCircle size={14} style={{ color: '#80BC00' }} aria-hidden="true" />
+                    <CheckCircle size={14} style={{ color: '#749A30' }} aria-hidden="true" />
                     {item}
                   </li>
                 ))}
@@ -533,11 +536,11 @@ export default function ServicesPage() {
             <div className="rounded-2xl border bg-white p-8 shadow-sm" style={{ borderColor: '#EDEDED' }}>
               <div
                 className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-white"
-                style={{ backgroundColor: '#0B3D2C' }}
+                style={{ backgroundColor: '#243238' }}
               >
                 <Building2 size={22} aria-hidden="true" />
               </div>
-              <h3 className="font-display text-xl font-bold mb-3" style={{ color: '#425D07' }}>Professionnels</h3>
+              <h3 className="font-display text-xl font-bold mb-3" style={{ color: '#4A6320' }}>Professionnels</h3>
               <ul className="space-y-2.5">
                 {[
                   'Copropriétés et résidences',
@@ -548,7 +551,7 @@ export default function ServicesPage() {
                   'Facturation adaptée',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
-                    <CheckCircle size={14} style={{ color: '#80BC00' }} aria-hidden="true" />
+                    <CheckCircle size={14} style={{ color: '#749A30' }} aria-hidden="true" />
                     {item}
                   </li>
                 ))}
@@ -563,7 +566,7 @@ export default function ServicesPage() {
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <div
             className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border px-6 py-5"
-            style={{ borderColor: '#EDEDED', backgroundColor: '#F7F5F0' }}
+            style={{ borderColor: '#EDEDED', backgroundColor: '#F4F1E9' }}
           >
             <p className="text-sm font-medium" style={{ color: '#2F2F2F' }}>
               <span className="font-bold">Vous ne savez pas quel service choisir ?</span>
@@ -571,8 +574,8 @@ export default function ServicesPage() {
             </p>
             <Link
               href="/contact"
-              className="flex-shrink-0 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}
+              className="flex-shrink-0 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors hover:opacity-90"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
               Contactez-nous <ArrowRight size={14} aria-hidden="true" />
             </Link>
@@ -581,18 +584,18 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-center" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="py-20 text-center" style={{ backgroundColor: '#243238' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>PRÊT À DÉMARRER ?</p>
-          <h2 className="font-display text-3xl font-bold text-white mb-4">
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>PRÊT À DÉMARRER ?</p>
+          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
             Votre projet, notre expertise
           </h2>
-          <p className="mb-8 text-green-100 text-base">Devis gratuit, réponse sous 24h. Aucun engagement.</p>
+          <p className="mb-8 text-white/75 text-[1.0625rem]">Devis gratuit, réponse sous 24h. Aucun engagement.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-bold transition-colors hover:opacity-90 cta-glow"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-bold transition-colors hover:opacity-90"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
               Demander un devis gratuit
             </Link>

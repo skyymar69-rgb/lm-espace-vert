@@ -52,13 +52,13 @@ export default function RealisationsPage() {
       </nav>
 
       {/* Hero */}
-      <section className="py-20 section-gradient-top">
+      <section className="py-24 section-gradient-top">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <span className="badge-new mb-4 inline-block">Portfolio</span>
-          <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold mt-3" style={{ color: '#425D07' }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>Portfolio</p>
+          <h1 className="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold mt-2" style={{ color: '#4A6320' }}>
             Nos Réalisations
           </h1>
-          <p className="mt-4 max-w-xl mx-auto text-lg text-[#8C8F94]">
+          <p className="mt-5 max-w-xl mx-auto text-[1.0625rem] text-[#5C606B]">
             Découvrez quelques-uns de nos projets paysagers réalisés dans le nord-ouest lyonnais.
           </p>
           <div className="mt-6 flex justify-center">
@@ -81,7 +81,7 @@ export default function RealisationsPage() {
                 className="flex flex-col items-center gap-1 px-4 text-center"
                 style={{ borderLeft: i > 0 ? '1px solid #EDEDED' : 'none' }}
               >
-                <dt className="font-display text-2xl font-bold sm:text-3xl" style={{ color: '#425D07' }}>
+                <dt className="font-display text-2xl font-bold sm:text-3xl" style={{ color: '#4A6320' }}>
                   {stat.value}
                 </dt>
                 <dd className="text-xs sm:text-sm" style={{ color: '#8C8F94' }}>{stat.label}</dd>
@@ -97,19 +97,19 @@ export default function RealisationsPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="rounded-2xl p-12 text-center text-white" style={{ backgroundColor: '#0B3D2C', background: 'linear-gradient(135deg, #0B3D2C 0%, #425D07 100%)' }}>
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>PASSEZ À L&apos;ACTION</p>
-            <h2 className="font-display text-3xl font-bold mb-3">
+          <div className="rounded-2xl p-12 text-center text-white" style={{ backgroundColor: '#243238', background: 'linear-gradient(135deg, #243238 0%, #4A6320 100%)' }}>
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>PASSEZ À L&apos;ACTION</p>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold mb-4">
               Votre projet sera notre prochaine réalisation
             </h2>
-            <p className="text-green-100 text-base mb-8 max-w-md mx-auto">
+            <p className="text-white/75 text-[1.0625rem] mb-8 max-w-md mx-auto">
               Devis gratuit et sans engagement — réponse sous 24h.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/devis"
-                className="inline-flex items-center gap-2 rounded-full font-bold px-7 py-3.5 hover:bg-white/90 transition-colors"
-                style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
+                className="inline-flex items-center gap-2 rounded-full font-bold px-7 py-3.5 hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
               >
                 Demander mon devis <ArrowRight size={15} aria-hidden="true" />
               </Link>

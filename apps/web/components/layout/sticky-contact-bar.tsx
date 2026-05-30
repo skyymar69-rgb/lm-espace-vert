@@ -72,7 +72,7 @@ export function StickyContactBar() {
           justifyContent: 'center',
           gap: '6px',
           borderRadius: '12px',
-          backgroundColor: '#425D07',
+          backgroundColor: '#4A6320',
           padding: '0 8px',
           height: '44px',
           fontWeight: 600,
@@ -89,6 +89,7 @@ export function StickyContactBar() {
       {/* Devis */}
       <Link
         href="/devis"
+        aria-label="Demander un devis gratuit"
         style={{
           flex: 1,
           display: 'flex',
@@ -96,7 +97,7 @@ export function StickyContactBar() {
           justifyContent: 'center',
           gap: '6px',
           borderRadius: '12px',
-          backgroundColor: '#80BC00',
+          backgroundColor: '#9E4B47',
           padding: '0 8px',
           height: '44px',
           fontWeight: 600,

@@ -28,11 +28,11 @@ export function RelatedArticles({ currentSlug, category }: RelatedArticlesProps)
   if (related.length === 0) return null
 
   return (
-    <section aria-labelledby="related-articles-heading" style={{ backgroundColor: '#F7F5F0' }} className="rounded-2xl p-6 sm:p-8">
+    <section aria-labelledby="related-articles-heading" style={{ backgroundColor: '#F4F1E9' }} className="rounded-2xl p-6 sm:p-8">
       <h2
         id="related-articles-heading"
         className="font-display text-xl font-bold mb-6"
-        style={{ color: '#425D07' }}
+        style={{ color: '#4A6320' }}
       >
         Articles similaires
       </h2>
@@ -44,9 +44,9 @@ export function RelatedArticles({ currentSlug, category }: RelatedArticlesProps)
           >
             <Link
               href={`/blog/${article.slug}`}
-              className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+              className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
             >
-              <div className="relative h-36 overflow-hidden" style={{ backgroundColor: '#F7F5F0' }}>
+              <div className="relative h-36 overflow-hidden" style={{ backgroundColor: '#F4F1E9' }}>
                 <Image
                   src={article.image}
                   alt={article.title}
@@ -58,7 +58,7 @@ export function RelatedArticles({ currentSlug, category }: RelatedArticlesProps)
               <div className="p-4">
                 <span
                   className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold mb-2"
-                  style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+                  style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
                 >
                   {article.category}
                 </span>
@@ -76,7 +76,7 @@ export function RelatedArticles({ currentSlug, category }: RelatedArticlesProps)
                 </p>
                 <span
                   className="inline-flex items-center gap-1 text-xs font-semibold"
-                  style={{ color: '#425D07' }}
+                  style={{ color: '#4A6320' }}
                 >
                   Lire l&apos;article
                   <ArrowRight size={11} aria-hidden="true" />

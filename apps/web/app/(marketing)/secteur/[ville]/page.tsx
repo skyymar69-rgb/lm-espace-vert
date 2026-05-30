@@ -832,15 +832,15 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       </nav>
 
       {/* Hero */}
-      <section className="relative py-20 lg:py-28 overflow-hidden" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="relative py-20 lg:py-28 overflow-hidden" style={{ backgroundColor: '#243238' }}>
         <div className="absolute inset-0 opacity-10">
           <Image src="/images/realisations/lm-18.webp" alt="" fill className="object-cover" />
         </div>
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-4">
-              <MapPin size={16} style={{ color: '#80BC00' }} aria-hidden="true" />
-              <span className="text-sm font-semibold" style={{ color: '#80BC00' }}>{ville.nom} · {ville.codePostal} · {ville.distance} de notre base</span>
+              <MapPin size={16} style={{ color: '#749A30' }} aria-hidden="true" />
+              <span className="text-sm font-semibold" style={{ color: '#749A30' }}>{ville.nom} · {ville.codePostal} · {ville.distance} de notre base</span>
             </div>
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-white leading-tight mb-5">
               Paysagiste à {ville.nom}
@@ -851,8 +851,8 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/devis"
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-                style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+                style={{ backgroundColor: '#9E4B47', color: '#ffffff', boxShadow: '0 4px 20px rgba(158,75,71,0.35)' }}
               >
                 Devis gratuit à {ville.nom} <ArrowRight size={14} />
               </Link>
@@ -878,7 +878,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
               { value: '5★', label: 'Note Google · 28 avis' },
             ].map((s) => (
               <div key={s.label}>
-                <dt className="font-display text-2xl sm:text-3xl font-bold" style={{ color: '#425D07' }}>{s.value}</dt>
+                <dt className="font-display text-2xl sm:text-3xl font-bold" style={{ color: '#4A6320' }}>{s.value}</dt>
                 <dd className="text-xs text-[#8C8F94] mt-1">{s.label}</dd>
               </div>
             ))}
@@ -887,11 +887,11 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       </section>
 
       {/* Services à [ville] */}
-      <section className="py-20" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-20" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos interventions</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>Nos interventions</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#4A6320' }}>
               Services paysagers à {ville.nom}
             </h2>
             <p className="text-[#8C8F94] mt-3">
@@ -901,7 +901,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
           <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
             {ville.services.map((service) => (
               <div key={service} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#EDEDED] shadow-sm">
-                <CheckCircle size={18} style={{ color: '#80BC00' }} className="mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <CheckCircle size={18} style={{ color: '#749A30' }} className="mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <span className="text-sm text-[#2F2F2F] font-medium">{service}</span>
               </div>
             ))}
@@ -909,21 +909,21 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
           <div className="flex flex-wrap justify-center gap-3 mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#749A30] hover:text-[#4A6320] transition-colors"
               style={{ color: '#2F2F2F' }}
             >
               Toutes nos prestations <ArrowRight size={14} />
             </Link>
             <Link
               href="/galerie"
-              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#749A30] hover:text-[#4A6320] transition-colors"
               style={{ color: '#2F2F2F' }}
             >
               Galerie de réalisations <ArrowRight size={14} />
             </Link>
             <Link
               href="/avant-apres"
-              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-6 py-3 text-sm font-semibold hover:border-[#749A30] hover:text-[#4A6320] transition-colors"
               style={{ color: '#2F2F2F' }}
             >
               Avant / Après <ArrowRight size={14} />
@@ -936,13 +936,13 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="font-display text-2xl font-bold" style={{ color: '#425D07' }}>
+            <h2 className="font-display text-2xl font-bold" style={{ color: '#4A6320' }}>
               Quartiers et zones desservies à {ville.nom}
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
             {ville.quartiers.map((q) => (
-              <span key={q} className="flex items-center gap-1.5 rounded-full border border-[#EDEDED] bg-[#F7F5F0] px-4 py-1.5 text-sm text-[#8C8F94]">
+              <span key={q} className="flex items-center gap-1.5 rounded-full border border-[#EDEDED] bg-[#F4F1E9] px-4 py-1.5 text-sm text-[#8C8F94]">
                 <MapPin size={11} aria-hidden="true" /> {q}
               </span>
             ))}
@@ -951,9 +951,9 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       </section>
 
       {/* FAQ ville-spécifique */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>
+          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#4A6320' }}>
             Questions fréquentes — Paysagiste à {ville.nom}
           </h2>
           <div className="space-y-3">
@@ -961,9 +961,9 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
               <details key={item.q} className="group border border-[#EDEDED] rounded-xl overflow-hidden bg-white">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-sm list-none" style={{ color: '#2F2F2F' }}>
                   <span>{item.q}</span>
-                  <ChevronDown size={16} className="shrink-0 ml-3 transition-transform group-open:rotate-180" style={{ color: '#80BC00' }} aria-hidden="true" />
+                  <ChevronDown size={16} className="shrink-0 ml-3 transition-transform group-open:rotate-180" style={{ color: '#749A30' }} aria-hidden="true" />
                 </summary>
-                <div className="px-5 pb-4 pt-1 text-sm leading-relaxed" style={{ color: '#8C8F94', backgroundColor: '#F7F5F0' }}>
+                <div className="px-5 pb-4 pt-1 text-sm leading-relaxed" style={{ color: '#8C8F94', backgroundColor: '#F4F1E9' }}>
                   {item.a}
                 </div>
               </details>
@@ -975,7 +975,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       {/* Témoignage local */}
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-2xl px-4 sm:px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#80BC00' }}>Témoignage client</p>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#749A30' }}>Témoignage client</p>
           <article className="bg-white rounded-2xl border border-[#EDEDED] p-8 shadow-sm text-left">
             <div className="flex gap-0.5 mb-4">
               {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />)}
@@ -984,11 +984,11 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
               &ldquo;{ville.testimonial.texte}&rdquo;
             </blockquote>
             <footer className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: '#425D07' }}>
+              <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: '#4A6320' }}>
                 {ville.testimonial.prenom.charAt(0)}
               </div>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#425D07' }}>{ville.testimonial.prenom}</p>
+                <p className="text-sm font-semibold" style={{ color: '#4A6320' }}>{ville.testimonial.prenom}</p>
                 <p className="text-xs" style={{ color: '#8C8F94' }}>Client vérifié — {ville.testimonial.quartier}, {ville.nom}</p>
               </div>
             </footer>
@@ -997,10 +997,10 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       </section>
 
       {/* Villes proches — maillage interne */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-14">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-14">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>Secteurs voisins</p>
-          <h2 className="font-display text-xl font-bold mb-6" style={{ color: '#425D07' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>Secteurs voisins</p>
+          <h2 className="font-display text-xl font-bold mb-6" style={{ color: '#4A6320' }}>
             Nous intervenons aussi dans les communes proches de {ville.nom}
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
@@ -1008,17 +1008,17 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
               <Link
                 key={v.slug}
                 href={`/secteur/${v.slug}`}
-                className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-5 py-2 text-sm font-medium hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-[#EDEDED] bg-white px-5 py-2 text-sm font-medium hover:border-[#749A30] hover:text-[#4A6320] transition-colors"
                 style={{ color: '#2F2F2F' }}
               >
-                <MapPin size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
+                <MapPin size={12} style={{ color: '#749A30' }} aria-hidden="true" />
                 {v.nom}
               </Link>
             ))}
             <Link
               href="/secteurs"
               className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition-opacity hover:opacity-80"
-              style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}
+              style={{ backgroundColor: '#243238', color: '#ffffff' }}
             >
               Toutes nos zones <ArrowRight size={12} />
             </Link>
@@ -1030,7 +1030,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center mb-10">
-            <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#425D07' }}>
+            <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#4A6320' }}>
               Clients satisfaits à {ville.nom} et alentours
             </h2>
             <div className="flex items-center justify-center gap-1">
@@ -1049,7 +1049,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
                   {[...Array(5)].map((_, i) => <Star key={i} size={12} className="fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <blockquote className="text-sm text-[#8C8F94] italic leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</blockquote>
-                <footer className="text-sm font-semibold" style={{ color: '#425D07' }}>{t.name} — <span className="font-normal text-[#8C8F94]">{t.city}</span></footer>
+                <footer className="text-sm font-semibold" style={{ color: '#4A6320' }}>{t.name} — <span className="font-normal text-[#8C8F94]">{t.city}</span></footer>
               </article>
             ))}
           </div>
@@ -1057,11 +1057,11 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
       </section>
 
       {/* CTA */}
-      <section style={{ backgroundColor: '#0B3D2C' }} className="py-20">
+      <section style={{ backgroundColor: '#243238' }} className="py-20">
         <div className="container mx-auto max-w-xl px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-1 mb-3">
-            <Clock size={14} style={{ color: '#80BC00' }} aria-hidden="true" />
-            <span className="text-sm" style={{ color: '#80BC00' }}>Intervention sous 48h à {ville.nom}</span>
+            <Clock size={14} style={{ color: '#749A30' }} aria-hidden="true" />
+            <span className="text-sm" style={{ color: '#749A30' }}>Intervention sous 48h à {ville.nom}</span>
           </div>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
             Votre projet à {ville.nom} ?<br />Nous sommes à {ville.distance}.
@@ -1070,8 +1070,8 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff', boxShadow: '0 4px 20px rgba(158,75,71,0.35)' }}
             >
               Demander mon devis <ArrowRight size={14} />
             </Link>

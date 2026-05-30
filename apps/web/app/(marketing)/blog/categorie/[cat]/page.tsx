@@ -77,7 +77,7 @@ function CategoriePage({ cat }: { cat: string }) {
       <JsonLd data={localBusinessSchema} />
 
       {/* Hero */}
-      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-16" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
@@ -89,10 +89,10 @@ function CategoriePage({ cat }: { cat: string }) {
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               CATÉGORIE
             </p>
-            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight" style={{ color: '#425D07' }}>
+            <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight" style={{ color: '#4A6320' }}>
               {label}
             </h1>
             <p className="mt-4 text-lg text-[#8C8F94]">
@@ -112,7 +112,7 @@ function CategoriePage({ cat }: { cat: string }) {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}
+              style={{ backgroundColor: '#243238', color: '#ffffff' }}
             >
               Voir tous les articles
               <ArrowRight size={15} aria-hidden="true" />

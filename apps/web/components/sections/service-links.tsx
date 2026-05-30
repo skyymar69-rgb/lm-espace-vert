@@ -61,7 +61,7 @@ export function ServiceLinks({ category }: ServiceLinksProps) {
             key={link.href}
             href={link.href}
             className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-semibold transition-all hover:opacity-90 hover:-translate-y-0.5"
-            style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}
+            style={{ backgroundColor: '#243238', color: '#ffffff' }}
           >
             {link.label}
             <ArrowRight size={11} aria-hidden="true" />

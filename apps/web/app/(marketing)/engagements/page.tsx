@@ -65,42 +65,42 @@ const engagements = [
     title: 'Qualité garantie',
     desc: 'Chaque intervention est réalisée avec soin, du premier rendez-vous jusqu\'au nettoyage final du chantier. Nous utilisons exclusivement des matériaux et végétaux de première qualité, sélectionnés auprès de fournisseurs locaux reconnus.',
     detail: 'Contrôle qualité systématique en fin de chantier. Garantie sur les plantations et les travaux de construction paysagère.',
-    color: '#0B3D2C',
+    color: '#243238',
   },
   {
     icon: Clock,
     title: 'Délais respectés',
     desc: 'Votre temps est précieux. Léo s\'engage sur des délais réalistes dès le devis et les respecte scrupuleusement. Un planning détaillé vous est remis avant le démarrage de chaque projet.',
     detail: 'Devis remis sous 48h. Intervention planifiée à la date convenue. Ponctualité à chaque passage.',
-    color: '#425D07',
+    color: '#4A6320',
   },
   {
     icon: Leaf,
     title: 'Zéro déchet',
     desc: 'Les déchets verts issus des chantiers sont triés, compostés ou valorisés en biomasse. Nous ne brûlons jamais sur place et favorisons le réemploi des matériaux d\'excavation dans le jardin.',
     detail: 'Broyage des végétaux pour paillage. Compostage des résidus organiques. Évacuation éco-responsable des inertes.',
-    color: '#80BC00',
+    color: '#749A30',
   },
   {
     icon: Sprout,
     title: 'Plantes locales & biodiversité',
     desc: 'Nous privilégions les végétaux adaptés au climat lyonnais, issus de pépinières de la région Auvergne-Rhône-Alpes. Des espèces locales plus résistantes, moins gourmandes en eau et bénéfiques pour la faune locale.',
     detail: 'Minimum 70% de végétaux d\'origine régionale. Recommandation d\'espèces mellifères. Suppression des espèces invasives.',
-    color: '#80BC00',
+    color: '#749A30',
   },
   {
     icon: Award,
     title: 'Certifications & formation continue',
     desc: 'LM Espace Vert maintient ses certifications professionnelles et se forme régulièrement aux nouvelles techniques et réglementations : CERTIPHYTO, Agrément SAP, RC Pro, et certification RGE en cours d\'obtention.',
     detail: 'CERTIPHYTO renouvelé. Agrément SAP actif (50% crédit d\'impôt). RGE Eco-jardin en cours pour 2026.',
-    color: '#425D07',
+    color: '#4A6320',
   },
   {
     icon: Heart,
     title: 'Satisfaction client',
     desc: `Votre satisfaction est notre priorité absolue. Léo assure un suivi personnalisé après chaque chantier et reste disponible pour répondre à vos questions. ${GOOGLE_RATING}/5 sur Google avec ${GOOGLE_REVIEWS} avis vérifiés.`,
     detail: 'Appel de suivi 30 jours après les travaux. Retouche offerte si insatisfaction signalée sous 7 jours.',
-    color: '#0B3D2C',
+    color: '#243238',
   },
 ]
 
@@ -140,7 +140,7 @@ export default function EngagementsPage() {
       <JsonLd data={localBusinessSchema} />
 
       {/* Hero */}
-      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-16" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
@@ -150,10 +150,10 @@ export default function EngagementsPage() {
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               NOTRE PROMESSE
             </p>
-            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight" style={{ color: '#425D07' }}>
+            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight" style={{ color: '#4A6320' }}>
               Nos Engagements
             </h1>
             <p className="mt-4 text-lg leading-relaxed" style={{ color: '#8C8F94' }}>
@@ -162,9 +162,9 @@ export default function EngagementsPage() {
             <div className="mt-6 flex flex-wrap gap-3">
               <span
                 className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold"
-                style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+                style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
               >
-                <Star size={13} fill="#80BC00" stroke="none" aria-hidden="true" />
+                <Star size={13} fill="#749A30" stroke="none" aria-hidden="true" />
                 {GOOGLE_RATING}/5 — {GOOGLE_REVIEWS} avis Google
               </span>
               <span className="inline-flex items-center rounded-full border border-[#EDEDED] bg-white px-4 py-1.5 text-sm font-medium" style={{ color: '#8C8F94' }}>
@@ -182,10 +182,10 @@ export default function EngagementsPage() {
       <section aria-labelledby="engagements-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               CE QUI NOUS DISTINGUE
             </p>
-            <h2 id="engagements-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="engagements-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               6 engagements fermes
             </h2>
             <p className="mt-3 text-base max-w-2xl mx-auto" style={{ color: '#8C8F94' }}>
@@ -206,7 +206,7 @@ export default function EngagementsPage() {
                   >
                     <Icon size={22} aria-hidden="true" />
                   </div>
-                  <h3 className="font-bold text-lg mb-3" style={{ color: '#425D07' }}>
+                  <h3 className="font-bold text-lg mb-3" style={{ color: '#4A6320' }}>
                     {eng.title}
                   </h3>
                   <p className="text-sm leading-relaxed mb-4" style={{ color: '#8C8F94' }}>
@@ -214,7 +214,7 @@ export default function EngagementsPage() {
                   </p>
                   <div
                     className="rounded-lg px-3 py-2 text-xs leading-relaxed"
-                    style={{ backgroundColor: '#F7F5F0', color: '#425D07' }}
+                    style={{ backgroundColor: '#F4F1E9', color: '#4A6320' }}
                   >
                     {eng.detail}
                   </div>
@@ -226,13 +226,13 @@ export default function EngagementsPage() {
       </section>
 
       {/* Processus qualité */}
-      <section aria-labelledby="processus-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
+      <section aria-labelledby="processus-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               NOTRE MÉTHODE
             </p>
-            <h2 id="processus-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="processus-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               Notre processus qualité en 5 étapes
             </h2>
             <p className="mt-3 text-base" style={{ color: '#8C8F94' }}>
@@ -250,11 +250,11 @@ export default function EngagementsPage() {
                 <div key={step.step} className="flex flex-col items-center text-center">
                   <div
                     className="w-20 h-20 rounded-full flex items-center justify-center text-white font-display font-bold text-lg mb-4 shadow-md"
-                    style={{ backgroundColor: i === 2 ? '#80BC00' : '#0B3D2C' }}
+                    style={{ backgroundColor: i === 2 ? '#749A30' : '#243238' }}
                   >
                     {step.step}
                   </div>
-                  <h3 className="font-bold text-base mb-2" style={{ color: '#425D07' }}>
+                  <h3 className="font-bold text-base mb-2" style={{ color: '#4A6320' }}>
                     {step.title}
                   </h3>
                   <p className="text-xs leading-relaxed" style={{ color: '#8C8F94' }}>
@@ -271,16 +271,16 @@ export default function EngagementsPage() {
       <section aria-labelledby="temoignages-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               ILS NOUS FONT CONFIANCE
             </p>
-            <h2 id="temoignages-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="temoignages-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               Ce que disent nos clients
             </h2>
             <div className="mt-4 flex items-center justify-center gap-2">
               <div className="flex" aria-label="Note 4.9 sur 5" role="img">
                 {[1, 2, 3, 4, 5].map((s) => (
-                  <Star key={s} size={20} fill="#80BC00" stroke="none" aria-hidden="true" />
+                  <Star key={s} size={20} fill="#749A30" stroke="none" aria-hidden="true" />
                 ))}
               </div>
               <span className="font-bold text-lg" style={{ color: '#2F2F2F' }}>{GOOGLE_RATING}</span>
@@ -295,7 +295,7 @@ export default function EngagementsPage() {
               >
                 <div className="flex mb-3" aria-label="5 étoiles" role="img">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} size={14} fill="#80BC00" stroke="none" aria-hidden="true" />
+                    <Star key={s} size={14} fill="#749A30" stroke="none" aria-hidden="true" />
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#2F2F2F' }}>
@@ -303,12 +303,12 @@ export default function EngagementsPage() {
                 </p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-sm" style={{ color: '#425D07' }}>{t.name}</p>
+                    <p className="font-semibold text-sm" style={{ color: '#4A6320' }}>{t.name}</p>
                     <p className="text-xs" style={{ color: '#8C8F94' }}>{t.location}</p>
                   </div>
                   <span
                     className="rounded-full px-2.5 py-1 text-xs font-semibold"
-                    style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
+                    style={{ backgroundColor: 'rgba(116,154,48,0.1)', color: '#4A6320' }}
                   >
                     {t.service}
                   </span>
@@ -320,9 +320,9 @@ export default function EngagementsPage() {
       </section>
 
       {/* Points clés chiffrés */}
-      <section aria-labelledby="chiffres-engagements-heading" className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
+      <section aria-labelledby="chiffres-engagements-heading" className="py-16" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-5xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-center mb-8" style={{ color: '#80BC00' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest text-center mb-8" style={{ color: '#749A30' }}>
             NOS CHIFFRES CLÉS
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
@@ -333,7 +333,7 @@ export default function EngagementsPage() {
               { value: '100%', label: 'devis respectés' },
             ].map(({ value, label }) => (
               <div key={label} className="bg-white rounded-2xl border border-[#EDEDED] p-6 shadow-sm">
-                <p className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>{value}</p>
+                <p className="font-display text-3xl font-bold" style={{ color: '#4A6320' }}>{value}</p>
                 <p className="mt-1 text-sm" style={{ color: '#8C8F94' }}>{label}</p>
               </div>
             ))}
@@ -342,9 +342,9 @@ export default function EngagementsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 text-center" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="py-16 text-center" style={{ backgroundColor: '#243238' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#ffffff' }}>
+          <h2 className="font-display text-3xl font-bold mb-3" style={{ color: '#ffffff' }}>
             Un paysagiste qui tient ses promesses
           </h2>
           <p className="mb-8" style={{ color: '#bbf7d0' }}>
@@ -353,8 +353,8 @@ export default function EngagementsPage() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff', boxShadow: '0 4px 20px rgba(158,75,71,0.35)' }}
             >
               Demander un devis gratuit
               <ArrowRight size={15} aria-hidden="true" />

@@ -263,7 +263,8 @@ export function ContactForm() {
         type="submit"
         disabled={status === 'loading'}
         aria-busy={status === 'loading'}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[--color-accent] px-6 py-3.5 font-semibold text-[--color-accent-fg] transition-colors hover:bg-[--color-gold-500] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[--color-focus] disabled:cursor-not-allowed disabled:opacity-60"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold text-white transition-colors hover:bg-[#7E3A37] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9E4B47] disabled:cursor-not-allowed disabled:opacity-60"
+        style={{ backgroundColor: '#9E4B47' }}
       >
         {status === 'loading' ? (
           <>

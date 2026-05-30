@@ -25,8 +25,8 @@ const steps = [
     title: 'Visite gratuite',
     timing: 'J+0 à J+2',
     timingLabel: 'Sous 48h',
-    color: '#425D07',
-    bg: 'rgba(66,93,7,0.06)',
+    color: '#4A6320',
+    bg: 'rgba(74,99,32,0.06)',
     description:
       "Léo se déplace chez vous pour analyser votre terrain, comprendre vos souhaits et vos contraintes. Cette visite est entièrement gratuite et sans engagement. Ensoleillé, ombragé, en pente, argileux… chaque jardin est unique et mérite une analyse personnalisée.",
     details: [
@@ -42,8 +42,8 @@ const steps = [
     title: 'Devis détaillé',
     timing: 'J+3 à J+7',
     timingLabel: 'Sous 1 semaine',
-    color: '#0B3D2C',
-    bg: 'rgba(11,61,44,0.06)',
+    color: '#243238',
+    bg: 'rgba(36,50,56,0.06)',
     description:
       "Suite à la visite, vous recevez un devis précis et transparent : plan schématique du projet, liste des essences végétales choisies, descriptif des travaux, délais d'intervention et tarif TTC tout compris. Aucune surprise à la facturation.",
     details: [
@@ -59,8 +59,8 @@ const steps = [
     title: 'Planification',
     timing: 'J+7 à J+14',
     timingLabel: 'Après accord',
-    color: '#80BC00',
-    bg: 'rgba(128,188,0,0.06)',
+    color: '#749A30',
+    bg: 'rgba(116,154,48,0.06)',
     description:
       "Une fois le devis signé, nous planifions ensemble la date d'intervention. Nous gérons l'approvisionnement en matériaux et en plantes auprès de nos fournisseurs locaux, ainsi que la coordination logistique du chantier.",
     details: [
@@ -76,8 +76,8 @@ const steps = [
     title: 'Réalisation',
     timing: 'Selon planification',
     timingLabel: 'Jour J',
-    color: '#425D07',
-    bg: 'rgba(66,93,7,0.06)',
+    color: '#4A6320',
+    bg: 'rgba(74,99,32,0.06)',
     description:
       "Notre équipe intervient avec soin et professionnalisme. Le chantier est tenu propre et organisé du premier au dernier jour. Vous recevez des photos de suivi chaque jour de chantier pour suivre l'avancement en temps réel.",
     details: [
@@ -93,8 +93,8 @@ const steps = [
     title: 'Suivi & Garanties',
     timing: 'J+30',
     timingLabel: 'Après réalisation',
-    color: '#0B3D2C',
-    bg: 'rgba(11,61,44,0.06)',
+    color: '#243238',
+    bg: 'rgba(36,50,56,0.06)',
     description:
       "Nous ne disparaissons pas une fois les travaux terminés. Une visite de contrôle est effectuée 30 jours après la réalisation. Toutes nos plantations sont garanties 1 an. Et bien sûr, le support WhatsApp reste illimité pour toutes vos questions.",
     details: [
@@ -112,7 +112,7 @@ export default function ProcessusPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
@@ -122,7 +122,7 @@ export default function ProcessusPage() {
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               NOTRE MÉTHODE
             </p>
             <h1
@@ -130,7 +130,7 @@ export default function ProcessusPage() {
               style={{ color: '#2F2F2F' }}
             >
               De la visite au{' '}
-              <span style={{ color: '#425D07' }}>jardin terminé</span>
+              <span style={{ color: '#4A6320' }}>jardin terminé</span>
             </h1>
             <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
               5 étapes claires et transparentes pour que votre projet se déroule sans stress, du premier contact jusqu&apos;au jardin livré.
@@ -197,7 +197,7 @@ export default function ProcessusPage() {
                               </h2>
                               <span
                                 className="rounded-full px-2.5 py-0.5 text-xs font-semibold"
-                                style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+                                style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
                               >
                                 {step.timingLabel}
                               </span>
@@ -235,7 +235,7 @@ export default function ProcessusPage() {
       </section>
 
       {/* Réassurance */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-12">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-12">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6">
           <div className="grid gap-4 sm:grid-cols-3 text-center">
             {[
@@ -244,7 +244,7 @@ export default function ProcessusPage() {
               { value: '1 an', label: 'Garantie plantations', sub: 'Incluse systématiquement' },
             ].map(({ value, label, sub }) => (
               <div key={label} className="rounded-2xl border border-[#EDEDED] bg-white p-6 shadow-sm">
-                <p className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>{value}</p>
+                <p className="font-display text-3xl font-bold" style={{ color: '#4A6320' }}>{value}</p>
                 <p className="font-semibold mt-1" style={{ color: '#2F2F2F' }}>{label}</p>
                 <p className="text-xs mt-0.5" style={{ color: '#8C8F94' }}>{sub}</p>
               </div>
@@ -254,9 +254,9 @@ export default function ProcessusPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="py-16" style={{ backgroundColor: '#243238' }}>
         <div className="container mx-auto max-w-2xl px-4 sm:px-6 text-center">
-          <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#ffffff' }}>
+          <h2 className="font-display text-3xl font-bold mb-3" style={{ color: '#ffffff' }}>
             Prêt à démarrer votre projet ?
           </h2>
           <p className="mb-8" style={{ color: '#bbf7d0' }}>
@@ -265,8 +265,8 @@ export default function ProcessusPage() {
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+              className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
               Demander la visite gratuite
               <ArrowRight size={15} aria-hidden="true" />

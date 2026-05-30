@@ -34,7 +34,7 @@ export function SeasonalCtaBanner() {
       role="banner"
       aria-label="Offre saisonnière printemps 2026"
       className="relative flex items-center justify-center gap-3 px-4 py-2.5 text-sm font-medium text-white animate-fade-in"
-      style={{ backgroundColor: '#0B3D2C' }}
+      style={{ backgroundColor: '#243238' }}
     >
       <Link
         href="/devis"
@@ -47,7 +47,7 @@ export function SeasonalCtaBanner() {
         </span>
         <span
           className="ml-1 hidden rounded-full px-2.5 py-0.5 text-xs font-bold sm:inline-block"
-          style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+          style={{ backgroundColor: '#749A30', color: '#ffffff' }}
         >
           En savoir plus →
         </span>

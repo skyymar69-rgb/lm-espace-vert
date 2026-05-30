@@ -112,11 +112,11 @@ export function PriceEstimator() {
   return (
     <div className="rounded-2xl border bg-white overflow-hidden" style={{ borderColor: '#EDEDED' }}>
       {/* Header */}
-      <div className="px-6 py-4 border-b" style={{ backgroundColor: '#F7F5F0', borderColor: '#EDEDED' }}>
-        <p className="text-xs font-semibold uppercase tracking-widest mb-0.5" style={{ color: '#80BC00' }}>
+      <div className="px-6 py-4 border-b" style={{ backgroundColor: '#F4F1E9', borderColor: '#EDEDED' }}>
+        <p className="text-xs font-semibold uppercase tracking-widest mb-0.5" style={{ color: '#749A30' }}>
           Outil gratuit
         </p>
-        <h3 className="font-display text-lg font-bold" style={{ color: '#0B3D2C' }}>
+        <h3 className="font-display text-lg font-bold" style={{ color: '#243238' }}>
           Estimez votre budget
         </h3>
       </div>
@@ -128,7 +128,7 @@ export function PriceEstimator() {
             <div
               className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
               style={{
-                backgroundColor: step >= s ? '#80BC00' : '#EDEDED',
+                backgroundColor: step >= s ? '#749A30' : '#EDEDED',
                 color: step >= s ? '#ffffff' : '#8C8F94',
               }}
             >
@@ -137,7 +137,7 @@ export function PriceEstimator() {
             {s < 3 && (
               <div
                 className="h-px w-8 flex-shrink-0"
-                style={{ backgroundColor: step > s ? '#80BC00' : '#EDEDED' }}
+                style={{ backgroundColor: step > s ? '#749A30' : '#EDEDED' }}
               />
             )}
           </div>
@@ -160,8 +160,8 @@ export function PriceEstimator() {
                     setFreq(serviceNeedsFreq.includes(svc.id) ? null : 'ponctuel')
                     setStep(2)
                   }}
-                  className="flex flex-col items-center gap-1.5 rounded-xl border p-3 text-center text-xs font-medium transition-all hover:border-[#80BC00] hover:bg-[rgba(128,188,0,0.05)]"
-                  style={{ borderColor: service === svc.id ? '#80BC00' : '#EDEDED', color: '#2F2F2F' }}
+                  className="flex flex-col items-center gap-1.5 rounded-xl border p-3 text-center text-xs font-medium transition-all hover:border-[#749A30] hover:bg-[rgba(116,154,48,0.05)]"
+                  style={{ borderColor: service === svc.id ? '#749A30' : '#EDEDED', color: '#2F2F2F' }}
                 >
                   <span className="text-xl">{svc.emoji}</span>
                   {svc.label}
@@ -190,8 +190,8 @@ export function PriceEstimator() {
                       setStep(3)
                     }
                   }}
-                  className="rounded-xl border px-4 py-3 text-sm font-medium transition-all hover:border-[#80BC00] hover:bg-[rgba(128,188,0,0.05)]"
-                  style={{ borderColor: surface === s.id ? '#80BC00' : '#EDEDED', color: '#2F2F2F' }}
+                  className="rounded-xl border px-4 py-3 text-sm font-medium transition-all hover:border-[#749A30] hover:bg-[rgba(116,154,48,0.05)]"
+                  style={{ borderColor: surface === s.id ? '#749A30' : '#EDEDED', color: '#2F2F2F' }}
                 >
                   {s.label}
                 </button>
@@ -218,8 +218,8 @@ export function PriceEstimator() {
                 <button
                   key={f.id}
                   onClick={() => setFreq(f.id)}
-                  className="rounded-xl border px-4 py-3 text-sm font-medium transition-all hover:border-[#80BC00] hover:bg-[rgba(128,188,0,0.05)]"
-                  style={{ borderColor: freq === f.id ? '#80BC00' : '#EDEDED', color: '#2F2F2F' }}
+                  className="rounded-xl border px-4 py-3 text-sm font-medium transition-all hover:border-[#749A30] hover:bg-[rgba(116,154,48,0.05)]"
+                  style={{ borderColor: freq === f.id ? '#749A30' : '#EDEDED', color: '#2F2F2F' }}
                 >
                   {f.label}
                 </button>
@@ -241,14 +241,14 @@ export function PriceEstimator() {
             {/* Card résultat */}
             <div
               className="rounded-xl p-5 mb-4"
-              style={{ backgroundColor: '#F7F5F0', border: '1px solid #EDEDED' }}
+              style={{ backgroundColor: '#F4F1E9', border: '1px solid #EDEDED' }}
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: '#8C8F94' }}>
                     Estimation indicative
                   </p>
-                  <p className="font-display text-2xl font-bold" style={{ color: '#0B3D2C' }}>
+                  <p className="font-display text-2xl font-bold" style={{ color: '#243238' }}>
                     {result ? formatPrice(result[0], result[1], needsFreq && freq !== 'ponctuel') : '–'}
                   </p>
                   <p className="text-xs mt-1" style={{ color: '#8C8F94' }}>
@@ -257,7 +257,7 @@ export function PriceEstimator() {
                 </div>
                 <span
                   className="flex-shrink-0 rounded-full px-3 py-1 text-xs font-bold"
-                  style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                  style={{ backgroundColor: '#749A30', color: '#ffffff' }}
                 >
                   Estimation
                 </span>
@@ -268,7 +268,7 @@ export function PriceEstimator() {
               <Link
                 href="/devis"
                 className="flex-1 flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-                style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                style={{ backgroundColor: '#749A30', color: '#ffffff' }}
               >
                 Obtenir un devis précis <ArrowRight size={14} />
               </Link>

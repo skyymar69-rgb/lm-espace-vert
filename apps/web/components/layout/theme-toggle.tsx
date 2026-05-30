@@ -33,7 +33,7 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={theme === 'light' ? 'Activer le thème sombre' : 'Activer le thème clair'}
       aria-pressed={theme === 'dark'}
-      className="h-9 w-9 flex items-center justify-center rounded-md text-[#8C8F94] hover:bg-[#F7F5F0] hover:text-[#2F2F2F] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+      className="h-9 w-9 flex items-center justify-center rounded-md text-[#8C8F94] hover:bg-[#F4F1E9] hover:text-[#2F2F2F] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
     >
       {theme === 'light'
         ? <Moon size={18} aria-hidden="true" />

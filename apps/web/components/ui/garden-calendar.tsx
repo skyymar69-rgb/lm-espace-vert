@@ -43,7 +43,7 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
         <ul className="space-y-1">
           {current.tasks.map((task) => (
             <li key={task} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
-              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#80BC00' }} aria-hidden="true" />
+              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#749A30' }} aria-hidden="true" />
               {task}
             </li>
           ))}
@@ -55,7 +55,7 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
   return (
     <div className="rounded-2xl border border-[#EDEDED] bg-white overflow-hidden">
       {/* Header */}
-      <div className="px-6 py-4 text-white" style={{ backgroundColor: '#425D07' }}>
+      <div className="px-6 py-4 text-white" style={{ backgroundColor: '#4A6320' }}>
         <h3 className="font-display font-bold text-lg">Calendrier d&apos;entretien</h3>
         <p className="text-sm opacity-80">Que faire dans votre jardin, mois par mois</p>
       </div>
@@ -68,7 +68,7 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
             className="text-center p-2.5 rounded-lg transition-colors"
             style={
               m.month === currentMonth
-                ? { backgroundColor: '#80BC00', color: '#ffffff' }
+                ? { backgroundColor: '#749A30', color: '#ffffff' }
                 : { color: '#8C8F94' }
             }
           >
@@ -86,7 +86,7 @@ export function GardenCalendar({ compact = false, showMonth }: Props) {
         <ul className="space-y-1.5">
           {current.tasks.map((task) => (
             <li key={task} className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
-              <span style={{ color: '#80BC00' }} aria-hidden="true">✓</span>
+              <span style={{ color: '#749A30' }} aria-hidden="true">✓</span>
               {task}
             </li>
           ))}

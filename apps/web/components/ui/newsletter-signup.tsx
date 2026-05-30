@@ -10,8 +10,8 @@ interface NewsletterSignupProps {
 
 const focusStyle = {
   onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
-    e.currentTarget.style.borderColor = '#80BC00'
-    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(128,188,0,0.15)'
+    e.currentTarget.style.borderColor = '#749A30'
+    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(116,154,48,0.15)'
     e.currentTarget.style.outline = 'none'
   },
   onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
@@ -56,13 +56,13 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
     return (
       <div
         className="rounded-xl p-4 flex items-center gap-3"
-        style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}
+        style={{ backgroundColor: 'rgba(116,154,48,0.1)' }}
         role="status"
         aria-live="polite"
       >
-        <CheckCircle size={20} style={{ color: '#80BC00' }} aria-hidden="true" />
+        <CheckCircle size={20} style={{ color: '#749A30' }} aria-hidden="true" />
         <div>
-          <p className="text-sm font-semibold" style={{ color: '#425D07' }}>
+          <p className="text-sm font-semibold" style={{ color: '#4A6320' }}>
             📬 Parfait ! Vérifiez votre boîte mail.
           </p>
           <p className="text-xs mt-0.5" style={{ color: '#5C606B' }}>
@@ -77,9 +77,9 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
     return (
       <div
         className="rounded-2xl border p-6"
-        style={{ backgroundColor: '#F7F5F0', borderColor: '#EDEDED' }}
+        style={{ backgroundColor: '#F4F1E9', borderColor: '#EDEDED' }}
       >
-        <h3 className="font-display text-xl font-bold mb-1" style={{ color: '#0B3D2C' }}>
+        <h3 className="font-display text-xl font-bold mb-1" style={{ color: '#243238' }}>
           Conseils jardinage &amp; offres saisonnières
         </h3>
         <p className="text-sm mb-5" style={{ color: '#5C606B' }}>
@@ -104,11 +104,11 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
               checked={optIn}
               onChange={(e) => setOptIn(e.target.checked)}
               className="mt-0.5 h-4 w-4 flex-shrink-0 rounded focus-visible:ring-2"
-              style={{ accentColor: '#80BC00' }}
+              style={{ accentColor: '#749A30' }}
             />
             <span className="text-xs" style={{ color: '#5C606B' }}>
               J&apos;accepte de recevoir les conseils et offres de LM Espace Vert. Voir nos{' '}
-              <Link href="/cgv" className="underline hover:no-underline" style={{ color: '#425D07' }}>
+              <Link href="/cgv" className="underline hover:no-underline" style={{ color: '#4A6320' }}>
                 CGV
               </Link>
               .
@@ -124,8 +124,8 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-all duration-200 hover:scale-[1.02] hover:shadow-md disabled:opacity-70"
-            style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: '0 4px 14px rgba(128,188,0,0.3)' }}
+            className="flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold transition-colors hover:bg-[#7E3A37] disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#9E4B47]"
+            style={{ backgroundColor: '#9E4B47', color: '#ffffff', boxShadow: '0 4px 14px rgba(158,75,71,0.3)' }}
           >
             {status === 'loading' ? (
               <Loader2 size={16} className="animate-spin" />
@@ -142,9 +142,9 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
   return (
     <div
       className="rounded-xl border p-4"
-      style={{ backgroundColor: '#F7F5F0', borderColor: '#EDEDED' }}
+      style={{ backgroundColor: '#F4F1E9', borderColor: '#EDEDED' }}
     >
-      <p className="text-sm font-semibold mb-3" style={{ color: '#0B3D2C' }}>
+      <p className="text-sm font-semibold mb-3" style={{ color: '#243238' }}>
         Conseils jardinage gratuits chaque mois
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-2">
@@ -162,9 +162,9 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="flex-shrink-0 flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition-all duration-200 hover:scale-[1.03] hover:shadow-sm disabled:opacity-70"
-            style={{ backgroundColor: '#80BC00', color: '#0B3D2C' }}
-            aria-label="S'abonner à la newsletter 📬"
+            className="flex-shrink-0 flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold transition-colors hover:bg-[#7E3A37] disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#9E4B47]"
+            style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
+            aria-label="S'abonner à la newsletter"
           >
             {status === 'loading' ? (
               <Loader2 size={14} className="animate-spin" />
@@ -180,11 +180,11 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
             checked={optIn}
             onChange={(e) => setOptIn(e.target.checked)}
             className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 focus-visible:ring-2"
-            style={{ accentColor: '#80BC00' }}
+            style={{ accentColor: '#749A30' }}
           />
           <span className="text-[11px]" style={{ color: '#5C606B' }}>
             Consentement RGPD —{' '}
-            <Link href="/cgv" className="underline hover:no-underline" style={{ color: '#425D07' }}>
+            <Link href="/cgv" className="underline hover:no-underline" style={{ color: '#4A6320' }}>
               CGV
             </Link>
           </span>

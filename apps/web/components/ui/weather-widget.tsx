@@ -45,7 +45,7 @@ export function WeatherWidget() {
     return (
       <div
         className="hidden md:block rounded-full animate-pulse"
-        style={{ backgroundColor: 'rgba(128,188,0,0.08)', width: 72, height: 26 }}
+        style={{ backgroundColor: 'rgba(116,154,48,0.08)', width: 72, height: 26 }}
         aria-hidden="true"
       />
     )
@@ -63,11 +63,11 @@ export function WeatherWidget() {
         title={`Météo Lyon — ${label}`}
         aria-label={`Météo Lyon : ${temp}°C, ${label}`}
         aria-expanded={expanded}
-        className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold transition-all hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+        className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold transition-all hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
         style={{
-          backgroundColor: 'rgba(128,188,0,0.10)',
-          color: '#425D07',
-          border: '1px solid rgba(128,188,0,0.25)',
+          backgroundColor: 'rgba(116,154,48,0.10)',
+          color: '#4A6320',
+          border: '1px solid rgba(116,154,48,0.25)',
         }}
       >
         <span className="text-sm leading-none" aria-hidden="true">{emoji}</span>
@@ -96,7 +96,7 @@ export function WeatherWidget() {
               </div>
               <div className="flex items-center justify-between">
                 <span style={{ color: '#5C606B' }}>🌿 Jardinage</span>
-                <span className="font-semibold" style={{ color: weather.weathercode <= 3 ? '#425D07' : '#5C606B' }}>
+                <span className="font-semibold" style={{ color: weather.weathercode <= 3 ? '#4A6320' : '#5C606B' }}>
                   {weather.weathercode <= 3 ? 'Idéal ✓' : weather.weathercode >= 61 ? 'À éviter' : 'Correct'}
                 </span>
               </div>

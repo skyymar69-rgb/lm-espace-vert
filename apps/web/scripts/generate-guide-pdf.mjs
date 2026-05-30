@@ -34,16 +34,17 @@ Font.register({
 
 // ── Palette ────────────────────────────────────────────────────────────────
 const C = {
-  forestDark: '#0B3D2C', forest: '#1A5C3F', primary: '#425D07',
-  lime: '#80BC00', limeLight: '#A8D740', limeFaint: '#EEF7D6',
-  offWhite: '#F7F5F0', white: '#FFFFFF',
+  forestDark: '#243238', forest: '#2E4138', primary: '#4A6320',
+  lime: '#749A30', limeLight: '#A8CC6A', limeFaint: '#EDF2E2',
+  offWhite: '#F4F1E9', white: '#FFFFFF',
   textDark: '#1C1C1C', textMid: '#3D3D3D', textLight: '#6B7280',
-  border: '#E5E7EB',
+  border: '#E7E2D6', terracotta: '#9E4B47',
 }
 
 // ── Styles ─────────────────────────────────────────────────────────────────
 const s = StyleSheet.create({
-  page: { fontFamily: 'Montserrat', backgroundColor: C.white },
+  // paddingBottom réserve l'espace du pied de page fixe → plus aucun texte ne passe dessous.
+  page: { fontFamily: 'Montserrat', backgroundColor: C.white, paddingBottom: 52 },
   darkPage: { fontFamily: 'Montserrat', backgroundColor: C.forestDark },
 
   // Cover
@@ -128,9 +129,9 @@ const s = StyleSheet.create({
   backContactLabel: { color: C.lime, fontSize: 9, fontWeight: 700, letterSpacing: 1.5, marginBottom: 5 },
   backContactValue: { color: C.white, fontSize: 11, fontWeight: 600 },
   backContactSub: { color: 'rgba(255,255,255,0.45)', fontSize: 8, marginTop: 2 },
-  backCta: { backgroundColor: C.lime, borderRadius: 28, paddingVertical: 15, alignItems: 'center', marginBottom: 28 },
-  backCtaText: { color: C.forestDark, fontSize: 13, fontWeight: 800 },
-  backCtaSub: { color: 'rgba(6,61,44,0.65)', fontSize: 9.5, marginTop: 2 },
+  backCta: { backgroundColor: C.terracotta, borderRadius: 28, paddingVertical: 15, alignItems: 'center', marginBottom: 28 },
+  backCtaText: { color: C.white, fontSize: 13, fontWeight: 800 },
+  backCtaSub: { color: 'rgba(255,255,255,0.8)', fontSize: 9.5, marginTop: 2 },
   backBadgeRow: { flexDirection: 'row', gap: 14, marginBottom: 22 },
   backBadge: { flex: 1, backgroundColor: 'rgba(128,188,0,0.12)', borderRadius: 8, padding: 11, borderWidth: 1, borderColor: 'rgba(128,188,0,0.28)' },
   backBadgeIcon: { color: C.lime, fontSize: 15, marginBottom: 4 },
@@ -406,7 +407,7 @@ function GuidePDF() {
         ], 'badges'),
       ], 'top'),
       V(s.backLegal, T(s.backLegalText,
-        "LM ESPACE VERT — EURL au capital de 400 € — SIREN 999 206 816 — SIRET 999 206 816 00012\nSiège : 655 Route de Choisine, 07410 Colombier-le-Vieux — Activité : Saint-Didier-au-Mont-d'Or, 69370 Rhône\nTVA : FR69999206816 — RCS Aubenas — Site réalisé par Kayzen Web (kayzen-lyon.fr)\nGuide à titre informatif — LM Espace Vert décline toute responsabilité pour travaux réalisés sans professionnel.",
+        "LM ESPACE VERT — Paysagiste à Saint-Didier-au-Mont-d'Or (69370) — Interventions dans un rayon de 20 km autour de Lyon Nord.\nContact : contact@lmespacevert.fr — 06 72 58 73 53 — www.lmespacevert.fr\nSite réalisé par Kayzen Web — internet.kayzen-lyon.fr\nGuide fourni à titre informatif ; LM Espace Vert décline toute responsabilité pour des travaux réalisés sans professionnel qualifié.",
         'lt'), 'legal'),
     ], 'bc'),
   ])

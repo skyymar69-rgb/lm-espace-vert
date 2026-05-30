@@ -123,13 +123,13 @@ export function RealisationsGallery() {
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActiveCategory(cat)}
-                  className="flex-shrink-0 rounded-full text-sm font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                  className="flex-shrink-0 rounded-full text-sm font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
                   style={{
                     padding: '0.4375rem 1.125rem',
-                    border: isActive ? '1.5px solid #80BC00' : '1.5px solid #E0E0E0',
-                    backgroundColor: isActive ? '#80BC00' : 'transparent',
-                    color: isActive ? '#0B3D2C' : '#5C606B',
-                    boxShadow: isActive ? '0 2px 12px rgba(128,188,0,0.30)' : 'none',
+                    border: isActive ? '1.5px solid #749A30' : '1.5px solid #E0E0E0',
+                    backgroundColor: isActive ? '#749A30' : 'transparent',
+                    color: isActive ? '#243238' : '#5C606B',
+                    boxShadow: isActive ? '0 2px 12px rgba(116,154,48,0.30)' : 'none',
                     letterSpacing: '0.01em',
                     cursor: 'pointer',
                     whiteSpace: 'nowrap',
@@ -144,7 +144,7 @@ export function RealisationsGallery() {
       </div>
 
       {/* Gallery */}
-      <section style={{ backgroundColor: '#F7F5F0', padding: '4rem 0 5rem' }}>
+      <section style={{ backgroundColor: '#F4F1E9', padding: '4rem 0 5rem' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <ul
             role="list"
@@ -159,18 +159,18 @@ export function RealisationsGallery() {
                     backgroundColor: '#ffffff',
                     borderRadius: '1.25rem',
                     overflow: 'hidden',
-                    boxShadow: '0 2px 20px rgba(11,61,44,0.07)',
+                    boxShadow: '0 2px 20px rgba(36,50,56,0.07)',
                     transition: 'box-shadow 0.3s ease, transform 0.3s ease',
-                    border: '1px solid rgba(11,61,44,0.05)',
+                    border: '1px solid rgba(36,50,56,0.05)',
                   }}
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.boxShadow = '0 10px 48px rgba(11,61,44,0.14)'
+                    el.style.boxShadow = '0 10px 48px rgba(36,50,56,0.14)'
                     el.style.transform = 'translateY(-3px)'
                   }}
                   onMouseLeave={(e) => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.boxShadow = '0 2px 20px rgba(11,61,44,0.07)'
+                    el.style.boxShadow = '0 2px 20px rgba(36,50,56,0.07)'
                     el.style.transform = 'translateY(0)'
                   }}
                 >
@@ -225,7 +225,7 @@ export function RealisationsGallery() {
                           <span
                             className="text-xs font-bold px-2.5 py-1 rounded-full"
                             style={{
-                              backgroundColor: 'rgba(128,188,0,0.90)',
+                              backgroundColor: 'rgba(116,154,48,0.90)',
                               backdropFilter: 'blur(4px)',
                               WebkitBackdropFilter: 'blur(4px)',
                               color: '#ffffff',
@@ -239,7 +239,7 @@ export function RealisationsGallery() {
                       {/* Overlay hover */}
                       <div
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-350"
-                        style={{ background: 'linear-gradient(160deg, rgba(11,61,44,0.12) 0%, rgba(11,61,44,0.72) 100%)' }}
+                        style={{ background: 'linear-gradient(160deg, rgba(36,50,56,0.12) 0%, rgba(36,50,56,0.72) 100%)' }}
                         aria-hidden="true"
                       />
                       {/* Badge catégorie */}
@@ -247,17 +247,17 @@ export function RealisationsGallery() {
                         <span
                           style={{
                             display: 'inline-block',
-                            backgroundColor: 'rgba(11,61,44,0.80)',
+                            backgroundColor: 'rgba(36,50,56,0.80)',
                             backdropFilter: 'blur(6px)',
                             WebkitBackdropFilter: 'blur(6px)',
-                            color: '#80BC00',
+                            color: '#749A30',
                             fontSize: '0.625rem',
                             fontWeight: 700,
                             padding: '0.22rem 0.6rem',
                             borderRadius: '9999px',
                             textTransform: 'uppercase',
                             letterSpacing: '0.06em',
-                            border: '1px solid rgba(128,188,0,0.25)',
+                            border: '1px solid rgba(116,154,48,0.25)',
                           }}
                         >
                           {r.category}
@@ -289,7 +289,7 @@ export function RealisationsGallery() {
                       {/* Overlay hover */}
                       <div
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-350"
-                        style={{ background: 'linear-gradient(160deg, rgba(11,61,44,0.18) 0%, rgba(11,61,44,0.82) 100%)' }}
+                        style={{ background: 'linear-gradient(160deg, rgba(36,50,56,0.18) 0%, rgba(36,50,56,0.82) 100%)' }}
                         aria-hidden="true"
                       />
                       {/* Badge catégorie */}
@@ -297,17 +297,17 @@ export function RealisationsGallery() {
                         <span
                           style={{
                             display: 'inline-block',
-                            backgroundColor: 'rgba(11,61,44,0.80)',
+                            backgroundColor: 'rgba(36,50,56,0.80)',
                             backdropFilter: 'blur(6px)',
                             WebkitBackdropFilter: 'blur(6px)',
-                            color: '#80BC00',
+                            color: '#749A30',
                             fontSize: '0.625rem',
                             fontWeight: 700,
                             padding: '0.22rem 0.6rem',
                             borderRadius: '9999px',
                             textTransform: 'uppercase',
                             letterSpacing: '0.06em',
-                            border: '1px solid rgba(128,188,0,0.25)',
+                            border: '1px solid rgba(116,154,48,0.25)',
                           }}
                         >
                           {r.category}
@@ -345,13 +345,13 @@ export function RealisationsGallery() {
                       <span
                         style={{
                           display: 'inline-block',
-                          backgroundColor: 'rgba(128,188,0,0.10)',
-                          color: '#425D07',
+                          backgroundColor: 'rgba(116,154,48,0.10)',
+                          color: '#4A6320',
                           fontSize: '0.6875rem',
                           fontWeight: 600,
                           padding: '0.2rem 0.65rem',
                           borderRadius: '9999px',
-                          border: '1px solid rgba(66,93,7,0.15)',
+                          border: '1px solid rgba(74,99,32,0.15)',
                           letterSpacing: '0.02em',
                         }}
                       >
@@ -379,10 +379,10 @@ export function RealisationsGallery() {
                         fontSize: '0.75rem',
                         fontWeight: 700,
                         textDecoration: 'none',
-                        backgroundColor: '#80BC00',
-                        color: '#0B3D2C',
+                        backgroundColor: '#9E4B47',
+                        color: '#ffffff',
                         transition: 'opacity 0.2s ease, box-shadow 0.2s ease',
-                        boxShadow: '0 2px 10px rgba(128,188,0,0.25)',
+                        boxShadow: '0 2px 10px rgba(158,75,71,0.25)',
                         letterSpacing: '0.01em',
                       }}
                     >
@@ -547,7 +547,7 @@ export function RealisationsGallery() {
                   gap: '0.5rem',
                 }}
               >
-                <span style={{ color: '#80BC00', fontWeight: 600 }}>{currentItem.category}</span>
+                <span style={{ color: '#749A30', fontWeight: 600 }}>{currentItem.category}</span>
                 <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
                 <span>{currentItem.year}</span>
               </p>

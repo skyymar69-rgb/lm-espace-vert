@@ -81,14 +81,14 @@ function ProgressBar({ step }: { step: number }) {
           {idx > 0 && (
             <div
               className="h-0.5 w-10 sm:w-16 transition-colors duration-300"
-              style={{ backgroundColor: n <= step ? '#80BC00' : '#EDEDED' }}
+              style={{ backgroundColor: n <= step ? '#749A30' : '#EDEDED' }}
             />
           )}
           {/* Step circle */}
           <div
             className="relative flex items-center justify-center w-9 h-9 rounded-full text-sm font-bold transition-all duration-300"
             style={{
-              backgroundColor: n < step ? '#80BC00' : n === step ? '#80BC00' : '#EDEDED',
+              backgroundColor: n < step ? '#749A30' : n === step ? '#749A30' : '#EDEDED',
               color: n <= step ? '#ffffff' : '#8C8F94',
             }}
           >
@@ -219,7 +219,7 @@ export function DevisForm() {
   // ── Styles ──────────────────────────────────────────────────────────────────
 
   const inputClass =
-    'w-full px-5 py-3.5 rounded-full border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#80BC00] focus:ring-2 transition-all'
+    'w-full px-5 py-3.5 rounded-full border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#749A30] focus:ring-2 transition-all'
   const labelClass = 'block text-xs font-semibold uppercase tracking-wider mb-2'
 
   // ── Success screen ───────────────────────────────────────────────────────────
@@ -229,11 +229,11 @@ export function DevisForm() {
       <div className="text-center py-12 px-6">
         <div
           className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-          style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}
+          style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}
         >
-          <Check size={32} style={{ color: '#80BC00' }} />
+          <Check size={32} style={{ color: '#749A30' }} />
         </div>
-        <h3 className="font-display text-2xl font-bold mb-2" style={{ color: '#425D07' }}>
+        <h3 className="font-display text-2xl font-bold mb-2" style={{ color: '#4A6320' }}>
           Merci {form.prenom}&nbsp;!
         </h3>
         <p className="text-base mb-1" style={{ color: '#2F2F2F' }}>
@@ -245,7 +245,7 @@ export function DevisForm() {
         <Link
           href="/"
           className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-          style={{ backgroundColor: '#0B3D2C' }}
+          style={{ backgroundColor: '#243238' }}
         >
           Retour à l&apos;accueil
         </Link>
@@ -308,17 +308,17 @@ export function DevisForm() {
                   onClick={() => setForm((f) => ({ ...f, projectType: label }))}
                   className="flex flex-col items-center gap-2 rounded-2xl border p-4 text-center text-sm font-medium transition-all cursor-pointer"
                   style={{
-                    backgroundColor: selected ? 'rgba(128,188,0,0.10)' : '#ffffff',
-                    borderColor: selected ? '#80BC00' : '#EDEDED',
-                    color: selected ? '#425D07' : '#2F2F2F',
-                    boxShadow: selected ? '0 0 0 2px rgba(128,188,0,0.25)' : 'none',
+                    backgroundColor: selected ? 'rgba(116,154,48,0.10)' : '#ffffff',
+                    borderColor: selected ? '#749A30' : '#EDEDED',
+                    color: selected ? '#4A6320' : '#2F2F2F',
+                    boxShadow: selected ? '0 0 0 2px rgba(116,154,48,0.25)' : 'none',
                   }}
                   aria-pressed={selected}
                 >
                   <Icon
                     size={24}
                     aria-hidden="true"
-                    style={{ color: selected ? '#80BC00' : '#8C8F94' }}
+                    style={{ color: selected ? '#749A30' : '#8C8F94' }}
                   />
                   {label}
                 </button>
@@ -332,7 +332,7 @@ export function DevisForm() {
               disabled={!canProceedStep1()}
               onClick={() => setStep(2)}
               className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-opacity disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90"
-              style={{ backgroundColor: '#80BC00' }}
+              style={{ backgroundColor: '#749A30' }}
             >
               Étape suivante
               <ChevronRight size={16} />
@@ -366,9 +366,9 @@ export function DevisForm() {
                     onClick={() => setForm((f) => ({ ...f, superficie: s }))}
                     className="rounded-full border px-4 py-2.5 text-sm font-medium transition-all cursor-pointer"
                     style={{
-                      backgroundColor: selected ? 'rgba(128,188,0,0.10)' : '#ffffff',
-                      borderColor: selected ? '#80BC00' : '#D8D8D8',
-                      color: selected ? '#425D07' : '#2F2F2F',
+                      backgroundColor: selected ? 'rgba(116,154,48,0.10)' : '#ffffff',
+                      borderColor: selected ? '#749A30' : '#D8D8D8',
+                      color: selected ? '#4A6320' : '#2F2F2F',
                     }}
                     aria-pressed={selected}
                   >
@@ -382,7 +382,7 @@ export function DevisForm() {
           {/* Commune */}
           <div className="mb-6">
             <label htmlFor="commune" className={labelClass} style={{ color: '#2F2F2F' }}>
-              Commune <span aria-label="obligatoire" style={{ color: '#80BC00' }}>*</span>
+              Commune <span aria-label="obligatoire" style={{ color: '#749A30' }}>*</span>
             </label>
             <input
               id="commune"
@@ -411,9 +411,9 @@ export function DevisForm() {
                     onClick={() => setForm((f) => ({ ...f, urgence: u }))}
                     className="rounded-full border px-4 py-2.5 text-sm font-medium transition-all cursor-pointer"
                     style={{
-                      backgroundColor: selected ? 'rgba(128,188,0,0.10)' : '#ffffff',
-                      borderColor: selected ? '#80BC00' : '#D8D8D8',
-                      color: selected ? '#425D07' : '#2F2F2F',
+                      backgroundColor: selected ? 'rgba(116,154,48,0.10)' : '#ffffff',
+                      borderColor: selected ? '#749A30' : '#D8D8D8',
+                      color: selected ? '#4A6320' : '#2F2F2F',
                     }}
                     aria-pressed={selected}
                   >
@@ -439,7 +439,7 @@ export function DevisForm() {
               disabled={!canProceedStep2()}
               onClick={() => setStep(3)}
               className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-opacity disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90"
-              style={{ backgroundColor: '#80BC00' }}
+              style={{ backgroundColor: '#749A30' }}
             >
               Étape suivante
               <ChevronRight size={16} />
@@ -461,7 +461,7 @@ export function DevisForm() {
           {/* Prénom */}
           <div className="mb-4">
             <label htmlFor="prenom-devis" className={labelClass} style={{ color: '#2F2F2F' }}>
-              Prénom <span aria-label="obligatoire" style={{ color: '#80BC00' }}>*</span>
+              Prénom <span aria-label="obligatoire" style={{ color: '#749A30' }}>*</span>
             </label>
             <input
               id="prenom-devis"
@@ -491,7 +491,7 @@ export function DevisForm() {
           {/* Téléphone */}
           <div className="mb-4">
             <label htmlFor="telephone-devis" className={labelClass} style={{ color: '#2F2F2F' }}>
-              Téléphone <span aria-label="obligatoire" style={{ color: '#80BC00' }}>*</span>
+              Téléphone <span aria-label="obligatoire" style={{ color: '#749A30' }}>*</span>
             </label>
             <input
               id="telephone-devis"
@@ -552,7 +552,7 @@ export function DevisForm() {
               placeholder="Décrivez votre projet, vos contraintes, vos souhaits..."
               value={form.message}
               onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-              className="w-full px-5 py-3.5 rounded-2xl border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#80BC00] focus:ring-2 transition-all resize-y min-h-[90px]"
+              className="w-full px-5 py-3.5 rounded-2xl border border-[#D8D8D8] text-[#2F2F2F] placeholder-[#8C8F94] bg-white text-sm focus:outline-none focus:border-[#749A30] focus:ring-2 transition-all resize-y min-h-[90px]"
             />
             <p className="text-right text-xs mt-1" style={{ color: '#8C8F94' }}>
               {form.message.length}/500
@@ -568,7 +568,7 @@ export function DevisForm() {
               onChange={(e) => setForm((f) => ({ ...f, consentement: e.target.checked }))}
               required
               aria-required="true"
-              className="mt-0.5 h-4 w-4 rounded border-[#D8D8D8] accent-[#80BC00] focus-visible:outline focus-visible:outline-2"
+              className="mt-0.5 h-4 w-4 rounded border-[#D8D8D8] accent-[#749A30] focus-visible:outline focus-visible:outline-2"
             />
             <label htmlFor="consentement-devis" className="text-xs leading-relaxed" style={{ color: '#2F2F2F' }}>
               J&apos;accepte que mes données soient utilisées pour être recontacté(e) — voir la{' '}
@@ -577,11 +577,11 @@ export function DevisForm() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline underline-offset-2 hover:opacity-80"
-                style={{ color: '#425D07' }}
+                style={{ color: '#4A6320' }}
               >
                 politique de confidentialité
               </a>
-              . <span aria-label="obligatoire" style={{ color: '#80BC00' }}>*</span>
+              . <span aria-label="obligatoire" style={{ color: '#749A30' }}>*</span>
             </label>
           </div>
 
@@ -589,8 +589,8 @@ export function DevisForm() {
           <button
             type="submit"
             disabled={isLoading || !canSubmitStep3()}
-            className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-            style={{ backgroundColor: '#80BC00', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+            className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#7E3A37] disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9E4B47]"
+            style={{ backgroundColor: '#9E4B47', boxShadow: '0 4px 20px rgba(158,75,71,0.35)' }}
           >
             {isLoading ? (
               <>

@@ -220,7 +220,7 @@ export default function GuideJardinagePage() {
       <nav aria-label="Fil d'Ariane" className="bg-white border-b border-[#EDEDED]">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-3">
           <ol className="flex items-center gap-2 text-xs" style={{ color: '#8C8F94' }}>
-            <li><Link href="/" className="hover:underline" style={{ color: '#425D07' }}>Accueil</Link></li>
+            <li><Link href="/" className="hover:underline" style={{ color: '#4A6320' }}>Accueil</Link></li>
             <li aria-hidden="true">/</li>
             <li style={{ color: '#2F2F2F' }}>Guide jardinage</li>
           </ol>
@@ -230,13 +230,13 @@ export default function GuideJardinagePage() {
       {/* Hero */}
       <section
         className="py-20 lg:py-28"
-        style={{ backgroundColor: '#0B3D2C' }}
+        style={{ backgroundColor: '#243238' }}
         aria-labelledby="guide-heading"
       >
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <span
             className="inline-block rounded-full px-4 py-1.5 text-xs font-semibold mb-6"
-            style={{ backgroundColor: 'rgba(128,188,0,0.2)', color: '#80BC00' }}
+            style={{ backgroundColor: 'rgba(116,154,48,0.2)', color: '#749A30' }}
           >
             Guide gratuit
           </span>
@@ -251,7 +251,7 @@ export default function GuideJardinagePage() {
             <a
               href="#guide-content"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+              style={{ backgroundColor: '#749A30', color: '#ffffff' }}
             >
               Lire le guide <ArrowRight size={14} />
             </a>
@@ -269,10 +269,10 @@ export default function GuideJardinagePage() {
       <section id="guide-content" className="py-20 bg-white" aria-label="Guide jardinage mois par mois">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>
               Calendrier
             </p>
-            <h2 className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
+            <h2 className="font-display text-3xl font-bold" style={{ color: '#4A6320' }}>
               Mois par mois, votre jardin lyonnais
             </h2>
           </div>
@@ -295,7 +295,7 @@ export default function GuideJardinagePage() {
                     {i + 1}
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-sm" style={{ color: '#0B3D2C' }}>
+                    <h3 className="font-display font-bold text-sm" style={{ color: '#243238' }}>
                       {m.emoji} {m.month}
                     </h3>
                   </div>
@@ -304,16 +304,16 @@ export default function GuideJardinagePage() {
                   <ul className="space-y-2 mb-4">
                     {m.tasks.map((task) => (
                       <li key={task} className="flex items-start gap-2 text-sm" style={{ color: '#2F2F2F' }}>
-                        <span style={{ color: '#80BC00' }} className="mt-0.5 flex-shrink-0">✓</span>
+                        <span style={{ color: '#749A30' }} className="mt-0.5 flex-shrink-0">✓</span>
                         {task}
                       </li>
                     ))}
                   </ul>
                   <div
                     className="rounded-lg p-3 text-xs italic leading-relaxed"
-                    style={{ backgroundColor: '#F7F5F0', color: '#8C8F94' }}
+                    style={{ backgroundColor: '#F4F1E9', color: '#8C8F94' }}
                   >
-                    <Calendar size={11} className="inline mr-1" style={{ color: '#80BC00' }} />
+                    <Calendar size={11} className="inline mr-1" style={{ color: '#749A30' }} />
                     {m.tip}
                   </div>
                 </div>
@@ -324,9 +324,9 @@ export default function GuideJardinagePage() {
       </section>
 
       {/* FAQ */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-20 border-y border-[#EDEDED]" aria-label="Questions fréquentes jardinage Lyon">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-20 border-y border-[#EDEDED]" aria-label="Questions fréquentes jardinage Lyon">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>
+          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#4A6320' }}>
             Questions fréquentes — Jardin lyonnais
           </h2>
           <div className="space-y-4">
@@ -350,8 +350,8 @@ export default function GuideJardinagePage() {
             ].map(({ q, a }) => (
               <details key={q} className="group rounded-xl border bg-white overflow-hidden" style={{ borderColor: '#EDEDED' }}>
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span className="font-semibold text-sm" style={{ color: '#425D07' }}>{q}</span>
-                  <span className="text-lg font-bold ml-3 flex-shrink-0" style={{ color: '#80BC00' }}>+</span>
+                  <span className="font-semibold text-sm" style={{ color: '#4A6320' }}>{q}</span>
+                  <span className="text-lg font-bold ml-3 flex-shrink-0" style={{ color: '#749A30' }}>+</span>
                 </summary>
                 <div className="px-5 pb-4 text-sm leading-relaxed" style={{ color: '#8C8F94' }}>
                   {a}
@@ -366,10 +366,10 @@ export default function GuideJardinagePage() {
       <section id="newsletter-guide" className="py-20 bg-white" aria-label="Recevoir le guide PDF">
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
           <div className="text-center mb-8">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>
               Guide PDF
             </p>
-            <h2 className="font-display text-2xl font-bold mb-2" style={{ color: '#0B3D2C' }}>
+            <h2 className="font-display text-2xl font-bold mb-2" style={{ color: '#243238' }}>
               Recevez ce guide en PDF
             </h2>
             <p className="text-sm" style={{ color: '#8C8F94' }}>
@@ -381,7 +381,7 @@ export default function GuideJardinagePage() {
             <Link
               href="/devis"
               className="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
-              style={{ color: '#425D07' }}
+              style={{ color: '#4A6320' }}
             >
               Ou demandez directement un devis gratuit <ArrowRight size={13} />
             </Link>

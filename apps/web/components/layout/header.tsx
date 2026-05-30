@@ -10,6 +10,7 @@ import {
 import { MobileMenu } from './mobile-menu'
 import { AccessibilityMenu } from './accessibility-menu'
 import { WeatherWidget } from '@/components/ui/weather-widget'
+import { DigitalContactCard } from '@/components/ui/digital-contact-card'
 
 const navItems = [
   { href: '/services',     label: 'Services',     hasMega: true },
@@ -101,7 +102,7 @@ export function Header() {
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/96 backdrop-blur-md shadow-[0_2px_24px_rgba(11,61,44,0.10)] border-b border-[#E8E8E8]'
+            ? 'bg-white/96 backdrop-blur-md shadow-[0_2px_24px_rgba(36,50,56,0.10)] border-b border-[#E8E8E8]'
             : 'bg-white border-b border-[#EDEDED]'
         }`}
       >
@@ -110,7 +111,7 @@ export function Header() {
           {/* ── Logo ── */}
           <Link
             href="/"
-            className="flex-shrink-0 transition-all duration-200 hover:opacity-85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#80BC00] rounded-sm"
+            className="flex-shrink-0 transition-all duration-200 hover:opacity-85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#749A30] rounded-sm"
             aria-label="LM Espace Vert — Retour à l'accueil"
           >
             <Image
@@ -131,10 +132,10 @@ export function Header() {
                 return (
                   <div key={item.href} onMouseEnter={openMega} onMouseLeave={closeMega}>
                     <button
-                      className={`group relative flex items-center gap-1 px-3.5 py-2 text-sm font-medium tracking-wide transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] focus-visible:rounded-md ${
+                      className={`group relative flex items-center gap-1 px-3.5 py-2 text-sm font-medium tracking-wide transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30] focus-visible:rounded-md ${
                         active || megaOpen
-                          ? 'text-[#425D07] font-semibold'
-                          : 'text-[#2F2F2F] hover:text-[#425D07]'
+                          ? 'text-[#4A6320] font-semibold'
+                          : 'text-[#2F2F2F] hover:text-[#4A6320]'
                       }`}
                       aria-expanded={megaOpen}
                       aria-haspopup="true"
@@ -149,7 +150,7 @@ export function Header() {
                       />
                       {/* Underline indicator */}
                       <span
-                        className={`absolute bottom-0 left-2 right-2 h-[2px] rounded-full bg-[#80BC00] transition-transform duration-200 origin-left ${
+                        className={`absolute bottom-0 left-2 right-2 h-[2px] rounded-full bg-[#749A30] transition-transform duration-200 origin-left ${
                           active || megaOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                         }`}
                         aria-hidden="true"
@@ -162,17 +163,17 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`group relative px-3.5 py-2 text-sm font-medium tracking-wide transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00] focus-visible:rounded-md ${
+                  className={`group relative px-3.5 py-2 text-sm font-medium tracking-wide transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30] focus-visible:rounded-md ${
                     active
-                      ? 'text-[#425D07] font-semibold'
-                      : 'text-[#2F2F2F] hover:text-[#425D07]'
+                      ? 'text-[#4A6320] font-semibold'
+                      : 'text-[#2F2F2F] hover:text-[#4A6320]'
                   }`}
                   aria-current={active ? 'page' : undefined}
                 >
                   {item.label}
                   {/* Underline indicator */}
                   <span
-                    className={`absolute bottom-0 left-2 right-2 h-[2px] rounded-full bg-[#80BC00] transition-transform duration-200 origin-left ${
+                    className={`absolute bottom-0 left-2 right-2 h-[2px] rounded-full bg-[#749A30] transition-transform duration-200 origin-left ${
                       active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                     }`}
                     aria-hidden="true"
@@ -190,14 +191,17 @@ export function Header() {
             {/* Accessibilité */}
             <AccessibilityMenu />
 
+            {/* Carte de contact numérique */}
+            <DigitalContactCard />
+
             {/* Séparateur vertical discret */}
             <span className="hidden sm:block w-px h-5 bg-[#E0E0E0] mx-1" aria-hidden="true" />
 
-            {/* Devis gratuit */}
+            {/* Devis gratuit — CTA principal terracotta */}
             <Link
               href="/devis"
-              className="hidden sm:inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-200 hover:brightness-110 hover:shadow-[0_4px_16px_rgba(128,188,0,0.35)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-              style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: '0 2px 12px rgba(128,188,0,0.25)' }}
+              className="hidden sm:inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide text-white transition-all duration-200 hover:brightness-110 hover:shadow-[0_4px_16px_rgba(158,75,71,0.40)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9E4B47]"
+              style={{ backgroundColor: '#9E4B47', boxShadow: '0 2px 12px rgba(158,75,71,0.28)' }}
             >
               Devis gratuit
             </Link>
@@ -219,7 +223,7 @@ export function Header() {
           >
             {/* Centred panel */}
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 pb-6">
-              <div className="max-w-2xl mx-auto bg-white/98 backdrop-blur-sm shadow-[0_8px_40px_rgba(11,61,44,0.12),0_2px_8px_rgba(0,0,0,0.06)] rounded-2xl border border-[#E8EDE4] p-6 mt-2">
+              <div className="max-w-2xl mx-auto bg-white/98 backdrop-blur-sm shadow-[0_8px_40px_rgba(36,50,56,0.12),0_2px_8px_rgba(0,0,0,0.06)] rounded-2xl border border-[#E8EDE4] p-6 mt-2">
                 {/* 3×2 grid */}
                 <div className="grid grid-cols-3 gap-3">
                   {megaServices.map(({ href, label, desc, photo }) => (
@@ -227,7 +231,7 @@ export function Header() {
                       key={label}
                       href={href}
                       onClick={() => setMegaOpen(false)}
-                      className="group flex flex-col gap-2 rounded-xl p-3 hover:bg-[#F2F8E7] transition-colors duration-150 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                      className="group flex flex-col gap-2 rounded-xl p-3 hover:bg-[#F2F8E7] transition-colors duration-150 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
                     >
                       <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden bg-[#F2F8E7]">
                         <Image
@@ -238,7 +242,7 @@ export function Header() {
                           className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
-                      <span className="text-sm font-semibold text-[#2F2F2F] leading-snug group-hover:text-[#425D07] transition-colors">{label}</span>
+                      <span className="text-sm font-semibold text-[#2F2F2F] leading-snug group-hover:text-[#4A6320] transition-colors">{label}</span>
                       <span className="text-xs text-[#6B6B6B] leading-snug">{desc}</span>
                     </Link>
                   ))}
@@ -249,15 +253,15 @@ export function Header() {
                   <Link
                     href="/services"
                     onClick={() => setMegaOpen(false)}
-                    className="text-sm font-semibold transition-colors hover:text-[#80BC00]"
-                    style={{ color: '#425D07' }}
+                    className="text-sm font-semibold transition-colors hover:text-[#749A30]"
+                    style={{ color: '#4A6320' }}
                   >
                     Voir toutes nos prestations →
                   </Link>
                   <Link
                     href="/processus"
                     onClick={() => setMegaOpen(false)}
-                    className="text-xs font-medium transition-colors hover:text-[#425D07]"
+                    className="text-xs font-medium transition-colors hover:text-[#4A6320]"
                     style={{ color: '#5C606B' }}
                   >
                     Notre processus

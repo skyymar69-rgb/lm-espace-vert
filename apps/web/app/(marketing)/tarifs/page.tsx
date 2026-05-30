@@ -174,7 +174,7 @@ export default function TarifsPage() {
       <nav aria-label="Fil d'Ariane" className="bg-white border-b border-[#EDEDED]">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-3">
           <ol className="flex items-center gap-2 text-xs" style={{ color: '#8C8F94' }}>
-            <li><Link href="/" className="hover:underline" style={{ color: '#425D07' }}>Accueil</Link></li>
+            <li><Link href="/" className="hover:underline" style={{ color: '#4A6320' }}>Accueil</Link></li>
             <li aria-hidden="true">/</li>
             <li style={{ color: '#2F2F2F' }}>Tarifs</li>
           </ol>
@@ -182,13 +182,13 @@ export default function TarifsPage() {
       </nav>
 
       {/* Hero */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-14 lg:py-20 border-b border-[#EDEDED]">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-14 lg:py-20 border-b border-[#EDEDED]">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>
               Prix indicatifs
             </p>
-            <h1 className="font-display text-4xl sm:text-5xl font-bold mb-4 leading-tight" style={{ color: '#0B3D2C' }}>
+            <h1 className="font-display text-4xl sm:text-5xl font-bold mb-4 leading-tight" style={{ color: '#243238' }}>
               Tarifs paysagiste<br />Lyon Nord
             </h1>
             <p className="text-lg mb-6 leading-relaxed" style={{ color: '#8C8F94' }}>
@@ -197,14 +197,14 @@ export default function TarifsPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/devis"
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-                style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+                style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
               >
                 Demander un devis gratuit <ArrowRight size={14} />
               </Link>
               <Link
                 href="#estimateur"
-                className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold hover:border-[#80BC00] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold hover:border-[#749A30] transition-colors"
                 style={{ borderColor: '#EDEDED', color: '#2F2F2F' }}
               >
                 Estimer mon budget
@@ -225,7 +225,7 @@ export default function TarifsPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-2xl">{service.emoji}</span>
                   <div>
-                    <h2 id={`tarif-${service.id}`} className="font-display text-xl font-bold" style={{ color: '#0B3D2C' }}>
+                    <h2 id={`tarif-${service.id}`} className="font-display text-xl font-bold" style={{ color: '#243238' }}>
                       {service.title}
                     </h2>
                     <p className="text-sm" style={{ color: '#8C8F94' }}>{service.description}</p>
@@ -235,7 +235,7 @@ export default function TarifsPage() {
                 <div className="rounded-2xl border overflow-hidden" style={{ borderColor: '#EDEDED' }}>
                   <table className="w-full text-sm">
                     <thead>
-                      <tr style={{ backgroundColor: '#F7F5F0' }}>
+                      <tr style={{ backgroundColor: '#F4F1E9' }}>
                         {service.headers.map((h) => (
                           <th
                             key={h}
@@ -259,13 +259,13 @@ export default function TarifsPage() {
                           </td>
                           {'hebdo' in row ? (
                             <>
-                              <td className="px-4 py-3" style={{ color: '#425D07' }}>{row.hebdo}</td>
-                              <td className="px-4 py-3" style={{ color: '#425D07' }}>{row.mensuel}</td>
-                              <td className="px-4 py-3" style={{ color: '#425D07' }}>{row.ponctuel}</td>
+                              <td className="px-4 py-3" style={{ color: '#4A6320' }}>{row.hebdo}</td>
+                              <td className="px-4 py-3" style={{ color: '#4A6320' }}>{row.mensuel}</td>
+                              <td className="px-4 py-3" style={{ color: '#4A6320' }}>{row.ponctuel}</td>
                             </>
                           ) : 'tarif' in row ? (
                             <>
-                              <td className="px-4 py-3 font-semibold" style={{ color: '#425D07' }}>{row.tarif}</td>
+                              <td className="px-4 py-3 font-semibold" style={{ color: '#4A6320' }}>{row.tarif}</td>
                               <td className="px-4 py-3 text-xs" style={{ color: '#8C8F94' }}>
                                 {'detail' in row ? row.detail : 'includes' in row ? row.includes : ''}
                               </td>
@@ -284,7 +284,7 @@ export default function TarifsPage() {
                   <Link
                     href={service.href}
                     className="text-xs font-semibold hover:underline flex items-center gap-1"
-                    style={{ color: '#425D07' }}
+                    style={{ color: '#4A6320' }}
                   >
                     En savoir plus <ArrowRight size={11} />
                   </Link>
@@ -295,14 +295,14 @@ export default function TarifsPage() {
             {/* Note légale */}
             <div
               className="rounded-xl p-4 border text-sm leading-relaxed"
-              style={{ backgroundColor: '#F7F5F0', borderColor: '#EDEDED', color: '#8C8F94' }}
+              style={{ backgroundColor: '#F4F1E9', borderColor: '#EDEDED', color: '#8C8F94' }}
             >
               <strong style={{ color: '#2F2F2F' }}>Prix indicatifs TTC</strong>, valables dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or. Ces fourchettes sont données à titre indicatif et peuvent varier selon la complexité du chantier, l&apos;accessibilité du terrain et les matériaux choisis. <strong style={{ color: '#2F2F2F' }}>Devis gratuit sur site, sans engagement.</strong>
             </div>
 
             {/* FAQ */}
             <section aria-label="Questions fréquentes sur les prix">
-              <h2 className="font-display text-2xl font-bold mb-6" style={{ color: '#0B3D2C' }}>
+              <h2 className="font-display text-3xl font-bold mb-6" style={{ color: '#243238' }}>
                 Questions fréquentes sur nos prix
               </h2>
               <div className="space-y-3">
@@ -326,8 +326,8 @@ export default function TarifsPage() {
                 ].map(({ q, a }) => (
                   <details key={q} className="group rounded-xl border bg-white overflow-hidden" style={{ borderColor: '#EDEDED' }}>
                     <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                      <span className="font-semibold text-sm" style={{ color: '#425D07' }}>{q}</span>
-                      <span className="text-lg font-bold ml-3 flex-shrink-0" style={{ color: '#80BC00' }}>+</span>
+                      <span className="font-semibold text-sm" style={{ color: '#4A6320' }}>{q}</span>
+                      <span className="text-lg font-bold ml-3 flex-shrink-0" style={{ color: '#749A30' }}>+</span>
                     </summary>
                     <div className="px-5 pb-4 text-sm leading-relaxed" style={{ color: '#8C8F94' }}>{a}</div>
                   </details>
@@ -338,9 +338,9 @@ export default function TarifsPage() {
             {/* CTA finale */}
             <div
               className="rounded-2xl p-8 text-center"
-              style={{ backgroundColor: '#0B3D2C' }}
+              style={{ backgroundColor: '#243238' }}
             >
-              <h2 className="font-display text-2xl font-bold text-white mb-3">
+              <h2 className="font-display text-3xl font-bold text-white mb-3">
                 Prêt à démarrer votre projet ?
               </h2>
               <p className="text-white/70 text-sm mb-6">
@@ -349,8 +349,8 @@ export default function TarifsPage() {
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link
                   href="/devis"
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-                  style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+                  style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
                 >
                   Demander un devis gratuit <ArrowRight size={14} />
                 </Link>
@@ -374,9 +374,9 @@ export default function TarifsPage() {
             {/* Garanties */}
             <div
               className="rounded-2xl border p-5"
-              style={{ backgroundColor: '#F7F5F0', borderColor: '#EDEDED' }}
+              style={{ backgroundColor: '#F4F1E9', borderColor: '#EDEDED' }}
             >
-              <h3 className="font-display font-bold text-sm mb-4" style={{ color: '#0B3D2C' }}>
+              <h3 className="font-display font-bold text-sm mb-4" style={{ color: '#243238' }}>
                 Nos garanties
               </h3>
               <ul className="space-y-2.5">
@@ -388,7 +388,7 @@ export default function TarifsPage() {
                   'Satisfaction garantie ou intervention corrective',
                 ].map((g) => (
                   <li key={g} className="flex items-start gap-2 text-xs" style={{ color: '#2F2F2F' }}>
-                    <CheckCircle size={13} className="flex-shrink-0 mt-0.5" style={{ color: '#80BC00' }} />
+                    <CheckCircle size={13} className="flex-shrink-0 mt-0.5" style={{ color: '#749A30' }} />
                     {g}
                   </li>
                 ))}
@@ -405,7 +405,7 @@ export default function TarifsPage() {
               className="rounded-2xl border p-5"
               style={{ backgroundColor: '#ffffff', borderColor: '#EDEDED' }}
             >
-              <h3 className="font-display font-bold text-sm mb-3" style={{ color: '#0B3D2C' }}>
+              <h3 className="font-display font-bold text-sm mb-3" style={{ color: '#243238' }}>
                 Nos services
               </h3>
               <ul className="space-y-2">
@@ -421,7 +421,7 @@ export default function TarifsPage() {
                     <Link
                       href={s.href}
                       className="flex items-center gap-1.5 text-xs font-medium hover:underline"
-                      style={{ color: '#425D07' }}
+                      style={{ color: '#4A6320' }}
                     >
                       <ArrowRight size={11} /> {s.label}
                     </Link>

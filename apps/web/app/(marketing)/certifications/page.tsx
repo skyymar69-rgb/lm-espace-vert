@@ -24,10 +24,10 @@ const certifications = [
     icon: ShieldCheck,
     title: 'RC Professionnelle',
     subtitle: 'Responsabilité Civile Pro',
-    color: '#0B3D2C',
+    color: '#243238',
     badge: 'En vigueur',
-    badgeColor: 'rgba(11,61,44,0.1)',
-    badgeText: '#0B3D2C',
+    badgeColor: 'rgba(36,50,56,0.1)',
+    badgeText: '#243238',
     description:
       "LM Espace Vert dispose d'une assurance responsabilité civile professionnelle en vigueur. En cas de dommage accidentel sur votre propriété durant nos interventions, vous êtes entièrement protégé. Aucun frais à votre charge.",
     points: [
@@ -40,10 +40,10 @@ const certifications = [
     icon: Award,
     title: 'Agrément Service à la Personne',
     subtitle: "SAP — Crédit d'impôt 50%",
-    color: '#425D07',
+    color: '#4A6320',
     badge: 'Agréé SAP',
-    badgeColor: 'rgba(128,188,0,0.12)',
-    badgeText: '#425D07',
+    badgeColor: 'rgba(116,154,48,0.12)',
+    badgeText: '#4A6320',
     description:
       "LM Espace Vert est agréé Service à la Personne (SAP). Conformément à l'article 199 sexdecies du Code Général des Impôts, vous bénéficiez d'un crédit d'impôt de 50% sur vos dépenses de jardinage. L'avance immédiate est disponible : vous ne payez que la moitié dès la facture.",
     points: [
@@ -57,10 +57,10 @@ const certifications = [
     icon: Leaf,
     title: 'CERTIPHYTO',
     subtitle: 'Certificat phytosanitaire',
-    color: '#80BC00',
+    color: '#749A30',
     badge: 'Certifié',
-    badgeColor: 'rgba(128,188,0,0.12)',
-    badgeText: '#425D07',
+    badgeColor: 'rgba(116,154,48,0.12)',
+    badgeText: '#4A6320',
     description:
       "Le certificat CERTIPHYTO atteste de la compétence de Léo dans l'utilisation raisonnée et conforme des produits phytosanitaires. Cette certification est obligatoire pour tout professionnel du paysage utilisant des produits de traitement. Elle garantit des pratiques respectueuses de l'environnement.",
     points: [
@@ -95,7 +95,7 @@ export default function CertificationsPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
@@ -105,7 +105,7 @@ export default function CertificationsPage() {
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               GARANTIES &amp; LABELS
             </p>
             <h1
@@ -113,7 +113,7 @@ export default function CertificationsPage() {
               style={{ color: '#2F2F2F' }}
             >
               Certifications &amp;{' '}
-              <span style={{ color: '#425D07' }}>Agréments</span>
+              <span style={{ color: '#4A6320' }}>Agréments</span>
             </h1>
             <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
               RC Pro, agrément SAP, CERTIPHYTO, partenaire Husqvarna — des garanties concrètes pour votre tranquillité d&apos;esprit.
@@ -160,7 +160,7 @@ export default function CertificationsPage() {
                   <ul className="space-y-2">
                     {cert.points.map((point) => (
                       <li key={point} className="flex items-start gap-2 text-sm">
-                        <CheckCircle size={15} className="flex-shrink-0 mt-0.5" style={{ color: '#80BC00' }} aria-hidden="true" />
+                        <CheckCircle size={15} className="flex-shrink-0 mt-0.5" style={{ color: '#749A30' }} aria-hidden="true" />
                         <span style={{ color: '#2F2F2F' }}>{point}</span>
                       </li>
                     ))}
@@ -173,13 +173,13 @@ export default function CertificationsPage() {
       </section>
 
       {/* Simulateur SAP */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               AVANTAGE FISCAL
             </p>
-            <h2 className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
+            <h2 className="font-display text-3xl font-bold" style={{ color: '#4A6320' }}>
               Crédit d&apos;impôt SAP — 50%
             </h2>
             <p className="mt-3 text-base max-w-xl mx-auto" style={{ color: '#8C8F94' }}>
@@ -192,9 +192,9 @@ export default function CertificationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="py-16" style={{ backgroundColor: '#243238' }}>
         <div className="container mx-auto max-w-2xl px-4 sm:px-6 text-center">
-          <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#ffffff' }}>
+          <h2 className="font-display text-3xl font-bold mb-3" style={{ color: '#ffffff' }}>
             Profitez du crédit d&apos;impôt dès maintenant
           </h2>
           <p className="mb-8" style={{ color: '#bbf7d0' }}>
@@ -203,8 +203,8 @@ export default function CertificationsPage() {
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+              className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
               Demander un devis gratuit
               <ArrowRight size={15} aria-hidden="true" />

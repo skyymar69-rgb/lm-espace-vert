@@ -92,12 +92,12 @@ export function ExitIntentPopup() {
         {/* Gradient header */}
         <div
           className="relative px-8 pt-8 pb-6"
-          style={{ background: 'linear-gradient(135deg, #0B3D2C 0%, #1a5c3a 60%, #425D07 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #243238 0%, #1a5c3a 60%, #4A6320 100%)' }}
         >
           {/* Decorative circle */}
           <div
             className="absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-20 pointer-events-none"
-            style={{ background: 'radial-gradient(circle, #80BC00, transparent)' }}
+            style={{ background: 'radial-gradient(circle, #749A30, transparent)' }}
             aria-hidden="true"
           />
 
@@ -114,7 +114,7 @@ export function ExitIntentPopup() {
           {/* Badge */}
           <span
             className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-3"
-            style={{ backgroundColor: 'rgba(128,188,0,0.25)', color: '#80BC00' }}
+            style={{ backgroundColor: 'rgba(116,154,48,0.25)', color: '#749A30' }}
           >
             🌿 Offre exclusive
           </span>
@@ -138,7 +138,7 @@ export function ExitIntentPopup() {
             {status === 'success' ? (
               <div
                 className="rounded-xl p-4 text-center"
-                style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
+                style={{ backgroundColor: 'rgba(116,154,48,0.1)', color: '#4A6320' }}
               >
                 <p className="font-semibold text-sm">✅ Parfait ! Vérifiez votre boîte mail.</p>
                 <p className="text-xs mt-1" style={{ color: '#8C8F94' }}>Vous recevrez votre estimation sous peu.</p>
@@ -156,14 +156,14 @@ export function ExitIntentPopup() {
                     borderColor: '#EDEDED',
                     color: '#2F2F2F',
                   }}
-                  onFocus={(e) => { e.currentTarget.style.borderColor = '#80BC00'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(128,188,0,0.15)' }}
+                  onFocus={(e) => { e.currentTarget.style.borderColor = '#749A30'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(116,154,48,0.15)' }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = '#EDEDED'; e.currentTarget.style.boxShadow = 'none' }}
                 />
                 <button
                   type="submit"
                   disabled={status === 'loading'}
                   className="w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-all duration-200 hover:scale-[1.02] hover:shadow-md disabled:opacity-70"
-                  style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: '0 4px 14px rgba(128,188,0,0.35)' }}
+                  style={{ backgroundColor: '#749A30', color: '#ffffff', boxShadow: '0 4px 14px rgba(116,154,48,0.35)' }}
                 >
                   {status === 'loading' ? (
                     <Loader2 size={16} className="animate-spin" />

@@ -63,11 +63,11 @@ export default function DevisPage() {
       <JsonLd data={quoteActionSchema} />
 
       {/* Breadcrumb */}
-      <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
+      <nav aria-label="Fil d'Ariane" className="border-b border-[#EDEDED]" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 py-3 sm:px-6">
           <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
             <li>
-              <Link href="/" className="hover:text-[#2F2F2F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#425D07]">
+              <Link href="/" className="hover:text-[#2F2F2F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#4A6320]">
                 Accueil
               </Link>
             </li>
@@ -78,19 +78,19 @@ export default function DevisPage() {
       </nav>
 
       {/* Hero */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16 relative overflow-hidden">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16 relative overflow-hidden">
         {/* Decorative background */}
         <div
           className="absolute top-0 right-0 w-96 h-96 -translate-y-1/2 translate-x-1/3 rounded-full opacity-[0.07] pointer-events-none"
-          style={{ background: 'radial-gradient(circle, #80BC00, transparent)' }}
+          style={{ background: 'radial-gradient(circle, #749A30, transparent)' }}
           aria-hidden="true"
         />
         <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-4 border" style={{ backgroundColor: 'rgba(128,188,0,0.10)', borderColor: 'rgba(128,188,0,0.3)', color: '#425D07' }}>
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-4 border" style={{ backgroundColor: 'rgba(116,154,48,0.10)', borderColor: 'rgba(116,154,48,0.3)', color: '#4A6320' }}>
             <CheckCircle size={13} aria-hidden="true" />
             Devis 100% gratuit &amp; sans engagement
           </div>
-          <h1 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold" style={{ color: '#425D07' }}>
+          <h1 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold" style={{ color: '#4A6320' }}>
             Votre devis gratuit en 3 étapes
           </h1>
           <p className="mt-4 text-lg max-w-xl mx-auto leading-relaxed" style={{ color: '#8C8F94' }}>
@@ -101,23 +101,23 @@ export default function DevisPage() {
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
-              style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+              style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
             >
               <CheckCircle size={15} aria-hidden="true" />
               Réponse sous 24h
             </div>
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
-              style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+              style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
             >
               <Shield size={15} aria-hidden="true" />
               RC Pro certifié
             </div>
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
-              style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+              style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
             >
-              <Star size={15} fill="#425D07" aria-hidden="true" />
+              <Star size={15} fill="#4A6320" aria-hidden="true" />
               5.0 · 28 avis Google
             </div>
           </div>
@@ -131,8 +131,8 @@ export default function DevisPage() {
           <div className="mt-6">
             <a
               href="tel:+33672587353"
-              className="inline-flex items-center gap-3 rounded-2xl px-6 py-4 text-white font-bold text-lg shadow-md hover:scale-[1.02] hover:shadow-lg transition-all duration-200"
-              style={{ backgroundColor: '#425D07', boxShadow: '0 6px 20px rgba(66,93,7,0.3)' }}
+              className="inline-flex items-center gap-3 rounded-2xl px-6 py-4 text-white font-bold text-lg shadow-md hover:bg-[#7E3A37] transition-colors"
+              style={{ backgroundColor: '#9E4B47', boxShadow: '0 6px 20px rgba(158,75,71,0.35)' }}
             >
               <Phone size={22} aria-hidden="true" />
               06 72 58 73 53
@@ -150,8 +150,8 @@ export default function DevisPage() {
             {/* Left — Form area */}
             <div>
               {/* Why request a quote — 3 advantages BEFORE the form */}
-              <div className="mb-8 rounded-2xl border border-[#EDEDED] p-6" style={{ backgroundColor: 'rgba(128,188,0,0.05)' }}>
-                <h2 className="font-semibold text-sm mb-4" style={{ color: '#425D07' }}>
+              <div className="mb-8 rounded-2xl border border-[#EDEDED] p-6" style={{ backgroundColor: 'rgba(116,154,48,0.05)' }}>
+                <h2 className="font-semibold text-sm mb-4" style={{ color: '#4A6320' }}>
                   Pourquoi demander un devis&nbsp;?
                 </h2>
                 <ul className="space-y-2.5">
@@ -161,7 +161,7 @@ export default function DevisPage() {
                     'Sans engagement de votre part',
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm" style={{ color: '#2F2F2F' }}>
-                      <CheckCircle size={16} style={{ color: '#80BC00', flexShrink: 0 }} aria-hidden="true" />
+                      <CheckCircle size={16} style={{ color: '#749A30', flexShrink: 0 }} aria-hidden="true" />
                       {item}
                     </li>
                   ))}
@@ -182,17 +182,17 @@ export default function DevisPage() {
               {/* Social proof below form */}
               <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs" style={{ color: '#8C8F94' }}>
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  <CheckCircle size={12} style={{ color: '#749A30' }} aria-hidden="true" />
                   Réponse garantie sous 24h
                 </span>
                 <span aria-hidden="true">·</span>
                 <span className="flex items-center gap-1.5">
-                  <Shield size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  <Shield size={12} style={{ color: '#749A30' }} aria-hidden="true" />
                   Données sécurisées
                 </span>
                 <span aria-hidden="true">·</span>
                 <span className="flex items-center gap-1.5">
-                  <Gift size={12} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  <Gift size={12} style={{ color: '#749A30' }} aria-hidden="true" />
                   Sans engagement
                 </span>
               </div>
@@ -206,7 +206,7 @@ export default function DevisPage() {
                 <div className="flex items-center gap-4 mb-4">
                   <div
                     className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden border-2"
-                    style={{ borderColor: '#80BC00' }}
+                    style={{ borderColor: '#749A30' }}
                   >
                     <Image
                       src="/images/leo-portrait.webp"
@@ -253,8 +253,8 @@ export default function DevisPage() {
               </div>
 
               {/* Guarantees */}
-              <div className="rounded-2xl border border-[#EDEDED] p-6" style={{ backgroundColor: '#F7F5F0' }}>
-                <p className="font-semibold text-sm mb-4" style={{ color: '#425D07' }}>Nos garanties</p>
+              <div className="rounded-2xl border border-[#EDEDED] p-6" style={{ backgroundColor: '#F4F1E9' }}>
+                <p className="font-semibold text-sm mb-4" style={{ color: '#4A6320' }}>Nos garanties</p>
                 <ul role="list" className="space-y-3">
                   {[
                     { icon: CheckCircle, text: 'Devis gratuit et sans engagement' },
@@ -263,8 +263,8 @@ export default function DevisPage() {
                     { icon: Shield, text: 'Professionnel certifié RC Pro' },
                   ].map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-start gap-3">
-                      <div className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.1)' }}>
-                        <Icon size={15} style={{ color: '#80BC00' }} aria-hidden="true" />
+                      <div className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.1)' }}>
+                        <Icon size={15} style={{ color: '#749A30' }} aria-hidden="true" />
                       </div>
                       <span className="text-sm leading-relaxed pt-1.5" style={{ color: '#2F2F2F' }}>{text}</span>
                     </li>
@@ -273,7 +273,7 @@ export default function DevisPage() {
               </div>
 
               {/* Contact direct */}
-              <div className="rounded-2xl p-5 border border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
+              <div className="rounded-2xl p-5 border border-[#EDEDED]" style={{ backgroundColor: '#F4F1E9' }}>
                 <p className="font-semibold text-sm mb-1" style={{ color: '#2F2F2F' }}>Contact direct</p>
                 <p className="text-xs mb-4" style={{ color: '#8C8F94' }}>
                   Préférez nous appeler ? Lun–Ven 8h–18h.
@@ -282,9 +282,9 @@ export default function DevisPage() {
                   <a
                     href="tel:+33672587353"
                     className="flex items-center gap-3 text-sm font-bold hover:underline"
-                    style={{ color: '#425D07' }}
+                    style={{ color: '#4A6320' }}
                   >
-                    <Phone size={16} style={{ color: '#425D07' }} aria-hidden="true" />
+                    <Phone size={16} style={{ color: '#4A6320' }} aria-hidden="true" />
                     06 72 58 73 53
                   </a>
                   <a

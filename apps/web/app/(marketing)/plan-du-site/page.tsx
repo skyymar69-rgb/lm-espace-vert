@@ -81,9 +81,9 @@ export default function PlanDuSitePage() {
       </nav>
 
       {/* Hero */}
-      <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-14" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <h1 className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+          <h1 className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#4A6320' }}>
             Plan du site
           </h1>
           <p className="mt-3 text-[#8C8F94] max-w-xl">
@@ -100,17 +100,17 @@ export default function PlanDuSitePage() {
             {/* Pages principales */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <ChevronRight size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <ChevronRight size={14} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </div>
-                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Pages principales</h2>
+                <h2 className="font-display font-bold text-base" style={{ color: '#4A6320' }}>Pages principales</h2>
               </div>
               <ul className="space-y-2">
                 {mainPages.map((page) => (
                   <li key={page.href}>
                     <Link
                       href={page.href}
-                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     >
                       <ChevronRight size={11} aria-hidden="true" />
                       {page.label}
@@ -123,17 +123,17 @@ export default function PlanDuSitePage() {
             {/* Services */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <Wrench size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <Wrench size={14} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </div>
-                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Nos services</h2>
+                <h2 className="font-display font-bold text-base" style={{ color: '#4A6320' }}>Nos services</h2>
               </div>
               <ul className="space-y-2">
                 {servicePages.map((page) => (
                   <li key={page.href}>
                     <Link
                       href={page.href}
-                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     >
                       <ChevronRight size={11} aria-hidden="true" />
                       {page.label}
@@ -146,17 +146,17 @@ export default function PlanDuSitePage() {
             {/* Zones d'intervention */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <MapPin size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <MapPin size={14} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </div>
-                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Zones d&apos;intervention</h2>
+                <h2 className="font-display font-bold text-base" style={{ color: '#4A6320' }}>Zones d&apos;intervention</h2>
               </div>
               <ul className="space-y-2">
                 {zonePages.map((page) => (
                   <li key={page.href}>
                     <Link
                       href={page.href}
-                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     >
                       <ChevronRight size={11} aria-hidden="true" />
                       {page.label}
@@ -169,17 +169,17 @@ export default function PlanDuSitePage() {
             {/* Blog — catégories */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <BookOpen size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <BookOpen size={14} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </div>
-                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Blog — catégories</h2>
+                <h2 className="font-display font-bold text-base" style={{ color: '#4A6320' }}>Blog — catégories</h2>
               </div>
               <ul className="space-y-2">
                 {blogCategoryPages.map((page) => (
                   <li key={page.href}>
                     <Link
                       href={page.href}
-                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     >
                       <ChevronRight size={11} aria-hidden="true" />
                       {page.label}
@@ -192,17 +192,17 @@ export default function PlanDuSitePage() {
             {/* Blog — articles récents */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <BookOpen size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <BookOpen size={14} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </div>
-                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Blog — articles récents</h2>
+                <h2 className="font-display font-bold text-base" style={{ color: '#4A6320' }}>Blog — articles récents</h2>
               </div>
               <ul className="space-y-2">
                 {recentArticles.map((article) => (
                   <li key={article.slug}>
                     <Link
                       href={`/blog/${article.slug}`}
-                      className="text-sm flex items-start gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                      className="text-sm flex items-start gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     >
                       <ChevronRight size={11} className="mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span className="line-clamp-2">{article.title}</span>
@@ -213,7 +213,7 @@ export default function PlanDuSitePage() {
                   <Link
                     href="/blog"
                     className="text-sm font-semibold flex items-center gap-1.5 mt-1 transition-colors"
-                    style={{ color: '#425D07' }}
+                    style={{ color: '#4A6320' }}
                   >
                     <ChevronRight size={11} aria-hidden="true" />
                     Voir tous les articles ({articles.length})
@@ -225,17 +225,17 @@ export default function PlanDuSitePage() {
             {/* Légal */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <FileText size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <FileText size={14} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </div>
-                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Pages légales</h2>
+                <h2 className="font-display font-bold text-base" style={{ color: '#4A6320' }}>Pages légales</h2>
               </div>
               <ul className="space-y-2">
                 {legalPages.map((page) => (
                   <li key={page.href}>
                     <Link
                       href={page.href}
-                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                      className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     >
                       <ChevronRight size={11} aria-hidden="true" />
                       {page.label}
@@ -248,16 +248,16 @@ export default function PlanDuSitePage() {
             {/* Flux RSS */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <Rss size={14} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <Rss size={14} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </div>
-                <h2 className="font-display font-bold text-base" style={{ color: '#425D07' }}>Flux &amp; Syndication</h2>
+                <h2 className="font-display font-bold text-base" style={{ color: '#4A6320' }}>Flux &amp; Syndication</h2>
               </div>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="/rss.xml"
-                    className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                    className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     target="_blank"
                     rel="noopener"
                   >
@@ -268,7 +268,7 @@ export default function PlanDuSitePage() {
                 <li>
                   <Link
                     href="/sitemap.xml"
-                    className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#425D07] transition-colors py-0.5"
+                    className="text-sm flex items-center gap-1.5 text-[#8C8F94] hover:text-[#4A6320] transition-colors py-0.5"
                     target="_blank"
                     rel="noopener"
                   >

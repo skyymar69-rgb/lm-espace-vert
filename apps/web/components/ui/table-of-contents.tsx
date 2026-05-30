@@ -57,7 +57,7 @@ export function TableOfContents({ contentId }: Props) {
             <a
               href={`#${h.id}`}
               className={`toc${h.level === 3 ? ' toc-h3' : ''}${active === h.id ? ' font-semibold' : ''}`}
-              style={active === h.id ? { color: '#425D07' } : undefined}
+              style={active === h.id ? { color: '#4A6320' } : undefined}
             >
               {h.text}
             </a>

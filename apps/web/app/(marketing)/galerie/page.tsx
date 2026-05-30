@@ -37,7 +37,7 @@ export default function GaleriePage() {
       {/* ── HERO ── */}
       <section
         style={{
-          background: 'linear-gradient(135deg, #0B3D2C 0%, #1A5C3A 60%, #425D07 100%)',
+          background: 'linear-gradient(135deg, #243238 0%, #2E4138 60%, #4A6320 100%)',
           position: 'relative',
           overflow: 'hidden',
         }}
@@ -50,7 +50,7 @@ export default function GaleriePage() {
             position: 'absolute',
             inset: 0,
             backgroundImage:
-              'radial-gradient(circle at 20% 50%, rgba(128,188,0,0.12) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(128,188,0,0.08) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(116,154,48,0.12) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(116,154,48,0.08) 0%, transparent 50%)',
             pointerEvents: 'none',
           }}
           aria-hidden="true"
@@ -79,7 +79,7 @@ export default function GaleriePage() {
               </li>
               <li aria-hidden="true">/</li>
               <li>
-                <span aria-current="page" style={{ color: '#80BC00' }}>
+                <span aria-current="page" style={{ color: '#749A30' }}>
                   Galerie
                 </span>
               </li>
@@ -89,7 +89,7 @@ export default function GaleriePage() {
           {/* Eyebrow */}
           <p
             style={{
-              color: '#80BC00',
+              color: '#9E4B47',
               fontSize: '0.7rem',
               fontWeight: 700,
               letterSpacing: '0.15em',
@@ -106,7 +106,7 @@ export default function GaleriePage() {
                 display: 'inline-block',
                 width: '2rem',
                 height: '1px',
-                backgroundColor: '#80BC00',
+                backgroundColor: '#9E4B47',
               }}
             />
             Paysagiste Lyon — Nord-Ouest
@@ -115,7 +115,7 @@ export default function GaleriePage() {
                 display: 'inline-block',
                 width: '2rem',
                 height: '1px',
-                backgroundColor: '#80BC00',
+                backgroundColor: '#9E4B47',
               }}
             />
           </p>
@@ -124,7 +124,7 @@ export default function GaleriePage() {
           <h1
             className="font-display"
             style={{
-              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(2.5rem, 6vw, 4rem)',
               fontWeight: 800,
               color: '#ffffff',
               lineHeight: 1.1,
@@ -134,13 +134,13 @@ export default function GaleriePage() {
           >
             Galerie Photos —
             <br />
-            <span style={{ color: '#80BC00' }}>Nos Réalisations</span>
+            <span style={{ color: '#749A30' }}>Nos Réalisations</span>
           </h1>
 
           <p
             style={{
-              color: 'rgba(255,255,255,0.75)',
-              fontSize: '1.1rem',
+              color: 'rgba(255,255,255,0.80)',
+              fontSize: '1.0625rem',
               maxWidth: '38rem',
               margin: '0 auto 2rem',
               lineHeight: 1.6,
@@ -164,11 +164,11 @@ export default function GaleriePage() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                backgroundColor: 'rgba(128,188,0,0.15)',
-                border: '1px solid rgba(128,188,0,0.4)',
+                backgroundColor: 'rgba(116,154,48,0.15)',
+                border: '1px solid rgba(116,154,48,0.4)',
                 borderRadius: '9999px',
                 padding: '0.5rem 1.25rem',
-                color: '#80BC00',
+                color: '#749A30',
                 fontSize: '0.875rem',
                 fontWeight: 700,
               }}
@@ -198,10 +198,10 @@ export default function GaleriePage() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                backgroundColor: '#80BC00',
+                backgroundColor: '#9E4B47',
                 borderRadius: '9999px',
                 padding: '0.5rem 1.25rem',
-                color: '#0B3D2C',
+                color: '#ffffff',
                 fontSize: '0.875rem',
                 fontWeight: 700,
                 textDecoration: 'none',

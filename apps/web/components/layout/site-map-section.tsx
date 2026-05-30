@@ -84,12 +84,12 @@ const subLinkColumns = [
 
 export function SiteMapSection() {
   return (
-    <section style={{ backgroundColor: '#F7F5F0' }} className="py-16 border-t border-[#EDEDED]" aria-label="Plan du site">
+    <section style={{ backgroundColor: '#F4F1E9' }} className="py-16 border-t border-[#EDEDED]" aria-label="Plan du site">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Titre */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold font-display tracking-tight" style={{ color: '#0B3D2C' }}>
+          <h2 className="text-2xl font-bold font-display tracking-tight" style={{ color: '#243238' }}>
             Plan du site
           </h2>
           <p className="text-sm mt-1" style={{ color: '#5C606B' }}>
@@ -103,7 +103,7 @@ export function SiteMapSection() {
             <Link
               key={page.href}
               href={page.href}
-              className="group relative overflow-hidden rounded-2xl block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+              className="group relative overflow-hidden rounded-2xl block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
               style={{ height: '160px' }}
             >
               <Image
@@ -117,13 +117,13 @@ export function SiteMapSection() {
               <div
                 className="absolute inset-0 transition-opacity duration-300"
                 style={{
-                  background: 'linear-gradient(to top, rgba(11,61,44,0.75) 0%, rgba(11,61,44,0.15) 60%, transparent 100%)',
+                  background: 'linear-gradient(to top, rgba(36,50,56,0.75) 0%, rgba(36,50,56,0.15) 60%, transparent 100%)',
                 }}
               />
               {/* Hover overlay */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}
+                style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}
                 aria-hidden="true"
               />
               {/* Titre de la page */}
@@ -143,7 +143,7 @@ export function SiteMapSection() {
             <div key={col.title}>
               <p
                 className="text-[11px] font-bold uppercase tracking-[0.12em] mb-4 pb-2 border-b"
-                style={{ color: '#425D07', borderColor: 'rgba(128,188,0,0.3)' }}
+                style={{ color: '#4A6320', borderColor: 'rgba(116,154,48,0.3)' }}
               >
                 {col.title}
               </p>

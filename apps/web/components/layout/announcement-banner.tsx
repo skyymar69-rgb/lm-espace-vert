@@ -31,8 +31,8 @@ export function AnnouncementBanner({ message, href, cta, dismissKey = 'banner-v1
         {href && cta && (
           <Link
             href={href}
-            className="shrink-0 rounded-full px-3.5 py-0.5 text-[11px] font-bold text-white tracking-wide transition-all hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-            style={{ backgroundColor: 'rgba(128,188,0,0.30)', border: '1px solid rgba(128,188,0,0.50)' }}
+            className="shrink-0 rounded-full px-3.5 py-1 text-[11px] font-bold text-white tracking-wide min-h-[44px] inline-flex items-center transition-all hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            style={{ backgroundColor: '#9E4B47', boxShadow: '0 1px 8px rgba(158,75,71,0.45)' }}
           >
             {cta} →
           </Link>
@@ -40,7 +40,7 @@ export function AnnouncementBanner({ message, href, cta, dismissKey = 'banner-v1
       </div>
       <button
         onClick={dismiss}
-        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 hover:text-white/90 transition-colors duration-150 p-1.5 rounded-full hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 hover:text-white/90 transition-colors duration-150 p-1.5 rounded-full hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
         aria-label="Fermer l'annonce"
       >
         <X size={13} aria-hidden="true" />

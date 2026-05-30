@@ -23,14 +23,14 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section aria-labelledby="testimonials-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
+    <section aria-labelledby="testimonials-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F4F1E9' }}>
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#425D07' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
             AVIS CLIENTS
           </p>
-          <h2 id="testimonials-heading" className="font-display text-3xl font-bold sm:text-4xl mb-4" style={{ color: '#425D07' }}>
+          <h2 id="testimonials-heading" className="font-display text-3xl font-bold sm:text-4xl mb-4" style={{ color: '#4A6320' }}>
             Ce que disent nos clients
           </h2>
           <div className="flex justify-center">
@@ -68,7 +68,7 @@ export function TestimonialsSection() {
                 </div>
                 <span
                   className="flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold"
-                  style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
+                  style={{ backgroundColor: 'rgba(116,154,48,0.1)', color: '#4A6320' }}
                 >
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

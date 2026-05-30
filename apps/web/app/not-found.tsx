@@ -27,7 +27,7 @@ export default function NotFound() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(11,61,44,0.82) 0%, rgba(66,93,7,0.72) 50%, rgba(11,61,44,0.88) 100%)',
+              'linear-gradient(135deg, rgba(36,50,56,0.82) 0%, rgba(74,99,32,0.72) 50%, rgba(36,50,56,0.88) 100%)',
           }}
           aria-hidden="true"
         />
@@ -38,7 +38,7 @@ export default function NotFound() {
         {/* Eyebrow */}
         <p
           className="text-xs font-bold uppercase tracking-widest mb-4"
-          style={{ color: '#80BC00' }}
+          style={{ color: '#749A30' }}
         >
           Erreur 404
         </p>
@@ -63,20 +63,20 @@ export default function NotFound() {
 
         {/* Séparateur décoratif */}
         <div className="flex items-center justify-center gap-3 my-8" aria-hidden="true">
-          <div style={{ flex: 1, height: 1, background: 'rgba(128,188,0,0.4)' }} />
-          <span style={{ color: '#80BC00', fontSize: '1.1rem' }}>&#9632;</span>
-          <div style={{ flex: 1, height: 1, background: 'rgba(128,188,0,0.4)' }} />
+          <div style={{ flex: 1, height: 1, background: 'rgba(116,154,48,0.4)' }} />
+          <span style={{ color: '#749A30', fontSize: '1.1rem' }}>&#9632;</span>
+          <div style={{ flex: 1, height: 1, background: 'rgba(116,154,48,0.4)' }} />
         </div>
 
         {/* CTAs principaux */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+            className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
             style={{
-              backgroundColor: '#80BC00',
+              backgroundColor: '#749A30',
               color: '#ffffff',
-              boxShadow: '0 0 28px rgba(128,188,0,0.40), 0 4px 12px rgba(0,0,0,0.18)',
+              boxShadow: '0 0 28px rgba(116,154,48,0.40), 0 4px 12px rgba(0,0,0,0.18)',
             }}
           >
             <Home size={15} aria-hidden="true" />
@@ -85,7 +85,7 @@ export default function NotFound() {
 
           <Link
             href="/realisations"
-            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
             style={{
               border: '1.5px solid rgba(255,255,255,0.55)',
               color: '#FFFFFF',
@@ -99,7 +99,7 @@ export default function NotFound() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
             style={{
               border: '1.5px solid rgba(255,255,255,0.55)',
               color: '#FFFFFF',

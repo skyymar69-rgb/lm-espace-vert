@@ -222,7 +222,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* #4 Skip link RGAA */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-[#425D07] focus:font-semibold focus:text-sm focus:outline focus:outline-2 focus:outline-[#80BC00] focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-[#4A6320] focus:font-semibold focus:text-sm focus:outline focus:outline-2 focus:outline-[#749A30] focus:shadow-lg"
         >
           Aller au contenu principal
         </a>

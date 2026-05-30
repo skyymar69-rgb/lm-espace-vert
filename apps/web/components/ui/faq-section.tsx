@@ -42,12 +42,12 @@ export function FAQSection({ items, title, subtitle, withJsonLd = true }: Props)
       {(title || subtitle) && (
         <div className="text-center mb-10">
           {subtitle && (
-            <p className="text-sm font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>
+            <p className="text-sm font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>
               {subtitle}
             </p>
           )}
           {title && (
-            <h2 id="faq-heading" className="font-display text-[clamp(1.75rem,4vw,2.5rem)] font-bold" style={{ color: '#425D07' }}>
+            <h2 id="faq-heading" className="font-display text-[clamp(1.75rem,4vw,2.5rem)] font-bold" style={{ color: '#4A6320' }}>
               {title}
             </h2>
           )}
@@ -62,16 +62,16 @@ export function FAQSection({ items, title, subtitle, withJsonLd = true }: Props)
               key={i}
               className="rounded-2xl border overflow-hidden transition-all duration-200"
               style={{
-                borderColor: isOpen ? 'rgba(128,188,0,0.4)' : '#EDEDED',
-                boxShadow: isOpen ? '0 4px 20px rgba(128,188,0,0.10)' : undefined,
+                borderColor: isOpen ? 'rgba(116,154,48,0.4)' : '#EDEDED',
+                boxShadow: isOpen ? '0 4px 20px rgba(116,154,48,0.10)' : undefined,
               }}
             >
               <button
                 type="button"
                 className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold text-sm transition-colors"
                 style={{
-                  backgroundColor: isOpen ? 'rgba(128,188,0,0.06)' : '#ffffff',
-                  color: isOpen ? '#425D07' : '#2F2F2F',
+                  backgroundColor: isOpen ? 'rgba(116,154,48,0.06)' : '#ffffff',
+                  color: isOpen ? '#4A6320' : '#2F2F2F',
                 }}
                 onClick={() => toggle(i)}
                 aria-expanded={isOpen}
@@ -83,7 +83,7 @@ export function FAQSection({ items, title, subtitle, withJsonLd = true }: Props)
                   size={18}
                   aria-hidden="true"
                   style={{
-                    color: isOpen ? '#80BC00' : '#8C8F94',
+                    color: isOpen ? '#749A30' : '#8C8F94',
                     transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                     transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1), color 0.2s ease',
                     flexShrink: 0,
@@ -106,7 +106,7 @@ export function FAQSection({ items, title, subtitle, withJsonLd = true }: Props)
                 >
                   <div
                     className="pt-1 border-t"
-                    style={{ borderColor: 'rgba(128,188,0,0.15)' }}
+                    style={{ borderColor: 'rgba(116,154,48,0.15)' }}
                   />
                   <p className="mt-4">{item.answer}</p>
                 </div>

@@ -61,7 +61,7 @@ export function Footer() {
     <footer aria-label="Pied de page LM Espace Vert">
 
       {/* ZONE A — Bandeau pré-footer vert */}
-      <div style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}>
+      <div style={{ backgroundColor: '#243238', color: '#ffffff' }}>
         <div className="container mx-auto max-w-7xl px-4 pt-14 pb-12 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
             <div>
@@ -75,8 +75,8 @@ export function Footer() {
             <div className="flex gap-3 flex-wrap sm:flex-nowrap">
               <Link
                 href="/devis"
-                className="rounded-full px-7 py-3 text-sm font-semibold tracking-wide transition-all hover:brightness-105 hover:shadow-[0_4px_20px_rgba(255,255,255,0.15)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-                style={{ backgroundColor: '#ffffff', color: '#0B3D2C' }}
+                className="rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-white transition-all hover:brightness-110 hover:shadow-[0_4px_20px_rgba(158,75,71,0.45)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9E4B47]"
+                style={{ backgroundColor: '#9E4B47', boxShadow: '0 2px 12px rgba(158,75,71,0.30)' }}
               >
                 Demander un devis
               </Link>
@@ -84,7 +84,7 @@ export function Footer() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full px-6 py-3 text-sm font-semibold flex items-center gap-2 transition-all hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                className="rounded-full px-6 py-3 text-sm font-semibold flex items-center gap-2 transition-all hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
                 style={{ border: '1px solid rgba(255,255,255,0.35)', color: '#ffffff' }}
               >
                 <MessageCircle size={14} aria-hidden="true" />
@@ -100,7 +100,7 @@ export function Footer() {
       </div>
 
       {/* ZONE B — Corps du footer */}
-      <div style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}>
+      <div style={{ backgroundColor: '#243238', color: '#ffffff' }}>
         <div className="container mx-auto max-w-7xl px-4 py-16 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
@@ -128,7 +128,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     aria-label={s.label}
                     role="listitem"
-                    className="rounded-full w-9 h-9 flex items-center justify-center transition-all duration-200 hover:text-[#80BC00] hover:border-[#80BC00] hover:bg-[#80BC00]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                    className="rounded-full w-9 h-9 flex items-center justify-center transition-all duration-200 hover:text-[#749A30] hover:border-[#749A30] hover:bg-[#749A30]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
                     style={{ border: '1px solid rgba(255,255,255,0.20)', color: 'rgba(255,255,255,0.60)' }}
                   >
                     {s.icon}
@@ -145,13 +145,13 @@ export function Footer() {
             {/* Colonne 2 — Nos Services */}
             {/* #6 — nav sémantique avec aria-label */}
             <nav aria-label="Services paysagisme">
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] mb-5" style={{ color: 'rgba(128,188,0,0.85)' }}>Nos Services</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.15em] mb-5" style={{ color: 'rgba(116,154,48,0.85)' }}>Nos Services</p>
               <ul className="space-y-1">
                 {serviceLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm block py-0.5 transition-colors duration-150 hover:text-[#80BC00] focus-visible:text-[#80BC00]"
+                      className="text-sm block py-0.5 transition-colors duration-150 hover:text-[#749A30] focus-visible:text-[#749A30]"
                       style={{ color: 'rgba(255,255,255,0.65)' }}
                     >
                       {link.label}
@@ -163,7 +163,7 @@ export function Footer() {
 
             {/* Colonne 3 — Zone d'intervention */}
             <nav aria-label="Zone d'intervention">
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] mb-5" style={{ color: 'rgba(128,188,0,0.85)' }}>Zone d&apos;intervention</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.15em] mb-5" style={{ color: 'rgba(116,154,48,0.85)' }}>Zone d&apos;intervention</p>
               <p className="text-xs mb-4 leading-relaxed" style={{ color: 'rgba(255,255,255,0.50)' }}>
                 Rayon 20 km autour de Saint-Didier-au-Mont-d&apos;Or
               </p>
@@ -173,7 +173,7 @@ export function Footer() {
                     {zone.href ? (
                       <Link
                         href={zone.href}
-                        className="transition-colors duration-150 hover:text-[#80BC00] focus-visible:text-[#80BC00]"
+                        className="transition-colors duration-150 hover:text-[#749A30] focus-visible:text-[#749A30]"
                         style={{ color: 'rgba(255,255,255,0.65)' }}
                       >
                         {zone.label}
@@ -187,7 +187,7 @@ export function Footer() {
                   <Link
                     href="/secteurs"
                     className="transition-colors duration-150 font-semibold hover:text-white focus-visible:text-white"
-                    style={{ color: '#80BC00' }}
+                    style={{ color: '#749A30' }}
                   >
                     → Voir toutes nos zones
                   </Link>
@@ -197,7 +197,7 @@ export function Footer() {
 
             {/* Colonne 4 — Contact */}
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] mb-5" style={{ color: 'rgba(128,188,0,0.85)' }}>Contact</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.15em] mb-5" style={{ color: 'rgba(116,154,48,0.85)' }}>Contact</p>
               {/* #7 — Balise <address> sémantique */}
               <address className="not-italic">
                 <ul className="space-y-1">
@@ -206,7 +206,7 @@ export function Footer() {
                       href={WHATSAPP}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-start gap-2.5 py-1 text-sm transition-colors duration-150 hover:text-[#80BC00] focus-visible:text-[#80BC00]"
+                      className="flex items-start gap-2.5 py-1 text-sm transition-colors duration-150 hover:text-[#749A30] focus-visible:text-[#749A30]"
                       style={{ color: 'rgba(255,255,255,0.65)' }}
                     >
                       <MessageCircle size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
@@ -216,7 +216,7 @@ export function Footer() {
                   <li>
                     <a
                       href="mailto:contact@lmespacevert.fr"
-                      className="flex items-start gap-2.5 py-1 text-sm transition-colors duration-150 hover:text-[#80BC00] focus-visible:text-[#80BC00]"
+                      className="flex items-start gap-2.5 py-1 text-sm transition-colors duration-150 hover:text-[#749A30] focus-visible:text-[#749A30]"
                       style={{ color: 'rgba(255,255,255,0.65)' }}
                     >
                       <Mail size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
@@ -237,15 +237,15 @@ export function Footer() {
               {/* #8 — Lien Contact page */}
               <Link
                 href="/contact"
-                className="mt-5 block w-full text-center rounded-full py-2.5 text-sm font-medium transition-all hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                className="mt-5 block w-full text-center rounded-full py-2.5 text-sm font-medium transition-all hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
                 style={{ border: '1px solid rgba(255,255,255,0.20)', color: 'rgba(255,255,255,0.80)' }}
               >
                 Formulaire de contact
               </Link>
               <Link
                 href="/devis"
-                className="mt-2.5 block w-full text-center rounded-full py-2.5 text-sm font-semibold transition-all hover:brightness-110 hover:shadow-[0_4px_16px_rgba(128,188,0,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-                style={{ backgroundColor: '#80BC00', color: '#0B3D2C', boxShadow: '0 2px 12px rgba(128,188,0,0.25)' }}
+                className="mt-2.5 block w-full text-center rounded-full py-2.5 text-sm font-semibold text-white transition-all hover:brightness-110 hover:shadow-[0_4px_16px_rgba(158,75,71,0.40)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9E4B47]"
+                style={{ backgroundColor: '#9E4B47', boxShadow: '0 2px 12px rgba(158,75,71,0.28)' }}
               >
                 Devis gratuit
               </Link>
@@ -258,7 +258,7 @@ export function Footer() {
       {/* ZONE C — Barre du bas */}
       <div
         className="py-5"
-        style={{ backgroundColor: '#071f16', borderTop: '1px solid rgba(255,255,255,0.08)' }}
+        style={{ backgroundColor: '#1A2A30', borderTop: '1px solid rgba(255,255,255,0.08)' }}
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
@@ -281,7 +281,7 @@ export function Footer() {
                 <span key={l.href} className="flex items-center gap-3">
                   <Link
                     href={l.href}
-                    className="transition-colors duration-150 hover:text-[#80BC00] focus-visible:text-[#80BC00]"
+                    className="transition-colors duration-150 hover:text-[#749A30] focus-visible:text-[#749A30]"
                     style={{ color: 'rgba(255,255,255,0.45)' }}
                   >
                     {l.label}
@@ -297,10 +297,12 @@ export function Footer() {
               href="https://internet.kayzen-lyon.fr"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors text-[11px] whitespace-nowrap hover:text-[#80BC00] focus-visible:text-[#80BC00]"
+              className="transition-colors text-[11px] whitespace-nowrap hover:text-[#749A30] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30] focus-visible:rounded-sm"
               style={{ color: 'rgba(255,255,255,0.45)' }}
+              aria-label="Fièrement réalisé par Kayzen Web (ouvre un nouvel onglet)"
             >
-              Réalisé par <span style={{ color: 'rgba(128,188,0,0.80)' }}>Kayzen Web</span>
+              Fièrement réalisé par{' '}
+              <span className="font-semibold" style={{ color: 'rgba(116,154,48,0.90)' }}>Kayzen Web</span>
             </a>
           </div>
         </div>

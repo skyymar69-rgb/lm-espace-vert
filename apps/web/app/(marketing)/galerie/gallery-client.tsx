@@ -142,20 +142,20 @@ export function GalerieClient() {
                     padding: '0.4375rem 1.125rem',
                     fontSize: '0.8125rem',
                     fontWeight: 600,
-                    border: isActive ? '1.5px solid #80BC00' : '1.5px solid #E0E0E0',
-                    backgroundColor: isActive ? '#80BC00' : 'transparent',
-                    color: isActive ? '#0B3D2C' : '#5C606B',
+                    border: isActive ? '1.5px solid #749A30' : '1.5px solid #E0E0E0',
+                    backgroundColor: isActive ? '#749A30' : 'transparent',
+                    color: isActive ? '#243238' : '#5C606B',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
                     whiteSpace: 'nowrap',
                     outline: 'none',
                     letterSpacing: '0.01em',
-                    boxShadow: isActive ? '0 2px 12px rgba(128,188,0,0.30)' : 'none',
+                    boxShadow: isActive ? '0 2px 12px rgba(116,154,48,0.30)' : 'none',
                   }}
                   onMouseEnter={(e) => {
                     if (!isActive) {
-                      (e.currentTarget as HTMLButtonElement).style.borderColor = '#80BC00'
-                      ;(e.currentTarget as HTMLButtonElement).style.color = '#425D07'
+                      (e.currentTarget as HTMLButtonElement).style.borderColor = '#749A30'
+                      ;(e.currentTarget as HTMLButtonElement).style.color = '#4A6320'
                     }
                   }}
                   onMouseLeave={(e) => {
@@ -185,7 +185,7 @@ export function GalerieClient() {
 
       {/* ── GRILLE PHOTOS ── */}
       <section
-        style={{ backgroundColor: '#F7F5F0', padding: '3rem 0 5rem' }}
+        style={{ backgroundColor: '#F4F1E9', padding: '3rem 0 5rem' }}
         aria-label={`Galerie — ${categories.find((c) => c.id === activeCat)?.label}`}
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
@@ -243,15 +243,15 @@ export function GalerieClient() {
                         border: 'none',
                         padding: 0,
                         backgroundColor: '#E8EDE8',
-                        boxShadow: '0 2px 16px rgba(11,61,44,0.08)',
+                        boxShadow: '0 2px 16px rgba(36,50,56,0.08)',
                         transition: 'box-shadow 0.3s ease, transform 0.3s ease',
                       }}
                       onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 8px 40px rgba(11,61,44,0.18)'
+                        (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 8px 40px rgba(36,50,56,0.18)'
                         ;(e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-2px)'
                       }}
                       onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 2px 16px rgba(11,61,44,0.08)'
+                        (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 2px 16px rgba(36,50,56,0.08)'
                         ;(e.currentTarget as HTMLButtonElement).style.transform = 'translateY(0)'
                       }}
                     >
@@ -268,7 +268,7 @@ export function GalerieClient() {
                       <div
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
                         style={{
-                          background: 'linear-gradient(160deg, rgba(11,61,44,0.18) 0%, rgba(11,61,44,0.78) 65%, rgba(66,93,7,0.92) 100%)',
+                          background: 'linear-gradient(160deg, rgba(36,50,56,0.18) 0%, rgba(36,50,56,0.78) 65%, rgba(74,99,32,0.92) 100%)',
                         }}
                         aria-hidden="true"
                       />
@@ -307,7 +307,7 @@ export function GalerieClient() {
                             marginTop: '0.45rem',
                             fontSize: '0.6rem',
                             fontWeight: 700,
-                            color: '#80BC00',
+                            color: '#749A30',
                             letterSpacing: '0.06em',
                             textTransform: 'uppercase',
                           }}
@@ -321,17 +321,17 @@ export function GalerieClient() {
                         <span
                           style={{
                             display: 'inline-block',
-                            backgroundColor: 'rgba(11,61,44,0.78)',
+                            backgroundColor: 'rgba(36,50,56,0.78)',
                             backdropFilter: 'blur(6px)',
                             WebkitBackdropFilter: 'blur(6px)',
-                            color: '#80BC00',
+                            color: '#749A30',
                             fontSize: '0.625rem',
                             fontWeight: 700,
                             padding: '0.2rem 0.55rem',
                             borderRadius: '9999px',
                             textTransform: 'uppercase',
                             letterSpacing: '0.06em',
-                            border: '1px solid rgba(128,188,0,0.22)',
+                            border: '1px solid rgba(116,154,48,0.22)',
                           }}
                         >
                           {catLabel[photo.cat]}
@@ -349,8 +349,8 @@ export function GalerieClient() {
       {/* ── CTA BAS DE PAGE ── */}
       <section
         style={{
-          background: 'linear-gradient(135deg, #0B3D2C 0%, #425D07 100%)',
-          borderTop: '4px solid #80BC00',
+          background: 'linear-gradient(135deg, #243238 0%, #4A6320 100%)',
+          borderTop: '4px solid #749A30',
           padding: '5rem 0',
         }}
         aria-label="Appel à l'action galerie"
@@ -358,7 +358,7 @@ export function GalerieClient() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <p
             style={{
-              color: '#80BC00',
+              color: '#9E4B47',
               fontSize: '0.7rem',
               fontWeight: 700,
               letterSpacing: '0.15em',
@@ -371,7 +371,7 @@ export function GalerieClient() {
           <h2
             className="font-display"
             style={{
-              fontSize: 'clamp(1.75rem, 4vw, 2.75rem)',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
               fontWeight: 800,
               color: '#ffffff',
               lineHeight: 1.2,
@@ -382,8 +382,8 @@ export function GalerieClient() {
           </h2>
           <p
             style={{
-              color: 'rgba(255,255,255,0.7)',
-              fontSize: '1rem',
+              color: 'rgba(255,255,255,0.75)',
+              fontSize: '1.0625rem',
               marginBottom: '2.5rem',
               maxWidth: '32rem',
               marginLeft: 'auto',
@@ -407,14 +407,14 @@ export function GalerieClient() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                backgroundColor: '#80BC00',
-                color: '#0B3D2C',
+                backgroundColor: '#9E4B47',
+                color: '#ffffff',
                 borderRadius: '9999px',
                 padding: '0.875rem 1.75rem',
                 fontSize: '0.9375rem',
                 fontWeight: 700,
                 textDecoration: 'none',
-                boxShadow: '0 0 30px rgba(128,188,0,0.35)',
+                boxShadow: '0 0 30px rgba(158,75,71,0.35)',
               }}
             >
               Demander mon devis gratuit <ArrowRight size={15} aria-hidden="true" />
@@ -520,8 +520,8 @@ export function GalerieClient() {
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLButtonElement
-              el.style.backgroundColor = 'rgba(128,188,0,0.22)'
-              el.style.borderColor = 'rgba(128,188,0,0.5)'
+              el.style.backgroundColor = 'rgba(116,154,48,0.22)'
+              el.style.borderColor = 'rgba(116,154,48,0.5)'
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLButtonElement
@@ -559,8 +559,8 @@ export function GalerieClient() {
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLButtonElement
-              el.style.backgroundColor = 'rgba(128,188,0,0.22)'
-              el.style.borderColor = 'rgba(128,188,0,0.5)'
+              el.style.backgroundColor = 'rgba(116,154,48,0.22)'
+              el.style.borderColor = 'rgba(116,154,48,0.5)'
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLButtonElement
@@ -626,7 +626,7 @@ export function GalerieClient() {
               <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8125rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
                 <span>📍 {currentPhoto.ville}</span>
                 <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
-                <span style={{ color: '#80BC00', fontWeight: 600 }}>
+                <span style={{ color: '#749A30', fontWeight: 600 }}>
                   {categories.find((c) => c.id === currentPhoto.cat)?.label}
                 </span>
               </p>
@@ -644,14 +644,14 @@ export function GalerieClient() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '0.4rem',
-                    backgroundColor: '#80BC00',
-                    color: '#0B3D2C',
+                    backgroundColor: '#9E4B47',
+                    color: '#ffffff',
                     borderRadius: '9999px',
                     padding: '0.5rem 1.125rem',
                     fontSize: '0.8125rem',
                     fontWeight: 700,
                     textDecoration: 'none',
-                    boxShadow: '0 4px 18px rgba(128,188,0,0.35)',
+                    boxShadow: '0 4px 18px rgba(158,75,71,0.35)',
                     letterSpacing: '0.01em',
                     transition: 'opacity 0.2s ease',
                   }}

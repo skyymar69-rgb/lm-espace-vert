@@ -89,7 +89,7 @@ export function CookieBanner() {
                 accord, nous pouvons aussi mesurer l'audience.{' '}
                 <Link
                   href="/politique-cookies"
-                  className="underline underline-offset-2 hover:text-[#2F2F2F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                  className="underline underline-offset-2 hover:text-[#2F2F2F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
                 >
                   En savoir plus
                 </Link>
@@ -101,20 +101,20 @@ export function CookieBanner() {
               <button
                 ref={firstFocusRef}
                 onClick={rejectAll}
-                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F7F5F0] hover:border-[#80BC00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F4F1E9] hover:border-[#749A30] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
               >
                 Tout refuser
               </button>
               <button
                 onClick={() => setShowCustomize(true)}
-                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F7F5F0] hover:border-[#80BC00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F4F1E9] hover:border-[#749A30] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
               >
                 Personnaliser
               </button>
               <button
                 onClick={acceptAll}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-                style={{ backgroundColor: '#80BC00', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+                className="rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
+                style={{ backgroundColor: '#749A30', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
               >
                 Tout accepter
               </button>
@@ -130,7 +130,7 @@ export function CookieBanner() {
               <button
                 onClick={() => setShowCustomize(false)}
                 aria-label="Fermer la personnalisation"
-                className="rounded-md p-1 text-[#AAAAAA] hover:text-[#2F2F2F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                className="rounded-md p-1 text-[#AAAAAA] hover:text-[#2F2F2F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
               >
                 <X size={18} aria-hidden="true" />
               </button>
@@ -171,20 +171,20 @@ export function CookieBanner() {
             <div className="mt-6 flex gap-2">
               <button
                 onClick={rejectAll}
-                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F7F5F0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F4F1E9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
               >
                 Tout refuser
               </button>
               <button
                 onClick={saveCustom}
-                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F7F5F0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
+                className="rounded-full border border-[#D8D8D8] px-4 py-2 text-sm font-medium text-[#2F2F2F] transition-colors hover:bg-[#F4F1E9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
               >
                 Enregistrer mes choix
               </button>
               <button
                 onClick={acceptAll}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00]"
-                style={{ backgroundColor: '#80BC00', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+                className="rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30]"
+                style={{ backgroundColor: '#749A30', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
               >
                 Tout accepter
               </button>
@@ -212,12 +212,12 @@ function CookieToggle({
   onChange: (v: boolean) => void
 }) {
   return (
-    <div className="flex items-start justify-between gap-4 rounded-xl border border-[#EDEDED] bg-[#F7F5F0] p-4">
+    <div className="flex items-start justify-between gap-4 rounded-xl border border-[#EDEDED] bg-[#F4F1E9] p-4">
       <div>
         <label htmlFor={id} className="text-sm font-medium text-[#2F2F2F]">
           {label}
           {disabled && (
-            <span className="ml-2 rounded-full bg-[rgba(128,188,0,0.12)] px-2 py-0.5 text-xs font-semibold text-[#425D07]">
+            <span className="ml-2 rounded-full bg-[rgba(116,154,48,0.12)] px-2 py-0.5 text-xs font-semibold text-[#4A6320]">
               Toujours actif
             </span>
           )}
@@ -230,8 +230,8 @@ function CookieToggle({
         aria-checked={checked}
         disabled={disabled}
         onClick={() => onChange(!checked)}
-        className="relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#80BC00] disabled:cursor-not-allowed disabled:opacity-60"
-        style={{ backgroundColor: checked ? '#425D07' : '#D8D8D8' }}
+        className="relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#749A30] disabled:cursor-not-allowed disabled:opacity-60"
+        style={{ backgroundColor: checked ? '#4A6320' : '#D8D8D8' }}
         aria-label={`${checked ? 'Désactiver' : 'Activer'} ${label}`}
       >
         <span

@@ -124,7 +124,7 @@ export default function AProposPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="py-16" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-16" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol role="list" className="flex items-center gap-2 text-sm text-[#8C8F94]">
@@ -134,7 +134,7 @@ export default function AProposPage() {
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight" style={{ color: '#425D07' }}>
+            <h1 className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-tight" style={{ color: '#4A6320' }}>
               Notre Histoire
             </h1>
             <p className="mt-4 text-lg text-[#8C8F94]">
@@ -176,10 +176,10 @@ export default function AProposPage() {
             </div>
             {/* Texte */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
                 NOTRE HISTOIRE
               </p>
-              <h2 id="histoire-heading" className="font-display text-3xl font-bold sm:text-4xl mb-6" style={{ color: '#425D07' }}>
+              <h2 id="histoire-heading" className="font-display text-3xl font-bold sm:text-4xl mb-6" style={{ color: '#4A6320' }}>
                 Léo Maurice, paysagiste depuis 2019
               </h2>
               <div className="space-y-4 text-[#8C8F94] leading-relaxed">
@@ -206,7 +206,7 @@ export default function AProposPage() {
 
               {/* Timeline */}
               <div className="mt-8">
-                <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#80BC00' }}>
+                <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#749A30' }}>
                   NOTRE PARCOURS
                 </h3>
                 <ol className="relative border-l-2" style={{ borderColor: '#EDEDED' }}>
@@ -214,10 +214,10 @@ export default function AProposPage() {
                     <li key={item.year} className={`relative pl-6 ${i < timeline.length - 1 ? 'pb-5' : ''}`}>
                       <span
                         className="absolute -left-[9px] top-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold text-white"
-                        style={{ backgroundColor: '#80BC00' }}
+                        style={{ backgroundColor: '#749A30' }}
                         aria-hidden="true"
                       />
-                      <p className="text-xs font-bold" style={{ color: '#80BC00' }}>{item.year}</p>
+                      <p className="text-xs font-bold" style={{ color: '#749A30' }}>{item.year}</p>
                       <p className="text-xs leading-snug mt-0.5" style={{ color: '#8C8F94' }}>{item.label}</p>
                     </li>
                   ))}
@@ -229,13 +229,13 @@ export default function AProposPage() {
       </section>
 
       {/* Valeurs */}
-      <section aria-labelledby="valeurs-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
+      <section aria-labelledby="valeurs-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               NOS VALEURS
             </p>
-            <h2 id="valeurs-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="valeurs-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               Ce qui nous guide
             </h2>
           </div>
@@ -243,15 +243,15 @@ export default function AProposPage() {
             {values.map((v) => (
               <div
                 key={v.title}
-                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-8 card-premium hover:border-[#80BC00]/30 transition-all"
+                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-8 card-premium hover:border-[#749A30]/30 transition-all"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
-                  style={{ backgroundColor: '#80BC00' }}
+                  style={{ backgroundColor: '#749A30' }}
                 >
                   {v.icon}
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: '#425D07' }}>{v.title}</h3>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#4A6320' }}>{v.title}</h3>
                 <p className="text-sm text-[#8C8F94] leading-relaxed">{v.desc}</p>
               </div>
             ))}
@@ -263,10 +263,10 @@ export default function AProposPage() {
       <section aria-labelledby="certifications-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               GARANTIES &amp; LABELS
             </p>
-            <h2 id="certifications-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="certifications-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               Nos certifications
             </h2>
           </div>
@@ -278,7 +278,7 @@ export default function AProposPage() {
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4"
-                  style={{ backgroundColor: '#0B3D2C' }}
+                  style={{ backgroundColor: '#243238' }}
                 >
                   <ShieldCheck size={22} aria-hidden="true" />
                 </div>
@@ -294,10 +294,10 @@ export default function AProposPage() {
       <section aria-labelledby="chiffres-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               NOS RÉSULTATS
             </p>
-            <h2 id="chiffres-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="chiffres-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               LM Espace Vert en chiffres
             </h2>
           </div>
@@ -309,7 +309,7 @@ export default function AProposPage() {
               { value: `${EXPERIENCE_YEARS} ans`, label: "d'expérience" },
             ].map(({ value, label }) => (
               <div key={label} className="rounded-2xl border border-[#EDEDED] bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
-                <p className="font-display text-4xl font-bold" style={{ color: '#425D07' }}>{value}</p>
+                <p className="font-display text-4xl font-bold" style={{ color: '#4A6320' }}>{value}</p>
                 <p className="mt-2 text-sm" style={{ color: '#8C8F94' }}>{label}</p>
               </div>
             ))}
@@ -318,7 +318,7 @@ export default function AProposPage() {
           <div className="mt-10 flex flex-col items-center gap-2">
             <div className="flex items-center gap-1" aria-label={`Note ${GOOGLE_RATING} sur 5 étoiles`} role="img">
               {[1, 2, 3, 4, 5].map((s) => (
-                <Star key={s} size={22} fill="#80BC00" stroke="none" aria-hidden="true" />
+                <Star key={s} size={22} fill="#749A30" stroke="none" aria-hidden="true" />
               ))}
             </div>
             <p className="text-sm" style={{ color: '#8C8F94' }}>
@@ -329,13 +329,13 @@ export default function AProposPage() {
       </section>
 
       {/* Engagements environnementaux */}
-      <section aria-labelledby="engagements-env-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
+      <section aria-labelledby="engagements-env-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               ÉCO-RESPONSABILITÉ
             </p>
-            <h2 id="engagements-env-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="engagements-env-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               Nos engagements environnementaux
             </h2>
             <p className="mt-3 text-base max-w-2xl mx-auto" style={{ color: '#8C8F94' }}>
@@ -367,15 +367,15 @@ export default function AProposPage() {
             ].map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-7 card-premium hover:border-[#80BC00]/40 transition-all"
+                className="rounded-2xl border border-[#EDEDED] bg-white shadow-sm p-7 card-premium hover:border-[#749A30]/40 transition-all"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
-                  style={{ backgroundColor: '#80BC00' }}
+                  style={{ backgroundColor: '#749A30' }}
                 >
                   <Icon size={22} aria-hidden="true" />
                 </div>
-                <h3 className="font-bold text-base mb-2" style={{ color: '#425D07' }}>{title}</h3>
+                <h3 className="font-bold text-base mb-2" style={{ color: '#4A6320' }}>{title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
               </div>
             ))}
@@ -383,8 +383,8 @@ export default function AProposPage() {
           <div className="mt-10 text-center">
             <Link
               href="/engagements"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#0B3D2C', color: '#ffffff' }}
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
               Voir tous nos engagements
               <ArrowRight size={15} aria-hidden="true" />
@@ -397,10 +397,10 @@ export default function AProposPage() {
       <section aria-labelledby="partenaires-heading" className="bg-white py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               NOTRE RÉSEAU
             </p>
-            <h2 id="partenaires-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="partenaires-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               Partenaires &amp; fournisseurs
             </h2>
             <p className="mt-3 text-base max-w-2xl mx-auto" style={{ color: '#8C8F94' }}>
@@ -435,18 +435,18 @@ export default function AProposPage() {
                 <div className="flex items-start justify-between mb-4">
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center text-white flex-shrink-0"
-                    style={{ backgroundColor: '#0B3D2C' }}
+                    style={{ backgroundColor: '#243238' }}
                   >
                     <Icon size={22} aria-hidden="true" />
                   </div>
                   <span
                     className="rounded-full px-2.5 py-1 text-xs font-semibold"
-                    style={{ backgroundColor: 'rgba(128,188,0,0.1)', color: '#425D07' }}
+                    style={{ backgroundColor: 'rgba(116,154,48,0.1)', color: '#4A6320' }}
                   >
                     {badge}
                   </span>
                 </div>
-                <h3 className="font-bold text-base mb-2" style={{ color: '#425D07' }}>{title}</h3>
+                <h3 className="font-bold text-base mb-2" style={{ color: '#4A6320' }}>{title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
               </div>
             ))}
@@ -455,13 +455,13 @@ export default function AProposPage() {
       </section>
 
       {/* Zone d'intervention */}
-      <section aria-labelledby="zone-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F7F5F0' }}>
+      <section aria-labelledby="zone-heading" className="py-20 lg:py-24" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               SECTEUR
             </p>
-            <h2 id="zone-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#425D07' }}>
+            <h2 id="zone-heading" className="font-display text-3xl font-bold sm:text-4xl" style={{ color: '#4A6320' }}>
               Notre zone d&apos;intervention
             </h2>
             <p className="mt-3 text-base" style={{ color: '#8C8F94' }}>
@@ -475,7 +475,7 @@ export default function AProposPage() {
                 className="rounded-xl border border-[#EDEDED] bg-white px-4 py-3 text-sm text-center font-medium shadow-sm flex items-center justify-center gap-2"
                 style={{ color: '#2F2F2F' }}
               >
-                <MapPin size={13} style={{ color: '#80BC00', flexShrink: 0 }} aria-hidden="true" />
+                <MapPin size={13} style={{ color: '#749A30', flexShrink: 0 }} aria-hidden="true" />
                 {zone}
               </li>
             ))}
@@ -484,10 +484,10 @@ export default function AProposPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-center" style={{ backgroundColor: '#0B3D2C', background: 'linear-gradient(135deg, #0B3D2C 0%, #425D07 100%)' }}>
+      <section className="py-20 text-center" style={{ backgroundColor: '#243238', background: 'linear-gradient(135deg, #243238 0%, #4A6320 100%)' }}>
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#80BC00' }}>RENCONTREZ L&apos;ÉQUIPE</p>
-          <h2 className="font-display text-3xl font-bold mb-4" style={{ color: '#ffffff' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#749A30' }}>RENCONTREZ L&apos;ÉQUIPE</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#ffffff' }}>
             Confiez votre jardin à Léo
           </h2>
           <p className="mb-8 text-base" style={{ color: '#bbf7d0' }}>
@@ -496,8 +496,8 @@ export default function AProposPage() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-opacity hover:opacity-90 cta-glow"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128, 188, 0) 0px 0px 25px -14px' }}
+              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-colors hover:bg-[#7E3A37]"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff', boxShadow: '0 4px 20px rgba(158,75,71,0.35)' }}
             >
               Demander un devis gratuit
               <ArrowRight size={15} aria-hidden="true" />

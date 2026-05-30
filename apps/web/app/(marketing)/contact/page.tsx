@@ -106,7 +106,7 @@ export default function ContactPage() {
             <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
               Réponse garantie sous 24h · Sans engagement
             </p>
-            <p className="mt-2 text-sm font-medium" style={{ color: '#425D07' }}>
+            <p className="mt-2 text-sm font-medium" style={{ color: '#4A6320' }}>
               Réponse sous 2h en semaine, 24h le week-end
             </p>
           </div>
@@ -120,12 +120,12 @@ export default function ContactPage() {
 
             {/* Colonne gauche — infos contact */}
             <div>
-              <h2 className="font-display text-2xl font-bold mb-8" style={{ color: '#425D07' }}>
+              <h2 className="font-display text-3xl font-bold mb-8" style={{ color: '#4A6320' }}>
                 Comment nous joindre&nbsp;?
               </h2>
 
               {/* Contact direct alternatives */}
-              <div className="mb-8 rounded-2xl border border-[#EDEDED] p-5" style={{ backgroundColor: '#F7F5F0' }}>
+              <div className="mb-8 rounded-2xl border border-[#EDEDED] p-5" style={{ backgroundColor: '#F4F1E9' }}>
                 <p className="font-semibold text-sm mb-4" style={{ color: '#2F2F2F' }}>
                   Vous préférez un contact direct&nbsp;?
                 </p>
@@ -133,9 +133,9 @@ export default function ContactPage() {
                   <a
                     href="tel:+33672587353"
                     className="flex flex-col items-center gap-2 rounded-xl border border-[#EDEDED] bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
-                    style={{ color: '#425D07' }}
+                    style={{ color: '#4A6320' }}
                   >
-                    <Phone size={20} style={{ color: '#0B3D2C' }} aria-hidden="true" />
+                    <Phone size={20} style={{ color: '#243238' }} aria-hidden="true" />
                     Appeler
                   </a>
                   <a
@@ -151,9 +151,9 @@ export default function ContactPage() {
                   <a
                     href="mailto:contact@lmespacevert.fr"
                     className="flex flex-col items-center gap-2 rounded-xl border border-[#EDEDED] bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
-                    style={{ color: '#0B3D2C' }}
+                    style={{ color: '#243238' }}
                   >
-                    <Mail size={20} style={{ color: '#0B3D2C' }} aria-hidden="true" />
+                    <Mail size={20} style={{ color: '#243238' }} aria-hidden="true" />
                     Email
                   </a>
                 </div>
@@ -167,12 +167,12 @@ export default function ContactPage() {
                 >
                   <div
                     className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center text-white"
-                    style={{ backgroundColor: '#0B3D2C' }}
+                    style={{ backgroundColor: '#243238' }}
                   >
                     <Phone size={24} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold text-lg group-hover:text-[#425D07] transition-colors" style={{ color: '#2F2F2F' }}>
+                    <p className="font-bold text-lg group-hover:text-[#4A6320] transition-colors" style={{ color: '#2F2F2F' }}>
                       06 72 58 73 53
                     </p>
                     <p className="text-sm" style={{ color: '#8C8F94' }}>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                 >
                   <div
                     className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-white"
-                    style={{ backgroundColor: '#0B3D2C' }}
+                    style={{ backgroundColor: '#243238' }}
                   >
                     <Mail size={22} aria-hidden="true" />
                   </div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
 
                 {/* Adresse */}
                 <div className="flex items-center gap-4 px-5 py-3 rounded-2xl border border-[#EDEDED] bg-white">
-                  <MapPin size={20} className="flex-shrink-0" style={{ color: '#425D07' }} aria-hidden="true" />
+                  <MapPin size={20} className="flex-shrink-0" style={{ color: '#4A6320' }} aria-hidden="true" />
                   <div className="flex-1">
                     <span className="text-sm" style={{ color: '#8C8F94' }}>
                       Saint-Didier-au-Mont-d&apos;Or,{' '}
@@ -231,7 +231,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block text-xs font-semibold mt-0.5 hover:underline"
-                      style={{ color: '#425D07' }}
+                      style={{ color: '#4A6320' }}
                     >
                       Obtenir l&apos;itinéraire ?
                     </a>
@@ -239,17 +239,17 @@ export default function ContactPage() {
                 </div>
 
                 {/* Badge réassurance */}
-                <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(128,188,0,0.06)', borderColor: 'rgba(128,188,0,0.3)' }}>
-                  <CheckCircle size={20} style={{ color: '#80BC00' }} aria-hidden="true" />
-                  <p className="text-sm font-semibold" style={{ color: '#425D07' }}>
+                <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(116,154,48,0.06)', borderColor: 'rgba(116,154,48,0.3)' }}>
+                  <CheckCircle size={20} style={{ color: '#749A30' }} aria-hidden="true" />
+                  <p className="text-sm font-semibold" style={{ color: '#4A6320' }}>
                     Réponse garantie sous 24h — aucun engagement
                   </p>
                 </div>
 
                 {/* Badge SAP */}
-                <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(66,93,7,0.05)', borderColor: 'rgba(66,93,7,0.2)' }}>
-                  <CheckCircle size={20} style={{ color: '#425D07' }} aria-hidden="true" />
-                  <p className="text-sm font-semibold" style={{ color: '#425D07' }}>
+                <div className="flex items-center gap-3 rounded-2xl border px-5 py-4" style={{ backgroundColor: 'rgba(74,99,32,0.05)', borderColor: 'rgba(74,99,32,0.2)' }}>
+                  <CheckCircle size={20} style={{ color: '#4A6320' }} aria-hidden="true" />
+                  <p className="text-sm font-semibold" style={{ color: '#4A6320' }}>
                     Agréé Service à la Personne — crédit d&apos;impôt 50%
                   </p>
                 </div>
@@ -257,23 +257,23 @@ export default function ContactPage() {
 
               {/* Horaires de disponibilité */}
               <div className="mt-8 rounded-2xl border border-[#EDEDED] shadow-sm overflow-hidden">
-                <div className="flex items-center gap-3 px-5 py-4 border-b border-[#EDEDED]" style={{ backgroundColor: '#F7F5F0' }}>
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(66,93,7,0.1)' }}>
-                    <Clock size={15} style={{ color: '#425D07' }} aria-hidden="true" />
+                <div className="flex items-center gap-3 px-5 py-4 border-b border-[#EDEDED]" style={{ backgroundColor: '#F4F1E9' }}>
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(74,99,32,0.1)' }}>
+                    <Clock size={15} style={{ color: '#4A6320' }} aria-hidden="true" />
                   </div>
                   <span className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>Horaires de disponibilité</span>
                 </div>
                 <table className="w-full text-sm">
                   <tbody>
-                    <tr className="border-b border-[#EDEDED] hover:bg-[#F7F5F0] transition-colors">
+                    <tr className="border-b border-[#EDEDED] hover:bg-[#F4F1E9] transition-colors">
                       <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Lundi – Vendredi</td>
-                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 – 18h00</td>
+                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#4A6320' }}>8h00 – 18h00</td>
                     </tr>
-                    <tr className="border-b border-[#EDEDED] hover:bg-[#F7F5F0] transition-colors">
+                    <tr className="border-b border-[#EDEDED] hover:bg-[#F4F1E9] transition-colors">
                       <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Samedi</td>
-                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#425D07' }}>8h00 – 12h00</td>
+                      <td className="px-5 py-3.5 font-semibold text-right" style={{ color: '#4A6320' }}>8h00 – 12h00</td>
                     </tr>
-                    <tr className="hover:bg-[#F7F5F0] transition-colors">
+                    <tr className="hover:bg-[#F4F1E9] transition-colors">
                       <td className="px-5 py-3.5" style={{ color: '#8C8F94' }}>Dimanche</td>
                       <td className="px-5 py-3.5 font-medium text-right" style={{ color: '#8C8F94' }}>Fermé</td>
                     </tr>
@@ -285,8 +285,8 @@ export default function ContactPage() {
             {/* Colonne droite — formulaire */}
             <div className="rounded-2xl border border-[#EDEDED] shadow-[0_8px_40px_rgba(0,0,0,0.07)] p-8">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <Mail size={15} style={{ color: '#80BC00' }} aria-hidden="true" />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <Mail size={15} style={{ color: '#749A30' }} aria-hidden="true" />
                 </div>
                 <h3 className="font-display text-xl font-bold" style={{ color: '#2F2F2F' }}>
                   Envoyez-nous un message
@@ -321,10 +321,10 @@ export default function ContactPage() {
       </section>
 
       {/* Zone d'intervention */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-12">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-12">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-8">
-            <h2 className="font-display text-2xl font-bold" style={{ color: '#2F2F2F' }}>
+            <h2 className="font-display text-3xl font-bold" style={{ color: '#2F2F2F' }}>
               Zone d&apos;intervention
             </h2>
             <p className="mt-2" style={{ color: '#8C8F94' }}>
@@ -344,7 +344,7 @@ export default function ContactPage() {
           </ul>
           <p className="text-center text-sm mt-6" style={{ color: '#8C8F94' }}>
             Votre commune n&apos;est pas dans la liste ?{' '}
-            <a href="tel:+33672587353" className="font-medium hover:underline" style={{ color: '#425D07' }}>
+            <a href="tel:+33672587353" className="font-medium hover:underline" style={{ color: '#4A6320' }}>
               Appelez-nous
             </a>{' '}
             pour vérifier.

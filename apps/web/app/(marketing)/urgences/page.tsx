@@ -188,9 +188,9 @@ export default function UrgencesPage() {
       <nav aria-label="Fil d'Ariane" className="bg-white border-b border-[#EDEDED]">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-2">
           <ol className="flex items-center gap-2 text-xs text-[#8C8F94]">
-            <li><Link href="/" className="hover:text-[#425D07] transition-colors">Accueil</Link></li>
+            <li><Link href="/" className="hover:text-[#4A6320] transition-colors">Accueil</Link></li>
             <li aria-hidden="true">›</li>
-            <li className="font-medium" style={{ color: '#425D07' }} aria-current="page">Urgences</li>
+            <li className="font-medium" style={{ color: '#4A6320' }} aria-current="page">Urgences</li>
           </ol>
         </div>
       </nav>
@@ -198,7 +198,7 @@ export default function UrgencesPage() {
       {/* ── HERO URGENCE ── */}
       <section
         className="relative py-20 lg:py-28 overflow-hidden"
-        style={{ backgroundColor: '#0B3D2C' }}
+        style={{ backgroundColor: '#243238' }}
         aria-labelledby="urgences-heading"
       >
         {/* Background texture */}
@@ -239,7 +239,7 @@ export default function UrgencesPage() {
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
           >
             Urgence Paysagiste<br />
-            <span style={{ color: '#80BC00' }}>Lyon Nord</span>
+            <span style={{ color: '#749A30' }}>Lyon Nord</span>
           </h1>
 
           <p className="text-white/75 text-lg max-w-xl mx-auto mb-8 leading-relaxed">
@@ -292,8 +292,8 @@ export default function UrgencesPage() {
       <section className="py-20 bg-white" aria-labelledby="situations-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Nos Interventions</p>
-            <h2 id="situations-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#425D07' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>Nos Interventions</p>
+            <h2 id="situations-heading" className="font-display text-3xl sm:text-4xl font-bold" style={{ color: '#4A6320' }}>
               Situations d'urgence
             </h2>
             <p className="text-[#8C8F94] mt-3">
@@ -305,8 +305,8 @@ export default function UrgencesPage() {
             {situations.map(({ Icon, title, desc }) => (
               <div
                 key={title}
-                className="rounded-2xl border border-[#EDEDED] p-6 hover:border-[#80BC00] hover:shadow-[rgba(0,0,0,0.08)_0px_8px_24px_0px] transition-all"
-                style={{ backgroundColor: '#F7F5F0' }}
+                className="rounded-2xl border border-[#EDEDED] p-6 hover:border-[#749A30] hover:shadow-[rgba(0,0,0,0.08)_0px_8px_24px_0px] transition-all"
+                style={{ backgroundColor: '#F4F1E9' }}
               >
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center mb-4"
@@ -314,7 +314,7 @@ export default function UrgencesPage() {
                 >
                   <Icon size={22} style={{ color: '#E40420' }} aria-hidden="true" />
                 </div>
-                <h3 className="font-display font-bold text-sm mb-2" style={{ color: '#425D07' }}>{title}</h3>
+                <h3 className="font-display font-bold text-sm mb-2" style={{ color: '#4A6320' }}>{title}</h3>
                 <p className="text-xs text-[#8C8F94] leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -323,10 +323,10 @@ export default function UrgencesPage() {
       </section>
 
       {/* ── NOS ENGAGEMENTS URGENCE ── */}
-      <section style={{ backgroundColor: '#0B3D2C' }} className="py-16" aria-labelledby="engagements-heading">
+      <section style={{ backgroundColor: '#243238' }} className="py-16" aria-labelledby="engagements-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Notre Promesse</p>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>Notre Promesse</p>
             <h2 id="engagements-heading" className="font-display text-3xl sm:text-4xl font-bold text-white">
               Notre engagement urgence
             </h2>
@@ -340,11 +340,11 @@ export default function UrgencesPage() {
               >
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                  style={{ backgroundColor: 'rgba(128,188,0,0.15)' }}
+                  style={{ backgroundColor: 'rgba(116,154,48,0.15)' }}
                 >
-                  <Icon size={26} style={{ color: '#80BC00' }} aria-hidden="true" />
+                  <Icon size={26} style={{ color: '#749A30' }} aria-hidden="true" />
                 </div>
-                <p className="font-display text-3xl font-bold mb-1" style={{ color: '#80BC00' }}>{value}</p>
+                <p className="font-display text-3xl font-bold mb-1" style={{ color: '#749A30' }}>{value}</p>
                 <h3 className="font-bold text-white mb-2 text-sm">{title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>{desc}</p>
               </div>
@@ -368,8 +368,8 @@ export default function UrgencesPage() {
       <section className="py-16 bg-white" aria-labelledby="zone-urgence-heading">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Zone Couverte</p>
-            <h2 id="zone-urgence-heading" className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>Zone Couverte</p>
+            <h2 id="zone-urgence-heading" className="font-display text-3xl font-bold" style={{ color: '#4A6320' }}>
               Zone d'intervention urgence
             </h2>
             <p className="text-[#8C8F94] mt-3 max-w-lg mx-auto">
@@ -390,7 +390,7 @@ export default function UrgencesPage() {
             ))}
           </div>
 
-          <div className="max-w-2xl mx-auto rounded-2xl border border-[#EDEDED] p-6" style={{ backgroundColor: '#F7F5F0' }}>
+          <div className="max-w-2xl mx-auto rounded-2xl border border-[#EDEDED] p-6" style={{ backgroundColor: '#F4F1E9' }}>
             <div className="flex items-start gap-4">
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
@@ -399,11 +399,11 @@ export default function UrgencesPage() {
                 <AlertTriangle size={18} style={{ color: '#E40420' }} aria-hidden="true" />
               </div>
               <div>
-                <p className="font-bold text-sm mb-1" style={{ color: '#425D07' }}>
+                <p className="font-bold text-sm mb-1" style={{ color: '#4A6320' }}>
                   Votre commune n'est pas listée&nbsp;?
                 </p>
                 <p className="text-xs text-[#8C8F94] leading-relaxed">
-                  Appelez-nous quand même au <a href="tel:+33672587353" className="font-semibold hover:underline" style={{ color: '#425D07' }}>06 72 58 73 53</a>. Selon la gravité de la situation, nous pouvons intervenir au-delà de notre zone habituelle.
+                  Appelez-nous quand même au <a href="tel:+33672587353" className="font-semibold hover:underline" style={{ color: '#4A6320' }}>06 72 58 73 53</a>. Selon la gravité de la situation, nous pouvons intervenir au-delà de notre zone habituelle.
                 </p>
               </div>
             </div>
@@ -412,11 +412,11 @@ export default function UrgencesPage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16 border-t border-[#EDEDED]" aria-labelledby="faq-urgences-heading">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16 border-t border-[#EDEDED]" aria-labelledby="faq-urgences-heading">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>FAQ</p>
-            <h2 id="faq-urgences-heading" className="font-display text-3xl font-bold" style={{ color: '#425D07' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#749A30' }}>FAQ</p>
+            <h2 id="faq-urgences-heading" className="font-display text-3xl font-bold" style={{ color: '#4A6320' }}>
               Questions fréquentes — Urgences
             </h2>
           </div>
@@ -424,7 +424,7 @@ export default function UrgencesPage() {
           <dl className="space-y-4">
             {faqs.map(({ question, answer }) => (
               <div key={question} className="rounded-2xl border border-[#EDEDED] bg-white overflow-hidden">
-                <dt className="px-6 py-4 font-semibold text-sm" style={{ color: '#425D07' }}>
+                <dt className="px-6 py-4 font-semibold text-sm" style={{ color: '#4A6320' }}>
                   {question}
                 </dt>
                 <dd className="px-6 pb-4 text-sm text-[#8C8F94] leading-relaxed border-t border-[#EDEDED] pt-3">

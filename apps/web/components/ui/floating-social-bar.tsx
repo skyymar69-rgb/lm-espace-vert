@@ -64,24 +64,24 @@ export function FloatingSocialBar() {
           overflow: hidden;
           height: 44px;
           border-radius: 22px 0 0 22px;
-          background-color: #0B3D2C;
+          background-color: #243238;
           color: #ffffff;
           text-decoration: none;
           cursor: pointer;
           transition: background-color 0.22s ease, width 0.28s cubic-bezier(0.34, 1.2, 0.64, 1);
           width: 44px;
-          box-shadow: 0 2px 12px rgba(11,61,44,0.28);
+          box-shadow: 0 2px 12px rgba(36,50,56,0.28);
           border: none;
           outline: none;
           padding: 0;
         }
         .fsb-item:hover,
         .fsb-item:focus-visible {
-          background-color: #80BC00;
+          background-color: #749A30;
           width: 148px;
         }
         .fsb-item:focus-visible {
-          outline: 2px solid #80BC00;
+          outline: 2px solid #749A30;
           outline-offset: 2px;
         }
         .fsb-label {

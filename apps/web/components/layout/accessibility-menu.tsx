@@ -58,7 +58,7 @@ export function AccessibilityMenu() {
         aria-label="Options d'accessibilité"
         aria-expanded={open}
         aria-haspopup="dialog"
-        className="h-9 w-9 flex items-center justify-center rounded-md text-[#8C8F94] hover:bg-[#F7F5F0] hover:text-[#2F2F2F] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+        className="h-9 w-9 flex items-center justify-center rounded-md text-[#8C8F94] hover:bg-[#F4F1E9] hover:text-[#2F2F2F] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
       >
         <ALargeSmall size={18} aria-hidden="true" />
       </button>
@@ -90,11 +90,11 @@ export function AccessibilityMenu() {
                 key={key}
                 onClick={() => applySize(key)}
                 aria-pressed={fontSize === key}
-                className="flex-1 rounded-lg py-2 text-sm font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#80BC00]"
+                className="flex-1 rounded-lg py-2 text-sm font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
                 style={
                   fontSize === key
-                    ? { backgroundColor: '#80BC00', color: '#ffffff', boxShadow: 'rgb(128,188,0) 0px 0px 20px -10px' }
-                    : { backgroundColor: '#F7F5F0', color: '#2F2F2F' }
+                    ? { backgroundColor: '#749A30', color: '#ffffff', boxShadow: 'rgb(128,188,0) 0px 0px 20px -10px' }
+                    : { backgroundColor: '#F4F1E9', color: '#2F2F2F' }
                 }
               >
                 {label}
@@ -105,7 +105,7 @@ export function AccessibilityMenu() {
           {fontSize !== 'normal' && (
             <button
               onClick={() => applySize('normal')}
-              className="mt-3 w-full text-xs text-[#8C8F94] hover:text-[#425D07] transition-colors text-center"
+              className="mt-3 w-full text-xs text-[#8C8F94] hover:text-[#4A6320] transition-colors text-center"
             >
               Réinitialiser
             </button>

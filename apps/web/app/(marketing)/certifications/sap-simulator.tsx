@@ -11,11 +11,11 @@ export function SapSimulator() {
   const aVotreBCharge = Math.max(valeur - credit, 0)
 
   return (
-    <div className="rounded-2xl border p-8" style={{ backgroundColor: '#F7F5F0', borderColor: '#EDEDED' }}>
+    <div className="rounded-2xl border p-8" style={{ backgroundColor: '#F4F1E9', borderColor: '#EDEDED' }}>
       <div className="flex items-center gap-3 mb-6">
         <div
           className="w-12 h-12 rounded-xl flex items-center justify-center text-white flex-shrink-0"
-          style={{ backgroundColor: '#425D07' }}
+          style={{ backgroundColor: '#4A6320' }}
         >
           <Calculator size={22} aria-hidden="true" />
         </div>
@@ -52,19 +52,19 @@ export function SapSimulator() {
         </div>
 
         {valeur > 0 && (
-          <div className="rounded-xl border p-5 space-y-3" style={{ backgroundColor: 'rgba(128,188,0,0.08)', borderColor: 'rgba(128,188,0,0.3)' }}>
+          <div className="rounded-xl border p-5 space-y-3" style={{ backgroundColor: 'rgba(116,154,48,0.08)', borderColor: 'rgba(116,154,48,0.3)' }}>
             <div className="flex justify-between items-center">
               <span className="text-sm" style={{ color: '#8C8F94' }}>Montant total des travaux</span>
               <span className="font-bold" style={{ color: '#2F2F2F' }}>{valeur.toFixed(0)} €</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm" style={{ color: '#8C8F94' }}>Crédit d&apos;impôt 50%</span>
-              <span className="font-bold" style={{ color: '#425D07' }}>− {credit.toFixed(0)} €</span>
+              <span className="font-bold" style={{ color: '#4A6320' }}>− {credit.toFixed(0)} €</span>
             </div>
-            <div className="border-t pt-3" style={{ borderColor: 'rgba(128,188,0,0.3)' }}>
+            <div className="border-t pt-3" style={{ borderColor: 'rgba(116,154,48,0.3)' }}>
               <div className="flex justify-between items-center">
                 <span className="font-semibold" style={{ color: '#2F2F2F' }}>Vous payez seulement</span>
-                <span className="font-display text-2xl font-bold" style={{ color: '#425D07' }}>{aVotreBCharge.toFixed(0)} €</span>
+                <span className="font-display text-2xl font-bold" style={{ color: '#4A6320' }}>{aVotreBCharge.toFixed(0)} €</span>
               </div>
               <p className="text-xs mt-1" style={{ color: '#8C8F94' }}>
                 Après déduction fiscale — avance immédiate disponible
@@ -76,7 +76,7 @@ export function SapSimulator() {
 
       <p className="text-xs mt-4" style={{ color: '#8C8F94' }}>
         Simulation indicative. Le crédit d&apos;impôt est accordé par l&apos;administration fiscale sous conditions.{' '}
-        <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#425D07' }}>
+        <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#4A6320' }}>
           En savoir plus sur impots.gouv.fr
         </a>
       </p>

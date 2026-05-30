@@ -153,27 +153,28 @@ export default function EngazonnementPage() {
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to top, rgba(11,61,44,0.90) 0%, rgba(11,61,44,0.40) 60%, transparent 100%)' }}
+          style={{ background: 'linear-gradient(to top, rgba(36,50,56,0.90) 0%, rgba(36,50,56,0.40) 60%, transparent 100%)' }}
         />
-        <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 pb-12">
-          <h1 id="service-heading" className="font-display text-4xl sm:text-5xl font-bold text-white mb-3">
+        <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 pb-14">
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>Pelouse & engazonnement</p>
+          <h1 id="service-heading" className="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold text-white mb-4 leading-tight">
             Engazonnement &amp; Création de Pelouses
           </h1>
-          <p className="text-white/80 text-lg max-w-xl mb-6">
+          <p className="text-white/85 text-[1.0625rem] max-w-xl mb-7">
             Une pelouse dense et verte dès la première saison. Semis ou rouleaux à Lyon nord.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
               Devis gratuit <ArrowRight size={14} />
             </Link>
             {/* Amélioration 1 — Badge prix indicatif */}
             <span
               className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
-              style={{ backgroundColor: 'rgba(128,188,0,0.18)', color: '#425D07' }}
+              style={{ backgroundColor: 'rgba(116,154,48,0.18)', color: '#4A6320' }}
             >
               À partir de 15 â‚¬ / mÂ²
             </span>
@@ -186,11 +187,11 @@ export default function EngazonnementPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#80BC00' }}>Notre expertise</p>
-              <h2 className="font-display text-3xl font-bold mb-5" style={{ color: '#425D07' }}>
+              <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>Notre expertise</p>
+              <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold mb-5" style={{ color: '#4A6320' }}>
                 La base de tout beau jardin : une pelouse parfaite
               </h2>
-              <div className="text-[#8C8F94] leading-relaxed space-y-4">
+              <div className="text-[#5C606B] text-[1.0625rem] leading-relaxed space-y-4">
                 <p>
                   Une belle pelouse ne s&apos;improvise pas. Elle résulte d&apos;une préparation soignée du sol, d&apos;un choix judicieux des semences et d&apos;une mise en Å“uvre rigoureuse. Chez LM Espace Vert, nous réalisons des créations de pelouses par semis ou gazon en rouleaux à Saint-Didier-au-Mont-d&apos;Or, Caluire, Limonest et dans tout le nord-ouest lyonnais depuis plus de 5 ans.
                 </p>
@@ -204,15 +205,15 @@ export default function EngazonnementPage() {
               <Link
                 href="/realisations"
                 className="inline-flex items-center gap-2 text-sm font-semibold mt-6 hover:gap-3 transition-all"
-                style={{ color: '#425D07' }}
+                style={{ color: '#4A6320' }}
               >
                 Voir nos réalisations <ArrowRight size={14} />
               </Link>
             </div>
             <ul className="space-y-3">
               {features.map((f) => (
-                <li key={f} className="flex items-center gap-3 bg-[#F7F5F0] rounded-xl p-4 border border-[#EDEDED]">
-                  <CheckCircle size={18} style={{ color: '#80BC00' }} aria-hidden="true" />
+                <li key={f} className="flex items-center gap-3 bg-[#F4F1E9] rounded-xl p-4 border border-[#EDEDED]">
+                  <CheckCircle size={18} style={{ color: '#749A30' }} aria-hidden="true" />
                   <span className="text-sm font-medium text-[#2F2F2F]">{f}</span>
                 </li>
               ))}
@@ -222,17 +223,17 @@ export default function EngazonnementPage() {
       </section>
 
       {/* Amélioration 2 — Section Avantages */}
-      <section className="py-14" style={{ backgroundColor: '#F7F5F0' }}>
+      <section className="py-14" style={{ backgroundColor: '#F4F1E9' }}>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-center" style={{ color: '#80BC00' }}>Pourquoi nous choisir</p>
-          <h2 className="font-display text-2xl font-bold mb-10 text-center" style={{ color: '#425D07' }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-3 text-center" style={{ color: '#9E4B47' }}>Pourquoi nous choisir</p>
+          <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold mb-10 text-center" style={{ color: '#4A6320' }}>
             Les avantages de notre service engazonnement
           </h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {advantages.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="bg-white rounded-2xl p-6 border border-[#EDEDED] flex flex-col items-center text-center gap-3">
-                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full" style={{ backgroundColor: 'rgba(128,188,0,0.12)' }}>
-                  <Icon size={20} style={{ color: '#425D07' }} aria-hidden="true" />
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
+                  <Icon size={20} style={{ color: '#4A6320' }} aria-hidden="true" />
                 </span>
                 <h3 className="font-semibold text-sm" style={{ color: '#2F2F2F' }}>{title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: '#8C8F94' }}>{desc}</p>
@@ -245,16 +246,16 @@ export default function EngazonnementPage() {
       {/* Amélioration 4 — Témoignage client */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
-          <blockquote className="rounded-2xl border border-[#EDEDED] p-8 text-center" style={{ backgroundColor: '#F7F5F0' }}>
+          <blockquote className="rounded-2xl border border-[#EDEDED] p-8 text-center" style={{ backgroundColor: '#F4F1E9' }}>
             <div className="flex justify-center gap-0.5 mb-4" aria-label="5 étoiles">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} fill="#80BC00" style={{ color: '#80BC00' }} aria-hidden="true" />
+                <Star key={i} size={16} fill="#749A30" style={{ color: '#749A30' }} aria-hidden="true" />
               ))}
             </div>
             <p className="text-base italic leading-relaxed mb-4" style={{ color: '#2F2F2F' }}>
               &ldquo;On avait un terrain nu après des travaux de construction. LM Espace Vert a tout préparé, amendé, semé. Deux mois plus tard, nos enfants jouaient sur une pelouse parfaite. Un vrai professionnel, très honnête sur les délais.&rdquo;
             </p>
-            <footer className="text-sm font-semibold" style={{ color: '#425D07' }}>
+            <footer className="text-sm font-semibold" style={{ color: '#4A6320' }}>
               Éric D. — Caluire-et-Cuire
             </footer>
           </blockquote>
@@ -262,10 +263,10 @@ export default function EngazonnementPage() {
       </section>
 
       {/* Zone géographique */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <MapPin size={24} style={{ color: '#80BC00' }} className="mx-auto mb-3" aria-hidden="true" />
-          <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#425D07' }}>Zone d&apos;intervention</h2>
+          <MapPin size={24} style={{ color: '#749A30' }} className="mx-auto mb-3" aria-hidden="true" />
+          <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#4A6320' }}>Zone d&apos;intervention</h2>
           <p className="text-[#8C8F94] max-w-xl mx-auto">
             LM Espace Vert réalise ce service dans un rayon de 20 km autour de Saint-Didier-au-Mont-d&apos;Or&nbsp;: Caluire, Écully, Tassin, Limonest, Dardilly, Champagne, Neuville-sur-Saône et tout le nord-ouest lyonnais.
           </p>
@@ -275,14 +276,15 @@ export default function EngazonnementPage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold mb-8 text-center" style={{ color: '#425D07' }}>Questions fréquentes</h2>
+          <p className="text-xs font-bold uppercase tracking-widest mb-3 text-center" style={{ color: '#9E4B47' }}>FAQ</p>
+          <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold mb-8 text-center" style={{ color: '#4A6320' }}>Questions fréquentes</h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
               <details key={faq.q} className="border border-[#EDEDED] rounded-xl overflow-hidden">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-sm text-[#2F2F2F] bg-white">
                   {faq.q}
                 </summary>
-                <div className="px-5 py-4 text-sm text-[#8C8F94] leading-relaxed" style={{ backgroundColor: '#F7F5F0' }}>
+                <div className="px-5 py-4 text-sm text-[#8C8F94] leading-relaxed" style={{ backgroundColor: '#F4F1E9' }}>
                   {faq.a}
                 </div>
               </details>
@@ -294,8 +296,8 @@ export default function EngazonnementPage() {
       {/* Zones d'intervention — chips */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-5xl px-4 sm:px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>Nos secteurs</p>
-          <h2 className="font-display text-xl font-bold mb-5" style={{ color: '#425D07' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>Nos secteurs</p>
+          <h2 className="font-display text-xl font-bold mb-5" style={{ color: '#4A6320' }}>
             Nous intervenons dans toutes les communes du nord-ouest lyonnais
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
@@ -316,10 +318,10 @@ export default function EngazonnementPage() {
               <Link
                 key={v.slug}
                 href={`/secteur/${v.slug}`}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[#EDEDED] px-4 py-1.5 text-xs font-medium hover:border-[#80BC00] hover:text-[#425D07] transition-colors"
-                style={{ color: '#2F2F2F', backgroundColor: '#F7F5F0' }}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#EDEDED] px-4 py-1.5 text-xs font-medium hover:border-[#749A30] hover:text-[#4A6320] transition-colors"
+                style={{ color: '#2F2F2F', backgroundColor: '#F4F1E9' }}
               >
-                <MapPin size={10} style={{ color: '#80BC00' }} aria-hidden="true" />
+                <MapPin size={10} style={{ color: '#749A30' }} aria-hidden="true" />
                 {v.nom}
               </Link>
             ))}
@@ -328,15 +330,16 @@ export default function EngazonnementPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ backgroundColor: '#0B3D2C' }} className="py-16 text-center">
+      <section style={{ backgroundColor: '#243238' }} className="py-20 text-center">
         <div className="container mx-auto max-w-xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold text-white mb-3">Votre projet pelouse, on en parle ?</h2>
-          <p className="text-white/70 mb-6">Devis gratuit · Réponse sous 24h · Rayon 20 km</p>
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#9E4B47' }}>Prêt à démarrer ?</p>
+          <h2 className="font-display text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold text-white mb-4">Votre projet pelouse, on en parle ?</h2>
+          <p className="text-white/75 text-[1.0625rem] mb-8">Devis gratuit · Réponse sous 24h · Rayon 20 km</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/devis"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
               Demander un devis
             </Link>

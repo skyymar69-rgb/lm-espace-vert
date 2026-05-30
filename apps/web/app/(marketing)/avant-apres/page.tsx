@@ -28,7 +28,7 @@ export default function AvantApresPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section style={{ backgroundColor: '#F7F5F0' }} className="py-16">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol role="list" className="flex items-center gap-2 text-sm" style={{ color: '#8C8F94' }}>
@@ -38,7 +38,7 @@ export default function AvantApresPage() {
             </ol>
           </nav>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#80BC00' }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#749A30' }}>
               NOS RÉALISATIONS
             </p>
             <h1
@@ -46,7 +46,7 @@ export default function AvantApresPage() {
               style={{ color: '#2F2F2F' }}
             >
               Avant / Après —{' '}
-              <span style={{ color: '#425D07' }}>Nos transformations</span>
+              <span style={{ color: '#4A6320' }}>Nos transformations</span>
             </h1>
             <p className="mt-4 text-lg" style={{ color: '#8C8F94' }}>
               Des jardins méconnaissables. Chaque chantier raconte une histoire de transformation.
@@ -92,7 +92,7 @@ export default function AvantApresPage() {
                   >
                     <div
                       className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md"
-                      style={{ backgroundColor: '#425D07' }}
+                      style={{ backgroundColor: '#4A6320' }}
                     >
                       →
                     </div>
@@ -109,7 +109,7 @@ export default function AvantApresPage() {
                     />
                     <span
                       className="absolute top-3 left-3 rounded-full px-3 py-1 text-xs font-bold text-white"
-                      style={{ backgroundColor: 'rgba(66,93,7,0.85)' }}
+                      style={{ backgroundColor: 'rgba(74,99,32,0.85)' }}
                     >
                       Après
                     </span>
@@ -122,7 +122,7 @@ export default function AvantApresPage() {
                     <div className="flex items-center gap-2 flex-wrap mb-2">
                       <span
                         className="rounded-full px-2.5 py-0.5 text-xs font-semibold"
-                        style={{ backgroundColor: 'rgba(128,188,0,0.12)', color: '#425D07' }}
+                        style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
                       >
                         {project.tag}
                       </span>
@@ -146,9 +146,9 @@ export default function AvantApresPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16" style={{ backgroundColor: '#0B3D2C' }}>
+      <section className="py-16" style={{ backgroundColor: '#243238' }}>
         <div className="container mx-auto max-w-2xl px-4 sm:px-6 text-center">
-          <h2 className="font-display text-2xl font-bold mb-3" style={{ color: '#ffffff' }}>
+          <h2 className="font-display text-3xl font-bold mb-3" style={{ color: '#ffffff' }}>
             Votre jardin mérite la même transformation
           </h2>
           <p className="mb-8" style={{ color: '#bbf7d0' }}>
@@ -156,8 +156,8 @@ export default function AvantApresPage() {
           </p>
           <Link
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#80BC00', color: '#ffffff' }}
+            className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-colors hover:bg-[#7E3A37]"
+            style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
           >
             Demander un devis gratuit
             <ArrowRight size={15} aria-hidden="true" />
