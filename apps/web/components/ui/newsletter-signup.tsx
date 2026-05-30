@@ -62,8 +62,8 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
       >
         <CheckCircle size={20} style={{ color: '#749A30' }} aria-hidden="true" />
         <div>
-          <p className="text-sm font-semibold" style={{ color: '#4A6320' }}>
-            📬 Parfait ! Vérifiez votre boîte mail.
+          <p className="text-sm font-semibold inline-flex items-center gap-1.5" style={{ color: '#4A6320' }}>
+            <Mail size={15} aria-hidden="true" /> Parfait ! Vérifiez votre boîte mail.
           </p>
           <p className="text-xs mt-0.5" style={{ color: '#5C606B' }}>
             Vous recevrez nos conseils jardinage chaque mois.
@@ -130,7 +130,7 @@ export function NewsletterSignup({ variant = 'compact' }: NewsletterSignupProps)
             {status === 'loading' ? (
               <Loader2 size={16} className="animate-spin" />
             ) : (
-              <><Mail size={15} aria-hidden="true" /> 📬 Je m&apos;abonne gratuitement</>
+              <><Mail size={15} aria-hidden="true" /> Je m&apos;abonne gratuitement</>
             )}
           </button>
         </form>

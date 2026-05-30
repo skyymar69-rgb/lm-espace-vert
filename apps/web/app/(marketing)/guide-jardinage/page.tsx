@@ -1,8 +1,24 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Calendar } from 'lucide-react'
+import {
+  ArrowRight,
+  Calendar,
+  Snowflake,
+  CloudSun,
+  Sprout,
+  FlowerIcon as Flower,
+  Leaf,
+  Sun,
+  Thermometer,
+  Umbrella,
+  CloudRain,
+} from 'lucide-react'
+import type { LucideProps } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { NewsletterSignup } from '@/components/ui/newsletter-signup'
+
+type IconFC = React.ComponentType<LucideProps>
 
 export const metadata: Metadata = {
   title: "Guide Gratuit : Entretenir son Jardin à Lyon — LM Espace Vert",
@@ -63,10 +79,16 @@ const faqJsonLd = {
   ],
 }
 
-const months = [
+const months: Array<{
+  month: string
+  Icon: IconFC
+  color: string
+  tasks: string[]
+  tip: string
+}> = [
   {
     month: 'Janvier',
-    emoji: '❄️',
+    Icon: Snowflake,
     color: '#5B8DB8',
     tasks: [
       "Taille des arbustes à fleurs d'été (buddleia, hibiscus) — avant montée de sève",
@@ -78,7 +100,7 @@ const months = [
   },
   {
     month: 'Février',
-    emoji: '🌥️',
+    Icon: CloudSun,
     color: '#7A9EB5',
     tasks: [
       'Taille des rosiers (1ère quinzaine de février selon météo)',
@@ -90,7 +112,7 @@ const months = [
   },
   {
     month: 'Mars',
-    emoji: '🌱',
+    Icon: Sprout,
     color: '#6B9E6B',
     tasks: [
       'Taille des arbustes à floraison estivale (spirée, weigelia)',
@@ -102,7 +124,7 @@ const months = [
   },
   {
     month: 'Avril',
-    emoji: '🌸',
+    Icon: Flower,
     color: '#C87AAB',
     tasks: [
       'Désherbage intensif des massifs — priorité absolue',
@@ -114,7 +136,7 @@ const months = [
   },
   {
     month: 'Mai',
-    emoji: '🌿',
+    Icon: Leaf,
     color: '#5BAF5B',
     tasks: [
       'Après le 15 mai : plantations massives (annuelles, vivaces, arbustes)',
@@ -126,7 +148,7 @@ const months = [
   },
   {
     month: 'Juin',
-    emoji: '☀️',
+    Icon: Sun,
     color: '#D4A017',
     tasks: [
       'Taille des haies formelles (buis, laurier, thuya)',
@@ -138,7 +160,7 @@ const months = [
   },
   {
     month: 'Juillet',
-    emoji: '🌡️',
+    Icon: Thermometer,
     color: '#E07B39',
     tasks: [
       'Arrosage tôt le matin ou le soir — jamais en pleine chaleur',
@@ -150,7 +172,7 @@ const months = [
   },
   {
     month: 'Août',
-    emoji: '🏖️',
+    Icon: Sun,
     color: '#D4882A',
     tasks: [
       "Maintien de l'arrosage régulier — ne relâchez pas",
@@ -162,7 +184,7 @@ const months = [
   },
   {
     month: 'Septembre',
-    emoji: '🍂',
+    Icon: Leaf,
     color: '#C47830',
     tasks: [
       'Semis et regarnissage des pelouses (sol chaud + pluies)',
@@ -174,7 +196,7 @@ const months = [
   },
   {
     month: 'Octobre',
-    emoji: '🍁',
+    Icon: Leaf,
     color: '#B5601A',
     tasks: [
       'Plantation des bulbes à floraison printanière (tulipes, narcisses)',
@@ -186,7 +208,7 @@ const months = [
   },
   {
     month: 'Novembre',
-    emoji: '🌧️',
+    Icon: CloudRain,
     color: '#7A8CA0',
     tasks: [
       'Dernier entretien de pelouse : dernière tonte basse (4-5 cm)',
@@ -198,7 +220,7 @@ const months = [
   },
   {
     month: 'Décembre',
-    emoji: '🎄',
+    Icon: Umbrella,
     color: '#2F6E3F',
     tasks: [
       'Période de repos relatif — planifiez votre programme 2027',
@@ -295,8 +317,9 @@ export default function GuideJardinagePage() {
                     {i + 1}
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-sm" style={{ color: '#243238' }}>
-                      {m.emoji} {m.month}
+                    <h3 className="font-display font-bold text-sm inline-flex items-center gap-1.5" style={{ color: '#243238' }}>
+                      <m.Icon size={14} aria-hidden="true" style={{ color: m.color, flexShrink: 0 }} />
+                      {m.month}
                     </h3>
                   </div>
                 </div>

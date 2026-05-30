@@ -1,20 +1,24 @@
 'use client'
 
+import React from 'react'
 import { useState } from 'react'
-import { ArrowRight, RotateCcw } from 'lucide-react'
+import { ArrowRight, RotateCcw, Scissors, Leaf, Sprout, TreeDeciduous, Droplets, Hammer } from 'lucide-react'
+import type { LucideProps } from 'lucide-react'
 import Link from 'next/link'
 
 type Service = 'entretien' | 'haies' | 'creation' | 'elagage' | 'arrosage' | 'terrassement'
 type Surface = 'xs' | 'sm' | 'md' | 'lg'
 type Freq = 'hebdo' | 'bimensuel' | 'mensuel' | 'ponctuel'
 
-const services: { id: Service; label: string; emoji: string }[] = [
-  { id: 'entretien',     label: 'Entretien régulier',    emoji: '✂️' },
-  { id: 'haies',         label: 'Taille de haies',        emoji: '🌿' },
-  { id: 'creation',      label: 'Création de jardin',     emoji: '🌱' },
-  { id: 'elagage',       label: 'Élagage / Abattage',     emoji: '🌳' },
-  { id: 'arrosage',      label: 'Arrosage automatique',   emoji: '💧' },
-  { id: 'terrassement',  label: 'Terrassement / Maçon.',  emoji: '🧱' },
+type IconFC = React.ComponentType<LucideProps>
+
+const services: { id: Service; label: string; Icon: IconFC }[] = [
+  { id: 'entretien',     label: 'Entretien régulier',    Icon: Scissors },
+  { id: 'haies',         label: 'Taille de haies',        Icon: Leaf },
+  { id: 'creation',      label: 'Création de jardin',     Icon: Sprout },
+  { id: 'elagage',       label: 'Élagage / Abattage',     Icon: TreeDeciduous },
+  { id: 'arrosage',      label: 'Arrosage automatique',   Icon: Droplets },
+  { id: 'terrassement',  label: 'Terrassement / Maçon.',  Icon: Hammer },
 ]
 
 const surfaces: { id: Surface; label: string }[] = [
@@ -163,7 +167,7 @@ export function PriceEstimator() {
                   className="flex flex-col items-center gap-1.5 rounded-xl border p-3 text-center text-xs font-medium transition-all hover:border-[#749A30] hover:bg-[rgba(116,154,48,0.05)]"
                   style={{ borderColor: service === svc.id ? '#749A30' : '#EDEDED', color: '#2F2F2F' }}
                 >
-                  <span className="text-xl">{svc.emoji}</span>
+                  <svc.Icon size={20} aria-hidden="true" style={{ color: '#4A6320' }} />
                   {svc.label}
                 </button>
               ))}

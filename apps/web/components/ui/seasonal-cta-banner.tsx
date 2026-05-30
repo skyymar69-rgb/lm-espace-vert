@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { X } from 'lucide-react'
+import { X, Sprout } from 'lucide-react'
 
 const STORAGE_KEY = 'lm-seasonal-banner-dismissed'
 
@@ -41,7 +41,7 @@ export function SeasonalCtaBanner() {
         className="flex items-center gap-2 hover:underline underline-offset-2"
         style={{ color: '#ffffff' }}
       >
-        <span aria-hidden="true">🌿</span>
+        <Sprout size={15} aria-hidden="true" style={{ color: '#749A30', flexShrink: 0 }} />
         <span>
           <strong>Printemps 2026</strong> — Offre création jardin : -10% sur tous les devis acceptés avant le 30 juin
         </span>

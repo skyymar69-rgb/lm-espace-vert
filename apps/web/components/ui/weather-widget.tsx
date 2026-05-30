@@ -1,6 +1,24 @@
 'use client'
 
+import React from 'react'
 import { useState, useEffect } from 'react'
+import {
+  Sun,
+  Moon,
+  CloudSun,
+  Cloud,
+  CloudFog,
+  CloudDrizzle,
+  CloudRain,
+  Snowflake,
+  CloudLightning,
+  Wind,
+  Leaf,
+  MapPin,
+} from 'lucide-react'
+import type { LucideProps } from 'lucide-react'
+
+type IconFC = React.ComponentType<LucideProps>
 
 interface WeatherData {
   temperature: number
@@ -9,16 +27,16 @@ interface WeatherData {
   is_day: number
 }
 
-function getWeatherInfo(code: number, isDay: boolean): { emoji: string; label: string } {
-  if (code === 0)  return { emoji: isDay ? '☀️' : '🌙', label: 'Ciel dégagé' }
-  if (code <= 3)   return { emoji: isDay ? '⛅' : '🌤️', label: 'Nuageux' }
-  if (code <= 48)  return { emoji: '🌫️', label: 'Brouillard' }
-  if (code <= 57)  return { emoji: '🌦️', label: 'Bruine' }
-  if (code <= 67)  return { emoji: '🌧️', label: 'Pluie' }
-  if (code <= 77)  return { emoji: '❄️', label: 'Neige' }
-  if (code <= 82)  return { emoji: '🌦️', label: 'Averses' }
-  if (code <= 86)  return { emoji: '🌨️', label: 'Averses neige' }
-  return                  { emoji: '⛈️', label: 'Orage' }
+function getWeatherInfo(code: number, isDay: boolean): { Icon: IconFC; label: string } {
+  if (code === 0)  return { Icon: isDay ? Sun : Moon,          label: 'Ciel dégagé' }
+  if (code <= 3)   return { Icon: isDay ? CloudSun : Cloud,    label: 'Nuageux' }
+  if (code <= 48)  return { Icon: CloudFog,                    label: 'Brouillard' }
+  if (code <= 57)  return { Icon: CloudDrizzle,                label: 'Bruine' }
+  if (code <= 67)  return { Icon: CloudRain,                   label: 'Pluie' }
+  if (code <= 77)  return { Icon: Snowflake,                   label: 'Neige' }
+  if (code <= 82)  return { Icon: CloudDrizzle,                label: 'Averses' }
+  if (code <= 86)  return { Icon: Snowflake,                   label: 'Averses neige' }
+  return                  { Icon: CloudLightning,              label: 'Orage' }
 }
 
 export function WeatherWidget() {
@@ -53,7 +71,7 @@ export function WeatherWidget() {
 
   if (!weather) return null
 
-  const { emoji, label } = getWeatherInfo(weather.weathercode, weather.is_day === 1)
+  const { Icon, label } = getWeatherInfo(weather.weathercode, weather.is_day === 1)
   const temp = Math.round(weather.temperature)
 
   return (
@@ -70,7 +88,7 @@ export function WeatherWidget() {
           border: '1px solid rgba(116,154,48,0.25)',
         }}
       >
-        <span className="text-sm leading-none" aria-hidden="true">{emoji}</span>
+        <Icon size={14} aria-hidden="true" />
         <span>{temp}°</span>
         <span className="opacity-70">Lyon</span>
       </button>
@@ -83,7 +101,7 @@ export function WeatherWidget() {
             style={{ backgroundColor: '#ffffff', border: '1px solid #EDEDED', boxShadow: '0 8px 32px rgba(0,0,0,0.10)' }}
           >
             <div className="flex items-center gap-3 mb-3 pb-3" style={{ borderBottom: '1px solid #EDEDED' }}>
-              <span className="text-3xl leading-none" aria-hidden="true">{emoji}</span>
+              <Icon size={32} aria-hidden="true" style={{ color: '#4A6320', flexShrink: 0 }} />
               <div>
                 <p className="font-bold text-lg leading-tight" style={{ color: '#1A2E03' }}>{temp}°C</p>
                 <p className="text-xs" style={{ color: '#5C606B' }}>{label}</p>
@@ -91,17 +109,23 @@ export function WeatherWidget() {
             </div>
             <div className="space-y-2 text-xs">
               <div className="flex items-center justify-between">
-                <span style={{ color: '#5C606B' }}>💨 Vent</span>
+                <span className="inline-flex items-center gap-1" style={{ color: '#5C606B' }}>
+                  <Wind size={12} aria-hidden="true" /> Vent
+                </span>
                 <span className="font-semibold" style={{ color: '#1A2E03' }}>{Math.round(weather.windspeed)} km/h</span>
               </div>
               <div className="flex items-center justify-between">
-                <span style={{ color: '#5C606B' }}>🌿 Jardinage</span>
+                <span className="inline-flex items-center gap-1" style={{ color: '#5C606B' }}>
+                  <Leaf size={12} aria-hidden="true" /> Jardinage
+                </span>
                 <span className="font-semibold" style={{ color: weather.weathercode <= 3 ? '#4A6320' : '#5C606B' }}>
                   {weather.weathercode <= 3 ? 'Idéal ✓' : weather.weathercode >= 61 ? 'À éviter' : 'Correct'}
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span style={{ color: '#5C606B' }}>📍 Ville</span>
+                <span className="inline-flex items-center gap-1" style={{ color: '#5C606B' }}>
+                  <MapPin size={12} aria-hidden="true" /> Ville
+                </span>
                 <span className="font-semibold" style={{ color: '#1A2E03' }}>Lyon</span>
               </div>
             </div>

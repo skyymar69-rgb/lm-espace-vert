@@ -232,7 +232,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Header />
         <AnnouncementBanner
-          message="🌱 Printemps 2026 — Devis gratuit sous 24h dans tout le nord-ouest lyonnais"
+          message="Printemps 2026 — Devis gratuit sous 24h dans tout le nord-ouest lyonnais"
           href="/devis"
           cta="Demander un devis"
           dismissKey="banner-printemps-2026"

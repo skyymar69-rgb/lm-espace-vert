@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { X, ArrowRight, Loader2 } from 'lucide-react'
+import { X, ArrowRight, Loader2, Sprout, CheckCircle } from 'lucide-react'
 
 export function ExitIntentPopup() {
   const [visible, setVisible] = useState(false)
@@ -113,10 +113,10 @@ export function ExitIntentPopup() {
 
           {/* Badge */}
           <span
-            className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold mb-3"
+            className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold mb-3"
             style={{ backgroundColor: 'rgba(116,154,48,0.25)', color: '#749A30' }}
           >
-            🌿 Offre exclusive
+            <Sprout size={13} aria-hidden="true" /> Offre exclusive
           </span>
 
           {/* Titre */}
@@ -140,7 +140,9 @@ export function ExitIntentPopup() {
                 className="rounded-xl p-4 text-center"
                 style={{ backgroundColor: 'rgba(116,154,48,0.1)', color: '#4A6320' }}
               >
-                <p className="font-semibold text-sm">✅ Parfait ! Vérifiez votre boîte mail.</p>
+                <p className="font-semibold text-sm inline-flex items-center gap-1.5">
+                  <CheckCircle size={15} aria-hidden="true" /> Parfait ! Vérifiez votre boîte mail.
+                </p>
                 <p className="text-xs mt-1" style={{ color: '#8C8F94' }}>Vous recevrez votre estimation sous peu.</p>
               </div>
             ) : (

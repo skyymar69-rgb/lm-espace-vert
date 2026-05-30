@@ -1356,11 +1356,13 @@ details.faq-item[open] summary .faq-icon { transform: rotate(180deg); }
 
 /* Section divider décoratif */
 .section-leaf-divider::after {
-  content: '🌿';
+  content: '';
   display: block;
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 1rem 0;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, #749A30, #4A6320);
+  border-radius: 1px;
+  margin: 1rem auto;
   opacity: 0.6;
 }
 

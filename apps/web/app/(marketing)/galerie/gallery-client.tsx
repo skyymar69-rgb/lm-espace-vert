@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { X, ChevronLeft, ChevronRight, ArrowRight, FileText } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight, ArrowRight, FileText, MapPin } from 'lucide-react'
 import { realisationsPhotos, photoCategories, catLabel } from '@/lib/realisations-photos'
 
 const categories = photoCategories
@@ -295,9 +295,12 @@ export function GalerieClient() {
                             marginTop: '0.25rem',
                             fontWeight: 500,
                             letterSpacing: '0.02em',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.25rem',
                           }}
                         >
-                          📍 {photo.ville}
+                          <MapPin size={10} aria-hidden="true" /> {photo.ville}
                         </p>
                         <span
                           style={{
@@ -624,7 +627,7 @@ export function GalerieClient() {
                 {currentPhoto.title}
               </p>
               <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8125rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                <span>📍 {currentPhoto.ville}</span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}><MapPin size={12} aria-hidden="true" /> {currentPhoto.ville}</span>
                 <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
                 <span style={{ color: '#749A30', fontWeight: 600 }}>
                   {categories.find((c) => c.id === currentPhoto.cat)?.label}

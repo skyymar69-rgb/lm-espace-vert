@@ -5,6 +5,7 @@ import {
   ArrowRight, Star, Clock, MapPin, Award, Shield, Leaf, Phone,
   Scissors, TreePine, Sprout, Layers, Droplets, Flower2,
   CheckCircle, Search, ClipboardList, Calendar, Users,
+  Sun, Snowflake, FileText, Download, type LucideIcon,
 } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
@@ -186,16 +187,16 @@ const blogItemListJsonLd = {
   })),
 }
 
-function getSeasonalPromo(): { emoji: string; label: string; offer: string } {
+function getSeasonalPromo(): { Icon: LucideIcon; label: string; offer: string } {
   const month = new Date().getMonth() // 0-11
   if (month >= 2 && month <= 4) {
-    return { emoji: '🌱', label: 'Printemps', offer: '-10 % sur la création de jardin' }
+    return { Icon: Sprout, label: 'Printemps', offer: '-10 % sur la création de jardin' }
   } else if (month >= 5 && month <= 7) {
-    return { emoji: '☀️', label: 'Été', offer: 'Arrosage automatique offert dès 2 000 € de travaux' }
+    return { Icon: Sun, label: 'Été', offer: 'Arrosage automatique offert dès 2 000 € de travaux' }
   } else if (month >= 8 && month <= 10) {
-    return { emoji: '🍂', label: 'Automne', offer: 'Taille de haies + débroussaillage -15 %' }
+    return { Icon: Leaf, label: 'Automne', offer: 'Taille de haies + débroussaillage -15 %' }
   } else {
-    return { emoji: '❄️', label: 'Hiver', offer: 'Devis offert + visite conseil gratuite' }
+    return { Icon: Snowflake, label: 'Hiver', offer: 'Devis offert + visite conseil gratuite' }
   }
 }
 
@@ -265,7 +266,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold border transition-opacity hover:opacity-80 backdrop-blur-sm"
               style={{ borderColor: 'rgba(158,75,71,0.55)', color: '#9E4B47', backgroundColor: 'rgba(158,75,71,0.08)' }}
             >
-              {promo.emoji} {promo.label} : {promo.offer}
+              <promo.Icon size={14} aria-hidden="true" /> {promo.label} : {promo.offer}
             </Link>
           </div>
           {/* #2 — trust badges + social-proof bar Google */}
@@ -750,7 +751,7 @@ export default function HomePage() {
               Basé à Saint-Didier-au-Mont-d&apos;Or, nous intervenons dans tout le nord-ouest lyonnais.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-10 max-w-5xl mx-auto">
             {[
               { ville: "Saint-Didier-au-Mont-d'Or", slug: "saint-didier" },
               { ville: "Caluire-et-Cuire", slug: "caluire" },
@@ -769,19 +770,20 @@ export default function HomePage() {
               { ville: "Poleymieux-au-Mont-d'Or", slug: "poleymieux" },
               { ville: "Albigny-sur-Saône", slug: "albigny" },
             ].map(({ ville, slug }) => (
-              slug ? (
-                <Link
-                  key={ville}
-                  href={`/secteur/${slug}`}
-                  className="rounded-full border border-[#DDD9CE] px-4 py-1.5 text-sm text-[#5C606B] hover:border-[#4A6320] hover:text-[#243238] transition-colors flex items-center gap-1.5"
+              <Link
+                key={ville}
+                href={`/secteur/${slug}`}
+                className="group flex items-center gap-3 rounded-xl border bg-white px-4 py-3 text-[0.95rem] font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(36,50,56,0.10)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
+                style={{ borderColor: '#E7E2D6', color: '#243238' }}
+              >
+                <span
+                  className="flex items-center justify-center w-8 h-8 rounded-full flex-shrink-0 transition-colors duration-300 group-hover:bg-[#9E4B47]"
+                  style={{ backgroundColor: 'rgba(116,154,48,0.14)' }}
                 >
-                  🌿 {ville}
-                </Link>
-              ) : (
-                <span key={ville} className="rounded-full border border-[#DDD9CE] px-4 py-1.5 text-sm text-[#5C606B] flex items-center gap-1.5">
-                  🌿 {ville}
+                  <MapPin size={15} aria-hidden="true" className="transition-colors duration-300 group-hover:text-white" style={{ color: '#4A6320' }} />
                 </span>
-              )
+                <span className="leading-tight">{ville}</span>
+              </Link>
             ))}
           </div>
           <div className="text-center mb-8">
@@ -819,7 +821,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-4" style={{ backgroundColor: 'rgba(74,99,32,0.10)', color: '#4A6320' }}>
-              📄 Guide PDF gratuit — 50 pages
+              <FileText size={14} aria-hidden="true" /> Guide PDF gratuit — 50 pages
             </div>
             <h2 className="font-display font-bold mb-3" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', color: '#243238' }}>
               50 conseils pour un jardin impeccable toute l&apos;année
@@ -833,7 +835,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition-all hover:opacity-90 hover:shadow-lg"
               style={{ backgroundColor: '#9E4B47', color: '#ffffff' }}
             >
-              📥 Télécharger le guide <ArrowRight size={14} />
+              <Download size={15} aria-hidden="true" /> Télécharger le guide <ArrowRight size={14} />
             </a>
           </div>
         </div>
@@ -896,7 +898,7 @@ export default function HomePage() {
                     {article.title}
                   </h3>
                   <div className="flex items-center gap-2 mb-2 flex-wrap">
-                    <span className="text-xs text-[#5C606B]">📅 {article.date}</span>
+                    <span className="text-xs text-[#5C606B] inline-flex items-center gap-1"><Calendar size={11} aria-hidden="true" /> {article.date}</span>
                     {article.readingTime && (
                       <span className="inline-block rounded-full px-2 py-0.5 text-xs font-medium" style={{ backgroundColor: 'rgba(74,99,32,0.08)', color: '#4A6320' }}>
                         {article.readingTime}
@@ -998,7 +1000,7 @@ export default function HomePage() {
         />
         <div className="container mx-auto max-w-7xl px-6 sm:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-8" style={{ backgroundColor: 'rgba(158,75,71,0.15)', color: '#e8a09d', border: '1px solid rgba(158,75,71,0.35)' }}>
-            ⚡ Réponse garantie sous 2h en semaine
+            <Clock size={13} aria-hidden="true" /> Réponse garantie sous 2h en semaine
           </div>
           <h2 className="font-display font-bold text-white mb-4 max-w-3xl mx-auto" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.025em', lineHeight: 1.08 }}>
             Ne laissez pas votre jardin se dégrader cet été

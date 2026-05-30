@@ -1,9 +1,13 @@
-﻿import type { Metadata } from 'next'
+﻿import React from 'react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { ArrowRight, CheckCircle, Scissors, Leaf, Sprout, TreeDeciduous, Droplets, Hammer } from 'lucide-react'
+import type { LucideProps } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { PriceEstimator } from '@/components/ui/price-estimator'
 import { NewsletterSignup } from '@/components/ui/newsletter-signup'
+
+type IconFC = React.ComponentType<LucideProps>
 
 export const metadata: Metadata = {
   title: "Tarifs Paysagiste Lyon Nord | LM Espace Vert — Prix & Devis",
@@ -76,11 +80,19 @@ const faqTarifsJsonLd = {
   ],
 }
 
-const pricingData = [
+const pricingData: Array<{
+  id: string
+  title: string
+  Icon: IconFC
+  description: string
+  href: string
+  headers: string[]
+  rows: Array<Record<string, string>>
+}> = [
   {
     id: 'entretien',
     title: "Entretien d'espaces verts",
-    emoji: '✂️',
+    Icon: Scissors,
     description: "Tonte, taille de haies basique, désherbage, soufflage. Tarif par passage.",
     href: '/services/entretien-espaces-verts',
     rows: [
@@ -94,7 +106,7 @@ const pricingData = [
   {
     id: 'haies',
     title: 'Taille de haies',
-    emoji: '🌿',
+    Icon: Leaf,
     description: "Taille soignée de haies formelles ou libres. Prix par prestation.",
     href: '/services/entretien-espaces-verts',
     rows: [
@@ -108,7 +120,7 @@ const pricingData = [
   {
     id: 'creation',
     title: 'Création de jardins',
-    emoji: '🌱',
+    Icon: Sprout,
     description: "Conception paysagère sur-mesure, fourniture et plantation. Tarif clé en main.",
     href: '/services/creation-jardins',
     rows: [
@@ -122,7 +134,7 @@ const pricingData = [
   {
     id: 'elagage',
     title: 'Élagage & Abattage',
-    emoji: '🌳',
+    Icon: TreeDeciduous,
     description: "Élagage raisonné, abattage sécurisé, broyage des rémanents.",
     href: '/services/elagage-abattage',
     rows: [
@@ -136,7 +148,7 @@ const pricingData = [
   {
     id: 'arrosage',
     title: 'Arrosage automatique',
-    emoji: '💧',
+    Icon: Droplets,
     description: "Installation complète : pose des tuyaux, programmateur, têtes de diffusion.",
     href: '/services/arrosage-automatique',
     rows: [
@@ -150,7 +162,7 @@ const pricingData = [
   {
     id: 'terrassement',
     title: 'Terrassement & Maçonnerie paysagère',
-    emoji: '🧱',
+    Icon: Hammer,
     description: "Terrasses, allées, murets, escaliers en pierres naturelles ou pavés.",
     href: '/services/maconnerie-paysagere',
     rows: [
@@ -223,7 +235,9 @@ export default function TarifsPage() {
             {pricingData.map((service) => (
               <section key={service.id} aria-labelledby={`tarif-${service.id}`}>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl">{service.emoji}</span>
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg flex-shrink-0" style={{ backgroundColor: 'rgba(116,154,48,0.10)' }}>
+                    <service.Icon size={18} aria-hidden="true" style={{ color: '#4A6320' }} />
+                  </span>
                   <div>
                     <h2 id={`tarif-${service.id}`} className="font-display text-xl font-bold" style={{ color: '#243238' }}>
                       {service.title}

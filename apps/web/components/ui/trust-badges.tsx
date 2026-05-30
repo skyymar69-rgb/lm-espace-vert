@@ -1,16 +1,22 @@
+import React from 'react'
+import { Award, Star, Leaf, FileText, ShieldCheck, MapPin } from 'lucide-react'
+import type { LucideProps } from 'lucide-react'
+
+type IconFC = React.ComponentType<LucideProps>
+
 type Badge = {
-  icon: string
+  Icon: IconFC
   title: string
   subtitle: string
 }
 
 const DEFAULT_BADGES: Badge[] = [
-  { icon: '🏆', title: '5 ans d\'expérience', subtitle: 'Artisan qualifié' },
-  { icon: '⭐', title: '5/5 sur Google', subtitle: '28 avis vérifiés' },
-  { icon: '🌿', title: 'Produits éco-responsables', subtitle: 'Respect de la biodiversité' },
-  { icon: '📋', title: 'Devis gratuit', subtitle: 'Réponse en 24h' },
-  { icon: '🔒', title: 'Assuré & garanti', subtitle: 'RC professionnelle' },
-  { icon: '📍', title: 'Local & de confiance', subtitle: 'Basé à Saint-Didier' },
+  { Icon: Award,       title: '5 ans d\'expérience',         subtitle: 'Artisan qualifié' },
+  { Icon: Star,        title: '5/5 sur Google',              subtitle: '28 avis vérifiés' },
+  { Icon: Leaf,        title: 'Produits éco-responsables',   subtitle: 'Respect de la biodiversité' },
+  { Icon: FileText,    title: 'Devis gratuit',               subtitle: 'Réponse en 24h' },
+  { Icon: ShieldCheck, title: 'Assuré & garanti',            subtitle: 'RC professionnelle' },
+  { Icon: MapPin,      title: 'Local & de confiance',        subtitle: 'Basé à Saint-Didier' },
 ]
 
 type Props = {
@@ -31,7 +37,7 @@ export function TrustBadges({ badges = DEFAULT_BADGES, columns = 3 }: Props) {
       {badges.map((badge) => (
         <div key={badge.title} className="trust-badge">
           <div className="trust-badge-icon">
-            <span aria-hidden="true">{badge.icon}</span>
+            <badge.Icon size={22} aria-hidden="true" style={{ color: '#4A6320' }} />
           </div>
           <div>
             <p className="font-bold text-sm leading-tight" style={{ color: '#2F2F2F' }}>{badge.title}</p>

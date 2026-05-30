@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
-import { X, Download, Share2, Phone, Mail, Globe, MapPin, MessageCircle, CreditCard } from 'lucide-react'
+import { X, Download, Share2, Phone, Mail, Globe, MapPin, MessageCircle, CreditCard, Star, type LucideIcon } from 'lucide-react'
 import QRCode from 'qrcode'
 import { WHATSAPP } from '@/lib/social'
 
@@ -14,15 +14,17 @@ interface QRData {
   avis: string
 }
 
-const QR_TABS: { key: QrTab; label: string; icon: string }[] = [
-  { key: 'site',  label: 'Site web',        icon: '🌿' },
-  { key: 'maps',  label: 'Google Maps',     icon: '📍' },
-  { key: 'avis',  label: 'Laisser un avis', icon: '⭐' },
+const QR_TABS: { key: QrTab; label: string; Icon: LucideIcon }[] = [
+  { key: 'site',  label: 'Site web',        Icon: Globe },
+  { key: 'maps',  label: 'Google Maps',     Icon: MapPin },
+  { key: 'avis',  label: 'Laisser un avis', Icon: Star },
 ]
 
 const QR_OPTIONS = {
-  width: 256,
+  width: 320,
   margin: 2,
+  // 'H' = correction d'erreur 30 % → permet un logo au centre sans casser le scan
+  errorCorrectionLevel: 'H' as const,
   color: { dark: '#243238', light: '#ffffff' },
 }
 
@@ -213,28 +215,28 @@ export function DigitalContactCard() {
                 role="tablist"
                 aria-label="Choisir le QR code"
               >
-                {QR_TABS.map(({ key, label, icon }) => (
+                {QR_TABS.map(({ key, label, Icon }) => (
                   <button
                     key={key}
                     role="tab"
                     aria-selected={activeQr === key}
                     onClick={() => setActiveQr(key)}
-                    className="flex-1 flex flex-col items-center gap-0.5 py-2 px-1 rounded-lg text-xs font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
+                    className="flex-1 flex flex-col items-center gap-1 py-2 px-1 rounded-lg text-xs font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
                     style={
                       activeQr === key
                         ? { backgroundColor: '#ffffff', color: '#243238', boxShadow: '0 1px 4px rgba(0,0,0,0.10)' }
                         : { color: '#5C606B' }
                     }
                   >
-                    <span className="text-base leading-none" aria-hidden="true">{icon}</span>
+                    <Icon size={17} aria-hidden="true" style={{ color: activeQr === key ? '#9E4B47' : '#5C606B' }} />
                     <span className="leading-tight text-center" style={{ fontSize: '10px' }}>{label}</span>
                   </button>
                 ))}
               </div>
 
-              {/* QR display */}
+              {/* QR display — avec logo LM au centre */}
               <div
-                className="flex items-center justify-center rounded-2xl overflow-hidden mx-auto"
+                className="relative flex items-center justify-center rounded-2xl overflow-hidden mx-auto"
                 style={{
                   width: 220,
                   height: 220,
@@ -244,12 +246,27 @@ export function DigitalContactCard() {
                 }}
               >
                 {qr ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={qr[activeQr]}
-                    alt={`QR Code ${QR_TABS.find(t => t.key === activeQr)?.label ?? activeQr}`}
-                    className="w-full h-full object-contain"
-                  />
+                  <>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={qr[activeQr]}
+                      alt={`QR Code ${QR_TABS.find(t => t.key === activeQr)?.label ?? activeQr}`}
+                      className="w-full h-full object-contain"
+                    />
+                    {/* Logo centré (pastille blanche pour rester scannable) */}
+                    <span
+                      className="absolute flex items-center justify-center"
+                      aria-hidden="true"
+                      style={{
+                        left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
+                        width: 50, height: 50, borderRadius: 12,
+                        backgroundColor: '#ffffff', padding: 6,
+                        boxShadow: '0 1px 5px rgba(36,50,56,0.18)',
+                      }}
+                    >
+                      <Image src="/logo.png" alt="" width={42} height={42} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
+                    </span>
+                  </>
                 ) : (
                   <div className="w-full h-full rounded-xl animate-pulse" style={{ backgroundColor: '#F4F9E8' }} />
                 )}
