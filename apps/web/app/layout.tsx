@@ -1,6 +1,6 @@
 ﻿import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { raleway, montserrat } from './fonts'
+import { outfit } from './fonts'
 import './globals.css'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
@@ -111,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="fr"
-      className={`${raleway.variable} ${montserrat.variable}`}
+      className={outfit.variable}
     >
       <head>
         {/* Preconnect: 3 origins max (next/font auto-handles Google Fonts) */}

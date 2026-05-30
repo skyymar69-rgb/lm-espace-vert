@@ -1,15 +1,10 @@
-import { Raleway, Montserrat } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 
-export const raleway = Raleway({
+// Refonte design — Outfit (sans-serif géométrique moderne), police unique
+// pour titres et corps, conformément au thème de référence.
+export const outfit = Outfit({
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
   weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-raleway',
-})
-
-export const montserrat = Montserrat({
-  subsets: ['latin', 'latin-ext'],
-  display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat',
+  variable: '--font-outfit',
 })
