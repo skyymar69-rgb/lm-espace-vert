@@ -284,8 +284,8 @@ export const beforeAfterPairs: BeforeAfter[] = [
   },
 ]
 
-// Photo héro principale (jardin contemporain avec piscine).
+// Photo héro principale — jardin paysager (pelouse, pas de maison au premier plan).
 export const heroPhoto = {
-  src: `${B}/lm-09.webp`,
-  alt: 'Jardin paysager contemporain avec piscine et pelouse soignée réalisé par LM Espace Vert près de Lyon',
+  src: `${B}/lm-04.webp`,
+  alt: 'Jardin paysager avec pelouse fraîche, jeune arbre et clôture soignée réalisé par LM Espace Vert près de Lyon',
 }
