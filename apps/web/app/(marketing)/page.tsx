@@ -8,7 +8,9 @@ import {
 } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
-import { beforeAfterPairs, heroPhoto } from '@/lib/realisations-photos'
+import { heroPhoto } from '@/lib/realisations-photos'
+import { BeforeAfterSlider } from '@/components/ui/before-after-slider'
+import { PartnersMarquee } from '@/components/sections/partners-marquee'
 import { GOOGLE_RATING, GOOGLE_RATING_NUM, GOOGLE_REVIEWS, EXPERIENCE_YEARS } from '@/lib/business'
 import { StatCounter } from '@/components/ui/stat-counter'
 import { FAQSection } from '@/components/ui/faq-section'
@@ -342,16 +344,18 @@ export default function HomePage() {
       <section style={{ backgroundColor: '#F4F1E9' }} className="py-28 lg:py-36" aria-labelledby="about-heading">
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(36,50,56,0.12)]" style={{ aspectRatio: '4/3' }}>
+            <div
+              className="rounded-2xl shadow-[0_20px_60px_rgba(36,50,56,0.10)] flex items-center justify-center"
+              style={{ aspectRatio: '4/3', backgroundColor: '#FFFFFF', border: '1px solid #E7E2D6', padding: '2.5rem' }}
+            >
               <Image
-                src="/images/leo-portrait.webp"
-                alt="Léo Maurice, fondateur et paysagiste LM Espace Vert à Saint-Didier-au-Mont-d'Or"
-                width={640}
-                height={480}
-                className="object-cover w-full h-full"
-                quality={82}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                placeholder="empty"
+                src="/logo.png"
+                alt="Logo LM Espace Vert — paysagiste à Saint-Didier-au-Mont-d'Or"
+                width={520}
+                height={200}
+                className="w-full h-auto object-contain"
+                style={{ maxWidth: '380px' }}
+                quality={90}
                 loading="lazy"
               />
             </div>
@@ -427,40 +431,33 @@ export default function HomePage() {
               .
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-10">
-            {beforeAfterPairs.map((item) => (
-              <div key={item.title} className="group rounded-2xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_60px_rgba(36,50,56,0.14)] transition-shadow duration-500" style={{ border: '1px solid rgba(221,217,206,0.8)' }}>
-                <div className="relative grid grid-cols-2" style={{ gap: '2px', backgroundColor: '#D4D0C8' }}>
-                  {/* Séparateur central élégant */}
-                  <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px z-10" style={{ background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.9) 15%, rgba(255,255,255,0.9) 85%, transparent)' }} aria-hidden="true" />
-                  <div className="relative overflow-hidden" style={{ height: '14rem' }}>
-                    {/* #29 — loading lazy sur avant/après */}
-                    <Image src={item.avant} alt={`Avant — ${item.title}, ${item.ville}`} fill className="object-cover group-hover:scale-[1.03] transition-transform duration-700" sizes="(max-width:640px)50vw,25vw" loading="lazy" />
-                    <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full tracking-wider" style={{ backgroundColor: 'rgba(47,47,47,0.88)', color: '#ffffff', backdropFilter: 'blur(4px)' }}>AVANT</span>
-                  </div>
-                  <div className="relative overflow-hidden" style={{ height: '14rem' }}>
-                    <Image src={item.apres} alt={`Après — ${item.title}, ${item.ville}`} fill className="object-cover group-hover:scale-[1.03] transition-transform duration-700" sizes="(max-width:640px)50vw,25vw" loading="lazy" />
-                    <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full tracking-wider" style={{ backgroundColor: '#749A30', color: '#ffffff', backdropFilter: 'blur(4px)' }}>APRÈS</span>
-                  </div>
-                </div>
-                <div className="px-6 py-5 bg-white">
-                  <p className="text-sm font-bold" style={{ color: '#243238' }}>{item.title} — {item.ville}</p>
-                  {/* #21 — label type de prestation */}
-                  <p className="text-xs mt-1.5 flex items-center gap-1.5" style={{ color: '#5C606B' }}>
+          <div className="grid md:grid-cols-2 gap-10">
+            {[
+              {
+                title: 'Aménagement complet de jardin',
+                sub: 'Pelouse, allée pavée et remise en état',
+                before: { src: '/images/avant-apres/avant1.webp', alt: 'Avant — jardin en friche avant aménagement paysager' },
+                after: { src: '/images/avant-apres/apres1.webp', alt: 'Après — jardin aménagé avec pelouse soignée et allée pavée' },
+              },
+              {
+                title: 'Débroussaillage et remise en état',
+                sub: 'Nettoyage, taille et entretien',
+                before: { src: '/images/avant-apres/avant2.webp', alt: 'Avant — talus envahi par la végétation' },
+                after: { src: '/images/avant-apres/apres2.webp', alt: 'Après — talus débroussaillé et nettoyé le long du mur' },
+              },
+            ].map((p) => (
+              <div
+                key={p.title}
+                className="rounded-2xl overflow-hidden bg-white shadow-[0_8px_40px_rgba(0,0,0,0.08)]"
+                style={{ border: '1px solid rgba(221,217,206,0.8)' }}
+              >
+                <BeforeAfterSlider before={p.before} after={p.after} height={340} />
+                <div className="px-6 py-5">
+                  <p className="text-base font-bold" style={{ color: '#243238' }}>{p.title}</p>
+                  <p className="text-sm mt-1.5 flex items-center gap-1.5" style={{ color: '#5C606B' }}>
                     <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#749A30' }} aria-hidden="true" />
-                    {item.tag} · {item.description}
+                    {p.sub} · <span style={{ color: '#9E4B47', fontWeight: 600 }}>glissez le curseur</span>
                   </p>
-                  {/* Micro-stats : icônes type + ville */}
-                  <div className="flex flex-wrap items-center gap-3 mt-3 pt-3" style={{ borderTop: '1px solid rgba(237,237,237,0.8)' }}>
-                    <span className="inline-flex items-center gap-1 text-xs font-medium" style={{ color: '#4A6320' }}>
-                      <Leaf size={11} aria-hidden="true" style={{ color: '#749A30' }} />
-                      {item.tag}
-                    </span>
-                    <span className="inline-flex items-center gap-1 text-xs" style={{ color: '#5C606B' }}>
-                      <MapPin size={11} aria-hidden="true" />
-                      {item.ville}
-                    </span>
-                  </div>
                 </div>
               </div>
             ))}
@@ -472,6 +469,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── SECTION : PARTENAIRES (logos défilants) ── */}
+      <PartnersMarquee />
 
       {/* ── SECTION 4 : SERVICES ── */}
       <section id="services" className="py-28 lg:py-36" style={{ backgroundColor: '#F4F1E9' }} aria-labelledby="services-heading">

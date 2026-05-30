@@ -10,7 +10,7 @@ export const EXPERIENCE_YEARS = CURRENT_YEAR - FOUNDED_YEAR // 7
 // Avis Google — valeurs unifiées (à confirmer avec la fiche Google Business réelle)
 export const GOOGLE_RATING = '4,9' // affichage FR
 export const GOOGLE_RATING_NUM = '4.9' // pour schema.org
-export const GOOGLE_REVIEWS = 47
+export const GOOGLE_REVIEWS = 15 // chiffre réel Google (vu sur lmespacevert.fr)
 
 // Volume d'activité
 export const PROJECTS_DONE = '200+'

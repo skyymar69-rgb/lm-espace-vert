@@ -64,7 +64,7 @@ export function BeforeAfterSlider({ before, after, label, height = 400 }: Props)
         <span className="absolute top-3 left-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded-md pointer-events-none">
           AVANT
         </span>
-        <span className="absolute top-3 right-3 text-white text-xs font-bold px-2 py-1 rounded-md pointer-events-none" style={{ backgroundColor: '#80BC00' }}>
+        <span className="absolute top-3 right-3 text-white text-xs font-bold px-2 py-1 rounded-md pointer-events-none" style={{ backgroundColor: '#749A30' }}>
           APRÈS
         </span>
 
