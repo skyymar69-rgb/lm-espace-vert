@@ -223,14 +223,14 @@ export default function HomePage() {
             sizes="100vw"
           />
         </div>
-        {/* Overlay raffiné : dégradé vertical profond en bas + teinte latérale gauche */}
+        {/* Overlay : voile latéral (lisibilité du texte à gauche) — la photo du jardin reste bien visible à droite et en haut */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to top, rgba(36,50,56,0.97) 0%, rgba(36,50,56,0.75) 35%, rgba(36,50,56,0.25) 65%, transparent 100%)' }}
+          style={{ background: 'linear-gradient(to top, rgba(36,50,56,0.78) 0%, rgba(36,50,56,0.38) 42%, rgba(36,50,56,0.06) 72%, transparent 100%)' }}
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(90deg, rgba(36,50,56,0.45) 0%, transparent 60%)' }}
+          style={{ background: 'linear-gradient(90deg, rgba(36,50,56,0.80) 0%, rgba(36,50,56,0.38) 38%, transparent 72%)' }}
         />
         <div className="relative container mx-auto max-w-7xl px-6 sm:px-8 pb-24 lg:pb-36">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-8 flex items-center gap-3" style={{ color: '#9E4B47' }}>
