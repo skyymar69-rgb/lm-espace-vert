@@ -3,11 +3,11 @@
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 
-// 3 photos HD du jardin (défilement type carrousel, comme le site d'origine).
+// 3 photos HD de jardin (défilement type carrousel). Jardins mis en avant — pas de maison ni d'eau stagnante.
 const SLIDES = [
-  { src: '/images/realisations/lm-04.webp', alt: 'Jardin avec pelouse fraîche et clôture soignée — LM Espace Vert' },
-  { src: '/images/realisations/lm-30.webp', alt: 'Terrasse en bois et bassin paysager réalisés par LM Espace Vert' },
-  { src: '/images/realisations/lm-41.webp', alt: 'Massif fleuri et pelouse soignée — création paysagère LM Espace Vert' },
+  { src: '/images/realisations/lm-04.webp', alt: 'Jardin avec pelouse fraîche et jeune arbre — LM Espace Vert' },
+  { src: '/images/realisations/lm-11.webp', alt: 'Pelouse soignée avec arbre et haie taillée — LM Espace Vert' },
+  { src: '/images/realisations/lm-24.webp', alt: 'Jardin paysager avec haie, massifs et terrasse — LM Espace Vert' },
 ]
 
 export function HeroSlideshow() {
@@ -55,7 +55,7 @@ export function HeroSlideshow() {
         <div
           key={slide.src}
           className="absolute inset-0 hero-slide"
-          style={{ opacity: i === active ? 1 : 0, zIndex: i === active ? 1 : 0 }}
+          style={{ opacity: i === active ? 1 : 0 }}
         >
           <Image
             src={slide.src}
