@@ -271,7 +271,7 @@ const services = [
     icon: Flower2,
     title: 'Engazonnement',
     slug: 'engazonnement',
-    image: '/images/realisations/lm-41.webp',
+    image: '/images/realisations/lm-04.webp',
     imageAlt: "Engazonnement et création de pelouse à Neuville-sur-Saône par LM Espace Vert",
     price: 'À partir de 300€',
     desc: "Une belle pelouse est la base d'un jardin réussi. Nous créons votre gazon par semis ou en rouleaux selon vos besoins, et vous proposons des prairies fleuries pour plus de biodiversité.",

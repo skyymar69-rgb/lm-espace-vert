@@ -9,6 +9,7 @@ import { CookieBanner } from '@/components/layout/cookie-banner'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { FloatingSocialBar } from '@/components/ui/floating-social-bar'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
+import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { BackToTop } from '@/components/ui/back-to-top'
 import { StickyContactBar } from '@/components/layout/sticky-contact-bar'
 import { AnnouncementBanner } from '@/components/layout/announcement-banner'
@@ -229,6 +230,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* #5 Scroll progress bar */}
         <ScrollProgress />
+        {/* Apparition au défilement (reveal) */}
+        <ScrollReveal />
 
         <Header />
         <AnnouncementBanner

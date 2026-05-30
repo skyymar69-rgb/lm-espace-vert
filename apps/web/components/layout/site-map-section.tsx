@@ -10,7 +10,7 @@ const mainPages = [
   {
     label: 'Nos Services',
     href: '/services',
-    photo: '/images/realisations/lm-30.webp',
+    photo: '/images/realisations/lm-28.webp',
   },
   {
     label: 'Réalisations',

@@ -78,12 +78,12 @@ const localBusinessJsonLd = {
 
 // #6 — liens spécifiques vers chaque page service
 const services = [
-  { icon: Scissors, title: "Entretien d'espaces verts", desc: 'Tonte, taille de haies, désherbage. Votre jardin toujours impeccable.', image: '/images/realisations/lm-24.webp', href: '/services/entretien-espaces-verts' },
+  { icon: Scissors, title: "Entretien d'espaces verts", desc: 'Tonte, taille de haies, désherbage. Votre jardin toujours impeccable.', image: '/images/realisations/lm-08.webp', href: '/services/entretien-espaces-verts' },
   { icon: TreePine, title: 'Élagage & Abattage', desc: 'Élagage raisonné et abattage sécurisé par des professionnels équipés.', image: '/images/realisations/lm-20.webp', href: '/services/elagage-abattage' },
   { icon: Sprout, title: 'Création de jardins', desc: 'Conception paysagère sur-mesure, de la terrasse au parc résidentiel.', image: '/images/realisations/lm-18.webp', href: '/services/creation-jardins' },
-  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/realisations/lm-30.webp', href: '/services/maconnerie-paysagere' },
+  { icon: Layers, title: 'Maçonnerie paysagère', desc: 'Terrasses, allées et murets en pierres naturelles de qualité.', image: '/images/realisations/lm-28.webp', href: '/services/maconnerie-paysagere' },
   { icon: Droplets, title: 'Arrosage automatique', desc: "Systèmes d'arrosage intelligents pour économiser l'eau.", image: '/images/realisations/lm-11.webp', href: '/services/arrosage-automatique' },
-  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/realisations/lm-41.webp', href: '/services/engazonnement' },
+  { icon: Flower2, title: 'Engazonnement', desc: 'Création de pelouses par semis ou gazon en rouleaux.', image: '/images/realisations/lm-04.webp', href: '/services/engazonnement' },
 ] as const
 
 // #17 — durées estimées sous chaque step
@@ -292,6 +292,11 @@ export default function HomePage() {
             </span>
           </div>
         </div>
+        {/* Indicateur de défilement */}
+        <div className="hero-scroll-cue" aria-hidden="true">
+          <span>Découvrir</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+        </div>
       </section>
 
       {/* ── SECTION 2 : STATS ── */}
@@ -409,7 +414,7 @@ export default function HomePage() {
       {/* ── SECTION : AVANT / APRÈS ── */}
       <section className="bg-white py-28 lg:py-36" aria-labelledby="before-after-heading">
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div data-reveal className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: '#9E4B47' }}>Nos Transformations</p>
             <h2 id="before-after-heading" className="font-display font-bold" style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)', color: '#243238', letterSpacing: '-0.02em' }}>
               Avant &amp; Après — le résultat parle
@@ -467,7 +472,7 @@ export default function HomePage() {
       {/* ── SECTION 4 : SERVICES ── */}
       <section id="services" className="py-28 lg:py-36" style={{ backgroundColor: '#F4F1E9' }} aria-labelledby="services-heading">
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div data-reveal className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: '#9E4B47' }}>Nos Prestations</p>
             <h2 id="services-heading" className="font-display font-bold" style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)', color: '#243238', letterSpacing: '-0.02em' }}>
               Tous vos projets extérieurs
@@ -560,7 +565,7 @@ export default function HomePage() {
       {/* ── SECTION 5 : POURQUOI NOUS ── */}
       <section className="bg-white py-28 lg:py-36" aria-labelledby="why-heading">
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div data-reveal className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: '#9E4B47' }}>Nos Engagements</p>
             <h2 id="why-heading" className="font-display font-bold" style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)', color: '#243238', letterSpacing: '-0.02em' }}>
               Pourquoi choisir LM Espace Vert ?
@@ -595,7 +600,7 @@ export default function HomePage() {
       {/* ── SECTION 6 : PROCESSUS ── */}
       <section style={{ backgroundColor: '#F4F1E9' }} className="py-28 lg:py-36" aria-labelledby="process-heading">
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div data-reveal className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: '#9E4B47' }}>Comment ça marche ?</p>
             <h2 id="process-heading" className="font-display font-bold" style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)', color: '#243238', letterSpacing: '-0.02em' }}>
               Un accompagnement simple de A à Z
@@ -642,7 +647,7 @@ export default function HomePage() {
       {/* ── SECTION 7 : TÉMOIGNAGES ── */}
       <section className="bg-white py-28 lg:py-36" aria-label="Avis clients">
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div data-reveal className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: '#9E4B47' }}>Avis Clients</p>
             <h2 className="font-display font-bold" style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.25rem)', color: '#243238', letterSpacing: '-0.02em' }}>Ce que disent nos clients</h2>
             <div className="flex items-center justify-center gap-1 mt-4">
@@ -817,7 +822,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 18 : GUIDE GRATUIT (Lead Magnet) ── */}
-      <section style={{ backgroundColor: '#F4F1E9' }} className="py-20 border-y border-[#DDD9CE]" aria-label="Guide gratuit jardinage">
+      <section style={{ backgroundColor: '#F4F1E9' }} className="py-20 border-y border-[#DDD9CE] leaf-accent" aria-label="Guide gratuit jardinage">
         <div className="container mx-auto max-w-7xl px-6 sm:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-4" style={{ backgroundColor: 'rgba(74,99,32,0.10)', color: '#4A6320' }}>
