@@ -5,7 +5,7 @@ import {
   ArrowRight, Star, Clock, MapPin, Award, Shield, Leaf, Phone,
   Scissors, TreePine, Sprout, Layers, Droplets, Flower2,
   CheckCircle, Search, ClipboardList, Calendar, Users,
-  Sun, Snowflake, FileText, Download, type LucideIcon,
+  FileText, Download,
 } from 'lucide-react'
 import { JsonLd } from '@/components/seo/json-ld'
 import { articles } from '@/lib/articles'
@@ -18,6 +18,7 @@ import { FAQSection } from '@/components/ui/faq-section'
 import { ExitIntentPopup } from '@/components/ui/exit-intent-popup'
 import { NewsletterSignup } from '@/components/ui/newsletter-signup'
 import { GoogleReviewsBadge } from '@/components/ui/google-reviews-badge'
+import { GoogleReviewsCarousel } from '@/components/sections/google-reviews-carousel'
 
 export const metadata: Metadata = {
   title: "Paysagiste Saint-Didier-au-Mont-d'Or & Lyon — LM Espace Vert",
@@ -62,12 +63,12 @@ const localBusinessJsonLd = {
   sameAs: [
     'https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/',
     'https://www.instagram.com/lm_espacevert',
-    'https://maps.app.goo.gl/rA4sfge3evAuVJLC9',
+    'https://maps.app.goo.gl/KkB9EVAchidTC4G59',
   ],
   priceRange: '€€',
   currenciesAccepted: 'EUR',
   paymentAccepted: 'Cash, Carte bancaire, Virement',
-  hasMap: 'https://maps.app.goo.gl/rA4sfge3evAuVJLC9',
+  hasMap: 'https://maps.app.goo.gl/KkB9EVAchidTC4G59',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: GOOGLE_RATING_NUM,
@@ -94,10 +95,11 @@ const processSteps = [
   { num: 4, Icon: CheckCircle, title: 'Réalisation soignée', desc: "Nos équipes interviennent dans les délais convenus avec passion.", duration: 'Intervention sous 2 semaines' },
 ] as const
 
+// Avis réels issus de la fiche Google « LM Espace Vert » (5/5 · 20 avis) — repli si le widget n'est pas configuré
 const testimonials = [
-  { name: "Marie L.", city: "Saint-Didier-au-Mont-d'Or", rating: 5, text: "Léo a transformé notre jardin en un vrai havre de paix. Travail soigné, ponctuel et à l'écoute. Je recommande vivement !" },
-  { name: "Pierre D.", city: "Caluire-et-Cuire", rating: 5, text: "Excellent paysagiste ! Entretien régulier de notre propriété depuis 2 ans, toujours impeccable. Tarifs honnêtes et équipe sérieuse." },
-  { name: "Sophie M.", city: "Écully", rating: 5, text: "Création de notre terrasse et jardin en 3 semaines. Résultat magnifique, au-delà de nos espérances. Merci à toute l'équipe !" },
+  { name: "Patricia Ferrere", date: "Il y a 1 semaine", rating: 5, text: "Envoi des devis et interventions très rapides et qualitatives. Léo est de très bon conseil, disponible pour échanger. Nous le conseillons !" },
+  { name: "Gaelle Jaine", date: "Il y a 1 semaine", rating: 5, text: "Un début de collaboration qui se met en place de manière très fluide ! Merci !" },
+  { name: "Marie-Laurence Coquet", date: "Il y a 3 semaines", rating: 5, text: "Travail soigné et de qualité. Entreprise très sérieuse." },
 ] as const
 
 // #19 — 4 articles au lieu de 3
@@ -187,21 +189,8 @@ const blogItemListJsonLd = {
   })),
 }
 
-function getSeasonalPromo(): { Icon: LucideIcon; label: string; offer: string } {
-  const month = new Date().getMonth() // 0-11
-  if (month >= 2 && month <= 4) {
-    return { Icon: Sprout, label: 'Printemps', offer: '-10 % sur la création de jardin' }
-  } else if (month >= 5 && month <= 7) {
-    return { Icon: Sun, label: 'Été', offer: 'Arrosage automatique offert dès 2 000 € de travaux' }
-  } else if (month >= 8 && month <= 10) {
-    return { Icon: Leaf, label: 'Automne', offer: 'Taille de haies + débroussaillage -15 %' }
-  } else {
-    return { Icon: Snowflake, label: 'Hiver', offer: 'Devis offert + visite conseil gratuite' }
-  }
-}
 
 export default function HomePage() {
-  const promo = getSeasonalPromo()
   return (
     <>
       <JsonLd data={localBusinessJsonLd} />
@@ -259,20 +248,10 @@ export default function HomePage() {
               Voir nos réalisations
             </Link>
           </div>
-          {/* #5 — badge promo saisonnier */}
-          <div className="mb-8">
-            <Link
-              href="/devis"
-              className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold border transition-opacity hover:opacity-80 backdrop-blur-sm"
-              style={{ borderColor: 'rgba(158,75,71,0.55)', color: '#9E4B47', backgroundColor: 'rgba(158,75,71,0.08)' }}
-            >
-              <promo.Icon size={14} aria-hidden="true" /> {promo.label} : {promo.offer}
-            </Link>
-          </div>
           {/* #2 — trust badges + social-proof bar Google */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
+              href="https://maps.app.goo.gl/KkB9EVAchidTC4G59"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-sm hover:opacity-90 transition-opacity backdrop-blur-sm rounded-full px-4 py-1.5"
@@ -661,7 +640,9 @@ export default function HomePage() {
               <GoogleReviewsBadge rating={Number(GOOGLE_RATING_NUM)} count={GOOGLE_REVIEWS} />
             </div>
           </div>
-          <ul role="list" className="grid sm:grid-cols-3 gap-8">
+          <GoogleReviewsCarousel
+            fallback={
+              <ul role="list" className="grid sm:grid-cols-3 gap-8">
             {testimonials.map((t) => (
               <li key={t.name}>
                 <article className="rounded-2xl p-8 h-full flex flex-col relative overflow-hidden" style={{ backgroundColor: '#F4F1E9', boxShadow: '0 4px 32px rgba(0,0,0,0.06)', border: '1px solid rgba(221,217,206,0.8)' }}>
@@ -687,8 +668,8 @@ export default function HomePage() {
                       <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-black" style={{ backgroundColor: '#9E4B47', color: '#ffffff' }} aria-hidden="true">{t.name.charAt(0)}</span>
                       {t.name}
                     </p>
-                    <p className="text-xs flex items-center gap-1 mt-1" style={{ color: '#5C606B' }}>
-                      <MapPin size={10} aria-hidden="true" /> {t.city}
+                    <p className="text-xs mt-1" style={{ color: '#5C606B' }}>
+                      {t.date}
                     </p>
                     {/* #9 — badge Vérifié Google */}
                     <p className="text-xs font-semibold mt-2 flex items-center gap-1" style={{ color: '#4A6320' }}>
@@ -698,10 +679,12 @@ export default function HomePage() {
                 </article>
               </li>
             ))}
-          </ul>
+              </ul>
+            }
+          />
           <div className="text-center mt-12">
             <a
-              href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
+              href="https://maps.app.goo.gl/KkB9EVAchidTC4G59"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-sm font-semibold hover:border-[#4A6320] hover:text-[#243238] transition-colors duration-300"

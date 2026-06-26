@@ -875,7 +875,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
               { value: ville.distance, label: `De Saint-Didier à ${ville.nom}` },
               { value: `${ville.jardinsEntretenus}+`, label: `Jardins entretenus à ${ville.nom}` },
               { value: ville.delaiIntervention, label: 'Délai d\'intervention moyen' },
-              { value: '5★', label: 'Note Google · 28 avis' },
+              { value: '5★', label: 'Note Google · 20 avis' },
             ].map((s) => (
               <div key={s.label}>
                 <dt className="font-display text-2xl sm:text-3xl font-bold" style={{ color: '#4A6320' }}>{s.value}</dt>
@@ -972,29 +972,6 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
         </div>
       </section>
 
-      {/* Témoignage local */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto max-w-2xl px-4 sm:px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#749A30' }}>Témoignage client</p>
-          <article className="bg-white rounded-2xl border border-[#EDEDED] p-8 shadow-sm text-left">
-            <div className="flex gap-0.5 mb-4">
-              {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />)}
-            </div>
-            <blockquote className="text-base text-[#2F2F2F] leading-relaxed mb-5">
-              &ldquo;{ville.testimonial.texte}&rdquo;
-            </blockquote>
-            <footer className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: '#4A6320' }}>
-                {ville.testimonial.prenom.charAt(0)}
-              </div>
-              <div>
-                <p className="text-sm font-semibold" style={{ color: '#4A6320' }}>{ville.testimonial.prenom}</p>
-                <p className="text-xs" style={{ color: '#8C8F94' }}>Client vérifié — {ville.testimonial.quartier}, {ville.nom}</p>
-              </div>
-            </footer>
-          </article>
-        </div>
-      </section>
 
       {/* Villes proches — maillage interne */}
       <section style={{ backgroundColor: '#F4F1E9' }} className="py-14">
@@ -1035,14 +1012,14 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
             </h2>
             <div className="flex items-center justify-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />)}
-              <span className="ml-2 text-sm font-bold" style={{ color: '#2F2F2F' }}>5.0 — 28 avis Google</span>
+              <span className="ml-2 text-sm font-bold" style={{ color: '#2F2F2F' }}>5.0 — 20 avis Google</span>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { name: "Marie L.", city: ville.nom, text: "Léo a transformé notre jardin. Travail soigné, ponctuel et à l'écoute. Je recommande vivement !" },
-              { name: "Pierre D.", city: "Caluire-et-Cuire", text: "Excellent paysagiste ! Entretien régulier depuis 2 ans, toujours impeccable. Tarifs honnêtes." },
-              { name: "Sophie M.", city: "Écully", text: "Création de notre terrasse et jardin en 3 semaines. Résultat magnifique, au-delà de nos espérances." },
+              { name: "Patricia Ferrere", city: "Il y a 1 semaine", text: "Envoi des devis et interventions très rapides et qualitatives. Léo est de très bon conseil, disponible pour échanger. Nous le conseillons !" },
+              { name: "Gaelle Jaine", city: "Il y a 1 semaine", text: "Un début de collaboration qui se met en place de manière très fluide ! Merci !" },
+              { name: "Marie-Laurence Coquet", city: "Il y a 3 semaines", text: "Travail soigné et de qualité. Entreprise très sérieuse." },
             ].map((t) => (
               <article key={t.name} className="bg-white rounded-2xl border border-[#EDEDED] p-6 shadow-sm">
                 <div className="flex gap-0.5 mb-3">

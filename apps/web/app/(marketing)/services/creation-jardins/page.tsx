@@ -262,10 +262,10 @@ export default function CreationJardinsPage() {
               ))}
             </div>
             <p className="text-base italic leading-relaxed mb-4" style={{ color: '#2F2F2F' }}>
-              &ldquo;LM Espace Vert a transformé notre terrain en véritable havre de paix. Léo est à l&apos;écoute, professionnel et le résultat dépasse largement nos attentes. Toutes les plantes ont bien repris après un an, conformément à la garantie promise.&rdquo;
+              &ldquo;Envoi des devis et interventions très rapides et qualitatives. Léo est de très bon conseil, disponible pour échanger. Nous le conseillons !&rdquo;
             </p>
             <footer className="text-sm font-semibold" style={{ color: '#4A6320' }}>
-              Marie L. — Caluire-et-Cuire
+              Patricia Ferrere — Avis Google
             </footer>
           </blockquote>
         </div>

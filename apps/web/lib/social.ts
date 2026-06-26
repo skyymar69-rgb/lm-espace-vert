@@ -5,5 +5,5 @@
 
 export const INSTAGRAM = 'https://www.instagram.com/lm_espacevert'
 export const FACEBOOK = 'https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/'
-export const GOOGLE_MAPS = 'https://maps.app.goo.gl/rA4sfge3evAuVJLC9'
+export const GOOGLE_MAPS = 'https://maps.app.goo.gl/KkB9EVAchidTC4G59'
 export const WHATSAPP = 'https://wa.me/33672587353'

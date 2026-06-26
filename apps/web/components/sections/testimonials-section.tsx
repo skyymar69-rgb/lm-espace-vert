@@ -1,23 +1,24 @@
 import { GoogleReviewsBadge } from '@/components/ui/google-reviews-badge'
 
+// Avis réels issus de la fiche Google « LM Espace Vert » (5/5 · 20 avis)
 const testimonials = [
   {
     stars: 5,
-    text: "Léo a transformé notre jardin en un espace magnifique. Travail soigné, respect des délais et des conseils vraiment utiles pour l'entretien. Je recommande vivement !",
-    name: 'Sophie M.',
-    city: 'Caluire-et-Cuire',
+    text: "Envoi des devis et interventions très rapides et qualitatives. Léo est de très bon conseil, disponible pour échanger. Nous le conseillons !",
+    name: 'Patricia Ferrere',
+    city: 'Il y a 1 semaine',
   },
   {
     stars: 5,
-    text: "Excellent travail pour la création de notre terrasse et l'installation du système d'arrosage automatique. Léo est professionnel, ponctuel et très à l'écoute. Résultat impeccable.",
-    name: 'Thomas B.',
-    city: 'Écully',
+    text: "Un début de collaboration qui se met en place de manière très fluide ! Merci !",
+    name: 'Gaelle Jaine',
+    city: 'Il y a 1 semaine',
   },
   {
     stars: 5,
-    text: "Nous faisons appel à LM Espace Vert pour l'entretien régulier de notre jardin depuis 2 ans. Sérieux, compétent et toujours disponible. Notre jardin n'a jamais été aussi beau !",
-    name: 'Marie-Claire D.',
-    city: "Saint-Didier-au-Mont-d'Or",
+    text: "Travail soigné et de qualité. Entreprise très sérieuse.",
+    name: 'Marie-Laurence Coquet',
+    city: 'Il y a 3 semaines',
   },
 ]
 
@@ -34,7 +35,7 @@ export function TestimonialsSection() {
             Ce que disent nos clients
           </h2>
           <div className="flex justify-center">
-            <GoogleReviewsBadge rating={5.0} count={28} />
+            <GoogleReviewsBadge rating={5.0} count={20} />
           </div>
         </div>
 

@@ -4,8 +4,8 @@ import path from 'node:path'
 
 const targets = [
   { name: 'site', url: 'https://www.lmespacevert.fr/', label: 'Site web' },
-  { name: 'maps', url: 'https://maps.app.goo.gl/rA4sfge3evAuVJLC9', label: 'Google Maps' },
-  { name: 'avis', url: 'https://maps.app.goo.gl/rA4sfge3evAuVJLC9', label: 'Laisser un avis' },
+  { name: 'maps', url: 'https://maps.app.goo.gl/KkB9EVAchidTC4G59', label: 'Google Maps' },
+  { name: 'avis', url: 'https://maps.app.goo.gl/KkB9EVAchidTC4G59', label: 'Laisser un avis' },
 ]
 
 const outputDir = path.join(process.cwd(), 'public', 'qr')

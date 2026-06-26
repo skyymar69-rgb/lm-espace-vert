@@ -8,14 +8,14 @@ interface GoogleReviewsBadgeProps {
 
 export function GoogleReviewsBadge({
   rating = 5.0,
-  count = 28,
+  count = 20,
   className = '',
 }: GoogleReviewsBadgeProps) {
   const stars = Math.round(rating)
 
   return (
     <Link
-      href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
+      href="https://maps.app.goo.gl/KkB9EVAchidTC4G59"
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Voir nos ${count} avis Google — Note : ${rating}/5`}

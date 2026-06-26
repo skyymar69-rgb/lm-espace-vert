@@ -1,16 +1,14 @@
 // Source de vérité unique pour les chiffres de l'entreprise.
-// ⚠️ À CONFIRMER PAR LE CLIENT : remplacer par les vraies valeurs Google Business.
-// (Le site contenait des valeurs contradictoires — 5,0/28 vs 4,9/47, 5 ans vs 7 ans.
-//  Unifié ici de façon cohérente ; modifiable en un seul endroit.)
+// Valeurs confirmées par le client (fiche Google Business « LM Espace Vert »).
 
 export const FOUNDED_YEAR = 2019
 export const CURRENT_YEAR = 2026
 export const EXPERIENCE_YEARS = CURRENT_YEAR - FOUNDED_YEAR // 7
 
-// Avis Google — valeurs unifiées (à confirmer avec la fiche Google Business réelle)
-export const GOOGLE_RATING = '4,9' // affichage FR
-export const GOOGLE_RATING_NUM = '4.9' // pour schema.org
-export const GOOGLE_REVIEWS = 15 // chiffre réel Google (vu sur lmespacevert.fr)
+// Avis Google — valeurs réelles confirmées (fiche Google : 5/5 · 20 avis)
+export const GOOGLE_RATING = '5,0' // affichage FR
+export const GOOGLE_RATING_NUM = '5' // pour schema.org
+export const GOOGLE_REVIEWS = 20 // chiffre réel Google
 
 // Volume d'activité
 export const PROJECTS_DONE = '200+'

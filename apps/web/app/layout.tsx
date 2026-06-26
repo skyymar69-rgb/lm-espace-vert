@@ -12,7 +12,6 @@ import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { BackToTop } from '@/components/ui/back-to-top'
 import { StickyContactBar } from '@/components/layout/sticky-contact-bar'
-import { AnnouncementBanner } from '@/components/layout/announcement-banner'
 // Vercel Analytics & Speed Insights
 // Si ces packages ne sont pas dans package.json, ajoutez-les :
 //   pnpm add @vercel/analytics @vercel/speed-insights
@@ -150,7 +149,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               sameAs: [
                 'https://www.facebook.com/people/LM-Paysage-et-jardin/61584572046303/',
                 'https://www.instagram.com/lm_espacevert',
-                'https://maps.app.goo.gl/rA4sfge3evAuVJLC9',
+                'https://maps.app.goo.gl/KkB9EVAchidTC4G59',
               ],
             }),
           }}
@@ -234,12 +233,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollReveal />
 
         <Header />
-        <AnnouncementBanner
-          message="Printemps 2026 — Devis gratuit sous 24h dans tout le nord-ouest lyonnais"
-          href="/devis"
-          cta="Demander un devis"
-          dismissKey="banner-printemps-2026"
-        />
 
         <main id="main-content" className="flex-1" tabIndex={-1}>
           {children}

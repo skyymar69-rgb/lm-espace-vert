@@ -62,7 +62,7 @@ export default function RealisationsPage() {
             Découvrez quelques-uns de nos projets paysagers réalisés dans le nord-ouest lyonnais.
           </p>
           <div className="mt-6 flex justify-center">
-            <GoogleReviewsBadge rating={5.0} count={28} />
+            <GoogleReviewsBadge rating={5.0} count={20} />
           </div>
         </div>
       </section>

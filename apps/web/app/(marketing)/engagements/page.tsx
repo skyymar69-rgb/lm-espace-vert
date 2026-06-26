@@ -112,24 +112,25 @@ const processSteps = [
   { step: '05', title: 'Suivi', desc: 'Appel de suivi et conseils d\'entretien. Nous restons disponibles pour toute question.' },
 ]
 
+// Avis réels issus de la fiche Google « LM Espace Vert » (5/5 · 20 avis)
 const testimonials = [
   {
-    name: 'Sylvie D.',
-    location: 'Caluire-et-Cuire',
-    text: 'Léo a entièrement refait notre jardin. Travail soigné, délais respectés et nettoyage impeccable en fin de chantier. On est ravis du résultat !',
-    service: 'Création de jardin',
+    name: 'Patricia Ferrere',
+    location: 'Il y a 1 semaine',
+    text: 'Envoi des devis et interventions très rapides et qualitatives. Léo est de très bon conseil, disponible pour échanger. Nous le conseillons !',
+    service: 'Avis Google',
   },
   {
-    name: 'Marc T.',
-    location: "Saint-Didier-au-Mont-d'Or",
-    text: 'Très professionnel. Il a pris le temps d\'expliquer chaque choix de végétaux, en privilégiant des espèces locales adaptées à notre terrain. Excellent rapport qualité-prix.',
-    service: 'Entretien & plantation',
+    name: 'Gaelle Jaine',
+    location: 'Il y a 1 semaine',
+    text: 'Un début de collaboration qui se met en place de manière très fluide ! Merci !',
+    service: 'Avis Google',
   },
   {
-    name: 'Isabelle R.',
-    location: 'Écully',
-    text: 'Ponctualité exemplaire et travail de qualité. L\'arrosage automatique fonctionne parfaitement depuis l\'installation. Je recommande les yeux fermés.',
-    service: 'Arrosage automatique',
+    name: 'Marie-Laurence Coquet',
+    location: 'Il y a 3 semaines',
+    text: 'Travail soigné et de qualité. Entreprise très sérieuse.',
+    service: 'Avis Google',
   },
 ]
 
@@ -278,7 +279,7 @@ export default function EngagementsPage() {
               Ce que disent nos clients
             </h2>
             <div className="mt-4 flex items-center justify-center gap-2">
-              <div className="flex" aria-label="Note 4.9 sur 5" role="img">
+              <div className="flex" aria-label="Note 5 sur 5" role="img">
                 {[1, 2, 3, 4, 5].map((s) => (
                   <Star key={s} size={20} fill="#749A30" stroke="none" aria-hidden="true" />
                 ))}

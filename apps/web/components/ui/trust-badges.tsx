@@ -12,7 +12,7 @@ type Badge = {
 
 const DEFAULT_BADGES: Badge[] = [
   { Icon: Award,       title: '5 ans d\'expérience',         subtitle: 'Artisan qualifié' },
-  { Icon: Star,        title: '5/5 sur Google',              subtitle: '28 avis vérifiés' },
+  { Icon: Star,        title: '5/5 sur Google',              subtitle: '20 avis vérifiés' },
   { Icon: Leaf,        title: 'Produits éco-responsables',   subtitle: 'Respect de la biodiversité' },
   { Icon: FileText,    title: 'Devis gratuit',               subtitle: 'Réponse en 24h' },
   { Icon: ShieldCheck, title: 'Assuré & garanti',            subtitle: 'RC professionnelle' },

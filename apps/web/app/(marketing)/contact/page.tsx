@@ -227,7 +227,7 @@ export default function ContactPage() {
                       <strong style={{ color: '#2F2F2F' }}>69370 Rhône</strong>
                     </span>
                     <a
-                      href="https://maps.app.goo.gl/rA4sfge3evAuVJLC9"
+                      href="https://maps.app.goo.gl/KkB9EVAchidTC4G59"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block text-xs font-semibold mt-0.5 hover:underline"

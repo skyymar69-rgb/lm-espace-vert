@@ -118,7 +118,7 @@ export default function DevisPage() {
               style={{ backgroundColor: 'rgba(116,154,48,0.12)', color: '#4A6320' }}
             >
               <Star size={15} fill="#4A6320" aria-hidden="true" />
-              5.0 · 28 avis Google
+              5.0 · 20 avis Google
             </div>
           </div>
 
@@ -234,16 +234,16 @@ export default function DevisPage() {
                   ))}
                   <span className="font-bold text-sm" style={{ color: '#2F2F2F' }}>5.0</span>
                 </div>
-                <p className="text-xs mb-3" style={{ color: '#8C8F94' }}>28 avis Google vérifiés</p>
+                <p className="text-xs mb-3" style={{ color: '#8C8F94' }}>20 avis Google vérifiés</p>
                 {/* Devis-specific testimonial */}
                 <blockquote>
                   <p className="text-sm italic leading-relaxed" style={{ color: '#8C8F94' }}>
-                    &ldquo;J&apos;ai reçu un devis en 24h, très professionnel. Léo s&apos;est déplacé le lendemain pour évaluer mon jardin.&rdquo;
+                    &ldquo;Envoi des devis et interventions très rapides et qualitatives. Léo est de très bon conseil, disponible pour échanger. Nous le conseillons !&rdquo;
                   </p>
                   <footer className="mt-2">
-                    <p className="text-sm font-semibold" style={{ color: '#2F2F2F' }}>Sophie M.</p>
+                    <p className="text-sm font-semibold" style={{ color: '#2F2F2F' }}>Patricia Ferrere</p>
                     <div className="flex items-center gap-1">
-                      <p className="text-xs" style={{ color: '#8C8F94' }}>Écully</p>
+                      <p className="text-xs" style={{ color: '#8C8F94' }}>Avis Google</p>
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} size={10} fill="#F4B400" style={{ color: '#F4B400' }} aria-hidden="true" />
                       ))}
