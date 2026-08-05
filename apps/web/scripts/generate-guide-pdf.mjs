@@ -286,7 +286,7 @@ function GuidePDF() {
         V(s.coverFooter, [
           V({}, [
             T(s.coverFooterText, 'www.lm-espace-vert.fr', 'cf1'),
-            T(s.coverFooterText, 'contact@lmespacevert.fr', 'cf2'),
+            T(s.coverFooterText, 'contact@lm-espace-vert.fr', 'cf2'),
             T(s.coverFooterText, '06 72 58 73 53', 'cf3'),
           ], 'cfl'),
           V(s.coverSeal, [
@@ -393,7 +393,7 @@ function GuidePDF() {
         T(s.backSub, "LM Espace Vert intervient dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or (Caluire, Limonest, Écully, Dardilly, Champagne-au-Mont-d'Or et environs). Devis gratuit sous 48h.", 'bs'),
         V(s.backContactGrid, [
           V(s.backContactCard, [T(s.backContactLabel, 'TÉLÉPHONE', 'cl'), T(s.backContactValue, '06 72 58 73 53', 'cv'), T(s.backContactSub, 'Lun–Sam 8h–19h', 'cs')], 'c1'),
-          V(s.backContactCard, [T(s.backContactLabel, 'EMAIL', 'cl'), T(s.backContactValue, 'contact@lmespacevert.fr', 'cv')], 'c2'),
+          V(s.backContactCard, [T(s.backContactLabel, 'EMAIL', 'cl'), T(s.backContactValue, 'contact@lm-espace-vert.fr', 'cv')], 'c2'),
           V(s.backContactCard, [T(s.backContactLabel, 'WEB', 'cl'), T(s.backContactValue, 'lm-espace-vert.fr', 'cv'), T(s.backContactSub, 'Devis en ligne 24h/24', 'cs')], 'c3'),
         ], 'cg'),
         V(s.backCta, [
@@ -407,7 +407,7 @@ function GuidePDF() {
         ], 'badges'),
       ], 'top'),
       V(s.backLegal, T(s.backLegalText,
-        "LM ESPACE VERT — Paysagiste à Saint-Didier-au-Mont-d'Or (69370) — Interventions dans un rayon de 20 km autour de Lyon Nord.\nContact : contact@lmespacevert.fr — 06 72 58 73 53 — www.lm-espace-vert.fr\nSite réalisé par Kayzen Web — internet.kayzen-lyon.fr\nGuide fourni à titre informatif ; LM Espace Vert décline toute responsabilité pour des travaux réalisés sans professionnel qualifié.",
+        "LM ESPACE VERT — Paysagiste à Saint-Didier-au-Mont-d'Or (69370) — Interventions dans un rayon de 20 km autour de Lyon Nord.\nContact : contact@lm-espace-vert.fr — 06 72 58 73 53 — www.lm-espace-vert.fr\nSite réalisé par Kayzen Web — internet.kayzen-lyon.fr\nGuide fourni à titre informatif ; LM Espace Vert décline toute responsabilité pour des travaux réalisés sans professionnel qualifié.",
         'lt'), 'legal'),
     ], 'bc'),
   ])

@@ -79,7 +79,7 @@ const localBusinessSchema = {
   description: "Paysagiste professionnel à Saint-Didier-au-Mont-d'Or depuis 2019. Création, entretien et aménagement de jardins dans le nord-ouest lyonnais.",
   url: 'https://www.lm-espace-vert.fr',
   telephone: '+33672587353',
-  email: 'contact@lmespacevert.fr',
+  email: 'contact@lm-espace-vert.fr',
   image: 'https://www.lm-espace-vert.fr/images/leo-portrait.webp',
   logo: 'https://www.lm-espace-vert.fr/logo.png',
   foundingDate: '2019',

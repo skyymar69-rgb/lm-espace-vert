@@ -643,10 +643,10 @@ export default function AccessibilitePage() {
                 Formulaire de contact
               </Link>
               <a
-                href="mailto:contact@lmespacevert.fr"
+                href="mailto:contact@lm-espace-vert.fr"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                contact@lmespacevert.fr
+                contact@lm-espace-vert.fr
               </a>
             </div>
           </div>

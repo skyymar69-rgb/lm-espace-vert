@@ -40,7 +40,7 @@ const localBusinessJsonLd = {
   description: "Paysagiste professionnel basé à Saint-Didier-au-Mont-d'Or, spécialisé en création de jardins, entretien d'espaces verts, élagage et maçonnerie paysagère.",
   url: 'https://www.lm-espace-vert.fr',
   telephone: '+33672587353',
-  email: 'contact@lmespacevert.fr',
+  email: 'contact@lm-espace-vert.fr',
   address: {
     '@type': 'PostalAddress',
     streetAddress: "Saint-Didier-au-Mont-d'Or",

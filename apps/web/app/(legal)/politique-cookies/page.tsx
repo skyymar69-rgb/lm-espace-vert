@@ -336,8 +336,8 @@ export default function PolitiqueCookiesPage() {
             <p className="text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
               Pour toute question relative à la présente politique de cookies ou pour exercer vos
               droits relatifs aux données personnelles, contactez LM Espace Vert à l&apos;adresse{' '}
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                contact@lm-espace-vert.fr
               </a>
               . Vous pouvez également consulter notre{' '}
               <Link href="/politique-confidentialite" style={{ color: '#4A6320' }}>

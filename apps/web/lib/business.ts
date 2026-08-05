@@ -18,7 +18,7 @@ export const CLIENTS = '200+'
 export const PHONE_DISPLAY = '06 72 58 73 53'
 export const PHONE_E164 = '+33672587353'
 export const PHONE_WA = '33672587353'
-export const EMAIL = 'contact@lmespacevert.fr'
+export const EMAIL = 'contact@lm-espace-vert.fr'
 
 // Délais de réponse — formulation unique déclinée par canal
 export const RESPONSE_PHONE = 'Réponse en moins de 2h en semaine'

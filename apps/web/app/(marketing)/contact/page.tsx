@@ -43,7 +43,7 @@ const contactPageSchema = {
     '@id': 'https://www.lm-espace-vert.fr/#business',
     name: 'LM Espace Vert',
     telephone: '+33672587353',
-    email: 'contact@lmespacevert.fr',
+    email: 'contact@lm-espace-vert.fr',
     url: 'https://www.lm-espace-vert.fr',
     address: {
       '@type': 'PostalAddress',
@@ -149,7 +149,7 @@ export default function ContactPage() {
                     WhatsApp
                   </a>
                   <a
-                    href="mailto:contact@lmespacevert.fr"
+                    href="mailto:contact@lm-espace-vert.fr"
                     className="flex flex-col items-center gap-2 rounded-xl border border-[#EDEDED] bg-white px-3 py-3.5 text-xs font-semibold text-center hover:shadow-sm transition-shadow"
                     style={{ color: '#243238' }}
                   >
@@ -203,7 +203,7 @@ export default function ContactPage() {
 
                 {/* Email */}
                 <a
-                  href="mailto:contact@lmespacevert.fr"
+                  href="mailto:contact@lm-espace-vert.fr"
                   className="flex items-center gap-5 rounded-2xl p-5 hover:shadow-md transition-shadow group bg-white border border-[#EDEDED] shadow-[rgba(0,0,0,0.06)_0px_4px_30px_0px]"
                 >
                   <div
@@ -213,7 +213,7 @@ export default function ContactPage() {
                     <Mail size={22} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-bold" style={{ color: '#2F2F2F' }}>contact@lmespacevert.fr</p>
+                    <p className="font-bold" style={{ color: '#2F2F2F' }}>contact@lm-espace-vert.fr</p>
                     <p className="text-sm" style={{ color: '#8C8F94' }}>Réponse sous 24h</p>
                   </div>
                 </a>

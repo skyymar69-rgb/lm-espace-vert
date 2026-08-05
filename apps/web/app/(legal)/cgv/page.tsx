@@ -111,7 +111,7 @@ export default function CgvPage() {
                 ['Adresse d\'activité principale', 'Saint-Didier-au-Mont-d\'Or, 69370 Rhône'],
                 ['Assurance RC Pro', '[À COMPLÉTER — nom de l\'assureur, n° de police]'],
                 ['Téléphone', '+33 6 72 58 73 53'],
-                ['Email', 'contact@lmespacevert.fr'],
+                ['Email', 'contact@lm-espace-vert.fr'],
               ] as [string, string][]).map(([label, value], idx) => (
                 <div
                   key={label}
@@ -130,7 +130,7 @@ export default function CgvPage() {
                         {value}
                       </a>
                     ) : label === 'Email' ? (
-                      <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
+                      <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
                         {value}
                       </a>
                     ) : (
@@ -387,8 +387,8 @@ export default function CgvPage() {
               Pour exercer ce droit, le Client doit notifier sa décision de se rétracter par
               courrier recommandé avec accusé de réception adressé à LM ESPACE VERT, 655 Route
               de Choisine, 07410 Colombier-le-Vieux, ou par email à{' '}
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                contact@lm-espace-vert.fr
               </a>
               , en utilisant le formulaire type de rétractation joint au devis (conformément à
               l&apos;annexe 2 du Code de la consommation) ou tout autre déclaration non équivoque.
@@ -529,8 +529,8 @@ export default function CgvPage() {
             <ul className="space-y-1 text-sm" style={{ color: '#2A2F33' }}>
               <li>
                 Par email :{' '}
-                <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                  contact@lmespacevert.fr
+                <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                  contact@lm-espace-vert.fr
                 </a>
               </li>
               <li>
@@ -600,8 +600,8 @@ export default function CgvPage() {
                 ec.europa.eu/consumers/odr
               </a>
               . L&apos;adresse email du service client est{' '}
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                contact@lm-espace-vert.fr
               </a>
               .
             </p>

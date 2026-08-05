@@ -274,8 +274,8 @@ export default function CguPage() {
             <p className="text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
               Pour toute demande de reproduction ou d&apos;utilisation d&apos;un contenu du Site, contacter
               l&apos;Éditeur à{' '}
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                contact@lm-espace-vert.fr
               </a>
               .
             </p>
@@ -338,8 +338,8 @@ export default function CguPage() {
             <p className="text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
               Tout site souhaitant établir un lien hypertexte pointant vers www.lm-espace-vert.fr
               doit en faire la demande préalable par email à{' '}
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                contact@lm-espace-vert.fr
               </a>
               . L&apos;Éditeur se réserve le droit de refuser sans avoir à en justifier le motif.
             </p>
@@ -430,8 +430,8 @@ export default function CguPage() {
             <ul className="space-y-1 text-sm" style={{ color: '#2A2F33' }}>
               <li>
                 Par email :{' '}
-                <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                  contact@lmespacevert.fr
+                <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                  contact@lm-espace-vert.fr
                 </a>
               </li>
               <li>

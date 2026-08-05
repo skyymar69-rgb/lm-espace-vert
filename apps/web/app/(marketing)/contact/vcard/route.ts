@@ -7,7 +7,7 @@ export async function GET() {
     'ORG:LM Espace Vert',
     'TITLE:Paysagiste créateur',
     'TEL;TYPE=work,voice:+33XXXXXXXXX',
-    'EMAIL;TYPE=work:contact@lmespacevert.fr',
+    'EMAIL;TYPE=work:contact@lm-espace-vert.fr',
     'URL:https://www.lm-espace-vert.fr',
     'ADR;TYPE=work:;;[rue];[ville];;[CP];France',
     'GEO:45.748,4.847',

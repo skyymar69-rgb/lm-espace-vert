@@ -42,7 +42,7 @@ const localBusinessSchema = {
   description: "Paysagiste professionnel basé à Saint-Didier-au-Mont-d'Or, intervenant dans un rayon de 20 km sur le nord-ouest lyonnais.",
   url: 'https://www.lm-espace-vert.fr',
   telephone: '+33672587353',
-  email: 'contact@lmespacevert.fr',
+  email: 'contact@lm-espace-vert.fr',
   address: {
     '@type': 'PostalAddress',
     addressLocality: "Saint-Didier-au-Mont-d'Or",

@@ -163,14 +163,14 @@ export function DigitalContactCard() {
                 06 72 58 73 53
               </a>
               <a
-                href="mailto:contact@lmespacevert.fr"
+                href="mailto:contact@lm-espace-vert.fr"
                 className="flex items-center gap-3 text-sm font-semibold rounded-xl px-3 py-2 transition-colors hover:bg-[#F4F1E9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
                 style={{ color: '#243238' }}
               >
                 <span className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
                   <Mail size={14} aria-hidden="true" style={{ color: '#4A6320' }} />
                 </span>
-                contact@lmespacevert.fr
+                contact@lm-espace-vert.fr
               </a>
               <a
                 href={WHATSAPP}

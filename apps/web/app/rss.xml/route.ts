@@ -29,7 +29,7 @@ export function GET() {
       <description>${escapeXml(article.excerpt)}</description>
       <pubDate>${pubDate}</pubDate>
       <category>${escapeXml(article.category)}</category>
-      <author>leo@lmespacevert.fr (${escapeXml(article.author)})</author>
+      <author>contact@lm-espace-vert.fr (${escapeXml(article.author)})</author>
     </item>`
     })
     .join('\n')
@@ -42,8 +42,8 @@ export function GET() {
     <description>Conseils de paysagiste, guides saisonniers et actualités jardinage par LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or (Lyon).</description>
     <language>fr-FR</language>
     <copyright>© ${new Date().getFullYear()} LM Espace Vert</copyright>
-    <managingEditor>leo@lmespacevert.fr (Léo Maurice)</managingEditor>
-    <webMaster>leo@lmespacevert.fr (Léo Maurice)</webMaster>
+    <managingEditor>contact@lm-espace-vert.fr (Léo Maurice)</managingEditor>
+    <webMaster>contact@lm-espace-vert.fr (Léo Maurice)</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <ttl>1440</ttl>
     <image>

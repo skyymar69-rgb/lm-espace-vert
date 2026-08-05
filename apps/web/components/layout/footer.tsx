@@ -215,12 +215,12 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="mailto:contact@lmespacevert.fr"
+                      href="mailto:contact@lm-espace-vert.fr"
                       className="flex items-start gap-2.5 py-1 text-sm transition-colors duration-150 hover:text-[#749A30] focus-visible:text-[#749A30]"
                       style={{ color: 'rgba(255,255,255,0.65)' }}
                     >
                       <Mail size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
-                      contact@lmespacevert.fr
+                      contact@lm-espace-vert.fr
                     </a>
                   </li>
                   <li className="flex items-start gap-2.5 py-1 text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>

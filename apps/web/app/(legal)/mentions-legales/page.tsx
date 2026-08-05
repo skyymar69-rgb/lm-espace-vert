@@ -84,7 +84,7 @@ export default function MentionsLegalesPage() {
                 ['Siège social (siège légal)', '655 Route de Choisine, 07410 Colombier-le-Vieux'],
                 ['Adresse d\'activité principale', 'Saint-Didier-au-Mont-d\'Or, 69370 Rhône'],
                 ['Téléphone', '+33 6 72 58 73 53'],
-                ['Email', 'contact@lmespacevert.fr'],
+                ['Email', 'contact@lm-espace-vert.fr'],
                 ['Site web', 'https://www.lm-espace-vert.fr'],
                 ['Assurance RC Pro', '[À COMPLÉTER PAR LM ESPACE VERT — nom de l\'assureur, n° de police, zone de couverture géographique]'],
               ] as [string, string][]).map(([label, value], idx) => (
@@ -105,7 +105,7 @@ export default function MentionsLegalesPage() {
                         {value}
                       </a>
                     ) : label === 'Email' ? (
-                      <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
+                      <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
                         {value}
                       </a>
                     ) : label === 'Site web' ? (
@@ -138,8 +138,8 @@ export default function MentionsLegalesPage() {
               Conformément à l&apos;article 6-III-1° de la LCEN, le directeur de la publication est{' '}
               <strong>Léo Maurice</strong>, gérant de la société LM ESPACE VERT, EURL immatriculée au
               RCS d&apos;Aubenas sous le numéro 999 206 816. Il peut être contacté à l&apos;adresse{' '}
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                contact@lm-espace-vert.fr
               </a>{' '}
               ou par téléphone au{' '}
               <a href="tel:+33672587353" style={{ color: '#4A6320' }}>
@@ -297,8 +297,8 @@ export default function MentionsLegalesPage() {
               </Link>
               , conformément au Règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du
               6 janvier 1978 modifiée. Responsable de traitement : LM ESPACE VERT — Léo Maurice —
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                {' '}contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                {' '}contact@lm-espace-vert.fr
               </a>
               .
             </p>
@@ -341,8 +341,8 @@ export default function MentionsLegalesPage() {
             <p className="text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
               Tout site souhaitant établir un lien hypertexte pointant vers le site
               lm-espace-vert.fr doit en faire la demande préalable par email à{' '}
-              <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                contact@lmespacevert.fr
+              <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                contact@lm-espace-vert.fr
               </a>
               . L&apos;éditeur se réserve le droit de refuser un lien sans avoir à en justifier le motif.
             </p>

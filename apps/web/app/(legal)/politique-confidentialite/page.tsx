@@ -84,7 +84,7 @@ export default function PolitiqueConfidentialitePage() {
                 ['SIREN', '999 206 816'],
                 ['Siège légal', '655 Route de Choisine, 07410 Colombier-le-Vieux'],
                 ['Adresse d\'activité', 'Saint-Didier-au-Mont-d\'Or, 69370 Rhône'],
-                ['Email de contact RGPD', 'contact@lmespacevert.fr'],
+                ['Email de contact RGPD', 'contact@lm-espace-vert.fr'],
                 ['Téléphone', '+33 6 72 58 73 53'],
                 ['Délégué à la Protection des Données (DPO)', 'Absence de DPO désigné (PME non soumise à l\'obligation — art. 37 RGPD). Toute demande relative aux données personnelles peut être adressée au responsable de traitement via l\'email ci-dessus.'],
               ] as [string, string][]).map(([label, value], idx) => (
@@ -101,7 +101,7 @@ export default function PolitiqueConfidentialitePage() {
                   </dt>
                   <dd className="text-sm" style={{ color: '#2A2F33' }}>
                     {label === 'Email de contact RGPD' ? (
-                      <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
+                      <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
                         {value}
                       </a>
                     ) : label === 'Téléphone' ? (
@@ -409,8 +409,8 @@ export default function PolitiqueConfidentialitePage() {
               </p>
               <p className="text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
                 Adressez votre demande par email à{' '}
-                <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
-                  contact@lmespacevert.fr
+                <a href="mailto:contact@lm-espace-vert.fr" style={{ color: '#4A6320' }}>
+                  contact@lm-espace-vert.fr
                 </a>{' '}
                 en précisant l&apos;objet de votre demande et en joignant, si nécessaire, une copie
                 d&apos;un justificatif d&apos;identité pour vérifier votre identité. Vous pouvez également
