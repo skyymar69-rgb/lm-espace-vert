@@ -119,6 +119,7 @@ export function DevisForm() {
   const [prenomError, setPrenomError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
   const startedAtRef = useRef<number>(Date.now())
 
   // ── Handlers ────────────────────────────────────────────────────────────────
@@ -173,7 +174,6 @@ export function DevisForm() {
 
     // Build a message that includes project info
     const fullMessage = [
-      `Type de projet : ${form.projectType}`,
       `Superficie : ${form.superficie}`,
       `Urgence : ${form.urgence}`,
       form.message ? `\nMessage : ${form.message}` : '',
@@ -181,9 +181,10 @@ export function DevisForm() {
       .filter(Boolean)
       .join('\n')
 
+    // Le formulaire de devis ne collecte ni nom de famille ni code postal :
+    // l'API accepte ce sous-ensemble tant qu'un moyen de contact est fourni.
     const bodyParams: Record<string, string> = {
-      prenom: form.prenom,
-      nom: '—',
+      prenom: form.prenom.trim(),
       telephone: form.telephone.replace(/\D/g, ''),
       sujet: 'devis',
       message: fullMessage,
@@ -191,7 +192,7 @@ export function DevisForm() {
       newsletter: 'false',
       startedAt: String(startedAtRef.current),
       projectType: form.projectType,
-      commune: form.commune,
+      commune: form.commune.trim(),
     }
     if (form.email.trim()) {
       bodyParams.email = form.email.trim()
@@ -204,12 +205,15 @@ export function DevisForm() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: body.toString(),
       })
-      if (res.ok) {
+      const json = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string }
+      if (res.ok && json.ok) {
         setStatus('success')
       } else {
+        setErrorMessage(json.error ?? '')
         setStatus('error')
       }
     } catch {
+      setErrorMessage('')
       setStatus('error')
     } finally {
       setIsLoading(false)
@@ -258,9 +262,14 @@ export function DevisForm() {
   if (status === 'error') {
     return (
       <div className="text-center py-12 px-6">
-        <p className="text-base font-semibold mb-4" style={{ color: '#2F2F2F' }}>
+        <p className="text-base font-semibold mb-2" style={{ color: '#2F2F2F' }}>
           Une erreur s&apos;est produite. Veuillez réessayer ou nous contacter directement :
         </p>
+        {errorMessage && (
+          <p className="text-sm mb-4" style={{ color: '#9E4B47' }} role="alert">
+            {errorMessage}
+          </p>
+        )}
         <a
           href="https://wa.me/33672587353?text=Bonjour%20LM%20Espace%20Vert%2C%20je%20souhaite%20un%20devis%20gratuit."
           target="_blank"

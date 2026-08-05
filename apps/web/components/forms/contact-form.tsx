@@ -36,6 +36,9 @@ export function ContactForm() {
 
     const formData = new FormData()
     Object.entries({ ...data, startedAt: startedAtRef.current }).forEach(([key, value]) => {
+      // Ne jamais sérialiser undefined en « undefined » : le serveur le
+      // recevrait comme une valeur et la validation échouerait.
+      if (value === undefined || value === null) return
       formData.append(key, String(value))
     })
 

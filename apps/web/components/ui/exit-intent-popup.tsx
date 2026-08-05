@@ -50,7 +50,9 @@ export function ExitIntentPopup() {
     if (!email) return
     setStatus('loading')
     try {
-      const res = await fetch('/api/contact', {
+      // Le popup ne collecte qu'un email : on passe par /api/newsletter,
+      // /api/contact exigeant un prénom et un consentement explicite.
+      const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, source: 'exit_popup' }),
