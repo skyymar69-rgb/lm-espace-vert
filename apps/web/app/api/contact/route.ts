@@ -137,9 +137,18 @@ export async function POST(req: NextRequest) {
     .filter((line) => line !== '')
     .join('\n')
 
+  // Libellés rédigés à la main : « Demande de entretien » passerait mal dans
+  // la boîte du client.
+  const sujetLabels: Record<typeof lead.sujet, string> = {
+    devis: 'Demande de devis',
+    entretien: "Demande de contrat d'entretien",
+    question: 'Question',
+    autre: 'Demande',
+  }
+
   const subjectLocation = lead.codePostal || lead.commune
   const result = await sendMail({
-    subject: `[Site] Demande de ${lead.sujet}${subjectLocation ? ` – ${subjectLocation}` : ''}`,
+    subject: `[Site] ${sujetLabels[lead.sujet]}${subjectLocation ? ` – ${subjectLocation}` : ''}`,
     text: emailText,
     replyTo: lead.email || undefined,
   })
