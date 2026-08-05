@@ -8,19 +8,19 @@ import { GOOGLE_RATING, GOOGLE_RATING_NUM, GOOGLE_REVIEWS, EXPERIENCE_YEARS, PRO
 export const metadata: Metadata = {
   title: "À propos de LM Espace Vert — Léo Maurice, paysagiste à Lyon",
   description: "Découvrez Léo Maurice, paysagiste fondateur de LM Espace Vert à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés dans le nord-ouest lyonnais.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/a-propos' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/a-propos' },
   openGraph: {
     title: "À propos — Léo Maurice, paysagiste fondateur de LM Espace Vert",
     description: "Découvrez Léo Maurice, paysagiste fondateur de LM Espace Vert à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés dans le nord-ouest lyonnais.",
-    url: 'https://www.lmespacevert.fr/a-propos',
+    url: 'https://www.lm-espace-vert.fr/a-propos',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Léo Maurice, fondateur de LM Espace Vert, paysagiste à Lyon' }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Léo Maurice, fondateur de LM Espace Vert, paysagiste à Lyon' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "À propos — Léo Maurice, paysagiste fondateur de LM Espace Vert",
     description: "Paysagiste à Saint-Didier-au-Mont-d'Or depuis 2019. Certifié CERTIPHYTO, agréé SAP. 200+ projets réalisés à Lyon nord.",
-    images: ['https://www.lmespacevert.fr/images/leo-portrait.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/leo-portrait.webp'],
   },
 }
 
@@ -74,14 +74,14 @@ const zones = [
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.lmespacevert.fr/#business',
+  '@id': 'https://www.lm-espace-vert.fr/#business',
   name: 'LM Espace Vert',
   description: "Paysagiste professionnel à Saint-Didier-au-Mont-d'Or depuis 2019. Création, entretien et aménagement de jardins dans le nord-ouest lyonnais.",
-  url: 'https://www.lmespacevert.fr',
+  url: 'https://www.lm-espace-vert.fr',
   telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
-  image: 'https://www.lmespacevert.fr/images/leo-portrait.webp',
-  logo: 'https://www.lmespacevert.fr/logo.png',
+  image: 'https://www.lm-espace-vert.fr/images/leo-portrait.webp',
+  logo: 'https://www.lm-espace-vert.fr/logo.png',
   foundingDate: '2019',
   founder: { '@type': 'Person', name: 'Léo Maurice' },
   address: {
@@ -112,8 +112,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://www.lmespacevert.fr/a-propos' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://www.lm-espace-vert.fr/a-propos' },
   ],
 }
 

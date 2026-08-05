@@ -27,18 +27,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${article.title} | LM Espace Vert`,
     description,
-    alternates: { canonical: `https://www.lmespacevert.fr/blog/${article.slug}` },
+    alternates: { canonical: `https://www.lm-espace-vert.fr/blog/${article.slug}` },
     openGraph: {
       title: article.title,
       description,
-      url: `https://www.lmespacevert.fr/blog/${article.slug}`,
+      url: `https://www.lm-espace-vert.fr/blog/${article.slug}`,
       type: 'article',
       publishedTime: article.date,
       modifiedTime: article.updatedAt ?? article.date,
       authors: ['Léo Maurice'],
       images: [
         {
-          url: `https://www.lmespacevert.fr${article.image}`,
+          url: `https://www.lm-espace-vert.fr${article.image}`,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title: article.title,
       description,
-      images: [`https://www.lmespacevert.fr${article.image}`],
+      images: [`https://www.lm-espace-vert.fr${article.image}`],
     },
   }
 }
@@ -63,9 +63,9 @@ export default async function BlogArticlePage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.lmespacevert.fr/blog' },
-      { '@type': 'ListItem', position: 3, name: article.title, item: `https://www.lmespacevert.fr/blog/${article.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.lm-espace-vert.fr/blog' },
+      { '@type': 'ListItem', position: 3, name: article.title, item: `https://www.lm-espace-vert.fr/blog/${article.slug}` },
     ],
   }
 
@@ -74,8 +74,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
     '@type': 'BlogPosting',
     headline: article.title,
     description: article.excerpt,
-    image: `https://www.lmespacevert.fr${article.image}`,
-    url: `https://www.lmespacevert.fr/blog/${article.slug}`,
+    image: `https://www.lm-espace-vert.fr${article.image}`,
+    url: `https://www.lm-espace-vert.fr/blog/${article.slug}`,
     datePublished: article.date,
     dateModified: article.updatedAt ?? article.date,
     inLanguage: 'fr-FR',
@@ -83,20 +83,20 @@ export default async function BlogArticlePage({ params }: PageProps) {
       '@type': 'Person',
       name: 'Léo Maurice',
       jobTitle: 'Paysagiste fondateur',
-      url: 'https://www.lmespacevert.fr/a-propos',
+      url: 'https://www.lm-espace-vert.fr/a-propos',
     },
     publisher: {
       '@type': 'LocalBusiness',
-      '@id': 'https://www.lmespacevert.fr/#business',
+      '@id': 'https://www.lm-espace-vert.fr/#business',
       name: 'LM Espace Vert',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.lmespacevert.fr/logo.png',
+        url: 'https://www.lm-espace-vert.fr/logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.lmespacevert.fr/blog/${article.slug}`,
+      '@id': `https://www.lm-espace-vert.fr/blog/${article.slug}`,
     },
     keywords: article.keywords.join(', '),
   }

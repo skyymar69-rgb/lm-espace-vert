@@ -6,7 +6,7 @@ import { articles } from '@/lib/articles'
 export const metadata: Metadata = {
   title: 'Plan du site — LM Espace Vert',
   description: "Plan du site de LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or. Retrouvez toutes les pages : services, zones, blog, légal.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/plan-du-site' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/plan-du-site' },
   robots: { index: true, follow: true },
 }
 

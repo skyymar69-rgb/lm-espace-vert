@@ -8,7 +8,7 @@ export async function GET() {
     'TITLE:Paysagiste créateur',
     'TEL;TYPE=work,voice:+33XXXXXXXXX',
     'EMAIL;TYPE=work:contact@lmespacevert.fr',
-    'URL:https://www.lmespacevert.fr',
+    'URL:https://www.lm-espace-vert.fr',
     'ADR;TYPE=work:;;[rue];[ville];;[CP];France',
     'GEO:45.748,4.847',
     'NOTE:Création\\, entretien et aménagement de jardins · Lyon & Région',

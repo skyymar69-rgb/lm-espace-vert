@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Intervention Urgente Paysagiste Lyon Nord | LM Espace Vert',
   description:
     'Arbre tombé, tempête, haie endommagée : intervention d\'urgence sous 24h à Lyon nord. Paysagiste disponible 7j/7. Appelez le 06 72 58 73 53.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/urgences' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/urgences' },
   openGraph: {
     title: 'Urgence Paysagiste Lyon Nord — Intervention sous 24h | LM Espace Vert',
     description: 'Arbre tombé, tempête, haie endommagée : intervention d\'urgence sous 24h à Lyon nord.',
@@ -21,7 +21,7 @@ const emergencyServiceJsonLd = {
   name: 'LM Espace Vert — Intervention Urgence Paysagiste',
   description: 'Service d\'intervention urgente paysagiste à Lyon nord : arbre tombé, tempête, haie endommagée. Disponible 7j/7.',
   telephone: '+33672587353',
-  url: 'https://www.lmespacevert.fr/urgences',
+  url: 'https://www.lm-espace-vert.fr/urgences',
   address: {
     '@type': 'PostalAddress',
     addressLocality: "Saint-Didier-au-Mont-d'Or",
@@ -59,13 +59,13 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 1,
       name: 'Accueil',
-      item: 'https://www.lmespacevert.fr',
+      item: 'https://www.lm-espace-vert.fr',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Urgences',
-      item: 'https://www.lmespacevert.fr/urgences',
+      item: 'https://www.lm-espace-vert.fr/urgences',
     },
   ],
 }

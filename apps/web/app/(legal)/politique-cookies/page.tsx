@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Politique de cookies | LM Espace Vert',
   description:
     'Politique de cookies de LM Espace Vert — conformité CNIL, directive ePrivacy. Cookies strictement nécessaires, mesure d\'audience, gestion du consentement.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/politique-cookies' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/politique-cookies' },
   robots: { index: false },
 }
 

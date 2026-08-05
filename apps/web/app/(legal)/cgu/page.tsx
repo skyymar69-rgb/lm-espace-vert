@@ -5,8 +5,8 @@ import { ArrowUp } from 'lucide-react'
 export const metadata: Metadata = {
   title: "Conditions générales d'utilisation (CGU) | LM Espace Vert",
   description:
-    "Conditions générales d'utilisation du site www.lmespacevert.fr — paysagiste LM Espace Vert. Accès au site, propriété intellectuelle, données personnelles, droit applicable.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/cgu' },
+    "Conditions générales d'utilisation du site www.lm-espace-vert.fr — paysagiste LM Espace Vert. Accès au site, propriété intellectuelle, données personnelles, droit applicable.",
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/cgu' },
   robots: { index: true },
 }
 
@@ -51,7 +51,7 @@ export default function CguPage() {
           </h1>
           <p className="mt-3 text-base leading-relaxed" style={{ color: '#5C606B' }}>
             Version en vigueur au [DATE — À COMPLÉTER] — Applicables à tout utilisateur du site
-            www.lmespacevert.fr
+            www.lm-espace-vert.fr
           </p>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function CguPage() {
                 ],
                 [
                   '« Site »',
-                  'Le site internet accessible à l\'adresse https://www.lmespacevert.fr et l\'ensemble de ses pages et fonctionnalités.',
+                  'Le site internet accessible à l\'adresse https://www.lm-espace-vert.fr et l\'ensemble de ses pages et fonctionnalités.',
                 ],
                 [
                   '« Utilisateur »',
@@ -336,7 +336,7 @@ export default function CguPage() {
               contenu, disponibilité ou politique de confidentialité.
             </p>
             <p className="text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
-              Tout site souhaitant établir un lien hypertexte pointant vers www.lmespacevert.fr
+              Tout site souhaitant établir un lien hypertexte pointant vers www.lm-espace-vert.fr
               doit en faire la demande préalable par email à{' '}
               <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
                 contact@lmespacevert.fr

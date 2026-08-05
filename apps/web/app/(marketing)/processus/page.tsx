@@ -6,15 +6,15 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: 'Notre processus — De la visite au jardin terminé | LM Espace Vert',
   description: '5 étapes claires pour votre jardin : visite gratuite, devis détaillé, planification, réalisation et suivi. Découvrez notre méthode.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/processus' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/processus' },
 }
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Notre processus', item: 'https://www.lmespacevert.fr/processus' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Notre processus', item: 'https://www.lm-espace-vert.fr/processus' },
   ],
 }
 

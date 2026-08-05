@@ -7,19 +7,19 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: "Installation Arrosage Automatique Lyon | LM Espace Vert",
   description: "LM Espace Vert installe votre système d'arrosage automatique sur mesure à Lyon nord. Programmateurs connectés, goutte-à-goutte, économies d'eau jusqu'à 40 %. Devis gratuit sous 24h.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/services/arrosage-automatique' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/services/arrosage-automatique' },
   openGraph: {
     title: "Installation Arrosage Automatique Lyon — LM Espace Vert",
     description: "LM Espace Vert installe votre système d'arrosage automatique sur mesure à Lyon nord. Programmateurs connectés, économies d'eau jusqu'à 40 %. Devis gratuit sous 24h.",
-    url: 'https://www.lmespacevert.fr/services/arrosage-automatique',
+    url: 'https://www.lm-espace-vert.fr/services/arrosage-automatique',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-11.webp', width: 1200, height: 630, alt: "Installation arrosage automatique à Lyon nord — LM Espace Vert" }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/realisations/lm-11.webp', width: 1200, height: 630, alt: "Installation arrosage automatique à Lyon nord — LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Installation Arrosage Automatique Lyon — LM Espace Vert",
     description: "Arrosage automatique sur mesure à Lyon nord. Économies d'eau jusqu'à 40 %. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/realisations/lm-11.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/realisations/lm-11.webp'],
   },
 }
 
@@ -28,7 +28,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: "Installation d'arrosage automatique",
   serviceType: "Installation d'arrosage automatique",
-  url: 'https://www.lmespacevert.fr/services/arrosage-automatique',
+  url: 'https://www.lm-espace-vert.fr/services/arrosage-automatique',
   description: "Installation, programmation et maintenance de systèmes d'arrosage automatique à Lyon nord. Arroseurs escamotables, goutte-à-goutte, programmateurs connectés. Économies d'eau garanties.",
   provider: {
     '@type': 'LocalBusiness',
@@ -60,9 +60,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
-    { '@type': 'ListItem', position: 3, name: 'Arrosage automatique', item: 'https://www.lmespacevert.fr/services/arrosage-automatique' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lm-espace-vert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Arrosage automatique', item: 'https://www.lm-espace-vert.fr/services/arrosage-automatique' },
   ],
 }
 
@@ -113,8 +113,8 @@ const faqSchema = {
 const imageObjectSchema = {
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-11.webp',
-  url: 'https://www.lmespacevert.fr/images/realisations/lm-11.webp',
+  contentUrl: 'https://www.lm-espace-vert.fr/images/realisations/lm-11.webp',
+  url: 'https://www.lm-espace-vert.fr/images/realisations/lm-11.webp',
   name: "Installation d'arrosage automatique à Lyon nord par LM Espace Vert",
   caption: "Système d'arrosage automatique installé à Champagne-au-Mont-d'Or — LM Espace Vert, arrosage intelligent Lyon nord",
   representativeOfPage: true,

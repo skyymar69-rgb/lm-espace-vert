@@ -11,8 +11,8 @@ export const CONTACT_TO = process.env['CONTACT_TO'] ?? 'lmespacevert069@gmail.co
 /**
  * Expéditeur. `onboarding@resend.dev` fonctionne sans configuration DNS mais
  * n'autorise l'envoi que vers l'adresse du compte Resend. Une fois le domaine
- * lmespacevert.fr vérifié dans Resend, mettre :
- * CONTACT_FROM="LM Espace Vert <contact@lmespacevert.fr>"
+ * lm-espace-vert.fr vérifié dans Resend, mettre :
+ * CONTACT_FROM="LM Espace Vert <contact@lm-espace-vert.fr>"
  */
 export const CONTACT_FROM = process.env['CONTACT_FROM'] ?? 'LM Espace Vert <onboarding@resend.dev>'
 

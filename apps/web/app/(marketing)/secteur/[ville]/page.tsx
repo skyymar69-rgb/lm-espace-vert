@@ -732,11 +732,11 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
       'LM Espace Vert',
       'paysagiste Lyon nord',
     ],
-    alternates: { canonical: `https://www.lmespacevert.fr/secteur/${villeSlug}` },
+    alternates: { canonical: `https://www.lm-espace-vert.fr/secteur/${villeSlug}` },
     openGraph: {
       title,
       description,
-      url: `https://www.lmespacevert.fr/secteur/${villeSlug}`,
+      url: `https://www.lm-espace-vert.fr/secteur/${villeSlug}`,
       images: [{ url: '/images/realisations/lm-18.webp', width: 1200, height: 630, alt: `Paysagiste ${ville.nom} — LM Espace Vert` }],
     },
   }
@@ -761,10 +761,10 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': `https://www.lmespacevert.fr/secteur/${villeSlug}`,
+    '@id': `https://www.lm-espace-vert.fr/secteur/${villeSlug}`,
     name: 'LM Espace Vert',
     description: `Paysagiste professionnel intervenant à ${ville.nom} : création de jardins, entretien, élagage et maçonnerie paysagère. Devis gratuit.`,
-    url: `https://www.lmespacevert.fr/secteur/${villeSlug}`,
+    url: `https://www.lm-espace-vert.fr/secteur/${villeSlug}`,
     telephone: '+33672587353',
     areaServed: areaServedCity,
     address: {
@@ -796,19 +796,19 @@ export default async function SecteurPage({ params }: { params: Promise<{ ville:
     provider: {
       '@type': 'LocalBusiness',
       name: 'LM Espace Vert',
-      '@id': 'https://www.lmespacevert.fr',
+      '@id': 'https://www.lm-espace-vert.fr',
     },
     areaServed: areaServedCity,
-    url: `https://www.lmespacevert.fr/secteur/${villeSlug}`,
+    url: `https://www.lm-espace-vert.fr/secteur/${villeSlug}`,
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-      { '@type': 'ListItem', position: 2, name: 'Zones d\'intervention', item: 'https://www.lmespacevert.fr/secteurs' },
-      { '@type': 'ListItem', position: 3, name: `Paysagiste ${ville.nom}`, item: `https://www.lmespacevert.fr/secteur/${villeSlug}` },
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Zones d\'intervention', item: 'https://www.lm-espace-vert.fr/secteurs' },
+      { '@type': 'ListItem', position: 3, name: `Paysagiste ${ville.nom}`, item: `https://www.lm-espace-vert.fr/secteur/${villeSlug}` },
     ],
   }
 

@@ -7,19 +7,19 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: "Entretien Espaces Verts Lyon Nord | LM Espace Vert",
   description: "LM Espace Vert assure l'entretien de vos espaces verts à Lyon nord : tonte, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/services/entretien-espaces-verts' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/services/entretien-espaces-verts' },
   openGraph: {
     title: "Entretien Espaces Verts Lyon Nord — LM Espace Vert, paysagiste",
     description: "LM Espace Vert assure l'entretien de vos espaces verts à Lyon nord : tonte, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure. Devis gratuit sous 24h.",
-    url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
+    url: 'https://www.lm-espace-vert.fr/services/entretien-espaces-verts',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-08.webp', width: 1200, height: 630, alt: "Entretien d'espaces verts — LM Espace Vert" }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/realisations/lm-08.webp', width: 1200, height: 630, alt: "Entretien d'espaces verts — LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Entretien Espaces Verts Lyon Nord — LM Espace Vert, paysagiste",
     description: "Tonte, taille de haies, désherbage à Lyon nord. Contrats d'entretien annuels sur mesure. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/realisations/lm-08.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/realisations/lm-08.webp'],
   },
 }
 
@@ -28,7 +28,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: "Entretien d'espaces verts",
   serviceType: "Entretien d'espaces verts",
-  url: 'https://www.lmespacevert.fr/services/entretien-espaces-verts',
+  url: 'https://www.lm-espace-vert.fr/services/entretien-espaces-verts',
   description: "Entretien régulier d'espaces verts à Saint-Didier-au-Mont-d'Or et dans le nord-ouest lyonnais : tonte de pelouse, taille de haies, désherbage, fertilisation. Contrats annuels sur mesure.",
   provider: {
     '@type': 'LocalBusiness',
@@ -60,9 +60,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
-    { '@type': 'ListItem', position: 3, name: "Entretien d'espaces verts", item: 'https://www.lmespacevert.fr/services/entretien-espaces-verts' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lm-espace-vert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: "Entretien d'espaces verts", item: 'https://www.lm-espace-vert.fr/services/entretien-espaces-verts' },
   ],
 }
 
@@ -113,8 +113,8 @@ const faqSchema = {
 const imageObjectSchema = {
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-08.webp',
-  url: 'https://www.lmespacevert.fr/images/realisations/lm-08.webp',
+  contentUrl: 'https://www.lm-espace-vert.fr/images/realisations/lm-08.webp',
+  url: 'https://www.lm-espace-vert.fr/images/realisations/lm-08.webp',
   name: "Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or par LM Espace Vert",
   caption: "Entretien d'espaces verts à Saint-Didier-au-Mont-d'Or — tonte, taille de haies, désherbage — LM Espace Vert",
   representativeOfPage: true,

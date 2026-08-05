@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Politique de confidentialité | LM Espace Vert',
   description:
     'Politique de protection des données personnelles de LM Espace Vert — responsable de traitement, données collectées, finalités, droits RGPD, transferts hors UE, sécurité.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/politique-confidentialite' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/politique-confidentialite' },
   robots: { index: false },
 }
 

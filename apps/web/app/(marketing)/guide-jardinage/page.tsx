@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Guide Gratuit : Entretenir son Jardin à Lyon — LM Espace Vert",
   description:
     "Téléchargez notre guide complet : 12 mois de conseils d'entretien spécifiques au climat lyonnais. Gels tardifs, étés chauds, taille saisonnière — par votre paysagiste LM Espace Vert.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/guide-jardinage' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/guide-jardinage' },
   openGraph: {
     title: "Guide Gratuit : Entretenir son Jardin à Lyon — LM Espace Vert",
     description: "12 mois de conseils jardinage adaptés au climat lyonnais. Guide gratuit par votre paysagiste.",
@@ -35,8 +35,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Guide jardinage', item: 'https://www.lmespacevert.fr/guide-jardinage' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Guide jardinage', item: 'https://www.lm-espace-vert.fr/guide-jardinage' },
   ],
 }
 

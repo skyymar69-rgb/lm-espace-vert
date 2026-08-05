@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Paysagiste Saint-Didier-au-Mont-d'Or & Lyon — LM Espace Vert",
   description:
     "LM Espace Vert, paysagiste professionnel basé à Saint-Didier-au-Mont-d'Or. Création de jardins, entretien, élagage, maçonnerie paysagère. Rayon 20 km. Devis gratuit en 24h.",
-  alternates: { canonical: 'https://www.lmespacevert.fr' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr' },
   openGraph: {
     title: "Paysagiste Saint-Didier-au-Mont-d'Or & Lyon — LM Espace Vert",
     description: "Votre paysagiste de confiance dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or. Création, entretien, élagage. Devis gratuit.",
@@ -38,7 +38,7 @@ const localBusinessJsonLd = {
   name: 'LM Espace Vert',
   alternateName: 'LM Paysage',
   description: "Paysagiste professionnel basé à Saint-Didier-au-Mont-d'Or, spécialisé en création de jardins, entretien d'espaces verts, élagage et maçonnerie paysagère.",
-  url: 'https://www.lmespacevert.fr',
+  url: 'https://www.lm-espace-vert.fr',
   telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
   address: {
@@ -112,7 +112,7 @@ const aggregateRatingJsonLd = {
   itemReviewed: {
     '@type': 'LocalBusiness',
     name: 'LM Espace Vert',
-    '@id': 'https://www.lmespacevert.fr/#business',
+    '@id': 'https://www.lm-espace-vert.fr/#business',
   },
   ratingValue: GOOGLE_RATING_NUM,
   reviewCount: String(GOOGLE_REVIEWS),
@@ -185,7 +185,7 @@ const blogItemListJsonLd = {
     '@type': 'ListItem',
     position: index + 1,
     name: article.title,
-    url: `https://www.lmespacevert.fr/blog/${article.slug}`,
+    url: `https://www.lm-espace-vert.fr/blog/${article.slug}`,
   })),
 }
 

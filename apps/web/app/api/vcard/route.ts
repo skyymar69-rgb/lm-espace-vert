@@ -11,7 +11,7 @@ export async function GET() {
     'TEL;TYPE=CELL:+33672587353',
     'TEL;TYPE=WORK:+33672587353',
     'EMAIL;TYPE=WORK:contact@lmespacevert.fr',
-    'URL;TYPE=WORK:https://www.lmespacevert.fr',
+    'URL;TYPE=WORK:https://www.lm-espace-vert.fr',
     "ADR;TYPE=WORK:;;Saint-Didier-au-Mont-d'Or;;69370;;France",
     'NOTE:Paysagiste à Saint-Didier-au-Mont-d\'Or. Création\\, entretien\\, élagage.',
     'END:VCARD',

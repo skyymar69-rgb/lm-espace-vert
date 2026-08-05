@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Conditions générales de vente (CGV) | LM Espace Vert',
   description:
     'CGV de LM Espace Vert — paysagiste EURL. Devis, tarifs, TVA, paiement, droit de rétractation, garanties légales, Service à la Personne, médiation consommation.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/cgv' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/cgv' },
   robots: { index: true },
 }
 
@@ -82,7 +82,7 @@ export default function CgvPage() {
               Toute commande passée auprès du Prestataire implique l&apos;acceptation pleine et entière,
               sans réserve, des présentes CGV qui prévalent sur tout autre document du Client, sauf
               convention expresse contraire signée par les deux parties. Les présentes CGV sont
-              disponibles en permanence sur le site www.lmespacevert.fr et remises au Client, sur
+              disponibles en permanence sur le site www.lm-espace-vert.fr et remises au Client, sur
               papier ou sur support durable, avant toute conclusion de contrat hors établissement
               (art. L.221-8 et L.221-25 Code conso).
             </p>

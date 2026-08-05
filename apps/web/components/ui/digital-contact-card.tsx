@@ -44,7 +44,7 @@ export function DigitalContactCard() {
   useEffect(() => {
     if (!open || qr) return
     Promise.all([
-      QRCode.toDataURL('https://www.lmespacevert.fr', QR_OPTIONS),
+      QRCode.toDataURL('https://www.lm-espace-vert.fr', QR_OPTIONS),
       QRCode.toDataURL('https://maps.google.com/?q=LM+Espace+Vert+Saint-Didier-au-Mont-d%27Or', QR_OPTIONS),
       QRCode.toDataURL('https://search.google.com/local/writereview?placeid=ChIJN1t_tDeuEmsRUsic12J56jE', QR_OPTIONS),
     ]).then(([site, maps, avis]) => setQr({ site, maps, avis }))
@@ -79,7 +79,7 @@ export function DigitalContactCard() {
       await navigator.share({
         title: 'LM Espace Vert — Léo Maurice, paysagiste',
         text: "Contactez Léo Maurice, paysagiste créateur à Saint-Didier-au-Mont-d'Or.",
-        url: 'https://www.lmespacevert.fr',
+        url: 'https://www.lm-espace-vert.fr',
       })
     } catch { /* user cancelled */ }
   }, [])
@@ -185,7 +185,7 @@ export function DigitalContactCard() {
                 WhatsApp — 06 72 58 73 53
               </a>
               <a
-                href="https://www.lmespacevert.fr"
+                href="https://www.lm-espace-vert.fr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm font-semibold rounded-xl px-3 py-2 transition-colors hover:bg-[#F4F1E9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#749A30]"
@@ -194,7 +194,7 @@ export function DigitalContactCard() {
                 <span className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>
                   <Globe size={14} aria-hidden="true" style={{ color: '#4A6320' }} />
                 </span>
-                www.lmespacevert.fr
+                www.lm-espace-vert.fr
               </a>
               <div className="flex items-center gap-3 text-sm px-3 py-1" style={{ color: '#5C606B' }}>
                 <span className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(116,154,48,0.12)' }}>

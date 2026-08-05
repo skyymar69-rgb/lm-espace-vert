@@ -9,27 +9,27 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://www.lmespacevert.fr/realisations' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://www.lm-espace-vert.fr/realisations' },
   ],
 }
 
 export const metadata: Metadata = {
   title: 'Nos réalisations — Portfolio paysagiste Lyon | LM Espace Vert',
   description: 'Découvrez le portfolio de LM Espace Vert : jardins contemporains, terrasses en pierre naturelle, engazonnements et parcs dans le nord-ouest lyonnais. Plus de 200 projets réalisés depuis 2019.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/realisations' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/realisations' },
   openGraph: {
     title: 'Réalisations LM Espace Vert — Portfolio paysagiste Lyon nord',
     description: 'Découvrez le portfolio de LM Espace Vert : jardins, terrasses en pierre, engazonnements et parcs dans le nord-ouest lyonnais. Plus de 200 projets réalisés depuis 2019.',
-    url: 'https://www.lmespacevert.fr/realisations',
+    url: 'https://www.lm-espace-vert.fr/realisations',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-09.webp', width: 1200, height: 630, alt: 'Portfolio réalisations paysagiste LM Espace Vert Lyon' }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/realisations/lm-09.webp', width: 1200, height: 630, alt: 'Portfolio réalisations paysagiste LM Espace Vert Lyon' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Réalisations LM Espace Vert — Portfolio paysagiste Lyon nord',
     description: 'Jardins, terrasses et aménagements paysagers dans le nord-ouest lyonnais. Plus de 200 projets depuis 2019.',
-    images: ['https://www.lmespacevert.fr/images/realisations/lm-09.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/realisations/lm-09.webp'],
   },
 }
 

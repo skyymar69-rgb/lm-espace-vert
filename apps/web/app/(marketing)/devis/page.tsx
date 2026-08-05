@@ -9,8 +9,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Devis gratuit', item: 'https://www.lmespacevert.fr/devis' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Devis gratuit', item: 'https://www.lm-espace-vert.fr/devis' },
   ],
 }
 
@@ -21,7 +21,7 @@ const quoteActionSchema = {
   provider: {
     '@type': 'LandscapingBusiness',
     name: 'LM Espace Vert',
-    url: 'https://www.lmespacevert.fr',
+    url: 'https://www.lm-espace-vert.fr',
     telephone: '+33672587353',
   },
   offers: {
@@ -32,7 +32,7 @@ const quoteActionSchema = {
   },
   potentialAction: {
     '@type': 'QuoteAction',
-    target: 'https://www.lmespacevert.fr/devis',
+    target: 'https://www.lm-espace-vert.fr/devis',
     name: 'Demander un devis gratuit',
   },
 }
@@ -40,19 +40,19 @@ const quoteActionSchema = {
 export const metadata: Metadata = {
   title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
   description: "Obtenez un devis gratuit et sans engagement de LM Espace Vert pour votre jardin à Lyon nord. Visite sur place offerte, réponse garantie sous 24h. Paysagiste à Saint-Didier-au-Mont-d'Or.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/devis' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/devis' },
   openGraph: {
     title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
     description: "Obtenez un devis gratuit pour votre jardin à Lyon nord. Visite sur place offerte, réponse garantie sous 24h. Paysagiste certifié à Saint-Didier-au-Mont-d'Or.",
-    url: 'https://www.lmespacevert.fr/devis',
+    url: 'https://www.lm-espace-vert.fr/devis',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Demander un devis gratuit à LM Espace Vert, paysagiste Lyon' }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Demander un devis gratuit à LM Espace Vert, paysagiste Lyon' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Devis Gratuit Paysagiste Lyon — LM Espace Vert',
     description: "Devis gratuit et sans engagement pour votre jardin à Lyon nord. Réponse garantie sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/leo-portrait.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/leo-portrait.webp'],
   },
 }
 

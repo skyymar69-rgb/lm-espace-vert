@@ -7,19 +7,19 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: "Engazonnement & Création de Pelouses Lyon Nord | LM Espace Vert",
   description: "LM Espace Vert crée votre pelouse à Lyon nord par semis ou gazon en rouleaux. Préparation du sol, prairies fleuries, regarnissage. Résultat garanti. Devis gratuit sous 24h.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/services/engazonnement' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/services/engazonnement' },
   openGraph: {
     title: "Engazonnement & Création de Pelouses Lyon Nord — LM Espace Vert",
     description: "LM Espace Vert crée votre pelouse à Lyon nord par semis ou gazon en rouleaux. Préparation du sol, prairies fleuries, regarnissage. Résultat garanti. Devis gratuit sous 24h.",
-    url: 'https://www.lmespacevert.fr/services/engazonnement',
+    url: 'https://www.lm-espace-vert.fr/services/engazonnement',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-04.webp', width: 1200, height: 630, alt: 'Création de pelouse par engazonnement à Lyon nord — LM Espace Vert' }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/realisations/lm-04.webp', width: 1200, height: 630, alt: 'Création de pelouse par engazonnement à Lyon nord — LM Espace Vert' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Engazonnement & Création de Pelouses Lyon Nord — LM Espace Vert",
     description: "Création de pelouses par semis ou gazon en rouleaux à Lyon nord. Résultat garanti. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/realisations/lm-04.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/realisations/lm-04.webp'],
   },
 }
 
@@ -59,9 +59,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
-    { '@type': 'ListItem', position: 3, name: 'Engazonnement', item: 'https://www.lmespacevert.fr/services/engazonnement' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lm-espace-vert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Engazonnement', item: 'https://www.lm-espace-vert.fr/services/engazonnement' },
   ],
 }
 
@@ -112,8 +112,8 @@ const faqSchema = {
 const imageObjectSchema = {
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-04.webp',
-  url: 'https://www.lmespacevert.fr/images/realisations/lm-04.webp',
+  contentUrl: 'https://www.lm-espace-vert.fr/images/realisations/lm-04.webp',
+  url: 'https://www.lm-espace-vert.fr/images/realisations/lm-04.webp',
   name: 'Engazonnement et création de pelouse à Lyon nord par LM Espace Vert',
   caption: 'Création de pelouse par semis à Caluire-et-Cuire — LM Espace Vert, engazonnement et gazon en rouleaux Lyon nord',
   representativeOfPage: true,

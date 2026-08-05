@@ -7,15 +7,15 @@ import { SapSimulator } from './sap-simulator'
 export const metadata: Metadata = {
   title: 'Certifications & Agréments — LM Espace Vert, paysagiste certifié',
   description: "RC Professionnelle, Agrément SAP (crédit d'impôt 50%), CERTIPHYTO, Husqvarna Partner. Découvrez les certifications de LM Espace Vert.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/certifications' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/certifications' },
 }
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Certifications', item: 'https://www.lmespacevert.fr/certifications' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Certifications', item: 'https://www.lm-espace-vert.fr/certifications' },
   ],
 }
 

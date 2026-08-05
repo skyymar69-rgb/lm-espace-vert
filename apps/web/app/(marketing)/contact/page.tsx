@@ -7,19 +7,19 @@ import { ContactForm } from '@/components/forms/contact-form'
 export const metadata: Metadata = {
   title: 'Nous contacter — LM Espace Vert, paysagiste Lyon',
   description: "Contactez LM Espace Vert pour un devis gratuit ou toute question sur votre jardin. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. Réponse garantie sous 24h.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/contact' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/contact' },
   openGraph: {
     title: 'Contacter LM Espace Vert — Paysagiste Lyon nord',
     description: "Contactez LM Espace Vert pour un devis gratuit. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi. Réponse garantie sous 24h.",
-    url: 'https://www.lmespacevert.fr/contact',
+    url: 'https://www.lm-espace-vert.fr/contact',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Contacter LM Espace Vert — paysagiste Lyon nord' }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/leo-portrait.webp', width: 1200, height: 630, alt: 'Contacter LM Espace Vert — paysagiste Lyon nord' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contacter LM Espace Vert — Paysagiste Lyon nord',
     description: "Devis gratuit sous 24h. Paysagiste à Saint-Didier-au-Mont-d'Or, disponible du lundi au samedi.",
-    images: ['https://www.lmespacevert.fr/images/leo-portrait.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/leo-portrait.webp'],
   },
 }
 
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.lmespacevert.fr/contact' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.lm-espace-vert.fr/contact' },
   ],
 }
 
@@ -36,15 +36,15 @@ const contactPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contactez LM Espace Vert',
-  url: 'https://www.lmespacevert.fr/contact',
+  url: 'https://www.lm-espace-vert.fr/contact',
   description: 'Contactez LM Espace Vert pour un devis gratuit ou toute question. Paysagiste à Lyon, disponible du lundi au vendredi.',
   mainEntity: {
     '@type': 'LocalBusiness',
-    '@id': 'https://www.lmespacevert.fr/#business',
+    '@id': 'https://www.lm-espace-vert.fr/#business',
     name: 'LM Espace Vert',
     telephone: '+33672587353',
     email: 'contact@lmespacevert.fr',
-    url: 'https://www.lmespacevert.fr',
+    url: 'https://www.lm-espace-vert.fr',
     address: {
       '@type': 'PostalAddress',
       addressLocality: "Saint-Didier-au-Mont-d'Or",

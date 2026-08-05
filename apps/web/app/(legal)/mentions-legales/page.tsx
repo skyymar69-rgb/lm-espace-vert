@@ -5,8 +5,8 @@ import { ArrowUp } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Mentions légales | LM Espace Vert',
   description:
-    'Mentions légales du site lmespacevert.fr — éditeur, directeur de publication, hébergeur, réalisation, propriété intellectuelle, données personnelles et médiation. Conformes à la loi LCEN.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/mentions-legales' },
+    'Mentions légales du site lm-espace-vert.fr — éditeur, directeur de publication, hébergeur, réalisation, propriété intellectuelle, données personnelles et médiation. Conformes à la loi LCEN.',
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/mentions-legales' },
   robots: { index: false },
 }
 
@@ -68,7 +68,7 @@ export default function MentionsLegalesPage() {
               1. Éditeur du site
             </h2>
             <p className="mb-4 text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
-              Le site <strong>www.lmespacevert.fr</strong> est édité par :
+              Le site <strong>www.lm-espace-vert.fr</strong> est édité par :
             </p>
             <dl className="rounded-2xl border border-[#EDEDED] overflow-hidden">
               {([
@@ -85,7 +85,7 @@ export default function MentionsLegalesPage() {
                 ['Adresse d\'activité principale', 'Saint-Didier-au-Mont-d\'Or, 69370 Rhône'],
                 ['Téléphone', '+33 6 72 58 73 53'],
                 ['Email', 'contact@lmespacevert.fr'],
-                ['Site web', 'https://www.lmespacevert.fr'],
+                ['Site web', 'https://www.lm-espace-vert.fr'],
                 ['Assurance RC Pro', '[À COMPLÉTER PAR LM ESPACE VERT — nom de l\'assureur, n° de police, zone de couverture géographique]'],
               ] as [string, string][]).map(([label, value], idx) => (
                 <div
@@ -110,7 +110,7 @@ export default function MentionsLegalesPage() {
                       </a>
                     ) : label === 'Site web' ? (
                       <a
-                        href="https://www.lmespacevert.fr"
+                        href="https://www.lm-espace-vert.fr"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: '#4A6320' }}
@@ -333,14 +333,14 @@ export default function MentionsLegalesPage() {
               8. Liens hypertextes
             </h2>
             <p className="text-sm leading-relaxed mb-3" style={{ color: '#2A2F33' }}>
-              Le site <strong>www.lmespacevert.fr</strong> peut contenir des liens vers des sites
+              Le site <strong>www.lm-espace-vert.fr</strong> peut contenir des liens vers des sites
               Internet tiers fournis à titre indicatif. L&apos;éditeur n&apos;exerce aucun contrôle sur ces
               sites et décline toute responsabilité quant à leur contenu, leur disponibilité ou
               leur politique de confidentialité.
             </p>
             <p className="text-sm leading-relaxed" style={{ color: '#2A2F33' }}>
               Tout site souhaitant établir un lien hypertexte pointant vers le site
-              lmespacevert.fr doit en faire la demande préalable par email à{' '}
+              lm-espace-vert.fr doit en faire la demande préalable par email à{' '}
               <a href="mailto:contact@lmespacevert.fr" style={{ color: '#4A6320' }}>
                 contact@lmespacevert.fr
               </a>

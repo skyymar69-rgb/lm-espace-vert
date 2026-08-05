@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Accessibilité — Déclaration de conformité RGAA 4.1 | LM Espace Vert',
   description:
     "Déclaration d'accessibilité de LM Espace Vert. Conformité RGAA 4.1 et European Accessibility Act (EAA). Résultats de l'audit, non-conformités connues, voies de recours.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/accessibilite' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/accessibilite' },
   robots: { index: true },
 }
 

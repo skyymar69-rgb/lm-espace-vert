@@ -120,7 +120,7 @@ export async function POST(req: NextRequest) {
   const nomComplet = [lead.prenom, lead.nom].filter(Boolean).join(' ')
 
   const emailText = [
-    'Nouveau message depuis le site lmespacevert.fr',
+    'Nouveau message depuis le site lm-espace-vert.fr',
     '',
     `De : ${nomComplet}`,
     `Email : ${lead.email || 'Non renseigné'}`,

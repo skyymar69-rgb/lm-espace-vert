@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const targets = [
-  { name: 'site', url: 'https://www.lmespacevert.fr/', label: 'Site web' },
+  { name: 'site', url: 'https://www.lm-espace-vert.fr/', label: 'Site web' },
   { name: 'maps', url: 'https://maps.app.goo.gl/KkB9EVAchidTC4G59', label: 'Google Maps' },
   { name: 'avis', url: 'https://maps.app.goo.gl/KkB9EVAchidTC4G59', label: 'Laisser un avis' },
 ]

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { articles } from '@/lib/articles'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lm-espace-vert.fr'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   title: 'Nos Engagements | LM Espace Vert — Qualité & Environnement',
   description:
     "Découvrez les engagements de LM Espace Vert : qualité garantie, délais respectés, zéro déchet, plantes locales, certifications et satisfaction client. Paysagiste engagé à Lyon.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/engagements' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/engagements' },
   openGraph: {
     title: 'Nos Engagements | LM Espace Vert — Qualité & Environnement',
     description:
       "Qualité garantie, délais respectés, zéro déchet, plantes locales et satisfaction client — les engagements de votre paysagiste à Saint-Didier-au-Mont-d'Or.",
-    url: 'https://www.lmespacevert.fr/engagements',
+    url: 'https://www.lm-espace-vert.fr/engagements',
   },
 }
 
@@ -32,17 +32,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Nos Engagements', item: 'https://www.lmespacevert.fr/engagements' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Nos Engagements', item: 'https://www.lm-espace-vert.fr/engagements' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.lmespacevert.fr/#business',
+  '@id': 'https://www.lm-espace-vert.fr/#business',
   name: 'LM Espace Vert',
-  url: 'https://www.lmespacevert.fr',
+  url: 'https://www.lm-espace-vert.fr',
   telephone: '+33672587353',
   address: {
     '@type': 'PostalAddress',

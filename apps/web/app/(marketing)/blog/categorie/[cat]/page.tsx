@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Catégorie ${label} — Conseils jardinage | LM Espace Vert`,
     description: `Retrouvez tous nos articles et conseils jardinage sur la thématique "${label}". LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or, partage son expertise pour vous aider à entretenir et créer de beaux jardins.`,
     alternates: {
-      canonical: `https://www.lmespacevert.fr/blog/categorie/${cat}`,
+      canonical: `https://www.lm-espace-vert.fr/blog/categorie/${cat}`,
     },
     openGraph: {
       title: `Catégorie ${label} — Conseils jardinage | LM Espace Vert`,
       description: `Articles et conseils jardinage sur "${label}" par LM Espace Vert, paysagiste professionnel dans le nord-ouest lyonnais.`,
-      url: `https://www.lmespacevert.fr/blog/categorie/${cat}`,
+      url: `https://www.lm-espace-vert.fr/blog/categorie/${cat}`,
       type: 'website',
     },
   }
@@ -43,18 +43,18 @@ function CategoriePage({ cat }: { cat: string }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.lmespacevert.fr/blog' },
-      { '@type': 'ListItem', position: 3, name: label, item: `https://www.lmespacevert.fr/blog/categorie/${cat}` },
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.lm-espace-vert.fr/blog' },
+      { '@type': 'ListItem', position: 3, name: label, item: `https://www.lm-espace-vert.fr/blog/categorie/${cat}` },
     ],
   }
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://www.lmespacevert.fr/#business',
+    '@id': 'https://www.lm-espace-vert.fr/#business',
     name: 'LM Espace Vert',
-    url: 'https://www.lmespacevert.fr',
+    url: 'https://www.lm-espace-vert.fr',
     telephone: '+33672587353',
     address: {
       '@type': 'PostalAddress',

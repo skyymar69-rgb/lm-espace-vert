@@ -7,19 +7,19 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: "Maçonnerie Paysagère Lyon Nord | LM Espace Vert",
   description: "Terrasses, allées et murets en pierre naturelle à Lyon nord par LM Espace Vert. Maçonnerie paysagère haut de gamme avec garantie décennale. Devis gratuit sous 24h, intervention sur 20 km.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/services/maconnerie-paysagere' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/services/maconnerie-paysagere' },
   openGraph: {
     title: "Maçonnerie Paysagère Lyon Nord — LM Espace Vert, paysagiste",
     description: "Terrasses, allées et murets en pierre naturelle à Lyon nord par LM Espace Vert. Maçonnerie paysagère haut de gamme avec garantie décennale. Devis gratuit sous 24h.",
-    url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
+    url: 'https://www.lm-espace-vert.fr/services/maconnerie-paysagere',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-28.webp', width: 1200, height: 630, alt: 'Maçonnerie paysagère — terrasse en pierre à Lyon nord' }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/realisations/lm-28.webp', width: 1200, height: 630, alt: 'Maçonnerie paysagère — terrasse en pierre à Lyon nord' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Maçonnerie Paysagère Lyon Nord — LM Espace Vert, paysagiste",
     description: "Terrasses, allées et murets en pierre naturelle à Lyon nord. Garantie décennale. Devis gratuit sous 24h.",
-    images: ['https://www.lmespacevert.fr/images/realisations/lm-28.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/realisations/lm-28.webp'],
   },
 }
 
@@ -28,7 +28,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Maçonnerie paysagère',
   serviceType: 'Maçonnerie paysagère',
-  url: 'https://www.lmespacevert.fr/services/maconnerie-paysagere',
+  url: 'https://www.lm-espace-vert.fr/services/maconnerie-paysagere',
   description: "Création de terrasses, allées, murets et escaliers en pierre naturelle à Lyon nord. Maçonnerie paysagère haut de gamme pour valoriser durablement votre extérieur.",
   provider: {
     '@type': 'LocalBusiness',
@@ -60,9 +60,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
-    { '@type': 'ListItem', position: 3, name: 'Maçonnerie paysagère', item: 'https://www.lmespacevert.fr/services/maconnerie-paysagere' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lm-espace-vert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Maçonnerie paysagère', item: 'https://www.lm-espace-vert.fr/services/maconnerie-paysagere' },
   ],
 }
 
@@ -113,8 +113,8 @@ const faqSchema = {
 const imageObjectSchema = {
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-28.webp',
-  url: 'https://www.lmespacevert.fr/images/realisations/lm-28.webp',
+  contentUrl: 'https://www.lm-espace-vert.fr/images/realisations/lm-28.webp',
+  url: 'https://www.lm-espace-vert.fr/images/realisations/lm-28.webp',
   name: 'Maçonnerie paysagère — terrasse et murets en pierre naturelle à Lyon nord',
   caption: 'Terrasse en pierre naturelle et murets paysagers réalisés à Dardilly — LM Espace Vert, maçonnerie paysagère Lyon nord',
   representativeOfPage: true,

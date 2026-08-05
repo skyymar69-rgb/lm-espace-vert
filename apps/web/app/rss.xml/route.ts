@@ -1,7 +1,7 @@
 import { articles } from '@/lib/articles'
 import { NextResponse } from 'next/server'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lm-espace-vert.fr'
 
 function escapeXml(str: string): string {
   return str

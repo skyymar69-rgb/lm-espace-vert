@@ -8,15 +8,15 @@ import { beforeAfterPairs } from '@/lib/realisations-photos'
 export const metadata: Metadata = {
   title: "Avant / Après — Transformations jardins par LM Espace Vert",
   description: "Découvrez les transformations réalisées par LM Espace Vert : galerie avant/après de nos chantiers à Lyon et Monts d'Or.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/avant-apres' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/avant-apres' },
 }
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Avant / Après', item: 'https://www.lmespacevert.fr/avant-apres' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Avant / Après', item: 'https://www.lm-espace-vert.fr/avant-apres' },
   ],
 }
 

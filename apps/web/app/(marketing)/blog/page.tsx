@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   title: 'Blog jardinage & paysagisme — Conseils de votre paysagiste Lyon nord',
   description:
     'Découvrez nos conseils d\'expert en jardinage et paysagisme : taille, entretien saisonnier, création de jardin et aménagements paysagers. Paysagiste LM Espace Vert à Saint-Didier-au-Mont-d\'Or — 30+ articles pratiques, guides et inspirations.',
-  alternates: { canonical: 'https://www.lmespacevert.fr/blog' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/blog' },
   openGraph: {
     title: 'Blog — Conseils jardinage par LM Espace Vert',
     description: 'Conseils pratiques de votre paysagiste : taille, entretien, création de jardin, plantes...',
-    url: 'https://www.lmespacevert.fr/blog',
+    url: 'https://www.lm-espace-vert.fr/blog',
     type: 'website',
     images: [{ url: '/images/blog-jardin-printemps.webp', width: 1200, height: 630, alt: 'Blog jardinage LM Espace Vert' }],
   },
@@ -28,7 +28,7 @@ const blogItemListJsonLd = {
     '@type': 'ListItem',
     position: index + 1,
     name: article.title,
-    url: `https://www.lmespacevert.fr/blog/${article.slug}`,
+    url: `https://www.lm-espace-vert.fr/blog/${article.slug}`,
   })),
 }
 

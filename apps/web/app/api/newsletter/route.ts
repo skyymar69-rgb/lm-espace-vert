@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   }
 
   const text = [
-    'Nouvelle inscription depuis le site lmespacevert.fr',
+    'Nouvelle inscription depuis le site lm-espace-vert.fr',
     '',
     `Email : ${email}`,
     `Origine : ${source}`,

@@ -7,19 +7,19 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: "Élagage & Abattage d'Arbres Lyon Nord | LM Espace Vert",
   description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord par LM Espace Vert, certifié CERTIPHYTO. Broyage des déchets inclus. Intervention sur Saint-Didier, Caluire, Écully. Devis gratuit.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/services/elagage-abattage' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/services/elagage-abattage' },
   openGraph: {
     title: "Élagage & Abattage d'Arbres Lyon Nord — LM Espace Vert",
     description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord par LM Espace Vert, certifié CERTIPHYTO. Broyage des déchets inclus. Devis gratuit.",
-    url: 'https://www.lmespacevert.fr/services/elagage-abattage',
+    url: 'https://www.lm-espace-vert.fr/services/elagage-abattage',
     type: 'website',
-    images: [{ url: 'https://www.lmespacevert.fr/images/realisations/lm-06.webp', width: 1200, height: 630, alt: "Élagage et abattage d'arbres — LM Espace Vert" }],
+    images: [{ url: 'https://www.lm-espace-vert.fr/images/realisations/lm-06.webp', width: 1200, height: 630, alt: "Élagage et abattage d'arbres — LM Espace Vert" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Élagage & Abattage d'Arbres Lyon Nord — LM Espace Vert",
     description: "Élagage raisonné et abattage sécurisé d'arbres à Lyon nord. Certifié CERTIPHYTO. Devis gratuit.",
-    images: ['https://www.lmespacevert.fr/images/realisations/lm-06.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/realisations/lm-06.webp'],
   },
 }
 
@@ -28,7 +28,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: "Élagage et abattage d'arbres",
   serviceType: "Élagage et abattage d'arbres",
-  url: 'https://www.lmespacevert.fr/services/elagage-abattage',
+  url: 'https://www.lm-espace-vert.fr/services/elagage-abattage',
   description: "Élagage raisonné, taille douce et abattage sécurisé d'arbres à Saint-Didier-au-Mont-d'Or et dans le nord-ouest lyonnais. Broyage et évacuation des déchets. Équipe certifiée CERTIPHYTO.",
   provider: {
     '@type': 'LocalBusiness',
@@ -60,9 +60,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lmespacevert.fr/services' },
-    { '@type': 'ListItem', position: 3, name: 'Élagage & Abattage', item: 'https://www.lmespacevert.fr/services/elagage-abattage' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lm-espace-vert.fr/services' },
+    { '@type': 'ListItem', position: 3, name: 'Élagage & Abattage', item: 'https://www.lm-espace-vert.fr/services/elagage-abattage' },
   ],
 }
 
@@ -113,8 +113,8 @@ const faqSchema = {
 const imageObjectSchema = {
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: 'https://www.lmespacevert.fr/images/realisations/lm-06.webp',
-  url: 'https://www.lmespacevert.fr/images/realisations/lm-06.webp',
+  contentUrl: 'https://www.lm-espace-vert.fr/images/realisations/lm-06.webp',
+  url: 'https://www.lm-espace-vert.fr/images/realisations/lm-06.webp',
   name: "Élagage et abattage d'arbres à Lyon nord par LM Espace Vert",
   caption: "Élagage raisonné et abattage sécurisé d'arbres à Écully et Lyon nord — LM Espace Vert, certifié CERTIPHYTO",
   representativeOfPage: true,

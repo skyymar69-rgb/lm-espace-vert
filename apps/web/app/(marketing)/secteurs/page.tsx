@@ -6,11 +6,11 @@ import { JsonLd } from '@/components/seo/json-ld'
 export const metadata: Metadata = {
   title: "Paysagiste Lyon Nord — Zones d'intervention | LM Espace Vert",
   description: "LM Espace Vert intervient dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or : Caluire, Écully, Dardilly, Limonest, Tassin, Champagne, Neuville-sur-Saône, Charbonnières et plus. Devis gratuit.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/secteurs' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/secteurs' },
   openGraph: {
     title: "Paysagiste Lyon Nord — Zones d'intervention | LM Espace Vert",
     description: "Paysagiste couvrant 16 communes du nord-ouest lyonnais dans un rayon de 20 km. Devis gratuit sous 24h.",
-    url: 'https://www.lmespacevert.fr/secteurs',
+    url: 'https://www.lm-espace-vert.fr/secteurs',
     images: [{ url: '/images/zone-intervention.webp', width: 1200, height: 630, alt: "Zones d'intervention LM Espace Vert — Lyon Nord" }],
   },
 }
@@ -37,10 +37,10 @@ const villes = [
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.lmespacevert.fr',
+  '@id': 'https://www.lm-espace-vert.fr',
   name: 'LM Espace Vert',
   description: "Paysagiste professionnel basé à Saint-Didier-au-Mont-d'Or, intervenant dans un rayon de 20 km sur le nord-ouest lyonnais.",
-  url: 'https://www.lmespacevert.fr',
+  url: 'https://www.lm-espace-vert.fr',
   telephone: '+33672587353',
   email: 'contact@lmespacevert.fr',
   address: {
@@ -69,8 +69,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: "Zones d'intervention", item: 'https://www.lmespacevert.fr/secteurs' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: "Zones d'intervention", item: 'https://www.lm-espace-vert.fr/secteurs' },
   ],
 }
 
@@ -79,14 +79,14 @@ const communesItemListSchema = {
   '@type': 'ItemList',
   name: "Communes d'intervention — LM Espace Vert",
   description: "Liste des 16 communes desservies par LM Espace Vert dans un rayon de 20 km autour de Saint-Didier-au-Mont-d'Or.",
-  url: 'https://www.lmespacevert.fr/secteurs',
+  url: 'https://www.lm-espace-vert.fr/secteurs',
   numberOfItems: villes.length,
   itemListElement: villes.map((v, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     name: `Paysagiste ${v.nom} (${v.codePostal})`,
     description: v.description,
-    url: `https://www.lmespacevert.fr/secteur/${v.slug}`,
+    url: `https://www.lm-espace-vert.fr/secteur/${v.slug}`,
   })),
 }
 

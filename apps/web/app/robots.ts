@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://www.lmespacevert.fr/sitemap.xml',
-    host: 'https://www.lmespacevert.fr',
+    sitemap: 'https://www.lm-espace-vert.fr/sitemap.xml',
+    host: 'https://www.lm-espace-vert.fr',
   }
 }

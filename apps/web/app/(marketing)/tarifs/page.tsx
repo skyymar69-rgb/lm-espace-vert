@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Tarifs Paysagiste Lyon Nord | LM Espace Vert — Prix & Devis",
   description:
     "Découvrez les fourchettes de prix de LM Espace Vert : entretien espaces verts, taille de haies, création de jardins, élagage, arrosage automatique. Devis gratuit.",
-  alternates: { canonical: 'https://www.lmespacevert.fr/tarifs' },
+  alternates: { canonical: 'https://www.lm-espace-vert.fr/tarifs' },
   openGraph: {
     title: "Tarifs Paysagiste Lyon Nord | LM Espace Vert",
     description: "Fourchettes de prix et devis gratuit. Paysagiste Lyon Nord, rayon 20 km.",
@@ -24,8 +24,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lmespacevert.fr' },
-    { '@type': 'ListItem', position: 2, name: 'Tarifs', item: 'https://www.lmespacevert.fr/tarifs' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lm-espace-vert.fr' },
+    { '@type': 'ListItem', position: 2, name: 'Tarifs', item: 'https://www.lm-espace-vert.fr/tarifs' },
   ],
 }
 

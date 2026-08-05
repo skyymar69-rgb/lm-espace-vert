@@ -20,8 +20,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   // metadataBase = domaine de production canonique (URLs OG/Twitter toujours absolues
-  // vers www.lmespacevert.fr, y compris sur les déploiements preview).
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lmespacevert.fr'),
+  // vers www.lm-espace-vert.fr, y compris sur les déploiements preview).
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.lm-espace-vert.fr'),
   title: {
     default: "LM Espace Vert — Paysagiste Saint-Didier-au-Mont-d'Or & Lyon",
     template: '%s | LM Espace Vert',
@@ -47,20 +47,20 @@ export const metadata: Metadata = {
     'taille haies Lyon',
     'gazon Lyon nord',
   ],
-  authors: [{ name: 'LM Espace Vert', url: 'https://www.lmespacevert.fr' }],
+  authors: [{ name: 'LM Espace Vert', url: 'https://www.lm-espace-vert.fr' }],
   creator: 'Kayzen Web',
   // #9 — Catégorie
   category: 'Paysagisme',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://www.lmespacevert.fr',
+    url: 'https://www.lm-espace-vert.fr',
     siteName: 'LM Espace Vert',
     title: "LM Espace Vert — Paysagiste créateur à Lyon",
     description: "LM Espace Vert, paysagiste créateur à Lyon. Création, entretien et aménagement de jardins haut de gamme.",
     images: [
       {
-        url: 'https://www.lmespacevert.fr/images/realisations/lm-09.webp',
+        url: 'https://www.lm-espace-vert.fr/images/realisations/lm-09.webp',
         width: 1200,
         height: 630,
         alt: 'LM Espace Vert — Paysagiste Lyon Nord',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     creator: '@lm_espacevert',
     title: "LM Espace Vert — Paysagiste créateur à Lyon",
     description: "LM Espace Vert, paysagiste créateur à Lyon. Création, entretien et aménagement de jardins haut de gamme.",
-    images: ['https://www.lmespacevert.fr/images/realisations/lm-09.webp'],
+    images: ['https://www.lm-espace-vert.fr/images/realisations/lm-09.webp'],
   },
   robots: {
     index: true,
@@ -83,10 +83,10 @@ export const metadata: Metadata = {
   },
   // #8 — alternates avec hreflang
   alternates: {
-    canonical: 'https://www.lmespacevert.fr',
+    canonical: 'https://www.lm-espace-vert.fr',
     languages: {
-      'fr-FR': 'https://www.lmespacevert.fr',
-      'x-default': 'https://www.lmespacevert.fr',
+      'fr-FR': 'https://www.lm-espace-vert.fr',
+      'x-default': 'https://www.lm-espace-vert.fr',
     },
   },
   // #7 — Géolocalisation locale
@@ -126,8 +126,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* #3b Hreflang */}
-        <link rel="alternate" hrefLang="fr-FR" href="https://www.lmespacevert.fr" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.lmespacevert.fr" />
+        <link rel="alternate" hrefLang="fr-FR" href="https://www.lm-espace-vert.fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.lm-espace-vert.fr" />
         {/* #3c Organization Schema */}
         <script
           type="application/ld+json"
@@ -135,10 +135,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              '@id': 'https://www.lmespacevert.fr/#organization',
+              '@id': 'https://www.lm-espace-vert.fr/#organization',
               name: 'LM Espace Vert',
-              url: 'https://www.lmespacevert.fr',
-              logo: { '@type': 'ImageObject', url: 'https://www.lmespacevert.fr/logo.png' },
+              url: 'https://www.lm-espace-vert.fr',
+              logo: { '@type': 'ImageObject', url: 'https://www.lm-espace-vert.fr/logo.png' },
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+33672587353',
@@ -161,12 +161,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              '@id': 'https://www.lmespacevert.fr/#website',
+              '@id': 'https://www.lm-espace-vert.fr/#website',
               name: 'LM Espace Vert',
-              url: 'https://www.lmespacevert.fr',
+              url: 'https://www.lm-espace-vert.fr',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: 'https://www.lmespacevert.fr/blog?q={search_term_string}',
+                target: 'https://www.lm-espace-vert.fr/blog?q={search_term_string}',
                 'query-input': 'required name=search_term_string',
               },
             }),
