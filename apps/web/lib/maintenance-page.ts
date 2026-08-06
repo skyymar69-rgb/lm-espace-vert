@@ -2,9 +2,10 @@
 // Volontairement autonome (HTML + CSS inline, aucune ressource externe) : elle est
 // renvoyée directement depuis l'Edge, sans passer par le layout du site (header,
 // footer, analytics…). Pour changer le texte, éditer uniquement ce fichier.
-
-import { PHONE_DISPLAY, PHONE_E164, EMAIL } from './business'
-import { WHATSAPP, INSTAGRAM, FACEBOOK } from './social'
+//
+// Aucun moyen de contact n'y figure volontairement : ni téléphone, ni WhatsApp, ni
+// e-mail, ni lien vers les réseaux sociaux. Le client ne doit pas être sollicité
+// pendant la fermeture.
 
 export const maintenanceHtml = /* html */ `<!doctype html>
 <html lang="fr">
@@ -12,7 +13,7 @@ export const maintenanceHtml = /* html */ `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LM Espace Vert — Site en maintenance</title>
-<meta name="description" content="Le site LM Espace Vert est temporairement en maintenance. Votre paysagiste à Saint-Didier-au-Mont-d'Or reste joignable au ${PHONE_DISPLAY}.">
+<meta name="description" content="Le site LM Espace Vert, paysagiste à Saint-Didier-au-Mont-d'Or, est temporairement en maintenance. Il sera de retour très prochainement.">
 <meta name="theme-color" content="#4A6320">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -120,50 +121,10 @@ export const maintenanceHtml = /* html */ `<!doctype html>
   }
   p { margin: 0 auto; max-width: 46ch; color: var(--muted); }
   p + p { margin-top: 14px; }
-  .actions {
-    margin-top: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 22px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
-  }
-  .btn:hover { transform: translateY(-1px); }
-  .btn:focus-visible { outline: 3px solid var(--olive); outline-offset: 3px; }
-  .btn-primary { background: var(--olive-text); color: #FFFFFF; }
-  .btn-primary:hover { background: var(--olive-deep); }
-  .btn-ghost { border-color: var(--border); color: var(--fg); }
-  .btn-ghost:hover { border-color: var(--olive); color: var(--olive-text); }
-  /* En dark, --olive-text s'éclaircit : le texte du bouton plein repasse en sombre. */
-  @media (prefers-color-scheme: dark) {
-    .btn-primary { color: #14171A; }
-    .btn-primary:hover { background: #BCD886; }
-  }
   .divider { margin: 32px 0 0; border: 0; border-top: 1px solid var(--border); }
-  .social {
-    margin-top: 20px;
-    display: flex;
-    gap: 18px;
-    justify-content: center;
-    font-size: 0.875rem;
-  }
-  .social a { color: var(--muted); text-decoration: none; }
-  .social a:hover { color: var(--olive-text); text-decoration: underline; }
-  footer { margin-top: 24px; font-size: 0.8125rem; color: var(--muted); }
+  footer { margin-top: 20px; font-size: 0.8125rem; color: var(--muted); }
   @media (max-width: 480px) {
     main { padding: 36px 22px; border-radius: 20px; }
-    .btn { width: 100%; justify-content: center; }
   }
 </style>
 </head>
@@ -175,21 +136,10 @@ export const maintenanceHtml = /* html */ `<!doctype html>
 
   <h1>Nous préparons le terrain</h1>
 
-  <p>Le site de <strong>LM Espace Vert</strong> est momentanément indisponible, le temps d'une mise à jour. Il sera de retour très prochainement.</p>
-  <p>Entre-temps, votre paysagiste à Saint-Didier-au-Mont-d'Or reste joignable : devis, conseils et interventions se poursuivent normalement.</p>
-
-  <div class="actions">
-    <a class="btn btn-primary" href="tel:${PHONE_E164}">Appeler le ${PHONE_DISPLAY}</a>
-    <a class="btn btn-ghost" href="mailto:${EMAIL}">Écrire un e-mail</a>
-  </div>
+  <p>Le site de <strong>LM Espace Vert</strong> est momentanément indisponible, le temps d'une mise à jour.</p>
+  <p>Il sera de retour très prochainement.</p>
 
   <hr class="divider">
-
-  <div class="social">
-    <a href="${WHATSAPP}" rel="noopener noreferrer" target="_blank">WhatsApp</a>
-    <a href="${INSTAGRAM}" rel="noopener noreferrer" target="_blank">Instagram</a>
-    <a href="${FACEBOOK}" rel="noopener noreferrer" target="_blank">Facebook</a>
-  </div>
 
   <footer>LM Espace Vert — Paysagiste créateur, Lyon nord &amp; Mont d'Or</footer>
 </main>
